@@ -22,7 +22,7 @@
         tools:layout_editor_absoluteY="242dp" />
 
     <EditText
-        android:id="@+id/firstName"
+        android:id="@+id/enterEmail"
         android:layout_width="240dp"
         android:layout_height="54dp"
         android:layout_marginLeft="20dp"
@@ -52,7 +52,7 @@
         app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+        app:layout_constraintTop_toBottomOf="@+id/enterEmail" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sendReset"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toTopOf="@+id/forgotpass" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/hudaLogo"
         android:layout_width="168dp"
         android:layout_height="174dp"
         app:srcCompat="@drawable/huda_logo"
@@ -100,7 +100,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/enterEmailLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Username:"
@@ -110,7 +110,7 @@
         tools:layout_editor_absoluteY="305dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/lastNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password: "
