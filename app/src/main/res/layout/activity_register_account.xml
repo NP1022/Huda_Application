@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BDDBFF"
-    tools:context=".MainActivity">
-
+    tools:context=".RegisterAccount">
     <TextView
         android:id="@+id/passLabel"
         android:layout_width="wrap_content"
@@ -244,6 +243,4 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterEmailLabel" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
