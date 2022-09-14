@@ -179,7 +179,7 @@
         app:layout_constraintTop_toTopOf="@+id/forgotpass" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/hudaLogo"
         android:layout_width="168dp"
         android:layout_height="174dp"
         app:srcCompat="@drawable/huda_logo"
@@ -187,7 +187,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/emailLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="First Name:"
@@ -197,7 +197,7 @@
         tools:layout_editor_absoluteY="282dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/passLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Last Name: "
