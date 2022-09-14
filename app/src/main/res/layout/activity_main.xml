@@ -4,31 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BDDBFF"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-
-        android:text="HUDA APP"
-        android:textAlignment="center"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.9"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
         android:id="@+id/spacing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="8dp"
         android:text=""
         android:textAlignment="center"
         android:textSize="18sp"
@@ -36,71 +19,105 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
+        tools:layout_editor_absoluteY="242dp" />
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:background="#E0E0E0"
         android:ems="10"
         android:hint=""
         android:inputType="textEmailAddress"
         android:textSize="24sp"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spacing" />
 
     <EditText
         android:id="@+id/pass"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_width="240dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:background="#E0E0E0"
         android:ems="10"
         android:hint=""
         android:inputType="textPassword"
         android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
-        android:layout_width="230dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="27dp"
+        android:layout_width="173dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:background="#0151AE"
         android:text="login"
         android:textColor="#ffffff"
         android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pass" />
+
     <TextView
         android:id="@+id/forgotpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="24dp"
+
         android:text="Forgot Password"
         android:textSize="16sp"
-
-        app:layout_constraintTop_toBottomOf="@+id/login"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="50dp"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/login" />
 
     <TextView
         android:id="@+id/registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
         android:text="Register"
+
         android:textSize="16sp"
-
         app:layout_constraintLeft_toRightOf="@+id/forgotpass"
-        app:layout_constraintTop_toTopOf="@+id/forgotpass"
-        android:layout_marginLeft="80dp"
-        />
+        app:layout_constraintTop_toTopOf="@+id/forgotpass" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="168dp"
+        android:layout_height="174dp"
+        app:srcCompat="@drawable/huda_logo"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username:"
+        android:textColor="#0151AE"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="305dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password: "
+        android:textColor="#0151AE"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="397dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
