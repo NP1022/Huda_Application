@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1052769229623",
+    "firebase_url": "https://huda-app-44bdb-default-rtdb.firebaseio.com",
+    "project_id": "huda-app-44bdb",
+    "storage_bucket": "huda-app-44bdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052769229623:android:3f6060ff193ef07a6d98b2",
+        "android_client_info": {
+          "package_name": "com.example.huda_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052769229623-h3h0ej9rs7lplq46vpuh0vvj0g8j133f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuAblNwkXk2FeqNHQYIcavBbP6HRH_8mk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052769229623-h3h0ej9rs7lplq46vpuh0vvj0g8j133f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

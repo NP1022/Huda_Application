@@ -73,7 +73,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/enterEmail"
+        android:id="@+id/firstName"
         android:layout_width="240dp"
         android:layout_height="54dp"
         android:layout_marginLeft="20dp"
@@ -104,7 +104,7 @@
         app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
     <EditText
         android:id="@+id/email"
@@ -121,7 +121,7 @@
         app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
     <EditText
         android:id="@+id/password"
@@ -136,7 +136,7 @@
         app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
     <EditText
         android:id="@+id/confirmPass"
@@ -151,7 +151,7 @@
         app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registerButton"
@@ -164,14 +164,14 @@
         android:textColor="#ffffff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lastName"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/forgotpass"
+        android:id="@+id/forgotPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="76dp"
@@ -193,8 +193,8 @@
         android:text="Register"
 
         android:textSize="16sp"
-        app:layout_constraintLeft_toRightOf="@+id/forgotpass"
-        app:layout_constraintTop_toTopOf="@+id/forgotpass" />
+        app:layout_constraintLeft_toRightOf="@+id/forgotPass"
+        app:layout_constraintTop_toTopOf="@+id/forgotPass" />
 
     <ImageView
         android:id="@+id/hudaLogo"
@@ -202,7 +202,7 @@
         android:layout_height="174dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="213dp"
-        app:layout_constraintBottom_toTopOf="@+id/enterEmail"
+        app:layout_constraintBottom_toTopOf="@+id/firstName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -222,7 +222,7 @@
         android:textColor="#0151AE"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/lastNameLabel"
-        app:layout_constraintEnd_toStartOf="@+id/enterEmail"
+        app:layout_constraintEnd_toStartOf="@+id/firstName"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
