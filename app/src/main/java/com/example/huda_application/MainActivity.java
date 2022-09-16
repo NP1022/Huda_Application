@@ -15,6 +15,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.huda_application.databinding.ActivityMainBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
     private TextView registration_button, forgot_pass;
+
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,4 +92,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }

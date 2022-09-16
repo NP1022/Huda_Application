@@ -1,11 +1,14 @@
 package com.example.huda_application;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -43,25 +46,22 @@ public class RegisterAccount extends AppCompatActivity
         final EditText password = findViewById(R.id.password);
         final EditText conPassword = findViewById(R.id.confirmPass);
 
-//        final String firstNameTxt = firstName.getText().toString().trim();
-//        final String lastNameTxt = lastName.getText().toString().trim();
-//        final String emailTxt = email.getText().toString().trim();
-//        final String passwordTxt = password.getText().toString().trim();
-//        final String conPasswordTxt = conPassword.getText().toString().trim();
 
         Button buttonRegister = findViewById(R.id.registerButton); // set variable for button action
+
         buttonRegister.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view) // function for register button
             {
-                final String firstNameTxt = firstName.getText().toString().trim();
+
+                final String firstNameTxt = firstName.getText().toString().trim(); // convert the EditText to a String type
                 final String lastNameTxt = lastName.getText().toString().trim();
                 final String emailTxt = email.getText().toString().trim();
                 final String passwordTxt = password.getText().toString().trim();
                 final String conPasswordTxt = conPassword.getText().toString().trim();
 
-                if (TextUtils.isEmpty(firstNameTxt) || TextUtils.isEmpty(lastNameTxt))
+                if (TextUtils.isEmpty(firstNameTxt) || TextUtils.isEmpty(lastNameTxt)) // check if the firstname and lastname are empty
                 {
                     Toast.makeText(RegisterAccount.this,"Please enter first and last name",Toast.LENGTH_LONG).show();
                     firstName.setError("First Name is required");
@@ -69,7 +69,7 @@ public class RegisterAccount extends AppCompatActivity
                     firstName.requestFocus();
                     lastName.requestFocus();
                 }
-                else if(TextUtils.isEmpty(emailTxt))
+                else if(TextUtils.isEmpty(emailTxt)) // check if email is empty
                 {
                     Toast.makeText(RegisterAccount.this,"Please enter Email",Toast.LENGTH_LONG).show();
                     email.setError("Email is required");
@@ -109,35 +109,27 @@ public class RegisterAccount extends AppCompatActivity
                 }
                 else
                 {
-                    registerUser(firstNameTxt,lastNameTxt,emailTxt,passwordTxt);
+                    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                    mAuth.createUserWithEmailAndPassword(emailTxt,passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful())
+                            {
+                                Toast.makeText(RegisterAccount.this,"Task is successful",Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(RegisterAccount.this,MainActivity.class));
+                            }
+                            else
+                            {
+                                Toast.makeText(RegisterAccount.this,"Registration failed: " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+
                 }
             }
 
         });
     }
-    // Register user given the credentials
-    private void registerUser(String firstNameTxt, String lastNameTxt, String emailTxt, String passwordTxt)
-    {
 
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        auth.createUserWithEmailAndPassword(emailTxt,passwordTxt).addOnCompleteListener(RegisterAccount.this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task)
-            {
-                if(task.isSuccessful())
-                {
-                    Toast.makeText(RegisterAccount.this, "User has registered successfully", Toast.LENGTH_LONG).show();
-                    FirebaseUser firebaseUser = auth.getCurrentUser();
 
-                    firebaseUser.sendEmailVerification();
-
-                    finish();
-                }
-                else
-                {
-                    Toast.makeText(RegisterAccount.this,"Task fail",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
 }
