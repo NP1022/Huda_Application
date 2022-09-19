@@ -4,13 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BDDBFF"
     tools:context=".MainApplication">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="231dp" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/partnersPage"
+        android:layout_width="210dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="17dp"
+        android:background="#FFFFFF"
+        android:text="Partners"
+        android:textColor="#043670"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/contactUsPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ourStoryPage" />
+
+    <ImageView
+        android:id="@+id/hudaLogo2"
+        android:layout_width="142dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="213dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toTopOf="@+id/emailLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/huda_logo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/homePage"
+        android:layout_width="210dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="101dp"
+        android:background="#FFFFFF"
+        android:text="Home"
+        android:textColor="#043670"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hudaLogo2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/announcementsPage"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="24dp"
+        android:background="#FFFFFF"
+        android:text="Announcements"
+        android:textColor="#043670"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/servicesPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homePage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/servicesPage"
+        android:layout_width="210dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF"
+        android:text="Services"
+        android:textColor="#043670"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ourStoryPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/announcementsPage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ourStoryPage"
+        android:layout_width="210dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="18dp"
+        android:background="#FFFFFF"
+        android:text="Our Story"
+        android:textColor="#043670"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/partnersPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/servicesPage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/contactUsPage"
+        android:layout_width="210dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="105dp"
+        android:background="#FFFFFF"
+        android:text="Contact Us"
+        android:textColor="#043670"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/partnersPage" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
