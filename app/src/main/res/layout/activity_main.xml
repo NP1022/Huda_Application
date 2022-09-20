@@ -102,10 +102,11 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.584"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintLeft_toLeftOf="@+id/forgotpass"
         app:layout_constraintStart_toEndOf="@+id/forgotpass"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintVertical_bias="0.572" />
 
     <ImageView
         android:id="@+id/hudaLogo"

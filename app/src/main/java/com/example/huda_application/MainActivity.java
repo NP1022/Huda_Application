@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else
         {
-            Toast.makeText(MainActivity.this, Email + " " + password, Toast.LENGTH_LONG).show();
+
             mAuth.signInWithEmailAndPassword(Email , password).addOnCompleteListener(new OnCompleteListener<AuthResult>()
             {
                 @Override
