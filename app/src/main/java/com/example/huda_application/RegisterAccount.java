@@ -133,32 +133,32 @@ public class RegisterAccount extends AppCompatActivity
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task)
                         {
-                            if(task.isSuccessful())
-                            {
-                                FirebaseUser user = mAuth.getCurrentUser();
-                                user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() // sending verification email to user
-                                {
-                                    @Override
-                                    public void onSuccess(Void unused)
-                                    {
-                                        Toast.makeText(RegisterAccount.this,"Verification email",Toast.LENGTH_LONG).show(); // toast meessage to user
-                                    }
-                                }).addOnFailureListener(new OnFailureListener()
-                                {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e)
-                                    {
-                                        Log.d(TAG,"onFailure: Email not sent " + e.getMessage());
-                                    }
-                                });
+//                            if(task.isSuccessful())
+//                            {
+//                                FirebaseUser user = mAuth.getCurrentUser();
+//                                user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() // sending verification email to user
+//                                {
+//                                    @Override
+//                                    public void onSuccess(Void unused)
+//                                    {
+//                                        Toast.makeText(RegisterAccount.this,"Verification email",Toast.LENGTH_LONG).show(); // toast meessage to user
+//                                    }
+//                                }).addOnFailureListener(new OnFailureListener()
+//                                {
+//                                    @Override
+//                                    public void onFailure(@NonNull Exception e)
+//                                    {
+//                                        Log.d(TAG,"onFailure: Email not sent " + e.getMessage());
+//                                    }
+//                                });
                                 Toast.makeText(RegisterAccount.this,"Task is successful",Toast.LENGTH_LONG).show();
                                 startActivity(new Intent(RegisterAccount.this,MainActivity.class));
-                            }
-                            else
-                            {
-
-                                Toast.makeText(RegisterAccount.this,"Registration failed: " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
-                            }
+//                            }
+//                            else
+//                            {
+//
+//                                Toast.makeText(RegisterAccount.this,"Registration failed: " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
+//                            }
                         }
                     });
 
