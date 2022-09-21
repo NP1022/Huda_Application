@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int Registration_ID = R.id.registration;
         int forgot_password_ID = R.id.forgotpass;
 
-         Password_Text = findViewById(R.id.password);
-         Email_Text = findViewById(R.id.email);
+        Password_Text = findViewById(R.id.password);
+        Email_Text = findViewById(R.id.email);
         forgot_pass = (TextView) findViewById(forgot_password_ID);
         registration_button = (TextView) findViewById(Registration_ID);
         login = (Button) findViewById(R.id.login);
