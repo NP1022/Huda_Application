@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView registration_button, forgot_pass, login;
     private EditText Password_Text , Email_Text;
 
+
     private FirebaseAuth mAuth;
 
 
@@ -53,16 +54,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int Registration_ID = R.id.registration;
         int forgot_password_ID = R.id.forgotpass;
 
-         Password_Text = findViewById(R.id.password);
-         Email_Text = findViewById(R.id.email);
+        Password_Text = findViewById(R.id.password);
+        Email_Text = findViewById(R.id.email);
         forgot_pass = (TextView) findViewById(forgot_password_ID);
         registration_button = (TextView) findViewById(Registration_ID);
         login = (Button) findViewById(R.id.login);
 
+
         login.setOnClickListener(this);
         registration_button.setOnClickListener(this);
         forgot_pass.setOnClickListener(this);
-
     }
 
 
@@ -91,12 +92,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
-        if (view.getId() == R.id.login){
+        if (view.getId() == R.id.login) {
 
             login(emailTxt, passwordTxt);
 
         }
-
 
     }
 
@@ -156,8 +156,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-
-
-
 
 }
