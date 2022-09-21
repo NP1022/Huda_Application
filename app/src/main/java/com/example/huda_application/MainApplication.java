@@ -27,7 +27,7 @@ public class MainApplication extends AppCompatActivity {
     }
 
     protected void openAnnouncementsView(){
-        Intent Announcements_Activity = new Intent(this ,RegisterAccount.class);
+        Intent Announcements_Activity = new Intent(this , Announcements.class);
         startActivity(Announcements_Activity);
     }
 
