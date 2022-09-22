@@ -153,7 +153,7 @@ public class RegisterAccount extends AppCompatActivity
                                     @Override
                                     public void onSuccess(Void unused)
                                     {
-                                        Toast.makeText(RegisterAccount.this,"Verification email",Toast.LENGTH_LONG).show(); // toast meessage to user
+                                        Toast.makeText(RegisterAccount.this,"Verification email sent",Toast.LENGTH_LONG).show(); // toast meessage to user
                                     }
                                 }).addOnFailureListener(new OnFailureListener()
                                 {

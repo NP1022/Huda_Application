@@ -36,15 +36,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView registration_button, forgot_pass, login;
     private EditText Password_Text , Email_Text;
 
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    FirebaseUser mUser = mAuth.getCurrentUser();
+
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        FirebaseUser mUser = mAuth.getCurrentUser();
 
         if(mUser != null && mUser.isEmailVerified())
         {
@@ -76,30 +77,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
     @Override
-    public void onClick(View view) {
+    public void onClick(View view)
+    {
 
         final String emailTxt = Email_Text.getText().toString().trim();
         final String passwordTxt = Password_Text.getText().toString().trim();
-        if(view.getId() == R.id.registration){
+        if(view.getId() == R.id.registration)
+        {
 
             Intent Register_Activity = new Intent(this ,RegisterAccount.class);
             startActivity(Register_Activity);
 
         }
-        if(view.getId() == R.id.forgotpass){
+        if(view.getId() == R.id.forgotpass)
+        {
 
             Intent password_Activity = new Intent(this ,ForgotPassword.class);
             startActivity(password_Activity);
 
         }
 
-        if (view.getId() == R.id.login){
+        if (view.getId() == R.id.login)
+        {
 
             login(emailTxt, passwordTxt);
 
@@ -122,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (password.length() < 8)
         {
-            Password_Text.setError("Password is less than 6 Character! ");
+            Password_Text.setError("Password is less than 8 Character! ");
             Password_Text.requestFocus();
         }
         else
