@@ -31,15 +31,15 @@ import java.util.regex.Pattern;
 public class RegisterAccount extends AppCompatActivity
 {
 
-//    private static final Pattern PASSWORD_PATTERN =
-//            Pattern.compile("^" +
-//                    "(?=.*[@#$%^&*!+=])" +     // at least 1 special character
-//                    "(?=\\S+$)" +            // no white spaces
-//                    ".{4,}" +                // at least 4 characters
-//                    "(?=.*[A-Z])"+          // at least 1 capital letter
-//                    "(?=.*[a-z])"+          // at least 1 lower case letter
-//                    "(?=.*[0-9])"+          // at least 1 number
-//                    "$");
+    private static final Pattern PASSWORD_PATTERN =
+            Pattern.compile("^" +
+                    "(?=.*[@#$%^&*!+=])" +     // at least 1 special character
+                    "(?=\\S+$)" +            // no white spaces
+                    ".{4,}" +                // at least 4 characters
+                    "(?=.*[A-Z])"+          // at least 1 capital letter
+                    "(?=.*[a-z])"+          // at least 1 lower case letter
+                    "(?=.*[0-9])"+          // at least 1 number
+                    "$");
 
 
     FirebaseDatabase rootNode;
@@ -134,7 +134,6 @@ public class RegisterAccount extends AppCompatActivity
                     dao.add(user).addOnSuccessListener(suc->
                     {
                         Toast.makeText(RegisterAccount.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
-                        ref.child(emailTxt).setValue(user);
                     }).addOnFailureListener(er->
                     {
                         Toast.makeText(RegisterAccount.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
@@ -146,32 +145,32 @@ public class RegisterAccount extends AppCompatActivity
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task)
                         {
-//                            if(task.isSuccessful())
-//                            {
-//                                FirebaseUser user = mAuth.getCurrentUser();
-//                                user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() // sending verification email to user
-//                                {
-//                                    @Override
-//                                    public void onSuccess(Void unused)
-//                                    {
-//                                        Toast.makeText(RegisterAccount.this,"Verification email",Toast.LENGTH_LONG).show(); // toast meessage to user
-//                                    }
-//                                }).addOnFailureListener(new OnFailureListener()
-//                                {
-//                                    @Override
-//                                    public void onFailure(@NonNull Exception e)
-//                                    {
-//                                        Log.d(TAG,"onFailure: Email not sent " + e.getMessage());
-//                                    }
-//                                });
+                            if(task.isSuccessful())
+                            {
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() // sending verification email to user
+                                {
+                                    @Override
+                                    public void onSuccess(Void unused)
+                                    {
+                                        Toast.makeText(RegisterAccount.this,"Verification email",Toast.LENGTH_LONG).show(); // toast meessage to user
+                                    }
+                                }).addOnFailureListener(new OnFailureListener()
+                                {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e)
+                                    {
+                                        Log.d(TAG,"onFailure: Email not sent " + e.getMessage());
+                                    }
+                                });
                                 Toast.makeText(RegisterAccount.this,"Task is successful",Toast.LENGTH_LONG).show();
                                 startActivity(new Intent(RegisterAccount.this,MainActivity.class));
-//                            }
-//                            else
-//                            {
-//
-//                                Toast.makeText(RegisterAccount.this,"Registration failed: " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
-//                            }
+                            }
+                            else
+                            {
+
+                                Toast.makeText(RegisterAccount.this,"Registration failed: " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                            }
                         }
                     });
 

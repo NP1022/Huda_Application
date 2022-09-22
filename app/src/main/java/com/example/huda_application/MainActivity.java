@@ -142,6 +142,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         else
                         {
                             Toast.makeText(MainActivity.this, "Please verify your email address ", Toast.LENGTH_LONG).show();
+
                         }
                     }
                     else
