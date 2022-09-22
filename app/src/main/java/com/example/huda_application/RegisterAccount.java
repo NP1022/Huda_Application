@@ -33,14 +33,13 @@ public class RegisterAccount extends AppCompatActivity
 
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
-                    "(?=.*[@#$%^&*!+=])" +     // at least 1 special character
-                    "(?=\\S+$)" +            // no white spaces
-                    ".{4,}" +                // at least 4 characters
-                    "(?=.*[A-Z])"+          // at least 1 capital letter
-                    "(?=.*[a-z])"+          // at least 1 lower case letter
-                    "(?=.*[0-9])"+          // at least 1 number
+                    "(?=.*[0-9])" +         //at least 1 digit
+                    "(?=.*[a-z])" +         //at least 1 lower case letter
+                    "(?=.*[A-Z])" +         //at least 1 upper case letter
+                    "(?=.*[!*@#$%^&+=])" +    //at least 1 special character
+                    "(?=\\S+$)" +           //no white spaces
+                    ".{8,}" +               //at least 8 characters
                     "$");
-
 
     FirebaseDatabase rootNode;
     DatabaseReference ref;
@@ -109,7 +108,7 @@ public class RegisterAccount extends AppCompatActivity
                     password.setError("Password is required");
                     password.requestFocus();
                 }
-                else if(passwordTxt.length() < 8)
+                else if(!PASSWORD_PATTERN.matcher(passwordTxt).matches())
                 {
                     Toast.makeText(RegisterAccount.this,"At least 1 capital letter, 1 lower case letter, 1 number and 1 special character",Toast.LENGTH_LONG).show();
                     password.setError("Password too weak");
