@@ -47,12 +47,12 @@ public class ForgotPassword extends AppCompatActivity
                 }
                 else if(!Patterns.EMAIL_ADDRESS.matcher(emailStr).matches())
                 {
-                    email.setError("Please provide valid password!");
+                    email.setError("Please provide valid email!");
                     email.requestFocus();
                     return;
                 }
                 else
-                {   Toast.makeText(ForgotPassword.this,"Else block is working",Toast.LENGTH_LONG).show();
+                {
 
                     mAuth.sendPasswordResetEmail(emailStr).addOnCompleteListener(new OnCompleteListener<Void>()
                     {
@@ -65,7 +65,7 @@ public class ForgotPassword extends AppCompatActivity
                             }
                             else
                             {
-                                Toast.makeText(ForgotPassword.this,"Try again! Something went wrong!",Toast.LENGTH_LONG).show();
+                                Toast.makeText(ForgotPassword.this,"Account does not exist",Toast.LENGTH_LONG).show();
                             }
                         }
                     });

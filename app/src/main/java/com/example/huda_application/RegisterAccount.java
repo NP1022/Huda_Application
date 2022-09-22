@@ -25,10 +25,23 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegisterAccount extends AppCompatActivity
 {
+
+//    private static final Pattern PASSWORD_PATTERN =
+//            Pattern.compile("^" +
+//                    "(?=.*[@#$%^&*!+=])" +     // at least 1 special character
+//                    "(?=\\S+$)" +            // no white spaces
+//                    ".{4,}" +                // at least 4 characters
+//                    "(?=.*[A-Z])"+          // at least 1 capital letter
+//                    "(?=.*[a-z])"+          // at least 1 lower case letter
+//                    "(?=.*[0-9])"+          // at least 1 number
+//                    "$");
+
+
     FirebaseDatabase rootNode;
     DatabaseReference ref;
 
@@ -98,7 +111,7 @@ public class RegisterAccount extends AppCompatActivity
                 }
                 else if(passwordTxt.length() < 8)
                 {
-                    Toast.makeText(RegisterAccount.this,"Password should be at least 8 characters",Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterAccount.this,"At least 1 capital letter, 1 lower case letter, 1 number and 1 special character",Toast.LENGTH_LONG).show();
                     password.setError("Password too weak");
                     password.requestFocus();
                 }
