@@ -4,18 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
-public class MainApplication extends AppCompatActivity
+public class MainApplication extends AppCompatActivity implements View.OnClickListener
 {
+
+
+    private TextView Partner_button, Contact_Us;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -23,13 +22,28 @@ public class MainApplication extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_application);
 
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        FirebaseUser user = mAuth.getCurrentUser();
+        Partner_button  = (TextView) findViewById(R.id.partnersPage);
+        Contact_Us = (TextView) findViewById(R.id.contactUsPage);
 
-        if (user != null && !user.isEmailVerified()) // check if user is verified
-        {
-            startActivity(new Intent(MainApplication.this,MainActivity.class));
-        }
+        Partner_button.setOnClickListener(this);
+        Contact_Us.setOnClickListener(this);
+
+
     }
 
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.partnersPage){
+            Intent Partners = new Intent(this ,Partners.class);
+            startActivity(Partners);
+
+        }
+        else if (view.getId() == R.id.contactUsPage){
+
+            Intent Contact_Us = new Intent(this ,Contact_Us.class);
+            startActivity(Contact_Us);
+
+        }
+
+    }
 }
