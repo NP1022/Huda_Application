@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BDDBFF"
+    android:background="#DDE1E6"
     tools:context=".HealthServices">
 
     <ImageView
@@ -39,15 +39,71 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="346dp"
-        android:layout_height="560dp"
+        android:layout_width="413dp"
+        android:layout_height="120dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="33dp"
-        android:background="#FFFFFF"
-        android:text="TextView"
+        android:background="#111E68"
+        android:fontFamily="sans-serif-black"
+        android:paddingTop="35dp"
+        android:text="Free Health Services"
+        android:textAlignment="center"
+        android:textColor="#F1EEEE"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/servicesPage" />
+
+    <Button
+        android:id="@+id/primaryCareButton"
+        android:layout_width="116dp"
+        android:layout_height="51dp"
+        android:paddingTop="3dp"
+        android:text="Primary Care"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="404dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="116dp"
+        android:layout_height="51dp"
+        android:text="Specialty Care"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="455dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="116dp"
+        android:layout_height="51dp"
+        android:text="Vision Care"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="455dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="116dp"
+        android:layout_height="51dp"
+        android:text="New Patients"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="455dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="116dp"
+        android:layout_height="51dp"
+        android:paddingTop="3dp"
+        android:text="Mental Health"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="404dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="116dp"
+        android:layout_height="51dp"
+        android:paddingTop="3dp"
+        android:text="Dental Care"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="404dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
