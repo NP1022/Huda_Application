@@ -14,7 +14,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 {
 
 
-    private TextView Partner_button, Contact_Us;
+    private TextView Partner_button, Contact_Us, Announcements_Button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -24,9 +24,11 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 
         Partner_button  = (TextView) findViewById(R.id.partnersPage);
         Contact_Us = (TextView) findViewById(R.id.contactUsPage);
+        Announcements_Button = (TextView) findViewById(R.id.announcementsPage);
 
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
+        Announcements_Button.setOnClickListener(this);
 
 
     }
@@ -43,6 +45,11 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
             Intent Contact_Us = new Intent(this ,Contact_Us.class);
             startActivity(Contact_Us);
 
+        }
+
+        else if (view.getId() == R.id.announcementsPage){
+            Intent Announcements = new Intent (this, Announcements.class);
+            startActivity(Announcements);
         }
 
     }
