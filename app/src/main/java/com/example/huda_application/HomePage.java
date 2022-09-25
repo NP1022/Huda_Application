@@ -12,20 +12,13 @@ public class HomePage extends AppCompatActivity {
 
 
     FirebaseAuth mAuth; // Added firebase to homepage
+    FirebaseUser mUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        mAuth = FirebaseAuth.getInstance(); // firebase variable to save instance
-    }
-    protected void onStart()
-    {
-        super.onStart();
-        FirebaseUser user = mAuth.getCurrentUser(); // create firebase user
-        if(user == null)
-        {
-            startActivity(new Intent(HomePage.this, MainActivity.class)); // check if current is logged in or off
-        }
+
+
     }
 }

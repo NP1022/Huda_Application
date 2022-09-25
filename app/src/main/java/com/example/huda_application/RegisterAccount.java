@@ -16,6 +16,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,12 +25,24 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegisterAccount extends AppCompatActivity
 {
-    // create database object
-    DatabaseReference dbRef = FirebaseDatabase.getInstance().getReferenceFromUrl("https://huda-app-44bdb-default-rtdb.firebaseio.com/");
+
+    private static final Pattern PASSWORD_PATTERN =
+            Pattern.compile("^" +
+                    "(?=.*[0-9])" +         //at least 1 digit
+                    "(?=.*[a-z])" +         //at least 1 lower case letter
+                    "(?=.*[A-Z])" +         //at least 1 upper case letter
+                    "(?=.*[!*@#$%^&+=])" +    //at least 1 special character
+                    "(?=\\S+$)" +           //no white spaces
+                    ".{8,}" +               //at least 8 characters
+                    "$");
+
+    FirebaseDatabase rootNode;
+    DatabaseReference ref;
 
     private FirebaseAuth mAuth;
 
@@ -36,6 +50,8 @@ public class RegisterAccount extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         mAuth = FirebaseAuth.getInstance();
+        rootNode = FirebaseDatabase.getInstance();
+        ref = rootNode.getReference("users");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_account);
@@ -45,6 +61,8 @@ public class RegisterAccount extends AppCompatActivity
         final EditText email = findViewById(R.id.email);
         final EditText password = findViewById(R.id.password);
         final EditText conPassword = findViewById(R.id.confirmPass);
+
+        DAOUser dao = new DAOUser();
 
 
         Button buttonRegister = findViewById(R.id.registerButton); // set variable for button action
@@ -60,6 +78,9 @@ public class RegisterAccount extends AppCompatActivity
                 final String emailTxt = email.getText().toString().trim();
                 final String passwordTxt = password.getText().toString().trim();
                 final String conPasswordTxt = conPassword.getText().toString().trim();
+
+                User user = new User(firstNameTxt,lastNameTxt,emailTxt,passwordTxt);
+
 
                 if (TextUtils.isEmpty(firstNameTxt) || TextUtils.isEmpty(lastNameTxt)) // check if the firstname and lastname are empty
                 {
@@ -87,9 +108,9 @@ public class RegisterAccount extends AppCompatActivity
                     password.setError("Password is required");
                     password.requestFocus();
                 }
-                else if(passwordTxt.length() < 8)
+                else if(!PASSWORD_PATTERN.matcher(passwordTxt).matches())
                 {
-                    Toast.makeText(RegisterAccount.this,"Password should be at least 8 characters",Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterAccount.this,"At least 1 capital letter, 1 lower case letter, 1 number and 1 special character",Toast.LENGTH_LONG).show();
                     password.setError("Password too weak");
                     password.requestFocus();
                 }
@@ -109,17 +130,44 @@ public class RegisterAccount extends AppCompatActivity
                 }
                 else
                 {
+                    dao.add(user).addOnSuccessListener(suc->
+                    {
+                        Toast.makeText(RegisterAccount.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
+                    }).addOnFailureListener(er->
+                    {
+                        Toast.makeText(RegisterAccount.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
+                    });
+
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();
-                    mAuth.createUserWithEmailAndPassword(emailTxt,passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    mAuth.createUserWithEmailAndPassword(emailTxt,passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>()
+                    {
                         @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
+                        public void onComplete(@NonNull Task<AuthResult> task)
+                        {
                             if(task.isSuccessful())
                             {
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() // sending verification email to user
+                                {
+                                    @Override
+                                    public void onSuccess(Void unused)
+                                    {
+                                        Toast.makeText(RegisterAccount.this,"Verification email sent",Toast.LENGTH_LONG).show(); // toast meessage to user
+                                    }
+                                }).addOnFailureListener(new OnFailureListener()
+                                {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e)
+                                    {
+                                        Log.d(TAG,"onFailure: Email not sent " + e.getMessage());
+                                    }
+                                });
                                 Toast.makeText(RegisterAccount.this,"Task is successful",Toast.LENGTH_LONG).show();
                                 startActivity(new Intent(RegisterAccount.this,MainActivity.class));
                             }
                             else
                             {
+
                                 Toast.makeText(RegisterAccount.this,"Registration failed: " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
                             }
                         }
