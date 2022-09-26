@@ -7,6 +7,23 @@
     android:background="#FFFFFF"
     tools:context=".MainApplication">
 
+    <TextView
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="680dp"
+        android:text="Logout"
+        android:textColor="#043670"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hudaLogo2"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.572" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/partnersPage"
         android:layout_width="210dp"
@@ -117,20 +134,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/partnersPage" />
-
-    <TextView
-        android:id="@+id/logoutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="20dp"
-        android:text="Logout"
-        android:textColor="#043670"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.363"
-        app:layout_constraintStart_toEndOf="@+id/hudaLogo2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
