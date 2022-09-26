@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_forgot_password.xml" value="0.2638888888888889" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_main_application.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_register_account.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/content_main.xml" value="0.30052083333333335" />
+=======
+>>>>>>> 69936bcfb796105b62d73ba6c44ecd67844d662a
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2425" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_contact_us.xml" value="0.24320652173913043" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_forgot_password.xml" value="0.11170212765957446" />
