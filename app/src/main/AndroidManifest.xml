@@ -25,7 +25,7 @@
             android:name=".Partners"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainApplication"
             android:exported="false" />
         <activity
             android:name=".RegisterAccount"
@@ -34,7 +34,7 @@
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".MainApplication"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Huda_Application.NoActionBar">
