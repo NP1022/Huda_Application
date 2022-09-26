@@ -4,23 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#BDDBFF"
     tools:context=".Partners">
-
-    <ImageView
-        android:id="@+id/hudaLogo3"
-        android:layout_width="131dp"
-        android:layout_height="122dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="213dp"
-        android:layout_marginBottom="112dp"
-        app:layout_constraintBottom_toTopOf="@+id/emailLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/huda_logo" />
 
     <TextView
         android:id="@+id/label"
@@ -34,5 +19,4 @@
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.0" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

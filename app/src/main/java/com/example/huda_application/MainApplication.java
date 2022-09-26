@@ -14,8 +14,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 {
 
 
-    private TextView Partner_button, Contact_Us, Our_story, signOut;
-    private FirebaseAuth mAuth;
+    private TextView Partner_button, Contact_Us, Our_story;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,21 +25,9 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Partner_button  = (TextView) findViewById(R.id.partnersPage);
         Contact_Us = (TextView) findViewById(R.id.contactUsPage);
         Our_story = (TextView) findViewById(R.id.ourStoryPage);
-        signOut = (TextView) findViewById(R.id.logoutButton);
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
-        signOut.setOnClickListener(this);
-
-        mAuth = FirebaseAuth.getInstance();
-        FirebaseUser fbUser = mAuth.getCurrentUser();
-
-        if(fbUser != null && !fbUser.isEmailVerified())  // if user is not null and their email is not verified
-        {
-            startActivity(new Intent(MainApplication.this,MainActivity.class)); // send them to the login activity
-        }
-
-
 
 
     }
@@ -62,12 +49,6 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 
             Intent OurStory = new Intent(this , OurStory.class);
             startActivity(OurStory);
-        }
-        else if (view.getId() == R.id.logoutButton)
-        {
-            mAuth.signOut();
-            startActivity(new Intent(MainApplication.this , MainActivity.class));
-
         }
 
     }
