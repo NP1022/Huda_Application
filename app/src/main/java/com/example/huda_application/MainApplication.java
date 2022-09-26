@@ -33,6 +33,14 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         signOut.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
+        FirebaseUser fbUser = mAuth.getCurrentUser();
+
+        if(fbUser != null && !fbUser.isEmailVerified())  // if user is not null and their email is not verified
+        {
+            startActivity(new Intent(MainApplication.this,MainActivity.class)); // send them to the login activity
+        }
+
+
 
 
     }
