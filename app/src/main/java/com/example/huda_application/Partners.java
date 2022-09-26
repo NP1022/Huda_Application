@@ -12,9 +12,6 @@ public class Partners extends AppCompatActivity {
         setContentView(R.layout.activity_partners);
 
 
-
-
-
     }
 
 
