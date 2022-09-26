@@ -19,6 +19,9 @@
             android:name=".OurStory"
             android:exported="false" />
         <activity
+            android:name=".PatientForm"
+            android:exported="false" />
+        <activity
             android:name=".Contact_Us"
             android:exported="false" />
         <activity

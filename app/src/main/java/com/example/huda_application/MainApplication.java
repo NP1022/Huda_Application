@@ -13,8 +13,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainApplication extends AppCompatActivity implements View.OnClickListener
 {
 
-
+    private FirebaseAuth mAuth;
     private TextView Partner_button, Contact_Us, Our_story;
+    private TextView logout = findViewById(R.id.logoutButton);
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -29,6 +30,15 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
 
+        mAuth = FirebaseAuth.getInstance();
+        logout.setOnClickListener(new View.OnClickListener()  // onclick for signing user out
+        {
+            @Override
+            public void onClick(View view)
+            {
+                mAuth.signOut();
+            }
+        });
 
     }
 
