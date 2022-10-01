@@ -40,9 +40,6 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
             startActivity(new Intent(MainApplication.this,MainActivity.class)); // send them to the login activity
         }
 
-
-
-
     }
 
     @Override
