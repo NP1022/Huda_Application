@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         int Registration_ID = R.id.registration;
         int forgot_password_ID = R.id.forgotpass;
-        final String[] langs_options = {"English", "عربى"};
+        final String[] langs_options = {"English", "Arabic" , "Spanish"};
 
         language_Button = findViewById(R.id.language);
         Password_Text = findViewById(R.id.password);
@@ -107,6 +107,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 picklanguage("ar");
                                 recreate();
                                 Toast.makeText(MainActivity.this,"اللغة الحالية: العربية",Toast.LENGTH_SHORT).show();
+                                break;
+                            case(2):
+
+                                picklanguage("es");
+                                recreate();
+                                Toast.makeText(MainActivity.this,"Idioma actual: español",Toast.LENGTH_SHORT).show();
                                 break;
                         }
                         Diag_options.dismiss();
