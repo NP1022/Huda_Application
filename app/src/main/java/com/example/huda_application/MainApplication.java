@@ -14,7 +14,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 {
 
 
-    private TextView Partner_button, Contact_Us, Our_story;
+    private TextView Health_Services, Partner_button, Contact_Us, Our_story;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -22,6 +22,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_application);
 
+        Health_Services = (TextView) findViewById(R.id.healthServices);
         Partner_button  = (TextView) findViewById(R.id.partnersPage);
         Contact_Us = (TextView) findViewById(R.id.contactUsPage);
         Our_story = (TextView) findViewById(R.id.ourStoryPage);
