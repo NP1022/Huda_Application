@@ -26,6 +26,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Partner_button  = (TextView) findViewById(R.id.partnersPage);
         Contact_Us = (TextView) findViewById(R.id.contactUsPage);
         Our_story = (TextView) findViewById(R.id.ourStoryPage);
+        Health_Services.setOnClickListener(this);
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
@@ -39,6 +40,10 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
             Intent Partners = new Intent(this ,Partners.class);
             startActivity(Partners);
 
+        }
+        else if (view.getId() == R.id.healthServices){
+            Intent HealthServices = new Intent(this, HealthServices.class);
+            startActivity(HealthServices);
         }
         else if (view.getId() == R.id.contactUsPage){
 
