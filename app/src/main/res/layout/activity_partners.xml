@@ -28,10 +28,12 @@
             app:layout_constraintHorizontal_bias="0.118"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
             app:srcCompat="@drawable/huda_logo" />
 
+
         <ImageView
-            android:id="@+id/bcbcLogo"
+            android:id="@+id/bcbsLogo"
             android:layout_width="311dp"
             android:layout_height="116dp"
             android:layout_marginTop="20dp"
@@ -50,15 +52,15 @@
             app:layout_constraintBottom_toTopOf="@+id/MSUCHMLogo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bcbcLogo"
+            app:layout_constraintTop_toBottomOf="@+id/bcbsLogo"
             app:srcCompat="@drawable/st_joseph_mercy_oakland_logo" />
 
         <ImageView
             android:id="@+id/MSUCHMLogo"
             android:layout_width="311dp"
             android:layout_height="116dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="84dp"
             app:layout_constraintBottom_toTopOf="@+id/MSUComLogo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -99,17 +101,17 @@
             android:id="@+id/wsuPharmLogo"
             android:layout_width="311sp"
             android:layout_height="116sp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="22dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/deltaDentalLogo"
             app:srcCompat="@drawable/wayne_pharmacy_logo" />
 
         <ImageView
-            android:id="@+id/elisteSmileLogo"
+            android:id="@+id/eliteSmileLogo"
             android:layout_width="311sp"
             android:layout_height="116sp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/wsuPharmLogo"
@@ -117,18 +119,18 @@
 
         <ImageView
             android:id="@+id/familyRehabLogo"
-            android:layout_width="311sp"
-            android:layout_height="116sp"
-            android:layout_marginTop="20dp"
+            android:layout_width="350sp"
+            android:layout_height="140sp"
+            android:layout_marginTop="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/elisteSmileLogo"
+            app:layout_constraintTop_toBottomOf="@+id/eliteSmileLogo"
             app:srcCompat="@drawable/dm_design_logo" />
 
         <ImageView
             android:id="@+id/sayLogo"
-            android:layout_width="311sp"
-            android:layout_height="116sp"
+            android:layout_width="350sp"
+            android:layout_height="140sp"
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -136,7 +138,7 @@
             app:srcCompat="@drawable/say_clinic_logo" />
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/circleSocksLogo"
             android:layout_width="171dp"
             android:layout_height="169dp"
             android:layout_marginTop="20dp"
@@ -146,13 +148,13 @@
             app:srcCompat="@drawable/circle_socks_logo" />
 
         <ImageView
-            android:id="@+id/imageView18"
+            android:id="@+id/iagdLogo"
             android:layout_width="171dp"
             android:layout_height="169dp"
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView17"
+            app:layout_constraintTop_toBottomOf="@+id/circleSocksLogo"
             app:srcCompat="@drawable/iagd_logo" />
 
         <ImageView
@@ -162,7 +164,7 @@
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView18"
+            app:layout_constraintTop_toBottomOf="@+id/iagdLogo"
             app:srcCompat="@drawable/michigan_muslim_community_council_logo" />
 
         <ImageView
@@ -197,17 +199,17 @@
             android:textColor="#043670"
             android:textSize="30dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/bcbcLogo"
+            app:layout_constraintBottom_toTopOf="@+id/bcbsLogo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toEndOf="@+id/imageView4" />
 
         <ImageView
             android:id="@+id/wccdLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="252dp"
+            android:layout_height="143dp"
             android:layout_marginStart="148dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -215,11 +217,11 @@
             app:srcCompat="@drawable/wcccdlogo_fw_logo" />
 
         <ImageView
-            android:id="@+id/imageView23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="20dp"
+            android:id="@+id/detroitMercyLogo"
+            android:layout_width="382dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -227,15 +229,15 @@
             app:srcCompat="@drawable/detroit_mercy_dental_logo" />
 
         <ImageView
-            android:id="@+id/imageView26"
-            android:layout_width="311dp"
-            android:layout_height="116dp"
+            android:id="@+id/bccpLogo"
+            android:layout_width="350dp"
+            android:layout_height="140dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView23"
+            app:layout_constraintTop_toBottomOf="@+id/detroitMercyLogo"
             app:srcCompat="@drawable/bcccp_tri_county_logo_4c" />
 
         <ImageView
@@ -243,19 +245,31 @@
             android:layout_width="295dp"
             android:layout_height="135dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView26"
+            app:layout_constraintTop_toBottomOf="@+id/bccpLogo"
             app:srcCompat="@drawable/osa_logo" />
+
+        <ImageView
+            android:id="@+id/lasmLogo"
+            android:layout_width="354dp"
+            android:layout_height="172dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matrixLogo"
+            app:srcCompat="@drawable/lasmc_logo" />
 
         <ImageView
             android:id="@+id/ferndaleLogo"
             android:layout_width="311dp"
             android:layout_height="116dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -264,10 +278,10 @@
 
         <ImageView
             android:id="@+id/shoresLogo"
-            android:layout_width="138dp"
-            android:layout_height="125dp"
+            android:layout_width="142dp"
+            android:layout_height="154dp"
             android:layout_marginStart="146dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="213dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.125"
@@ -277,10 +291,10 @@
 
         <ImageView
             android:id="@+id/premierLogo"
-            android:layout_width="311dp"
-            android:layout_height="116dp"
+            android:layout_width="353dp"
+            android:layout_height="159dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -292,7 +306,7 @@
             android:layout_width="311dp"
             android:layout_height="116dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -304,7 +318,7 @@
             android:layout_width="311dp"
             android:layout_height="116dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -316,7 +330,7 @@
             android:layout_width="311dp"
             android:layout_height="116dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -328,7 +342,7 @@
             android:layout_width="311dp"
             android:layout_height="116dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -340,11 +354,12 @@
             android:layout_width="311dp"
             android:layout_height="116dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="31dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/matrixLogo"
+            app:layout_constraintTop_toBottomOf="@+id/lasmLogo"
             app:srcCompat="@drawable/access_logo" />
 
         <ImageView
@@ -352,23 +367,73 @@
             android:layout_width="311dp"
             android:layout_height="116dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="76dp"
             android:layout_marginEnd="49dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/accessLogo"
             app:srcCompat="@drawable/nafc" />
 
         <TextView
-            android:id="@+id/underline"
-            android:layout_width="150dp"
-            android:layout_height="5dp"
-            android:background="#043670"
-            app:layout_constraintBottom_toTopOf="@+id/bcbcLogo"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginEnd="78dp"
+            android:text="Proud Members in Good Standing With: "
+            android:textAlignment="center"
+            android:textColor="#043670"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/nafcLogo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toBottomOf="@+id/partnersHeader"
-            app:layout_constraintVertical_bias="0.127" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accessLogo"
+            app:layout_constraintVertical_bias="0.756" />
+
+        <ImageView
+            android:id="@+id/fcomLogo"
+            android:layout_width="311dp"
+            android:layout_height="116dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="73dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nafcLogo"
+            app:srcCompat="@drawable/fcom" />
+
+        <ImageView
+            android:id="@+id/nafcSealLogo"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="51dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fcomLogo"
+            app:layout_constraintTop_toBottomOf="@+id/nafcLogo"
+            app:srcCompat="@drawable/nafc2022" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="231dp"
+            android:layout_height="258dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="73dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fcomLogo"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/nafc2022" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
