@@ -14,7 +14,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 {
 
 
-    private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements;
+    private TextView Health_Services, Partner_button, Contact_Us, Our_story, signOut, Announcements;
     private FirebaseAuth mAuth;
 
     @Override
@@ -22,12 +22,13 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_application);
-
+        Health_Services = (TextView) findViewById(R.id.servicesPage);
         Partner_button  = (TextView) findViewById(R.id.partnersPage);
         Contact_Us = (TextView) findViewById(R.id.contactUsPage);
         Our_story = (TextView) findViewById(R.id.ourStoryPage);
         signOut = (TextView) findViewById(R.id.logoutButton);
         Announcements = (TextView)findViewById(R.id.announcementsPage);
+        Health_Services.setOnClickListener(this);
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
@@ -50,6 +51,10 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
             Intent Partners = new Intent(this ,Partners.class);
             startActivity(Partners);
 
+        }
+        else if (view.getId() == R.id.servicesPage){
+            Intent HealthServices = new Intent(this, HealthServices.class);
+            startActivity(HealthServices);
         }
         else if (view.getId() == R.id.contactUsPage){
 
