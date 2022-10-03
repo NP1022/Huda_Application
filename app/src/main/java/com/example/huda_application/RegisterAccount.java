@@ -50,8 +50,6 @@ public class RegisterAccount extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         mAuth = FirebaseAuth.getInstance();
-        rootNode = FirebaseDatabase.getInstance();
-        ref = rootNode.getReference("users");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_account);
@@ -79,7 +77,11 @@ public class RegisterAccount extends AppCompatActivity
                 final String passwordTxt = password.getText().toString().trim();
                 final String conPasswordTxt = conPassword.getText().toString().trim();
 
-                User user = new User(firstNameTxt,lastNameTxt,emailTxt,passwordTxt);
+//                rootNode = FirebaseDatabase.getInstance();
+//                ref = rootNode.getReference("users");
+
+//                User user = new User(firstNameTxt,lastNameTxt,emailTxt,passwordTxt);
+
 
 
                 if (TextUtils.isEmpty(firstNameTxt) || TextUtils.isEmpty(lastNameTxt)) // check if the firstname and lastname are empty
@@ -130,13 +132,7 @@ public class RegisterAccount extends AppCompatActivity
                 }
                 else
                 {
-                    dao.add(user).addOnSuccessListener(suc->
-                    {
-                        Toast.makeText(RegisterAccount.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
-                    }).addOnFailureListener(er->
-                    {
-                        Toast.makeText(RegisterAccount.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
-                    });
+                    User user = new User(firstNameTxt,lastNameTxt,emailTxt,passwordTxt);
 
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();
                     mAuth.createUserWithEmailAndPassword(emailTxt,passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>()
@@ -146,13 +142,21 @@ public class RegisterAccount extends AppCompatActivity
                         {
                             if(task.isSuccessful())
                             {
-                                FirebaseUser user = mAuth.getCurrentUser();
-                                user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() // sending verification email to user
+                                FirebaseUser mUser = mAuth.getCurrentUser();
+                                mUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() // sending verification email to user
                                 {
                                     @Override
                                     public void onSuccess(Void unused)
                                     {
                                         Toast.makeText(RegisterAccount.this,"Verification email sent",Toast.LENGTH_LONG).show(); // toast meessage to user
+                                        dao.add(user).addOnSuccessListener(suc->
+                                        {
+                                            Toast.makeText(RegisterAccount.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
+                                        }).addOnFailureListener(er->
+                                        {
+                                            Toast.makeText(RegisterAccount.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
+                                        });
+
                                     }
                                 }).addOnFailureListener(new OnFailureListener()
                                 {

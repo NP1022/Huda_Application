@@ -1,6 +1,10 @@
 package com.example.huda_application;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -8,8 +12,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.DisplayMetrics;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -29,13 +35,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
     private TextView registration_button, forgot_pass, login;
     private EditText Password_Text , Email_Text;
-
+    private Button language_Button;
+    public AlertDialog menu;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser mUser = mAuth.getCurrentUser();
 
@@ -45,13 +54,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
+        Saved_language();
 
         if(mUser != null && mUser.isEmailVerified())
         {
             startActivity(new Intent(MainActivity.this, MainApplication.class));
         }
-
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);
@@ -61,20 +69,86 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         int Registration_ID = R.id.registration;
         int forgot_password_ID = R.id.forgotpass;
+        final String[] langs_options = {"English", "Arabic" , "Spanish"};
 
+        language_Button = findViewById(R.id.language);
         Password_Text = findViewById(R.id.password);
         Email_Text = findViewById(R.id.email);
         forgot_pass = (TextView) findViewById(forgot_password_ID);
         registration_button = (TextView) findViewById(Registration_ID);
         login = (Button) findViewById(R.id.login);
 
+        AlertDialog.Builder options = new AlertDialog.Builder(MainActivity.this);
+        options.setTitle("Languages");
+
+
         login.setOnClickListener(this);
         registration_button.setOnClickListener(this);
         forgot_pass.setOnClickListener(this);
 
+        language_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                options.setSingleChoiceItems(langs_options, -1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface Diag_options, int opts ) {
+
+                        switch(opts) {
+
+                            case (0):
+                                picklanguage("en");
+                                recreate();
+                                Toast.makeText(MainActivity.this,"Current Language: English",Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case(1):
+
+                                picklanguage("ar");
+                                recreate();
+                                Toast.makeText(MainActivity.this,"اللغة الحالية: العربية",Toast.LENGTH_SHORT).show();
+                                break;
+                            case(2):
+
+                                picklanguage("es");
+                                recreate();
+                                Toast.makeText(MainActivity.this,"Idioma actual: español",Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+                        Diag_options.dismiss();
+                    }
+                });
+                create_menu(options);
+            }
+        });
     }
 
 
+
+    private void picklanguage(String l) {
+        SharedPreferences.Editor Saver = getSharedPreferences("langauge", MODE_MULTI_PROCESS).edit();
+        Locale language_option =  new Locale(l);
+        DisplayMetrics metrics =  getBaseContext().getResources().getDisplayMetrics();
+        language_swtich(l, metrics, language_option);
+
+
+        Saver.putString("prev_language" ,l);
+        Saver.apply();
+
+
+    }
+
+    public void create_menu(AlertDialog.Builder opts){
+
+        menu = opts.create();
+        menu.show();
+    }
+
+    public void Saved_language(){
+        SharedPreferences saved_language =getSharedPreferences("langauge", MODE_MULTI_PROCESS);
+
+        picklanguage(saved_language.getString("prev_language" , ""));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -83,6 +157,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+    public void language_swtich(String l , DisplayMetrics m , Locale lang) {
+
+        Locale.setDefault(lang);
+
+        Configuration page = new Configuration();
+        page.locale = lang;
+
+        getBaseContext().getResources().updateConfiguration(page, m);
+
+    }
+
+
     @Override
     public void onClick(View view)
     {
