@@ -12,8 +12,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainApplication extends AppCompatActivity implements View.OnClickListener
 {
-
-
     private TextView Health_Services, Partner_button, Contact_Us, Our_story, signOut, Announcements;
     private FirebaseAuth mAuth;
 
@@ -50,10 +48,9 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         if (view.getId() == R.id.partnersPage){
             Intent Partners = new Intent(this ,Partners.class);
             startActivity(Partners);
-
         }
         else if (view.getId() == R.id.servicesPage){
-            Intent HealthServices = new Intent(this, HealthServices.class);
+            Intent HealthServices = new Intent(MainApplication.this, HealthServices.class);
             startActivity(HealthServices);
         }
         else if (view.getId() == R.id.contactUsPage){
