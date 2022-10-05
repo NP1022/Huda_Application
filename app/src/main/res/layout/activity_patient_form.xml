@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
@@ -29,29 +30,26 @@
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/visitReason"
         android:layout_width="320dp"
         android:layout_height="150dp"
         android:layout_below="@+id/todaysDate"
+        android:layout_marginTop="15dp"
         android:hint="Visit Reason"
         android:inputType="textMultiLine"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/todaysDate"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/todaysDate"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintStart_toStartOf="@+id/todaysDate"
+        app:layout_constraintTop_toBottomOf="@+id/todaysDate" />
 
     <EditText
         android:id="@+id/firstName"
@@ -63,12 +61,10 @@
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/visitReason"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/visitReason"
-        app:layout_constraintVertical_bias="0.054" />
+        app:layout_constraintStart_toStartOf="@+id/visitReason"
+        app:layout_constraintTop_toBottomOf="@+id/visitReason" />
 
     <EditText
         android:id="@+id/lastName"
@@ -77,15 +73,13 @@
         android:ems="10"
         android:hint="Last Name"
         android:inputType="textPersonName"
-        android:textColor="@color/black"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/firstName"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintStart_toStartOf="@+id/firstName"
+        app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
     <EditText
         android:id="@+id/patientSex"
@@ -94,15 +88,13 @@
         android:ems="10"
         android:hint="Sex (Male or Female)"
         android:inputType="textPersonName"
-        android:textColor="@color/black"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/lastName"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName"
-        app:layout_constraintVertical_bias="0.054" />
+        app:layout_constraintStart_toStartOf="@+id/lastName"
+        app:layout_constraintTop_toBottomOf="@+id/lastName" />
 
     <EditText
         android:id="@+id/patientDob"
@@ -110,16 +102,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="DOB (mm-dd-yyyy)"
-        android:textColor="@color/black"
         android:inputType="date"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/patientSex"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientSex"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintStart_toStartOf="@+id/patientSex"
+        app:layout_constraintTop_toBottomOf="@+id/patientSex" />
 
     <EditText
         android:id="@+id/patientSSN"
@@ -127,16 +117,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="SSN (123-45-6789)"
-        android:textColor="@color/black"
         android:inputType="date"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/patientDob"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientDob"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintStart_toStartOf="@+id/patientDob"
+        app:layout_constraintTop_toBottomOf="@+id/patientDob" />
 
     <EditText
         android:id="@+id/patientSSN2"
@@ -148,12 +136,10 @@
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/patientSSN3"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientDob"
-        app:layout_constraintVertical_bias="0.702" />
+        app:layout_constraintStart_toStartOf="@+id/patientSSN3"
+        app:layout_constraintTop_toBottomOf="@+id/patientSSN3" />
 
     <EditText
         android:id="@+id/patientSSN3"
@@ -165,12 +151,10 @@
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/patientSSN"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientDob"
-        app:layout_constraintVertical_bias="0.381" />
+        app:layout_constraintStart_toStartOf="@+id/patientSSN"
+        app:layout_constraintTop_toBottomOf="@+id/patientSSN" />
 
     <Button
         android:id="@+id/submitPatient"
@@ -182,6 +166,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patientSSN"
         app:layout_constraintVertical_bias="1.0" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="531dp"
+        <RadioButton android:id="@+id/radio_Home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"/>
+</RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
