@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/scrollViewPatientForm"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
     tools:context=".PatientForm"
-    android:background="@color/white">
+    android:background="#FFFFFF">
 
     <EditText
         android:id="@+id/todaysDate"
@@ -126,6 +138,40 @@
         app:layout_constraintTop_toBottomOf="@+id/patientDob"
         app:layout_constraintVertical_bias="0.083" />
 
+    <EditText
+        android:id="@+id/patientSSN2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Cell Phone (###-###-#####)"
+        android:inputType="date"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientDob"
+        app:layout_constraintVertical_bias="0.702" />
+
+    <EditText
+        android:id="@+id/patientSSN3"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Home Phone (###-###-#####)"
+        android:inputType="date"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientDob"
+        app:layout_constraintVertical_bias="0.381" />
+
     <Button
         android:id="@+id/submitPatient"
         android:layout_width="wrap_content"
@@ -134,7 +180,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientSSN" />
+        app:layout_constraintTop_toBottomOf="@+id/patientSSN"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
