@@ -171,11 +171,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="531dp"
-        <RadioButton android:id="@+id/radio_Home"
+        tools:layout_editor_absoluteY="531dp">
+
+        <RadioButton
+            android:id="@+id/radio_Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home"/>
+            android:text="Home" />
+        <RadioButton 
+            android:id="@+id/radio_Cell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cell" />
 </RadioGroup>
 
 
