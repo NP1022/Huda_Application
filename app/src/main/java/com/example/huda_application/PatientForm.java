@@ -29,6 +29,7 @@ public class PatientForm extends AppCompatActivity
         final EditText firstName = findViewById(R.id.firstName);
         final EditText lastName = findViewById(R.id.lastName);
         final EditText patientSex = findViewById(R.id.patientSex);
+        final EditText patientSsn = findViewById(R.id.patientSSN);
 
         Button buttonSubmit = findViewById(R.id.submitPatient); // set variable for button action
 
@@ -42,6 +43,7 @@ public class PatientForm extends AppCompatActivity
                 final String firstNameTxt = firstName.getText().toString().trim();
                 final String lastNameTxt = lastName.getText().toString().trim();
                 final String patientSexTxt = patientSex.getText().toString().trim();
+                final String patientSSNTxt = patientSsn.getText().toString().trim();
 
                 if (TextUtils.isEmpty(dateTxt)) // check if date is empty
                 {
@@ -74,6 +76,10 @@ public class PatientForm extends AppCompatActivity
                     Toast.makeText(PatientForm.this,"Please enter a sex (Male or Female)",Toast.LENGTH_LONG).show();
                     patientSex.setError("Sex is required");
                     patientSex.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientSSNTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Please enter a SSN",Toast.LENGTH_LONG).show();
                 }
                 else
                 {
