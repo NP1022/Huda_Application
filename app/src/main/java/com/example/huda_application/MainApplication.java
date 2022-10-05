@@ -10,11 +10,13 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.net.InetSocketAddress;
+
 public class MainApplication extends AppCompatActivity implements View.OnClickListener
 {
 
 
-    private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements;
+    private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, Health_Services;
     private FirebaseAuth mAuth;
 
     @Override
@@ -28,11 +30,13 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Our_story = (TextView) findViewById(R.id.ourStoryPage);
         signOut = (TextView) findViewById(R.id.logoutButton);
         Announcements = (TextView)findViewById(R.id.announcementsPage);
+        Health_Services = (TextView)findViewById(R.id.servicesPage);
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
         signOut.setOnClickListener(this);
         Announcements.setOnClickListener(this);
+        Health_Services.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser fbUser = mAuth.getCurrentUser();
@@ -72,6 +76,10 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         else if (view.getId() == R.id.announcementsPage){
             Intent Announcements = new Intent (this, Announcements.class);
             startActivity(Announcements);
+        }
+        else if (view.getId() == R.id.servicesPage){
+            Intent HealthServices = new Intent(this, HealthServices.class);
+            startActivity(HealthServices);
         }
 
     }
