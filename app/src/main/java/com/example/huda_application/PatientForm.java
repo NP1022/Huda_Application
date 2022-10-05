@@ -25,6 +25,10 @@ public class PatientForm extends AppCompatActivity
         setContentView(R.layout.activity_patient_form);
 
         final EditText todayDate = findViewById(R.id.todaysDate);
+        final EditText visitReason = findViewById(R.id.visitReason);
+        final EditText firstName = findViewById(R.id.firstName);
+        final EditText lastName = findViewById(R.id.lastName);
+        final EditText patientSex = findViewById(R.id.patientSex);
 
         Button buttonSubmit = findViewById(R.id.submitPatient); // set variable for button action
 
@@ -34,6 +38,10 @@ public class PatientForm extends AppCompatActivity
             public void onClick(View view)
             {
                 final String dateTxt = todayDate.getText().toString().trim(); // convert the EditText to a String type
+                final String visitReasonTxt = visitReason.getText().toString().trim();
+                final String firstNameTxt = firstName.getText().toString().trim();
+                final String lastNameTxt = lastName.getText().toString().trim();
+                final String patientSexTxt = patientSex.getText().toString().trim();
 
                 if (TextUtils.isEmpty(dateTxt)) // check if date is empty
                 {
@@ -41,11 +49,31 @@ public class PatientForm extends AppCompatActivity
                     todayDate.setError("Date is required");
                     todayDate.requestFocus();
                 }
-                else if(!DATE_PATTERN.matcher(dateTxt).matches())
+                else if(!DATE_PATTERN.matcher(dateTxt).matches()) // check if the date is pattern matched
                 {
                     Toast.makeText(PatientForm.this,"Must be mm-dd-yyyy",Toast.LENGTH_LONG).show();
                     todayDate.setError("Format required");
                     todayDate.requestFocus();
+                }
+                else if(TextUtils.isEmpty(visitReasonTxt)) // check if visit reason is empty
+                {
+                    Toast.makeText(PatientForm.this,"Please enter a visit reason",Toast.LENGTH_LONG).show();
+                    visitReason.setError("Visit reason is required");
+                    visitReason.requestFocus();
+                }
+                else if(TextUtils.isEmpty(firstNameTxt) && TextUtils.isEmpty(lastNameTxt)) // check if name is empty
+                {
+                    Toast.makeText(PatientForm.this,"Please enter first and last name",Toast.LENGTH_LONG).show();
+                    firstName.setError("Name is required");
+                    firstName.requestFocus();
+                    lastName.setError("Name is required");
+                    lastName.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientSexTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Please enter a sex (Male or Female)",Toast.LENGTH_LONG).show();
+                    patientSex.setError("Sex is required");
+                    patientSex.requestFocus();
                 }
                 else
                 {
