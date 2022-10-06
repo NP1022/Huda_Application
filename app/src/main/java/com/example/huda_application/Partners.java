@@ -13,6 +13,7 @@ public class Partners extends AppCompatActivity implements View.OnClickListener 
     private ImageView bcbsButton, stJosephButton, MSUCHMButton, MSUComButton, cfscButton, deltaDentalButton, wsuPharmButton, eliteSmileButton;
     private ImageView familyRehabButton, sayButton, circleSocksButton, iagdButton, michiganMuslimButton, tawheedCenterButton, muslimCenterButton, wccdButton, detroitMercyButton;
     private ImageView bccpButton, esaButton, ferndaleButton, premierButton, msuNursingButton, chamberlainButton, authorityButton, matrixButton, accessButton, lasmButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -74,6 +75,9 @@ public class Partners extends AppCompatActivity implements View.OnClickListener 
         matrixButton.setOnClickListener((View.OnClickListener) this);
         accessButton.setOnClickListener((View.OnClickListener) this);
         lasmButton.setOnClickListener((View.OnClickListener) this);
+
+
+
 
     }
 
