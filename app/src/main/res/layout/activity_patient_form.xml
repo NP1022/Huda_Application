@@ -186,13 +186,15 @@
             android:id="@+id/radio_Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home" />
+            android:text="Home"
+            android:textColor="#090909" />
 
         <RadioButton
             android:id="@+id/radio_Cell"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cell" />
+            android:text="Cell"
+            android:textColor="#070707" />
     </RadioGroup>
 
 
