@@ -22,5 +22,10 @@
     <string name="EnterPass">Enter Password</string>
     <string name="Reenter">Re-enter Password</string>
     <string name="reset">Send Reset</string>
-
+    <string name="home">Home</string>
+    <string name="Annoucment">Announcement</string>
+    <string name="services">Services</string>
+    <string name="story">Our Story</string>
+    <string name="partners">Partners</string>
+    <string name="contact">Contact Us</string>
 </resources>

@@ -19,8 +19,14 @@
     <string name="language">عربى</string>
     <string name="FirstName">أدخل الاسم الأول</string>
     <string name="LastName">إدخال اسم آخر</string>
-    <string name="EnterEmail">Eأدخل البريد الإلكتروني</string>
+    <string name="EnterEmail">أدخل البريد الإلكتروني</string>
     <string name="EnterPass">إدخال كلمة المرور</string>
     <string name="Reenter">إعادة إدخال كلمة المرور</string>
     <string name="reset">إعادة إرسال</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="Annoucment">إعلان</string>
+    <string name="services">خدمات</string>
+    <string name="story">قصتنا</string>
+    <string name="partners">شركاء</string>
+    <string name="contact">اتصل بنا</string>
 </resources>

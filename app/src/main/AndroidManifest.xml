@@ -16,7 +16,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".PatientForm"
             android:exported="false" />
         <activity
             android:name=".HealthServices"
@@ -43,7 +43,7 @@
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".PatientForm"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Huda_Application.NoActionBar">
