@@ -49,9 +49,9 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/firstName"
-        app:layout_constraintEnd_toEndOf="@+id/todaysDate"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/todaysDate"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/todaysDate" />
 
     <EditText
@@ -97,9 +97,9 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/patientDob"
-        app:layout_constraintEnd_toEndOf="@+id/lastName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/lastName"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastName" />
 
     <EditText
@@ -108,14 +108,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="DOB (mm-dd-yyyy)"
-        android:inputType="date"
+        android:inputType="text"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/patientSSN"
-        app:layout_constraintEnd_toEndOf="@+id/patientSex"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/patientSex"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patientSex" />
 
     <EditText
@@ -123,21 +123,22 @@
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="SSN (123-45-6789)"
-        android:inputType="date"
+        android:hint="SSN (123-12-1234)"
+        android:inputType="text"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/patientSSN3"
-        app:layout_constraintEnd_toEndOf="@+id/patientDob"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/patientDob"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patientDob" />
 
     <EditText
         android:id="@+id/patientSSN2"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_marginBottom="1dp"
         android:ems="10"
         android:hint="Cell Phone (###-###-#####)"
@@ -146,9 +147,9 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="@+id/patientSSN3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/patientSSN3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patientSSN3" />
 
     <EditText
@@ -162,9 +163,9 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/patientSSN2"
-        app:layout_constraintEnd_toEndOf="@+id/patientSSN"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/patientSSN"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patientSSN" />
 
     <Button
@@ -172,28 +173,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="744dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientSSN2" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="531dp">
+<!--    <RadioGroup-->
+<!--        android:id="@+id/radioGroup"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:layout_editor_absoluteX="45dp"-->
+<!--        tools:layout_editor_absoluteY="531dp">-->
 
-        <RadioButton
-            android:id="@+id/radio_Home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Home" />
+<!--        <RadioButton-->
+<!--            android:id="@+id/radio_Home"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Home" />-->
 
-        <RadioButton
-            android:id="@+id/radio_Cell"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cell" />
-    </RadioGroup>
+<!--        <RadioButton-->
+<!--            android:id="@+id/radio_Cell"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Cell" />-->
+<!--    </RadioGroup>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

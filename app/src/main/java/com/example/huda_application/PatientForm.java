@@ -15,7 +15,11 @@ public class PatientForm extends AppCompatActivity
 {
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
-            "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // password pattern match
+            "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
+
+    private static final Pattern SSN_PATTERN = Pattern.compile("^(?!666|000|9\\d{2})\\d{3}"
+            + "-(?!00)\\d{2}-"
+            +"(?!0{4})\\d{4}$");  // SSN pattern match
 
 
     @Override
@@ -30,6 +34,7 @@ public class PatientForm extends AppCompatActivity
         final EditText lastName = findViewById(R.id.lastName);
         final EditText patientSex = findViewById(R.id.patientSex);
         final EditText patientSsn = findViewById(R.id.patientSSN);
+        final EditText patientDOB = findViewById(R.id.patientDob);
 
         Button buttonSubmit = findViewById(R.id.submitPatient); // set variable for button action
 
@@ -44,6 +49,7 @@ public class PatientForm extends AppCompatActivity
                 final String lastNameTxt = lastName.getText().toString().trim();
                 final String patientSexTxt = patientSex.getText().toString().trim();
                 final String patientSSNTxt = patientSsn.getText().toString().trim();
+                final String patientDOBTxt = patientDOB.getText().toString().trim();
 
                 if (TextUtils.isEmpty(dateTxt)) // check if date is empty
                 {
@@ -77,9 +83,25 @@ public class PatientForm extends AppCompatActivity
                     patientSex.setError("Sex is required");
                     patientSex.requestFocus();
                 }
+                else if(TextUtils.isEmpty(patientDOBTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Please enter a Date of birth",Toast.LENGTH_LONG).show();
+                }
+                else if(!DATE_PATTERN.matcher(patientDOBTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Must be mm-dd-yyyy",Toast.LENGTH_LONG).show();
+                    patientDOB.setError("Format required");
+                    patientDOB.requestFocus();
+                }
                 else if(TextUtils.isEmpty(patientSSNTxt))
                 {
                     Toast.makeText(PatientForm.this,"Please enter a SSN",Toast.LENGTH_LONG).show();
+                }
+                else if(!SSN_PATTERN.matcher(patientSSNTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Must be 123-12-1234",Toast.LENGTH_LONG).show();
+                    patientSsn.setError("Format required");
+                    patientSsn.requestFocus();
                 }
                 else
                 {
