@@ -28,9 +28,13 @@
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_patient_form.xml" value="0.30978260869565216" />
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_register_account.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_announcements.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_contact_us.xml" value="0.18020833333333333" />
+        <entry key="app/src/main/res/layout/activity_contact_us.xml" value="0.32207794189453126" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.18020833333333333" />
+<<<<<<< Updated upstream
         <entry key="app/src/main/res/layout/activity_health_services.xml" value="0.20143454871488345" />
+=======
+        <entry key="app/src/main/res/layout/activity_health_services.xml" value="0.3164179104477612" />
+>>>>>>> Stashed changes
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20652173913043478" />
         <entry key="app/src/main/res/layout/activity_main_application.xml" value="0.4607025146484375" />
