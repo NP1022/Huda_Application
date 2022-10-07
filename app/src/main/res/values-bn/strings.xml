@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Huda_Application</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="password">পাসওয়ার্ড লিখুন</string>
+    <string name="email">ইমেইল প্রদান করুন</string>
+    <string name="Login">প্রবেশ করুন</string>
+    <string name="forgotpassword">পাসওয়ার্ড ভুলে গেছেন</string>
+    <string name="register">নিবন্ধন</string>
+    <string name="language">Bangla</string>
+    <string name="FirstName">প্রথম নাম লিখুন</string>
+    <string name="LastName">শেষ নাম লিখুন</string>
+    <string name="EnterEmail">ইমেইল প্রদান করুন</string>
+    <string name="EnterPass">পাসওয়ার্ড লিখুন</string>
+    <string name="Reenter">পাসওয়ার্ড পুনরায় প্রবেশ</string>
+    <string name="reset">রিসেট পাঠান</string>
+    <string name="home">বাড়ি</string>
+    <string name="Annoucment">ঘোষণা</string>
+    <string name="services">সেবা</string>
+    <string name="story">আমাদের গল্প</string>
+    <string name="partners">অংশীদার</string>
+    <string name="contact">যোগাযোগ করুন</string>
+
+</resources>

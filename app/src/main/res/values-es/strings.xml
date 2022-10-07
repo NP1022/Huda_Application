@@ -24,4 +24,10 @@
     <string name="EnterPass">Introduzca la contraseña</string>
     <string name="Reenter">Reintroduzca la contraseña</string>
     <string name="reset">Enviar reinicio</string>
+    <string name="home">página de inicio</string>
+    <string name="Annoucment">Anuncio</string>
+    <string name="services">Servicios</string>
+    <string name="story">Nuestra historia</string>
+    <string name="partners">Socios</string>
+    <string name="contact">Contacta con nosotros</string>
 </resources>
