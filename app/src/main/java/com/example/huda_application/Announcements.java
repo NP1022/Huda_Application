@@ -17,7 +17,7 @@ public class Announcements extends AppCompatActivity {
         setContentView(R.layout.activity_announcements);
 
         // web view instance and enable JS
-        webView = new WebView(this);
+        webView = (WebView) findViewById(R.id.calendarWebView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
 
