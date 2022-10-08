@@ -28,4 +28,15 @@
     <string name="story">Our Story</string>
     <string name="partners">Partners</string>
     <string name="contact">Contact Us</string>
+    <string name="patients_page">Patients Portal</string>
+    <string name="healthservices">Free Health Services    </string>
+    <string name="PrimaryCare">Primary Care</string>
+    <string name="MentalCare">Mental Care</string>
+    <string name="VisionHealth">Vision Care</string>
+    <string name="Dental">Dental Care</string>
+    <string name="speciality">Speciality Care</string>
+    <string name="NewPatient">New Patient</string>
+    <string name="patientForm">New Patient Form</string>
+    <string name="checkIn">Check-in</string>
+    <string name="MedicalChart">Medical Chart</string>
 </resources>

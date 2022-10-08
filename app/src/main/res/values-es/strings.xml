@@ -30,4 +30,15 @@
     <string name="story">Nuestra historia</string>
     <string name="partners">Socios</string>
     <string name="contact">Contacta con nosotros</string>
+    <string name="patients_page">Portal de Pacientes</string>
+    <string name="healthservices">Servicios de salud gratuitos</string>
+    <string name="PrimaryCare">Atención primaria</string>
+    <string name="MentalCare">Cuidado Mental</string>
+    <string name="VisionHealth">Cuidado de la visión</string>
+    <string name="Dental">Cuidado dental</string>
+    <string name="speciality">Atención especializada</string>
+    <string name="NewPatient">Nuevo paciente</string>
+    <string name="patientForm">Formulario de nuevo paciente</string>
+    <string name="checkIn">Registrarse</string>
+    <string name="MedicalChart">Cuadro médico</string>
 </resources>

@@ -28,7 +28,7 @@
         android:layout_marginTop="95dp"
         android:layout_marginEnd="101dp"
         android:background="#043670"
-        android:text="New Patient Form"
+        android:text="@string/patientForm"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
 
@@ -45,7 +45,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="101dp"
         android:background="#043670"
-        android:text="Check-in"
+        android:text="@string/checkIn"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
 
@@ -61,7 +61,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="101dp"
         android:background="#043670"
-        android:text="Medical Chart"
+        android:text="@string/MedicalChart"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
 

@@ -29,5 +29,15 @@
     <string name="story">আমাদের গল্প</string>
     <string name="partners">অংশীদার</string>
     <string name="contact">যোগাযোগ করুন</string>
-
+    <string name="patients_page">রোগীর পোর্টাল</string>
+    <string name="healthservices">বিনামূল্যে স্বাস্থ্য সেবা</string>
+    <string name="PrimaryCare">প্রাথমিক যত্ন</string>
+    <string name="MentalCare">মানসিক যত্ন</string>
+    <string name="VisionHealth">ভিশন কেয়ার</string>
+    <string name="Dental">দাঁতের যত্ন</string>
+    <string name="speciality">বিশেষ যত্ন</string>
+    <string name="NewPatient">নতুন রোগী</string>
+    <string name="patientForm">নতুন রোগীর ফর্ম</string>
+    <string name="checkIn">চেক-ইন</string>
+    <string name="MedicalChart">চিকিৎসা চার্ট</string>
 </resources>

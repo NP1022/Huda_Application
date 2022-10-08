@@ -29,4 +29,15 @@
     <string name="story">قصتنا</string>
     <string name="partners">شركاء</string>
     <string name="contact">اتصل بنا</string>
+    <string name="patients_page">بوابة المرضى</string>
+    <string name="healthservices"> خدمات صحية مجانية</string>
+    <string name="PrimaryCare">الرعاية الأولية</string>
+     <string name="MentalCare">رعاية نفسية</string>
+    <string name="VisionHealth"> العناية بالبصر</string>
+    <string name="Dental"> العناية بالأسنان</string>
+    <string name="speciality">رعاية خاصة</string>
+    <string name="NewPatient">مريض جديد</string>
+    <string name="patientForm">نموذج جديد للمريض</string>
+    <string name="checkIn">تحقق في</string>
+    <string name="MedicalChart">الرسم البياني الطبي</string>
 </resources>
