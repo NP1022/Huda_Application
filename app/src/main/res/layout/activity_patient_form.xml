@@ -20,39 +20,40 @@
     tools:context=".PatientForm"
     android:background="#FFFFFF">
 
+
     <EditText
         android:id="@+id/todaysDate"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="Date (mm-dd-yyyy)"
         android:inputType="text"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/visitReason"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/visitReason"
         android:layout_width="320dp"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/todaysDate"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="4dp"
         android:hint="Visit Reason"
         android:inputType="textMultiLine"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/firstName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/todaysDate" />
+        app:layout_constraintTop_toBottomOf="@+id/todaysDate"
+        tools:ignore="MissingConstraints" />
+
 
     <EditText
         android:id="@+id/firstName"
@@ -64,11 +65,11 @@
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/lastName"
-        app:layout_constraintEnd_toEndOf="@+id/visitReason"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/visitReason"
-        app:layout_constraintTop_toBottomOf="@+id/visitReason" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastName"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/lastName"
@@ -80,11 +81,11 @@
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/patientSex"
-        app:layout_constraintEnd_toEndOf="@+id/firstName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/firstName"
-        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visitReason"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/patientSex"
@@ -96,11 +97,11 @@
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/patientDob"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/patientDob"
@@ -112,11 +113,71 @@
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/patientSSN"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientSex" />
+        app:layout_constraintTop_toBottomOf="@+id/patientSex"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/patientAddress"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Address (1234 Street St.)"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientDob"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/patientCity"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="City"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientAddress"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/patientState"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:hint="State"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientCity"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/patientZipCode"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:hint="Zipcode"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientState"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/patientSSN"
@@ -128,75 +189,94 @@
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/patientSSN3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientDob" />
+        app:layout_constraintTop_toBottomOf="@+id/patientZipCode"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/patientSSN2"
+        android:id="@+id/patientCellNum"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="1dp"
         android:ems="10"
-        android:hint="Cell Phone (###-###-#####)"
+        android:hint="Cell Phone (123-123-1234)"
         android:inputType="date"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientSSN3" />
+        app:layout_constraintTop_toBottomOf="@+id/patientHomeNum"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/patientSSN3"
+        android:id="@+id/patientHomeNum"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Home Phone (###-###-#####)"
+        android:hint="Home Phone (123-123-1234)"
         android:inputType="date"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/patientSSN2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientSSN" />
+        app:layout_constraintTop_toBottomOf="@+id/patientSSN"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/checkCell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Mobile"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectPreferedNumber"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/checkHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkCell"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/selectPreferedNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check the box for your preferred contact method"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientCellNum"
+        tools:ignore="MissingConstraints" />
+
+
 
     <Button
         android:id="@+id/submitPatient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientSSN2" />
-
-<!--    <RadioGroup-->
-<!--        android:id="@+id/radioGroup"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        tools:layout_editor_absoluteX="45dp"-->
-<!--        tools:layout_editor_absoluteY="531dp">-->
-
-<!--        <RadioButton-->
-<!--            android:id="@+id/radio_Home"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Home" />-->
-
-<!--        <RadioButton-->
-<!--            android:id="@+id/radio_Cell"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Cell" />-->
-<!--    </RadioGroup>-->
+        app:layout_constraintTop_toBottomOf="@+id/checkHome"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

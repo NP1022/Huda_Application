@@ -35,6 +35,12 @@ public class PatientForm extends AppCompatActivity
         final EditText patientSex = findViewById(R.id.patientSex);
         final EditText patientSsn = findViewById(R.id.patientSSN);
         final EditText patientDOB = findViewById(R.id.patientDob);
+        final EditText patientHome = findViewById(R.id.patientHomeNum);
+        final EditText patientCell = findViewById(R.id.patientCellNum);
+        final EditText patientAdd = findViewById(R.id.patientAddress);
+        final EditText patientCity = findViewById(R.id.patientCity);
+        final EditText patientState = findViewById(R.id.patientState);
+        final EditText patientZip = findViewById(R.id.patientZipCode);
 
         Button buttonSubmit = findViewById(R.id.submitPatient); // set variable for button action
 
@@ -50,6 +56,12 @@ public class PatientForm extends AppCompatActivity
                 final String patientSexTxt = patientSex.getText().toString().trim();
                 final String patientSSNTxt = patientSsn.getText().toString().trim();
                 final String patientDOBTxt = patientDOB.getText().toString().trim();
+                final String patientHomeNumTxt = patientHome.getText().toString().trim();
+                final String patientCellNumTxt = patientCell.getText().toString().trim();
+                final String patientAddTxt = patientAdd.getText().toString().trim();
+                final String patientCityTxt = patientCity.getText().toString().trim();
+                final String patientStateTxt = patientState.getText().toString().trim();
+                final String patientZipCodeTxt = patientZip.getText().toString().trim();
 
                 if (TextUtils.isEmpty(dateTxt)) // check if date is empty
                 {
@@ -93,6 +105,30 @@ public class PatientForm extends AppCompatActivity
                     patientDOB.setError("Format required");
                     patientDOB.requestFocus();
                 }
+                else if(TextUtils.isEmpty(patientAddTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Address cannot be empty",Toast.LENGTH_LONG).show();
+                    patientAdd.setError("Address required");
+                    patientAdd.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientCityTxt))
+                {
+                    Toast.makeText(PatientForm.this,"City cannot be empty",Toast.LENGTH_LONG).show();
+                    patientCity.setError("City required");
+                    patientCity.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientStateTxt))
+                {
+                    Toast.makeText(PatientForm.this,"State cannot be empty",Toast.LENGTH_LONG).show();
+                    patientState.setError("Address required");
+                    patientState.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientAddTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Zipcode cannot be empty",Toast.LENGTH_LONG).show();
+                    patientZip.setError("Zipcode required");
+                    patientZip.requestFocus();
+                }
                 else if(TextUtils.isEmpty(patientSSNTxt))
                 {
                     Toast.makeText(PatientForm.this,"Please enter a SSN",Toast.LENGTH_LONG).show();
@@ -102,6 +138,18 @@ public class PatientForm extends AppCompatActivity
                     Toast.makeText(PatientForm.this,"Must be 123-12-1234",Toast.LENGTH_LONG).show();
                     patientSsn.setError("Format required");
                     patientSsn.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientCellNumTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Number cannot be empty",Toast.LENGTH_LONG).show();
+                    patientCell.setError("Cell number required");
+                    patientCell.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientHomeNumTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Number cannot be empty",Toast.LENGTH_LONG).show();
+                    patientHome.setError("Home phone number required");
+                    patientHome.requestFocus();
                 }
                 else
                 {
