@@ -6,7 +6,8 @@
     android:id="@+id/scrollViewPartners"
     android:layout_width="409dp"
     android:layout_height="729dp"
-    android:background="@color/white"
+    android:background="#9E9E9E"
+    android:backgroundTint="#9E9E9E"
     android:fillViewport="true"
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="1dp">
@@ -24,11 +25,11 @@
             android:layout_width="98dp"
             android:layout_height="106dp"
             android:layout_marginTop="16dp"
+            android:clickable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.118"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:clickable="true"
             app:srcCompat="@drawable/huda_logo" />
 
 
@@ -399,7 +400,7 @@
             android:layout_marginStart="72dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="73dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toTopOf="@+id/imageView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.489"
@@ -424,7 +425,7 @@
             android:layout_width="231dp"
             android:layout_height="258dp"
             android:layout_marginStart="72dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="73dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -433,6 +434,453 @@
             app:layout_constraintTop_toBottomOf="@+id/fcomLogo"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/nafc2022" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="11dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/stJosephLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bcbsLogo" />
+
+        <View
+            android:id="@+id/divider34"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/bcbsLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/MSUCHMLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stJosephLogo"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/MSUComLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MSUCHMLogo" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/cfscLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MSUComLogo" />
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/deltaDentalLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cfscLogo" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/deltaDentalLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cfscLogo" />
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="11dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/wsuPharmLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deltaDentalLogo" />
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="12dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/eliteSmileLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wsuPharmLogo" />
+
+        <View
+            android:id="@+id/divider9"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="15dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/familyRehabLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eliteSmileLogo" />
+
+        <View
+            android:id="@+id/divider10"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="9dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/sayLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/familyRehabLogo" />
+
+        <View
+            android:id="@+id/divider11"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="9dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/circleSocksLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sayLogo" />
+
+        <View
+            android:id="@+id/divider12"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/iagdLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleSocksLogo" />
+
+        <View
+            android:id="@+id/divider13"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="9dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/michiganMuslimLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iagdLogo" />
+
+        <View
+            android:id="@+id/divider14"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/tawheedCenterLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/michiganMuslimLogo" />
+
+        <View
+            android:id="@+id/divider15"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/muslimCenterLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tawheedCenterLogo" />
+
+        <View
+            android:id="@+id/divider16"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="14dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/wccdLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/muslimCenterLogo" />
+
+        <View
+            android:id="@+id/divider21"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="14dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/detroitMercyLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wccdLogo" />
+
+        <View
+            android:id="@+id/divider22"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detroitMercyLogo" />
+
+        <View
+            android:id="@+id/divider18"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="14dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/ferndaleLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/esaLogo" />
+
+        <View
+            android:id="@+id/divider24"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="15dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/premierLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoresLogo" />
+
+        <View
+            android:id="@+id/divider26"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/msuNursingLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/premierLogo" />
+
+        <View
+            android:id="@+id/divider27"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="15dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/chamberlainLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/msuNursingLogo" />
+
+        <View
+            android:id="@+id/divider28"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="15dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/lasmLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matrixLogo" />
+
+        <View
+            android:id="@+id/divider32"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="15dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/matrixLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/authorityLogo" />
+
+        <View
+            android:id="@+id/divider33"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="20dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accessLogo" />
+
+        <View
+            android:id="@+id/divider29"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="15dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/authorityLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chamberlainLogo" />
+
+        <View
+            android:id="@+id/divider31"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="15dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/accessLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lasmLogo" />
+
+        <View
+            android:id="@+id/divider25"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="13dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/shoresLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ferndaleLogo" />
+
+        <View
+            android:id="@+id/divider23"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="11dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#605F5F"
+            app:layout_constraintBottom_toTopOf="@+id/esaLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bccpLogo" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
