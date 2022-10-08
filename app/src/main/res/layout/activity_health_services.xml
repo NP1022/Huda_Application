@@ -34,10 +34,10 @@
             android:layout_height="120dp"
             android:layout_marginStart="33dp"
             android:layout_marginEnd="33dp"
-            android:background="#111E68"
+            android:background="#022043"
             android:fontFamily="sans-serif-black"
             android:paddingTop="35dp"
-            android:text="Free Health Services"
+            android:text="Free Health Services    "
             android:textAlignment="center"
             android:textColor="#F1EEEE"
             android:textSize="34sp"
@@ -48,64 +48,88 @@
 
         <Button
             android:id="@+id/primaryCareButton"
-            android:layout_width="375dp"
+            android:layout_width="330dp"
             android:layout_height="52dp"
             android:layout_marginTop="16dp"
             android:paddingTop="2dp"
             android:text="Primary Care"
+            android:layout_marginLeft="-43dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:background="#043670"/>
 
         <Button
             android:id="@+id/specialtyCareButton"
-            android:layout_width="375dp"
+            android:layout_width="330dp"
             android:layout_height="52dp"
             android:paddingTop="2dp"
+            android:layout_marginTop="10dp"
             android:text="Specialty Care"
             app:layout_constraintEnd_toEndOf="@+id/dentalCareButton"
             app:layout_constraintStart_toStartOf="@+id/dentalCareButton"
-            app:layout_constraintTop_toBottomOf="@+id/dentalCareButton" />
+            app:layout_constraintTop_toBottomOf="@+id/dentalCareButton"
+            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:background="#043670"/>
 
         <Button
             android:id="@+id/visionCareButton"
-            android:layout_width="375dp"
+            android:layout_width="330dp"
             android:layout_height="52dp"
             android:paddingTop="2dp"
             android:text="Vision Care"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="@+id/mentalHealthButton"
             app:layout_constraintStart_toStartOf="@+id/mentalHealthButton"
-            app:layout_constraintTop_toBottomOf="@+id/mentalHealthButton" />
+            app:layout_constraintTop_toBottomOf="@+id/mentalHealthButton"
+            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:background="#043670"/>
 
         <Button
             android:id="@+id/newPatientsButton"
-            android:layout_width="375dp"
+            android:layout_width="330dp"
             android:layout_height="52dp"
             android:paddingTop="2dp"
+            android:layout_marginTop="10dp"
             android:text="New Patients"
             app:layout_constraintEnd_toEndOf="@+id/visionCareButton"
             app:layout_constraintStart_toStartOf="@+id/visionCareButton"
-            app:layout_constraintTop_toBottomOf="@+id/visionCareButton" />
+            app:layout_constraintTop_toBottomOf="@+id/visionCareButton"
+            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:background="#043670"/>
 
         <Button
             android:id="@+id/mentalHealthButton"
-            android:layout_width="375dp"
+            android:layout_width="330dp"
             android:layout_height="52dp"
             android:paddingTop="2dp"
+            android:layout_marginTop="10dp"
             android:text="Mental Health"
             app:layout_constraintEnd_toEndOf="@+id/primaryCareButton"
             app:layout_constraintStart_toStartOf="@+id/primaryCareButton"
-            app:layout_constraintTop_toBottomOf="@+id/primaryCareButton" />
+            app:layout_constraintTop_toBottomOf="@+id/primaryCareButton"
+            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:background="#043670"/>
 
         <Button
             android:id="@+id/dentalCareButton"
-            android:layout_width="375dp"
+            android:layout_width="330dp"
             android:layout_height="52dp"
             android:paddingTop="2dp"
+            android:layout_marginTop="10dp"
             android:text="Dental Care"
             app:layout_constraintEnd_toEndOf="@+id/newPatientsButton"
             app:layout_constraintStart_toStartOf="@+id/newPatientsButton"
-            app:layout_constraintTop_toBottomOf="@+id/newPatientsButton" />
+            app:layout_constraintTop_toBottomOf="@+id/newPatientsButton"
+            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:background="#043670"/>
 
         <TextView
             android:id="@+id/HealthServiceText"
