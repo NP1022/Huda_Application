@@ -4,20 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background = "#FFFFFF"
     tools:context=".Contact_Us">
 
 
     <TextView
-        android:id="@+id/label"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginEnd="43dp"
-        android:text="Contact page"
-        android:textColor="#0151AE"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" />
+        android:id="@+id/textView"
+        android:layout_width="413dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:background="#111E68"
+        android:fontFamily="sans-serif-black"
+        android:paddingTop="35dp"
+        android:text="Contact"
+        android:textAlignment="center"
+        android:textColor="#F1EEEE"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hudaLogo4" />
+
+    <ImageView
+        android:id="@+id/hudaLogo4"
+        android:layout_width="142dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="213dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/huda_logo" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="HUDA, a Free Community Health Clinic\nin Metro Detroit"
+        android:textAlignment="center"
+        android:textColor="#111E68"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/CallHeader"
+        android:layout_width="46dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:text="Call:"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/HUDAnumber"
+        android:layout_width="164dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:text="(313) 865-8446"
+        android:textColor="#111E68"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/CallHeader"
+        app:layout_constraintStart_toStartOf="@+id/CallHeader"
+        app:layout_constraintTop_toBottomOf="@+id/CallHeader" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
