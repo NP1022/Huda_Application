@@ -53,5 +53,32 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <TextView
+        android:id="@+id/CallHeader"
+        android:layout_width="46dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:text="Call:"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/HUDAnumber"
+        android:layout_width="164dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:text="(313) 865-8446"
+        android:textColor="#111E68"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/CallHeader"
+        app:layout_constraintStart_toStartOf="@+id/CallHeader"
+        app:layout_constraintTop_toBottomOf="@+id/CallHeader" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
