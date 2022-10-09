@@ -21,6 +21,12 @@ public class PatientForm extends AppCompatActivity
             + "-(?!00)\\d{2}-"
             +"(?!0{4})\\d{4}$");  // SSN pattern match
 
+    private static final Pattern ZIPCODE_PATTERN = Pattern.compile("^\\d{5}$"); // zipcode
+
+    private static final Pattern PHONE_PATTERN = Pattern.compile("^[2-9]\\d{2}-\\d{3}-\\d{4}$"); // pattern to make sure phone numbers are valid format
+
+    private static Pattern PATIENTSEX_PATTERN = Pattern.compile("^(?:m|M|male|Male|f|F|female|Female)$"); // pattern to check patient sex input
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -81,15 +87,26 @@ public class PatientForm extends AppCompatActivity
                     visitReason.setError("Visit reason is required");
                     visitReason.requestFocus();
                 }
-                else if(TextUtils.isEmpty(firstNameTxt) && TextUtils.isEmpty(lastNameTxt)) // check if name is empty
+                else if(TextUtils.isEmpty(firstNameTxt)) // check if name is empty
                 {
-                    Toast.makeText(PatientForm.this,"Please enter first and last name",Toast.LENGTH_LONG).show();
+                    Toast.makeText(PatientForm.this,"Please enter first name",Toast.LENGTH_LONG).show();
                     firstName.setError("Name is required");
                     firstName.requestFocus();
+
+                }
+                else if(TextUtils.isEmpty(lastNameTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Please enter last name",Toast.LENGTH_LONG).show();
                     lastName.setError("Name is required");
                     lastName.requestFocus();
                 }
                 else if(TextUtils.isEmpty(patientSexTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Please enter a sex (Male or Female)",Toast.LENGTH_LONG).show();
+                    patientSex.setError("Sex is required");
+                    patientSex.requestFocus();
+                }
+                else if(!PATIENTSEX_PATTERN.matcher(patientSexTxt).matches())
                 {
                     Toast.makeText(PatientForm.this,"Please enter a sex (Male or Female)",Toast.LENGTH_LONG).show();
                     patientSex.setError("Sex is required");
@@ -123,10 +140,16 @@ public class PatientForm extends AppCompatActivity
                     patientState.setError("Address required");
                     patientState.requestFocus();
                 }
-                else if(TextUtils.isEmpty(patientAddTxt))
+                else if(TextUtils.isEmpty(patientZipCodeTxt))
                 {
                     Toast.makeText(PatientForm.this,"Zipcode cannot be empty",Toast.LENGTH_LONG).show();
                     patientZip.setError("Zipcode required");
+                    patientZip.requestFocus();
+                }
+                else if(!ZIPCODE_PATTERN.matcher(patientZipCodeTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Zipcode must be 12345",Toast.LENGTH_LONG).show();
+                    patientZip.setError("Format required");
                     patientZip.requestFocus();
                 }
                 else if(TextUtils.isEmpty(patientSSNTxt))
@@ -145,10 +168,22 @@ public class PatientForm extends AppCompatActivity
                     patientCell.setError("Cell number required");
                     patientCell.requestFocus();
                 }
+                else if(!PHONE_PATTERN.matcher(patientCellNumTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Number must be 123-123-1234",Toast.LENGTH_LONG).show();
+                    patientCell.setError("Format is required");
+                    patientCell.requestFocus();
+                }
                 else if(TextUtils.isEmpty(patientHomeNumTxt))
                 {
                     Toast.makeText(PatientForm.this,"Number cannot be empty",Toast.LENGTH_LONG).show();
                     patientHome.setError("Home phone number required");
+                    patientHome.requestFocus();
+                }
+                else if(!PHONE_PATTERN.matcher(patientHomeNumTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Number must be 123-123-1234",Toast.LENGTH_LONG).show();
+                    patientHome.setError("Format is required");
                     patientHome.requestFocus();
                 }
                 else

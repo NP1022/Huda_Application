@@ -217,7 +217,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Home Phone (123-123-1234)"
-        android:inputType="date"
+        android:inputType="text"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
@@ -227,43 +227,21 @@
         app:layout_constraintTop_toBottomOf="@+id/patientSSN"
         tools:ignore="MissingConstraints" />
 
-    <CheckBox
-        android:id="@+id/checkCell"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/patientPreferredNumber"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Mobile"
+        android:ems="10"
+        android:hint="Preferred Number (Home or Mobile)"
+        android:inputType="text"
+        android:padding="10dp"
         android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectPreferedNumber"
+        app:layout_constraintTop_toBottomOf="@+id/submitPatient"
         tools:ignore="MissingConstraints" />
-
-    <CheckBox
-        android:id="@+id/checkHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkCell"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/selectPreferedNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Check the box for your preferred contact method"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientCellNum"
-        tools:ignore="MissingConstraints" />
-
 
 
     <Button
@@ -275,7 +253,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkHome"
+        app:layout_constraintTop_toBottomOf="@+id/patientCellNum"
         tools:ignore="MissingConstraints" />
 
 
