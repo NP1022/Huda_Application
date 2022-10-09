@@ -16,7 +16,6 @@ public class Contact_Us extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
-
         HUDAnumber = (TextView) findViewById(R.id.HUDAnumber);
         HUDAnumber.setOnClickListener(new View.OnClickListener() {
             @Override
