@@ -16,13 +16,14 @@ public class Announcements extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_announcements);
 
-        // web view instance and enable JS
-        webView = (WebView) findViewById(R.id.calendarWebView);
-        webView.getSettings().setJavaScriptEnabled(true);
+
+        webView = findViewById(R.id.calendarWebView);
         webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setJavaScriptEnabled(true);
+
 
         String googleHTML = "<iframe src=\"https://calendar.google.com/calendar/embed?src=c_tns32v5e01q5kjs1jj1rcuehao%40group.calendar.google.com&ctz=America%2FDetroit\" style=\"border: 0\" width=\"390\" height=\"350\" frameborder=\"0\" scrolling=\"no\"></iframe>";
         webView.loadData(googleHTML, "text/html", null);
-        setContentView(webView);
+
     }
 }
