@@ -201,7 +201,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Cell Phone (123-123-1234)"
-        android:inputType="date"
+        android:inputType="text"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
@@ -240,9 +240,41 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submitPatient"
+        app:layout_constraintTop_toBottomOf="@+id/patientCellNum"
         tools:ignore="MissingConstraints" />
 
+    <EditText
+        android:id="@+id/consentToCall"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Consent to Call? (Yes or No)"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientPreferredNumber"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/consentToText"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Consent to Text? (Yes or No)"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consentToCall"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/submitPatient"
@@ -253,7 +285,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientCellNum"
+        app:layout_constraintTop_toBottomOf="@+id/consentToText"
         tools:ignore="MissingConstraints" />
 
 

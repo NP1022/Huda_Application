@@ -27,6 +27,10 @@ public class PatientForm extends AppCompatActivity
 
     private static Pattern PATIENTSEX_PATTERN = Pattern.compile("^(?:m|M|male|Male|f|F|female|Female)$"); // pattern to check patient sex input
 
+    private static Pattern CONTACTPREF_PATTERN = Pattern.compile("^(?:home|Home|mobile|Mobile)$");
+
+    private static Pattern CONSENT_PATTERN = Pattern.compile("^(?:yes|Yes|No|no)$");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -47,6 +51,9 @@ public class PatientForm extends AppCompatActivity
         final EditText patientCity = findViewById(R.id.patientCity);
         final EditText patientState = findViewById(R.id.patientState);
         final EditText patientZip = findViewById(R.id.patientZipCode);
+        final EditText patientContactPref = findViewById(R.id.patientPreferredNumber);
+        final EditText patientConsentCall = findViewById(R.id.consentToCall);
+        final EditText patientConsentText = findViewById(R.id.consentToText);
 
         Button buttonSubmit = findViewById(R.id.submitPatient); // set variable for button action
 
@@ -68,6 +75,10 @@ public class PatientForm extends AppCompatActivity
                 final String patientCityTxt = patientCity.getText().toString().trim();
                 final String patientStateTxt = patientState.getText().toString().trim();
                 final String patientZipCodeTxt = patientZip.getText().toString().trim();
+                final String patientPrefNumberTxt = patientContactPref.getText().toString().trim();
+                final String patientConsentCallTxt = patientConsentCall.getText().toString().trim();
+                final String patientConsentTextTxt = patientConsentText.getText().toString().trim();
+
 
                 if (TextUtils.isEmpty(dateTxt)) // check if date is empty
                 {
@@ -185,6 +196,40 @@ public class PatientForm extends AppCompatActivity
                     Toast.makeText(PatientForm.this,"Number must be 123-123-1234",Toast.LENGTH_LONG).show();
                     patientHome.setError("Format is required");
                     patientHome.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientPrefNumberTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Preference cannot be empty",Toast.LENGTH_LONG).show();
+                    patientContactPref.setError("Preference is required");
+                    patientContactPref.requestFocus();
+                }
+                else if(!CONTACTPREF_PATTERN.matcher(patientPrefNumberTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Preference must be Home or Mobile",Toast.LENGTH_LONG).show();
+                    patientContactPref.setError("Preference is required");
+                    patientContactPref.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientConsentCallTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Consent cannot be empty",Toast.LENGTH_LONG).show();
+                    patientConsentCall.setError("Consent is required");
+                    patientConsentCall.requestFocus();
+                }else if(!CONSENT_PATTERN.matcher(patientConsentCallTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
+                    patientConsentCall.setError("Consent is required");
+                    patientConsentCall.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientConsentTextTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Consent cannot be empty",Toast.LENGTH_LONG).show();
+                    patientConsentText.setError("Consent is required");
+                    patientConsentText.requestFocus();
+                }else if(!CONSENT_PATTERN.matcher(patientConsentTextTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
+                    patientConsentText.setError("Consent is required");
+                    patientConsentText.requestFocus();
                 }
                 else
                 {
