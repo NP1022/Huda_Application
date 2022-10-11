@@ -312,6 +312,7 @@
         android:id="@+id/pickRace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Please Select a Race: "
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -396,7 +397,16 @@
         app:layout_constraintTop_toBottomOf="@+id/nativeAmerican" />
 
 
-
+    <TextView
+        android:id="@+id/pickEthnicity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Please Select an Ethnicity: "
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nativeHawiianPacific" />
         <Button
         android:id="@+id/submitPatient"
         android:layout_width="wrap_content"
@@ -406,7 +416,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nativeHawiianPacific"
+        app:layout_constraintTop_toBottomOf="@+id/pickEthnicity"
         tools:ignore="MissingConstraints" />
 
 
