@@ -276,7 +276,128 @@
         app:layout_constraintTop_toBottomOf="@+id/consentToCall"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <EditText
+        android:id="@+id/insuranceProvider"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Insurance provider"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consentToText"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email (Same as registration email)"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insuranceProvider"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/pickRace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Select a Race: "
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailAddress" />
+
+    <CheckBox
+        android:id="@+id/blackAfrican"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Black/African American"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickRace" />
+
+    <CheckBox
+        android:id="@+id/whiteCaucasian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="White/Caucasian"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blackAfrican" />
+
+    <CheckBox
+        android:id="@+id/asian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Asian"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whiteCaucasian" />
+
+    <CheckBox
+        android:id="@+id/middleEastern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Middle Eastern/North African"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asian" />
+
+    <CheckBox
+        android:id="@+id/hispanicLatino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hispanic/Latino"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middleEastern" />
+
+    <CheckBox
+        android:id="@+id/nativeAmerican"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Native American"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hispanicLatino" />
+
+    <CheckBox
+        android:id="@+id/nativeHawiianPacific"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Native Hawaiian or Other Pacific Islander"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nativeAmerican" />
+
+
+
+        <Button
         android:id="@+id/submitPatient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -285,8 +406,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consentToText"
+        app:layout_constraintTop_toBottomOf="@+id/nativeHawiianPacific"
         tools:ignore="MissingConstraints" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

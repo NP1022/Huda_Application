@@ -1,18 +1,28 @@
 package com.example.huda_application;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.SignInMethodQueryResult;
 
 import java.util.regex.Pattern;
 
 public class PatientForm extends AppCompatActivity
 {
+    FirebaseAuth mAuth;
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
@@ -38,6 +48,8 @@ public class PatientForm extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_form);
 
+        mAuth =FirebaseAuth.getInstance();
+
         final EditText todayDate = findViewById(R.id.todaysDate);
         final EditText visitReason = findViewById(R.id.visitReason);
         final EditText firstName = findViewById(R.id.firstName);
@@ -54,6 +66,15 @@ public class PatientForm extends AppCompatActivity
         final EditText patientContactPref = findViewById(R.id.patientPreferredNumber);
         final EditText patientConsentCall = findViewById(R.id.consentToCall);
         final EditText patientConsentText = findViewById(R.id.consentToText);
+        final EditText patientInsurance = findViewById(R.id.insuranceProvider);
+        final EditText patientEmail = findViewById(R.id.emailAddress);
+        final CheckBox blackAfricanAmerican = findViewById(R.id.blackAfrican);
+        final CheckBox whiteCaucasian = findViewById(R.id.whiteCaucasian);
+        final CheckBox asianPatient = findViewById(R.id.asian);
+        final CheckBox middleEasternNA = findViewById(R.id.middleEastern);
+        final CheckBox hispanicLatinoPatient = findViewById(R.id.hispanicLatino);
+        final CheckBox nativeAmericanPatient = findViewById(R.id.nativeAmerican);
+        final CheckBox nativeHawiianPacificIslander = findViewById(R.id.nativeHawiianPacific);
 
         Button buttonSubmit = findViewById(R.id.submitPatient); // set variable for button action
 
@@ -78,6 +99,11 @@ public class PatientForm extends AppCompatActivity
                 final String patientPrefNumberTxt = patientContactPref.getText().toString().trim();
                 final String patientConsentCallTxt = patientConsentCall.getText().toString().trim();
                 final String patientConsentTextTxt = patientConsentText.getText().toString().trim();
+                final String patientInsuranceTxt = patientInsurance.getText().toString().trim();
+                final String patientEmailTxt = patientEmail.getText().toString().trim();
+
+
+                StringBuilder patientRace = new StringBuilder();
 
 
                 if (TextUtils.isEmpty(dateTxt)) // check if date is empty
@@ -231,6 +257,58 @@ public class PatientForm extends AppCompatActivity
                     patientConsentText.setError("Consent is required");
                     patientConsentText.requestFocus();
                 }
+                else if(TextUtils.isEmpty(patientInsuranceTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Insurance must be filled",Toast.LENGTH_LONG).show();
+                    patientInsurance.setError("Insurance is required");
+                    patientInsurance.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientEmailTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Email cannot be empty",Toast.LENGTH_LONG).show();
+                    patientEmail.setError("Email is required");
+                    patientEmail.requestFocus();
+                }else if(!Patterns.EMAIL_ADDRESS.matcher(patientEmailTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Must be a valid email",Toast.LENGTH_LONG).show();
+                    patientEmail.setError("Email is required");
+                    patientEmail.requestFocus();
+                }
+                else if(blackAfricanAmerican.isChecked())
+                {
+                    patientRace.append("Black/African American");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(whiteCaucasian.isChecked())
+                {
+                    patientRace.append("White/Caucasian");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(asianPatient.isChecked())
+                {
+                    patientRace.append("Asian");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(middleEasternNA.isChecked())
+                {
+                    patientRace.append("Middle Eastern/North African");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(hispanicLatinoPatient.isChecked())
+                {
+                    patientRace.append("Hispanic/Latino");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(nativeAmericanPatient.isChecked())
+                {
+                    patientRace.append("Native American");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(nativeHawiianPacificIslander.isChecked())
+                {
+                    patientRace.append("Native Hawaiian/Pacific Islander");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
                 else
                 {
                     Toast.makeText(PatientForm.this,"Success!",Toast.LENGTH_LONG).show();
@@ -239,4 +317,5 @@ public class PatientForm extends AppCompatActivity
         });
 
     }
+
 }
