@@ -163,20 +163,20 @@ public class PatientForm extends AppCompatActivity
                     todayDate.setError("Date format is required");
                     todayDate.requestFocus();
                 }
-                else if(TextUtils.isEmpty(visitReasonTxt)) // check if visit reason is empty
+                else if(TextUtils.isEmpty(visitReasonTxt) || visitReasonTxt.length() > 30) // check if visit reason is empty and too long
                 {
                     Toast.makeText(PatientForm.this,"Please enter a visit reason",Toast.LENGTH_LONG).show();
                     visitReason.setError("Visit reason is required");
                     visitReason.requestFocus();
                 }
-                else if(TextUtils.isEmpty(firstNameTxt)) // check if name is empty
+                else if(TextUtils.isEmpty(firstNameTxt) || firstNameTxt.length() > 20) // check if name is empty
                 {
                     Toast.makeText(PatientForm.this,"Please enter first name",Toast.LENGTH_LONG).show();
                     firstName.setError("Name is required");
                     firstName.requestFocus();
 
                 }
-                else if(TextUtils.isEmpty(lastNameTxt))
+                else if(TextUtils.isEmpty(lastNameTxt) || lastNameTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this,"Please enter last name",Toast.LENGTH_LONG).show();
                     lastName.setError("Name is required");
@@ -210,13 +210,13 @@ public class PatientForm extends AppCompatActivity
                     patientAdd.setError("Address required");
                     patientAdd.requestFocus();
                 }
-                else if(TextUtils.isEmpty(patientCityTxt))
+                else if(TextUtils.isEmpty(patientCityTxt) || patientCityTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this,"City cannot be empty",Toast.LENGTH_LONG).show();
                     patientCity.setError("City required");
                     patientCity.requestFocus();
                 }
-                else if(TextUtils.isEmpty(patientStateTxt))
+                else if(TextUtils.isEmpty(patientStateTxt) || patientStateTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this,"State cannot be empty",Toast.LENGTH_LONG).show();
                     patientState.setError("Address required");
@@ -303,7 +303,7 @@ public class PatientForm extends AppCompatActivity
                     patientConsentText.setError("Consent is required");
                     patientConsentText.requestFocus();
                 }
-                else if(TextUtils.isEmpty(patientInsuranceTxt))
+                else if(TextUtils.isEmpty(patientInsuranceTxt) || patientInsuranceTxt.length() > 30)
                 {
                     Toast.makeText(PatientForm.this,"Insurance must be filled",Toast.LENGTH_LONG).show();
                     patientInsurance.setError("Insurance is required");
@@ -365,7 +365,7 @@ public class PatientForm extends AppCompatActivity
                     patientEthnicity.append("Not Hispanic or Latino/a");
                     Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(TextUtils.isEmpty(prefLangTxt))
+                else if(TextUtils.isEmpty(prefLangTxt) || prefLangTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this,"Language cannot be empty",Toast.LENGTH_LONG).show();
                     prefLang.setError("Language is required");
@@ -389,7 +389,7 @@ public class PatientForm extends AppCompatActivity
                     maritalStatusPatient.setError("Marital Status is required");
                     maritalStatusPatient.requestFocus();
                 }
-                else if(TextUtils.isEmpty(houseIncomeTxt))
+                else if(TextUtils.isEmpty(houseIncomeTxt) || houseIncomeTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this,"Must fill in household income",Toast.LENGTH_LONG).show();
                     incomeHousehold.setError("Income is required");
@@ -415,7 +415,7 @@ public class PatientForm extends AppCompatActivity
                     patientIncome.append("Year");
                     Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(TextUtils.isEmpty(houseHoldTxt))
+                else if(TextUtils.isEmpty(houseHoldTxt) || houseHoldTxt.length() >2)
                 {
                     Toast.makeText(PatientForm.this,"Must fill in Family size",Toast.LENGTH_LONG).show();
                     houseHoldSize.setError("Household size is required");
@@ -456,7 +456,7 @@ public class PatientForm extends AppCompatActivity
                     patientEmp.append("Seeking employment");
                     Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(TextUtils.isEmpty(occupationTxt))
+                else if(TextUtils.isEmpty(occupationTxt) || occupationTxt.length() > 30)
                 {
                     Toast.makeText(PatientForm.this,"Please fill occupation",Toast.LENGTH_LONG).show();
                     occupationPatient.setError("Occupation is required");
@@ -468,13 +468,13 @@ public class PatientForm extends AppCompatActivity
                     veteranStatus.setError("Veteran status is required");
                     veteranStatus.requestFocus();
                 }
-                else if(TextUtils.isEmpty(emergencyNameTxt))
+                else if(TextUtils.isEmpty(emergencyNameTxt) || emergencyNameTxt.length() > 30)
                 {
                     Toast.makeText(PatientForm.this,"Name cannot be empty",Toast.LENGTH_LONG).show();
                     emergencyContactName.setError("Contact name is required");
                     emergencyContactName.requestFocus();
                 }
-                else if(TextUtils.isEmpty(relationshipTxt))
+                else if(TextUtils.isEmpty(relationshipTxt) || relationshipTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this,"Relationship cannot be empty",Toast.LENGTH_LONG).show();
                     relationshipToPatient.setError("Contact relationship is required");
@@ -486,19 +486,19 @@ public class PatientForm extends AppCompatActivity
                     emergencyContactPhone.setError("Contact number is required");
                     emergencyContactPhone.requestFocus();
                 }
-                else if(TextUtils.isEmpty(patientConsentName))
+                else if(TextUtils.isEmpty(patientConsentName) || patientConsentName.length() > 30)
                 {
                     Toast.makeText(PatientForm.this,"Name must be filled",Toast.LENGTH_LONG).show();
                     patientNameConsent.setError("Name is required");
                     patientNameConsent.requestFocus();
                 }
-                else if(TextUtils.isEmpty(patientSignedText))
+                else if(TextUtils.isEmpty(patientSignedText) || patientSignedText.length() > 30)
                 {
                     Toast.makeText(PatientForm.this,"Name must be filled",Toast.LENGTH_LONG).show();
                     patientSigned.setError("Signed name is required");
                     patientSigned.requestFocus();
                 }
-                else if(TextUtils.isEmpty(patientSignatureText))
+                else if(TextUtils.isEmpty(patientSignatureText) || patientSignatureText.length() > 30)
                 {
                     Toast.makeText(PatientForm.this,"Signature must be filled",Toast.LENGTH_LONG).show();
                     patientSig.setError("Signature is required");
