@@ -1,23 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".OurStory"
-    android:background="#FFFFFF">
-    <ImageView
-        android:id="@+id/hudaLogo3"
-        android:layout_width="142dp"
-        android:layout_height="143dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="213dp"
-        android:layout_marginBottom="112dp"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/huda_logo" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:id="@+id/scrollViewPartners"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:padding="10px"
+        tools:context=".OurStory">
+
+        <TextView
+            android:id="@+id/ourStoryHeader"
+            android:layout_width="214dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="59dp"
+            android:background="@color/white"
+            android:text="Our Story"
+            android:textAlignment="center"
+            android:textColor="#043670"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/hudaLogo3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/hudaLogo3"
+            android:layout_width="98dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="28dp"
+
+            android:layout_marginEnd="36dp"
+            app:layout_constraintEnd_toStartOf="@+id/ourStoryHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/huda_logo" />
+
+        <TextView
+            android:id="@+id/historyHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:fontFamily="sans-serif-light"
+            android:text="History of the HUDA Clinic"
+            android:textColor="#043670"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ourStoryHeader" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_width="374dp"
+            android:layout_height="133dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="HUDA Clinic first opened its doors in May 2004 to serve the uninsured population of the Detroit area. The clinic initially operated on funds gathered by the Muslim community of Metro Detroit."
+            android:textColor="#043670"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/historyHeader" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="293dp"
+            android:layout_height="295dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
+            app:srcCompat="@drawable/huda_patient" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine2"
+            android:layout_width="363dp"
+            android:layout_height="315dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="When it began, the HUDA Clinic provided solely medical services.  We then moved from our original facility at the Muslim Center of Detroit into a new, larger facility on Woodrow Wilson Street. Since then, we have expanded our care to include a full range of dental, vision care, podiatry, and mental health services, as well as a plethora of specialty services available at no-cost to our patients. Our new facility has allowed us to expand our services and our service times, but none of that would be possible without the generous support of our donors and volunteers."
+            android:textColor="#043670"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
