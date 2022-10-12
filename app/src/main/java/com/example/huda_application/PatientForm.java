@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.CloseGuard;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
@@ -41,6 +42,8 @@ public class PatientForm extends AppCompatActivity
 
     private static Pattern CONSENT_PATTERN = Pattern.compile("^(?:yes|Yes|No|no)$");
 
+    private static Pattern MARITAL_PATTERN = Pattern.compile("^(?:Single|single|Married|married|partner|Partner|Separated|separated|Divorced|divorced|Widowed|widowed)$");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -50,6 +53,7 @@ public class PatientForm extends AppCompatActivity
 
         mAuth =FirebaseAuth.getInstance();
 
+        // edittext
         final EditText todayDate = findViewById(R.id.todaysDate);
         final EditText visitReason = findViewById(R.id.visitReason);
         final EditText firstName = findViewById(R.id.firstName);
@@ -68,6 +72,23 @@ public class PatientForm extends AppCompatActivity
         final EditText patientConsentText = findViewById(R.id.consentToText);
         final EditText patientInsurance = findViewById(R.id.insuranceProvider);
         final EditText patientEmail = findViewById(R.id.emailAddress);
+        final EditText prefLang = findViewById(R.id.langPref);
+        final EditText neededTranslator = findViewById(R.id.translatorNeeded);
+        final EditText maritalStatusPatient = findViewById(R.id.maritalStatus);
+        final EditText incomeHousehold = findViewById(R.id.income);
+        final EditText houseHoldSize = findViewById(R.id.houseHold);
+        final EditText occupationPatient = findViewById(R.id.occupation);
+        final EditText veteranStatus = findViewById(R.id.veteran);
+        final EditText emergencyContactName = findViewById(R.id.emergencyName);
+        final EditText relationshipToPatient = findViewById(R.id.relationship);
+        final EditText emergencyContactPhone = findViewById(R.id.emergencyNumber);
+        final EditText patientNameConsent = findViewById(R.id.patientNameFill);
+        final EditText patientSigned = findViewById(R.id.patientNamePrinted);
+        final EditText patientSig = findViewById(R.id.patientNameSignature);
+        final EditText consentDateSign = findViewById(R.id.consentDate);
+
+
+        // checkboxes
         final CheckBox blackAfricanAmerican = findViewById(R.id.blackAfrican);
         final CheckBox whiteCaucasian = findViewById(R.id.whiteCaucasian);
         final CheckBox asianPatient = findViewById(R.id.asian);
@@ -75,6 +96,19 @@ public class PatientForm extends AppCompatActivity
         final CheckBox hispanicLatinoPatient = findViewById(R.id.hispanicLatino);
         final CheckBox nativeAmericanPatient = findViewById(R.id.nativeAmerican);
         final CheckBox nativeHawiianPacificIslander = findViewById(R.id.nativeHawiianPacific);
+        final CheckBox HispanicOrLatino = findViewById(R.id.hispanicOrLatino);
+        final CheckBox NotHispanicOrLatino = findViewById(R.id.NotHispanicOrLatino);
+        final CheckBox weekly = findViewById(R.id.week);
+        final CheckBox biWeekly = findViewById(R.id.twoWeek);
+        final CheckBox monthly = findViewById(R.id.month);
+        final CheckBox yearly = findViewById(R.id.year);
+        final CheckBox unEmp = findViewById(R.id.unemployed);
+        final CheckBox empFull = findViewById(R.id.employedFt);
+        final CheckBox empPart = findViewById(R.id.employedPt);
+        final CheckBox empSelf = findViewById(R.id.selfEmployed);
+        final CheckBox empStudent = findViewById(R.id.student);
+        final CheckBox empRetired = findViewById(R.id.retired);
+        final CheckBox empSeek = findViewById(R.id.seekingEmployment);
 
         Button buttonSubmit = findViewById(R.id.submitPatient); // set variable for button action
 
@@ -101,21 +135,32 @@ public class PatientForm extends AppCompatActivity
                 final String patientConsentTextTxt = patientConsentText.getText().toString().trim();
                 final String patientInsuranceTxt = patientInsurance.getText().toString().trim();
                 final String patientEmailTxt = patientEmail.getText().toString().trim();
+                final String prefLangTxt = prefLang.getText().toString().trim();
+                final String translatorTxt = neededTranslator.getText().toString().trim();
+                final String maritalTxt = maritalStatusPatient.getText().toString().trim();
+                final String houseIncomeTxt = incomeHousehold.getText().toString().trim();
+                final String houseHoldTxt = houseHoldSize.getText().toString().trim();
+                final String occupationTxt = occupationPatient.getText().toString().trim();
+                final String veteranTxt = veteranStatus.getText().toString().trim();
+                final String emergencyNameTxt = emergencyContactName.getText().toString().trim();
+                final String relationshipTxt = relationshipToPatient.getText().toString().trim();
+                final String contactPhoneTxt = emergencyContactPhone.getText().toString().trim();
+                final String patientConsentName = patientNameConsent.getText().toString().trim();
+                final String patientSignedText = patientSigned.getText().toString().trim();
+                final String patientSignatureText = patientSig.getText().toString().trim();
+                final String consentDateTxt = consentDateSign.getText().toString().trim();
 
-
+                // information from checkbox input to store in a StringBuilder
                 StringBuilder patientRace = new StringBuilder();
+                StringBuilder patientEthnicity = new StringBuilder();
+                StringBuilder patientIncome = new StringBuilder();
+                StringBuilder patientEmp = new StringBuilder();
 
 
-                if (TextUtils.isEmpty(dateTxt)) // check if date is empty
-                {
-                    Toast.makeText(PatientForm.this,"Please enter today's date",Toast.LENGTH_LONG).show();
-                    todayDate.setError("Date is required");
-                    todayDate.requestFocus();
-                }
-                else if(!DATE_PATTERN.matcher(dateTxt).matches()) // check if the date is pattern matched
+                if (TextUtils.isEmpty(dateTxt) || !DATE_PATTERN.matcher(dateTxt).matches() ) // check if date is empty
                 {
                     Toast.makeText(PatientForm.this,"Must be mm-dd-yyyy",Toast.LENGTH_LONG).show();
-                    todayDate.setError("Format required");
+                    todayDate.setError("Date format is required");
                     todayDate.requestFocus();
                 }
                 else if(TextUtils.isEmpty(visitReasonTxt)) // check if visit reason is empty
@@ -251,7 +296,8 @@ public class PatientForm extends AppCompatActivity
                     Toast.makeText(PatientForm.this,"Consent cannot be empty",Toast.LENGTH_LONG).show();
                     patientConsentText.setError("Consent is required");
                     patientConsentText.requestFocus();
-                }else if(!CONSENT_PATTERN.matcher(patientConsentTextTxt).matches())
+                }
+                else if(!CONSENT_PATTERN.matcher(patientConsentTextTxt).matches())
                 {
                     Toast.makeText(PatientForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
                     patientConsentText.setError("Consent is required");
@@ -309,6 +355,161 @@ public class PatientForm extends AppCompatActivity
                     patientRace.append("Native Hawaiian/Pacific Islander");
                     Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
+                else if(HispanicOrLatino.isChecked())
+                {
+                    patientEthnicity.append("Hispanic or Latino/a");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(NotHispanicOrLatino.isChecked())
+                {
+                    patientEthnicity.append("Not Hispanic or Latino/a");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(TextUtils.isEmpty(prefLangTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Language cannot be empty",Toast.LENGTH_LONG).show();
+                    prefLang.setError("Language is required");
+                    prefLang.requestFocus();
+                }
+                else if(TextUtils.isEmpty(translatorTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Translator cannot be empty",Toast.LENGTH_LONG).show();
+                    neededTranslator.setError("Translator need is required");
+                    neededTranslator.requestFocus();
+                }
+                else if(!CONSENT_PATTERN.matcher(translatorTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
+                    neededTranslator.setError("Translator need is required");
+                    neededTranslator.requestFocus();
+                }
+                else if(!MARITAL_PATTERN.matcher(maritalTxt).matches() || TextUtils.isEmpty(maritalTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Must fill in marital status",Toast.LENGTH_LONG).show();
+                    maritalStatusPatient.setError("Marital Status is required");
+                    maritalStatusPatient.requestFocus();
+                }
+                else if(TextUtils.isEmpty(houseIncomeTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Must fill in household income",Toast.LENGTH_LONG).show();
+                    incomeHousehold.setError("Income is required");
+                    incomeHousehold.requestFocus();
+                }
+                else if(weekly.isChecked())
+                {
+                    patientIncome.append("Week");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(biWeekly.isChecked())
+                {
+                    patientIncome.append("2 Weeks");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(monthly.isChecked())
+                {
+                    patientIncome.append("Month");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(yearly.isChecked())
+                {
+                    patientIncome.append("Year");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(TextUtils.isEmpty(houseHoldTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Must fill in Family size",Toast.LENGTH_LONG).show();
+                    houseHoldSize.setError("Household size is required");
+                    houseHoldSize.requestFocus();
+                }
+                else if(unEmp.isChecked())
+                {
+                    patientEmp.append("Unemployed");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(empFull.isChecked())
+                {
+                    patientEmp.append("Employed (Full time)");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(empPart.isChecked())
+                {
+                    patientEmp.append("Employed (Part time)");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(empSelf.isChecked())
+                {
+                    patientEmp.append("Self-employed");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(empStudent.isChecked())
+                {
+                    patientEmp.append("Student");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(empRetired.isChecked())
+                {
+                    patientEmp.append("Retired");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(empSeek.isChecked())
+                {
+                    patientEmp.append("Seeking employment");
+                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
+                }
+                else if(TextUtils.isEmpty(occupationTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Please fill occupation",Toast.LENGTH_LONG).show();
+                    occupationPatient.setError("Occupation is required");
+                    occupationPatient.requestFocus();
+                }
+                else if(!CONSENT_PATTERN.matcher(veteranTxt).matches() || TextUtils.isEmpty(veteranTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
+                    veteranStatus.setError("Veteran status is required");
+                    veteranStatus.requestFocus();
+                }
+                else if(TextUtils.isEmpty(emergencyNameTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Name cannot be empty",Toast.LENGTH_LONG).show();
+                    emergencyContactName.setError("Contact name is required");
+                    emergencyContactName.requestFocus();
+                }
+                else if(TextUtils.isEmpty(relationshipTxt))
+                {
+                    Toast.makeText(PatientForm.this,"Relationship cannot be empty",Toast.LENGTH_LONG).show();
+                    relationshipToPatient.setError("Contact relationship is required");
+                    relationshipToPatient.requestFocus();
+                }
+                else if(TextUtils.isEmpty(contactPhoneTxt) || !PHONE_PATTERN.matcher(contactPhoneTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Contact phone must be filled",Toast.LENGTH_LONG).show();
+                    emergencyContactPhone.setError("Contact number is required");
+                    emergencyContactPhone.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientConsentName))
+                {
+                    Toast.makeText(PatientForm.this,"Name must be filled",Toast.LENGTH_LONG).show();
+                    patientNameConsent.setError("Name is required");
+                    patientNameConsent.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientSignedText))
+                {
+                    Toast.makeText(PatientForm.this,"Name must be filled",Toast.LENGTH_LONG).show();
+                    patientSigned.setError("Signed name is required");
+                    patientSigned.requestFocus();
+                }
+                else if(TextUtils.isEmpty(patientSignatureText))
+                {
+                    Toast.makeText(PatientForm.this,"Signature must be filled",Toast.LENGTH_LONG).show();
+                    patientSig.setError("Signature is required");
+                    patientSig.requestFocus();
+                }
+                else if(TextUtils.isEmpty(consentDateTxt) || !DATE_PATTERN.matcher(consentDateTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this,"Date must be filled",Toast.LENGTH_LONG).show();
+                    consentDateSign.setError("Date is required");
+                    consentDateSign.requestFocus();
+                }
                 else
                 {
                     Toast.makeText(PatientForm.this,"Success!",Toast.LENGTH_LONG).show();
@@ -319,3 +520,4 @@ public class PatientForm extends AppCompatActivity
     }
 
 }
+//    final String consentDateTxt = consentDateSign.getText().toString().trim();
