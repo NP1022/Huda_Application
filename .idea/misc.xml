@@ -35,6 +35,7 @@
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_patient_form.xml" value="0.2808137215795772" />
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_register_account.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_announcements.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_check_in.xml" value="0.12639311043566362" />
         <entry key="app/src/main/res/layout/activity_contact_us.xml" value="0.37311553955078125" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_health_services.xml" value="0.1" />
@@ -43,6 +44,7 @@
         <entry key="app/src/main/res/layout/activity_main_application.xml" value="0.4607025146484375" />
         <entry key="app/src/main/res/layout/activity_partners.xml" value="0.2627105712890625" />
         <entry key="app/src/main/res/layout/activity_patient_form.xml" value="0.2867482092244055" />
+        <entry key="app/src/main/res/layout/activity_patients_page.xml" value="0.12639311043566362" />
       </map>
     </option>
   </component>
