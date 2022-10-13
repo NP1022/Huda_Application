@@ -28,6 +28,11 @@ public class PatientsPage extends AppCompatActivity implements View.OnClickListe
             startActivity(NewPatient);
 
         }
+        
+        if (view.getId() == R.id.nextForm){
+            Intent PatientContract = new Intent (this, PatientContract.class);
+            startActivity(PatientContract);
+        }
 
     }
 }

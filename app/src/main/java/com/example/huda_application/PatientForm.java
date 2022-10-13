@@ -3,6 +3,7 @@ package com.example.huda_application;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.CloseGuard;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,7 +23,7 @@ import com.google.firebase.auth.SignInMethodQueryResult;
 
 import java.util.regex.Pattern;
 
-public class PatientForm extends AppCompatActivity
+public class PatientForm extends AppCompatActivity implements View.OnClickListener
 {
     FirebaseAuth mAuth;
 
@@ -43,6 +45,8 @@ public class PatientForm extends AppCompatActivity
     private static Pattern CONSENT_PATTERN = Pattern.compile("^(?:yes|Yes|No|no)$");
 
     private static Pattern MARITAL_PATTERN = Pattern.compile("^(?:Single|single|Married|married|partner|Partner|Separated|separated|Divorced|divorced|Widowed|widowed)$");
+
+    private TextView PatientContract;
 
 
     @Override
@@ -117,6 +121,7 @@ public class PatientForm extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
+
                 final String dateTxt = todayDate.getText().toString().trim(); // convert the EditText to a String type
                 final String visitReasonTxt = visitReason.getText().toString().trim();
                 final String firstNameTxt = firstName.getText().toString().trim();
@@ -515,9 +520,19 @@ public class PatientForm extends AppCompatActivity
                     Toast.makeText(PatientForm.this,"Success!",Toast.LENGTH_LONG).show();
                 }
             }
+
         });
 
+        PatientContract = (TextView) findViewById(R.id.nextForm);
+        PatientContract.setOnClickListener(this);
     }
 
+    public void onClick(View view)
+    {
+        if (view.getId() == R.id.nextForm){
+            Intent PatientContract = new Intent (this, PatientContract.class);
+            startActivity(PatientContract);
+        }
+    }
 }
 //    final String consentDateTxt = consentDateSign.getText().toString().trim();

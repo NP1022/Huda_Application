@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".PatientContract"
+            android:exported="false" />
+        <activity
             android:name=".CheckIn"
             android:exported="false" />
         <activity

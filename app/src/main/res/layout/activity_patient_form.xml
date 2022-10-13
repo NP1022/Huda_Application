@@ -12,871 +12,978 @@
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="1dp">
 
-<androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:visibility="visible"
-    tools:context=".PatientForm"
-    android:background="#FFFFFF">
-
-
-    <EditText
-        android:id="@+id/todaysDate"
-        android:layout_width="320dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:hint="Date (mm-dd-yyyy)"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/visitReason"
-        android:layout_width="320dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/todaysDate"
-        android:layout_marginTop="4dp"
-        android:hint="Visit Reason"
-        android:inputType="textMultiLine"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/todaysDate"
-        tools:ignore="MissingConstraints" />
+        android:background="#FFFFFF"
+        android:padding="10px"
+        android:visibility="visible"
+        tools:context=".PatientForm">
 
 
-    <EditText
-        android:id="@+id/firstName"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="First Name"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/registrationFormHeader"
+            android:layout_width="216dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"
+            android:background="@color/white"
+            android:text="Registration"
+            android:textAlignment="center"
+            android:textColor="#043670"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/hudaLogo5"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/lastName"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Last Name"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/visitReason"
-        tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/hudaLogo5"
+            android:layout_width="98dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="28dp"
 
-    <EditText
-        android:id="@+id/patientSex"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Sex (Male or Female)"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName"
-        tools:ignore="MissingConstraints" />
+            android:layout_marginEnd="36dp"
+            app:layout_constraintEnd_toStartOf="@+id/ourStoryHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/huda_logo" />
 
-    <EditText
-        android:id="@+id/patientDob"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="DOB (mm-dd-yyyy)"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientSex"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/todaysDate"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Date (mm-dd-yyyy)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hudaLogo5" />
 
-    <EditText
-        android:id="@+id/patientAddress"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:hint="Address (1234 Street St.)"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientDob"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/patientCity"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:hint="City"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientAddress"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/patientState"
-        android:layout_width="320dp"
-        android:layout_height="47dp"
-        android:hint="State"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientCity"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/patientZipCode"
-        android:layout_width="320dp"
-        android:layout_height="47dp"
-        android:hint="Zipcode"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientState"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/patientSSN"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="SSN (123-12-1234)"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientZipCode"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/patientCellNum"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Cell Phone (123-123-1234)"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientHomeNum"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/patientHomeNum"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Home Phone (123-123-1234)"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientSSN"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/patientPreferredNumber"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Preferred Number (Home or Mobile)"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientCellNum"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/consentToCall"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Consent to Call? (Yes or No)"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientPreferredNumber"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/visitReason"
+            android:layout_width="320dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/todaysDate"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:hint="Visit Reason"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/todaysDate"
+            tools:ignore="MissingConstraints" />
 
 
-    <EditText
-        android:id="@+id/consentToText"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Consent to Text? (Yes or No)"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consentToCall"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lastName"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/insuranceProvider"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Insurance provider"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consentToText"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/visitReason"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/emailAddress"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Email (Same as registration email)"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/insuranceProvider"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/patientSex"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Sex (Male or Female)"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstName"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/pickRace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:text="Please Select a Race: "
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailAddress" />
+        <EditText
+            android:id="@+id/patientDob"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="DOB (mm-dd-yyyy)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientSex"
+            tools:ignore="MissingConstraints" />
 
-    <CheckBox
-        android:id="@+id/blackAfrican"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Black/African American"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pickRace" />
+        <EditText
+            android:id="@+id/patientAddress"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:hint="Address (1234 Street St.)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientDob"
+            tools:ignore="MissingConstraints" />
 
-    <CheckBox
-        android:id="@+id/whiteCaucasian"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="White/Caucasian"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/blackAfrican" />
+        <EditText
+            android:id="@+id/patientCity"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:hint="City"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientAddress"
+            tools:ignore="MissingConstraints" />
 
-    <CheckBox
-        android:id="@+id/asian"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Asian"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/whiteCaucasian" />
+        <EditText
+            android:id="@+id/patientState"
+            android:layout_width="320dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:hint="State"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientCity"
+            tools:ignore="MissingConstraints" />
 
-    <CheckBox
-        android:id="@+id/middleEastern"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Middle Eastern/North African"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/asian" />
+        <EditText
+            android:id="@+id/patientZipCode"
+            android:layout_width="320dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:hint="Zipcode"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientState"
+            tools:ignore="MissingConstraints" />
 
-    <CheckBox
-        android:id="@+id/hispanicLatino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hispanic/Latino"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/middleEastern" />
+        <EditText
+            android:id="@+id/patientSSN"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="SSN (123-12-1234)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientZipCode"
+            tools:ignore="MissingConstraints" />
 
-    <CheckBox
-        android:id="@+id/nativeAmerican"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Native American"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hispanicLatino" />
+        <EditText
+            android:id="@+id/patientCellNum"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Cell Phone (123-123-1234)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientHomeNum"
+            tools:ignore="MissingConstraints" />
 
-    <CheckBox
-        android:id="@+id/nativeHawiianPacific"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Native Hawaiian or Other Pacific Islander"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nativeAmerican" />
+        <EditText
+            android:id="@+id/patientHomeNum"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Home Phone (123-123-1234)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientSSN"
+            tools:ignore="MissingConstraints" />
 
+        <EditText
+            android:id="@+id/patientPreferredNumber"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Preferred Number (Home or Mobile)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientCellNum"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/pickEthnicity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Please Select an Ethnicity: "
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nativeHawiianPacific" />
-
-    <CheckBox
-        android:id="@+id/hispanicOrLatino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hispanic or Latino/a"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pickEthnicity" />
-
-    <CheckBox
-        android:id="@+id/NotHispanicOrLatino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Not Hispanic or Latino/a"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hispanicOrLatino" />
-
-    <EditText
-        android:id="@+id/langPref"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="50dp"
-        android:hint="Preferred Language"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NotHispanicOrLatino"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/translatorNeeded"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Translator needed?"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/langPref"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/socialInfo"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:textSize="20dp"
-        android:text="The following information does NOT affect your right to care at HUDA, but it is needed to continue providing
-our free services"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/translatorNeeded" />
-
-    <EditText
-        android:id="@+id/maritalStatus"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="20dp"
-        android:hint="Marital Status"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/socialInfo"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/income"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Household Income"
-        android:inputType="number"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maritalStatus"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/every"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:textSize="20dp"
-        android:text="Every"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/income" />
-
-    <CheckBox
-        android:id="@+id/week"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Week"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/every" />
-
-    <CheckBox
-        android:id="@+id/twoWeek"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2 Weeks"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/week" />
-
-    <CheckBox
-        android:id="@+id/month"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Month"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/twoWeek" />
-
-    <CheckBox
-        android:id="@+id/year"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Year"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/month" />
-
-    <EditText
-        android:id="@+id/houseHold"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Household Size"
-        android:layout_marginTop="20dp"
-        android:inputType="number"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/year"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/employment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:textSize="20dp"
-        android:text="Employment Status"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/houseHold" />
-
-    <CheckBox
-        android:id="@+id/unemployed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Unemployed"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/employment" />
-
-    <CheckBox
-        android:id="@+id/employedFt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Employed (Full Time)"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/unemployed" />
-
-    <CheckBox
-        android:id="@+id/employedPt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Employed (Part Time)"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/employedFt" />
-
-    <CheckBox
-        android:id="@+id/selfEmployed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Self-employed"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/employedPt" />
-
-    <CheckBox
-        android:id="@+id/student"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Student"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selfEmployed" />
-
-    <CheckBox
-        android:id="@+id/retired"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Retired"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/student" />
-
-    <CheckBox
-        android:id="@+id/seekingEmployment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Seeking Employment"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/retired" />
+        <EditText
+            android:id="@+id/consentToCall"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Consent to Call? (Yes or No)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientPreferredNumber"
+            tools:ignore="MissingConstraints" />
 
 
-    <EditText
-        android:id="@+id/occupation"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="50dp"
-        android:hint="Occupation"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekingEmployment"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/consentToText"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Consent to Text? (Yes or No)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consentToCall"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/veteran"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Are you a veteran?"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/occupation"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/insuranceProvider"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Insurance provider"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consentToText"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Email (Same as registration email)"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insuranceProvider"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/pickRace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:text="Please Select a Race: "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailAddress" />
+
+        <CheckBox
+            android:id="@+id/blackAfrican"
+            android:layout_width="159dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:text="Black/African American"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.425"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pickRace" />
+
+        <CheckBox
+            android:id="@+id/whiteCaucasian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="White/Caucasian"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blackAfrican" />
+
+        <CheckBox
+            android:id="@+id/asian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asian"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/whiteCaucasian" />
+
+        <CheckBox
+            android:id="@+id/middleEastern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Middle Eastern/North African"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/asian" />
+
+        <CheckBox
+            android:id="@+id/hispanicLatino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hispanic/Latino"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/middleEastern" />
+
+        <CheckBox
+            android:id="@+id/nativeAmerican"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Native American"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hispanicLatino" />
+
+        <CheckBox
+            android:id="@+id/nativeHawiianPacific"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Native Hawaiian or Other Pacific Islander"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nativeAmerican" />
 
 
-    <TextView
-        android:id="@+id/emergencyContact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:textSize="20dp"
-        android:text="Emergency Contact Information"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/veteran" />
+        <TextView
+            android:id="@+id/pickEthnicity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Please Select an Ethnicity: "
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nativeHawiianPacific" />
 
-    <EditText
-        android:id="@+id/emergencyName"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emergencyContact"
-        tools:ignore="MissingConstraints" />
+        <CheckBox
+            android:id="@+id/hispanicOrLatino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hispanic or Latino/a"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pickEthnicity" />
 
-    <EditText
-        android:id="@+id/relationship"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Relationship to patient"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emergencyName"
-        tools:ignore="MissingConstraints" />
+        <CheckBox
+            android:id="@+id/NotHispanicOrLatino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Hispanic or Latino/a"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hispanicOrLatino" />
 
-    <EditText
-        android:id="@+id/emergencyNumber"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Contact phone #"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relationship"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/langPref"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Preferred Language"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NotHispanicOrLatino"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/translatorNeeded"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Translator needed?"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/langPref"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/socialInfo"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="The following information does NOT affect your right to care at HUDA, but it is needed to continue providing our free services."
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/translatorNeeded" />
+
+        <EditText
+            android:id="@+id/maritalStatus"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Marital Status"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/socialInfo"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/income"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Household Income"
+            android:inputType="number"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/maritalStatus"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/every"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Every"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/income" />
+
+        <CheckBox
+            android:id="@+id/week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Week"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/every" />
+
+        <CheckBox
+            android:id="@+id/twoWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 Weeks"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/week" />
+
+        <CheckBox
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Month"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/twoWeek" />
+
+        <CheckBox
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/month" />
+
+        <EditText
+            android:id="@+id/houseHold"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Household Size"
+            android:inputType="number"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/year"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/employment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Employment Status"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/houseHold" />
+
+        <CheckBox
+            android:id="@+id/unemployed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unemployed"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/employment" />
+
+        <CheckBox
+            android:id="@+id/employedFt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employed (Full Time)"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unemployed" />
+
+        <CheckBox
+            android:id="@+id/employedPt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Employed (Part Time)"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/employedFt" />
+
+        <CheckBox
+            android:id="@+id/selfEmployed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Self-employed"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/employedPt" />
+
+        <CheckBox
+            android:id="@+id/student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selfEmployed" />
+
+        <CheckBox
+            android:id="@+id/retired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retired"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/student" />
+
+        <CheckBox
+            android:id="@+id/seekingEmployment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seeking Employment"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/retired" />
 
 
-    <TextView
-        android:id="@+id/I"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="I, "
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/patientNameFill"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emergencyNumber" />
+        <EditText
+            android:id="@+id/occupation"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Occupation"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekingEmployment"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/patientNameFill"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Your name"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emergencyNumber"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/veteran"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Are you a veteran?"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/occupation"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/volunteerConsent"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="voluntarily accept treatment/counseling as recommended and
+
+        <TextView
+            android:id="@+id/emergencyContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Emergency Contact Information"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/veteran" />
+
+        <EditText
+            android:id="@+id/emergencyName"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emergencyContact"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/relationship"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Relationship to patient"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emergencyName"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/emergencyNumber"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Contact phone #"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relationship"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/I"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="I, "
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/patientNameFill"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emergencyNumber" />
+
+        <EditText
+            android:id="@+id/patientNameFill"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Your name"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emergencyNumber"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/volunteerConsent"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="voluntarily accept treatment/counseling as recommended and
 explained by the HUDA staff. I understand that I am free to withdraw my consent and discontinue treatment at any time.
 In addition, I have been informed of my rights to refuse to participate in research activities. I understand that I have rights
 as a recipient of free services provided by the HUDA Clinic. I have been advised on the HUDA Clinic’s NO CALL NO SHOW
 Policy regarding primary care and specialty services and agree to follow it. Further, I have been advised of the Federal
 Confidentiality Regulation and been given a copy of the Confidentiality Notice to review."
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientNameFill" />
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientNameFill" />
 
-    <EditText
-        android:id="@+id/patientNamePrinted"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Patient Name (Printed)"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/volunteerConsent"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/patientNamePrinted"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Patient Name (Printed)"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/volunteerConsent"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/patientNameSignature"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Patient/Guardian Signature"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientNamePrinted"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/patientNameSignature"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Patient/Guardian Signature"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientNamePrinted"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/consentDate"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Date"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/patientNameSignature"
-        tools:ignore="MissingConstraints" />
-
-
-    <Button
-        android:id="@+id/submitPatient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Submit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consentDate"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/consentDate"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#686868"
+            android:ems="10"
+            android:hint="Date"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientNameSignature"
+            tools:ignore="MissingConstraints" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/submitPatient"
+            android:layout_width="243dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="28dp"
+            android:background="#043670"
+            android:text="Submit"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consentDate"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/nextForm"
+            android:layout_width="189dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="39dp"
+            android:background="#043670"
+            android:text="Next Form"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submitPatient"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
