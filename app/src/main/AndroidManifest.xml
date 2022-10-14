@@ -16,6 +16,21 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".LabAccess"
+            android:exported="false" />
+        <activity
+            android:name=".PatientInfoForm"
+            android:exported="false" />
+        <activity
+            android:name=".StressForm"
+            android:exported="false" />
+        <activity
+            android:name=".PersonalRepresentative"
+            android:exported="false" />
+        <activity
+            android:name=".AuthorizationForm"
+            android:exported="false" />
+        <activity
             android:name=".PatientContract"
             android:exported="false" />
         <activity

@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_announcements.xml" value="0.30052083333333335" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_authorization_form.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_lab_access.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_main.xml" value="0.30052083333333335" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_main_application.xml" value="0.29518072289156627" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_our_story.xml" value="0.30052083333333335" />
@@ -11,7 +13,10 @@
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patient_consent.xml" value="0.335" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patient_contract.xml" value="0.25" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patient_form.xml" value="0.14520999176502883" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patient_info_form.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patients_page.xml" value="0.20925925925925926" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_personal_representative.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_stress_form.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2425" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_announcements.xml" value="0.2" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_contact_us.xml" value="0.24320652173913043" />
