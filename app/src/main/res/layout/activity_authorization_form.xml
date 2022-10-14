@@ -15,15 +15,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/authorizationForm"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".AuthorizationForm">
 
         <Button
             android:id="@+id/nextForm3"
             android:layout_width="189dp"
             android:layout_height="56dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="50dp"
             android:background="#043670"
             android:text="Next Form"
             android:textSize="20sp"

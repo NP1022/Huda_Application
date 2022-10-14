@@ -149,7 +149,7 @@
             android:layout_marginTop="5dp"
             android:backgroundTint="#686868"
             android:ems="10"
-            android:hint="DOB (mm-dd-yyyy)"
+            android:hint="DOB (MM-DD-YYYY)"
             android:inputType="text"
             android:padding="15dp"
             android:textColor="@color/black"
@@ -395,7 +395,6 @@
             android:textColorHint="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.425"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pickRace" />
 
@@ -404,9 +403,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="White/Caucasian"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/blackAfrican" />
 
@@ -417,7 +419,9 @@
             android:text="Asian"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.364"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/whiteCaucasian" />
 
@@ -428,7 +432,9 @@
             android:text="Middle Eastern/North African"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/asian" />
 
@@ -439,7 +445,9 @@
             android:text="Hispanic/Latino"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.471"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/middleEastern" />
 
@@ -450,7 +458,9 @@
             android:text="Native American"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hispanicLatino" />
 
@@ -461,6 +471,7 @@
             android:text="Native Hawaiian or Other Pacific Islander"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nativeAmerican" />
@@ -473,6 +484,7 @@
             android:layout_marginTop="30dp"
             android:text="Please Select an Ethnicity: "
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nativeHawiianPacific" />
@@ -484,6 +496,7 @@
             android:text="Hispanic or Latino/a"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pickEthnicity" />
@@ -495,7 +508,9 @@
             android:text="Not Hispanic or Latino/a"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.576"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hispanicOrLatino" />
 
@@ -537,14 +552,13 @@
 
         <TextView
             android:id="@+id/socialInfo"
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
+            android:layout_width="367dp"
+            android:layout_height="71dp"
             android:layout_marginTop="44dp"
             android:text="The following information does NOT affect your right to care at HUDA, but it is needed to continue providing our free services."
             android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/translatorNeeded" />
 
@@ -976,9 +990,11 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
             android:layout_width="189dp"
             android:layout_height="56dp"
             android:layout_marginTop="39dp"
+            android:layout_marginBottom="30dp"
             android:background="#043670"
             android:text="Next Form"
             android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/submitPatient"
