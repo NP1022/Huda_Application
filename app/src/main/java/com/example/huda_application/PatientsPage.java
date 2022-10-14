@@ -9,15 +9,17 @@ import android.widget.TextView;
 
 public class PatientsPage extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView NewPatient;
+    private TextView NewPatient , Checkin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patients_page);
 
         NewPatient = (TextView) findViewById(R.id.Forms);
-        NewPatient.setOnClickListener(this);
+        Checkin = (TextView) findViewById(R.id.Checkin);
 
+        NewPatient.setOnClickListener(this);
+        Checkin.setOnClickListener(this);
 
     }
 
@@ -33,6 +35,12 @@ public class PatientsPage extends AppCompatActivity implements View.OnClickListe
             Intent PatientContract = new Intent (this, PatientContract.class);
             startActivity(PatientContract);
         }
+       else if (view.getId() == R.id.Checkin){
+            Intent check_in = new Intent(PatientsPage.this ,CheckIn.class);
+            startActivity(check_in);
+
+        }
+
 
     }
 }

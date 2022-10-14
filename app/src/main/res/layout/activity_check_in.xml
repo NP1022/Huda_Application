@@ -4,6 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".CheckIn">
+    <EditText
+        android:id="@+id/FullName"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:backgroundTint="#686868"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="#686868"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/birthday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
+
+    <EditText
+        android:id="@+id/birthday"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#686868"
+        android:ems="10"
+        android:hint="Birthday"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="#686868"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/appoitmentTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FullName" />
+
+    <EditText
+        android:id="@+id/appoitmentTime"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#686868"
+        android:ems="10"
+        android:hint="Appointment Time"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="#6A6A6A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/birthday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthday" />
+
+    <EditText
+        android:id="@+id/email_checkin"
+        android:layout_width="320dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#686868"
+        android:ems="10"
+        android:hint="@string/email"
+
+        android:textColor="@color/black"
+        android:textColorHint="#686868"
+        android:textSize="24sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appoitmentTime"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/checkin"
+        android:layout_width="173dp"
+        android:layout_height="53dp"
+        android:background="#0151AE"
+        android:text="@string/checkIn"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_checkin"
+        app:layout_constraintVertical_bias="0.392" />
+
+    <ImageView
+        android:id="@+id/hudaLogo"
+        android:layout_width="168dp"
+        android:layout_height="174dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="213dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/huda_logo" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
