@@ -83,8 +83,8 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener {
         String email_text = email.getText().toString();
         String time_text = time.getText().toString();
 
-        InternetAddress s_sender = new InternetAddress("ali.bilal.said@gmail.com");
-        InternetAddress f_from = new InternetAddress(sender_email);
+        InternetAddress s_sender = new InternetAddress(sender_email);
+        InternetAddress reciever = new InternetAddress("ali.bilal.said@gmail.com");
         final String message_text = "Patient: " + Fullname_text + "Birthday: " + birthday_text + " is checking in for appointment at " + time_text + ". The patient Email is: " + email_text + ".";
         Properties settings = Settings(smtp);
 
@@ -105,7 +105,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener {
             }
         });
 
-        Message f_email = sendmimmessage(pass_auth, s_sender , f_from, "order", message_text);
+        Message f_email = sendmimmessage(pass_auth, s_sender , reciever, "order", message_text);
 
         Transport.send(f_email);
 
