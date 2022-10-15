@@ -18,9 +18,7 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
 
         AuthorizationForm = (TextView) findViewById(R.id.nextForm2);
         AuthorizationForm.setOnClickListener(this);
-
     }
-
 
     @Override
     public void onClick(View view) {
