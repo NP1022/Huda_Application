@@ -77,12 +77,6 @@ public class RegisterAccount extends AppCompatActivity
                 final String passwordTxt = password.getText().toString().trim();
                 final String conPasswordTxt = conPassword.getText().toString().trim();
 
-//                rootNode = FirebaseDatabase.getInstance();
-//                ref = rootNode.getReference("users");
-
-//                User user = new User(firstNameTxt,lastNameTxt,emailTxt,passwordTxt);
-
-
 
                 if (TextUtils.isEmpty(firstNameTxt) || TextUtils.isEmpty(lastNameTxt)) // check if the firstname and lastname are empty
                 {
