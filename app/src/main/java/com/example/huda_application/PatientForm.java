@@ -20,12 +20,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.SignInMethodQueryResult;
+import com.google.firebase.database.DatabaseReference;
 
 import java.util.regex.Pattern;
 
-public class PatientForm extends AppCompatActivity implements View.OnClickListener
+public class PatientForm extends AppCompatActivity
 {
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
+    DatabaseReference ref;
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
@@ -47,6 +49,8 @@ public class PatientForm extends AppCompatActivity implements View.OnClickListen
     private static Pattern MARITAL_PATTERN = Pattern.compile("^(?:Single|single|Married|married|partner|Partner|Separated|separated|Divorced|divorced|Widowed|widowed)$");
 
     private TextView PatientContract;
+
+
 
 
     @Override
@@ -114,6 +118,8 @@ public class PatientForm extends AppCompatActivity implements View.OnClickListen
         final CheckBox empRetired = findViewById(R.id.retired);
         final CheckBox empSeek = findViewById(R.id.seekingEmployment);
 
+        DAOPatient dao = new DAOPatient();
+
         Button buttonSubmit = findViewById(R.id.submitPatient); // set variable for button action
 
         buttonSubmit.setOnClickListener(new View.OnClickListener()
@@ -157,9 +163,16 @@ public class PatientForm extends AppCompatActivity implements View.OnClickListen
 
                 // information from checkbox input to store in a StringBuilder
                 StringBuilder patientRace = new StringBuilder();
+                final String patientRaceTxt = patientRace.toString().trim();
+
                 StringBuilder patientEthnicity = new StringBuilder();
+                final String patientEthnicityTxt = patientEthnicity.toString().trim();
+
                 StringBuilder patientIncome = new StringBuilder();
+                final String patientIncomeTxt = patientIncome.toString().trim();
+
                 StringBuilder patientEmp = new StringBuilder();
+                final String patientEmpTxt = patientEmp.toString().trim();
 
 
                 if (TextUtils.isEmpty(dateTxt) || !DATE_PATTERN.matcher(dateTxt).matches() ) // check if date is empty
@@ -325,50 +338,41 @@ public class PatientForm extends AppCompatActivity implements View.OnClickListen
                     patientEmail.setError("Email is required");
                     patientEmail.requestFocus();
                 }
-                else if(blackAfricanAmerican.isChecked())
+                if(blackAfricanAmerican.isChecked())
                 {
                     patientRace.append("Black/African American");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(whiteCaucasian.isChecked())
+                if(whiteCaucasian.isChecked())
                 {
                     patientRace.append("White/Caucasian");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(asianPatient.isChecked())
+                if(asianPatient.isChecked())
                 {
                     patientRace.append("Asian");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(middleEasternNA.isChecked())
+                if(middleEasternNA.isChecked())
                 {
                     patientRace.append("Middle Eastern/North African");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(hispanicLatinoPatient.isChecked())
+                if(hispanicLatinoPatient.isChecked())
                 {
                     patientRace.append("Hispanic/Latino");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(nativeAmericanPatient.isChecked())
+                if(nativeAmericanPatient.isChecked())
                 {
                     patientRace.append("Native American");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(nativeHawiianPacificIslander.isChecked())
+                if(nativeHawiianPacificIslander.isChecked())
                 {
                     patientRace.append("Native Hawaiian/Pacific Islander");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(HispanicOrLatino.isChecked())
+                if(HispanicOrLatino.isChecked())
                 {
                     patientEthnicity.append("Hispanic or Latino/a");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(NotHispanicOrLatino.isChecked())
+                if(NotHispanicOrLatino.isChecked())
                 {
                     patientEthnicity.append("Not Hispanic or Latino/a");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
                 else if(TextUtils.isEmpty(prefLangTxt) || prefLangTxt.length() > 20)
                 {
@@ -400,25 +404,21 @@ public class PatientForm extends AppCompatActivity implements View.OnClickListen
                     incomeHousehold.setError("Income is required");
                     incomeHousehold.requestFocus();
                 }
-                else if(weekly.isChecked())
+                if(weekly.isChecked())
                 {
                     patientIncome.append("Week");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(biWeekly.isChecked())
+                if(biWeekly.isChecked())
                 {
                     patientIncome.append("2 Weeks");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(monthly.isChecked())
+                if(monthly.isChecked())
                 {
                     patientIncome.append("Month");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(yearly.isChecked())
+                if(yearly.isChecked())
                 {
                     patientIncome.append("Year");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
                 else if(TextUtils.isEmpty(houseHoldTxt) || houseHoldTxt.length() >2)
                 {
@@ -426,40 +426,33 @@ public class PatientForm extends AppCompatActivity implements View.OnClickListen
                     houseHoldSize.setError("Household size is required");
                     houseHoldSize.requestFocus();
                 }
-                else if(unEmp.isChecked())
+                if(unEmp.isChecked())
                 {
                     patientEmp.append("Unemployed");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(empFull.isChecked())
+                if(empFull.isChecked())
                 {
                     patientEmp.append("Employed (Full time)");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(empPart.isChecked())
+                if(empPart.isChecked())
                 {
                     patientEmp.append("Employed (Part time)");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(empSelf.isChecked())
+                if(empSelf.isChecked())
                 {
                     patientEmp.append("Self-employed");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(empStudent.isChecked())
+                if(empStudent.isChecked())
                 {
                     patientEmp.append("Student");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(empRetired.isChecked())
+                if(empRetired.isChecked())
                 {
                     patientEmp.append("Retired");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
-                else if(empSeek.isChecked())
+                if(empSeek.isChecked())
                 {
                     patientEmp.append("Seeking employment");
-                    Toast.makeText(PatientForm.this,"input recognized",Toast.LENGTH_LONG).show();
                 }
                 else if(TextUtils.isEmpty(occupationTxt) || occupationTxt.length() > 30)
                 {
@@ -518,21 +511,31 @@ public class PatientForm extends AppCompatActivity implements View.OnClickListen
                 else
                 {
                     Toast.makeText(PatientForm.this,"Success!",Toast.LENGTH_LONG).show();
+                    Patient patient = new Patient(dateTxt,visitReasonTxt,lastNameTxt,firstNameTxt,patientSexTxt,patientDOBTxt,patientAddTxt,patientCityTxt,patientStateTxt,patientZipCodeTxt,
+                            patientSSNTxt,patientHomeNumTxt,patientCellNumTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,patientEmailTxt,
+                            patientRaceTxt, patientEthnicityTxt, translatorTxt, maritalTxt,houseIncomeTxt, patientIncomeTxt, houseHoldTxt, patientEmpTxt,occupationTxt, veteranTxt, emergencyNameTxt,
+                            relationshipTxt, contactPhoneTxt, patientConsentName, patientSignedText, patientSignatureText, consentDateTxt);
+                    dao.add(patient).addOnSuccessListener(suc->
+                    {
+                        Toast.makeText(PatientForm.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
+                    }).addOnFailureListener(er->
+                    {
+                        Toast.makeText(PatientForm.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
+                    });
                 }
             }
 
         });
 
-        PatientContract = (TextView) findViewById(R.id.nextForm);
-        PatientContract.setOnClickListener(this);
+//        PatientContract = (TextView) findViewById(R.id.nextForm);
+//        PatientContract.setOnClickListener(this);
     }
 
-    public void onClick(View view)
-    {
-        if (view.getId() == R.id.nextForm){
-            Intent PatientContract = new Intent (this, PatientContract.class);
-            startActivity(PatientContract);
-        }
-    }
+//    public void onClick(View view)
+//    {
+//        if (view.getId() == R.id.nextForm){
+//            Intent PatientContract = new Intent (this, PatientContract.class);
+//            startActivity(PatientContract);
+//        }
+//    }
 }
-//    final String consentDateTxt = consentDateSign.getText().toString().trim();
