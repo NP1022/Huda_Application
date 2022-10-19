@@ -8,6 +8,7 @@
     android:layout_height="729dp"
     android:background="@color/white"
     android:fillViewport="true"
+    android:padding="10px"
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="1dp">
 

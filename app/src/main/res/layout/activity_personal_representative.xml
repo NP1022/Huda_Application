@@ -293,6 +293,7 @@
             android:ems="10"
             android:hint="Data"
             android:inputType="text|phone"
+            android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#686868"

@@ -12,33 +12,115 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
-    <string name="password">Introduzca la contraseña</string>
-    <string name="email">Ingrese el correo electrónico</string>
+    <string name="password">Introduzca la Contraseña</string>
+    <string name="email">Ingrese el Correo Electrónico</string>
     <string name="Login">Iniciar Sesión</string>
-    <string name="forgotpassword">Olvidó su contraseña?</string>
+    <string name="forgotpassword">Olvidó Su Contraseña?</string>
     <string name="register">Registro</string>
-    <string name="language">español</string>
-    <string name="FirstName">Ingrese el nombre</string>
-    <string name="LastName">Introduzca el apellido</string>
-    <string name="EnterEmail">Ingrese el correo electrónico</string>
-    <string name="EnterPass">Introduzca la contraseña</string>
-    <string name="Reenter">Reintroduzca la contraseña</string>
-    <string name="reset">Enviar reinicio</string>
-    <string name="home">página de inicio</string>
+    <string name="language">Español</string>
+    <string name="FirstName">Ingrese el Nombre</string>
+    <string name="LastName">Introduzca el Apellido</string>
+    <string name="EnterEmail">Ingrese el Correo Electrónico</string>
+    <string name="EnterPass">Introduzca La Contraseña</string>
+    <string name="Reenter">Reintroduzca La Contraseña</string>
+    <string name="reset">Enviar Reinicio</string>
+    <string name="home">página de Inicio</string>
     <string name="Annoucment">Anuncio</string>
     <string name="services">Servicios</string>
-    <string name="story">Nuestra historia</string>
+    <string name="story">Nuestra Historia</string>
     <string name="partners">Socios</string>
-    <string name="contact">Contacta con nosotros</string>
+    <string name="contact">Contacta con Nosotros</string>
     <string name="patients_page">Portal de Pacientes</string>
     <string name="healthservices">Servicios de salud gratuitos</string>
-    <string name="PrimaryCare">Atención primaria</string>
+    <string name="PrimaryCare">Atención Primaria</string>
     <string name="MentalCare">Cuidado Mental</string>
-    <string name="VisionHealth">Cuidado de la visión</string>
-    <string name="Dental">Cuidado dental</string>
-    <string name="speciality">Atención especializada</string>
-    <string name="NewPatient">Nuevo paciente</string>
-    <string name="patientForm">Formulario de nuevo paciente</string>
+    <string name="VisionHealth">Cuidado de La Visión</string>
+    <string name="Dental">Cuidado Dental</string>
+    <string name="speciality">Atención Especializada</string>
+    <string name="NewPatient">Nuevo Paciente</string>
+    <string name="patientForm">Formulario de Nuevo Paciente</string>
     <string name="checkIn">Registrarse</string>
-    <string name="MedicalChart">Cuadro médico</string>
+    <string name="MedicalChart">Cuadro Médico</string>
+
+    <!--    Patient Form Strings -->
+    <string name = "Registration">Registro</string>
+    <string name="Date">Fecha (MM/DD/AAAA)</string>
+    <string name="VisitReason">Motivo de la visita</string>
+    <string name="Sex">Sexo</string>
+    <string name="DOB">Fecha de Nacimiento (MM/DD/AAAA)</string>
+    <string name="Address">Dirección (1234 Street St.)</string>
+    <string name = "City">Dirección</string>
+    <string name = "State">Estado</string>
+    <string name = "ZipCode">Código postal</string>
+    <string name = "SSN">Número de Seguro Social (123-12-1234)</string>
+    <string name = "HomePhone">Teléfono de Casa (123-123-1234)</string>
+    <string name = "CellPhone">Teléfono móvil (123-123-1234)</string>
+    <string name = "PreferredNumber">Número Preferido (¿Casa o Móvil?)</string>
+    <string name = "ConsentToCall">¿Consentimiento para llamar? (Si o No)</string>
+    <string name = "ConsentToText">¿Consentimiento para enviar mensajes de texto? (Si o no)</string>
+    <string name = "InsuranceProvider">Proveedor de Seguros</string>
+    <string name = "Email">Correo Electrónico (Igual que el correo electrónico de registro)</string>
+
+    <string name = "SelectRace">Selecciona una carrera:</string>
+    <string name = "Black">Negra/Afroamericana</string>
+    <string name = "White">Blanca/Caucásica</string>
+    <string name = "Asian">Asiática</string>
+    <string name = "MiddleEastern">Oriente Medio/África del Norte</string>
+    <string name = "Hispanic">Hispano/Latino</string>
+    <string name = "NativeAmerican">Nativa Americana</string>
+    <string name = "NativeHawaiian">Nativo de Hawai u otra isla del Pacífico</string>
+
+    <string name = "SelectEthnicity">Seleccione una Etnia:</string>
+    <string name = "HispanicEthnicity">Hispano o Latino/a</string>
+    <string name = "NotHispanicEthnicity">No hispano o Latino/a</string>
+    <string name = "PreferredLanguage">Idioma Preferido</string>
+    <string name = "Translator">¿Se necesita traductor? (Si o No)</string>
+    <string name = "SocialInfo">La siguiente información NO afecta su derecho a la atención en HUDA, pero es necesaria para continuar brindando nuestros servicios gratuitos.</string>
+
+    <string name = "MaritalStatus">Estado Civil</string>
+    <string name = "HouseholdIncome">Ingresos del Hogar</string>
+
+
+    <string name="Every">Cada</string>
+    <string name = "Week">Semana</string>
+    <string name = "TwoWeeks">Dos Semanas</string>
+    <string name = "Months">Mes</string>
+    <string name = "Year">Año</string>
+    <string name = "HouseholdSize">Tamaño del Hogar</string>
+
+    <string name = "EmploymentStatus">Estado de Empleo</string>
+    <string name = "Unemployed">Desempleados</string>
+    <string name = "EmployedFullTime">Empleado de Tiempo Completo</string>
+    <string name = "EmployedPartTime">Empleado medio tiempo</string>
+    <string name = "SelfEmployed">Trabajadores Por Cuenta Propia</string>
+    <string name = "Student">Alumno</string>
+    <string name = "Retired">Jubilado</string>
+    <string name = "SeekingEmployment">Buscando Trabajo</string>
+    <string name = "Occupation">Ocupación</string>
+    <string name = "VeteranStatus">¿Eres un veterano?</string>
+    <string name = "EmergencyContact">Información de Contacto en caso de Emergencia</string>
+    <string name = "EmergencyContactName">Nombre</string>
+    <string name = "RelationshipToPatient">Relación Con la Paciente</string>
+    <string name = "EmergencyContactPhone">Teléfono de Contacto (123-123-1234)</string>
+    <string name = "I">Yo,</string>
+    <string name = "PatientConsent">Aceptar voluntariamente el tratamiento/asesoramiento recomendado y
+explicado por el personal de HUDA. Entiendo que soy libre de retirar mi consentimiento y descontinuar el tratamiento en cualquier momento.
+Además, he sido informado de mis derechos a negarme a participar en actividades de investigación. entiendo que tengo derechos
+como beneficiario de los servicios gratuitos proporcionados por la Clínica HUDA. Me han informado sobre NO LLAME NO SHOW de la Clínica HUDA
+Política con respecto a la atención primaria y los servicios especializados y acepta seguirla. Además, he sido informado de la Federal
+Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confidencialidad para su revisión.</string>
+    <string name = "YourName">Su Nombre</string>
+    <string name = "VoluntaryConsent">aceptar voluntariamente el tratamiento/asesoramiento recomendado</string>
+    <string name = "PatientNamePrinted">Nombre del paciente (impreso)</string>
+    <string name = "PatientSignature">Firma del Paciente/Tutor</string>
+    <string name = "TodayDate">Fecha (MM/DD/AAAA)</string>
+    <string name = "SubmitForm">Enviar</string>
+    <string name = "NextForm">Siguiente Formulario</string>
+
+    <!--Appointment Check-In Page-->
+    <string name = "FullName">Nombre Completo</string>
+    <string name = "Birthday">Cumpleaños</string>
+    <string name = "AppointmentTime">Hora de La Cita</string>
+    <string name = "EnterCheckinEmail">Ingrese Correo Electrónico</string>
+    <string name = "CheckInButton">Registrarse</string>
 </resources>
