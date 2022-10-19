@@ -27,34 +27,415 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q4section3"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/stressFormHeader"
         android:layout_width="275dp"
         android:layout_height="43dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="10dp"
         android:background="@color/white"
-        android:text="Form 5"
+        android:text="Stress Questionaire"
         android:textAlignment="center"
         android:textColor="#043670"
         android:textSize="30dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/hudaLogo8"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
 
     <ImageView
         android:id="@+id/hudaLogo9"
         android:layout_width="98dp"
         android:layout_height="106dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="28dp"
 
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035"
         app:srcCompat="@drawable/huda_logo" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="320dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="180dp"
+        android:text="Over the last two (2) weeks, how often have you been bothered by
+         any of the following problems? Please input the number that applies to you"
+        android:textColor="#043670"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="320dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="36dp"
+        android:text="0 = Not at all1 = Several Days, 2 = More than half the days, 3 = Nearly everyday"
+        android:textColor="#043670"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/q1section1"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="1. Feeling down, Depressed or hopeless"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/q2section1"
+        android:layout_width="340dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="2. Trouble falling or stay asleep OR \n Sleeping too much"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q1section1" />
+
+    <EditText
+        android:id="@+id/q3section1"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="3. Feeling tired or having little energy"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q2section1" />
+
+    <EditText
+        android:id="@+id/q4section1"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="4. Poor appetite OR Overeating"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q3section1" />
+
+    <EditText
+        android:id="@+id/q5section1"
+        android:layout_width="340dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="5. Feeling bad about yourself or what that you are a failure or \n have let yourself or your family down"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q4section1" />
+
+    <EditText
+        android:id="@+id/q6section1"
+        android:layout_width="340dp"
+        android:layout_height="85dp"
+        android:ems="10"
+        android:hint="6. Trouble concentrating on things such\n as reading the newspaper or \n watching television"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q5section1" />
+
+    <EditText
+        android:id="@+id/q7section1"
+        android:layout_width="340dp"
+        android:layout_height="130dp"
+        android:ems="10"
+        android:hint="7. Moving or speaking so slowly that other \npeople could have noticed OR\nBeing so fidgety or restless that you’ve\n been moving around a lot more\n than usual
+           "
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q6section1" />
+
+    <EditText
+        android:id="@+id/q8section1"
+        android:layout_width="340dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="8. Thoughts that you would be better off\n dead OR Hurting yourself in some way"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q7section1" />
+
+    <EditText
+        android:id="@+id/section1Totals"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Add numbers for total"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q8section1" />
+
+    <TextView
+        android:id="@+id/section2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Section 2"
+        android:textColor="#043670"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/section1Totals" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="320dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:text="Over the last two (2) weeks, how often have you been bothered by
+         any of the following problems? Please input the number that applies to you"
+        android:textColor="#043670"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/section2" />
+
+    <EditText
+        android:id="@+id/q1section2"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="1. Feeling nervous, anxious or on edge"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <EditText
+        android:id="@+id/q2section2"
+        android:layout_width="340dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:hint="2. Not being able to stop or control\n worrying"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q1section2" />
+
+    <EditText
+        android:id="@+id/q3section2"
+        android:layout_width="340dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:hint="3. Worrying too much about different\n things"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q2section2" />
+
+    <EditText
+        android:id="@+id/q4section2"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="4. Trouble Relaxing"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q3section2" />
+
+    <EditText
+        android:id="@+id/q5section2"
+        android:layout_width="340dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:hint="5. Being so restless that it is hard to sit\n still "
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q4section2" />
+
+    <EditText
+        android:id="@+id/q6section2"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="6. Becoming Easily annoyed or irritable"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q5section2" />
+
+    <EditText
+        android:id="@+id/q7section2"
+        android:layout_width="340dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:hint="7. Feeling afraid as if something awful\n might happen"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q6section2" />
+
+    <EditText
+        android:id="@+id/section2Totals"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Add numbers for total"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q7section2" />
+
+    <TextView
+        android:id="@+id/section3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Section 3"
+        android:textColor="#043670"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/section2Totals" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="320dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:text="In your life have you ever had any experience that was so frightening, horrible or upsetting that in the past month you: (Yes or No)"
+        android:textColor="#043670"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/section3" />
+
+    <EditText
+        android:id="@+id/q1section3"
+        android:layout_width="340dp"
+        android:layout_height="85dp"
+        android:ems="10"
+        android:layout_marginTop="4dp"
+        android:hint="1. Have had nightmares about it or\n thought about it when you did not\n want to?"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <EditText
+        android:id="@+id/q2section3"
+        android:layout_width="340dp"
+        android:layout_height="85dp"
+        android:ems="10"
+        android:hint="2. Tried hard not to think about it or\n went out of your way to avoid situations\n that remind you of it?"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q1section3" />
+
+    <EditText
+        android:id="@+id/q3section3"
+        android:layout_width="340dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:hint="3. Were constantly on guard, watchful\n or easily startled?"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q2section3" />
+
+
+    <EditText
+        android:id="@+id/q4section3"
+        android:layout_width="340dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:hint="4. Felt numb or detached from others,\n activities, or your surroundings?"
+        android:inputType="text"
+        android:textColor="#043670"
+        android:textColorHint="#043670"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/q3section3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
