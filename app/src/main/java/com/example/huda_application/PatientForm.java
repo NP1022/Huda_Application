@@ -59,7 +59,6 @@ public class PatientForm extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_form);
 
-        mAuth =FirebaseAuth.getInstance();
 
         // edittext
         final EditText todayDate = findViewById(R.id.todaysDate);
@@ -164,6 +163,8 @@ public class PatientForm extends AppCompatActivity
                 // information from checkbox input to store in a StringBuilder
                 StringBuilder patientRace = new StringBuilder();
                 final String patientRaceTxt = patientRace.toString().trim();
+
+
 
                 StringBuilder patientEthnicity = new StringBuilder();
                 final String patientEthnicityTxt = patientEthnicity.toString().trim();
@@ -510,18 +511,21 @@ public class PatientForm extends AppCompatActivity
                 }
                 else
                 {
-                    Toast.makeText(PatientForm.this,"Success!",Toast.LENGTH_LONG).show();
-                    Patient patient = new Patient(dateTxt,visitReasonTxt,lastNameTxt,firstNameTxt,patientSexTxt,patientDOBTxt,patientAddTxt,patientCityTxt,patientStateTxt,patientZipCodeTxt,
-                            patientSSNTxt,patientHomeNumTxt,patientCellNumTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,patientEmailTxt,
-                            patientRaceTxt, patientEthnicityTxt, translatorTxt, maritalTxt,houseIncomeTxt, patientIncomeTxt, houseHoldTxt, patientEmpTxt,occupationTxt, veteranTxt, emergencyNameTxt,
-                            relationshipTxt, contactPhoneTxt, patientConsentName, patientSignedText, patientSignatureText, consentDateTxt);
-                    dao.add(patient).addOnSuccessListener(suc->
-                    {
-                        Toast.makeText(PatientForm.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
-                    }).addOnFailureListener(er->
-                    {
-                        Toast.makeText(PatientForm.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
-                    });
+
+                        Toast.makeText(PatientForm.this,"Success!",Toast.LENGTH_LONG).show();
+
+                      Patient patient = new Patient(dateTxt,visitReasonTxt,lastNameTxt,firstNameTxt,patientSexTxt,patientDOBTxt,patientAddTxt,patientCityTxt,patientStateTxt,patientZipCodeTxt,
+                      patientSSNTxt,patientHomeNumTxt,patientCellNumTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,patientEmailTxt,
+                      patientRaceTxt, patientEthnicityTxt, translatorTxt, maritalTxt,houseIncomeTxt, patientIncomeTxt, houseHoldTxt, patientEmpTxt,occupationTxt, veteranTxt, emergencyNameTxt,
+                      relationshipTxt, contactPhoneTxt, patientConsentName, patientSignedText, patientSignatureText, consentDateTxt);
+
+                      dao.add(patient).addOnSuccessListener(suc->
+                      {
+                      Toast.makeText(PatientForm.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
+                      }).addOnFailureListener(er->
+                      {
+                      Toast.makeText(PatientForm.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
+                      });
                 }
             }
 
@@ -538,4 +542,6 @@ public class PatientForm extends AppCompatActivity
 //            startActivity(PatientContract);
 //        }
 //    }
+
 }
+
