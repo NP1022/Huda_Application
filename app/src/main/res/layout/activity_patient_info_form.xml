@@ -116,13 +116,15 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="381dp"
+        android:layout_width="383dp"
         android:layout_height="21dp"
-        android:text="Request confidential communications:"
+        android:layout_marginTop="16dp"
+        android:text="- Request confidential communications:"
         android:textColor="#000000"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="640dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <TextView
         android:id="@+id/textView17"
@@ -139,10 +141,12 @@
         android:id="@+id/textView22"
         android:layout_width="336dp"
         android:layout_height="94dp"
-        android:text="- You can ask us to contact you in a specific"
+        android:layout_marginTop="8dp"
+        android:text="- You can ask us to contact you in a specific way (for example, home or office phone - this is your 'preferred' contact method) or to send mail to a different address.\n- We will consider all reasonable requests and must say 'Yes' if you tell us you would be in danger if we do not."
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="676dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView21"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
         android:id="@+id/textView19"
