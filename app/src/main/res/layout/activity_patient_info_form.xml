@@ -56,5 +56,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="383dp"
+        android:layout_height="66dp"
+        android:text="Your Information. Your Rights. Our Responsibilities\nThis notice describes how medical information about you may be used and disclosed and how you can get access to this information."
+        android:textAlignment="center"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="177dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
