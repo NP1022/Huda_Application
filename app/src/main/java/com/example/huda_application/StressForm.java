@@ -22,13 +22,65 @@ public class StressForm extends AppCompatActivity
     private static Pattern SUM_PATTERN = Pattern.compile("([1-9]|1[0-9]|2[0-4])$");
 
     private TextView PatientInfoForm;
-
+    private String visitReasonTxt,firstNameTxt , lastNameTxt,patientSexTxt,patientDOBTxt,patientHomeNumTxt,patientCellNumTxt,patientAddTxt,
+            patientCityTxt,patientStateTxt,patientZipCodeTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,
+            patientEmailTxt,prefLangTxt,translatorTxt,maritalTxt,houseIncomeTxt,houseHoldTxt,occupationTxt,veteranTxt,emergencyNameTxt,relationshipTxt,
+            contactPhoneTxt,patientConsentName,patientSignedText,patientSignatureText,consentDateTxt,patientRaceTxt,patientEthnicityTxt,patientIncomeTxt,
+            patientEmpTxt,dateTxt,patientSSNTxt;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stress_form);
+        Bundle extras = getIntent().getExtras();
 
+        if (extras != null) {
+            dateTxt = extras.getString( "dateTxt");
+            lastNameTxt = extras.getString( "lastNameTxt");
+            firstNameTxt = extras.getString( "firstNameTxt");
+            visitReasonTxt = extras.getString( "visitReasonTxt");
+            patientSexTxt = extras.getString( "patientSexTxt");
+            patientSSNTxt = extras.getString( "patientSSNTxt");
+            patientDOBTxt = extras.getString( "patientDOBTxt");
+            patientHomeNumTxt = extras.getString( "patientHomeNumTxt");
+            patientCellNumTxt = extras.getString( "patientCellNumTxt");
+            patientAddTxt = extras.getString( "patientAddTxt");
+            patientCityTxt = extras.getString( "patientCityTxt");
+            patientStateTxt = extras.getString( "patientStateTxt");
+            patientZipCodeTxt = extras.getString( "patientZipCodeTxt");
+            patientPrefNumberTxt = extras.getString( "patientPrefNumberTxt");
+
+
+            patientConsentCallTxt = extras.getString( "patientConsentCallTxt");
+            patientConsentTextTxt = extras.getString( "patientConsentTextTxt");
+            patientInsuranceTxt = extras.getString( "patientInsuranceTxt");
+            patientEmailTxt = extras.getString( "patientEmailTxt");
+            prefLangTxt = extras.getString( "prefLangTxt");
+            translatorTxt = extras.getString( "translatorTxt");
+            maritalTxt = extras.getString( "maritalTxt");
+            houseIncomeTxt = extras.getString( "houseIncomeTxt");
+            houseHoldTxt = extras.getString( "houseHoldTxt");
+            occupationTxt = extras.getString( "occupationTxt");
+            veteranTxt = extras.getString( "veteranTxt");
+            emergencyNameTxt = extras.getString( "emergencyNameTxt");
+
+            relationshipTxt = extras.getString( "relationshipTxt");
+            contactPhoneTxt = extras.getString( "contactPhoneTxt");
+            patientConsentName = extras.getString( "patientConsentName");
+            patientSignedText = extras.getString( "patientSignedText");
+            patientSignatureText = extras.getString( "patientSignatureText");
+            consentDateTxt = extras.getString( "consentDateTxt");
+            patientRaceTxt = extras.getString( "patientRaceTxt");
+            patientEthnicityTxt = extras.getString( "patientEthnicityTxt");
+            patientIncomeTxt = extras.getString( "patientIncomeTxt");
+            patientEmpTxt = extras.getString( "patientEmpTxt");
+
+
+
+
+
+        }
+        //Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
         // section 1 questions
         final EditText q1s1 = findViewById(R.id.q1section1);
         final EditText q2s1 = findViewById(R.id.q2section1);
@@ -229,7 +281,43 @@ public class StressForm extends AppCompatActivity
                 }
                 else
                 {
-                    startActivity(new Intent(StressForm.this,PatientInfoForm.class));
+                    Intent PatientInfoForm = new Intent(StressForm.this, PatientInfoForm.class);
+                    PatientInfoForm.putExtra("lastNameTxt" ,lastNameTxt );
+                    PatientInfoForm.putExtra("dateTxt" ,dateTxt );
+                    PatientInfoForm.putExtra("firstNameTxt" ,firstNameTxt );
+                    PatientInfoForm.putExtra("visitReasonTxt" ,visitReasonTxt );
+                    PatientInfoForm.putExtra("patientSexTxt" ,patientSexTxt );
+//AuthorizatStressFoPatientInfoForm
+                    PatientInfoForm.putExtra("patientDOBTxt" ,patientDOBTxt );
+                    PatientInfoForm.putExtra("patientSSNTxt" ,firstNameTxt );
+                    PatientInfoForm.putExtra("patientHomeNumTxt" ,patientHomeNumTxt );
+                    PatientInfoForm.putExtra("patientCellNumTxt" ,patientCellNumTxt );
+                    PatientInfoForm.putExtra("patientAddTxt" ,patientAddTxt );
+                    PatientInfoForm.putExtra("patientCityTxt" ,patientCityTxt );
+                    PatientInfoForm.putExtra("patientStateTxt" ,patientStateTxt );
+                    PatientInfoForm.putExtra("patientZipCodeTxt" ,patientZipCodeTxt );
+                    PatientInfoForm.putExtra("patientPrefNumberTxt" ,patientPrefNumberTxt );
+                    PatientInfoForm.putExtra("patientConsentCallTxt" ,patientConsentCallTxt );
+                    PatientInfoForm.putExtra("patientConsentTextTxt" ,patientConsentTextTxt );
+                    PatientInfoForm.putExtra("patientInsuranceTxt" ,patientInsuranceTxt );
+                    PatientInfoForm.putExtra("patientEmailTxt" ,patientEmailTxt );
+                    PatientInfoForm.putExtra("prefLangTxt" ,prefLangTxt );
+                    PatientInfoForm.putExtra("translatorTxt" ,translatorTxt );
+                    PatientInfoForm.putExtra("maritalTxt" ,maritalTxt );
+                    PatientInfoForm.putExtra("houseIncomeTxt" ,houseIncomeTxt );
+                    PatientInfoForm.putExtra("houseHoldTxt" ,houseHoldTxt );
+                    PatientInfoForm.putExtra("occupationTxt" ,occupationTxt );
+                    PatientInfoForm.putExtra("veteranTxt" ,veteranTxt );
+                    PatientInfoForm.putExtra("emergencyNameTxt" ,emergencyNameTxt );
+                    PatientInfoForm.putExtra("relationshipTxt" ,relationshipTxt );
+                    PatientInfoForm.putExtra("contactPhoneTxt" ,contactPhoneTxt );
+                    PatientInfoForm.putExtra("patientConsentName" ,patientConsentName );
+                    PatientInfoForm.putExtra("patientSignedText" ,patientSignedText );
+                    PatientInfoForm.putExtra("patientSignatureText" ,patientSignatureText );
+                    PatientInfoForm.putExtra("consentDateTxt" ,consentDateTxt );
+
+                    startActivity(PatientInfoForm);
+
                 }
 
 
