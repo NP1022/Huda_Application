@@ -17,18 +17,27 @@
     android:layout_height="match_parent"
     tools:context=".PatientInfoForm">
 
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="346dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="9dp"
+        android:text="- You can ask us to correct your health and claims records if you think they are incorrect or incomplete. Ask us how to do this.\n- We may say 'No' to your request, but we will tell you why in writing within 60 days."
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
     <Button
         android:id="@+id/nextForm6"
         android:layout_width="189dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="20dp"
         android:background="#043670"
         android:text="Next Form"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="854dp" />
 
     <ImageView
         android:id="@+id/hudaLogo10"
@@ -59,12 +68,105 @@
 
     <TextView
         android:id="@+id/textView9"
+        android:layout_width="378dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:text="YOUR RIGHTS:"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="378dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:text="- Then it comes to your health information, you have certain rights. This section explains your rights and some of our responsibilities to help you. Ask us how to do this.\n"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="381dp"
+        android:layout_height="21dp"
+        android:text="- Get a copy of your health and claims records:"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="381dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="17dp"
+        android:text="- Ask us to correct health and claim records: "
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView19"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="381dp"
+        android:layout_height="21dp"
+        android:text="Request confidential communications:"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="640dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="346dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="9dp"
+        android:text="- You can ask us to correct your health and claims records if you think they are incorrect or incomplete. Ask us how to do this.\n- We may say 'No' to your request, but we will tell you why in writing within 60 days."
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="336dp"
+        android:layout_height="94dp"
+        android:text="- You can ask us to contact you in a specific"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="676dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="346dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="8dp"
+        android:text="- You can ask to see or get a copy of your health and claims records and other health information we have about you. Ask us how to do this.\n- We will provide a copy or a summary of your health and claims records, usually within 30 days of your request. We may charge a reasonable, cost based fee."
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView14"
         android:layout_width="383dp"
         android:layout_height="66dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="13dp"
         android:text="Your Information. Your Rights. Our Responsibilities\nThis notice describes how medical information about you may be used and disclosed and how you can get access to this information."
         android:textAlignment="center"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="177dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientInfoHeader" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
