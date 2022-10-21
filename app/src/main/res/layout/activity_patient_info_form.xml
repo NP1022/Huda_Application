@@ -18,6 +18,111 @@
     tools:context=".PatientInfoForm">
 
     <TextView
+        android:id="@+id/textView35"
+        android:layout_width="350dp"
+        android:layout_height="77dp"
+        android:text="- If you have given someone medical power of attorney or if someone is your legal guardian, that person can exercise your rights and make choices about your health information.\n- We will make sure the person has this authority and can act for you before we take any action."
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="1282dp" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="381dp"
+        android:layout_height="21dp"
+        android:text="- Ask us to limit what we use or share:"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="804dp" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="350dp"
+        android:layout_height="77dp"
+        android:text="- You can ask for a paper copy of this notice at any time, even if you have agreed to receive the notice electronically. We will provide you with a paper copy promptly."
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="1149dp" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="381dp"
+        android:layout_height="21dp"
+        android:text="- Get a list of those with whom we've shared information: "
+        android:textColor="#000000"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="921dp" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="383dp"
+        android:layout_height="21dp"
+        android:text="- Get a copy of this privacy notice:"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="1120dp" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="383dp"
+        android:layout_height="21dp"
+        android:text="- File a complaint if you fee your rights are violated:"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="1379dp" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="383dp"
+        android:layout_height="21dp"
+        android:text="- Choose someone to act for you:"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="1249dp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="350dp"
+        android:layout_height="78dp"
+        android:text="- You can ask us NOT to use or share certain health information for treatment, payment or our operations.\n- We are not required to agree to your request, and we may say 'No' if it would affect your care."
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="832dp" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="346dp"
+        android:layout_height="151dp"
+        android:text="- You can ask for a list accounting of the times we've shared your health information for six years prior to the date you ask, who we shared it with, and why.\n- We will include all the disclosures except for those about treatment, payment and health care operations and certain other disclosures (such as any you asked us to make) We will provide one accounting a year for free but will charge a reasonable, cost-based fee if you ask for another one within 12 months."
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="953dp" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="346dp"
+        android:layout_height="151dp"
+        android:text="- You can complain if you feel we have violated your rights by contacting us using the information on page 1.\n- You can file a complaint with the U.S. Department of Health and Humans Services Office for Civil Rights by sending a letter to 200 Independence Ave. S.W. Washington, D.C. 20201, calling 1-877-696-6775, or visiting www.hhs.gov/ocr/privacy/hipaa/complaints/,\n- We will not retaliate against you for filing a complaint."
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="1407dp" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="381dp"
+        android:layout_height="21dp"
+        android:text="- Ask us to limit what we use or share:"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="804dp" />
+
+    <TextView
         android:id="@+id/textView20"
         android:layout_width="346dp"
         android:layout_height="98dp"
@@ -35,7 +140,7 @@
         android:textSize="20sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="1262dp" />
+        tools:layout_editor_absoluteY="1580dp" />
 
     <ImageView
         android:id="@+id/hudaLogo10"
@@ -94,8 +199,8 @@
         android:text="- Get a copy of your health and claims records:"
         android:textColor="#000000"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="387dp" />
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="395dp" />
 
     <TextView
         android:id="@+id/textView18"
