@@ -16,28 +16,111 @@
     <string name="Login">Connexion</string>
     <string name="forgotpassword">Mot de passe oublié</string>
     <string name="register">Sinscrire</string>
-    <string name="language">français</string>
-    <string name="FirstName">Entrez votre nom</string>
-    <string name="LastName">Entrer votre prénom</string>
-    <string name="EnterEmail">Entrez le-mail</string>
+    <string name="language">Français</string>
+    <string name="FirstName">Entrez Votre Nom</string>
+    <string name="LastName">Entrer Votre Prénom</string>
+    <string name="EnterEmail">Entrez Le-Mail</string>
     <string name="EnterPass">Entrer le mot de passe</string>
     <string name="Reenter">Entrez à nouveau le mot de passe</string>
     <string name="reset">Envoyer Réinitialiser</string>
-    <string name="home">Page daccueil</string>
-    <string name="Annoucment">les Annonces</string>
-    <string name="services">les Services</string>
-    <string name="story">Notre histoire</string>
-    <string name="partners">Les partenaires</string>
-    <string name="contact">Nous contacter</string>
-    <string name="patients_page">Portail des patients</string>
-    <string name="healthservices">Services de santé gratuits</string>
-    <string name="PrimaryCare">Premiers soins</string>
-    <string name="MentalCare">Soins mentaux</string>
-    <string name="VisionHealth">Soins de la vue</string>
+    <string name="home">Page Daccueil</string>
+    <string name="Annoucment">Les Annonces</string>
+    <string name="services">Les Services</string>
+    <string name="story">Notre Histoire</string>
+    <string name="partners">Les Partenaires</string>
+    <string name="contact">Nous Contacter</string>
+    <string name="patients_page">Portail Des Patients</string>
+    <string name="healthservices">Services de Santé Gratuits</string>
+    <string name="PrimaryCare">Premiers Soins</string>
+    <string name="MentalCare">Soins Mentaux</string>
+    <string name="VisionHealth">Soins de La Vue</string>
     <string name="Dental">Soins dentaires</string>
-    <string name="speciality">Soins spécialisés</string>
-    <string name="NewPatient">Nouveau patient</string>
-    <string name="patientForm">Nouveau formulaire patient</string>
+    <string name="speciality">Soins Spécialisés</string>
+    <string name="NewPatient">Nouveau Patient</string>
+    <string name="patientForm">Nouveau Formulaire Patient</string>
     <string name="checkIn">Enregistrement</string>
-    <string name="MedicalChart">Charte médicale</string>
+    <string name="MedicalChart">Charte Médicale</string>
+
+    <!--    Patient Form Strings -->
+    <string name = "Registration">Inscription</string>
+    <string name="Date">Date (MM/JJ/AAAA)</string>
+    <string name="VisitReason">Raison de la Visite</string>
+    <string name="Sex">Sexe</string>
+    <string name="DOB">Date de Naissance (MM/JJ/AAAA)</string>
+    <string name="Address">Adresse (1234 Street St.)</string>
+    <string name = "City">Ville</string>
+    <string name = "State">État</string>
+    <string name = "ZipCode">Code Postal</string>
+    <string name = "SSN">Numéro de Sécurité Sociale (123-12-1234)</string>
+    <string name = "HomePhone">Téléphone Fixe (123-123-1234)</string>
+    <string name = "CellPhone">Téléphone Portable (123-123-1234)</string>
+    <string name = "PreferredNumber">Numéro Préféré (Fixe ou Cellulaire)</string>
+    <string name = "ConsentToCall">Consentement à Appeler? (Oui ou Non)</string>
+    <string name = "ConsentToText">Consentement au Texto? (Oui ou Non)</string>
+    <string name = "InsuranceProvider">Fournisseur d\'Assurance</string>
+    <string name = "Email">E-mail (Identique à l\'E-mail d\'Inscription)</string>
+
+    <string name = "SelectRace">Veuillez Sélectionner une Race:</string>
+    <string name = "Black">Noir/Afro-Américain</string>
+    <string name = "White">Blanc/Caucasien</string>
+    <string name = "Asian">Asiatique</string>
+    <string name = "MiddleEastern">Moyen-Orient/Afrique du Nord</string>
+    <string name = "Hispanic">Hispanique/Latino</string>
+    <string name = "NativeAmerican">l\'Indien d\'Amérique</string>
+    <string name = "NativeHawaiian">Hawaïen ou autre insulaire du Pacifique</string>
+
+    <string name = "SelectEthnicity">Veuillez Sélectionner une Origine Ethnique:</string>
+    <string name = "HispanicEthnicity">Hispanique ou Latino</string>
+    <string name = "NotHispanicEthnicity">Pas Hispanique ou Latino</string>
+    <string name = "PreferredLanguage">Langue Préférée</string>
+    <string name = "Translator">Besoin d\'un Traducteur? (Oui ou Non)</string>
+    <string name = "SocialInfo">Les informations suivantes n\'affectent PAS votre droit aux soins chez HUDA, mais elles sont nécessaires pour continuer à fournir nos services gratuits.</string>
+
+    <string name = "MaritalStatus">État Civil</string>
+    <string name = "HouseholdIncome">Revenu du Ménage</string>
+
+
+    <string name="Every">Tous</string>
+    <string name = "Week">La Semaine</string>
+    <string name = "TwoWeeks">Deux Semaines</string>
+    <string name = "Months">Mois</string>
+    <string name = "Year">An</string>
+    <string name = "HouseholdSize">La Taille du Ménage</string>
+
+    <string name = "EmploymentStatus">Statut d\'Emploi</string>
+    <string name = "Unemployed">Sans Emploi</string>
+    <string name = "EmployedFullTime">Employé (à temps complet)</string>
+    <string name = "EmployedPartTime">Employé (à temps partiel)</string>
+    <string name = "SelfEmployed">Travailleur Indépendant</string>
+    <string name = "Student">Étudiant</string>
+    <string name = "Retired">à La Retraite</string>
+    <string name = "SeekingEmployment">Chercher Un Emploi</string>
+    <string name = "Occupation">Occupation</string>
+    <string name = "VeteranStatus">Êtes-Vous Un Vétéran?</string>
+    <string name = "EmergencyContact">Coordonnées d\'Urgence</string>
+    <string name = "EmergencyContactName">Nom</string>
+    <string name = "RelationshipToPatient">Relation Avec Le Patient</string>
+    <string name = "EmergencyContactPhone">Numéro Du Contact (123-123-1234)</string>
+    <string name = "I">Je,</string>
+    <string name = "PatientConsent">accepter volontairement le traitement/les conseils recommandés et
+expliqué par le personnel de HUDA. Je comprends que je suis libre de retirer mon consentement et d\'interrompre le traitement à tout moment.
+De plus, j\'ai été informé de mes droits de refuser de participer à des activités de recherche. Je comprends que j\'ai des droits
+en tant que bénéficiaire des services gratuits fournis par la clinique HUDA. J\'ai été conseillé sur le NO CALL NO SHOW de la clinique HUDA
+Politique concernant les soins primaires et les services spécialisés et acceptez de la suivre. De plus, j\'ai été avisé du gouvernement fédéral
+Règlement sur la confidentialité et reçu une copie de l\'avis de confidentialité à examiner.</string>
+    <string name = "YourName">Votre Nom</string>
+    <string name = "VoluntaryConsent">accepter volontairement le traitement/les conseils recommandés.</string>
+    <string name = "PatientNamePrinted">Nom du Patient (Imprimé)</string>
+    <string name = "PatientSignature">Signature du Patient/Tuteur</string>
+    <string name = "TodayDate">Date (MM/JJ/AAAA)</string>
+    <string name = "SubmitForm">Soumettre</string>
+    <string name = "NextForm">Formulaire Suivant</string>
+
+    <!--Appointment Check-In Page-->
+    <string name = "FullName">Nom et Prénom</string>
+    <string name = "Birthday">Date d\'Anniversaire</string>
+    <string name = "AppointmentTime">Heure de Rendez-Vous</string>
+    <string name = "EnterCheckinEmail">Entrez l\'E-mail</string>
+    <string name = "CheckInButton">Enregistrement</string>
+
 </resources>

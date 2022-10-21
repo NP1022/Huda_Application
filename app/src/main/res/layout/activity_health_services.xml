@@ -16,10 +16,26 @@
         android:background="#FFFFFF"
         tools:context=".HealthServices">
 
+        <TextView
+            android:id="@+id/announcementsHeader4"
+            android:layout_width="236dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white"
+            android:text="Health Services"
+            android:textAlignment="center"
+            android:textColor="#043670"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/hudaLogo2"
-            android:layout_width="142dp"
-            android:layout_height="143dp"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="213dp"
@@ -29,119 +45,109 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="413dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="33dp"
-            android:layout_marginEnd="33dp"
-            android:background="#022043"
-            android:fontFamily="sans-serif-black"
-            android:paddingTop="35dp"
-            android:text="@string/healthservices"
-            android:textAlignment="center"
-            android:textColor="#F1EEEE"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hudaLogo2" />
-
         <Button
             android:id="@+id/primaryCareButton"
             android:layout_width="330dp"
             android:layout_height="52dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            android:background="#043670"
             android:paddingTop="2dp"
             android:text="@string/PrimaryCare"
-            android:layout_marginLeft="-43dp"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            android:textSize="17dp"
-            android:textColor="#FFFFFF"
-            android:background="#043670"/>
-
-        <Button
-            android:id="@+id/specialtyCareButton"
-            android:layout_width="330dp"
-            android:layout_height="52dp"
-            android:paddingTop="2dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/speciality"
-            app:layout_constraintEnd_toEndOf="@+id/dentalCareButton"
-            app:layout_constraintStart_toStartOf="@+id/dentalCareButton"
-            app:layout_constraintTop_toBottomOf="@+id/dentalCareButton"
-            android:textSize="17dp"
-            android:textColor="#FFFFFF"
-            android:background="#043670"/>
-
-        <Button
-            android:id="@+id/visionCareButton"
-            android:layout_width="330dp"
-            android:layout_height="52dp"
-            android:paddingTop="2dp"
-            android:text="@string/VisionHealth"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/mentalHealthButton"
-            app:layout_constraintStart_toStartOf="@+id/mentalHealthButton"
-            app:layout_constraintTop_toBottomOf="@+id/mentalHealthButton"
-            android:textSize="17dp"
-            android:textColor="#FFFFFF"
-            android:background="#043670"/>
-
-        <Button
-            android:id="@+id/newPatientsButton"
-            android:layout_width="330dp"
-            android:layout_height="52dp"
-            android:paddingTop="2dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/NewPatient"
-            app:layout_constraintEnd_toEndOf="@+id/visionCareButton"
-            app:layout_constraintStart_toStartOf="@+id/visionCareButton"
-            app:layout_constraintTop_toBottomOf="@+id/visionCareButton"
-            android:textSize="17dp"
-            android:textColor="#FFFFFF"
-            android:background="#043670"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hudaLogo2" />
 
         <Button
             android:id="@+id/mentalHealthButton"
             android:layout_width="330dp"
             android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="#043670"
             android:paddingTop="2dp"
-            android:layout_marginTop="10dp"
             android:text="@string/MentalCare"
-            app:layout_constraintEnd_toEndOf="@+id/primaryCareButton"
-            app:layout_constraintStart_toStartOf="@+id/primaryCareButton"
-            app:layout_constraintTop_toBottomOf="@+id/primaryCareButton"
-            android:textSize="17dp"
             android:textColor="#FFFFFF"
-            android:background="#043670"/>
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/primaryCareButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/primaryCareButton"
+            app:layout_constraintTop_toBottomOf="@+id/primaryCareButton" />
 
         <Button
-            android:id="@+id/dentalCareButton"
+            android:id="@+id/visionCareButton"
             android:layout_width="330dp"
             android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="#043670"
             android:paddingTop="2dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/Dental"
-            app:layout_constraintEnd_toEndOf="@+id/newPatientsButton"
-            app:layout_constraintStart_toStartOf="@+id/newPatientsButton"
-            app:layout_constraintTop_toBottomOf="@+id/newPatientsButton"
-            android:textSize="17dp"
+            android:text="@string/VisionHealth"
             android:textColor="#FFFFFF"
-            android:background="#043670"/>
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/mentalHealthButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mentalHealthButton"
+            app:layout_constraintTop_toBottomOf="@+id/mentalHealthButton" />
 
         <TextView
             android:id="@+id/HealthServiceText"
             android:layout_width="371dp"
             android:layout_height="309dp"
+            android:layout_marginTop="4dp"
             android:textColor="#2E7831"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/specialtyCareButton"
+            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toStartOf="@+id/specialtyCareButton"
             app:layout_constraintTop_toBottomOf="@+id/specialtyCareButton" />
+
+        <Button
+            android:id="@+id/dentalCareButton"
+            android:layout_width="330dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="#043670"
+            android:paddingTop="2dp"
+            android:text="@string/Dental"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/newPatientsButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/newPatientsButton"
+            app:layout_constraintTop_toBottomOf="@+id/newPatientsButton" />
+
+        <Button
+            android:id="@+id/newPatientsButton"
+            android:layout_width="330dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="#043670"
+            android:paddingTop="2dp"
+            android:text="@string/NewPatient"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/visionCareButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/visionCareButton"
+            app:layout_constraintTop_toBottomOf="@+id/visionCareButton" />
+
+        <Button
+            android:id="@+id/specialtyCareButton"
+            android:layout_width="330dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="#043670"
+            android:paddingTop="2dp"
+            android:text="@string/speciality"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/dentalCareButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dentalCareButton"
+            app:layout_constraintTop_toBottomOf="@+id/dentalCareButton" />
 
         <androidx.constraintlayout.widget.Barrier
             android:layout_width="wrap_content"

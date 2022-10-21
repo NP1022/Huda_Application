@@ -10,12 +10,63 @@ import android.widget.TextView;
 public class PatientInfoForm extends AppCompatActivity implements View.OnClickListener {
 
     private TextView LabAccess;
-
+    private String visitReasonTxt,firstNameTxt , lastNameTxt,patientSexTxt,patientDOBTxt,patientHomeNumTxt,patientCellNumTxt,patientAddTxt,
+            patientCityTxt,patientStateTxt,patientZipCodeTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,
+            patientEmailTxt,prefLangTxt,translatorTxt,maritalTxt,houseIncomeTxt,houseHoldTxt,occupationTxt,veteranTxt,emergencyNameTxt,relationshipTxt,
+            contactPhoneTxt,patientConsentName,patientSignedText,patientSignatureText,consentDateTxt,patientRaceTxt,patientEthnicityTxt,patientIncomeTxt,
+            patientEmpTxt,dateTxt,patientSSNTxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_info_form);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            dateTxt = extras.getString( "dateTxt");
+            lastNameTxt = extras.getString( "lastNameTxt");
+            firstNameTxt = extras.getString( "firstNameTxt");
+            visitReasonTxt = extras.getString( "visitReasonTxt");
+            patientSexTxt = extras.getString( "patientSexTxt");
+            patientSSNTxt = extras.getString( "patientSSNTxt");
+            patientDOBTxt = extras.getString( "patientDOBTxt");
+            patientHomeNumTxt = extras.getString( "patientHomeNumTxt");
+            patientCellNumTxt = extras.getString( "patientCellNumTxt");
+            patientAddTxt = extras.getString( "patientAddTxt");
+            patientCityTxt = extras.getString( "patientCityTxt");
+            patientStateTxt = extras.getString( "patientStateTxt");
+            patientZipCodeTxt = extras.getString( "patientZipCodeTxt");
+            patientPrefNumberTxt = extras.getString( "patientPrefNumberTxt");
 
+
+            patientConsentCallTxt = extras.getString( "patientConsentCallTxt");
+            patientConsentTextTxt = extras.getString( "patientConsentTextTxt");
+            patientInsuranceTxt = extras.getString( "patientInsuranceTxt");
+            patientEmailTxt = extras.getString( "patientEmailTxt");
+            prefLangTxt = extras.getString( "prefLangTxt");
+            translatorTxt = extras.getString( "translatorTxt");
+            maritalTxt = extras.getString( "maritalTxt");
+            houseIncomeTxt = extras.getString( "houseIncomeTxt");
+            houseHoldTxt = extras.getString( "houseHoldTxt");
+            occupationTxt = extras.getString( "occupationTxt");
+            veteranTxt = extras.getString( "veteranTxt");
+            emergencyNameTxt = extras.getString( "emergencyNameTxt");
+
+            relationshipTxt = extras.getString( "relationshipTxt");
+            contactPhoneTxt = extras.getString( "contactPhoneTxt");
+            patientConsentName = extras.getString( "patientConsentName");
+            patientSignedText = extras.getString( "patientSignedText");
+            patientSignatureText = extras.getString( "patientSignatureText");
+            consentDateTxt = extras.getString( "consentDateTxt");
+            patientRaceTxt = extras.getString( "patientRaceTxt");
+            patientEthnicityTxt = extras.getString( "patientEthnicityTxt");
+            patientIncomeTxt = extras.getString( "patientIncomeTxt");
+            patientEmpTxt = extras.getString( "patientEmpTxt");
+
+
+
+
+
+        }
+        // Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
         LabAccess = (TextView) findViewById(R.id.nextForm6);
         LabAccess.setOnClickListener(this);
     }
@@ -24,6 +75,39 @@ public class PatientInfoForm extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         if (view.getId() == R.id.nextForm6) {
             Intent LabAccess = new Intent(this, LabAccess.class);
+            LabAccess.putExtra("lastNameTxt" ,lastNameTxt );
+            LabAccess.putExtra("dateTxt" ,dateTxt );
+            LabAccess.putExtra("firstNameTxt" ,firstNameTxt );
+            LabAccess.putExtra("visitReasonTxt" ,visitReasonTxt );
+            LabAccess.putExtra("patientSexTxt" ,patientSexTxt );
+//AuthorizatLabAccess
+            LabAccess.putExtra("patientDOBTxt" ,patientDOBTxt );
+            LabAccess.putExtra("patientSSNTxt" ,firstNameTxt );
+            LabAccess.putExtra("patientHomeNumTxt" ,patientHomeNumTxt );
+            LabAccess.putExtra("patientCellNumTxt" ,patientCellNumTxt );
+            LabAccess.putExtra("patientAddTxt" ,patientAddTxt );
+            LabAccess.putExtra("patientCityTxt" ,patientCityTxt );
+            LabAccess.putExtra("patientStateTxt" ,patientStateTxt );
+            LabAccess.putExtra("patientZipCodeTxt" ,patientZipCodeTxt );
+            LabAccess.putExtra("patientPrefNumberTxt" ,patientPrefNumberTxt );
+            LabAccess.putExtra("patientConsentCallTxt" ,patientConsentCallTxt );
+            LabAccess.putExtra("patientConsentTextTxt" ,patientConsentTextTxt );
+            LabAccess.putExtra("patientInsuranceTxt" ,patientInsuranceTxt );
+            LabAccess.putExtra("patientEmailTxt" ,patientEmailTxt );
+            LabAccess.putExtra("prefLangTxt" ,prefLangTxt );
+            LabAccess.putExtra("translatorTxt" ,translatorTxt );
+            LabAccess.putExtra("maritalTxt" ,maritalTxt );
+            LabAccess.putExtra("houseIncomeTxt" ,houseIncomeTxt );
+            LabAccess.putExtra("houseHoldTxt" ,houseHoldTxt );
+            LabAccess.putExtra("occupationTxt" ,occupationTxt );
+            LabAccess.putExtra("veteranTxt" ,veteranTxt );
+            LabAccess.putExtra("emergencyNameTxt" ,emergencyNameTxt );
+            LabAccess.putExtra("relationshipTxt" ,relationshipTxt );
+            LabAccess.putExtra("contactPhoneTxt" ,contactPhoneTxt );
+            LabAccess.putExtra("patientConsentName" ,patientConsentName );
+            LabAccess.putExtra("patientSignedText" ,patientSignedText );
+            LabAccess.putExtra("patientSignatureText" ,patientSignatureText );
+            LabAccess.putExtra("consentDateTxt" ,consentDateTxt );
             startActivity(LabAccess);
         }
     }

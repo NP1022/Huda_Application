@@ -40,4 +40,87 @@
     <string name="patientForm">নতুন রোগীর ফর্ম</string>
     <string name="checkIn">চেক-ইন</string>
     <string name="MedicalChart">চিকিৎসা চার্ট</string>
+
+    <!--    Patient Form Strings -->
+    <string name = "Registration">নিবন্ধন</string>
+    <string name="Date">তারিখ (মাস/দিন/বছর)</string>
+    <string name="VisitReason">কারণ দেখুন</string>
+    <string name="Sex">লিঙ্গ</string>
+    <string name="DOB">জন্ম তারিখ (মাস/দিন/বছর)</string>
+    <string name="Address">ঠিকানা</string>
+    <string name = "City">শহর</string>
+    <string name = "State">রাষ্ট্র</string>
+    <string name = "ZipCode">জিপ কোড</string>
+    <string name = "SSN">সামাজিক নিরাপত্তা নম্বর (123-12-1234)</string>
+    <string name = "HomePhone">বাসার ফোন (123-123-1234)</string>
+    <string name = "CellPhone">মুঠোফোন (123-123-1234)</string>
+    <string name = "PreferredNumber">পছন্দের নম্বর (বাড়ি বা মোবাইল)</string>
+    <string name = "ConsentToCall">কল করতে সম্মতি? (হ্যাঁ বা না)</string>
+    <string name = "ConsentToText">টেক্সট সম্মতি? (হ্যাঁ বা না)</string>
+    <string name = "InsuranceProvider">বীমা প্রদানকারী</string>
+    <string name = "Email">ইমেল (রেজিস্ট্রেশন ইমেলের মতোই)</string>
+
+    <string name = "SelectRace">একটি জাতি নির্বাচন করুন:</string>
+    <string name = "Black">কালো/আফ্রিকান আমেরিকান</string>
+    <string name = "White">সাদা/ককেশীয়</string>
+    <string name = "Asian">এশিয়ান</string>
+    <string name = "MiddleEastern">মধ্যপ্রাচ্য/উত্তর আফ্রিকান</string>
+    <string name = "Hispanic">হিস্পানিক/ল্যাটিনো</string>
+    <string name = "NativeAmerican">আদি আমেরিকান</string>
+    <string name = "NativeHawaiian">স্থানীয় হাওয়াইয়ান বা প্রশান্ত মহাসাগরীয় দ্বীপবাসী</string>
+
+    <string name = "SelectEthnicity">একটি জাতি নির্বাচন করুন:</string>
+    <string name = "HispanicEthnicity">হিস্পানিক বা ল্যাটিনো</string>
+    <string name = "NotHispanicEthnicity">হিস্পানিক বা ল্যাটিনো নয়</string>
+    <string name = "PreferredLanguage">পছন্দের ভাষা</string>
+    <string name = "Translator">অনুবাদক প্রয়োজন? (হ্যাঁ বা না)</string>
+    <string name = "SocialInfo">নিম্নলিখিত তথ্যগুলি HUDA-তে আপনার যত্ন নেওয়ার অধিকারকে প্রভাবিত করে না, তবে আমাদের বিনামূল্যে পরিষেবা প্রদান চালিয়ে যাওয়ার জন্য এটির প্রয়োজন।</string>
+
+    <string name = "MaritalStatus">বৈবাহিক অবস্থা</string>
+    <string name = "HouseholdIncome">পরিবারের আয়</string>
+
+
+    <string name="Every">প্রতি</string>
+    <string name = "Week">সপ্তাহ</string>
+    <string name = "TwoWeeks">দুই সপ্তাহ</string>
+    <string name = "Months">মাস</string>
+    <string name = "Year">বছর</string>
+    <string name = "HouseholdSize">পরিবারের আকার</string>
+
+    <string name = "EmploymentStatus">কর্মসংস্থানের অবস্থা</string>
+    <string name = "Unemployed">বেকার</string>
+    <string name = "EmployedFullTime">পূর্ণ কালিন চাকুরী</string>
+    <string name = "EmployedPartTime">পার্ট টাইম নিযুক্ত</string>
+    <string name = "SelfEmployed">স্বনির্ভর</string>
+    <string name = "Student">ছাত্র</string>
+    <string name = "Retired">অবসরপ্রাপ্ত</string>
+    <string name = "SeekingEmployment">চাকরী খোঁজা</string>
+    <string name = "Occupation">পেশা</string>
+    <string name = "VeteranStatus">আপনি কি একজন ভেটেরান?</string>
+    <string name = "EmergencyContact">জরুরী যোগাযোগের তথ্য</string>
+    <string name = "EmergencyContactName">নাম</string>
+    <string name = "RelationshipToPatient">রোগীর সাথে সম্পর্ক</string>
+    <string name = "EmergencyContactPhone">ফোনে যোগাযোগ (123-123-1234)</string>
+    <string name = "I">আমি,</string>
+    <string name = "PatientConsent">সুপারিশ অনুযায়ী স্বেচ্ছায় চিকিৎসা/কাউন্সেলিং গ্রহণ করুন এবং
+HUDA কর্মীরা ব্যাখ্যা করেছেন। আমি বুঝি যে আমি আমার সম্মতি প্রত্যাহার করতে এবং যেকোনো সময় চিকিৎসা বন্ধ করতে স্বাধীন।
+উপরন্তু, গবেষণা কার্যক্রমে অংশগ্রহণ করতে অস্বীকার করার জন্য আমাকে আমার অধিকার সম্পর্কে অবহিত করা হয়েছে। আমি বুঝি আমার অধিকার আছে
+HUDA ক্লিনিক দ্বারা প্রদত্ত বিনামূল্যে পরিষেবার প্রাপক হিসাবে। আমাকে হুডা ক্লিনিকের নো কল নো শোতে পরামর্শ দেওয়া হয়েছে
+প্রাথমিক যত্ন এবং বিশেষ পরিষেবা সংক্রান্ত নীতি এবং এটি অনুসরণ করতে সম্মত। আরও, আমাকে ফেডারেলের পরামর্শ দেওয়া হয়েছে
+গোপনীয়তা প্রবিধান এবং পর্যালোচনা করার জন্য গোপনীয়তা বিজ্ঞপ্তির একটি অনুলিপি দেওয়া হয়েছে।</string>
+    <string name = "YourName">তোমার নাম</string>
+    <string name = "VoluntaryConsent">সুপারিশ অনুযায়ী স্বেচ্ছায় চিকিৎসা/কাউন্সেলিং গ্রহণ করুন </string>
+    <string name = "PatientNamePrinted">রোগীর নাম (মুদ্রিত)</string>
+    <string name = "PatientSignature">রোগী/অভিভাবকের স্বাক্ষর</string>
+    <string name = "TodayDate">তারিখ (মাস দিন বছর)</string>
+    <string name = "SubmitForm">জমা</string>
+    <string name = "NextForm">পরবর্তী ফর্ম</string>
+
+    <!--Appointment Check-In Page-->
+    <string name = "FullName">পুরো নাম</string>
+    <string name = "Birthday">জন্মদিন</string>
+    <string name = "AppointmentTime">অ্যাপয়েন্টমেন্টের সময়</string>
+    <string name = "EnterCheckinEmail">ইমেইল প্রদান করুন</string>
+    <string name = "CheckInButton">চেক ইন</string>
+
 </resources>

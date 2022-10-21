@@ -24,9 +24,10 @@ import com.google.firebase.database.DatabaseReference;
 
 import java.util.regex.Pattern;
 
-public class PatientForm extends AppCompatActivity
+public class PatientForm extends AppCompatActivity implements View.OnClickListener
 {
     private FirebaseAuth mAuth;
+
     DatabaseReference ref;
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
@@ -59,7 +60,6 @@ public class PatientForm extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_form);
 
-        mAuth =FirebaseAuth.getInstance();
 
         // edittext
         final EditText todayDate = findViewById(R.id.todaysDate);
@@ -164,6 +164,8 @@ public class PatientForm extends AppCompatActivity
                 // information from checkbox input to store in a StringBuilder
                 StringBuilder patientRace = new StringBuilder();
                 final String patientRaceTxt = patientRace.toString().trim();
+
+
 
                 StringBuilder patientEthnicity = new StringBuilder();
                 final String patientEthnicityTxt = patientEthnicity.toString().trim();
@@ -510,32 +512,135 @@ public class PatientForm extends AppCompatActivity
                 }
                 else
                 {
-                    Toast.makeText(PatientForm.this,"Success!",Toast.LENGTH_LONG).show();
-                    Patient patient = new Patient(dateTxt,visitReasonTxt,lastNameTxt,firstNameTxt,patientSexTxt,patientDOBTxt,patientAddTxt,patientCityTxt,patientStateTxt,patientZipCodeTxt,
-                            patientSSNTxt,patientHomeNumTxt,patientCellNumTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,patientEmailTxt,
-                            patientRaceTxt, patientEthnicityTxt, translatorTxt, maritalTxt,houseIncomeTxt, patientIncomeTxt, houseHoldTxt, patientEmpTxt,occupationTxt, veteranTxt, emergencyNameTxt,
-                            relationshipTxt, contactPhoneTxt, patientConsentName, patientSignedText, patientSignatureText, consentDateTxt);
-                    dao.add(patient).addOnSuccessListener(suc->
-                    {
-                        Toast.makeText(PatientForm.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
-                    }).addOnFailureListener(er->
-                    {
-                        Toast.makeText(PatientForm.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
-                    });
+
+                        Toast.makeText(PatientForm.this,"Success!",Toast.LENGTH_LONG).show();
+
+                      Patient patient = new Patient(dateTxt,visitReasonTxt,lastNameTxt,firstNameTxt,patientSexTxt,patientDOBTxt,patientAddTxt,patientCityTxt,patientStateTxt,patientZipCodeTxt,
+                      patientSSNTxt,patientHomeNumTxt,patientCellNumTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,patientEmailTxt,
+                      patientRaceTxt, patientEthnicityTxt, translatorTxt, maritalTxt,houseIncomeTxt, patientIncomeTxt, houseHoldTxt, patientEmpTxt,occupationTxt, veteranTxt, emergencyNameTxt,
+                      relationshipTxt, contactPhoneTxt, patientConsentName, patientSignedText, patientSignatureText, consentDateTxt);
+
+                      dao.add(patient).addOnSuccessListener(suc->
+                      {
+                      Toast.makeText(PatientForm.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
+                      }).addOnFailureListener(er->
+                      {
+                      Toast.makeText(PatientForm.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
+                      });
                 }
             }
 
         });
+        PatientContract = (TextView) findViewById(R.id.nextForm);
+        PatientContract.setOnClickListener(PatientForm.this);
 
-//        PatientContract = (TextView) findViewById(R.id.nextForm);
-//        PatientContract.setOnClickListener(this);
+  }
+
+    public void onClick(View view)
+    {
+        if (view.getId() == R.id.nextForm){
+            final EditText todayDate = findViewById(R.id.todaysDate);
+            final EditText visitReason = findViewById(R.id.visitReason);
+            final EditText firstName = findViewById(R.id.firstName);
+            final EditText lastName = findViewById(R.id.lastName);
+            final EditText patientSex = findViewById(R.id.patientSex);
+            final EditText patientSsn = findViewById(R.id.patientSSN);
+            final EditText patientDOB = findViewById(R.id.patientDob);
+            final EditText patientHome = findViewById(R.id.patientHomeNum);
+            final EditText patientCell = findViewById(R.id.patientCellNum);
+            final EditText patientAdd = findViewById(R.id.patientAddress);
+            final EditText patientCity = findViewById(R.id.patientCity);
+            final EditText patientState = findViewById(R.id.patientState);
+            final EditText patientZip = findViewById(R.id.patientZipCode);
+            final EditText patientContactPref = findViewById(R.id.patientPreferredNumber);
+            final EditText patientConsentCall = findViewById(R.id.consentToCall);
+            final EditText patientConsentText = findViewById(R.id.consentToText);
+            final EditText patientInsurance = findViewById(R.id.insuranceProvider);
+            final EditText patientEmail = findViewById(R.id.emailAddress);
+            final EditText prefLang = findViewById(R.id.langPref);
+            final EditText neededTranslator = findViewById(R.id.translatorNeeded);
+            final EditText maritalStatusPatient = findViewById(R.id.maritalStatus);
+            final EditText incomeHousehold = findViewById(R.id.income);
+            final EditText houseHoldSize = findViewById(R.id.houseHold);
+            final EditText occupationPatient = findViewById(R.id.occupation);
+            final EditText veteranStatus = findViewById(R.id.veteran);
+            final EditText emergencyContactName = findViewById(R.id.emergencyName);
+            final EditText relationshipToPatient = findViewById(R.id.relationship);
+            final EditText emergencyContactPhone = findViewById(R.id.emergencyNumber);
+            final EditText patientNameConsent = findViewById(R.id.patientNameFill);
+            final EditText patientSigned = findViewById(R.id.patientNamePrinted);
+            final EditText patientSig = findViewById(R.id.patientNameSignature);
+            final EditText consentDateSign = findViewById(R.id.consentDate);
+            final String dateTxt = todayDate.getText().toString().trim(); // convert the EditText to a String type
+            final String visitReasonTxt = visitReason.getText().toString().trim();
+            final String firstNameTxt = firstName.getText().toString().trim();
+            final String lastNameTxt = lastName.getText().toString().trim();
+            final String patientSexTxt = patientSex.getText().toString().trim();
+            final String patientSSNTxt = patientSsn.getText().toString().trim();
+            final String patientDOBTxt = patientDOB.getText().toString().trim();
+            final String patientHomeNumTxt = patientHome.getText().toString().trim();
+            final String patientCellNumTxt = patientCell.getText().toString().trim();
+            final String patientAddTxt = patientAdd.getText().toString().trim();
+            final String patientCityTxt = patientCity.getText().toString().trim();
+            final String patientStateTxt = patientState.getText().toString().trim();
+            final String patientZipCodeTxt = patientZip.getText().toString().trim();
+            final String patientPrefNumberTxt = patientContactPref.getText().toString().trim();
+            final String patientConsentCallTxt = patientConsentCall.getText().toString().trim();
+            final String patientConsentTextTxt = patientConsentText.getText().toString().trim();
+            final String patientInsuranceTxt = patientInsurance.getText().toString().trim();
+            final String patientEmailTxt = patientEmail.getText().toString().trim();
+            final String prefLangTxt = prefLang.getText().toString().trim();
+            final String translatorTxt = neededTranslator.getText().toString().trim();
+            final String maritalTxt = maritalStatusPatient.getText().toString().trim();
+            final String houseIncomeTxt = incomeHousehold.getText().toString().trim();
+            final String houseHoldTxt = houseHoldSize.getText().toString().trim();
+            final String occupationTxt = occupationPatient.getText().toString().trim();
+            final String veteranTxt = veteranStatus.getText().toString().trim();
+            final String emergencyNameTxt = emergencyContactName.getText().toString().trim();
+            final String relationshipTxt = relationshipToPatient.getText().toString().trim();
+            final String contactPhoneTxt = emergencyContactPhone.getText().toString().trim();
+            final String patientConsentName = patientNameConsent.getText().toString().trim();
+            final String patientSignedText = patientSigned.getText().toString().trim();
+            final String patientSignatureText = patientSig.getText().toString().trim();
+            final String consentDateTxt = consentDateSign.getText().toString().trim();
+
+            Intent PatientContract = new Intent (this, PatientContract.class);
+            PatientContract.putExtra("lastNameTxt" ,lastNameTxt );
+            PatientContract.putExtra("dateTxt" ,dateTxt );
+            PatientContract.putExtra("firstNameTxt" ,firstNameTxt );
+            PatientContract.putExtra("visitReasonTxt" ,visitReasonTxt );
+            PatientContract.putExtra("patientSexTxt" ,patientSexTxt );
+//AuthorizatPatientContract
+            PatientContract.putExtra("patientDOBTxt" ,patientDOBTxt );
+            PatientContract.putExtra("patientSSNTxt" ,firstNameTxt );
+            PatientContract.putExtra("patientHomeNumTxt" ,patientHomeNumTxt );
+            PatientContract.putExtra("patientCellNumTxt" ,patientCellNumTxt );
+            PatientContract.putExtra("patientAddTxt" ,patientAddTxt );
+            PatientContract.putExtra("patientCityTxt" ,patientCityTxt );
+            PatientContract.putExtra("patientStateTxt" ,patientStateTxt );
+            PatientContract.putExtra("patientZipCodeTxt" ,patientZipCodeTxt );
+            PatientContract.putExtra("patientPrefNumberTxt" ,patientPrefNumberTxt );
+            PatientContract.putExtra("patientConsentCallTxt" ,patientConsentCallTxt );
+            PatientContract.putExtra("patientConsentTextTxt" ,patientConsentTextTxt );
+            PatientContract.putExtra("patientInsuranceTxt" ,patientInsuranceTxt );
+            PatientContract.putExtra("patientEmailTxt" ,patientEmailTxt );
+            PatientContract.putExtra("prefLangTxt" ,prefLangTxt );
+            PatientContract.putExtra("translatorTxt" ,translatorTxt );
+            PatientContract.putExtra("maritalTxt" ,maritalTxt );
+            PatientContract.putExtra("houseIncomeTxt" ,houseIncomeTxt );
+            PatientContract.putExtra("houseHoldTxt" ,houseHoldTxt );
+            PatientContract.putExtra("occupationTxt" ,occupationTxt );
+            PatientContract.putExtra("veteranTxt" ,veteranTxt );
+            PatientContract.putExtra("emergencyNameTxt" ,emergencyNameTxt );
+            PatientContract.putExtra("relationshipTxt" ,relationshipTxt );
+            PatientContract.putExtra("contactPhoneTxt" ,contactPhoneTxt );
+            PatientContract.putExtra("patientConsentName" ,patientConsentName );
+            PatientContract.putExtra("patientSignedText" ,patientSignedText );
+            PatientContract.putExtra("patientSignatureText" ,patientSignatureText );
+            PatientContract.putExtra("consentDateTxt" ,consentDateTxt );
+            startActivity(PatientContract);
+        }
     }
 
-//    public void onClick(View view)
-//    {
-//        if (view.getId() == R.id.nextForm){
-//            Intent PatientContract = new Intent (this, PatientContract.class);
-//            startActivity(PatientContract);
-//        }
-//    }
 }
+

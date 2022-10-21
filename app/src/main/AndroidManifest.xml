@@ -22,7 +22,7 @@
             android:name=".PatientInfoForm"
             android:exported="false" />
         <activity
-            android:name=".StressForm"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".PersonalRepresentative"
@@ -67,7 +67,7 @@
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StressForm"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Huda_Application.NoActionBar">

@@ -40,4 +40,90 @@
     <string name="patientForm">نموذج جديد للمريض</string>
     <string name="checkIn">تحقق في</string>
     <string name="MedicalChart">الرسم البياني الطبي</string>
+
+
+    <!--    Patient Form Strings -->
+    <string name = "Registration">التسجيل</string>
+    <string name="Date">تاريخ (MM/DD/YY)</string>
+    <string name="VisitReason">زيارة السبب</string>
+    <string name="Sex">جنس</string>
+    <string name="DOB">تاريخ الولادة (MM/DD/YYYY)</string>
+    <string name="Address">(1234 Street St.) تبوك</string>
+    <string name = "City">مدينة</string>
+    <string name = "State">حالة</string>
+    <string name = "ZipCode">الرمز البريدي</string>
+    <string name = "SSN">رقم الحماية الاجتماعية</string>
+    <string name = "HomePhone">هاتف المنزل</string>
+    <string name = "CellPhone">الهاتف الخلوي</string>
+    <string name = "PreferredNumber">رقم الهاتف المفضل (المنزل أو الهاتف المحمول)</string>
+    <string name = "ConsentToCall">الموافقة على الاتصال؟ (نعم ام لا)</string>
+    <string name = "ConsentToText">الموافقة على النص؟ (نعم ام لا)</string>
+    <string name = "InsuranceProvider">شركة التأمين</string>
+    <string name = "Email">البريد الإلكتروني (مثل التسجيل)</string>
+
+    <string name = "SelectRace">الرجاء تحديد العرق</string>
+    <string name = "Black">أسود / أمريكي من أصل أفريقي</string>
+    <string name = "White">أبيض / قوقازي</string>
+    <string name = "Asian">آسيا</string>
+    <string name = "MiddleEastern">الشرق الأوسط / شمال أفريقيا</string>
+    <string name = "Hispanic">اسباني / لاتيني</string>
+    <string name = "NativeAmerican">أمريكي أصلي</string>
+    <string name = "NativeHawaiian">من سكان هاواي الأصليين / سكان جزر المحيط الهادئ الأخرى</string>
+
+    <string name = "SelectEthnicity">اختر مجموعة عرقية:</string>
+    <string name = "HispanicEthnicity">هسبانيون أو لاتينيون</string>
+    <string name = "NotHispanicEthnicity">لا ابيض أو لاتيني</string>
+    <string name = "PreferredLanguage">اللغة المفضلة</string>
+    <string name = "Translator">مترجم مطلوب؟ (نعم ام لا)</string>
+    <string name = "SocialInfo">لا تؤثر المعلومات التالية على حقك في الرعاية في هدى ، ولكنها ضرورية لمواصلة تقديم خدماتنا المجانية.</string>
+
+    <string name = "MaritalStatus">الحالة الحالة الإجتماعية</string>
+    <string name = "HouseholdIncome">دخل الأسرة</string>
+
+
+    <string name="Every">كل</string>
+    <string name = "Week">أسبوع</string>
+    <string name = "TwoWeeks">أسبوعين</string>
+    <string name = "Months">شهر</string>
+    <string name = "Year">سنة</string>
+    <string name = "HouseholdSize">حجم الأسرة</string>
+
+    <string name = "EmploymentStatus">الحالة الوظيفية</string>
+    <string name = "Unemployed">عاطلين عن العمل</string>
+    <string name = "EmployedFullTime">موظف بدوام كامل</string>
+    <string name = "EmployedPartTime">يعمل بدوام جزئي</string>
+    <string name = "SelfEmployed">العاملون لحسابهم الخاص</string>
+    <string name = "Student">طالب علم</string>
+    <string name = "Retired">متقاعد</string>
+    <string name = "SeekingEmployment">البحث عن عمل</string>
+    <string name = "Occupation">إشغال</string>
+    <string name = "VeteranStatus">هل أنت المخضرم؟</string>
+    <string name = "EmergencyContact">معلومات الاتصال في حالات الطوارئ</string>
+    <string name = "EmergencyContactName">اسم</string>
+    <string name = "RelationshipToPatient">العلاقة مع المريض</string>
+    <string name = "EmergencyContactPhone">هاتف الاتصال(1234-123-123)</string>
+    <string name = "I">أنا,</string>
+
+    <string name = "PatientConsent">قبول العلاج / الاستشارة طواعية على النحو الموصى به و
+وأوضح من قبل موظفي هدى. أفهم أن لي مطلق الحرية في سحب موافقتي والتوقف عن العلاج في أي وقت.
+بالإضافة إلى ذلك ، تم إبلاغي بحقوقي في رفض المشاركة في الأنشطة البحثية. أفهم أن لدي حقوق
+كمستفيد من الخدمات المجانية التي تقدمها عيادة هدى. لقد تم إخطاري بشأن NO CALL NO SHOW التابع لعيادة HUDA
+السياسة المتعلقة بالرعاية الأولية والخدمات المتخصصة والموافقة على اتباعها. علاوة على ذلك ، لقد تم إخطاري بالاتحاد
+لائحة السرية وتم إعطاؤك نسخة من إشعار السرية للمراجعة.</string>
+    <string name = "YourName">اسمك</string>
+    <string name = "VoluntaryConsent">قبول العلاج / الاستشارة طواعية على النحو الموصى به</string>
+    <string name = "PatientNamePrinted">اسم المريض (مطبوع)</string>
+    <string name = "PatientSignature">توقيع المريض / الوصي</string>
+    <string name = "TodayDate">التاريخ (شهر / يوم / سنة)</string>
+    <string name = "SubmitForm">إرسال</string>
+    <string name = "NextForm">الشكل التالي</string>
+
+
+    <!--Appointment Check-In Page-->
+    <string name = "FullName">الاسم الكامل</string>
+    <string name = "Birthday">عيد الميلاد</string>
+    <string name = "AppointmentTime">وقت الموعد</string>
+    <string name = "EnterCheckinEmail">أدخل البريد الإلكتروني</string>
+    <string name = "CheckInButton">تحقق في</string>
+
 </resources>

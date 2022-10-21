@@ -41,4 +41,87 @@
     <string name="patientForm">نیا مریض فارم</string>
     <string name="checkIn">چیک ان</string>
     <string name="MedicalChart">میڈیکل چارٹ</string>
+
+    <!--    Patient Form Strings -->
+    <string name = "Registration">اندراج</string>
+    <string name="Date">تاریخ (MM/DD/YY)</string>
+    <string name="VisitReason">وجہ ملاحظہ کریں۔</string>
+    <string name="Sex">سیکس</string>
+    <string name="DOB">پیدائش کی تاریخ (MM/DD/YYYY)</string>
+    <string name="Address">پتہ</string>
+    <string name = "City">شہر</string>
+    <string name = "State">حالت</string>
+    <string name = "ZipCode">زپ کوڈ</string>
+    <string name = "SSN">سوشل سیکورٹی نمبر (123-12-1234)</string>
+    <string name = "HomePhone">گھر کا فون (123-123-1234)</string>
+    <string name = "CellPhone">موبائل فون (123-123-1234)</string>
+    <string name = "PreferredNumber">ترجیحی نمبر (گھر یا موبائل)</string>
+    <string name = "ConsentToCall">کال کرنے کی رضامندی (ہاں یا نہیں)</string>
+    <string name = "ConsentToText">متن پر رضامندی (ہاں یا نہیں)</string>
+    <string name = "InsuranceProvider">بیمہ فراہم کرنے والا</string>
+    <string name = "Email">ای میل (رجسٹریشن کی طرح)</string>
+
+    <string name = "SelectRace">براہ کرم ایک ریس منتخب کریں۔:</string>
+    <string name = "Black">سیاہ / افریقی امریکی</string>
+    <string name = "White">سفید/کاکیشین</string>
+    <string name = "Asian">ایشیائی</string>
+    <string name = "MiddleEastern">مشرق وسطی/شمالی افریقی</string>
+    <string name = "Hispanic">ہسپانوی/لاطینی</string>
+    <string name = "NativeAmerican">امریکی آبائی</string>
+    <string name = "NativeHawaiian">مقامی ہوائی یا دیگر بحر الکاہل جزیرے والے</string>
+
+    <string name = "SelectEthnicity">ایک نسل منتخب کریں:</string>
+    <string name = "HispanicEthnicity">ہسپانوی یا لاطینی</string>
+    <string name = "NotHispanicEthnicity">ہسپانوی یا لاطینی نہیں۔</string>
+    <string name = "PreferredLanguage">ترجیحی زبان</string>
+    <string name = "Translator">مترجم کی ضرورت ہے (ہاں یا نہیں)</string>
+    <string name = "SocialInfo">درج ذیل معلومات HUDA میں دیکھ بھال کے آپ کے حق کو متاثر نہیں کرتی ہیں، لیکن ہماری مفت خدمات کی فراہمی جاری رکھنے کے لیے اس کی ضرورت ہے۔</string>
+
+    <string name = "MaritalStatus">ازدواجی حیثیت</string>
+    <string name = "HouseholdIncome">گھریلو آمدنی</string>
+
+
+    <string name="Every">ہر کوئی</string>
+    <string name = "Week">ہفتہ</string>
+    <string name = "TwoWeeks">دو ہفتے</string>
+    <string name = "Months">مہینہ</string>
+    <string name = "Year">سال</string>
+    <string name = "HouseholdSize">گھریلو ناپ</string>
+
+    <string name = "EmploymentStatus">ملازمت کی حیثیت</string>
+    <string name = "Unemployed">بے روزگار</string>
+    <string name = "EmployedFullTime">ملازم (مکمل وقت)</string>
+    <string name = "EmployedPartTime">ملازم (پارٹ ٹائم)</string>
+    <string name = "SelfEmployed">خود ملازم</string>
+    <string name = "Student">طالب علم</string>
+    <string name = "Retired">ریٹائرڈ</string>
+    <string name = "SeekingEmployment">ملازمت کی تلاش</string>
+    <string name = "Occupation">پیشہ</string>
+    <string name = "VeteranStatus">کیا آپ تجربہ کار ہیں؟</string>
+    <string name = "EmergencyContact">ہنگامی رابطہ کی معلومات</string>
+    <string name = "EmergencyContactName">نام</string>
+    <string name = "RelationshipToPatient">مریض سے رشتہ</string>
+    <string name = "EmergencyContactPhone">رابطے کا فون (1237-123-234)</string>
+    <string name = "I">میں،</string>
+    <string name = "PatientConsent">رضاکارانہ طور پر تجویز کردہ علاج/مشورہ قبول کریں۔
+HUDA کے عملے نے وضاحت کی۔ میں سمجھتا ہوں کہ میں کسی بھی وقت اپنی رضامندی واپس لینے اور علاج بند کرنے کے لیے آزاد ہوں۔
+اس کے علاوہ، مجھے تحقیقی سرگرمیوں میں حصہ لینے سے انکار کرنے کے اپنے حقوق سے آگاہ کیا گیا ہے۔ میں سمجھتا ہوں کہ میرے حقوق ہیں۔
+HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وصول کنندہ کے طور پر۔ مجھے HUDA کلینک کے NO کال NO شو کے بارے میں مشورہ دیا گیا ہے۔
+بنیادی نگہداشت اور خصوصی خدمات سے متعلق پالیسی اور اس پر عمل کرنے سے اتفاق کرتے ہیں۔ مزید، مجھے وفاق سے مشورہ دیا گیا ہے۔
+رازداری کے ضابطے اور نظرثانی کے لیے رازداری کے نوٹس کی ایک کاپی دی گئی ہے۔</string>
+    <string name = "YourName">تمھارا نام</string>
+    <string name = "VoluntaryConsent">تجویز کے مطابق رضاکارانہ طور پر علاج/مشورہ قبول کریں۔ </string>
+    <string name = "PatientNamePrinted">مریض کا نام (مطبوعہ)</string>
+    <string name = "PatientSignature">مریض/سرپرست کے دستخط</string>
+    <string name = "TodayDate">تاریخ (MM/DD/YYYY)</string>
+    <string name = "SubmitForm">جمع کرائیں</string>
+    <string name = "NextForm">اگلا فارم</string>
+
+    <!--Appointment Check-In Page-->
+    <string name = "FullName">پورا نام</string>
+    <string name = "Birthday">سالگرہ</string>
+    <string name = "AppointmentTime">ملاقات کا وقت</string>
+    <string name = "EnterCheckinEmail">ای میل درج کریں۔</string>
+    <string name = "CheckInButton">چیک ان</string>
+
 </resources>
