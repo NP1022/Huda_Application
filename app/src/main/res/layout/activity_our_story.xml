@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:padding="10px"
+
         tools:context=".OurStory">
 
         <TextView
@@ -63,13 +63,14 @@
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
-            android:layout_width="374dp"
+            android:layout_width="350dp"
             android:layout_height="133dp"
             android:layout_marginTop="30dp"
             android:ems="10"
             android:fontFamily="sans-serif-light"
             android:gravity="start|top"
             android:inputType="textMultiLine"
+            android:layout_marginRight="30dp"
             android:text="HUDA Clinic first opened its doors in May 2004 to serve the uninsured population of the Detroit area. The clinic initially operated on funds gathered by the Muslim community of Metro Detroit."
             android:textColor="#043670"
             android:textSize="18sp"
@@ -88,13 +89,14 @@
 
         <EditText
             android:id="@+id/editTextTextMultiLine2"
-            android:layout_width="363dp"
+            android:layout_width="350dp"
             android:layout_height="315dp"
             android:layout_marginTop="24dp"
             android:ems="10"
             android:fontFamily="sans-serif-light"
             android:gravity="start|top"
             android:inputType="textMultiLine"
+            android:layout_marginRight="30dp"
             android:text="When it began, the HUDA Clinic provided solely medical services.  We then moved from our original facility at the Muslim Center of Detroit into a new, larger facility on Woodrow Wilson Street. Since then, we have expanded our care to include a full range of dental, vision care, podiatry, and mental health services, as well as a plethora of specialty services available at no-cost to our patients. Our new facility has allowed us to expand our services and our service times, but none of that would be possible without the generous support of our donors and volunteers."
             android:textColor="#043670"
             app:layout_constraintEnd_toEndOf="parent"

@@ -23,7 +23,7 @@
         android:background="#111E68"
         android:fontFamily="sans-serif-black"
         android:paddingTop="35dp"
-        android:text="Contact"
+        android:text="Contact     "
         android:textAlignment="center"
         android:textColor="#F1EEEE"
         android:textSize="34sp"
@@ -55,6 +55,7 @@
         android:textAlignment="center"
         android:textColor="#111E68"
         android:textSize="20sp"
+        android:layout_marginRight="40dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -68,6 +69,7 @@
         android:text="Call:"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
+
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="@+id/textView5"
@@ -82,6 +84,7 @@
         android:textColor="#111E68"
         android:textSize="20sp"
         android:textStyle="bold"
+
         app:layout_constraintEnd_toEndOf="@+id/CallHeader"
         app:layout_constraintStart_toStartOf="@+id/CallHeader"
         app:layout_constraintTop_toBottomOf="@+id/CallHeader" />
@@ -96,6 +99,7 @@
         android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
         android:textStyle="bold"
+
         app:layout_constraintEnd_toEndOf="@+id/HUDAnumber"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="@+id/HUDAnumber"
@@ -109,6 +113,7 @@
         android:textAlignment="center"
         android:textColor="#111E68"
         android:textSize="18sp"
+
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="@+id/textView7"

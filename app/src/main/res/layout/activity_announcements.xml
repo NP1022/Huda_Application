@@ -123,7 +123,7 @@
             android:layout_height="29dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="52dp"
-            android:text="Thanksgiving Break"
+            android:text="Thanksgiving"
             android:textColor="#043670"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
