@@ -9,12 +9,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/partnersPage"
-        android:layout_width="210dp"
+        android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginStart="101dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="10dp"
-        android:background="#043670"
+        android:background="@drawable/buttonstyle"
         android:text="@string/partners"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -39,29 +39,28 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/homePage"
-        android:layout_width="210dp"
+        android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="101dp"
-        android:background="#043670"
+        android:background="@drawable/buttonstyle"
         android:text="@string/home"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hudaLogo3" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/announcementsPage"
-        android:layout_width="210dp"
+        android:layout_width="220dp"
         android:layout_height="52dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="75dp"
-        android:background="#043670"
+        android:background="@drawable/buttonstyle"
         android:text="@string/Annoucment"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -71,14 +70,14 @@
         app:layout_constraintTop_toBottomOf="@+id/homePage" />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Patients"
-        android:layout_width="210dp"
+        android:layout_width="220dp"
         android:layout_height="52dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="40dp"
         android:textColor="#FFFFFF"
-        android:background="#043670"
+        android:background="@drawable/buttonstyle"
         android:text="@string/patients_page"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/servicesPage"
@@ -87,12 +86,12 @@
         app:layout_constraintTop_toBottomOf="@+id/announcementsPage" />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/servicesPage"
-        android:layout_width="210dp"
+        android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginStart="101dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="10dp"
-        android:background="#043670"
+        android:background="@drawable/buttonstyle"
         android:text="@string/services"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -103,12 +102,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ourStoryPage"
-        android:layout_width="210dp"
+        android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginStart="101dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="10dp"
-        android:background="#043670"
+        android:background="@drawable/buttonstyle"
         android:text="@string/story"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -119,12 +118,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/contactUsPage"
-        android:layout_width="210dp"
+        android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginStart="101dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="110dp"
-        android:background="#043670"
+        android:background="@drawable/buttonstyle"
         android:text="@string/contact"
         android:textColor="#FFFFFF"
         android:textSize="20sp"

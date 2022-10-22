@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:padding="10px"
+        android:paddingRight="60dp"
         android:visibility="visible"
         tools:context=".Announcements">
 
@@ -27,12 +27,13 @@
             android:id="@+id/announcementsHeader"
             android:layout_width="236dp"
             android:layout_height="55dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="14dp"
             android:background="@color/white"
             android:text="Announcements"
             android:textAlignment="center"
             android:textColor="#043670"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -40,11 +41,12 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.054"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/announcementsHeader"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
@@ -158,13 +160,40 @@
 
         <WebView
             android:id="@+id/calendarWebView"
-            android:layout_width="407dp"
-            android:layout_height="500dp"
+            android:layout_width="380dp"
+            android:layout_height="600dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="36dp"
             android:layout_marginEnd="2dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/announcementsHeader3" />
+
+        <TableLayout
+            android:layout_width="407dp"
+            android:layout_height="38dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="406dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

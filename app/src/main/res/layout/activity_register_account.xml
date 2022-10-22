@@ -108,9 +108,9 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registerButton"
-        android:layout_width="173dp"
-        android:layout_height="53dp"
-        android:background="#0151AE"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:background="@drawable/buttonstyle"
         android:text="@string/register"
         android:textColor="#ffffff"
         android:textSize="20sp"

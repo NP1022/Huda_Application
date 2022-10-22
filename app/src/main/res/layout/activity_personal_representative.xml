@@ -15,6 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingRight="60dp"
         tools:context=".PersonalRepresentative">
 
         <EditText
@@ -159,8 +160,7 @@
             android:id="@+id/personalRep1"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="4dp"
             android:backgroundTint="#686868"
             android:ems="10"
             android:hint="Print Name"
@@ -169,18 +169,16 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.081"
-            app:layout_constraintStart_toEndOf="@+id/number1"
-            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRep2"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="39dp"
-            android:layout_marginEnd="46dp"
+            android:layout_marginTop="5dp"
             android:backgroundTint="#686868"
             android:ems="10"
             android:hint="Print Name"
@@ -190,16 +188,15 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/number"
-            app:layout_constraintTop_toBottomOf="@+id/personalRepNumber"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRep3"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="11dp"
-            android:layout_marginTop="39dp"
             android:backgroundTint="#686868"
             android:ems="10"
             android:hint="Print Name"
@@ -207,9 +204,10 @@
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#686868"
-            app:layout_constraintStart_toEndOf="@+id/number2"
-            app:layout_constraintTop_toBottomOf="@+id/personalRepNumber2"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="1903dp" />
 
         <EditText
             android:id="@+id/personalRepNumber"
@@ -220,6 +218,7 @@
             android:ems="10"
             android:hint="Phone Number (###)###-####"
             android:inputType="text|phone"
+            android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#686868"
@@ -269,7 +268,7 @@
             android:id="@+id/patientSignaturePersonalRep"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:backgroundTint="#686868"
             android:ems="10"
             android:hint="Signature of Patient"
@@ -392,15 +391,15 @@
 
         <TextView
             android:id="@+id/personalRepresentativeHeader"
-            android:layout_width="275dp"
-            android:layout_height="117dp"
+            android:layout_width="242dp"
+            android:layout_height="101dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="10dp"
             android:background="@color/white"
             android:text="Designation of Personal Representative"
             android:textAlignment="center"
             android:textColor="#043670"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -409,8 +408,8 @@
 
         <ImageView
             android:id="@+id/hudaLogo8"
-            android:layout_width="98dp"
-            android:layout_height="106dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="28dp"
 
@@ -439,7 +438,7 @@
             android:layout_width="344dp"
             android:layout_height="119dp"
             android:layout_marginStart="31dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="31dp"
             android:ems="10"
             android:gravity="start|top"
@@ -447,7 +446,6 @@
             android:text="A personal representative is not the same as a healthcare agent who is allowed to make medical decisions on the patient’s behalf. "
             android:textColor="#043670"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/formText1" />
 
@@ -464,7 +462,6 @@
             android:text="I designate the following person(s) below as my personal representative(s) and understand and acknowledge that this designation gives the Personal Representative(s) the same power over my protected health information as I have, including the right to inspect my records, authorize disclosures and request restrictions and amendments. I hereby waive any restrictions on my personal representative(s)’ access to my protected health information. I understand that I am not required to list anyone. I also understand that this designation shall remain in place until such time as I revoke it in writing by letter to the Privacy Officer of HUDA Clinic.  "
             android:textColor="#043670"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepPatientHome" />
 
@@ -472,71 +469,27 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="61dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="31dp"
             android:layout_marginEnd="62dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="54dp"
             android:text="Personal Representatitve(s)"
             android:textColor="@color/black"
             android:textSize="23sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/personalRep1"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider17" />
-
-        <TextView
-            android:id="@+id/number1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="1500dp"
-            android:text="1."
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="200dp"
-            android:text="2."
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/number1" />
-
-        <TextView
-            android:id="@+id/number2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="176dp"
-            android:layout_marginBottom="156dp"
-            android:text="3."
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/divider19"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/number"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <View
             android:id="@+id/divider17"
             android:layout_width="350dp"
             android:layout_height="1dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="27dp"
-            android:layout_marginBottom="17dp"
+            android:layout_marginBottom="30dp"
             android:background="?android:attr/listDivider"
-            android:backgroundTint="#686868"
+            android:backgroundTint="#515151"
             app:layout_constraintBottom_toTopOf="@+id/textView8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -547,14 +500,57 @@
             android:layout_width="350dp"
             android:layout_height="1dp"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="31dp"
-            android:layout_marginBottom="20dp"
             android:background="?android:attr/listDivider"
-            android:backgroundTint="#686868"
-            app:layout_constraintBottom_toTopOf="@+id/patientSignaturePersonalRep"
+            android:backgroundTint="#515151"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepNumber3" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginBottom="5dp"
+            android:text="1."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/personalRep1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="5dp"
+            android:text="2."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/personalRep2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalRepNumber" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="5dp"
+            android:text="3."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/personalRep3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalRepNumber2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

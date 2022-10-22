@@ -152,29 +152,28 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:layout_centerInParent="true"
         android:layout_marginLeft="120dp"
         android:layout_marginRight="120dp"
         android:layout_marginBottom="37dp"
-        android:layout_centerInParent="true"
-        android:background="#043670"
+        android:background="@drawable/buttonstyle"
         android:text="@string/Login"
         android:textColor="#ffffff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751" />
+        app:layout_constraintVertical_bias="0.746" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
-
         android:text="@string/language"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

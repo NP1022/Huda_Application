@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:padding="10px"
+        android:paddingRight="60dp"
         android:visibility="visible"
         tools:context=".PatientForm">
 
@@ -26,13 +26,14 @@
             android:id="@+id/registrationFormHeader"
             android:layout_width="216dp"
             android:layout_height="45dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="5dp"
             android:background="@color/white"
             android:text="Registration"
             android:textAlignment="center"
             android:textColor="#043670"
-            android:textSize="30dp"
+            android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -41,13 +42,15 @@
 
         <ImageView
             android:id="@+id/hudaLogo5"
-            android:layout_width="98dp"
-            android:layout_height="106dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="30dp"
 
-            android:layout_marginEnd="36dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.043"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/todaysDate"
+            app:layout_constraintEnd_toStartOf="@+id/registrationFormHeader"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
@@ -197,7 +200,7 @@
         <EditText
             android:id="@+id/patientState"
             android:layout_width="320dp"
-            android:layout_height="47dp"
+            android:layout_height="48dp"
             android:layout_marginTop="5dp"
             android:backgroundTint="#686868"
             android:hint="@string/State"
@@ -376,12 +379,13 @@
             android:id="@+id/pickRace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="28dp"
             android:ems="10"
             android:text="@string/SelectRace"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/emailAddress" />
 
@@ -395,20 +399,23 @@
             android:textColorHint="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.012"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pickRace" />
+            app:layout_constraintTop_toBottomOf="@+id/pickRace"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         <CheckBox
             android:id="@+id/whiteCaucasian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="@string/White"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintHorizontal_bias="0.007"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/blackAfrican" />
 
@@ -421,7 +428,7 @@
             android:textColorHint="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.364"
+            app:layout_constraintHorizontal_bias="0.008"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/whiteCaucasian" />
 
@@ -429,12 +436,11 @@
             android:id="@+id/middleEastern"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:text="@string/MiddleEastern"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.739"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/asian" />
 
@@ -447,9 +453,10 @@
             android:textColorHint="@color/black"
             android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.471"
+            app:layout_constraintHorizontal_bias="0.007"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/middleEastern" />
+
 
         <CheckBox
             android:id="@+id/nativeAmerican"
@@ -460,7 +467,7 @@
             android:textColorHint="@color/black"
             android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintHorizontal_bias="0.011"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hispanicLatino" />
 
@@ -468,24 +475,24 @@
             android:id="@+id/nativeHawiianPacific"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:text="@string/NativeHawaiian"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nativeAmerican" />
-
 
         <TextView
             android:id="@+id/pickEthnicity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="28dp"
             android:text="@string/SelectEthnicity"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.159"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nativeHawiianPacific" />
 
@@ -498,6 +505,7 @@
             android:textColorHint="@color/black"
             android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.008"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pickEthnicity" />
 
@@ -505,12 +513,12 @@
             android:id="@+id/NotHispanicOrLatino"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="140dp"
             android:text="@string/NotHispanicEthnicity"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.576"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hispanicOrLatino" />
 
@@ -559,6 +567,7 @@
             android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.341"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/translatorNeeded" />
 
@@ -602,22 +611,23 @@
             android:id="@+id/every"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="280dp"
             android:text="Every"
             android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/income" />
 
         <CheckBox
             android:id="@+id/week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
             android:text="@string/Week"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/every" />
 
@@ -629,6 +639,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/week" />
 
@@ -640,6 +651,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.032"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/twoWeek" />
 
@@ -651,6 +663,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.034"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/month" />
 
@@ -676,11 +689,12 @@
             android:id="@+id/employment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="44dp"
             android:text="@string/EmploymentStatus"
             android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.068"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/houseHold" />
 
@@ -693,6 +707,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/employment" />
 
@@ -704,6 +719,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.053"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/unemployed" />
 
@@ -715,6 +731,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.058"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/employedFt" />
 
@@ -726,6 +743,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.038"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/employedPt" />
 
@@ -733,12 +751,15 @@
             android:id="@+id/student"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="@string/Student"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.033"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/selfEmployed" />
+
 
         <CheckBox
             android:id="@+id/retired"
@@ -748,6 +769,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/student" />
 
@@ -759,9 +781,9 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/retired" />
-
 
         <EditText
             android:id="@+id/occupation"
