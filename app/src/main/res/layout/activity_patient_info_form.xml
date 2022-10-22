@@ -20,21 +20,15 @@
     <TextView
         android:id="@+id/textView35"
         android:layout_width="350dp"
-        android:layout_height="77dp"
+        android:layout_height="100dp"
         android:text="- If you have given someone medical power of attorney or if someone is your legal guardian, that person can exercise your rights and make choices about your health information.\n- We will make sure the person has this authority and can act for you before we take any action."
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="1282dp" />
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView34"
+        app:layout_constraintStart_toStartOf="@+id/textView34"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="381dp"
-        android:layout_height="21dp"
-        android:text="- Ask us to limit what we use or share:"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="804dp" />
+
 
     <TextView
         android:id="@+id/textView31"
@@ -42,8 +36,10 @@
         android:layout_height="77dp"
         android:text="- You can ask for a paper copy of this notice at any time, even if you have agreed to receive the notice electronically. We will provide you with a paper copy promptly."
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="1149dp" />
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView29"
+        app:layout_constraintStart_toStartOf="@+id/textView29"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
     <TextView
         android:id="@+id/textView28"
@@ -52,8 +48,10 @@
         android:text="- Get a list of those with whom we've shared information: "
         android:textColor="#000000"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="921dp" />
+
+        app:layout_constraintEnd_toEndOf="@+id/textView30"
+        app:layout_constraintStart_toStartOf="@+id/textView30"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
     <TextView
         android:id="@+id/textView29"
@@ -62,8 +60,10 @@
         android:text="- Get a copy of this privacy notice:"
         android:textColor="#000000"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="1120dp" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView32"
+        app:layout_constraintStart_toStartOf="@+id/textView32"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
     <TextView
         android:id="@+id/textView36"
@@ -72,8 +72,10 @@
         android:text="- File a complaint if you fee your rights are violated:"
         android:textColor="#000000"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="1379dp" />
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView35"
+        app:layout_constraintStart_toStartOf="@+id/textView35"
+        app:layout_constraintTop_toBottomOf="@+id/textView35" />
 
     <TextView
         android:id="@+id/textView34"
@@ -82,8 +84,10 @@
         android:text="- Choose someone to act for you:"
         android:textColor="#000000"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="1249dp" />
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView31"
+        app:layout_constraintStart_toStartOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
     <TextView
         android:id="@+id/textView30"
@@ -91,6 +95,9 @@
         android:layout_height="78dp"
         android:text="- You can ask us NOT to use or share certain health information for treatment, payment or our operations.\n- We are not required to agree to your request, and we may say 'No' if it would affect your care."
         android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView27"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
         tools:layout_editor_absoluteX="18dp"
         tools:layout_editor_absoluteY="832dp" />
 
@@ -100,8 +107,9 @@
         android:layout_height="151dp"
         android:text="- You can ask for a list accounting of the times we've shared your health information for six years prior to the date you ask, who we shared it with, and why.\n- We will include all the disclosures except for those about treatment, payment and health care operations and certain other disclosures (such as any you asked us to make) We will provide one accounting a year for free but will charge a reasonable, cost-based fee if you ask for another one within 12 months."
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="953dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView28"
+        app:layout_constraintStart_toStartOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
     <TextView
         android:id="@+id/textView37"
@@ -109,8 +117,10 @@
         android:layout_height="151dp"
         android:text="- You can complain if you feel we have violated your rights by contacting us using the information on page 1.\n- You can file a complaint with the U.S. Department of Health and Humans Services Office for Civil Rights by sending a letter to 200 Independence Ave. S.W. Washington, D.C. 20201, calling 1-877-696-6775, or visiting www.hhs.gov/ocr/privacy/hipaa/complaints/,\n- We will not retaliate against you for filing a complaint."
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="1407dp" />
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView36"
+        app:layout_constraintStart_toStartOf="@+id/textView36"
+        app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
     <TextView
         android:id="@+id/textView27"
@@ -119,8 +129,10 @@
         android:text="- Ask us to limit what we use or share:"
         android:textColor="#000000"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="804dp" />
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView22"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
     <TextView
         android:id="@+id/textView20"
@@ -128,8 +140,10 @@
         android:layout_height="98dp"
         android:text="- You can ask us to correct your health and claims records if you think they are incorrect or incomplete. Ask us how to do this.\n- We may say 'No' to your request, but we will tell you why in writing within 60 days."
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="560dp" />
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView19"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <Button
         android:id="@+id/nextForm6"
@@ -139,8 +153,10 @@
         android:text="Next Form"
         android:textSize="20sp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="1580dp" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView37"
+        app:layout_constraintStart_toStartOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
 
     <ImageView
         android:id="@+id/hudaLogo10"
@@ -199,8 +215,10 @@
         android:text="- Get a copy of your health and claims records:"
         android:textColor="#000000"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="395dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+    />
 
     <TextView
         android:id="@+id/textView18"
@@ -209,8 +227,9 @@
         android:text="- Ask us to correct health and claim records: "
         android:textColor="#000000"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="531dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"/>
 
     <TextView
         android:id="@+id/textView21"
@@ -219,8 +238,9 @@
         android:text="- Request confidential communications:"
         android:textColor="#000000"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="674dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView20"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" /> />
 
     <TextView
         android:id="@+id/textView22"
@@ -228,8 +248,10 @@
         android:layout_height="93dp"
         android:text="- You can ask us to contact you in a specific way (for example, home or office phone - this is your 'preferred' contact method) or to send mail to a different address.\n- We will consider all reasonable requests and must say 'Yes' if you tell us you would be in danger if we do not."
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="703dp" />
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView21"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
         android:id="@+id/textView19"
@@ -237,8 +259,9 @@
         android:layout_height="98dp"
         android:text="- You can ask to see or get a copy of your health and claims records and other health information we have about you. Ask us how to do this.\n- We will provide a copy or a summary of your health and claims records, usually within 30 days of your request. We may charge a reasonable, cost based fee."
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="416dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
         android:id="@+id/textView14"

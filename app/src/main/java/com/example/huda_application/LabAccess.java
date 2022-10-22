@@ -62,7 +62,7 @@ public class LabAccess extends AppCompatActivity implements View.OnClickListener
 
         }
 
-        Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
+        //Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
         patientPortal = (TextView) findViewById(R.id.returnPatientPortal);
         patientPortal.setOnClickListener(this);
 

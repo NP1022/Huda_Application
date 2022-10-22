@@ -77,8 +77,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener
                 e.printStackTrace();
             }
 
-            Intent Patients = new Intent(this ,PatientsPage.class);
-            startActivity(Patients);
+
         }
     }
 
@@ -119,7 +118,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener
         {
             InternetAddress s_sender = new InternetAddress(sender_email);
             InternetAddress receiver = new InternetAddress("ali.bilal.said@gmail.com");
-            final String message_text = "Patient: " + fullNameTxt + "Birthday: " + birthdayTxt + " is checking in for appointment at " + timeTxt + ". The patient Email is: " + emailTxt + ".";
+            final String message_text = "Patient: " + fullNameTxt + " Birthday: " + birthdayTxt + " is checking in for appointment at " + timeTxt + ". The patient Email is: " + emailTxt + ".";
             Properties settings = Settings(smtp);
 
 
@@ -136,6 +135,8 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener
 
 
             Toast.makeText(CheckIn.this,"Check-in SuccessFull! Thank You",Toast.LENGTH_LONG).show();
+            Intent Patients = new Intent(this ,PatientsPage.class);
+            startActivity(Patients);
         }
 
     }
