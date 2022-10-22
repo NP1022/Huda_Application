@@ -29,6 +29,7 @@
             android:ems="10"
             android:hint="Patient Name (Printed)"
             android:inputType="text"
+            android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#686868"
@@ -47,6 +48,7 @@
             android:ems="10"
             android:hint="Patient/Guardian Signature"
             android:inputType="text"
+            android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#686868"
@@ -65,6 +67,7 @@
             android:ems="10"
             android:hint="Date (MM/DD/YY)"
             android:inputType="text"
+            android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#686868"
@@ -75,34 +78,19 @@
             tools:ignore="MissingConstraints" />
 
         <Button
-            android:id="@+id/submitPatient2"
-            android:layout_width="243dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/buttonstyle"
-            android:text="Submit"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/nextForm2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.445"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/consentFormDate"
-            tools:ignore="MissingConstraints" />
-
-        <Button
             android:id="@+id/nextForm2"
             android:layout_width="189dp"
             android:layout_height="56dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/buttonstyle"
             android:text="Next Form"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.463"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submitPatient2"
+            app:layout_constraintTop_toBottomOf="@+id/consentFormDate"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -129,6 +117,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="32dp"
 
+            android:layout_marginBottom="31dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
