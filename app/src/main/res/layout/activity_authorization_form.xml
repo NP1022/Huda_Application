@@ -147,7 +147,7 @@
             android:layout_height="56dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="32dp"
-            android:background="#043670"
+            android:background="@drawable/buttonstyle"
             android:text="Next Form"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -80,7 +80,7 @@
             android:layout_height="53dp"
             android:layout_marginTop="28dp"
             android:layout_marginBottom="20dp"
-            android:background="#043670"
+            android:background="@drawable/buttonstyle"
             android:text="Submit"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/nextForm2"
@@ -96,7 +96,7 @@
             android:layout_height="56dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:background="#043670"
+            android:background="@drawable/buttonstyle"
             android:text="Next Form"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -137,7 +137,7 @@
             android:id="@+id/editTextTextMultiLine3"
             android:layout_width="349dp"
             android:layout_height="830dp"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="4dp"
             android:ems="10"
             android:gravity="start|top"
@@ -147,42 +147,7 @@
             android:textColor="#043670"
             app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine6" />
-
-        <EditText
-            android:id="@+id/editTextTextMultiLine5"
-            android:layout_width="295dp"
-            android:layout_height="62dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="57dp"
-            android:ems="10"
-            android:gravity="center_horizontal"
-            android:inputType="textMultiLine"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/patientContractHeader"
-            tools:text="AUTHORIZATION FOR MEDICAL TREATMENT AT CLINIC " />
-
-        <EditText
-            android:id="@+id/editTextTextMultiLine6"
-            android:layout_width="295dp"
-            android:layout_height="62dp"
-            android:layout_marginEnd="57dp"
-            android:layout_marginBottom="13dp"
-            android:ems="10"
-            android:gravity="center_horizontal"
-            android:inputType="textMultiLine"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine5"
-            tools:text="   READ CAREFULLY - THIS IS A CONTRACT " />
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
         <TextView
             android:id="@+id/textView4"
@@ -255,6 +220,22 @@
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="329dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="50dp"
+            android:text="AUTHORIZATION FOR MEDICAL TREATMENT AT CLINIC. READ CAREFULLY - THIS IS A CONTRACT "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientContractHeader" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -41,14 +41,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="376dp"
-        tools:ignore="MissingConstraints"/>
+        app:layout_constraintTop_toBottomOf="@+id/FullName"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/appointmentTime"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#686868"
         android:ems="10"
         android:hint="@string/AppointmentTime"
@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
 
     <EditText
         android:id="@+id/email_checkin"
@@ -81,7 +81,8 @@
         android:id="@+id/checkin"
         android:layout_width="173dp"
         android:layout_height="53dp"
-        android:background="#0151AE"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/buttonstyle"
         android:text="@string/checkIn"
         android:textColor="#ffffff"
         android:textSize="20sp"

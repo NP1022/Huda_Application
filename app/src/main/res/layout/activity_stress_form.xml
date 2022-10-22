@@ -21,7 +21,7 @@
         android:layout_width="189dp"
         android:layout_height="56dp"
         android:layout_marginBottom="20dp"
-        android:background="#043670"
+        android:background="@drawable/buttonstyle"
         android:text="Next Form"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
