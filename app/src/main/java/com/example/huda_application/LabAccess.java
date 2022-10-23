@@ -6,9 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class LabAccess extends AppCompatActivity implements View.OnClickListener{
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+
+public class LabAccess extends AppCompatActivity
+{
+
+    private FirebaseAuth mAuth;
+    DatabaseReference ref;
 
     private TextView patientPortal;
     private String visitReasonTxt,firstNameTxt , lastNameTxt,patientSexTxt,patientDOBTxt,patientHomeNumTxt,patientCellNumTxt,patientAddTxt,
@@ -16,13 +25,19 @@ public class LabAccess extends AppCompatActivity implements View.OnClickListener
             patientEmailTxt,prefLangTxt,translatorTxt,maritalTxt,houseIncomeTxt,houseHoldTxt,occupationTxt,veteranTxt,emergencyNameTxt,relationshipTxt,
             contactPhoneTxt,patientConsentName,patientSignedText,patientSignatureText,consentDateTxt,patientRaceTxt,patientEthnicityTxt,patientIncomeTxt,
             patientEmpTxt,dateTxt,patientSSNTxt;
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lab_access);
         Bundle extras = getIntent().getExtras();
 
-        if (extras != null) {
+        Button buttonSubmit = findViewById(R.id.returnPatientPortal); // set variable for button action
+
+        if (extras != null)
+        {
             dateTxt = extras.getString( "dateTxt");
             lastNameTxt = extras.getString( "lastNameTxt");
             firstNameTxt = extras.getString( "firstNameTxt");
@@ -62,18 +77,40 @@ public class LabAccess extends AppCompatActivity implements View.OnClickListener
 
         }
 
+        DAOPatient dao = new DAOPatient();
+
+        buttonSubmit.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+
+            public void onClick(View view)
+            {
+                Patient patient = new Patient(dateTxt,visitReasonTxt,lastNameTxt,firstNameTxt,patientSexTxt,patientDOBTxt,patientAddTxt,patientCityTxt,patientStateTxt,patientZipCodeTxt,
+                        patientSSNTxt,patientHomeNumTxt,patientCellNumTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,patientEmailTxt,
+                        patientRaceTxt, patientEthnicityTxt, translatorTxt, maritalTxt,houseIncomeTxt, patientIncomeTxt, houseHoldTxt, patientEmpTxt,occupationTxt, veteranTxt, emergencyNameTxt,
+                        relationshipTxt, contactPhoneTxt, patientConsentName, patientSignedText, patientSignatureText, consentDateTxt);
+
+                dao.add(patient).addOnSuccessListener(suc->
+                {
+                    Toast.makeText(LabAccess.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
+                }).addOnFailureListener(er->
+                {
+                    Toast.makeText(LabAccess.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
+                });
+            }
+        });
+
         //Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
-        patientPortal = (TextView) findViewById(R.id.returnPatientPortal);
-        patientPortal.setOnClickListener(this);
 
     }
 
-    @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.returnPatientPortal) {
-            Intent patientPortal = new Intent(this, PatientsPage.class);
-
-            startActivity(patientPortal);
-        }
-    }
 }
+
+//    @Override
+//    public void onClick(View view) {
+//        if (view.getId() == R.id.returnPatientPortal)
+//        {
+//            Intent patientPortal = new Intent(this, PatientsPage.class);
+//            startActivity(patientPortal);
+//        }
+//    }
