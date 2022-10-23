@@ -43,7 +43,7 @@
 
     <TextView
         android:id="@+id/textView28"
-        android:layout_width="381dp"
+        android:layout_width="370dp"
         android:layout_height="21dp"
         android:text="- Get a list of those with whom we've shared information: "
         android:textColor="#000000"
@@ -55,7 +55,7 @@
 
     <TextView
         android:id="@+id/textView29"
-        android:layout_width="383dp"
+        android:layout_width="370dp"
         android:layout_height="21dp"
         android:text="- Get a copy of this privacy notice:"
         android:textColor="#000000"
@@ -67,7 +67,7 @@
 
     <TextView
         android:id="@+id/textView36"
-        android:layout_width="383dp"
+        android:layout_width="370dp"
         android:layout_height="21dp"
         android:text="- File a complaint if you fee your rights are violated:"
         android:textColor="#000000"
@@ -79,7 +79,7 @@
 
     <TextView
         android:id="@+id/textView34"
-        android:layout_width="383dp"
+        android:layout_width="370dp"
         android:layout_height="21dp"
         android:text="- Choose someone to act for you:"
         android:textColor="#000000"
@@ -124,7 +124,7 @@
 
     <TextView
         android:id="@+id/textView27"
-        android:layout_width="381dp"
+        android:layout_width="370dp"
         android:layout_height="21dp"
         android:text="- Ask us to limit what we use or share:"
         android:textColor="#000000"
