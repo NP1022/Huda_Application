@@ -136,11 +136,12 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="346dp"
+        android:layout_width="339dp"
         android:layout_height="98dp"
         android:text="- You can ask us to correct your health and claims records if you think they are incorrect or incomplete. Ask us how to do this.\n- We may say 'No' to your request, but we will tell you why in writing within 60 days."
         android:textColor="#000000"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="@+id/textView19"
         app:layout_constraintStart_toStartOf="@+id/textView19"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
@@ -162,7 +163,7 @@
         android:id="@+id/hudaLogo10"
         android:layout_width="98dp"
         android:layout_height="106dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="28dp"
 
         app:layout_constraintStart_toStartOf="parent"
@@ -172,13 +173,14 @@
     <TextView
         android:id="@+id/patientInfoHeader"
         android:layout_width="276dp"
-        android:layout_height="77dp"
+        android:layout_height="80dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="28dp"
         android:background="@color/white"
         android:text="Patient Information Form"
         android:textAlignment="center"
         android:textColor="#043670"
+        app:layout_constraintLeft_toRightOf="@id/hudaLogo10"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -199,9 +201,10 @@
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="378dp"
+        android:layout_width="360dp"
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="25dp"
         android:text="- Then it comes to your health information, you have certain rights. This section explains your rights and some of our responsibilities to help you. Ask us how to do this.\n"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="@+id/textView9"
@@ -233,7 +236,7 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="383dp"
+        android:layout_width="340dp"
         android:layout_height="21dp"
         android:text="- Request confidential communications:"
         android:textColor="#000000"
@@ -265,11 +268,11 @@
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="383dp"
+        android:layout_width="350dp"
         android:layout_height="66dp"
         android:layout_marginStart="13dp"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="13dp"
+        android:layout_marginEnd="35dp"
         android:text="Your Information. Your Rights. Our Responsibilities\nThis notice describes how medical information about you may be used and disclosed and how you can get access to this information."
         android:textAlignment="center"
         android:textColor="#000000"

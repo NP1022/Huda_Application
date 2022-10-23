@@ -55,7 +55,7 @@
             android:layout_height="276dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="34dp"
-            android:layout_marginEnd="39dp"
+            android:layout_marginEnd="15dp"
             android:layout_marginBottom="8dp"
             android:text="Occasionally it is necessary for the HUDA Clinic to consult with other providers, such as specialists or other facilities, such as hospitals or labs to provide you, our patient, with what our providers believe to be the most appropriate course of action for your treatment. By signing this form, you give us, HUDA Clinic, permission to share your pertinent medical information with other providers/facilities to best complete your treatment or request medical records from previous providers on your behalf."
             android:textAlignment="textStart"
