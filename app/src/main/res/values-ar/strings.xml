@@ -126,4 +126,20 @@
     <string name = "EnterCheckinEmail">أدخل البريد الإلكتروني</string>
     <string name = "CheckInButton">تحقق في</string>
 
+    <!--    Contact Us Page-->
+    <string name = "ContactUsHeader">اتصل بنا</string>
+    <string name = "ContactUsPara">هدى ، عيادة صحية مجتمعية\n مجانية في مترو ديترويت</string>
+    <string name = "CallHeader">مكالمة:</string>
+    <string name = "ClinicPhone">(313) 865-8446</string>
+    <string name = "AddressHeader">تبوك:</string>
+    <string name = "ClinicAddress">13240 Woodrow Wilson St.\nDetroit, MI 48238</string>
+    <string name = "SocialMediaHeader">تجدنا على:</string>
+
+    <!--    Our Story Page-->
+    <string name = "OurStoryHeader"> قصتنا </string>
+    <string name = "History">تاريخ عيادة هدى</string>
+    <string name = "HistoryPara">افتتحت عيادة هدى أبوابها لأول مرة في مايو 2004 لخدمة السكان غير المؤمن عليهم في منطقة ديترويت. كانت العيادة تعمل في البداية على الأموال التي جمعتها الجالية المسلمة في مترو ديترويت</string>
+    <string name = "HistoryParaTwo">عندما بدأت عيادة هدى ، قدمت الخدمات الطبية فقط. ثم انتقلنا من منشأتنا الأصلية في المركز الإسلامي في ديترويت إلى منشأة جديدة أكبر في شارع وودرو ويلسون. منذ ذلك الحين ، قمنا بتوسيع نطاق رعايتنا لتشمل مجموعة كاملة من خدمات طب الأسنان ، والعناية بالبصر ، والأقدام ، وخدمات الصحة العقلية ، بالإضافة إلى عدد كبير من الخدمات المتخصصة المتاحة مجانًا لمرضانا. سمحت لنا منشأتنا الجديدة بتوسيع خدماتنا وأوقات خدمتنا ، لكن لن يكون أي من ذلك ممكنًا بدون الدعم السخي من المتبرعين والمتطوعين.</string>
+
+
 </resources>

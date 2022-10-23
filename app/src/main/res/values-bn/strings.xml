@@ -123,4 +123,17 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name = "EnterCheckinEmail">ইমেইল প্রদান করুন</string>
     <string name = "CheckInButton">চেক ইন</string>
 
+    <!--    Contact Us Page-->
+    <string name = "ContactUsHeader">যোগাযোগ করুন</string>
+    <string name = "ContactUsPara">HUDA, একটি বিনামূল্যের কমিউনিটি হেলথ ক্লিনিক\nমেট্রো ডেট্রয়েটে</string>
+    <string name = "CallHeader">কল করুন:</string>
+    <string name = "ClinicPhone">(313) 865-8446</string>
+    <string name = "AddressHeader">ঠিকানা:</string>
+    <string name = "ClinicAddress">13240 Woodrow Wilson St.\nDetroit, MI 48238</string>
+    <string name = "SocialMediaHeader">আমাদের খুঁজে:</string>
+
+    <string name = "OurStoryHeader">আমাদের গল্প</string>
+    <string name = "History">HUDA ক্লিনিকের ইতিহাস</string>
+    <string name = "HistoryPara">HUDA ক্লিনিক প্রথম মে 2004 সালে ডেট্রয়েট এলাকার বীমাবিহীন জনগণের সেবা করার জন্য তার দরজা খুলেছিল। ক্লিনিকটি প্রাথমিকভাবে মেট্রো ডেট্রয়েটের মুসলিম সম্প্রদায়ের দ্বারা সংগৃহীত তহবিল দ্বারা পরিচালিত হয়েছিল।</string>
+    <string name = "HistoryParaTwo">যখন এটি শুরু হয়েছিল, তখন HUDA ক্লিনিক শুধুমাত্র চিকিৎসা সেবা প্রদান করে। আমরা তখন ডেট্রয়েটের মুসলিম সেন্টারে আমাদের মূল সুবিধা থেকে উড্রো উইলসন স্ট্রিটে একটি নতুন, বড় সুবিধায় চলে আসি। তারপর থেকে, আমরা দাঁতের, দৃষ্টি যত্ন, পোডিয়াট্রি এবং মানসিক স্বাস্থ্য পরিষেবাগুলির সম্পূর্ণ পরিসরের পাশাপাশি আমাদের রোগীদের জন্য বিনা খরচে উপলব্ধ বিশেষ পরিষেবাগুলির আধিক্য অন্তর্ভুক্ত করার জন্য আমাদের যত্নকে প্রসারিত করেছি। আমাদের নতুন সুবিধা আমাদের পরিষেবাগুলি এবং আমাদের পরিষেবার সময়গুলিকে প্রসারিত করার অনুমতি দিয়েছে, কিন্তু আমাদের দাতা এবং স্বেচ্ছাসেবকদের উদার সমর্থন ছাড়া এর কিছুই সম্ভব হবে না৷</string>
 </resources>

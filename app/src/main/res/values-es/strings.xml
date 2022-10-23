@@ -30,7 +30,7 @@
     <string name="story">Nuestra Historia</string>
     <string name="partners">Socios</string>
     <string name="contact">Contacta con Nosotros</string>
-    <string name="patients_page">Portal de Pacientes</string>
+    <string name="patients_page">Pacientes</string>
     <string name="healthservices">Servicios de salud gratuitos</string>
     <string name="PrimaryCare">Atención Primaria</string>
     <string name="MentalCare">Cuidado Mental</string>
@@ -123,4 +123,20 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "AppointmentTime">Hora de La Cita</string>
     <string name = "EnterCheckinEmail">Ingrese Correo Electrónico</string>
     <string name = "CheckInButton">Registrarse</string>
+
+    <!--    Contact Us Page-->
+    <string name = "ContactUsHeader">Contacta Con Nosotros</string>
+    <string name = "ContactUsPara">HUDA, una clínica de salud comunitaria gratuita\nen Metro Detroit</string>
+    <string name = "CallHeader">Llamar:</string>
+    <string name = "ClinicPhone">(313) 865-8446</string>
+    <string name = "AddressHeader">Dirección:</string>
+    <string name = "ClinicAddress">13240 Woodrow Wilson St.\nDetroit, MI 48238</string>
+    <string name = "SocialMediaHeader">Encuéntranos en:</string>
+
+<!--    Our Story Page-->
+    <string name = "OurStoryHeader">Nuestra historia</string>
+    <string name = "History">Historia de la Clínica HUDA</string>
+    <string name = "HistoryPara">La Clínica HUDA abrió sus puertas por primera vez en mayo de 2004 para atender a la población sin seguro del área de Detroit. La clínica funcionó inicialmente con fondos recaudados por la comunidad musulmana de Metro Detroit.</string>
+    <string name = "HistoryParaTwo">Cuando comenzó, la Clínica HUDA brindaba únicamente servicios médicos. Luego nos mudamos de nuestra instalación original en el Centro Musulmán de Detroit a una instalación nueva y más grande en Woodrow Wilson Street. Desde entonces, hemos ampliado nuestra atención para incluir una gama completa de servicios dentales, de atención de la vista, de podología y de salud mental, así como una plétora de servicios especializados disponibles sin costo para nuestros pacientes. Nuestras nuevas instalaciones nos han permitido ampliar nuestros servicios y nuestros tiempos de servicio, pero nada de eso sería posible sin el generoso apoyo de nuestros donantes y voluntarios.</string>
+
 </resources>

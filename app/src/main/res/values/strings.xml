@@ -123,5 +123,18 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name = "EnterCheckinEmail">Enter Email</string>
     <string name = "CheckInButton">Check-In</string>
 
+<!--    Contact Us Page-->
+    <string name = "ContactUsHeader">Contact Us</string>
+    <string name = "ContactUsPara">HUDA, a Free Community Health Clinic\nin Metro Detroit</string>
+    <string name = "CallHeader">Call:</string>
+    <string name = "ClinicPhone">(313) 865-8446</string>
+    <string name = "AddressHeader">Address:</string>
+    <string name = "ClinicAddress">13240 Woodrow Wilson St.\nDetroit, MI 48238</string>
+    <string name = "SocialMediaHeader">Find Us On:</string>
 
+<!--    Our Story Page-->
+    <string name = "OurStoryHeader">Our Story</string>
+    <string name = "History">History of the HUDA Clinic</string>
+    <string name = "HistoryPara">HUDA Clinic first opened its doors in May 2004 to serve the uninsured population of the Detroit area. The clinic initially operated on funds gathered by the Muslim community of Metro Detroit.</string>
+    <string name = "HistoryParaTwo">When it began, the HUDA Clinic provided solely medical services.  We then moved from our original facility at the Muslim Center of Detroit into a new, larger facility on Woodrow Wilson Street. Since then, we have expanded our care to include a full range of dental, vision care, podiatry, and mental health services, as well as a plethora of specialty services available at no-cost to our patients. Our new facility has allowed us to expand our services and our service times, but none of that would be possible without the generous support of our donors and volunteers.</string>
 </resources>
