@@ -25,7 +25,7 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="@+id/textView54"
         app:layout_constraintStart_toStartOf="@+id/textView54"
-        tools:layout_editor_absoluteY="2187dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
     <TextView
         android:id="@+id/textView59"
@@ -44,7 +44,7 @@
         android:text="\t\t- We may disclose your health information to your health plan sponsor for plan administration."
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="@+id/textView61"
-        tools:layout_editor_absoluteY="2471dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView61" />
 
     <TextView
         android:id="@+id/textView57"
@@ -55,7 +55,7 @@
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/textView56"
         app:layout_constraintStart_toStartOf="@+id/textView56"
-        tools:layout_editor_absoluteY="2275dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView56" />
 
     <TextView
         android:id="@+id/textView56"
@@ -66,7 +66,7 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="@+id/textView55"
         app:layout_constraintStart_toStartOf="@+id/textView55"
-        tools:layout_editor_absoluteY="2231dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView55" />
 
     <TextView
         android:id="@+id/textView60"
@@ -88,7 +88,7 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="@+id/textView62"
         app:layout_constraintStart_toStartOf="@+id/textView62"
-        tools:layout_editor_absoluteY="2516dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView62" />
 
     <TextView
         android:id="@+id/textView54"
@@ -111,7 +111,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView57"
         app:layout_constraintStart_toStartOf="@+id/textView57"
-        tools:layout_editor_absoluteY="2324dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView57" />
 
     <TextView
         android:id="@+id/textView61"
@@ -122,7 +122,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView60"
         app:layout_constraintStart_toStartOf="@+id/textView60"
-        tools:layout_editor_absoluteY="2446dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView60" />
 
     <TextView
         android:id="@+id/textView17"
@@ -156,15 +156,6 @@
         app:layout_constraintEnd_toEndOf="@+id/textView21"
         app:layout_constraintStart_toStartOf="@+id/textView21"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
-        android:text="- Then it comes to your health information, you have certain rights. This section explains your rights and some of our responsibilities to help you. Ask us how to do this.\n"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="330dp" />
 
     <TextView
         android:id="@+id/textView26"
