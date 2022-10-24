@@ -326,12 +326,14 @@
         android:id="@+id/nextForm6"
         android:layout_width="189dp"
         android:layout_height="56dp"
+        android:layout_marginTop="7dp"
         android:background="#043670"
         android:text="Next Form"
         android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="2727dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView64"
+        app:layout_constraintStart_toStartOf="@+id/textView64"
+        app:layout_constraintTop_toBottomOf="@+id/textView64"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/hudaLogo10"
