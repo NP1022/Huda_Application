@@ -18,7 +18,8 @@ public class Contact_Us extends AppCompatActivity implements View.OnClickListene
     private ImageView Facebook, Twitter, LinkedIn, Instagram;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
         HUDAnumber = (TextView) findViewById(R.id.HUDAnumber);
@@ -27,6 +28,8 @@ public class Contact_Us extends AppCompatActivity implements View.OnClickListene
         Twitter = (ImageView) findViewById(R.id.twitter);
         LinkedIn = (ImageView) findViewById(R.id.linkedIn);
         Instagram = (ImageView) findViewById(R.id.instagram);
+
+
 
         HUDAnumber.setOnClickListener((View.OnClickListener) this);
         HUDAaddresss.setOnClickListener((View.OnClickListener) this);
@@ -37,13 +40,16 @@ public class Contact_Us extends AppCompatActivity implements View.OnClickListene
     }
 
     @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.HUDAnumber) {
+    public void onClick(View view)
+    {
+        if (view.getId() == R.id.HUDAnumber)
+        {
             Intent HUDACall = new Intent(Intent.ACTION_DIAL);
             HUDACall.setData(Uri.parse("tel:3138658446"));
             startActivity(HUDACall);
         }
-        else if (view.getId() == R.id.HUDAaddress) {
+        else if (view.getId() == R.id.HUDAaddress)
+        {
             Uri HUDAAddress = Uri.parse("google.navigation:q=13240+Woodrow+Wilson+St+Detroit+MI+48238");
             Intent HUDAMap = new Intent(Intent.ACTION_VIEW, HUDAAddress);
             HUDAMap.setPackage("com.google.android.apps.maps");

@@ -96,22 +96,40 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener
             fullname.setError("Name is required");
             fullname.requestFocus();
         }
-        else if(TextUtils.isEmpty(birthdayTxt) || !DATE_PATTERN.matcher(birthdayTxt).matches())
+        else if(TextUtils.isEmpty(birthdayTxt))
         {
             Toast.makeText(CheckIn.this,"Birthday cannot be empty",Toast.LENGTH_LONG).show();
             Birthday.setError("Birthday is required");
             Birthday.requestFocus();
         }
-        else if(TextUtils.isEmpty(emailTxt) || !Patterns.EMAIL_ADDRESS.matcher(emailTxt).matches())
+        else if(!DATE_PATTERN.matcher(birthdayTxt).matches())
+        {
+            Toast.makeText(CheckIn.this,"Birthday must MM-DD-YYYY",Toast.LENGTH_LONG).show();
+            Birthday.setError("Birthday format is required");
+            Birthday.requestFocus();
+        }
+        else if(TextUtils.isEmpty(emailTxt))
         {
             Toast.makeText(CheckIn.this,"Email cannot be empty",Toast.LENGTH_LONG).show();
             email.setError("Email is required");
             email.requestFocus();
         }
-        else if(TextUtils.isEmpty(timeTxt) || !TIME_PATTERN.matcher(timeTxt).matches())
+        else if(!Patterns.EMAIL_ADDRESS.matcher(emailTxt).matches())
+        {
+            Toast.makeText(CheckIn.this,"Email must an @ and .com",Toast.LENGTH_LONG).show();
+            email.setError("Email format is required");
+            email.requestFocus();
+        }
+        else if(TextUtils.isEmpty(timeTxt))
         {
             Toast.makeText(CheckIn.this,"Time cannot be empty",Toast.LENGTH_LONG).show();
             time.setError("Time is required");
+            time.requestFocus();
+        }
+        else if(!TIME_PATTERN.matcher(timeTxt).matches())
+        {
+            Toast.makeText(CheckIn.this,"Time must 00:00 AM or PM",Toast.LENGTH_LONG).show();
+            time.setError("Time format is required");
             time.requestFocus();
         }
         else

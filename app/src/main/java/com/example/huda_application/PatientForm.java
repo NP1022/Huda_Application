@@ -520,6 +520,7 @@ public class PatientForm extends AppCompatActivity implements View.OnClickListen
                       patientRaceTxt, patientEthnicityTxt, translatorTxt, maritalTxt,houseIncomeTxt, patientIncomeTxt, houseHoldTxt, patientEmpTxt,occupationTxt, veteranTxt, emergencyNameTxt,
                       relationshipTxt, contactPhoneTxt, patientConsentName, patientSignedText, patientSignatureText, consentDateTxt);
 
+
                       dao.add(patient).addOnSuccessListener(suc->
                       {
                       Toast.makeText(PatientForm.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
