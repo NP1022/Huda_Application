@@ -136,7 +136,18 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name = "OurStoryHeader">Notre Histoire</string>
     <string name = "History">Histoire de La Clinique HUDA</string>
     <string name = "HistoryPara">La clinique HUDA a ouvert ses portes en mai 2004 pour servir la population non assurée de la région de Detroit. La clinique fonctionnait initialement grâce aux fonds recueillis par la communauté musulmane de Metro Detroit.</string>
-    <string name = "HistoryParaTwo">À ses débuts, la clinique HUDA fournissait uniquement des services médicaux. Nous avons ensuite déménagé de notre installation d\'origine au Muslim Center de Detroit dans une nouvelle installation plus grande sur Woodrow Wilson Street. Depuis lors, nous avons élargi nos soins pour inclure une gamme complète de services dentaires, de soins de la vue, de podiatrie et de santé mentale, ainsi qu\'une pléthore de services spécialisés disponibles sans frais pour nos patients. Notre nouvelle installation nous a permis d'étendre nos services et nos heures de service, mais rien de tout cela ne serait possible sans le généreux soutien de nos donateurs et bénévoles.</string>
+    <string name = "HistPara">À ses débuts, la clinique HUDA fournissait uniquement des services médicaux. Nous avons ensuite déménagé de notre installation d\'origine au Muslim Center de Detroit dans une nouvelle installation plus grande sur Woodrow Wilson Street. Depuis lors, nous avons élargi nos soins pour inclure une gamme complète de services dentaires, de soins de la vue, de podiatrie et de santé mentale, ainsi qu\'une pléthore de services spécialisés disponibles sans frais pour nos patients. Notre nouvelle installation nous a permis d\'étendre nos services et nos heures de service, mais rien de tout cela ne serait possible sans le généreux soutien de nos donateurs et bénévoles.</string>
 
+
+    <!--    Announcements Page-->
+    <string name = "AnnouncementsHeader">Annonces</string>
+    <string name = "ClosureHeader">Dates de Fermeture des fêtes 2022</string>
+    <string name = "Date1">Mercredi 23 Novembre 2022 - Lundi 28 Novembre 2022</string>
+    <string name = "Date2">Samedi 24 Décembre 2022</string>
+    <string name = "Date3">Samedi 31 Décembre 2022</string>
+    <string name = "Event1">Action de Grâces</string>
+    <string name = "Event2">Réveillon de Noël</string>
+    <string name = "Event3">Réveillon de Nouvel An</string>
+    <string name = "CalendarHeader">Calendrier de la Clinique</string>
 
 </resources>

@@ -137,6 +137,17 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "OurStoryHeader">Nuestra historia</string>
     <string name = "History">Historia de la Clínica HUDA</string>
     <string name = "HistoryPara">La Clínica HUDA abrió sus puertas por primera vez en mayo de 2004 para atender a la población sin seguro del área de Detroit. La clínica funcionó inicialmente con fondos recaudados por la comunidad musulmana de Metro Detroit.</string>
-    <string name = "HistoryParaTwo">Cuando comenzó, la Clínica HUDA brindaba únicamente servicios médicos. Luego nos mudamos de nuestra instalación original en el Centro Musulmán de Detroit a una instalación nueva y más grande en Woodrow Wilson Street. Desde entonces, hemos ampliado nuestra atención para incluir una gama completa de servicios dentales, de atención de la vista, de podología y de salud mental, así como una plétora de servicios especializados disponibles sin costo para nuestros pacientes. Nuestras nuevas instalaciones nos han permitido ampliar nuestros servicios y nuestros tiempos de servicio, pero nada de eso sería posible sin el generoso apoyo de nuestros donantes y voluntarios.</string>
+    <string name = "HistPara">Cuando comenzó, la Clínica HUDA brindaba únicamente servicios médicos. Luego nos mudamos de nuestra instalación original en el Centro Musulmán de Detroit a una instalación nueva y más grande en Woodrow Wilson Street. Desde entonces, hemos ampliado nuestra atención para incluir una gama completa de servicios dentales, de atención de la vista, de podología y de salud mental, así como una plétora de servicios especializados disponibles sin costo para nuestros pacientes. Nuestras nuevas instalaciones nos han permitido ampliar nuestros servicios y nuestros tiempos de servicio, pero nada de eso sería posible sin el generoso apoyo de nuestros donantes y voluntarios.</string>
+
+    <!--    Announcements Page-->
+    <string name = "AnnouncementsHeader">Anuncios</string>
+    <string name = "ClosureHeader">Fechas de Cierre de Vacaciones de 2022</string>
+    <string name = "Date1">23 de Noviembre de 2022 - 28 de Noviembre de 2022</string>
+    <string name = "Date2">24 de Diciembre de 2022</string>
+    <string name = "Date3">31 de Diciembre de 2022</string>
+    <string name = "Event1">Acción de Gracias</string>
+    <string name = "Event2">Nochebuena</string>
+    <string name = "Event3">Vispera de Año Nuevo</string>
+    <string name = "CalendarHeader">Calendario de la Clínica</string>
 
 </resources>

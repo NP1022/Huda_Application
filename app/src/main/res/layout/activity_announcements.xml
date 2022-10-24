@@ -27,8 +27,9 @@
             android:id="@+id/announcementsHeader"
             android:layout_width="236dp"
             android:layout_height="55dp"
+            android:layout_marginStart="1dp"
             android:layout_marginTop="48dp"
-            android:layout_marginEnd="14dp"
+            android:layout_marginEnd="5dp"
             android:background="@color/white"
             android:text="Announcements"
             android:textAlignment="center"
@@ -41,8 +42,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="5dp"
@@ -55,7 +56,7 @@
             android:id="@+id/announcementsHeader2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="80dp"
             android:text="2022 Holiday Closure Dates"
             android:textAlignment="center"
             android:textColor="#043670"
@@ -69,101 +70,100 @@
             android:id="@+id/announcementsHeader3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40sp"
+            android:layout_marginBottom="10dp"
             android:text="Clinic Calendar"
             android:textAlignment="center"
             android:textColor="#043670"
             android:textSize="25sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/calendarWebView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/date3" />
+            app:layout_constraintTop_toBottomOf="@+id/divider35" />
 
         <TextView
             android:id="@+id/date1"
-            android:layout_width="230dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="40dp"
+            android:layout_width="215dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="7dp"
             android:text="Wednesday November 23, 2022 - Monday November 28th , 2022"
             android:textColor="#043670"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintEnd_toStartOf="@+id/holiday1"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/announcementsHeader2" />
+            app:layout_constraintTop_toBottomOf="@+id/divider39" />
 
         <TextView
             android:id="@+id/date2"
-            android:layout_width="227dp"
+            android:layout_width="215dp"
             android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
             android:text="Saturday December 24th, 2022"
             android:textColor="#043670"
             android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/holiday2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/date1" />
 
         <TextView
             android:id="@+id/date3"
-            android:layout_width="227dp"
+            android:layout_width="215dp"
             android:layout_height="30dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
             android:text="Saturday December 31st, 2022"
             android:textColor="#043670"
             android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/holiday3"
             app:layout_constraintTop_toBottomOf="@+id/date2" />
 
         <TextView
             android:id="@+id/holiday1"
             android:layout_width="147dp"
             android:layout_height="29dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="15dp"
             android:text="Thanksgiving"
             android:textColor="#043670"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/date1"
-            app:layout_constraintTop_toBottomOf="@+id/announcementsHeader2" />
+            app:layout_constraintStart_toEndOf="@+id/divider38"
+            app:layout_constraintTop_toBottomOf="@+id/divider39" />
 
         <TextView
             android:id="@+id/holiday2"
             android:layout_width="147dp"
             android:layout_height="29dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="14dp"
             android:text="Christmas Eve"
             android:textColor="#043670"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
-            app:layout_constraintStart_toEndOf="@+id/date2"
-            app:layout_constraintTop_toBottomOf="@+id/holiday1" />
+            app:layout_constraintStart_toEndOf="@+id/divider38"
+            app:layout_constraintTop_toBottomOf="@+id/divider36" />
 
         <TextView
             android:id="@+id/holiday3"
             android:layout_width="147dp"
             android:layout_height="29dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="21dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="New Year's Eve"
             android:textColor="#043670"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/date3"
-            app:layout_constraintTop_toBottomOf="@+id/holiday2" />
+            app:layout_constraintStart_toEndOf="@+id/divider38"
+            app:layout_constraintTop_toBottomOf="@+id/divider37" />
 
         <WebView
             android:id="@+id/calendarWebView"
             android:layout_width="380dp"
             android:layout_height="600dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="2dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -171,29 +171,66 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/announcementsHeader3" />
 
-        <TableLayout
+        <View
+            android:id="@+id/divider35"
             android:layout_width="407dp"
-            android:layout_height="38dp"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="406dp">
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="22dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#686868"
+            app:layout_constraintBottom_toTopOf="@+id/announcementsHeader3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date3" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
+        <View
+            android:id="@+id/divider36"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date1" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+        <View
+            android:id="@+id/divider39"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="1dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#686868"
+            app:layout_constraintBottom_toTopOf="@+id/divider38"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/announcementsHeader2" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+        <View
+            android:id="@+id/divider37"
+            android:layout_width="407dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#686868"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date2" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </TableLayout>
+        <View
+            android:id="@+id/divider38"
+            android:layout_width="1dp"
+            android:layout_height="155dp"
+            android:layout_marginTop="248dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="706dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#686868"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/holiday1"
+            app:layout_constraintStart_toEndOf="@+id/date1"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
