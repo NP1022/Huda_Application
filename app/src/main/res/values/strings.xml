@@ -40,112 +40,112 @@
     <string name="checkIn">Check-in</string>
     <string name="MedicalChart">Medical Chart</string>
 
-<!--    Patient Form Strings -->
-    <string name = "Registration">Registration</string>
+    <!--    Patient Form Strings -->
+    <string name="Registration">Registration</string>
     <string name="Date">Date (MM/DD/YY)</string>
     <string name="VisitReason">Visit Reason</string>
     <string name="Sex">Sex</string>
     <string name="DOB">DOB (MM/DD/YYYY)</string>
     <string name="Address">Address (1234 Street St.)</string>
-    <string name = "City">City</string>
-    <string name = "State">State</string>
-    <string name = "ZipCode">Zip Code</string>
-    <string name = "SSN">SSN (123-12-1234)</string>
-    <string name = "HomePhone">Home Phone (123-123-1234)</string>
-    <string name = "CellPhone">Cell Phone (123-123-1234)</string>
-    <string name = "PreferredNumber">Preferred Number (Home or Mobile)</string>
-    <string name = "ConsentToCall">Consent to Call? (Yes or No)</string>
-    <string name = "ConsentToText">Consent to Text? (Yes or No)</string>
-    <string name = "InsuranceProvider">Insurance Provider</string>
-    <string name = "Email">Email (Same as Registration Email)</string>
+    <string name="City">City</string>
+    <string name="State">State</string>
+    <string name="ZipCode">Zip Code</string>
+    <string name="SSN">SSN (123-12-1234)</string>
+    <string name="HomePhone">Home Phone (123-123-1234)</string>
+    <string name="CellPhone">Cell Phone (123-123-1234)</string>
+    <string name="PreferredNumber">Preferred Number (Home or Mobile)</string>
+    <string name="ConsentToCall">Consent to Call? (Yes or No)</string>
+    <string name="ConsentToText">Consent to Text? (Yes or No)</string>
+    <string name="InsuranceProvider">Insurance Provider</string>
+    <string name="Email">Email (Same as Registration Email)</string>
 
-    <string name = "SelectRace">Please Select a Race:</string>
-    <string name = "Black">Black/African American</string>
-    <string name = "White">White/Caucasian</string>
-    <string name = "Asian">Asian</string>
-    <string name = "MiddleEastern">Middle Eastern/North African</string>
-    <string name = "Hispanic">Hispanic/Latino</string>
-    <string name = "NativeAmerican">Native American</string>
-    <string name = "NativeHawaiian">Native Hawaiian or Other Pacific Islander</string>
+    <string name="SelectRace">Please Select a Race:</string>
+    <string name="Black">Black/African American</string>
+    <string name="White">White/Caucasian</string>
+    <string name="Asian">Asian</string>
+    <string name="MiddleEastern">Middle Eastern/North African</string>
+    <string name="Hispanic">Hispanic/Latino</string>
+    <string name="NativeAmerican">Native American</string>
+    <string name="NativeHawaiian">Native Hawaiian or Other Pacific Islander</string>
 
-    <string name = "SelectEthnicity">Please Select an Ethnicity:</string>
-    <string name = "HispanicEthnicity">Hispanic or Latino/a</string>
-    <string name = "NotHispanicEthnicity">Not Hispanic or Latino/a</string>
-    <string name = "PreferredLanguage">Preferred Language</string>
-    <string name = "Translator">Translator Needed? (Yes or No)</string>
-    <string name = "SocialInfo">The following information does NOT affect your right to care at HUDA, but it is needed to continue providing our free services.</string>
+    <string name="SelectEthnicity">Please Select an Ethnicity:</string>
+    <string name="HispanicEthnicity">Hispanic or Latino/a</string>
+    <string name="NotHispanicEthnicity">Not Hispanic or Latino/a</string>
+    <string name="PreferredLanguage">Preferred Language</string>
+    <string name="Translator">Translator Needed? (Yes or No)</string>
+    <string name="SocialInfo">The following information does NOT affect your right to care at HUDA, but it is needed to continue providing our free services.</string>
 
-    <string name = "MaritalStatus">Marital Status</string>
-    <string name = "HouseholdIncome">Household Income</string>
+    <string name="MaritalStatus">Marital Status</string>
+    <string name="HouseholdIncome">Household Income</string>
 
 
     <string name="Every">Every</string>
-    <string name = "Week">Week</string>
-    <string name = "TwoWeeks">Two Weeks</string>
-    <string name = "Months">Month</string>
-    <string name = "Year">Year</string>
-    <string name = "HouseholdSize">Household Size</string>
+    <string name="Week">Week</string>
+    <string name="TwoWeeks">Two Weeks</string>
+    <string name="Months">Month</string>
+    <string name="Year">Year</string>
+    <string name="HouseholdSize">Household Size</string>
 
-    <string name = "EmploymentStatus">Employment Status</string>
-    <string name = "Unemployed">Unemployed</string>
-    <string name = "EmployedFullTime">Employed (Full Time)</string>
-    <string name = "EmployedPartTime">Employed (Part Time)</string>
-    <string name = "SelfEmployed">Self-Employed</string>
-    <string name = "Student">Student</string>
-    <string name = "Retired">Retired</string>
-    <string name = "SeekingEmployment">Seeking Employment</string>
-    <string name = "Occupation">Occupation</string>
-    <string name = "VeteranStatus">Are you a Veteran?</string>
-    <string name = "EmergencyContact">Emergency Contact Information</string>
-    <string name = "EmergencyContactName">Name</string>
-    <string name = "RelationshipToPatient">Relationship to Patient</string>
-    <string name = "EmergencyContactPhone">Contact Phone (123-123-1234)</string>
-    <string name = "I">I,</string>
-    <string name = "PatientConsent">voluntarily accept treatment/counseling as recommended and
+    <string name="EmploymentStatus">Employment Status</string>
+    <string name="Unemployed">Unemployed</string>
+    <string name="EmployedFullTime">Employed (Full Time)</string>
+    <string name="EmployedPartTime">Employed (Part Time)</string>
+    <string name="SelfEmployed">Self-Employed</string>
+    <string name="Student">Student</string>
+    <string name="Retired">Retired</string>
+    <string name="SeekingEmployment">Seeking Employment</string>
+    <string name="Occupation">Occupation</string>
+    <string name="VeteranStatus">Are you a Veteran?</string>
+    <string name="EmergencyContact">Emergency Contact Information</string>
+    <string name="EmergencyContactName">Name</string>
+    <string name="RelationshipToPatient">Relationship to Patient</string>
+    <string name="EmergencyContactPhone">Contact Phone (123-123-1234)</string>
+    <string name="I">I,</string>
+    <string name="PatientConsent">voluntarily accept treatment/counseling as recommended and
 explained by the HUDA staff. I understand that I am free to withdraw my consent and discontinue treatment at any time.
 In addition, I have been informed of my rights to refuse to participate in research activities. I understand that I have rights
 as a recipient of free services provided by the HUDA Clinic. I have been advised on the HUDA Clinic’s NO CALL NO SHOW
 Policy regarding primary care and specialty services and agree to follow it. Further, I have been advised of the Federal
 Confidentiality Regulation and been given a copy of the Confidentiality Notice to review.</string>
-    <string name = "YourName">Your Name</string>
-    <string name = "VoluntaryConsent">voluntarily accept treatment/counseling as recommended </string>
-    <string name = "PatientNamePrinted">Patient Name (Printed)</string>
-    <string name = "PatientSignature">Patient/Guardian Signature</string>
-    <string name = "TodayDate">Date (MM/DD/YYYY)</string>
-    <string name = "SubmitForm">Submit</string>
-    <string name = "NextForm">Next Form</string>
+    <string name="YourName">Your Name</string>
+    <string name="VoluntaryConsent">voluntarily accept treatment/counseling as recommended </string>
+    <string name="PatientNamePrinted">Patient Name (Printed)</string>
+    <string name="PatientSignature">Patient/Guardian Signature</string>
+    <string name="TodayDate">Date (MM/DD/YYYY)</string>
+    <string name="SubmitForm">Submit</string>
+    <string name="NextForm">Next Form</string>
 
 
-<!--Appointment Check-In Page-->
-    <string name = "FullName">Full Name</string>
-    <string name = "Birthday">Birthday</string>
-    <string name = "AppointmentTime">Appointment Time</string>
-    <string name = "EnterCheckinEmail">Enter Email</string>
-    <string name = "CheckInButton">Check-In</string>
+    <!--Appointment Check-In Page-->
+    <string name="FullName">Full Name</string>
+    <string name="Birthday">Birthday</string>
+    <string name="AppointmentTime">Appointment Time</string>
+    <string name="EnterCheckinEmail">Enter Email</string>
+    <string name="CheckInButton">Check-In</string>
 
-<!--    Contact Us Page-->
-    <string name = "ContactUsHeader">Contact Us</string>
-    <string name = "ContactUsPara">HUDA, a Free Community Health Clinic\nin Metro Detroit</string>
-    <string name = "CallHeader">Call:</string>
-    <string name = "ClinicPhone">(313) 865-8446</string>
-    <string name = "AddressHeader">Address:</string>
-    <string name = "ClinicAddress">13240 Woodrow Wilson St.\nDetroit, MI 48238</string>
-    <string name = "SocialMediaHeader">Find Us On:</string>
+    <!--    Contact Us Page-->
+    <string name="ContactUsHeader">Contact Us</string>
+    <string name="ContactUsPara">HUDA, a Free Community Health Clinic\nin Metro Detroit</string>
+    <string name="CallHeader">Call:</string>
+    <string name="ClinicPhone">(313) 865-8446</string>
+    <string name="AddressHeader">Address:</string>
+    <string name="ClinicAddress">13240 Woodrow Wilson St.\nDetroit, MI 48238</string>
+    <string name="SocialMediaHeader">Find Us On:</string>
 
-<!--    Our Story Page-->
-    <string name = "OurStoryHeader">Our Story</string>
-    <string name = "History">History of the HUDA Clinic</string>
-    <string name = "HistoryPara">HUDA Clinic first opened its doors in May 2004 to serve the uninsured population of the Detroit area. The clinic initially operated on funds gathered by the Muslim community of Metro Detroit.</string>
-    <string name = "HistPara">When it began, the HUDA Clinic provided solely medical services. We then moved from our original facility at the Muslim Center of Detroit into a new, larger facility on Woodrow Wilson Street. Since then, we have expanded our care to include a full range of dental, vision care, podiatry, and mental health services, as well as a plethora of specialty services available at no-cost to our patients. Our new facility has allowed us to expand our services and our service times, but none of that would be possible without the generous support of our donors and volunteers.</string>
+    <!--    Our Story Page-->
+    <string name="OurStoryHeader">Our Story</string>
+    <string name="History">History of the HUDA Clinic</string>
+    <string name="HistoryPara">HUDA Clinic first opened its doors in May 2004 to serve the uninsured population of the Detroit area. The clinic initially operated on funds gathered by the Muslim community of Metro Detroit.</string>
+    <string name="HistPara">When it began, the HUDA Clinic provided solely medical services. We then moved from our original facility at the Muslim Center of Detroit into a new, larger facility on Woodrow Wilson Street. Since then, we have expanded our care to include a full range of dental, vision care, podiatry, and mental health services, as well as a plethora of specialty services available at no-cost to our patients. Our new facility has allowed us to expand our services and our service times, but none of that would be possible without the generous support of our donors and volunteers.</string>
 
-<!--    Announcements Page-->
-    <string name = "AnnouncementsHeader">Announcements</string>
-    <string name = "ClosureHeader">2022 Holiday Closure Dates</string>
-    <string name = "Date1">Wednesday November 23, 2022 - Monday November 28th , 2022</string>
-    <string name = "Date2">Saturday December 24th, 2022</string>
-    <string name = "Date3">Saturday December 31st, 2022</string>
-    <string name = "Event1">Thanksgiving</string>
-    <string name = "Event2">Christmas Eve</string>
-    <string name = "Event3">New Year\'s Eve</string>
-    <string name = "CalendarHeader">Clinic Calendar</string>
+    <!--    Announcements Page-->
+    <string name="AnnouncementsHeader">Announcements</string>
+    <string name="ClosureHeader">2022 Holiday Closure Dates</string>
+    <string name="Date1">Wednesday November 23, 2022 - Monday November 28th , 2022</string>
+    <string name="Date2">Saturday December 24th, 2022</string>
+    <string name="Date3">Saturday December 31st, 2022</string>
+    <string name="Event1">Thanksgiving</string>
+    <string name="Event2">Christmas Eve</string>
+    <string name="Event3">New Year\'s Eve</string>
+    <string name="CalendarHeader">Clinic Calendar</string>
 </resources>
