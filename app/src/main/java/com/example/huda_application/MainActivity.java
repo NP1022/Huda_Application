@@ -249,7 +249,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     {
                         if(mAuth.getCurrentUser().isEmailVerified()) // email must be verified before sign in
                         {
-                            startActivity(new Intent(MainActivity.this , ReturningOrNewUser.class));
+                            startActivity(new Intent(MainActivity.this , MainApplication.class));
                         }
                         else
                         {

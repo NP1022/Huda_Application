@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.huda_application">
+    package="com.example.huda_application" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,12 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
-        tools:targetApi="31">
-        <activity
-            android:name=".ReturningOrNewUser"
-            android:exported="false"
-            android:label="@string/title_activity_returning_or_new_user"
-            android:theme="@style/NoActionBar" />
+        tools:targetApi="31" >
         <activity
             android:name=".LabAccess"
             android:exported="false" />
@@ -75,7 +70,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Huda_Application.NoActionBar">
+            android:theme="@style/Theme.Huda_Application.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
