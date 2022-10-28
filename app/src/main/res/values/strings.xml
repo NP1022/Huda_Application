@@ -23,12 +23,12 @@
     <string name="Reenter">Re-enter Password</string>
     <string name="reset">Send Reset</string>
     <string name="home">Home</string>
-    <string name="Annoucment">Announcement</string>
+    <string name="Annoucment">Announcements</string>
     <string name="services">Services</string>
     <string name="story">Our Story</string>
     <string name="partners">Partners</string>
     <string name="contact">Contact Us</string>
-    <string name="patients_page">Patients Portal</string>
+    <string name="patients_page">Patient Portal</string>
     <string name="healthservices">Free Health Services    </string>
     <string name="PrimaryCare">Primary Care</string>
     <string name="MentalCare">Mental Care</string>

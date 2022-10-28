@@ -7,69 +7,50 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/spacing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="242dp"
-        android:layout_marginBottom="496dp"
-        android:text=""
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <EditText
         android:id="@+id/email"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
         android:backgroundTint="#686868"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:padding="10dp"
-        android:layout_marginLeft="21dp"
-        android:layout_marginRight="21dp"
-        android:layout_centerInParent="true"
-        android:textColorHint="#686868"
         android:textColor="@color/black"
+        android:textColorHint="#686868"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.963" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_marginLeft="21dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="21dp"
-        android:layout_marginTop="30dp"
         android:backgroundTint="#686868"
         android:ems="10"
-        android:layout_centerInParent="true"
         android:hint="@string/password"
-        android:textColor="@color/black"
         android:inputType="textPassword"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:textColorHint="#686868"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <TextView
         android:id="@+id/forgotpass"
@@ -101,88 +82,76 @@
         app:layout_constraintTop_toBottomOf="@+id/forgotpass"
         app:layout_constraintVertical_bias="0.299" />
 
+
     <ImageView
         android:id="@+id/hudaLogo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="213dp"
-        android:layout_marginBottom="112dp"
-        app:layout_constraintBottom_toTopOf="@+id/emailLabel"
+        android:layout_marginBottom="194dp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/huda_logo" />
-
-
-    <TextView
-        android:id="@+id/emailLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="43dp"
-        android:text=""
-        android:textColor="#0151AE"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/passLabel"
-        app:layout_constraintEnd_toStartOf="@+id/email"
-        app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
-
-    <TextView
-        android:id="@+id/passLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="55dp"
-        android:text=""
-        android:textColor="#0151AE"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/login"
-        app:layout_constraintEnd_toStartOf="@+id/password"
-        app:layout_constraintHorizontal_bias="0.24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailLabel" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
         android:layout_width="220dp"
         android:layout_height="52dp"
         android:layout_centerInParent="true"
-        android:layout_marginLeft="120dp"
-        android:layout_marginRight="120dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/buttonstyle"
+        android:shadowColor="@color/text_shadow"
         android:text="@string/Login"
         android:textColor="#ffffff"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/forgotpass"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/language"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:text="@string/language"
-        app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="#043670"
-        android:textColor="#ffffff"
-        tools:ignore="MissingConstraints"
-        android:bottomRightRadius="10dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/buttonstyle"
         android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:foreground="@drawable/globe__3_"
+        android:foregroundGravity="center"
+        android:textColor="#ffffff"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="104dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="209dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="65dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="#043670"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

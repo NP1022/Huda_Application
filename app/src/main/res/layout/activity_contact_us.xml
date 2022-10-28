@@ -11,22 +11,22 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background = "#FFFFFF"
-        android:padding = "10dp"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:padding="10dp"
         tools:context=".Contact_Us">
 
         <TextView
             android:id="@+id/ContactUsHeader"
             android:layout_width="195dp"
             android:layout_height="53dp"
-            android:layout_marginTop="59dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="40dp"
             android:background="@color/white"
             android:text="@string/ContactUsHeader"
             android:textAlignment="center"
             android:textColor="#043670"
-            android:textSize="25dp"
+            android:textSize="30dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -36,9 +36,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintEnd_toStartOf="@+id/ContactUsHeader"
+            android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
@@ -56,7 +54,7 @@
             android:text="@string/ContactUsPara"
             android:textAlignment="center"
             android:textColor="#043670"
-            android:textSize="23sp"
+            android:textSize="25sp"
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/divider17"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,15 +63,15 @@
 
         <TextView
             android:id="@+id/CallHeader"
-            android:layout_width="116dp"
-            android:layout_height="34dp"
+            android:layout_width="77dp"
+            android:layout_height="35dp"
 
             android:layout_marginEnd="96dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/CallHeader"
             android:textAlignment="center"
             android:textColor="#043670"
-            android:textSize="22sp"
+            android:textSize="25sp"
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/HUDAnumber"
             app:layout_constraintEnd_toEndOf="@+id/textView5"
@@ -81,8 +79,8 @@
 
         <TextView
             android:id="@+id/HUDAnumber"
-            android:layout_width="258dp"
-            android:layout_height="56dp"
+            android:layout_width="262dp"
+            android:layout_height="40dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="13dp"
             android:text="@string/ClinicPhone"
@@ -101,12 +99,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="72dp"
+            android:layout_marginEnd="76dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/AddressHeader"
             android:textAlignment="center"
             android:textColor="#043670"
-            android:textSize="22sp"
+            android:textSize="25sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="@+id/HUDAnumber"
             app:layout_constraintTop_toBottomOf="@+id/divider20" />
@@ -116,7 +114,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="138dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="138dp"
 
             android:fontFamily="sans-serif-medium"
@@ -126,6 +124,7 @@
             android:textSize="22sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider30" />
 
@@ -181,7 +180,7 @@
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="33dp"
             android:layout_marginStart="78dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="5dp"
@@ -189,14 +188,15 @@
             app:layout_constraintEnd_toStartOf="@+id/CallHeader"
             app:layout_constraintStart_toStartOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/divider17"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/phoneicon" />
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="33dp"
             android:layout_marginStart="65dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toTopOf="@+id/HUDAaddress"
             app:layout_constraintEnd_toStartOf="@+id/textView7"
@@ -208,7 +208,7 @@
             android:id="@+id/facebook"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="65dp"
@@ -224,6 +224,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="65dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/linkedIn"
@@ -249,6 +250,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="65dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/instagram"

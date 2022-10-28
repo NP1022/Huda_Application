@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/scrollViewPartners"
-    android:layout_width="wrap_content"
-    android:layout_height="729dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
     android:fillViewport="true"
     tools:layout_editor_absoluteX="1dp"
@@ -13,7 +13,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="#FFFFFF"
 
         tools:context=".OurStory">
@@ -22,67 +22,71 @@
             android:id="@+id/ourStoryHeader"
             android:layout_width="217dp"
             android:layout_height="47dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="59dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="53dp"
+            android:layout_marginBottom="80dp"
             android:background="@color/white"
             android:text="@string/OurStoryHeader"
             android:textAlignment="center"
             android:textColor="#043670"
             android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/hudaLogo3"
+            app:layout_constraintBottom_toTopOf="@+id/historyHeader"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/hudaLogo3"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
 
-            android:layout_marginEnd="36dp"
+            android:layout_marginEnd="21dp"
+            android:contentDescription="TODO"
             app:layout_constraintEnd_toStartOf="@+id/ourStoryHeader"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/huda_logo"
-            android:contentDescription="TODO" />
+            app:srcCompat="@drawable/huda_logo" />
 
         <TextView
             android:id="@+id/historyHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="sans-serif-light"
             android:text="@string/History"
             android:textColor="#043670"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ourStoryHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/hudaLogo3" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
-            android:layout_width="350dp"
-            android:layout_height="133dp"
-            android:layout_marginStart="15dp"
+            android:layout_width="355dp"
+            android:layout_height="162dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="31dp"
             android:ems="10"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="sans-serif"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:text="@string/HistoryPara"
             android:textColor="#043670"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/historyHeader" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="293dp"
-            android:layout_height="295dp"
+            android:layout_width="340dp"
+            android:layout_height="320dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
@@ -90,23 +94,22 @@
 
         <EditText
             android:id="@+id/editTextTextMultiLine2"
-            android:layout_width="346dp"
-            android:layout_height="344dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="355dp"
+            android:layout_height="420dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="33dp"
             android:ems="10"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="sans-serif"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:text="@string/HistPara"
             android:textColor="#043670"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
