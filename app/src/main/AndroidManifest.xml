@@ -16,6 +16,21 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".SpecialtyHealth"
+            android:exported="false" />
+        <activity
+            android:name=".MentalHealth"
+            android:exported="false" />
+        <activity
+            android:name=".VisionHealth"
+            android:exported="false" />
+        <activity
+            android:name=".DentalHealth"
+            android:exported="false" />
+        <activity
+            android:name=".PrimaryServices"
+            android:exported="false" />
+        <activity
             android:name=".NewLogin"
             android:exported="false" />
         <activity
