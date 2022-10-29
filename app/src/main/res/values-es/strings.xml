@@ -16,6 +16,8 @@
     <string name="email">Ingrese el Correo Electrónico</string>
     <string name="Login">Iniciar Sesión</string>
     <string name="forgotpassword">Olvidó Su Contraseña?</string>
+    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
+    <string name="alreadyAccount">Already Have an Account? Login</string>
     <string name="register">Registro</string>
     <string name="language">Español</string>
     <string name="FirstName">Ingrese el Nombre</string>

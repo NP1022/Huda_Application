@@ -22,29 +22,25 @@
             android:id="@+id/ourStoryHeader"
             android:layout_width="217dp"
             android:layout_height="47dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="53dp"
-            android:layout_marginBottom="80dp"
+            android:layout_marginTop="7dp"
             android:background="@color/white"
             android:text="@string/OurStoryHeader"
             android:textAlignment="center"
             android:textColor="#043670"
-            android:textSize="30sp"
+            android:textSize="30dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/historyHeader"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hudaLogo3" />
 
         <ImageView
             android:id="@+id/hudaLogo3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="20dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginTop="30dp"
 
-            android:layout_marginEnd="21dp"
             android:contentDescription="TODO"
-            app:layout_constraintEnd_toStartOf="@+id/ourStoryHeader"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
@@ -53,24 +49,22 @@
             android:id="@+id/historyHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="47dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="sans-serif-light"
             android:text="@string/History"
             android:textColor="#043670"
             android:textSize="25sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hudaLogo3" />
+            app:layout_constraintTop_toBottomOf="@+id/ourStoryHeader" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
-            android:layout_width="355dp"
+            android:layout_width="330dp"
             android:layout_height="162dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="31dp"
             android:ems="10"
             android:fontFamily="sans-serif"
@@ -80,6 +74,7 @@
             android:textColor="#043670"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/historyHeader" />
 
@@ -94,8 +89,8 @@
 
         <EditText
             android:id="@+id/editTextTextMultiLine2"
-            android:layout_width="355dp"
-            android:layout_height="420dp"
+            android:layout_width="330dp"
+            android:layout_height="444dp"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="33dp"
             android:ems="10"

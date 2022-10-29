@@ -13,7 +13,9 @@
     <string name="password">Enter Password</string>
     <string name="email">Enter Email</string>
     <string name="Login">Login</string>
-    <string name="forgotpassword">Forgot Password</string>
+    <string name="forgotpassword">Forgot Password? Reset</string>
+    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
+    <string name="alreadyAccount">Already Registered? Sign In</string>
     <string name="register">Register</string>
     <string name="language">English</string>
     <string name="FirstName">Enter First Name</string>
@@ -22,14 +24,14 @@
     <string name="EnterPass">Enter Password</string>
     <string name="Reenter">Re-enter Password</string>
     <string name="reset">Send Reset</string>
-    <string name="home">Home</string>
-    <string name="Annoucment">Announcements</string>
+    <string name="home">HOME</string>
+    <string name="Annoucment">ANNOUNCEMENTS</string>
     <string name="services">Services</string>
-    <string name="story">Our Story</string>
-    <string name="partners">Partners</string>
-    <string name="contact">Contact Us</string>
-    <string name="patients_page">Patient Portal</string>
-    <string name="healthservices">Free Health Services    </string>
+    <string name="story">OUR STORY</string>
+    <string name="partners">PARTNERS</string>
+    <string name="contact">CONTACT US</string>
+    <string name="patients_page">PATIENT PORTAL</string>
+    <string name="healthservices">Free Health Services</string>
     <string name="PrimaryCare">Primary Care</string>
     <string name="MentalCare">Mental Care</string>
     <string name="VisionHealth">Vision Care</string>
@@ -41,7 +43,7 @@
     <string name="MedicalChart">Medical Chart</string>
 
     <!--    Patient Form Strings -->
-    <string name="Registration">Registration</string>
+    <string name="Registration">REGISTRATION</string>
     <string name="Date">Date (MM/DD/YY)</string>
     <string name="VisitReason">Visit Reason</string>
     <string name="Sex">Sex</string>

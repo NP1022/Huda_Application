@@ -15,6 +15,8 @@
     <string name="email">ইমেইল প্রদান করুন</string>
     <string name="Login">প্রবেশ করুন</string>
     <string name="forgotpassword">পাসওয়ার্ড ভুলে গেছেন</string>
+    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
+    <string name="alreadyAccount">Already Have an Account? Login</string>
     <string name="register">নিবন্ধন</string>
     <string name="language">Bangla</string>
     <string name="FirstName">প্রথম নাম লিখুন</string>
