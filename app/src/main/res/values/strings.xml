@@ -153,4 +153,15 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
 
     <!--    Primary Services Page-->
     <string name = "PrimaryServicesHeader">Primary Services</string>
+    <string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string>
+    <string name = "PrimaryCarePar1">Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed. HUDA aims to bring primary care and specialized services to uninsured and under-insured in the Metro Detroit area. We provide preventative primary care services in a person-focused community health clinic, our goal is to make Michigan healthier! The HUDA clinic provides FREE medications to our patients, and also provides laboratory services at no-cost to our patients.</string>
+    <string name="PrimaryCarePar2">Our Primary Care Services Include:
+        \n <li> Health Assessments </li>
+        \n <li> Acute and Chronic Illness Management </li>
+        \n <li>Laboratory Services (blood work) </li>
+        \n <li>No Cost Pharmacy </li>
+        \n <li>Diabetes Screening & Treatments </li>
+        \n <li>Health Education and Resources </li>
+        \n <li>Cholesterol & Blood Pressure screenings </li>
+        \n <li>Nutrition Education </li> </string>
 </resources>

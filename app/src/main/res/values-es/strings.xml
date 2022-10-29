@@ -154,5 +154,16 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
 
     <!--    Primary Services Page-->
     <string name = "PrimaryServicesHeader">Servicios Primarios</string>
-
+    <string name = "PrimaryCareInternalMedicine">Atención Primaria / Medicina Interna</string>
+    <string name = "PrimaryCarePar1">Los proveedores de atención primaria suelen ser la primera línea de contacto para los pacientes; tratar problemas generales de salud, brindar educación, medicamentos y referencias especializadas según sea necesario. HUDA tiene como objetivo brindar atención primaria y servicios especializados a las personas sin seguro y con seguro insuficiente en el área metropolitana de Detroit. Brindamos servicios preventivos de atención primaria en una clínica de salud comunitaria centrada en la persona. ¡Nuestro objetivo es hacer que Michigan sea más saludable!
+La clínica HUDA brinda medicamentos GRATIS a nuestros pacientes y también brinda servicios de laboratorio sin costo para nuestros pacientes.</string>
+    <string name="PrimaryCarePar2">Nuestros servicios de atención primaria incluyen:
+         \n <li> Evaluaciones de salud </li>
+         \n <li> Manejo de enfermedades agudas y crónicas </li>
+         \n <li>Servicios de laboratorio (análisis de sangre) </li>
+         \n <li>Farmacia sin costo</li>
+         \n <li>Exámenes de detección y tratamientos de la diabetes</li>
+         \n <li>Educación y recursos para la salud </li>
+         \n <li>Exámenes de colesterol y presión arterial</li>
+         \n <li>Educación nutricional </li></string>
 </resources>

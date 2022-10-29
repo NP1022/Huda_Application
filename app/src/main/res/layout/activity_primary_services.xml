@@ -19,7 +19,7 @@
         tools:context=".PrimaryServices">
 
         <TextView
-            android:id="@+id/ourStoryHeader"
+            android:id="@+id/primaryServicesHeader"
             android:layout_width="251dp"
             android:layout_height="51dp"
             android:layout_marginTop="7dp"
@@ -46,65 +46,68 @@
             app:srcCompat="@drawable/huda_logo" />
 
         <TextView
-            android:id="@+id/historyHeader"
+            android:id="@+id/primaryCareInternalMedicine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:fontFamily="sans-serif-light"
-            android:text="@string/History"
+            android:text="@string/PrimaryCareInternalMedicine"
             android:textColor="#043670"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ourStoryHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/primaryServicesHeader" />
 
-        <EditText
-            android:id="@+id/editTextTextMultiLine"
-            android:layout_width="330dp"
-            android:layout_height="162dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="31dp"
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/primaryCarePar1"
+            app:srcCompat="@drawable/primaryCareHUDA" />
+
+        <TextView
+            android:id="@+id/primaryCarePar1"
+            android:layout_width="348dp"
+            android:layout_height="378dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
             android:ems="10"
             android:fontFamily="sans-serif"
             android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:text="@string/HistoryPara"
+            android:text="@string/PrimaryCarePar1"
+            android:justificationMode="inter_word"
             android:textColor="#043670"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.483"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/historyHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/primaryCareInternalMedicine" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="340dp"
-            android:layout_height="320dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
-            app:srcCompat="@drawable/huda_patient" />
-
-        <EditText
-            android:id="@+id/editTextTextMultiLine2"
-            android:layout_width="330dp"
-            android:layout_height="444dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="33dp"
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="322dp"
+            android:layout_height="432dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="32dp"
             android:ems="10"
             android:fontFamily="sans-serif"
             android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:text="@string/HistPara"
+            android:text="@string/PrimaryCarePar2"
             android:textColor="#043670"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

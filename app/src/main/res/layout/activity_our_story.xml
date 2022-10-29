@@ -19,7 +19,7 @@
         tools:context=".OurStory">
 
         <TextView
-            android:id="@+id/ourStoryHeader"
+            android:id="@+id/primaryServicesHeader"
             android:layout_width="217dp"
             android:layout_height="47dp"
             android:layout_marginTop="7dp"
@@ -46,7 +46,7 @@
             app:srcCompat="@drawable/huda_logo" />
 
         <TextView
-            android:id="@+id/historyHeader"
+            android:id="@+id/primaryCareInternalMedicine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -57,7 +57,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ourStoryHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/primaryServicesHeader" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
@@ -76,7 +76,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.483"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/historyHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/primaryCareInternalMedicine" />
 
         <ImageView
             android:id="@+id/imageView2"
