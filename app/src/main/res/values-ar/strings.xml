@@ -154,4 +154,7 @@
     <string name = "Event3">ليلة رأس السنة</string>
     <string name = "CalendarHeader">ليلة رأس السنة</string>
 
+    <!--    Primary Services Page-->
+    <string name = "PrimaryServicesHeader">الخدمات الأولية</string>
+
 </resources>

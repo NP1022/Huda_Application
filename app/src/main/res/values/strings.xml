@@ -150,4 +150,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="Event2">Christmas Eve</string>
     <string name="Event3">New Year\'s Eve</string>
     <string name="CalendarHeader">Clinic Calendar</string>
+
+    <!--    Primary Services Page-->
+    <string name = "PrimaryServicesHeader">Primary Services</string>
 </resources>

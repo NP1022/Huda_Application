@@ -152,4 +152,7 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "Event3">Vispera de Año Nuevo</string>
     <string name = "CalendarHeader">Calendario de la Clínica</string>
 
+    <!--    Primary Services Page-->
+    <string name = "PrimaryServicesHeader">Servicios Primarios</string>
+
 </resources>

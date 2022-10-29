@@ -150,4 +150,6 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name = "Event3">নববর্ষের আগের দিন</string>
     <string name = "CalendarHeader">ক্লিনিক ক্যালেন্ডার</string>
 
+    <!--    Primary Services Page-->
+    <string name = "PrimaryServicesHeader">প্রাথমিক পরিষেবা</string>
 </resources>

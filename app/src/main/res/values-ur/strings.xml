@@ -152,4 +152,7 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
     <string name = "Event3">نئے سال کی شام</string>
     <string name = "CalendarHeader">کلینک کیلنڈر</string>
 
+    <!--    Primary Services Page-->
+    <string name = "PrimaryServicesHeader">پرائمری سروسز</string>
+
 </resources>
