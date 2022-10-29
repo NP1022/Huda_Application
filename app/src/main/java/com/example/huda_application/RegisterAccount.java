@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.huda_application.user.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -126,7 +127,7 @@ public class RegisterAccount extends AppCompatActivity
                 }
                 else
                 {
-                    User user = new User(firstNameTxt,lastNameTxt,emailTxt,passwordTxt);
+                    User user = new User(firstNameTxt,lastNameTxt,emailTxt);
 
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();
                     mAuth.createUserWithEmailAndPassword(emailTxt,passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>()
@@ -137,6 +138,9 @@ public class RegisterAccount extends AppCompatActivity
                             if(task.isSuccessful())
                             {
                                 FirebaseUser mUser = mAuth.getCurrentUser();
+                                if (mUser != null)
+                                    user.setUserId(mUser.getUid());
+
                                 mUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() // sending verification email to user
                                 {
                                     @Override
@@ -160,6 +164,7 @@ public class RegisterAccount extends AppCompatActivity
                                         Log.d(TAG,"onFailure: Email not sent " + e.getMessage());
                                     }
                                 });
+                               User.login(user);
                                 Toast.makeText(RegisterAccount.this,"Task is successful",Toast.LENGTH_LONG).show();
                                 startActivity(new Intent(RegisterAccount.this,MainActivity.class));
                             }

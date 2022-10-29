@@ -1,5 +1,6 @@
 package com.example.huda_application;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,10 +8,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.huda_application.firebase.FirebaseClient;
+import com.example.huda_application.user.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import java.net.InetSocketAddress;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainApplication extends AppCompatActivity implements View.OnClickListener
 {
@@ -48,7 +53,21 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
             startActivity(new Intent(MainApplication.this,MainActivity.class)); // send them to the login activity
         }
 
-    }
+        if (fbUser != null) {
+            FirebaseDatabase.getInstance().getReference(User.class.getSimpleName()).child(fbUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    User.login(FirebaseClient.convertToUser(snapshot));
+
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+    }}
 
     @Override
     public void onClick(View view) {
@@ -70,6 +89,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         }
         else if (view.getId() == R.id.logoutButton)
         {
+            User.logout();
             mAuth.signOut();
             startActivity(new Intent(MainApplication.this , MainActivity.class));
 
