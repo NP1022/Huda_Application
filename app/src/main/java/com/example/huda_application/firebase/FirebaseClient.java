@@ -5,18 +5,27 @@ import androidx.annotation.NonNull;
 import com.example.huda_application.user.Appointment;
 import com.example.huda_application.user.AppointmentStatus;
 import com.example.huda_application.user.User;
+import com.example.huda_application.user.UserManager;
 import com.example.huda_application.user.UserType;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
 
 public class FirebaseClient {
 
     private static final FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+    public static Task<Void> updateUser(User user) {
+        return database.getReference(User.class.getSimpleName()).updateChildren(Map.of(user.getUserId(), user));
+    }
+
+    public static Task<Void> addUser(User user) {
+        return database.getReference(User.class.getSimpleName()).child(user.getUserId()).setValue(user);
+    }
 
 
 
@@ -29,27 +38,19 @@ public class FirebaseClient {
         );
 
         if (snapshot.hasChild("appointments")) {
-            System.out.println(snapshot.child("appointments").getValue());
+            for (DataSnapshot appointmentData : snapshot.getChildren()) {
+                user.addAppointment(
+
+                        new Appointment(
+                        appointmentData.child("time").getValue(String.class),
+                        appointmentData.child("date").getValue(String.class),
+                        AppointmentStatus.valueOf(appointmentData.child("status").getValue(String.class)),
+                        appointmentData.hasChild("checkedIn") ? appointmentData.child("checkedIn").getValue(Boolean.class) : false
+                ));
+            }
         }
 
+        user.setUserId(snapshot.child("userId").getValue(String.class));
         return user;
-    }
-    public static List<User> getAllUsers() {
-        List<User> users = new ArrayList<>();
-        if (User.isAdmin()) {
-            users.add(new User(
-                    "First-Name",
-                    "Last-Name",
-                    "test@gmail.com",
-                    UserType.PATIENT,
-                    List.of(new Appointment(
-                            "10:30",
-                            "October 31, 2022",
-                            AppointmentStatus.PENDING
-                    ))
-            ));
-        }
-
-        return users;
     }
 }

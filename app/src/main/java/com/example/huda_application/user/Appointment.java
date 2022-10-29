@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class Appointment {
 
-    private transient final UUID appointmentId = UUID.randomUUID();
+
     private String time;
     private String date;
     private AppointmentStatus status;
@@ -21,9 +21,7 @@ public class Appointment {
         this(time, date, status, false);
     }
 
-    public UUID getAppointmentId() {
-        return appointmentId;
-    }
+
 
     public String getTime() {
         return time;

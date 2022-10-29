@@ -15,7 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.User;
+import com.example.huda_application.user.UserManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -147,7 +149,7 @@ public class RegisterAccount extends AppCompatActivity
                                     public void onSuccess(Void unused)
                                     {
                                         Toast.makeText(RegisterAccount.this,"Verification email sent",Toast.LENGTH_LONG).show(); // toast meessage to user
-                                        dao.add(user).addOnSuccessListener(suc->
+                                        FirebaseClient.addUser(user).addOnSuccessListener(suc->
                                         {
                                             Toast.makeText(RegisterAccount.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
                                         }).addOnFailureListener(er->
@@ -164,7 +166,7 @@ public class RegisterAccount extends AppCompatActivity
                                         Log.d(TAG,"onFailure: Email not sent " + e.getMessage());
                                     }
                                 });
-                               User.login(user);
+                                UserManager.getInstance().setCurrentUser(user);
                                 Toast.makeText(RegisterAccount.this,"Task is successful",Toast.LENGTH_LONG).show();
                                 startActivity(new Intent(RegisterAccount.this,MainActivity.class));
                             }

@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.User;
+import com.example.huda_application.user.UserManager;
 import com.example.huda_application.user.UserType;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -260,9 +261,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             FirebaseDatabase.getInstance().getReference(User.class.getSimpleName()).child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                    User.login(FirebaseClient.convertToUser(snapshot));
+                                    UserManager.getInstance().setCurrentUser(FirebaseClient.convertToUser(snapshot));
 
-                                    if (User.isAdmin()) {
+                                    if (UserManager.getInstance().isAdmin()) {
                                         startActivity(new Intent(MainActivity.this , AdminPage.class));
                                     }else {
                                         startActivity(new Intent(MainActivity.this , NewOrReturningUser.class));

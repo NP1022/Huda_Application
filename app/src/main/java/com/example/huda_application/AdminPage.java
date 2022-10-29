@@ -11,55 +11,115 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.User;
+import com.example.huda_application.user.UserManager;
+import com.example.huda_application.user.UserType;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdminPage extends AppCompatActivity {
 
+    private PatientViewAdapter viewAdapter;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_page);
-        ListView listview = findViewById(R.id.listview);
 
-        if (User.isAdmin()) {
-            List<User> users = FirebaseClient.getAllUsers();
+        RecyclerView recyclerView = findViewById(R.id.usersView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-            ListAdapter adapter = new UserArrayAdapter(this, users);
-            listview.setAdapter(adapter);
+        if (UserManager.getInstance().isAdmin()) {
+            FirebaseDatabase.getInstance().getReference("User").addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    List<User> users = new ArrayList<>();
+                    for (DataSnapshot child : snapshot.getChildren()) {
+                        User user = FirebaseClient.convertToUser(child);
+                        if (user.getUserType() != UserType.ADMIN)
+                            users.add(user);
+                    }
 
-            listview.setOnItemClickListener((parent, view, position, id) -> {
-                
+                    viewAdapter = new PatientViewAdapter(AdminPage.this, users);
+                    recyclerView.setAdapter(viewAdapter);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
             });
         }
+//        if (UserManager.getInstance().isAdmin())
+//            FirebaseClient.fetchAllUsers();
+//
+//        List<User> users = new ArrayList<>(UserManager.getInstance().getDatabaseUsers());
+//        viewAdapter = new PatientViewAdapter(this, users);
+//        recyclerView.setAdapter(viewAdapter);
     }
 
-    private static class UserArrayAdapter extends ArrayAdapter<User> {
+    private class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> {
 
-        public UserArrayAdapter(Context context, List<User> users) {
-            super(context, R.layout.admin_user_list_item, users);
+        private LayoutInflater inflater;
+        private final List<User> users;
+
+        public PatientViewAdapter(Context context, List<User> users) {
+            this.users = users;
+            this.inflater = LayoutInflater.from(context);
         }
 
         @NonNull
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            User user = getItem(position);
+        public PatientViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = inflater.inflate(R.layout.admin_user_list_item, parent, false);
+            return new PatientViewHolder(view);
+        }
 
-            if (convertView == null) {
-                convertView = LayoutInflater.from(getContext()).inflate(R.layout.admin_user_list_item, parent, false);
-            }
+        @Override
+        public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
+            User user = users.get(position);
+            holder.name.setText(String.format("%s", user.getFirstName()));
+            holder.lastname.setText(String.format("%s", user.getLastName()));
+            holder.email.setText(user.getEmailAddress());
+        }
 
-            TextView nameView = convertView.findViewById(R.id.name);
-            TextView emailView = convertView.findViewById(R.id.email);
+        @Override
+        public int getItemCount() {
+            return users.size();
+        }
+    }
 
-            nameView.setText(String.format("%s %s", user.getFirstName(), user.getLastName()));
-            emailView.setText(user.getEmailAddress());
+    public class PatientViewHolder extends RecyclerView.ViewHolder {
 
-            return super.getView(position, convertView, parent);
+        private final TextView name;
+        private final TextView email;
+        private final TextView lastname;
+
+        public PatientViewHolder(@NonNull View itemView) {
+            super(itemView);
+            this.name = itemView.findViewById(R.id.name);
+            this.lastname = itemView.findViewById(R.id.last_name);
+            this.email = itemView.findViewById(R.id.email);
+        }
+
+        public TextView getName() {
+            return name;
+        }
+
+        public TextView getEmail() {
+            return email;
         }
     }
 }

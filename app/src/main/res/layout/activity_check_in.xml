@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#686868"
         android:ems="10"
-        android:hint="@string/FullName"
+        android:hint="@string/Date"
         android:inputType="text"
         android:textColor="@color/black"
         android:textColorHint="#686868"
@@ -68,7 +68,7 @@
         android:backgroundTint="#686868"
 
         android:ems="10"
-        android:hint="@string/EnterCheckinEmail"
+        android:hint="Reason"
         android:textColor="@color/black"
 
         android:textColorHint="#686868"
@@ -83,7 +83,7 @@
         android:layout_height="53dp"
         android:layout_marginBottom="120dp"
         android:background="@drawable/buttonstyle"
-        android:text="@string/checkIn"
+        android:text="request "
         android:textColor="#ffffff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

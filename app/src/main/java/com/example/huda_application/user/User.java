@@ -6,7 +6,7 @@ import java.util.Locale;
 
 public class User {
 
-    private static User CURRENT_USER = null;
+
 
     private String userId;
     private String firstName;
@@ -84,26 +84,6 @@ public class User {
         appointments.remove(appointment);
     }
 
-    /**
-     * Global user options
-     */
-    public static void login(User user) {
-        CURRENT_USER = user;
-    }
 
-    public static void logout() {
-        CURRENT_USER = null;
-    }
 
-    public static boolean isLoggedIn() {
-        return CURRENT_USER != null;
-    }
-
-    public static boolean isAdmin() {
-        return isLoggedIn() && getCurrentUser().getUserType() == UserType.ADMIN;
-    }
-
-    public static User getCurrentUser() {
-        return CURRENT_USER;
-    }
 }

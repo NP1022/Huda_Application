@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.User;
+import com.example.huda_application.user.UserManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -57,7 +58,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
             FirebaseDatabase.getInstance().getReference(User.class.getSimpleName()).child(fbUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    User.login(FirebaseClient.convertToUser(snapshot));
+                    UserManager.getInstance().setCurrentUser(FirebaseClient.convertToUser(snapshot));
 
 
                 }
@@ -89,7 +90,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         }
         else if (view.getId() == R.id.logoutButton)
         {
-            User.logout();
+            UserManager.getInstance().removeCurrentUser();
             mAuth.signOut();
             startActivity(new Intent(MainApplication.this , MainActivity.class));
 
