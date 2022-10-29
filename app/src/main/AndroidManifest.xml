@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".NewLogin"
+            android:exported="false" />
+        <activity
             android:name=".AdminPage"
             android:exported="false">
             <meta-data
