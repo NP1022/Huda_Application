@@ -4,11 +4,43 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class PatientContract extends AppCompatActivity implements View.OnClickListener{
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+
+import java.util.regex.Pattern;
+
+
+public class PatientContract extends AppCompatActivity implements View.OnClickListener
+{
+    private FirebaseAuth mAuth;
+
+    DatabaseReference ref;
+
+    private static final Pattern DATE_PATTERN = Pattern.compile(
+            "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
+
+    private static final Pattern SSN_PATTERN = Pattern.compile("^(?!666|000|9\\d{2})\\d{3}"
+            + "-(?!00)\\d{2}-"
+            +"(?!0{4})\\d{4}$");  // SSN pattern match
+
+    private static final Pattern ZIPCODE_PATTERN = Pattern.compile("^\\d{5}$"); // zipcode
+
+    private static final Pattern PHONE_PATTERN = Pattern.compile("^[2-9]\\d{2}-\\d{3}-\\d{4}$"); // pattern to make sure phone numbers are valid format
+
+    private static Pattern PATIENTSEX_PATTERN = Pattern.compile("^(?:m|M|male|Male|f|F|female|Female)$"); // pattern to check patient sex input
+
+    private static Pattern CONTACTPREF_PATTERN = Pattern.compile("^(?:home|Home|mobile|Mobile)$");
+
+    private static Pattern CONSENT_PATTERN = Pattern.compile("^(?:yes|Yes|No|no)$");
+
+    private static Pattern MARITAL_PATTERN = Pattern.compile("^(?:Single|single|Married|married|partner|Partner|Separated|separated|Divorced|divorced|Widowed|widowed)$");
 
     private TextView AuthorizationForm;
     private String visitReasonTxt,firstNameTxt , lastNameTxt,patientSexTxt,patientDOBTxt,patientHomeNumTxt,patientCellNumTxt,patientAddTxt,
@@ -16,13 +48,20 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
             patientEmailTxt,prefLangTxt,translatorTxt,maritalTxt,houseIncomeTxt,houseHoldTxt,occupationTxt,veteranTxt,emergencyNameTxt,relationshipTxt,
             contactPhoneTxt,patientConsentName,patientSignedText,patientSignatureText,consentDateTxt,patientRaceTxt,patientEthnicityTxt,patientIncomeTxt,
             patientEmpTxt,dateTxt,patientSSNTxt;
+
+    final EditText patientName = findViewById(R.id.patientNamePrinted2);
+    final EditText patientSignature = findViewById(R.id.patientNameSignature2);
+    final EditText consentDate = findViewById(R.id.consentFormDate2);
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_contract);
         Bundle extras = getIntent().getExtras();
 
-        if (extras != null) {
+        if (extras != null)
+        {
             dateTxt = extras.getString( "dateTxt");
             lastNameTxt = extras.getString( "lastNameTxt");
             firstNameTxt = extras.getString( "firstNameTxt");
@@ -74,43 +113,79 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
     }
 
     @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.nextForm2){
-            Intent AuthorizationForm = new Intent (this, AuthorizationForm.class);
-            AuthorizationForm.putExtra("lastNameTxt" ,lastNameTxt );
-            AuthorizationForm.putExtra("dateTxt" ,dateTxt );
-            AuthorizationForm.putExtra("firstNameTxt" ,firstNameTxt );
-            AuthorizationForm.putExtra("visitReasonTxt" ,visitReasonTxt );
-            AuthorizationForm.putExtra("patientSexTxt" ,patientSexTxt );
-//AuthorizatAuthorizationForm
-            AuthorizationForm.putExtra("patientDOBTxt" ,patientDOBTxt );
-            AuthorizationForm.putExtra("patientSSNTxt" ,firstNameTxt );
-            AuthorizationForm.putExtra("patientHomeNumTxt" ,patientHomeNumTxt );
-            AuthorizationForm.putExtra("patientCellNumTxt" ,patientCellNumTxt );
-            AuthorizationForm.putExtra("patientAddTxt" ,patientAddTxt );
-            AuthorizationForm.putExtra("patientCityTxt" ,patientCityTxt );
-            AuthorizationForm.putExtra("patientStateTxt" ,patientStateTxt );
-            AuthorizationForm.putExtra("patientZipCodeTxt" ,patientZipCodeTxt );
-            AuthorizationForm.putExtra("patientPrefNumberTxt" ,patientPrefNumberTxt );
-            AuthorizationForm.putExtra("patientConsentCallTxt" ,patientConsentCallTxt );
-            AuthorizationForm.putExtra("patientConsentTextTxt" ,patientConsentTextTxt );
-            AuthorizationForm.putExtra("patientInsuranceTxt" ,patientInsuranceTxt );
-            AuthorizationForm.putExtra("patientEmailTxt" ,patientEmailTxt );
-            AuthorizationForm.putExtra("prefLangTxt" ,prefLangTxt );
-            AuthorizationForm.putExtra("translatorTxt" ,translatorTxt );
-            AuthorizationForm.putExtra("maritalTxt" ,maritalTxt );
-            AuthorizationForm.putExtra("houseIncomeTxt" ,houseIncomeTxt );
-            AuthorizationForm.putExtra("houseHoldTxt" ,houseHoldTxt );
-            AuthorizationForm.putExtra("occupationTxt" ,occupationTxt );
-            AuthorizationForm.putExtra("veteranTxt" ,veteranTxt );
-            AuthorizationForm.putExtra("emergencyNameTxt" ,emergencyNameTxt );
-            AuthorizationForm.putExtra("relationshipTxt" ,relationshipTxt );
-            AuthorizationForm.putExtra("contactPhoneTxt" ,contactPhoneTxt );
-            AuthorizationForm.putExtra("patientConsentName" ,patientConsentName );
-            AuthorizationForm.putExtra("patientSignedText" ,patientSignedText );
-            AuthorizationForm.putExtra("patientSignatureText" ,patientSignatureText );
-            AuthorizationForm.putExtra("consentDateTxt" ,consentDateTxt );
-            startActivity(AuthorizationForm);
+    public void onClick(View view)
+    {
+        final String patientNameStr = patientName.getText().toString().trim();
+        final String patientSigStr = patientSignature.getText().toString().trim();
+        final String patientConDateStr = consentDate.getText().toString().trim();
+
+
+
+        if (view.getId() == R.id.nextForm2)
+        {
+            if(patientNameStr.length() > 30 || TextUtils.isEmpty(patientNameStr))
+            {
+                Toast.makeText(PatientContract.this,"Please enter your name",Toast.LENGTH_LONG).show();
+                patientName.setError("Name is required");
+                patientName.requestFocus();
+            }
+            else if(patientSigStr.length() > 30 || TextUtils.isEmpty(patientSigStr))
+            {
+                Toast.makeText(PatientContract.this,"Please enter your signature",Toast.LENGTH_LONG).show();
+                patientSignature.setError("Signature is required");
+                patientSignature.requestFocus();
+            }
+            else if(!CONSENT_PATTERN.matcher(patientConDateStr).matches())
+            {
+                Toast.makeText(PatientContract.this,"Please use MM-DD-YYYY",Toast.LENGTH_LONG).show();
+                consentDate.setError("Format is required");
+                consentDate.requestFocus();
+            }
+            else if(TextUtils.isEmpty(patientConDateStr))
+            {
+                Toast.makeText(PatientContract.this,"Please fill in date",Toast.LENGTH_LONG).show();
+                consentDate.setError("Date is required");
+                consentDate.requestFocus();
+            }
+            else
+            {
+                //AuthorizatAuthorizationForm
+                Intent AuthorizationForm = new Intent (this, AuthorizationForm.class);
+                AuthorizationForm.putExtra("lastNameTxt" ,lastNameTxt );
+                AuthorizationForm.putExtra("dateTxt" ,dateTxt );
+                AuthorizationForm.putExtra("firstNameTxt" ,firstNameTxt );
+                AuthorizationForm.putExtra("visitReasonTxt" ,visitReasonTxt );
+                AuthorizationForm.putExtra("patientSexTxt" ,patientSexTxt );
+                AuthorizationForm.putExtra("patientDOBTxt" ,patientDOBTxt );
+                AuthorizationForm.putExtra("patientSSNTxt" ,firstNameTxt );
+                AuthorizationForm.putExtra("patientHomeNumTxt" ,patientHomeNumTxt );
+                AuthorizationForm.putExtra("patientCellNumTxt" ,patientCellNumTxt );
+                AuthorizationForm.putExtra("patientAddTxt" ,patientAddTxt );
+                AuthorizationForm.putExtra("patientCityTxt" ,patientCityTxt );
+                AuthorizationForm.putExtra("patientStateTxt" ,patientStateTxt );
+                AuthorizationForm.putExtra("patientZipCodeTxt" ,patientZipCodeTxt );
+                AuthorizationForm.putExtra("patientPrefNumberTxt" ,patientPrefNumberTxt );
+                AuthorizationForm.putExtra("patientConsentCallTxt" ,patientConsentCallTxt );
+                AuthorizationForm.putExtra("patientConsentTextTxt" ,patientConsentTextTxt );
+                AuthorizationForm.putExtra("patientInsuranceTxt" ,patientInsuranceTxt );
+                AuthorizationForm.putExtra("patientEmailTxt" ,patientEmailTxt );
+                AuthorizationForm.putExtra("prefLangTxt" ,prefLangTxt );
+                AuthorizationForm.putExtra("translatorTxt" ,translatorTxt );
+                AuthorizationForm.putExtra("maritalTxt" ,maritalTxt );
+                AuthorizationForm.putExtra("houseIncomeTxt" ,houseIncomeTxt );
+                AuthorizationForm.putExtra("houseHoldTxt" ,houseHoldTxt );
+                AuthorizationForm.putExtra("occupationTxt" ,occupationTxt );
+                AuthorizationForm.putExtra("veteranTxt" ,veteranTxt );
+                AuthorizationForm.putExtra("emergencyNameTxt" ,emergencyNameTxt );
+                AuthorizationForm.putExtra("relationshipTxt" ,relationshipTxt );
+                AuthorizationForm.putExtra("contactPhoneTxt" ,contactPhoneTxt );
+                AuthorizationForm.putExtra("patientConsentName" ,patientConsentName );
+                AuthorizationForm.putExtra("patientSignedText" ,patientSignedText );
+                AuthorizationForm.putExtra("patientSignatureText" ,patientSignatureText );
+                AuthorizationForm.putExtra("consentDateTxt" ,consentDateTxt );
+                startActivity(AuthorizationForm);
+            }
+
         }
     }
 }
