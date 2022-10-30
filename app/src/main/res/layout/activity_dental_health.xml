@@ -18,12 +18,12 @@
         tools:context=".DentalHealth">
 
         <TextView
-            android:id="@+id/primaryServicesHeader"
+            android:id="@+id/dentalHealthHeader"
             android:layout_width="251dp"
             android:layout_height="51dp"
             android:layout_marginTop="7dp"
             android:background="@color/white"
-            android:text="@string/PrimaryServicesHeader"
+            android:text="@string/DentalHealthHeader"
             android:textAlignment="center"
             android:textColor="#043670"
             android:textSize="30dp"
@@ -44,7 +44,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
 
-        <TextView
+        <!--TextView
             android:id="@+id/primaryCareInternalMedicine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,56 +56,77 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/primaryServicesHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/dentalHealthHeader" /-->
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="79dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="80dp"
+            android:layout_width="285dp"
+            android:layout_height="376dp"
+            android:layout_marginStart="61dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView53"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/primaryCarePar1"
-            app:srcCompat="@drawable/primaryCareHUDA" />
+            app:layout_constraintTop_toBottomOf="@+id/dentalHealthPar1"
+            app:srcCompat="@drawable/dentalHUDA" />
 
         <TextView
-            android:id="@+id/primaryCarePar1"
+            android:id="@+id/dentalHealthPar1"
             android:layout_width="348dp"
-            android:layout_height="378dp"
+            android:layout_height="225dp"
             android:layout_marginStart="31dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
             android:fontFamily="sans-serif"
             android:gravity="start|top"
-            android:text="@string/PrimaryCarePar1"
+            android:text="@string/DentalHealthPar1"
             android:justificationMode="inter_word"
             android:textColor="#043670"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/primaryCareInternalMedicine" />
+            app:layout_constraintTop_toBottomOf="@+id/dentalHealthHeader" />
 
         <TextView
             android:id="@+id/textView53"
-            android:layout_width="322dp"
-            android:layout_height="432dp"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="45dp"
+            android:layout_width="324dp"
+            android:layout_height="298dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginBottom="22dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:gravity="start|top"
+            android:text="@string/DentalHealthPar2"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView47"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="327dp"
+            android:layout_height="320dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="56dp"
             android:layout_marginBottom="32dp"
             android:ems="10"
             android:fontFamily="sans-serif"
             android:gravity="start|top"
-            android:text="@string/PrimaryCarePar2"
+            android:text="@string/DentalHealthPar3"
             android:textColor="#043670"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+            app:layout_constraintTop_toBottomOf="@+id/textView53" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
