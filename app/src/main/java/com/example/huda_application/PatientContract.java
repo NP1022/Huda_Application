@@ -135,7 +135,7 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
                 patientSignature.setError("Signature is required");
                 patientSignature.requestFocus();
             }
-            else if(!DATE_PATTERN.matcher(patientConDateStr).matches())
+            else if(!CONSENT_PATTERN.matcher(patientConDateStr).matches())
             {
                 Toast.makeText(PatientContract.this,"Please use MM-DD-YYYY",Toast.LENGTH_LONG).show();
                 consentDate.setError("Format is required");
