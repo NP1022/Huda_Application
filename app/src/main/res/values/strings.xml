@@ -221,7 +221,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
             \n <li>Sarah Kappler, TLLP</li></string>
 
     <!--    Speciality Care Page-->
-    <string name = "SpecialtyCareHeader"> Speciality Services  </string>
+    <string name = "SpecialtyCareHeader">Speciality Services</string>
     <string name = "SpecialityCarePar1"> <b> Within the field of medicine, there are many sub-specialties when coordinating care to patients. At HUDA, we provide a range of specialty care and consultations to our patients, with the aim of expanding access to healthcare services. </b> We have created an integrated health model at HUDA through opening multiple specialty services creating a place where most patient needs can be met. All specialty services require a referral from a HUDA primary care provider. </string>
     <string name="SpecialityCarePar2"> <b> Our Speciality Services/Consultations Include: </b>
         \n <li> Physical Therapy </li>

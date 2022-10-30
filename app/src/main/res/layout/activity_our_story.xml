@@ -19,7 +19,7 @@
         tools:context=".OurStory">
 
         <TextView
-            android:id="@+id/mentalHealthHeader"
+            android:id="@+id/specialityHealthHeader"
             android:layout_width="217dp"
             android:layout_height="47dp"
             android:layout_marginTop="7dp"
@@ -57,7 +57,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mentalHealthHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/specialityHealthHeader" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"

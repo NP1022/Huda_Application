@@ -18,7 +18,7 @@
       tools:context=".VisionHealth">
 
     <TextView
-        android:id="@+id/mentalHealthHeader"
+        android:id="@+id/specialityHealthHeader"
         android:layout_width="251dp"
         android:layout_height="51dp"
         android:layout_marginTop="7dp"
@@ -69,11 +69,11 @@
         app:layout_constraintBottom_toTopOf="@+id/textView53"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dentalHealthPar1"
+        app:layout_constraintTop_toBottomOf="@+id/specialtyHealthPar1"
         app:srcCompat="@drawable/visionHUDA" />
 
     <TextView
-        android:id="@+id/dentalHealthPar1"
+        android:id="@+id/specialtyHealthPar1"
         android:layout_width="348dp"
         android:layout_height="200dp"
         android:layout_marginStart="31dp"
@@ -88,7 +88,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mentalHealthHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/specialityHealthHeader" />
 
     <TextView
         android:id="@+id/textView53"
