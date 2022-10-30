@@ -164,4 +164,26 @@ HUDA ক্লিনিক আমাদের রোগীদের বিনা
          \n <li>স্বাস্থ্য শিক্ষা এবং সম্পদ </li>
          \n <li>কোলেস্টেরল এবং রক্তচাপ স্ক্রীনিং </li>
          \n <li>পুষ্টি শিক্ষা </li></string>
+
+    <!--    Dental Health Page-->
+    <string name = "DentalHealthHeader">ডেন্টাল পরিষেবা</string>
+    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
+    <string name = "DentalHealthPar1"><b>অনেক লোক প্রয়োজনীয় দাঁতের কাজ করার জন্য অপেক্ষা করে কারণ তাদের বীমা নেই, তবে ছোট দাঁতের সমস্যাগুলি একা থাকলে দ্রুত অবিশ্বাস্যভাবে বেদনাদায়ক হয়ে উঠতে পারে।</b> আপনার দাঁত সুস্থ রাখতে পরিষ্কার, ফিলিংস, নিষ্কাশন এবং পরীক্ষার জন্য HUDA-তে আসুন এবং প্রয়োজনে বিশেষজ্ঞের কাছে রেফারেল পান।</string>
+    <string name="DentalHealthPar2"><b>আমাদের ডেন্টাল পরিষেবাগুলি অন্তর্ভুক্ত:</b>
+         \n <li>ডেন্টাল স্ক্রীনিং, এবং এক্স-রে</li>
+         \n <li>গভীর পরিচ্ছন্নতা</li>
+         \n <li>কম্পোজিট ফিলিংস</li>
+         \n <li>দাঁত তোলা</li>
+         \n <li>প্রয়োজনে কম খরচে দাঁতের ডাক্তারের কাছে রেফারেল</li>
+         \n <li>স্বাস্থ্য শিক্ষা এবং সম্পদ </li>
+         \n <li>কোলেস্টেরল এবং রক্তচাপ স্ক্রীনিং </li>
+         \n <li>পুষ্টি শিক্ষা </li></string>
+    <string name="DentalHealthPar3">Our Dentists:
+        \n <li>Shakeel Niazi, D.D.S.</li>
+        \n <li>Ahmed Allam, D.D.S.</li>
+        \n <li>Asmaa Abdel-Salam, D.D.S.</li>
+        \n <li>Sumera Khalid, D.D.S.</li>
+        \n <li>Umair Niazi, D.M.D.</li>
+        \n <li>Rachel Mundus, R.D. </li>
+        \n <li>Fatin Amireh, R.D.H.</li></string>
 </resources>

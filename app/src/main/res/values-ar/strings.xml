@@ -169,4 +169,26 @@
          \n <li>صحت کی تعلیم اور وسائل </li>
          \n <li>کولیسٹرول اور بلڈ پریشر کی جانچ </li>
         \n <li>غذائیت کی تعلیم</li></string>
+
+    <!--    Dental Health Page-->
+    <string name = "DentalHealthHeader">خدمات طب الأسنان</string>
+    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
+    <string name = "DentalHealthPar1"><b> ينتظر العديد من الأشخاص إجراء أعمال الأسنان الضرورية لأنهم لا يملكون تأمينًا ، ومع ذلك يمكن أن تصبح مشاكل الأسنان الصغيرة مؤلمة بشكل لا يُصدق إذا تُركت بمفردها. </ b> تعال إلى هدى للتنظيف والحشوات والقلع والفحوصات اللازمة حافظ على صحة أسنانك واحصل على إحالة إلى أخصائي إذا لزم الأمر.</string>
+    <string name="DentalHealthPar2"><b>تشمل خدمات طب الأسنان لدينا:</b>
+         \n <li> فحوصات الأسنان والأشعة السينية </ li>
+         \n <li> التنظيف العميق </ li>
+         \n <li> الحشوات المركبة </ li>
+         \n <li> خلع الأسنان </ li>
+         \n <li> الإحالات إلى أطباء الأسنان منخفضي التكلفة حسب الحاجة </ li>
+         \n <li> التثقيف الصحي والموارد </ li>
+         \n <li> فحوصات الكوليسترول وضغط الدم </ li>
+         \n <li> التثقيف الغذائي </ li> </string>
+    <string name="DentalHealthPar3"><b>Our Dentists:</b>
+        \n <li>Shakeel Niazi, D.D.S.</li>
+        \n <li>Ahmed Allam, D.D.S.</li>
+        \n <li>Asmaa Abdel-Salam, D.D.S.</li>
+        \n <li>Sumera Khalid, D.D.S.</li>
+        \n <li>Umair Niazi, D.M.D.</li>
+        \n <li>Rachel Mundus, R.D. </li>
+        \n <li>Fatin Amireh, R.D.H.</li></string>
 </resources>

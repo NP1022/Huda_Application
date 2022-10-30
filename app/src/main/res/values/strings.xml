@@ -154,8 +154,9 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <!--    Primary Services Page-->
     <string name = "PrimaryServicesHeader">Primary Services</string>
     <string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string>
-    <string name = "PrimaryCarePar1">Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed. HUDA aims to bring primary care and specialized services to uninsured and under-insured in the Metro Detroit area. We provide preventative primary care services in a person-focused community health clinic, our goal is to make Michigan healthier! The HUDA clinic provides FREE medications to our patients, and also provides laboratory services at no-cost to our patients.</string>
-    <string name="PrimaryCarePar2">Our Primary Care Services Include:
+    <string name = "PrimaryCarePar1"><b>Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</b> HUDA aims to bring primary care and specialized services to uninsured and under-insured in the Metro Detroit area. We provide preventative primary care services in a person-focused community health clinic, our goal is to make Michigan healthier!
+        \n The HUDA clinic provides FREE medications to our patients, and also provides laboratory services at no-cost to our patients.</string>
+    <string name="PrimaryCarePar2"><b>Our Primary Care Services Include:</b>
         \n <li> Health Assessments </li>
         \n <li> Acute and Chronic Illness Management </li>
         \n <li>Laboratory Services (blood work) </li>
@@ -164,4 +165,26 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
         \n <li>Health Education and Resources </li>
         \n <li>Cholesterol & Blood Pressure screenings </li>
         \n <li>Nutrition Education </li> </string>
+
+    <!--    Dental Health Page-->
+    <string name = "DentalHealthHeader">Dental Services</string>
+    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
+    <string name = "DentalHealthPar1"><b>Many people wait to have necessary dental work done because they don’t have insurance, however small dental problems can quickly become incredibly painful if left alone.</b> Come in to HUDA for cleanings, fillings, extractions and exams to keep your teeth healthy and receive a referral to a specialist if needed.</string>
+    <string name="DentalHealthPar2">Our Dental Services Include:
+        \n <li>Dental screenings, and X-Rays</li>
+        \n <li>Deep Cleanings</li>
+        \n <li>Composite Fillings</li>
+        \n <li>Tooth Extraction</li>
+        \n <li>Referrals to low-cost dentists as needed</li>
+        \n <li>Health Education and Resources </li>
+        \n <li>Cholesterol & Blood Pressure screenings </li>
+        \n <li>Nutrition Education </li> </string>
+    <string name="DentalHealthPar3">Our Dentists:
+        \n <li>Shakeel Niazi, D.D.S.</li>
+        \n <li>Ahmed Allam, D.D.S.</li>
+        \n <li>Asmaa Abdel-Salam, D.D.S.</li>
+        \n <li>Sumera Khalid, D.D.S.</li>
+        \n <li>Umair Niazi, D.M.D.</li>
+        \n <li>Rachel Mundus, R.D. </li>
+        \n <li>Fatin Amireh, R.D.H.</li></string>
 </resources>

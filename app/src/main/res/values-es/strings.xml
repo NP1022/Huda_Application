@@ -166,4 +166,26 @@ La clínica HUDA brinda medicamentos GRATIS a nuestros pacientes y también brin
          \n <li>Educación y recursos para la salud </li>
          \n <li>Exámenes de colesterol y presión arterial</li>
          \n <li>Educación nutricional </li></string>
+
+    <!--    Dental Health Page-->
+    <string name = "DentalHealthHeader">Servicios Dentales</string>
+    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
+    <string name = "DentalHealthPar1"><b>Muchas personas esperan para hacerse el trabajo dental necesario porque no tienen seguro, sin embargo, los pequeños problemas dentales pueden convertirse rápidamente en increíblemente dolorosos si no se toman en cuenta.</b> Visite HUDA para limpiezas, empastes, extracciones y exámenes para mantener sus dientes saludable y recibir una derivación a un especialista si es necesario.</string>
+    <string name="DentalHealthPar2"><b>Nuestros servicios dentales incluyen:</b>
+    \n <li>Exámenes dentales y radiografías</li>
+    \n <li>Limpiezas profundas</li>
+    \n <li>Rellenos compuestos</li>
+    \n <li>Extracción de dientes</li>
+    \n <li>Referencias a dentistas de bajo costo según sea necesario</li>
+    \n <li>Educación y recursos para la salud </li>
+    \n <li>Exámenes de colesterol y presión arterial</li>
+    \n <li>Educación nutricional </li> </string>
+    <string name="DentalHealthPar3"><b>Nuestros Dentistas:</b>
+        \n <li>Shakeel Niazi, D.D.S.</li>
+        \n <li>Ahmed Allam, D.D.S.</li>
+        \n <li>Asmaa Abdel-Salam, D.D.S.</li>
+        \n <li>Sumera Khalid, D.D.S.</li>
+        \n <li>Umair Niazi, D.M.D.</li>
+        \n <li>Rachel Mundus, R.D. </li>
+        \n <li>Fatin Amireh, R.D.H.</li></string>
 </resources>
