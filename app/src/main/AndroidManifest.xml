@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".UserAppointment"
+            android:exported="false" />
+        <activity
             android:name=".SpecialtyHealth"
             android:exported="false" />
         <activity

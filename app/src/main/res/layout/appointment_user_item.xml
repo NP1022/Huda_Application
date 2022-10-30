@@ -43,7 +43,6 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -92,19 +91,54 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reason:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/Reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="temp"
+
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
 
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/cancelAppointment"
+    <Button
+        android:id="@+id/Approve"
         android:layout_width="80dp"
         android:layout_height="35dp"
         android:layout_marginLeft="215dp"
         android:layout_marginTop="3dp"
         android:background="@drawable/buttonstyle"
-        android:text="Cancel"
+        android:text="Approve"
         android:textColor="#ffffff"
+        android:textSize="8sp" />
+
+    <Button
+        android:id="@+id/decline"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/buttonstyle"
+        android:text="Decline"
+        android:textColor="#ffffff"
+
         android:textSize="8sp" />
 
 

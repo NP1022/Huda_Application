@@ -53,15 +53,15 @@
     <string name = "City">শহর</string>
     <string name = "State">রাষ্ট্র</string>
     <string name = "ZipCode">জিপ কোড</string>
-    <string name = "SSN">সামাজিক নিরাপত্তা নম্বর (123-12-1234)</string>
-    <string name = "HomePhone">বাসার ফোন (123-123-1234)</string>
-    <string name = "CellPhone">মুঠোফোন (123-123-1234)</string>
+    <string name = "SSN">সামাজিক নিরাপত্তা নম্বর </string>
+    <string name = "HomePhone">বাসার ফোন</string>
+    <string name = "CellPhone">মুঠোফোন </string>
     <string name = "PreferredNumber">পছন্দের নম্বর (বাড়ি বা মোবাইল)</string>
     <string name = "ConsentToCall">কল করতে সম্মতি? (হ্যাঁ বা না)</string>
     <string name = "ConsentToText">টেক্সট সম্মতি? (হ্যাঁ বা না)</string>
     <string name = "InsuranceProvider">বীমা প্রদানকারী</string>
     <string name = "Email">ইমেল (রেজিস্ট্রেশন ইমেলের মতোই)</string>
-
+    <string name="login_dialog">আপনার শংসাপত্র লিখুন</string>
     <string name = "SelectRace">একটি জাতি নির্বাচন করুন:</string>
     <string name = "Black">কালো/আফ্রিকান আমেরিকান</string>
     <string name = "White">সাদা/ককেশীয়</string>

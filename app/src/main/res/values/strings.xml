@@ -30,7 +30,7 @@
     <string name="story">OUR STORY</string>
     <string name="partners">PARTNERS</string>
     <string name="contact">CONTACT US</string>
-    <string name="patients_page">PATIENT PORTAL</string>
+    <string name="patients_page">Appointments</string>
     <string name="healthservices">Free Health Services</string>
     <string name="PrimaryCare">Primary Care</string>
     <string name="MentalCare">Mental Care</string>
@@ -41,7 +41,7 @@
     <string name="patientForm">New Patient Form</string>
     <string name="checkIn">Check-in</string>
     <string name="MedicalChart">Medical Chart</string>
-
+    <string name="login_dialog">Enter your credentials below to log in.</string>
     <!--    Patient Form Strings -->
     <string name="Registration">REGISTRATION</string>
     <string name="Date">Date (MM/DD/YY)</string>

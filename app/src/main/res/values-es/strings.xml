@@ -32,7 +32,7 @@
     <string name="story">Nuestra Historia</string>
     <string name="partners">Socios</string>
     <string name="contact">Contacta con Nosotros</string>
-    <string name="patients_page">Pacientes</string>
+    <string name="patients_page">Equipo</string>
     <string name="healthservices">Servicios de salud gratuitos</string>
     <string name="PrimaryCare">Atención Primaria</string>
     <string name="MentalCare">Cuidado Mental</string>
@@ -43,7 +43,7 @@
     <string name="patientForm">Formulario de Nuevo Paciente</string>
     <string name="checkIn">Registrarse</string>
     <string name="MedicalChart">Cuadro Médico</string>
-
+    <string name="login_dialog">Ingrese sus credenciales</string>
     <!--    Patient Form Strings -->
     <string name = "Registration">Registro</string>
     <string name="Date">Fecha (MM/DD/AAAA)</string>

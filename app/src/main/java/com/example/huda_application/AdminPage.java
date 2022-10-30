@@ -1,6 +1,7 @@
 package com.example.huda_application;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.huda_application.firebase.FirebaseClient;
+import com.example.huda_application.user.Appointment;
+import com.example.huda_application.user.AppointmentStatus;
 import com.example.huda_application.user.User;
 import com.example.huda_application.user.UserManager;
 import com.example.huda_application.user.UserType;
@@ -64,12 +67,14 @@ public class AdminPage extends AppCompatActivity {
         }
     }
 
-    private class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> {
+    private static class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> implements View.OnClickListener {
 
         private LayoutInflater inflater;
         private final List<User> users;
+        private final Context context;
 
         public PatientViewAdapter(Context context, List<User> users) {
+            this.context = context;
             this.users = users;
             this.inflater = LayoutInflater.from(context);
         }
@@ -83,29 +88,56 @@ public class AdminPage extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
+
             User user = users.get(position);
+
+
+
+             List<Appointment> appointments = user.getAppointments();
+             int Pending_count =0;
+             for (int i =0; i< appointments.size(); i ++){
+                 if (appointments.get(i).getStatus() == AppointmentStatus.PENDING){
+                     Pending_count++;
+
+                 }
+             }
             holder.name.setText(String.format("%s", user.getFirstName()));
             holder.lastname.setText(String.format("%s", user.getLastName()));
             holder.email.setText(user.getEmailAddress());
+            holder.appointments.setText("Appointments "+ Pending_count);
+
+            holder.appointments.setOnClickListener(view -> {
+                Intent intent = new Intent(context, UserAppointment.class);
+                intent.putExtra("user", user);
+                context.startActivity(intent);
+            });
         }
 
         @Override
         public int getItemCount() {
             return users.size();
         }
+
+        @Override
+        public void onClick(View v) {
+
+        }
     }
 
-    public class PatientViewHolder extends RecyclerView.ViewHolder {
+    public static class PatientViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView name;
         private final TextView email;
         private final TextView lastname;
+        private final TextView appointments;
 
         public PatientViewHolder(@NonNull View itemView) {
             super(itemView);
             this.name = itemView.findViewById(R.id.name);
             this.lastname = itemView.findViewById(R.id.last_name);
             this.email = itemView.findViewById(R.id.email);
+            this.appointments = itemView.findViewById(R.id.newUser);
+
         }
 
         public TextView getName() {
@@ -114,6 +146,14 @@ public class AdminPage extends AppCompatActivity {
 
         public TextView getEmail() {
             return email;
+        }
+
+        public TextView getLastname() {
+            return lastname;
+        }
+
+        public TextView getAppointments() {
+            return appointments;
         }
     }
 }
