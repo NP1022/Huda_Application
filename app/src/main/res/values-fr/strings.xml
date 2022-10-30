@@ -185,4 +185,22 @@ La clinique HUDA fournit des médicaments GRATUITS à nos patients et fournit é
         \n <li>Umair Niazi, D.M.D.</li>
         \n <li>Rachel Mundus, R.D. </li>
         \n <li>Fatin Amireh, R.D.H.</li></string>
+
+    <!--    Vision Care Page-->
+    <string name = "VisionCareHeader">Soins de la vue</string>
+    <string name = "VisionCarePar1"><b>Les dépistages visuels sont une méthode efficace pour identifier les personnes ayant une déficience visuelle ou des affections oculaires susceptibles d'entraîner une perte de vision. </b> Nous effectuons des dépistages en interne et fournissons des lunettes gratuites et des références à des ophtalmologistes locaux à bas prix si nécessaire.</string>
+    <string name="VisionCarePar2"><b>Nos options de dépistage visuel:</b>
+         \n <li>Dépistage du glaucome</li>
+         \n <li>Dépistage de la cataracte</li>
+         \n <li>Dépistage de la dégénérescence maculaire</li>
+         \n <li>Lunettes GRATUITES</li>
+         \n <li>Recommandations à des spécialistes de la vision</li></string>
+    <string name="VisionCarePar3"><b>Nos ophtalmologistes/optométristes:</b>
+        \n <li>M. Hanif Peracha, M.D.</li>
+        \n <li>Meiraj Siddiqui, M.D.</li>
+        \n <li>Benjamin Whittredge, O.D.</li>
+        \n <li>Christopher Burgess, O.D.</li>
+        \n <li>Naureen Haroon, O.D. </li>
+        \n <li>Suleman Hans, O.D.</li>
+        \n <li>Elizabeth Borowiec, O.D</li></string>
 </resources>

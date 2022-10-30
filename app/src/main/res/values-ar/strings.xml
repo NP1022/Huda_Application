@@ -188,4 +188,22 @@
         \n <li>Umair Niazi, D.M.D.</li>
         \n <li>Rachel Mundus, R.D. </li>
         \n <li>Fatin Amireh, R.D.H.</li></string>
+
+    <!--    Vision Care Page-->
+    <string name = "VisionCareHeader"> العناية بالرؤية </string>
+    <string name = "VisionCarePar1"> <b> تعد فحوصات الرؤية طريقة فعالة لتحديد الأفراد الذين يعانون من ضعف البصر أو حالات العين التي من المحتمل أن تؤدي إلى فقدان البصر. </b> نجري فحوصات داخل الشركة ونقدم ملابس عيون مجانية وإحالات لأطباء العيون المحليين منخفضي التكلفة حسب الحاجة. </ string>
+    <string name = "VisionCarePar2"> <b> خيارات فحص الرؤية لدينا: </b>
+        \n <li> فحوصات الجلوكوما </li>
+        \n <li> فحوصات المياه البيضاء </li>
+        \n <li> فحوصات التنكس البقعي </li>
+        \n <li> ارتداء مجاني للعينين </li>
+        \n <li> الإحالات إلى اختصاصيي الرؤية </li></string>
+    <string name = "VisionCarePar3"> <b> أطباء العيون / فاحصي البصريات لدينا: </b>
+        \n <li>M. Hanif Peracha, M.D.</li>
+        \n <li>Meiraj Siddiqui, M.D.</li>
+        \n <li>Benjamin Whittredge, O.D.</li>
+        \n <li>Christopher Burgess, O.D.</li>
+        \n <li>Naureen Haroon, O.D. </li>
+        \n <li>Suleman Hans, O.D.</li>
+        \n <li>Elizabeth Borowiec, O.D</li></string>
 </resources>

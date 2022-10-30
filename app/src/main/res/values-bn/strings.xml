@@ -183,4 +183,22 @@ HUDA ক্লিনিক আমাদের রোগীদের বিনা
         \n <li>Umair Niazi, D.M.D.</li>
         \n <li>Rachel Mundus, R.D. </li>
         \n <li>Fatin Amireh, R.D.H.</li></string>
+
+    <!--    Vision Care Page-->
+    <string name = "VisionCareHeader">ভিশন কেয়ার</string>
+    <string name = "VisionCarePar1"><b>দৃষ্টি স্ক্রীনিং হল দৃষ্টি প্রতিবন্ধকতা বা চোখের অবস্থা যা দৃষ্টিশক্তি হারাতে পারে এমন ব্যক্তিদের সনাক্ত করার একটি কার্যকর পদ্ধতি। </b>আমরা ঘরে বসেই স্ক্রীনিং করি এবং প্রয়োজনে কম খরচে স্থানীয় চক্ষু বিশেষজ্ঞদের কাছে বিনা খরচে চোখের পরিধান এবং রেফারেল প্রদান করি।</string>
+    <string name = "VisionCarePar2"><b>আমাদের দৃষ্টি স্ক্রীনিং বিকল্প:</b>
+         \n <li>গ্লুকোমা স্ক্রীনিং</li>
+         \n <li>ছানি স্ক্রীনিং</li>
+         \n <li>ম্যাকুলার ডিজেনারেশন স্ক্রীনিং</li>
+         \n <li>বিনামূল্যে চক্ষু পরিধান</li>
+         \n <li>দর্শন বিশেষজ্ঞদের রেফারেল</li></string>
+    <string name="VisionCarePar3"><b>আমাদের চক্ষু বিশেষজ্ঞ / চক্ষু বিশেষজ্ঞ:</b>
+        \n <li>M. Hanif Peracha, M.D.</li>
+        \n <li>Meiraj Siddiqui, M.D.</li>
+        \n <li>Benjamin Whittredge, O.D.</li>
+        \n <li>Christopher Burgess, O.D.</li>
+        \n <li>Naureen Haroon, O.D.</li>
+        \n <li>Suleman Hans, O.D.</li>
+        \n <li>Elizabeth Borowiec, O.D.</li></string>
 </resources>

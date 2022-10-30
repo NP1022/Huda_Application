@@ -168,7 +168,6 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
 
     <!--    Dental Health Page-->
     <string name = "DentalHealthHeader">Dental Services</string>
-    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
     <string name = "DentalHealthPar1"><b>Many people wait to have necessary dental work done because they don’t have insurance, however small dental problems can quickly become incredibly painful if left alone.</b> Come in to HUDA for cleanings, fillings, extractions and exams to keep your teeth healthy and receive a referral to a specialist if needed.</string>
     <string name="DentalHealthPar2"><b>Our Dental Services Include:</b>
         \n <li>Dental screenings, and X-Rays</li>
@@ -184,4 +183,22 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
         \n <li>Umair Niazi, D.M.D.</li>
         \n <li>Rachel Mundus, R.D. </li>
         \n <li>Fatin Amireh, R.D.H.</li></string>
+
+    <!--    Vision Care Page-->
+    <string name = "VisionCareHeader">Vision Care</string>
+    <string name = "VisionCarePar1"><b>Vision screenings is an effective method to identify individuals with visual impairment or eye conditions that are likely to lead to vision loss. </b> We perform screenings in-house and provide no-cost eye wear and referrals to low-cost local ophthalmologists as needed.</string>
+    <string name="VisionCarePar2"><b>Our Vision Screening Options:</b>
+        \n <li>Glaucoma Screenings</li>
+        \n <li>Cataract Screenings</li>
+        \n <li>Macular Degeneration Screenings</li>
+        \n <li>FREE eye-wear</li>
+        \n <li>Referrals to vision specialists</li></string>
+    <string name="VisionCarePar3"><b>Our Ophthalmologists / Optometrists:</b>
+        \n <li>M. Hanif Peracha, M.D.</li>
+        \n <li>Meiraj Siddiqui, M.D.</li>
+        \n <li>Benjamin Whittredge, O.D.</li>
+        \n <li>Christopher Burgess, O.D.</li>
+        \n <li>Naureen Haroon, O.D. </li>
+        \n <li>Suleman Hans, O.D.</li>
+        \n <li>Elizabeth Borowiec, O.D</li></string>
 </resources>

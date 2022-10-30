@@ -185,4 +185,22 @@ HUDA کلینک ہمارے مریضوں کو مفت ادویات فراہم کر
         \n <li>Umair Niazi, D.M.D.</li>
         \n <li>Rachel Mundus, R.D. </li>
         \n <li>Fatin Amireh, R.D.H.</li></string>
+
+    <!--    Vision Care Page-->
+    <string name = "VisionCareHeader">وژن کیئر</string>
+    <string name = "VisionCarePar1"><b>بصارت کی اسکریننگ بصارت کی خرابی یا آنکھوں کی حالتوں میں مبتلا افراد کی شناخت کرنے کا ایک مؤثر طریقہ ہے جو بصارت کی کمی کا باعث بن سکتے ہیں۔ </b>ہم گھر میں اسکریننگ کرتے ہیں اور ضرورت کے مطابق کم لاگت والے مقامی ماہر امراض چشم کو بغیر لاگت کے آنکھوں کے لباس اور حوالہ جات فراہم کرتے ہیں۔</string>
+    <string name="VisionCarePar2"><b>ہمارے ویژن اسکریننگ کے اختیارات:</b>
+         \n <li>گلوکوما اسکریننگز</li>
+         \n <li>موتیابند کی اسکریننگ</li>
+         \n <li>میکولر ڈیجنریشن اسکریننگز</li>
+         \n <li>مفت آنکھ پہننا</li>
+         \n <li>بینائی ماہرین کے حوالے</li></string>
+    <string name="VisionCarePar3"><b>ہمارے ماہرین امراض چشم / آپٹومیٹرسٹ:</b>
+        \n <li>M. Hanif Peracha, M.D.</li>
+        \n <li>Meiraj Siddiqui, M.D.</li>
+        \n <li>Benjamin Whittredge, O.D.</li>
+        \n <li>Christopher Burgess, O.D.</li>
+        \n <li>Naureen Haroon, O.D. </li>
+        \n <li>Suleman Hans, O.D.</li>
+        \n <li>Elizabeth Borowiec, O.D</li></string>
 </resources>
