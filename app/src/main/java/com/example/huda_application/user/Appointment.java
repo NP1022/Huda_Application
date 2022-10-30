@@ -1,27 +1,24 @@
 package com.example.huda_application.user;
 
-import java.util.UUID;
-
 public class Appointment {
-
 
     private String time;
     private String date;
+    private String reason;
     private AppointmentStatus status;
     private boolean checkedIn;
 
-    public Appointment(String time, String date, AppointmentStatus status, boolean checkedIn) {
+    public Appointment(String time, String date, String reason, AppointmentStatus status, boolean checkedIn) {
         this.time = time;
         this.date = date;
+        this.reason = reason;
         this.status = status;
         this.checkedIn = checkedIn;
     }
 
-    public Appointment(String time, String date, AppointmentStatus status) {
-        this(time, date, status, false);
+    public Appointment(String time, String date, String reason, AppointmentStatus status) {
+        this(time, date, reason, status, false);
     }
-
-
 
     public String getTime() {
         return time;
@@ -37,6 +34,14 @@ public class Appointment {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 
     public AppointmentStatus getStatus() {

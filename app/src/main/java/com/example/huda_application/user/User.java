@@ -2,11 +2,8 @@ package com.example.huda_application.user;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class User {
-
-
 
     private String userId;
     private String firstName;
@@ -83,7 +80,4 @@ public class User {
     public void removeAppointment(Appointment appointment) {
         appointments.remove(appointment);
     }
-
-
-
 }

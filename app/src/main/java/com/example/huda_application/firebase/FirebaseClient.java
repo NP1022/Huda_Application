@@ -1,17 +1,11 @@
 package com.example.huda_application.firebase;
 
-import androidx.annotation.NonNull;
-
 import com.example.huda_application.user.Appointment;
 import com.example.huda_application.user.AppointmentStatus;
 import com.example.huda_application.user.User;
-import com.example.huda_application.user.UserManager;
-import com.example.huda_application.user.UserType;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.Map;
 
@@ -27,8 +21,6 @@ public class FirebaseClient {
         return database.getReference(User.class.getSimpleName()).child(user.getUserId()).setValue(user);
     }
 
-
-
     public static User convertToUser(DataSnapshot snapshot) {
         User user = new User(
                 snapshot.child("firstName").getValue(String.class),
@@ -39,14 +31,16 @@ public class FirebaseClient {
 
         if (snapshot.hasChild("appointments")) {
             for (DataSnapshot appointmentData : snapshot.getChildren()) {
-                user.addAppointment(
-
-                        new Appointment(
-                        appointmentData.child("time").getValue(String.class),
-                        appointmentData.child("date").getValue(String.class),
-                        AppointmentStatus.valueOf(appointmentData.child("status").getValue(String.class)),
-                        appointmentData.hasChild("checkedIn") ? appointmentData.child("checkedIn").getValue(Boolean.class) : false
-                ));
+                for (DataSnapshot child : appointmentData.getChildren()) {
+                    user.addAppointment(
+                            new Appointment(
+                                    child.child("time").getValue(String.class),
+                                    child.child("date").getValue(String.class),
+                                    child.child("reason").getValue(String.class),
+                                    AppointmentStatus.valueOf(child.child("status").getValue(String.class)),
+                                    child.hasChild("checkedIn") ? child.child("checkedIn").getValue(Boolean.class) : false
+                            ));
+                }
             }
         }
 

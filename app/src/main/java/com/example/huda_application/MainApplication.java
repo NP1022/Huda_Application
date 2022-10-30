@@ -18,26 +18,24 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainApplication extends AppCompatActivity implements View.OnClickListener
-{
+public class MainApplication extends AppCompatActivity implements View.OnClickListener {
 
 
-    private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, Health_Services , PatientPortal;
+    private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, Health_Services, PatientPortal;
     private FirebaseAuth mAuth;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_application);
 
-        PatientPortal = (TextView) findViewById(R.id.Patients);
-        Partner_button  = (TextView) findViewById(R.id.partnersPage);
-        Contact_Us = (TextView) findViewById(R.id.contactUsPage);
-        Our_story = (TextView) findViewById(R.id.ourStoryPage);
-        signOut = (TextView) findViewById(R.id.logoutButton);
-        Announcements = (TextView)findViewById(R.id.announcementsPage);
-        Health_Services = (TextView)findViewById(R.id.servicesPage);
+        PatientPortal = findViewById(R.id.Patients);
+        Partner_button = findViewById(R.id.partnersPage);
+        Contact_Us = findViewById(R.id.contactUsPage);
+        Our_story = findViewById(R.id.ourStoryPage);
+        signOut = findViewById(R.id.logoutButton);
+        Announcements = findViewById(R.id.announcementsPage);
+        Health_Services = findViewById(R.id.servicesPage);
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
@@ -49,9 +47,9 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser fbUser = mAuth.getCurrentUser();
 
-        if(fbUser != null && !fbUser.isEmailVerified())  // if user is not null and their email is not verified
-        {
-            startActivity(new Intent(MainApplication.this,MainActivity.class)); // send them to the login activity
+        // if user is not null and their email is not verified
+        if (fbUser != null && !fbUser.isEmailVerified()) {
+            startActivity(new Intent(MainApplication.this, MainActivity.class)); // send them to the login activity
         }
 
         if (fbUser != null) {
@@ -59,57 +57,39 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     UserManager.getInstance().setCurrentUser(FirebaseClient.convertToUser(snapshot));
-
-
                 }
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
-
                 }
             });
-    }}
+        }
+    }
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.partnersPage){
-            Intent Partners = new Intent(this ,Partners.class);
+        if (view.getId() == R.id.partnersPage) {
+            Intent Partners = new Intent(this, Partners.class);
             startActivity(Partners);
-
-        }
-        else if (view.getId() == R.id.contactUsPage){
-
-            Intent Contact_Us = new Intent(this ,Contact_Us.class);
+        } else if (view.getId() == R.id.contactUsPage) {
+            Intent Contact_Us = new Intent(this, Contact_Us.class);
             startActivity(Contact_Us);
-
-        }
-        else if (view.getId() == R.id.ourStoryPage){
-
-            Intent OurStory = new Intent(this , OurStory.class);
+        } else if (view.getId() == R.id.ourStoryPage) {
+            Intent OurStory = new Intent(this, OurStory.class);
             startActivity(OurStory);
-        }
-        else if (view.getId() == R.id.logoutButton)
-        {
+        } else if (view.getId() == R.id.logoutButton) {
             UserManager.getInstance().removeCurrentUser();
             mAuth.signOut();
-            startActivity(new Intent(MainApplication.this , MainActivity.class));
-
-        }
-
-        else if (view.getId() == R.id.announcementsPage){
-            Intent Announcements = new Intent (this, Announcements.class);
+            startActivity(new Intent(MainApplication.this, MainActivity.class));
+        } else if (view.getId() == R.id.announcementsPage) {
+            Intent Announcements = new Intent(this, Announcements.class);
             startActivity(Announcements);
-        }
-        else if (view.getId() == R.id.servicesPage){
+        } else if (view.getId() == R.id.servicesPage) {
             Intent HealthServices = new Intent(this, HealthServices.class);
             startActivity(HealthServices);
-        }
-        else if (view.getId() == R.id.Patients){
-
-            Intent Patient_page = new Intent(this, PatientsPage.class);
+        } else if (view.getId() == R.id.Patients) {
+            Intent Patient_page = new Intent(this, Appointments.class);
             startActivity(Patient_page);
-
         }
-
     }
 }

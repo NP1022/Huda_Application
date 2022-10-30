@@ -19,6 +19,9 @@
             android:name=".SpecialtyHealth"
             android:exported="false" />
         <activity
+            android:name=".Appointments"
+            android:exported="false" />
+        <activity
             android:name=".MentalHealth"
             android:exported="false" />
         <activity

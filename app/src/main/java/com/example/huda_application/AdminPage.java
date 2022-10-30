@@ -62,12 +62,6 @@ public class AdminPage extends AppCompatActivity {
                 }
             });
         }
-//        if (UserManager.getInstance().isAdmin())
-//            FirebaseClient.fetchAllUsers();
-//
-//        List<User> users = new ArrayList<>(UserManager.getInstance().getDatabaseUsers());
-//        viewAdapter = new PatientViewAdapter(this, users);
-//        recyclerView.setAdapter(viewAdapter);
     }
 
     private class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> {
