@@ -206,4 +206,23 @@
         \n <li>Naureen Haroon, O.D. </li>
         \n <li>Suleman Hans, O.D.</li>
         \n <li>Elizabeth Borowiec, O.D</li></string>
+
+    <!-- Mental Health Page -->
+    <string name = "MentalHealthHeader"> الصحة العقلية </ string>
+    <string name = "MentalHealthPar1"> <b> لدينا أطباء نفسيون ضمن طاقم العمل جنبًا إلى جنب مع الأخصائيين الاجتماعيين المرخصين لدينا لتوفير العلاج والعلاج لمجموعة كبيرة من مشكلات الصحة العقلية. </ b> نحن نقدم المشورة والعلاج مجانًا لقدامى المحاربين والمشردين ، غير المؤمن عليهم ، والعاملين غير المؤمن عليهم.
+        \n منذ ظهور جائحة كوفيد -19 ، تحولت خدمات الطب النفسي لدينا إلى التطبيب عن بعد. لدينا حاليًا طبيبان نفسيان وممارس للصحة العقلية ومعالج يتطوع جميعًا مع عيادة هدى مما يسمح لنا بتوفير العلاج لمجموعة واسعة من مشكلات الصحة العقلية. </ string>
+    <string name = "MentalHealthPar2"> <b> تشمل خدمات الصحة العقلية لدينا: </ b>
+        \n <li> وصف الطبيب النفسي في الموقع </ li>
+        \n <li> إرشاد الكبار </ li>
+        \n <li> القلق / الاكتئاب </ li>
+        \n <li> الاضطرابات ثنائية القطب </ li>
+        \n <li> اضطرابات الأكل </ li>
+        \n <li> الاضطرابات الفصامية العاطفية والمزيد </ li> </string>
+    <string name = "MentalHealthPar3">
+        <b> أطبائنا النفسيين: </ b>
+            \n <li>Saba Maroof, M.D.</li>
+            \n <li>Mazhar Hussain, M.D.</li>
+        \n <b>مقدمي الدعم:</b>
+            \n <li>Joann Harrison, MHNP, FNP-BC</li>
+            \n <li>Sarah Kappler, TLLP</li></string>
 </resources>

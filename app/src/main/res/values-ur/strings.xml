@@ -203,4 +203,24 @@ HUDA کلینک ہمارے مریضوں کو مفت ادویات فراہم کر
         \n <li>Naureen Haroon, O.D. </li>
         \n <li>Suleman Hans, O.D.</li>
         \n <li>Elizabeth Borowiec, O.D</li></string>
+
+    <!--    Mental Health Page-->
+    Translation is too long to be saved
+    <string name = "MentalHealthHeader">ذہنی صحت</string>
+    <string name = "MentalHealthPar1"><b>ہمارے پاس اپنے لائسنس یافتہ سماجی کارکنوں کے ساتھ عملے میں نفسیاتی ماہر موجود ہیں تاکہ دماغی صحت کے مسائل کی وسیع رینج کا علاج اور علاج فراہم کیا جا سکے۔ </b> ہم سابق فوجیوں، بے گھر، غیر بیمہ شدہ، اور کام کرنے والے کم بیمہ شدہ افراد کو مفت مشاورت اور علاج کی پیشکش کرتے ہیں۔ n\
+CoVID-19 وبائی مرض کے آغاز کے بعد سے ہماری نفسیاتی خدمات ٹیلی میڈیسن میں منتقل ہو گئی ہیں۔ ہمارے پاس فی الحال 2 سائیکاٹرسٹ ہیں، ایک مینٹل ہیلتھ نرس پریکٹیشنر اور ایک تھراپسٹ جو تمام HUDA کلینک کے ساتھ رضاکارانہ طور پر کام کرتے ہیں اور ہمیں دماغی صحت کے مسائل کی ایک وسیع رینج کا علاج فراہم کرنے کی اجازت دیتے ہیں۔</string>
+    <string name="MentalHealthPar2"><b>ہماری دماغی صحت کی خدمات شامل ہیں:</b>
+        \n <li>سائٹ پر ماہر نفسیات کا نسخہ</li>
+        \n <li>بالغوں کی مشاورت</li>
+        \n <li>اضطراب/ڈپریشن</li>
+        \n <li>بائپولر ڈس آرڈرز</li>
+        \n <li>کھانے کی خرابی</li>
+        \n <li>Schizoaffective Disorders، اور مزید</li></string>
+    <string name="MentalHealthPar3">
+        <b>ہمارے ماہر نفسیات:</b>
+            \n <li>Saba Maroof, M.D.</li>
+            \n <li>Mazhar Hussain, M.D.</li>
+        \n <b>Supporting Providers:</b>
+            \n <li>Joann Harrison, MHNP, FNP-BC</li>
+            \n <li>Sarah Kappler, TLLP</li></string>
 </resources>

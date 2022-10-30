@@ -203,4 +203,23 @@ La clínica HUDA brinda medicamentos GRATIS a nuestros pacientes y también brin
         \n <li>Naureen Haroon, O.D. </li>
         \n <li>Suleman Hans, O.D.</li>
         \n <li>Elizabeth Borowiec, O.D</li></string>
+
+    <!--    Mental Health Page-->
+    <string name = "MentalHealthHeader">Salud Mental</string>
+    <string name = "MentalHealthPar1"><b>Tenemos psiquiatras en el personal junto con nuestros trabajadores sociales autorizados para brindar terapia y tratamiento para una amplia gama de problemas de salud mental.</b>Ofrecemos asesoramiento y tratamiento gratuitos a veteranos, personas sin hogar , sin seguro y trabajadores con seguro insuficiente.
+        \n Desde el inicio de la pandemia de Covid-19, nuestros servicios de psiquiatría han hecho la transición a la telemedicina. Actualmente contamos con 2 psiquiatras, una enfermera practicante de salud mental y un terapeuta que se ofrecen como voluntarios en la Clínica HUDA, lo que nos permite brindar tratamiento para una amplia gama de problemas de salud mental.</string>
+    <string name="MentalHealthPar2"><b>Nuestros servicios de salud mental incluyen:</b>
+        \n <li>Psiquiatra prescriptor en el sitio</li>
+        \n <li>Consejería para adultos</li>
+        \n <li>Ansiedad/Depresión</li>
+        \n <li>Trastornos bipolares</li>
+        \n <li>Trastornos de la alimentación</li>
+        \n <li>Trastornos esquizoafectivos y más</li></string>
+    <string name="MentalHealthPar3">
+        <b>Nuestros Psiquiatras:</b>
+            \n <li>Saba Maroof, M.D.</li>
+            \n <li>Mazhar Hussain, M.D.</li>
+        \n <b>Proveedores de Apoyo:</b>
+            \n <li>Joann Harrison, MHNP, FNP-BC</li>
+            \n <li>Sarah Kappler, TLLP</li></string>
 </resources>

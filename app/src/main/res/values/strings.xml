@@ -201,4 +201,22 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
         \n <li>Naureen Haroon, O.D. </li>
         \n <li>Suleman Hans, O.D.</li>
         \n <li>Elizabeth Borowiec, O.D</li></string>
+
+    <!--    Mental Health Page-->
+    <string name = "MentalHealthHeader">Mental Health</string>
+    <string name = "MentalHealthPar1"><b>We have psychiatrists on staff along with our licensed social workers to provide therapy and treatment for a wide range of mental health concerns.</b>We offer free counseling and treatment to veterans, homeless, uninsured, and the working underinsured.
+        \n Since the onset of the Covid-19 pandemic our psychiatry services have transitioned to telemedicine. We currently have 2 Psychiatrists, a Mental Health Nurse Practitioner and a Therapist who all volunteer with HUDA Clinic allowing us to provide treatment for a wide range of mental health concerns.</string>
+    <string name="MentalHealthPar2"><b>Our Mental Health Services Include:</b>
+        \n <li>Prescribing psychiatrist on site</li>
+        \n <li>Adult Counseling</li>
+        \n <li>Anxiety/Depression</li>
+        \n <li>Bipolar Disorders</li>
+        \n <li>Eating Disorders</li>
+        \n <li>Schizoaffective Disorders, and more</li></string>
+    <string name="MentalHealthPar3"><b>Our Psychiatrists:</b>
+            \n <li>Saba Maroof, M.D.</li>
+            \n <li>Mazhar Hussain, M.D.</li>
+        \n <b>Supporting Providers:</b>
+            \n <li>Joann Harrison, MHNP, FNP-BC</li>
+            \n <li>Sarah Kappler, TLLP</li></string>
 </resources>
