@@ -161,25 +161,22 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
         \n <li> Acute and Chronic Illness Management </li>
         \n <li>Laboratory Services (blood work) </li>
         \n <li>No Cost Pharmacy </li>
-        \n <li>Diabetes Screening & Treatments </li>
+        \n <li>Diabetes Screening &amp; Treatments </li>
         \n <li>Health Education and Resources </li>
-        \n <li>Cholesterol & Blood Pressure screenings </li>
+        \n <li>Cholesterol &amp; Blood Pressure screenings </li>
         \n <li>Nutrition Education </li> </string>
 
     <!--    Dental Health Page-->
     <string name = "DentalHealthHeader">Dental Services</string>
     <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
     <string name = "DentalHealthPar1"><b>Many people wait to have necessary dental work done because they don’t have insurance, however small dental problems can quickly become incredibly painful if left alone.</b> Come in to HUDA for cleanings, fillings, extractions and exams to keep your teeth healthy and receive a referral to a specialist if needed.</string>
-    <string name="DentalHealthPar2">Our Dental Services Include:
+    <string name="DentalHealthPar2"><b>Our Dental Services Include:</b>
         \n <li>Dental screenings, and X-Rays</li>
         \n <li>Deep Cleanings</li>
         \n <li>Composite Fillings</li>
         \n <li>Tooth Extraction</li>
-        \n <li>Referrals to low-cost dentists as needed</li>
-        \n <li>Health Education and Resources </li>
-        \n <li>Cholesterol & Blood Pressure screenings </li>
-        \n <li>Nutrition Education </li> </string>
-    <string name="DentalHealthPar3">Our Dentists:
+        \n <li>Referrals to low-cost dentists as needed</li></string>
+    <string name="DentalHealthPar3"><b>Our Dentists:</b>
         \n <li>Shakeel Niazi, D.D.S.</li>
         \n <li>Ahmed Allam, D.D.S.</li>
         \n <li>Asmaa Abdel-Salam, D.D.S.</li>

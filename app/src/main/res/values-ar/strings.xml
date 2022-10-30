@@ -179,11 +179,8 @@
          \n <li> التنظيف العميق </ li>
          \n <li> الحشوات المركبة </ li>
          \n <li> خلع الأسنان </ li>
-         \n <li> الإحالات إلى أطباء الأسنان منخفضي التكلفة حسب الحاجة </ li>
-         \n <li> التثقيف الصحي والموارد </ li>
-         \n <li> فحوصات الكوليسترول وضغط الدم </ li>
-         \n <li> التثقيف الغذائي </ li> </string>
-    <string name="DentalHealthPar3"><b>Our Dentists:</b>
+         \n <li> الإحالات إلى أطباء الأسنان منخفضي التكلفة حسب الحاجة </ li></string>
+    <string name="DentalHealthPar3"><b>أطباء الأسنان لدينا:</b>
         \n <li>Shakeel Niazi, D.D.S.</li>
         \n <li>Ahmed Allam, D.D.S.</li>
         \n <li>Asmaa Abdel-Salam, D.D.S.</li>

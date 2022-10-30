@@ -167,4 +167,22 @@ La clinique HUDA fournit des médicaments GRATUITS à nos patients et fournit é
          \n <li>Dépistage du cholestérol et de la tension artérielle </li>
          \n <li>Éducation nutritionnelle </li></string>
 
+    <!--    Dental Health Page-->
+    <string name = "DentalHealthHeader">Services Dentaires</string>
+    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
+    <string name = "DentalHealthPar1"><b>Beaucoup de gens attendent d'avoir les soins dentaires nécessaires parce qu'ils n'ont pas d'assurance, mais de petits problèmes dentaires peuvent rapidement devenir incroyablement douloureux s'ils sont laissés seuls.</b> Venez chez HUDA pour des nettoyages, des obturations, des extractions et des examens pour garder vos dents en bonne santé et être référé à un spécialiste si nécessaire.</string>
+    <string name="DentalHealthPar2"><b>Nos services dentaires incluent:</b>
+         \n <li>Examens dentaires et radiographies</li>
+         \n <li>Nettoyages en profondeur</li>
+         \n <li>Remplissages composites</li>
+         \n <li>Extraction dentaire</li>
+         \n <li>Recommandations à des dentistes à bas prix si nécessaire</li></string>
+    <string name="DentalHealthPar3"><b>Nos Dentistes:</b>
+        \n <li>Shakeel Niazi, D.D.S.</li>
+        \n <li>Ahmed Allam, D.D.S.</li>
+        \n <li>Asmaa Abdel-Salam, D.D.S.</li>
+        \n <li>Sumera Khalid, D.D.S.</li>
+        \n <li>Umair Niazi, D.M.D.</li>
+        \n <li>Rachel Mundus, R.D. </li>
+        \n <li>Fatin Amireh, R.D.H.</li></string>
 </resources>

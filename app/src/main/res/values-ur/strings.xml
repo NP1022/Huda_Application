@@ -166,4 +166,23 @@ HUDA کلینک ہمارے مریضوں کو مفت ادویات فراہم کر
          \n <li>صحت کی تعلیم اور وسائل </li>
          \n <li>کولیسٹرول اور بلڈ پریشر کی جانچ </li>
          \n <li>غذائیت کی تعلیم </li></string>
+
+    <!--    Dental Health Page-->
+    <string name = "DentalHealthHeader">دانتوں کی خدمات</string>
+    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
+    <string name = "DentalHealthPar1"><b>بہت سے لوگ دانتوں کے ضروری کام کرنے کا انتظار کرتے ہیں کیونکہ ان کے پاس انشورنس نہیں ہے، تاہم اگر اکیلے چھوڑ دیا جائے تو دانتوں کے چھوٹے مسائل تیزی سے ناقابل یقین حد تک تکلیف دہ ہو سکتے ہیں۔ </b> اپنے دانتوں کو صحت مند رکھنے کے لیے صفائی، فلنگ، نکالنے اور امتحانات کے لیے HUDA میں آئیں اور ضرورت پڑنے پر کسی ماہر سے رجوع کریں۔</string>
+    <string name="DentalHealthPar2"><b>ہماری دانتوں کی خدمات میں شامل ہیں:</b>
+         \n <li>دانتوں کی اسکریننگ، اور ایکس رے</li>
+         \n <li>گہری صفائیاں</li>
+         \n <li>کمپوزٹ فلنگز</li>
+         \n <li>دانت نکالنا</li>
+         \n <li>ضرورت کے مطابق کم لاگت والے ڈینٹسٹ کے حوالے</li></string>
+    <string name="DentalHealthPar3"><b>ہمارے دانتوں کے ڈاکٹر:</b>
+        \n <li>Shakeel Niazi, D.D.S.</li>
+        \n <li>Ahmed Allam, D.D.S.</li>
+        \n <li>Asmaa Abdel-Salam, D.D.S.</li>
+        \n <li>Sumera Khalid, D.D.S.</li>
+        \n <li>Umair Niazi, D.M.D.</li>
+        \n <li>Rachel Mundus, R.D. </li>
+        \n <li>Fatin Amireh, R.D.H.</li></string>
 </resources>
