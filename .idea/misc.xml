@@ -58,9 +58,11 @@
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_stress_form.xml" value="0.27920792079207923" />
         <entry key="app/src/main/res/drawable/PrimaryHUDA_background.xml" value="0.3385" />
         <entry key="app/src/main/res/layout/activity_announcements.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_authorization_form.xml" value="0.28804347826086957" />
+        <entry key="app/src/main/res/layout/activity_button_style.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/activity_check_in.xml" value="0.12639311043566362" />
         <entry key="app/src/main/res/layout/activity_contact_us.xml" value="0.37311553955078125" />
-        <entry key="app/src/main/res/layout/activity_dental_health.xml" value="0.15896739130434784" />
+        <entry key="app/src/main/res/layout/activity_dental_health.xml" value="0.2139371789020041" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.2527684529622396" />
         <entry key="app/src/main/res/layout/activity_health_services.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.18020833333333333" />
