@@ -18,7 +18,7 @@
       tools:context=".VisionHealth">
 
     <TextView
-        android:id="@+id/visionHealthHeader"
+        android:id="@+id/mentalHealthHeader"
         android:layout_width="251dp"
         android:layout_height="51dp"
         android:layout_marginTop="7dp"
@@ -88,7 +88,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/visionHealthHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/mentalHealthHeader" />
 
     <TextView
         android:id="@+id/textView53"
