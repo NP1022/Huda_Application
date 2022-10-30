@@ -152,4 +152,105 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "Event3">Vispera de Año Nuevo</string>
     <string name = "CalendarHeader">Calendario de la Clínica</string>
 
+    <!--    Primary Services Page-->
+    <string name = "PrimaryServicesHeader">Servicios Primarios</string>
+    <string name = "PrimaryCareInternalMedicine">Atención Primaria / Medicina Interna</string>
+    <string name = "PrimaryCarePar1">Los proveedores de atención primaria suelen ser la primera línea de contacto para los pacientes; tratar problemas generales de salud, brindar educación, medicamentos y referencias especializadas según sea necesario. HUDA tiene como objetivo brindar atención primaria y servicios especializados a las personas sin seguro y con seguro insuficiente en el área metropolitana de Detroit. Brindamos servicios preventivos de atención primaria en una clínica de salud comunitaria centrada en la persona. ¡Nuestro objetivo es hacer que Michigan sea más saludable!
+La clínica HUDA brinda medicamentos GRATIS a nuestros pacientes y también brinda servicios de laboratorio sin costo para nuestros pacientes.</string>
+    <string name="PrimaryCarePar2">Nuestros servicios de atención primaria incluyen:
+         \n <li> Evaluaciones de salud </li>
+         \n <li> Manejo de enfermedades agudas y crónicas </li>
+         \n <li>Servicios de laboratorio (análisis de sangre) </li>
+         \n <li>Farmacia sin costo</li>
+         \n <li>Exámenes de detección y tratamientos de la diabetes</li>
+         \n <li>Educación y recursos para la salud </li>
+         \n <li>Exámenes de colesterol y presión arterial</li>
+         \n <li>Educación nutricional </li></string>
+
+    <!--    Dental Health Page-->
+    <string name = "DentalHealthHeader">Servicios Dentales</string>
+    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
+    <string name = "DentalHealthPar1"><b>Muchas personas esperan para hacerse el trabajo dental necesario porque no tienen seguro, sin embargo, los pequeños problemas dentales pueden convertirse rápidamente en increíblemente dolorosos si no se toman en cuenta.</b> Visite HUDA para limpiezas, empastes, extracciones y exámenes para mantener sus dientes saludable y recibir una derivación a un especialista si es necesario.</string>
+    <string name="DentalHealthPar2"><b>Nuestros servicios dentales incluyen:</b>
+    \n <li>Exámenes dentales y radiografías</li>
+    \n <li>Limpiezas profundas</li>
+    \n <li>Rellenos compuestos</li>
+    \n <li>Extracción de dientes</li>
+    \n <li>Referencias a dentistas de bajo costo según sea necesario</li></string>
+    <string name="DentalHealthPar3"><b>Nuestros Dentistas:</b>
+        \n <li>Shakeel Niazi, D.D.S.</li>
+        \n <li>Ahmed Allam, D.D.S.</li>
+        \n <li>Asmaa Abdel-Salam, D.D.S.</li>
+        \n <li>Sumera Khalid, D.D.S.</li>
+        \n <li>Umair Niazi, D.M.D.</li>
+        \n <li>Rachel Mundus, R.D. </li>
+        \n <li>Fatin Amireh, R.D.H.</li></string>
+
+    <!--    Vision Care Page-->
+    <string name = "VisionCareHeader">Cuidado de la vista</string>
+    <string name = "VisionCarePar1"><b>Los exámenes de la vista son un método eficaz para identificar a las personas con discapacidad visual o afecciones oculares que probablemente provoquen la pérdida de la visión. </b> Realizamos exámenes internos y proporcionamos anteojos sin costo y remisiones a oftalmólogos locales de bajo costo según sea necesario.</string>
+    <string name="VisionCarePar2"><b>Nuestras opciones de exámenes de la vista:</b>
+         \n <li>Exámenes de detección de glaucoma</li>
+         \n <li>Exámenes de cataratas</li>
+         \n <li>Exámenes de detección de degeneración macular</li>
+         \n <li>Gafas GRATIS</li>
+         \n <li>Referencias a especialistas de la vista</li></string>
+    <string name="VisionCarePar3"><b>Nuestros Oftalmólogos / Optometristas:</b>
+        \n <li>M. Hanif Peracha, M.D.</li>
+        \n <li>Meiraj Siddiqui, M.D.</li>
+        \n <li>Benjamin Whittredge, O.D.</li>
+        \n <li>Christopher Burgess, O.D.</li>
+        \n <li>Naureen Haroon, O.D. </li>
+        \n <li>Suleman Hans, O.D.</li>
+        \n <li>Elizabeth Borowiec, O.D</li></string>
+
+    <!--    Mental Health Page-->
+    <string name = "MentalHealthHeader">Salud Mental</string>
+    <string name = "MentalHealthPar1"><b>Tenemos psiquiatras en el personal junto con nuestros trabajadores sociales autorizados para brindar terapia y tratamiento para una amplia gama de problemas de salud mental.</b>Ofrecemos asesoramiento y tratamiento gratuitos a veteranos, personas sin hogar , sin seguro y trabajadores con seguro insuficiente.
+        \n Desde el inicio de la pandemia de Covid-19, nuestros servicios de psiquiatría han hecho la transición a la telemedicina. Actualmente contamos con 2 psiquiatras, una enfermera practicante de salud mental y un terapeuta que se ofrecen como voluntarios en la Clínica HUDA, lo que nos permite brindar tratamiento para una amplia gama de problemas de salud mental.</string>
+    <string name="MentalHealthPar2"><b>Nuestros servicios de salud mental incluyen:</b>
+        \n <li>Psiquiatra prescriptor en el sitio</li>
+        \n <li>Consejería para adultos</li>
+        \n <li>Ansiedad/Depresión</li>
+        \n <li>Trastornos bipolares</li>
+        \n <li>Trastornos de la alimentación</li>
+        \n <li>Trastornos esquizoafectivos y más</li></string>
+    <string name="MentalHealthPar3">
+        <b>Nuestros Psiquiatras:</b>
+            \n <li>Saba Maroof, M.D.</li>
+            \n <li>Mazhar Hussain, M.D.</li>
+        \n <b>Proveedores de Apoyo:</b>
+            \n <li>Joann Harrison, MHNP, FNP-BC</li>
+            \n <li>Sarah Kappler, TLLP</li></string>
+
+    <!--    Speciality Care Page-->
+    <string name = "SpecialtyCareHeader"> Servicios especializados </string>
+    <string name = "SpecialityCarePar1"> <b> Dentro del campo de la medicina, existen muchas subespecialidades a la hora de coordinar la atención a los pacientes. En HUDA, brindamos una gama de atención especializada y consultas a nuestros pacientes, con el objetivo de ampliar el acceso a los servicios de atención médica. </b> Hemos creado un modelo de salud integrado en HUDA a través de la apertura de múltiples servicios especializados creando un lugar donde se pueden satisfacer la mayoría de las necesidades de los pacientes. Todos los servicios especializados requieren una remisión de un proveedor de atención primaria de HUDA. </string>
+    <string name="SpecialityCarePar2"> <b> Nuestras consultas/servicios especializados incluyen: </b>
+        \n <li> Fisioterapia </li>
+        \n <li> Endocrinología </li>
+        \n <li> Cardiología </li>
+        \n <li> Podología </li>
+        \n <li> Nefrología </li>
+        \n <li> Gastroenterología </li>
+        \n <li> Otorrinolaringología (ENT) </li>
+        \n <li> Hepatología </li>
+        \n <li> Hematología </li>
+        \n <li> Neumología </li> </string>
+    <string name="SpecialityCarePar3"> <b> Nuestros proveedores especializados: </b>
+        \n <li>Jawwad Rashid, P.T.A</li>
+        \n <li>Asadullah Mohammed, M.D.</li>
+        \n <li>Naseer Ahmad, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Samer Salka, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Syed Ghani, D.P.M.</li>
+        \n <li>Naveed Aslam, M.D.</li>
+        \n <li>Jukaku Tayeb, M.D.</li>
+        \n <li>Firdous Siddiqui, M.D.</li>
+        \n <li>Yousef Siddiqui, M.D.</li>
+        \n <li>Uzma Rehman, D.O.</li>
+        \n <li>Zaahir Turfe, M.D.</li>
+        \n <li>Ranya Selim, M.D.</li>
+        \n <li>Syed Akbar, M.D.</li></string>
 </resources>

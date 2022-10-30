@@ -1,9 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/primaryServices"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PrimaryServices">
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+
+        tools:context=".PrimaryServices">
+
+        <TextView
+            android:id="@+id/specialityHealthHeader"
+            android:layout_width="251dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/white"
+            android:text="@string/PrimaryServicesHeader"
+            android:textAlignment="center"
+            android:textColor="#043670"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hudaLogo3" />
+
+        <ImageView
+            android:id="@+id/hudaLogo3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+
+            android:contentDescription="TODO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/huda_logo" />
+
+        <!--TextView
+            android:id="@+id/primaryCareInternalMedicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/PrimaryCareInternalMedicine"
+            android:textColor="#043670"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/primaryServicesHeader" /-->
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialtyHealthPar1"
+            app:srcCompat="@drawable/primaryCareHUDA" />
+
+        <TextView
+            android:id="@+id/specialtyHealthPar1"
+            android:layout_width="346dp"
+            android:layout_height="411dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:gravity="start|top"
+            android:justificationMode="inter_word"
+            android:text="@string/PrimaryCarePar1"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialityHealthHeader" />
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="322dp"
+            android:layout_height="432dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="32dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:gravity="start|top"
+            android:text="@string/PrimaryCarePar2"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
