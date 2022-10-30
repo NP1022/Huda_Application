@@ -219,4 +219,35 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
         \n <b>Supporting Providers:</b>
             \n <li>Joann Harrison, MHNP, FNP-BC</li>
             \n <li>Sarah Kappler, TLLP</li></string>
+
+    <!--    Speciality Care Page-->
+    <string name = "SpecialtyCareHeader"> Speciality Services  </string>
+    <string name = "SpecialityCarePar1"> <b> Within the field of medicine, there are many sub-specialties when coordinating care to patients. At HUDA, we provide a range of specialty care and consultations to our patients, with the aim of expanding access to healthcare services. </b> We have created an integrated health model at HUDA through opening multiple specialty services creating a place where most patient needs can be met. All specialty services require a referral from a HUDA primary care provider. </string>
+    <string name="SpecialityCarePar2"> <b> Our Speciality Services/Consultations Include: </b>
+        \n <li> Physical Therapy </li>
+        \n <li> Endocrinology </li>
+        \n <li> Cardiology </li>
+        \n <li> Podiatry </li>
+        \n <li> Nephrology </li>
+        \n <li> Gastroenterology </li>
+        \n <li> Ear, Nose, Throat (ENT) </li>
+        \n <li> Hepatology </li>
+        \n <li> Hematology </li>
+        \n <li> Pulmonology </li> </string>
+    <string name="SpecialityCarePar3"> <b> Our Speciality Providers: </b>
+        \n <li>Jawwad Rashid, P.T.A</li>
+        \n <li>Asadullah Mohammed, M.D.</li>
+        \n <li>Naseer Ahmad, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Samer Salka, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Syed Ghani, D.P.M.</li>
+        \n <li>Naveed Aslam, M.D.</li>
+        \n <li>Jukaku Tayeb, M.D.</li>
+        \n <li>Firdous Siddiqui, M.D.</li>
+        \n <li>Yousef Siddiqui, M.D.</li>
+        \n <li>Uzma Rehman, D.O.</li>
+        \n <li>Zaahir Turfe, M.D.</li>
+        \n <li>Ranya Selim, M.D.</li>
+        \n <li>Syed Akbar, M.D.</li></string>
 </resources>

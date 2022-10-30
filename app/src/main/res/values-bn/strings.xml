@@ -220,4 +220,35 @@ HUDA ক্লিনিক আমাদের রোগীদের বিনা
         \n <b>সহায়তা প্রদানকারী:</b>
             \n <li>Joann Harrison, MHNP, FNP-BC</li>
             \n <li>Sarah Kappler, TLLP</li></string>
+
+    <!--    Speciality Care Page-->
+    <string name = "SpecialtyCareHeader" > বিশেষ সেবা </string>
+    <string name = "SpecialityCarePar1" > <b> ওষুধের ক্ষেত্রে, রোগীদের যত্নের সমন্বয় করার সময় অনেক উপ-বিশেষত্ব রয়েছে। HUDA-তে, আমরা স্বাস্থ্যসেবা পরিষেবাগুলিতে অ্যাক্সেস সম্প্রসারণের লক্ষ্যে আমাদের রোগীদের বিশেষ যত্ন এবং পরামর্শের একটি পরিসীমা প্রদান করি। </b>আমরা HUDA-তে একটি সমন্বিত স্বাস্থ্য মডেল তৈরি করেছি একাধিক বিশেষ পরিষেবা খোলার মাধ্যমে এমন একটি জায়গা তৈরি করেছি যেখানে বেশিরভাগ রোগীর চাহিদা মেটানো যায়। সমস্ত বিশেষ পরিষেবার জন্য একজন HUDA প্রাথমিক যত্ন প্রদানকারীর কাছ থেকে রেফারেল প্রয়োজন। </string>
+    <string name="SpecialityCarePar2"> <b> আমাদের বিশেষ পরিষেবা/পরামর্শ অন্তর্ভুক্ত: </b>
+        \n <li> শারীরিক থেরাপি </li>
+        \n <li> এন্ডোক্রিনোলজি </li>
+        \n <li> কার্ডিওলজি </li>
+        \n <li> পডিয়াট্রি </li>
+        \n <li> নেফ্রোলজি </li>
+        \n <li> গ্যাস্ট্রোএন্টারোলজি </li>
+        \n <li> কান, নাক, গলা (ENT) </li>
+        \n <li> হেপাটোলজি </li>
+        \n <li> হেমাটোলজি </li>
+        \n <li> পালমোনোলজি </li> </string>
+    <string name="SpecialityCarePar3"> <b> আমাদের বিশেষত্ব প্রদানকারী: </b>
+        \n <li>Jawwad Rashid, P.T.A</li>
+        \n <li>Asadullah Mohammed, M.D.</li>
+        \n <li>Naseer Ahmad, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Samer Salka, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Syed Ghani, D.P.M.</li>
+        \n <li>Naveed Aslam, M.D.</li>
+        \n <li>Jukaku Tayeb, M.D.</li>
+        \n <li>Firdous Siddiqui, M.D.</li>
+        \n <li>Yousef Siddiqui, M.D.</li>
+        \n <li>Uzma Rehman, D.O.</li>
+        \n <li>Zaahir Turfe, M.D.</li>
+        \n <li>Ranya Selim, M.D.</li>
+        \n <li>Syed Akbar, M.D.</li></string>
 </resources>

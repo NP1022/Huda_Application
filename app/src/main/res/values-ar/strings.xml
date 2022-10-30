@@ -225,4 +225,35 @@
         \n <b>مقدمي الدعم:</b>
             \n <li>Joann Harrison, MHNP, FNP-BC</li>
             \n <li>Sarah Kappler, TLLP</li></string>
+
+    <!--    Speciality Care Page-->
+    <string name = "SpecialtyCareHeader"> الخدمات المتخصصة </ string>
+    <string name = "SpecialityCarePar1"> <b> في مجال الطب ، هناك العديد من التخصصات الفرعية عند تنسيق الرعاية للمرضى. في هدى ، نقدم مجموعة من الرعاية المتخصصة والاستشارات لمرضانا ، بهدف توسيع نطاق الوصول إلى خدمات الرعاية الصحية. </b> لقد أنشأنا نموذجًا صحيًا متكاملًا في هدى من خلال فتح خدمات متخصصة متعددة لخلق مكان يمكن فيه تلبية معظم احتياجات المرضى. تتطلب جميع الخدمات المتخصصة إحالة من مقدم الرعاية الأولية من HUDA. </string>
+    <string name = "SpecialityCarePar2"> <b> تشمل خدماتنا / استشاراتنا المتخصصة: </ b>
+        \n <li> العلاج الطبيعي </ li>
+        \n <li> طب الغدد الصماء </ li>
+        \n <li> أمراض القلب </ li>
+        \n <li> معالجة الأقدام </ li>
+        \n <li> أمراض الكلى </ li>
+        \n <li> أمراض الجهاز الهضمي </ li>
+        \n <li> أنف وأذن وحنجرة </ li>
+        \n <li> أمراض الكبد </ li>
+        \n <li> أمراض الدم </ li>
+        \n <li> أمراض الرئة </ li> </string>
+    <string name = "SpecialityCarePar3"> <b> مزودو الخدمات المتخصصون لدينا: </ b>
+        \n <li>Jawwad Rashid, P.T.A</li>
+        \n <li>Asadullah Mohammed, M.D.</li>
+        \n <li>Naseer Ahmad, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Samer Salka, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Syed Ghani, D.P.M.</li>
+        \n <li>Naveed Aslam, M.D.</li>
+        \n <li>Jukaku Tayeb, M.D.</li>
+        \n <li>Firdous Siddiqui, M.D.</li>
+        \n <li>Yousef Siddiqui, M.D.</li>
+        \n <li>Uzma Rehman, D.O.</li>
+        \n <li>Zaahir Turfe, M.D.</li>
+        \n <li>Ranya Selim, M.D.</li>
+        \n <li>Syed Akbar, M.D.</li></string>
 </resources>

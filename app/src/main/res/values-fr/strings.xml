@@ -222,4 +222,35 @@ La clinique HUDA fournit des médicaments GRATUITS à nos patients et fournit é
         \n <b>Fournisseurs de Soutien:</b>
             \n <li>Joann Harrison, MHNP, FNP-BC</li>
             \n <li>Sarah Kappler, TLLP</li></string>
+
+    <!--    Speciality Care Page-->
+    <string name = "SpecialtyCareHeader"> Services spécialisés </string>
+    <string name = "SpecialityCarePar1"> <b> Dans le domaine de la médecine, il existe de nombreuses sous-spécialités lors de la coordination des soins aux patients. Chez HUDA, nous offrons une gamme de soins spécialisés et de consultations à nos patients, dans le but d'élargir l'accès aux services de santé. </b> Nous avons créé un modèle de santé intégré à HUDA en ouvrant plusieurs services spécialisés créant un lieu où la plupart des besoins des patients peuvent être satisfaits. Tous les services spécialisés nécessitent une recommandation d'un fournisseur de soins primaires HUDA. </string>
+    <string name="SpecialityCarePar2"> <b> Nos services/consultations spécialisés incluent: </b>
+        \n <li> Physiothérapie </li>
+        \n <li> Endocrinologie </li>
+        \n <li> Cardiologie </li>
+        \n <li> Podologie </li>
+        \n <li> Néphrologie </li>
+        \n <li> Gastro-entérologie </li>
+        \n <li> Oreille, Nez, Gorge (ORL) </li>
+        \n <li> Hépatologie </li>
+        \n <li> Hématologie </li>
+        \n <li> Pneumologie </li> </string>
+    <string name="SpecialityCarePar3"> <b> Nos fournisseurs spécialisés: </b>
+        \n <li>Jawwad Rashid, P.T.A</li>
+        \n <li>Asadullah Mohammed, M.D.</li>
+        \n <li>Naseer Ahmad, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Samer Salka, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Syed Ghani, D.P.M.</li>
+        \n <li>Naveed Aslam, M.D.</li>
+        \n <li>Jukaku Tayeb, M.D.</li>
+        \n <li>Firdous Siddiqui, M.D.</li>
+        \n <li>Yousef Siddiqui, M.D.</li>
+        \n <li>Uzma Rehman, D.O.</li>
+        \n <li>Zaahir Turfe, M.D.</li>
+        \n <li>Ranya Selim, M.D.</li>
+        \n <li>Syed Akbar, M.D.</li></string>
 </resources>

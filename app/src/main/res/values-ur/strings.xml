@@ -223,4 +223,35 @@ CoVID-19 وبائی مرض کے آغاز کے بعد سے ہماری نفسیا�
         \n <b>Supporting Providers:</b>
             \n <li>Joann Harrison, MHNP, FNP-BC</li>
             \n <li>Sarah Kappler, TLLP</li></string>
+
+    <!--    Speciality Care Page-->
+    <string name = "SpecialtyCareHeader" > خاص خدمات</string>
+    <string name = "SpecialityCarePar1" > <b> طب کے شعبے میں، مریضوں کی دیکھ بھال کو مربوط کرتے وقت بہت سی ذیلی خصوصیات موجود ہیں۔ HUDA میں، ہم صحت کی دیکھ بھال کی خدمات تک رسائی کو بڑھانے کے مقصد کے ساتھ، اپنے مریضوں کو خصوصی دیکھ بھال اور مشاورت فراہم کرتے ہیں۔ </b>ہم نے HUDA میں متعدد خصوصی خدمات کے آغاز کے ذریعے ایک مربوط صحت کا ماڈل بنایا ہے جس سے ایک ایسی جگہ بنائی گئی ہے جہاں زیادہ تر مریضوں کی ضروریات پوری کی جا سکیں۔ تمام خاص خدمات کو HUDA پرائمری کیئر فراہم کنندہ سے حوالہ درکار ہوتا ہے۔ </string>
+    <string name="SpecialityCarePar2"> <b> ہماری خصوصی خدمات/مشاورتیں شامل ہیں: </b>
+        \n <li> جسمانی علاج </li>
+        \n <li> اینڈو کرائنولوجی </li>
+        \n <li> کارڈیالوجی </li>
+        \n <li> پوڈیاٹری </li>
+        \n <li> نیفرالوجی </li>
+        \n <li> معدے </li>
+        \n <li> کان، ناک، گلا (ENT) </li>
+        \n <li> ہیپاٹولوجی </li>
+        \n <li> ہیماتولوجی </li>
+        \n <li> پلمونولوجی </li> </string>
+    <string name="SpecialityCarePar3"> <b> ہمارے خصوصی فراہم کنندگان: </b>
+        \n <li>Jawwad Rashid, P.T.A</li>
+        \n <li>Asadullah Mohammed, M.D.</li>
+        \n <li>Naseer Ahmad, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Samer Salka, M.D.</li>
+        \n <li>Maha Alhusseini, M.D.</li>
+        \n <li>Syed Ghani, D.P.M.</li>
+        \n <li>Naveed Aslam, M.D.</li>
+        \n <li>Jukaku Tayeb, M.D.</li>
+        \n <li>Firdous Siddiqui, M.D.</li>
+        \n <li>Yousef Siddiqui, M.D.</li>
+        \n <li>Uzma Rehman, D.O.</li>
+        \n <li>Zaahir Turfe, M.D.</li>
+        \n <li>Ranya Selim, M.D.</li>
+        \n <li>Syed Akbar, M.D.</li></string>
 </resources>
