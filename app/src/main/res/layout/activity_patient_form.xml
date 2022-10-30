@@ -1005,20 +1005,6 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
 
 
         <Button
-            android:id="@+id/submitPatient"
-            android:layout_width="243dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="28dp"
-            android:background="@drawable/buttonstyle"
-            android:text="Submit"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/consentDate"
-            tools:ignore="MissingConstraints" />
-
-        <Button
             android:id="@+id/nextForm"
             android:layout_width="189dp"
             android:layout_height="56dp"
@@ -1030,7 +1016,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submitPatient"
+            app:layout_constraintTop_toBottomOf="@+id/consentDate"
             tools:ignore="MissingConstraints" />
 
 

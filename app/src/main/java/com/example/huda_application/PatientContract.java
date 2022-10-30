@@ -8,7 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class PatientContract extends AppCompatActivity implements View.OnClickListener{
+public class PatientContract extends AppCompatActivity implements View.OnClickListener
+{
 
     private TextView AuthorizationForm;
     private String visitReasonTxt,firstNameTxt , lastNameTxt,patientSexTxt,patientDOBTxt,patientHomeNumTxt,patientCellNumTxt,patientAddTxt,
@@ -17,7 +18,8 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
             contactPhoneTxt,patientConsentName,patientSignedText,patientSignatureText,consentDateTxt,patientRaceTxt,patientEthnicityTxt,patientIncomeTxt,
             patientEmpTxt,dateTxt,patientSSNTxt;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_contract);
         Bundle extras = getIntent().getExtras();
@@ -74,8 +76,10 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
     }
 
     @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.nextForm2){
+    public void onClick(View view)
+    {
+        if (view.getId() == R.id.nextForm2)
+        {
             Intent AuthorizationForm = new Intent (this, AuthorizationForm.class);
             AuthorizationForm.putExtra("lastNameTxt" ,lastNameTxt );
             AuthorizationForm.putExtra("dateTxt" ,dateTxt );
