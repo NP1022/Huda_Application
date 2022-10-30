@@ -94,7 +94,7 @@
             app:layout_constraintTop_toBottomOf="@+id/TextView3" />
 
         <EditText
-            android:id="@+id/patientNamePrinted2"
+            android:id="@+id/patientNamePrinted3"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -112,7 +112,7 @@
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/patientNameSignature2"
+            android:id="@+id/patientNameSignature3"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -124,13 +124,13 @@
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#686868"
-            app:layout_constraintEnd_toEndOf="@+id/patientNamePrinted2"
-            app:layout_constraintStart_toStartOf="@+id/patientNamePrinted2"
-            app:layout_constraintTop_toBottomOf="@+id/patientNamePrinted2"
+            app:layout_constraintEnd_toEndOf="@+id/patientNamePrinted3"
+            app:layout_constraintStart_toStartOf="@+id/patientNamePrinted3"
+            app:layout_constraintTop_toBottomOf="@+id/patientNamePrinted3"
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/consentFormDate"
+            android:id="@+id/consentFormDate3"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -142,9 +142,9 @@
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#686868"
-            app:layout_constraintEnd_toEndOf="@+id/patientNameSignature2"
-            app:layout_constraintStart_toStartOf="@+id/patientNameSignature2"
-            app:layout_constraintTop_toBottomOf="@+id/patientNameSignature2"
+            app:layout_constraintEnd_toEndOf="@+id/patientNameSignature3"
+            app:layout_constraintStart_toStartOf="@+id/patientNameSignature3"
+            app:layout_constraintTop_toBottomOf="@+id/patientNameSignature3"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -157,10 +157,12 @@
             android:text="Next Form"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/consentFormDate"
-            app:layout_constraintStart_toStartOf="@+id/consentFormDate"
-            app:layout_constraintTop_toBottomOf="@+id/consentFormDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consentFormDate3"
             tools:ignore="MissingConstraints" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
