@@ -38,7 +38,7 @@
             android:layout_marginTop="48dp"
             android:background="@color/white"
             android:text="Patient Contract"
-            android:textAlignment="center"
+            android:gravity="center"
             android:textColor="#043670"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -203,7 +203,7 @@
 
         <EditText
             android:id="@+id/patientNameSignature2"
-            android:layout_width="320dp"
+            android:layout_width="329dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/edittextstyle"

@@ -65,7 +65,7 @@
             android:name=".AuthorizationForm"
             android:exported="false" />
         <activity
-            android:name=".PatientContract"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".CheckIn"
@@ -101,7 +101,7 @@
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".PatientContract"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Huda_Application.NoActionBar">
