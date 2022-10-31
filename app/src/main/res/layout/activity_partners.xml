@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/scrollViewPartners"
-    android:layout_width="match_parent"
+    android:layout_width="409dp"
     android:layout_height="729dp"
     android:background="#9E9E9E"
     android:backgroundTint="#9E9E9E"
@@ -14,34 +14,38 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:id="@+id/partnersPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
+        android:paddingRight="60dp"
         android:visibility="visible"
         tools:context=".Partners">
 
-
         <ImageView
-            android:id="@+id/hudaLogo"
+            android:id="@+id/imageView4"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="19dp"
             android:clickable="true"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/divider34"
+            app:layout_constraintEnd_toStartOf="@+id/partnersHeader"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/huda_logo"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:srcCompat="@drawable/huda_logo" />
+
 
         <ImageView
             android:id="@+id/bcbsLogo"
             android:layout_width="311dp"
             android:layout_height="116dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintBottom_toTopOf="@+id/stJosephLogo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
             app:srcCompat="@drawable/bcbs_logo" />
 
         <ImageView
@@ -52,7 +56,6 @@
             android:layout_marginBottom="12dp"
             app:layout_constraintBottom_toTopOf="@+id/MSUCHMLogo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.438"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bcbsLogo"
             app:srcCompat="@drawable/st_joseph_mercy_oakland_logo" />
@@ -191,21 +194,22 @@
 
         <TextView
             android:id="@+id/partnersHeader"
-            android:layout_width="330dp"
+            android:layout_width="214dp"
             android:layout_height="36dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="66dp"
             android:background="@color/white"
-            android:text="PARTNERS"
+            android:text="Partners"
             android:textAlignment="center"
             android:textColor="#043670"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/bcbsLogo"
+            app:layout_constraintBottom_toTopOf="@+id/divider34"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
+            app:layout_constraintHorizontal_bias="0.581"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/wccdLogo"
@@ -453,13 +457,16 @@
             android:id="@+id/divider34"
             android:layout_width="407dp"
             android:layout_height="1dp"
-            android:layout_marginTop="9dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="1dp"
             android:background="?android:attr/listDivider"
             android:backgroundTint="#605F5F"
             app:layout_constraintBottom_toTopOf="@+id/bcbsLogo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/partnersHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
         <View
             android:id="@+id/divider2"
@@ -883,3 +890,4 @@
 
 
 </ScrollView>
+

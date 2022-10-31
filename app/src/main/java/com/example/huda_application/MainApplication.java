@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainApplication extends AppCompatActivity implements View.OnClickListener {
 
 
-    private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, PatientPortal;
+    private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, Health_Services, PatientPortal;
     private FirebaseAuth mAuth;
 
     @Override
@@ -35,11 +35,13 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Our_story = findViewById(R.id.ourStoryPage);
         signOut = findViewById(R.id.logoutButton);
         Announcements = findViewById(R.id.announcementsPage);
+        Health_Services = findViewById(R.id.servicesPage);
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
         signOut.setOnClickListener(this);
         Announcements.setOnClickListener(this);
+        Health_Services.setOnClickListener(this);
         PatientPortal.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
@@ -82,6 +84,9 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         } else if (view.getId() == R.id.announcementsPage) {
             Intent Announcements = new Intent(this, Announcements.class);
             startActivity(Announcements);
+        } else if (view.getId() == R.id.servicesPage) {
+            Intent HealthServices = new Intent(this, HealthServices.class);
+            startActivity(HealthServices);
         } else if (view.getId() == R.id.Patients) {
             Intent Patient_page = new Intent(this, Appointments.class);
             startActivity(Patient_page);

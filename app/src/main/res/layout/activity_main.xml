@@ -13,9 +13,9 @@
     <TextView
         android:id="@+id/loginPara"
         android:layout_width="330dp"
-        android:layout_height="55dp"
+        android:layout_height="31dp"
         android:layout_marginTop="8dp"
-        android:text="If you have already registered, please enter your credentials below to sign into your account."
+        android:text="@string/login_dialog"
         android:textColor="#5A5959"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,11 +65,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="212dp"
         android:text="@string/forgotpassword"
         android:textAlignment="center"
         android:textColor="#043670"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registration" />
@@ -90,8 +92,8 @@
 
     <ImageView
         android:id="@+id/hudaLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,7 +137,7 @@
         android:id="@+id/loginHeader"
         android:layout_width="328dp"
         android:layout_height="50dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="20dp"
         android:text="ACCOUNT LOGIN"
         android:textAlignment="center"
         android:textColor="#043670"
@@ -147,4 +149,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

@@ -19,7 +19,7 @@
         tools:context=".OurStory">
 
         <TextView
-            android:id="@+id/specialityHealthHeader"
+            android:id="@+id/ourStoryHeader"
             android:layout_width="217dp"
             android:layout_height="47dp"
             android:layout_marginTop="7dp"
@@ -35,8 +35,8 @@
 
         <ImageView
             android:id="@+id/hudaLogo3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginTop="30dp"
 
             android:contentDescription="TODO"
@@ -46,7 +46,7 @@
             app:srcCompat="@drawable/huda_logo" />
 
         <TextView
-            android:id="@+id/primaryCareInternalMedicine"
+            android:id="@+id/historyHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -57,7 +57,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/specialityHealthHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/ourStoryHeader" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
@@ -76,7 +76,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.483"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/primaryCareInternalMedicine" />
+            app:layout_constraintTop_toBottomOf="@+id/historyHeader" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -109,4 +109,3 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
-

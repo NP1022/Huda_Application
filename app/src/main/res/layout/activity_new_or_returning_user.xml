@@ -21,11 +21,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancelAppointment"
+        app:layout_constraintTop_toBottomOf="@+id/newUser"
         app:layout_constraintVertical_bias="0.03" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/cancelAppointment"
+        android:id="@+id/newUser"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="@drawable/buttonstyle"
@@ -60,7 +60,7 @@
         android:layout_width="150dp"
         android:layout_height="200dp"
         android:layout_marginTop="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/cancelAppointment"
+        app:layout_constraintBottom_toTopOf="@+id/newUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

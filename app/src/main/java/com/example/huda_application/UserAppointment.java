@@ -130,7 +130,7 @@ public class UserAppointment extends AppCompatActivity {
             date = itemView.findViewById(R.id.appointmentDate);
             status = itemView.findViewById(R.id.Status);
             Reason = itemView.findViewById(R.id.Reason);
-            approve = itemView.findViewById(R.id.approve);
+            approve = itemView.findViewById(R.id.Approve);
             deny = itemView.findViewById(R.id.decline);
         }
 
