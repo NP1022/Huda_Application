@@ -11,19 +11,22 @@
     app:cardCornerRadius="8dp"
 
     app:cardElevation="8dp">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="10px"
+        android:paddingBottom="10px">
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -33,6 +36,7 @@
 
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/time"
                 android:layout_width="wrap_content"
@@ -43,12 +47,13 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,6 +62,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/appointmentDate"
                 android:layout_width="wrap_content"
@@ -67,12 +73,13 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,6 +88,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/Status"
                 android:layout_width="wrap_content"
@@ -91,12 +99,13 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -105,6 +114,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/Reason"
                 android:layout_width="wrap_content"
@@ -118,28 +128,22 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/Approve"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="215dp"
-        android:layout_marginTop="3dp"
-        android:background="@drawable/buttonstyle"
-        android:text="Approve"
-        android:textColor="#ffffff"
-        android:textSize="8sp" />
+    <ImageView
+        android:id="@+id/approve"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/approve__2_" />
 
-    <Button
+
+    <ImageView
         android:id="@+id/decline"
-        android:layout_width="80dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="215dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/buttonstyle"
-        android:text="Decline"
-        android:textColor="#ffffff"
-
-        android:textSize="8sp" />
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/cancel" />
 
 
 </androidx.cardview.widget.CardView>

@@ -17,7 +17,7 @@ public class NewOrReturningUser extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_or_returning_user);
 
-        Button newUserBtn = findViewById(R.id.newUser);
+        Button newUserBtn = findViewById(R.id.cancelAppointment);
         Button returningUserBtn = findViewById(R.id.returningUser);
 
         newUserBtn.setOnClickListener(new View.OnClickListener()

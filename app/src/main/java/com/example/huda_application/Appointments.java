@@ -2,11 +2,14 @@ package com.example.huda_application;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,9 +27,10 @@ import com.example.huda_application.user.UserManager;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Appointments extends AppCompatActivity {
+public class Appointments extends AppCompatActivity implements View.OnClickListener{
 
     private AppointmentViewAdapter viewAdapter;
+    private ImageView createAppointment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +42,15 @@ public class Appointments extends AppCompatActivity {
         viewAdapter = new AppointmentViewAdapter(Appointments.this);
         recyclerView.setAdapter(viewAdapter);
 
-        AppCompatButton createButton = findViewById(R.id.create);
+        createAppointment  = (ImageView) findViewById(R.id.createAppointment);
+        createAppointment.setOnClickListener(this);
+    }
 
-        createButton.setOnClickListener(view -> {
-            Intent createAppointmentIntent = new Intent(this, CheckIn.class);
-            startActivity(createAppointmentIntent);
-        });
+    @Override
+    public void onClick(View view) {
+
+        Intent createAppointmentIntent = new Intent(this, CheckIn.class);
+        startActivity(createAppointmentIntent);
     }
 
     private static class AppointmentViewAdapter extends RecyclerView.Adapter<Appointments.AppointmentViewHolder> {

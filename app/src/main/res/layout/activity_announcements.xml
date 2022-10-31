@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/scrollViewPartners"
-    android:layout_width="409dp"
-    android:layout_height="729dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     android:fillViewport="true"
     tools:layout_editor_absoluteX="1dp"
@@ -24,23 +24,23 @@
 
         <TextView
             android:id="@+id/announcementsHeader"
-            android:layout_width="231dp"
+            android:layout_width="330dp"
             android:layout_height="41dp"
             android:layout_marginTop="7dp"
             android:background="@color/white"
-            android:text="Announcements"
+            android:text="@string/AnnouncementsHeader"
             android:textAlignment="center"
             android:textColor="#043670"
             android:textSize="30dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:id="@+id/hudaLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
