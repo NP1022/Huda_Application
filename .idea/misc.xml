@@ -68,7 +68,7 @@
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35384076989215363" />
         <entry key="app/src/main/res/layout/activity_main_application.xml" value="0.4607025146484375" />
-        <entry key="app/src/main/res/layout/activity_mental_health.xml" value="0.2715133496934761" />
+        <entry key="app/src/main/res/layout/activity_mental_health.xml" value="0.224469160768453" />
         <entry key="app/src/main/res/layout/activity_new_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_our_story.xml" value="0.3502622521441916" />
         <entry key="app/src/main/res/layout/activity_partners.xml" value="0.2627105712890625" />
@@ -77,8 +77,8 @@
         <entry key="app/src/main/res/layout/activity_patients_page.xml" value="0.12639311043566362" />
         <entry key="app/src/main/res/layout/activity_primary_services.xml" value="0.22932871942934785" />
         <entry key="app/src/main/res/layout/activity_register_account.xml" value="0.15896739130434784" />
-        <entry key="app/src/main/res/layout/activity_specialty_health.xml" value="0.2864523536165327" />
-        <entry key="app/src/main/res/layout/activity_vision_health.xml" value="0.19021759033203123" />
+        <entry key="app/src/main/res/layout/activity_specialty_health.xml" value="0.14050632911392405" />
+        <entry key="app/src/main/res/layout/activity_vision_health.xml" value="0.32434387207031246" />
       </map>
     </option>
   </component>

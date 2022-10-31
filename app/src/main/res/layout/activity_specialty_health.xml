@@ -70,7 +70,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/specialtyHealthPar1"
-            app:srcCompat="@drawable/specialtyHUDA" />
+            app:srcCompat="@drawable/specialty_huda" />
 
         <TextView
             android:id="@+id/specialtyHealthPar1"
