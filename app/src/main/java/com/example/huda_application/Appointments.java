@@ -20,6 +20,10 @@ import com.example.huda_application.user.Appointment;
 import com.example.huda_application.user.AppointmentStatus;
 import com.example.huda_application.user.User;
 import com.example.huda_application.user.UserManager;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -35,8 +39,19 @@ public class Appointments extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.appointmentsView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        viewAdapter = new AppointmentViewAdapter(Appointments.this);
-        recyclerView.setAdapter(viewAdapter);
+        FirebaseDatabase.getInstance().getReference("User").child(UserManager.getInstance().getCurrentUser().getUserId())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        User user = FirebaseClient.convertToUser(snapshot);
+                        viewAdapter = new AppointmentViewAdapter(Appointments.this, user);
+                        recyclerView.setAdapter(viewAdapter);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                    }
+                });
 
         AppCompatButton createButton = findViewById(R.id.create);
 
@@ -50,11 +65,13 @@ public class Appointments extends AppCompatActivity {
 
         private LayoutInflater inflater;
         private List<Appointment> appointments;
+        private User user;
 
-        public AppointmentViewAdapter(Context context) {
+        public AppointmentViewAdapter(Context context, User user) {
             this.inflater = LayoutInflater.from(context);
+            this.user = user;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                appointments = UserManager.getInstance().getCurrentUser().getAppointments().stream()
+                appointments = user.getAppointments().stream()
                         .filter(appointment -> appointment.getStatus() != AppointmentStatus.CANCELED).collect(Collectors.toList());
             }
         }
@@ -68,11 +85,14 @@ public class Appointments extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull AppointmentViewHolder holder, int position) {
-            User user = UserManager.getInstance().getCurrentUser();
             Appointment appointment = appointments.get(position);
             holder.time.setText(appointment.getTime());
             holder.date.setText(appointment.getDate());
             holder.status.setText(appointment.getStatus().name().toLowerCase());
+
+            if (appointment.getStatus() != AppointmentStatus.PENDING && appointment.getStatus() != AppointmentStatus.APPROVED) {
+                holder.cancel.setVisibility(View.GONE);
+            }
 
             holder.cancel.setOnClickListener(view -> {
                 for (Appointment userAppointment : user.getAppointments()) {
@@ -84,6 +104,15 @@ public class Appointments extends AppCompatActivity {
                 appointments.get(position).setStatus(AppointmentStatus.CANCELED);
                 holder.status.setText(appointment.getStatus().name().toLowerCase());
                 FirebaseClient.updateUser(user);
+                UserManager.getInstance().setCurrentUser(user);
+            });
+
+            holder.checkInButton.setOnClickListener(view -> {
+                appointments.get(position).setCheckedIn(true);
+                holder.cancel.setVisibility(View.GONE);
+                holder.checkInButton.setVisibility(View.GONE);
+                FirebaseClient.updateUser(user);
+                UserManager.getInstance().setCurrentUser(user);
             });
         }
 
@@ -99,13 +128,15 @@ public class Appointments extends AppCompatActivity {
         private final TextView date;
         private final TextView status;
         private final AppCompatButton cancel;
-
+        private final AppCompatButton checkInButton;
         public AppointmentViewHolder(@NonNull View itemView) {
             super(itemView);
             this.time = itemView.findViewById(R.id.time);
             this.date = itemView.findViewById(R.id.appointmentDate);
             this.status = itemView.findViewById(R.id.Status);
             this.cancel = itemView.findViewById(R.id.cancelAppointment);
+            this.checkInButton = itemView.findViewById(R.id.checkInAppointment);
+
         }
 
         public TextView getDate() {

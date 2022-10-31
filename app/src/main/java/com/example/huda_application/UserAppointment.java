@@ -18,6 +18,14 @@ import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.Appointment;
 import com.example.huda_application.user.AppointmentStatus;
 import com.example.huda_application.user.User;
+import com.example.huda_application.user.UserType;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserAppointment extends AppCompatActivity {
 
@@ -39,8 +47,19 @@ public class UserAppointment extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.appointmentsView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        viewAdapter = new AppointmentViewAdapter(UserAppointment.this, user);
-        recyclerView.setAdapter(viewAdapter);
+
+        FirebaseDatabase.getInstance().getReference("User").child(user.getUserId()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User updatedUser = FirebaseClient.convertToUser(snapshot);
+                viewAdapter = new AppointmentViewAdapter(UserAppointment.this, updatedUser);
+                recyclerView.setAdapter(viewAdapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
     }
 
     private static class AppointmentViewAdapter extends RecyclerView.Adapter<AppointmentViewHolder> {
@@ -68,11 +87,17 @@ public class UserAppointment extends AppCompatActivity {
             holder.status.setText(appointment.getStatus().name().toLowerCase());
             holder.Reason.setText(appointment.getReason());
 
-            if(appointment.getStatus() == AppointmentStatus.APPROVED )
+            holder.checkedIn.setVisibility(View.GONE);
+            holder.checkedInText.setVisibility(View.GONE);
+            if(appointment.getStatus() == AppointmentStatus.APPROVED)
             {
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
 
+
+                holder.checkedIn.setText(appointment.isCheckedIn() ? "Yes" : "No");
+                holder.checkedIn.setVisibility(View.VISIBLE);
+                holder.checkedInText.setVisibility(View.VISIBLE);
             }
             if(appointment.getStatus() == AppointmentStatus.DENIED )
             {
@@ -84,7 +109,6 @@ public class UserAppointment extends AppCompatActivity {
             {
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
-
             }
 
             holder.approve.setOnClickListener(listener -> {
@@ -92,6 +116,9 @@ public class UserAppointment extends AppCompatActivity {
                 FirebaseClient.updateUser(user);
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
+                holder.checkedIn.setText(appointment.isCheckedIn() ? "Yes" : "No");
+                holder.checkedIn.setVisibility(View.VISIBLE);
+                holder.checkedInText.setVisibility(View.VISIBLE);
 
                 holder.status.setText(appointment.getStatus().name().toLowerCase());
 
@@ -120,6 +147,8 @@ public class UserAppointment extends AppCompatActivity {
         private final TextView date;
         private final TextView status;
         private final TextView Reason;
+        private final TextView checkedIn;
+        private final TextView checkedInText;
 
         private final AppCompatButton approve;
         private final AppCompatButton deny;
@@ -132,6 +161,8 @@ public class UserAppointment extends AppCompatActivity {
             Reason = itemView.findViewById(R.id.Reason);
             approve = itemView.findViewById(R.id.Approve);
             deny = itemView.findViewById(R.id.decline);
+            checkedIn = itemView.findViewById(R.id.checkedIn);
+            checkedInText = itemView.findViewById(R.id.checkedInText);
         }
 
         public TextView getTime() {
@@ -145,8 +176,17 @@ public class UserAppointment extends AppCompatActivity {
         public TextView getStatus() {
             return status;
         }
+
         public TextView getReason() {
             return Reason;
+        }
+
+        public TextView getCheckedIn() {
+            return checkedIn;
+        }
+
+        public TextView getCheckedInText() {
+            return checkedInText;
         }
     }
 }

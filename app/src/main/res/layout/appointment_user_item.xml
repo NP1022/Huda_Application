@@ -11,6 +11,7 @@
     app:cardCornerRadius="8dp"
 
     app:cardElevation="8dp">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,8 +23,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -33,6 +34,7 @@
 
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/time"
                 android:layout_width="wrap_content"
@@ -43,12 +45,13 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,6 +60,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/appointmentDate"
                 android:layout_width="wrap_content"
@@ -67,12 +71,13 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -81,6 +86,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/Status"
                 android:layout_width="wrap_content"
@@ -91,12 +97,13 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -105,6 +112,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/Reason"
                 android:layout_width="wrap_content"
@@ -141,5 +149,35 @@
 
         android:textSize="8sp" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="3dp"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/checkedInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checked In:"
+        android:textColor="@color/black"
+        android:layout_marginStart="200dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/checkedIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
+        android:text="temp"
+
+        android:textColor="@color/black"
+        android:textSize="10sp" />
 
 </androidx.cardview.widget.CardView>

@@ -87,19 +87,7 @@ public class LabAccess extends AppCompatActivity
 
             public void onClick(View view)
             {
-                Patient patient = new Patient(dateTxt,visitReasonTxt,lastNameTxt,firstNameTxt,patientSexTxt,patientDOBTxt,patientAddTxt,patientCityTxt,patientStateTxt,patientZipCodeTxt,
-                        patientSSNTxt,patientHomeNumTxt,patientCellNumTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,patientEmailTxt,
-                        patientRaceTxt, patientEthnicityTxt, translatorTxt, maritalTxt,houseIncomeTxt, patientIncomeTxt, houseHoldTxt, patientEmpTxt,occupationTxt, veteranTxt, emergencyNameTxt,
-                        relationshipTxt, contactPhoneTxt, patientConsentName, patientSignedText, patientSignatureText, consentDateTxt);
 
-                UserManager.getInstance().getCurrentUser().setPatient(patient);
-                FirebaseClient.updateUser(UserManager.getInstance().getCurrentUser()).addOnSuccessListener(suc->
-                {
-                    Toast.makeText(LabAccess.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
-                }).addOnFailureListener(er->
-                {
-                    Toast.makeText(LabAccess.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
-                });
             }
         });
 

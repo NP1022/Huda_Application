@@ -88,19 +88,27 @@ public class AdminPage extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
-
+            final int pos = position;
             User user = users.get(position);
+            FirebaseDatabase.getInstance().getReference("User").child(user.getUserId()).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    users.set(pos, FirebaseClient.convertToUser(snapshot));
+                }
 
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
+            });
 
+            List<Appointment> appointments = user.getAppointments();
+            int Pending_count =0;
+            for (int i =0; i< appointments.size(); i ++){
+                if (appointments.get(i).getStatus() == AppointmentStatus.PENDING){
+                    Pending_count++;
 
-             List<Appointment> appointments = user.getAppointments();
-             int Pending_count =0;
-             for (int i =0; i< appointments.size(); i ++){
-                 if (appointments.get(i).getStatus() == AppointmentStatus.PENDING){
-                     Pending_count++;
-
-                 }
-             }
+                }
+            }
             holder.name.setText(String.format("%s", user.getFirstName()));
             holder.lastname.setText(String.format("%s", user.getLastName()));
             holder.email.setText(user.getEmailAddress());

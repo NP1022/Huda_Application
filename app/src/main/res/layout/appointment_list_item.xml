@@ -107,5 +107,24 @@
         android:textColor="#ffffff"
         android:textSize="8sp" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/checkInAppointment"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/buttonstyle"
+        android:text="Check In"
+        android:textColor="#ffffff"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/checkedInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="3dp"
+        android:text="Checked In"/>
+
 
 </androidx.cardview.widget.CardView>
