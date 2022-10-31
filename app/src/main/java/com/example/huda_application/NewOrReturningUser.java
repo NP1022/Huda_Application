@@ -33,7 +33,7 @@ public class NewOrReturningUser extends AppCompatActivity
              @Override
              public void onClick(View view)
              {
-                 startActivity(new Intent(NewOrReturningUser.this,MainApplication.class));
+                 startActivity(new Intent(NewOrReturningUser.this,MainActivity.class));
              }
          });
 
