@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.huda_application.firebase.FirebaseClient;
+import com.example.huda_application.user.UserManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
@@ -90,7 +92,8 @@ public class LabAccess extends AppCompatActivity
                         patientRaceTxt, patientEthnicityTxt, translatorTxt, maritalTxt,houseIncomeTxt, patientIncomeTxt, houseHoldTxt, patientEmpTxt,occupationTxt, veteranTxt, emergencyNameTxt,
                         relationshipTxt, contactPhoneTxt, patientConsentName, patientSignedText, patientSignatureText, consentDateTxt);
 
-                dao.add(patient).addOnSuccessListener(suc->
+                UserManager.getInstance().getCurrentUser().setPatient(patient);
+                FirebaseClient.updateUser(UserManager.getInstance().getCurrentUser()).addOnSuccessListener(suc->
                 {
                     Toast.makeText(LabAccess.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
                 }).addOnFailureListener(er->
