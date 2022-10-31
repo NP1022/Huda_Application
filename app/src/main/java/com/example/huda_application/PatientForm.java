@@ -393,9 +393,43 @@ public class PatientForm extends AppCompatActivity
                 {
                     //first form
                     PatientFormData formData = new PatientFormData();
+                    formData.setTodaysDate(dateTxt);
+                    formData.setReasonForVisit(visitReasonTxt);
                     formData.setFirstName(firstNameTxt);
                     formData.setLastName(lastNameTxt);
-                    formData.setTodaysDate(dateTxt);
+                    formData.setPatientSex(patientSexTxt);
+                    formData.setPatientSSN(patientSSNTxt);
+                    formData.setDateOfBirth(patientDOBTxt);
+                    formData.setHomePhoneNo(patientHomeNumTxt);
+                    formData.setCellPhoneNo(patientCellNumTxt);
+                    formData.setPatientAddress(patientAddTxt);
+                    formData.setPatientCity(patientCityTxt);
+                    formData.setPatientState(patientStateTxt);
+                    formData.setPatientZipCode(patientZipCodeTxt);
+                    formData.setPrefContactMethod(patientPrefNumberTxt);
+                    formData.setConsentToCall(patientConsentCallTxt);
+                    formData.setConsentToText(patientConsentTextTxt);
+                    formData.setInsuranceProvider(patientInsuranceTxt);
+                    formData.setEmailAddress(patientEmailTxt);
+                    formData.setPrefLanguage(prefLangTxt);
+                    formData.setTranslatorNeed(translatorTxt);
+                    formData.setMaritalStatus(maritalTxt);
+                    formData.setHouseHoldIncome(houseHoldTxt);
+                    formData.setFamilySize(houseHoldTxt);
+                    formData.setOccupation(occupationTxt);
+                    formData.setVeteranStatus(veteranTxt);
+                    formData.setEmergencyContact(emergencyNameTxt);
+                    formData.setEmergencyRelationship(relationshipTxt);
+                    formData.setEmergencyContactNumber(contactPhoneTxt);
+                    formData.setPatientNameSelfVolunteer(patientConsentName);
+                    formData.setPatientNamePrinted(patientSignedText);
+                    formData.setPatientSignature(patientSignatureText);
+                    formData.setPatientConsentDate(consentDateTxt);
+                    formData.setPatientRace(patientRaceTxt);
+                    formData.setPatientEthnicity(patientEthnicityTxt);
+                    formData.setIncomePayTime(patientIncomeTxt);
+                    formData.setEmploymentStatus(patientEmpTxt);
+
 
                     Intent patientContract = new Intent(PatientForm.this, PatientContract.class);
                     patientContract.putExtra("patientdata",formData );
@@ -405,3 +439,4 @@ public class PatientForm extends AppCompatActivity
         });
     }
 }
+
