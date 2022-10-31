@@ -34,7 +34,7 @@
             android:name=".PrimaryServices"
             android:exported="false" />
         <activity
-            android:name=".NewLogin"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".AdminPage"
@@ -98,7 +98,7 @@
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".NewLogin"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Huda_Application.NoActionBar">
