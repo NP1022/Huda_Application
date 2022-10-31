@@ -18,6 +18,7 @@ public class Patient
     private String cellPhoneNo;
     private String prefContactMethod;
     private String consentToCall;
+    private String consentToText;
     private String insuranceProvider;
     private String emailAddress;
     private String patientRace;
@@ -41,7 +42,7 @@ public class Patient
 
     public Patient(String todaysDate, String reasonForVisit, String lastName, String firstName, String patientSex, String dateOfBirth,
                    String patientAddress, String patientCity, String patientState, String patientZipCode, String patientSSN,
-                   String homePhoneNo, String cellPhoneNo, String prefContactMethod, String consentToCall, String insuranceProvider, String emailAddress,
+                   String homePhoneNo, String cellPhoneNo, String prefContactMethod, String consentToCall, String consentToText, String insuranceProvider, String emailAddress,
                    String patientRace, String patientEthnicity, String prefLanguage, String translatorNeed, String maritalStatus, String houseHoldIncome,
                    String incomePayTime, String familySize, String employmentStatus, String occupation, String veteranStatus, String emergencyContact,
                    String emergencyRelationship, String emergencyContactNumber, String patientNameSelfVolunteer, String patientNamePrinted, String patientSignature,
@@ -62,6 +63,7 @@ public class Patient
         this.cellPhoneNo = cellPhoneNo;
         this.prefContactMethod = prefContactMethod;
         this.consentToCall = consentToCall;
+        this.consentToText = consentToText;
         this.insuranceProvider = insuranceProvider;
         this.emailAddress = emailAddress;
         this.patientRace = patientRace;
@@ -364,5 +366,12 @@ public class Patient
         this.patientConsentDate = patientConsentDate;
     }
 
+    public String getConsentToText() {
+        return consentToText;
+    }
+
+    public void setConsentToText(String consentToText) {
+        this.consentToText = consentToText;
+    }
 
 }
