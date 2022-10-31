@@ -65,7 +65,7 @@
             android:name=".AuthorizationForm"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".PatientForm"
             android:exported="false" />
         <activity
             android:name=".CheckIn"
@@ -74,7 +74,7 @@
             android:name=".PatientsPage"
             android:exported="false" />
         <activity
-            android:name=".PatientForm"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".HealthServices"

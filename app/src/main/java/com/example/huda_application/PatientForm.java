@@ -18,107 +18,7 @@ import java.util.regex.Pattern;
 
 public class PatientForm extends AppCompatActivity
 {
-    // edittext
-    final EditText todayDate = findViewById(R.id.todaysDate);
-    final EditText visitReason = findViewById(R.id.visitReason);
-    final EditText firstName = findViewById(R.id.firstName);
-    final EditText lastName = findViewById(R.id.lastName);
-    final EditText patientSex = findViewById(R.id.patientSex);
-    final EditText patientSsn = findViewById(R.id.patientSSN);
-    final EditText patientDOB = findViewById(R.id.patientDob);
-    final EditText patientHome = findViewById(R.id.patientHomeNum);
-    final EditText patientCell = findViewById(R.id.patientCellNum);
-    final EditText patientAdd = findViewById(R.id.patientAddress);
-    final EditText patientCity = findViewById(R.id.patientCity);
-    final EditText patientState = findViewById(R.id.patientState);
-    final EditText patientZip = findViewById(R.id.patientZipCode);
-    final EditText patientContactPref = findViewById(R.id.patientPreferredNumber);
-    final EditText patientConsentCall = findViewById(R.id.consentToCall);
-    final EditText patientConsentText = findViewById(R.id.consentToText);
-    final EditText patientInsurance = findViewById(R.id.insuranceProvider);
-    final EditText patientEmail = findViewById(R.id.emailAddress);
-    final EditText prefLang = findViewById(R.id.langPref);
-    final EditText neededTranslator = findViewById(R.id.translatorNeeded);
-    final EditText maritalStatusPatient = findViewById(R.id.maritalStatus);
-    final EditText incomeHousehold = findViewById(R.id.income);
-    final EditText houseHoldSize = findViewById(R.id.houseHold);
-    final EditText occupationPatient = findViewById(R.id.occupation);
-    final EditText veteranStatus = findViewById(R.id.veteran);
-    final EditText emergencyContactName = findViewById(R.id.emergencyName);
-    final EditText relationshipToPatient = findViewById(R.id.relationship);
-    final EditText emergencyContactPhone = findViewById(R.id.emergencyNumber);
-    final EditText patientNameConsent = findViewById(R.id.patientNameFill);
-    final EditText patientSigned = findViewById(R.id.patientNamePrinted);
-    final EditText patientSig = findViewById(R.id.patientNameSignature);
-    final EditText consentDateSign = findViewById(R.id.consentDate);
 
-
-    // checkboxes
-    final CheckBox blackAfricanAmerican = findViewById(R.id.blackAfrican);
-    final CheckBox whiteCaucasian = findViewById(R.id.whiteCaucasian);
-    final CheckBox asianPatient = findViewById(R.id.asian);
-    final CheckBox middleEasternNA = findViewById(R.id.middleEastern);
-    final CheckBox hispanicLatinoPatient = findViewById(R.id.hispanicLatino);
-    final CheckBox nativeAmericanPatient = findViewById(R.id.nativeAmerican);
-    final CheckBox nativeHawiianPacificIslander = findViewById(R.id.nativeHawiianPacific);
-    final CheckBox HispanicOrLatino = findViewById(R.id.hispanicOrLatino);
-    final CheckBox NotHispanicOrLatino = findViewById(R.id.NotHispanicOrLatino);
-    final CheckBox weekly = findViewById(R.id.week);
-    final CheckBox biWeekly = findViewById(R.id.twoWeek);
-    final CheckBox monthly = findViewById(R.id.month);
-    final CheckBox yearly = findViewById(R.id.year);
-    final CheckBox unEmp = findViewById(R.id.unemployed);
-    final CheckBox empFull = findViewById(R.id.employedFt);
-    final CheckBox empPart = findViewById(R.id.employedPt);
-    final CheckBox empSelf = findViewById(R.id.selfEmployed);
-    final CheckBox empStudent = findViewById(R.id.student);
-    final CheckBox empRetired = findViewById(R.id.retired);
-    final CheckBox empSeek = findViewById(R.id.seekingEmployment);
-    final String dateTxt = todayDate.getText().toString().trim(); // convert the EditText to a String type
-    final String visitReasonTxt = visitReason.getText().toString().trim();
-    final String firstNameTxt = firstName.getText().toString().trim();
-    final String lastNameTxt = lastName.getText().toString().trim();
-    final String patientSexTxt = patientSex.getText().toString().trim();
-    final String patientSSNTxt = patientSsn.getText().toString().trim();
-    final String patientDOBTxt = patientDOB.getText().toString().trim();
-    final String patientHomeNumTxt = patientHome.getText().toString().trim();
-    final String patientCellNumTxt = patientCell.getText().toString().trim();
-    final String patientAddTxt = patientAdd.getText().toString().trim();
-    final String patientCityTxt = patientCity.getText().toString().trim();
-    final String patientStateTxt = patientState.getText().toString().trim();
-    final String patientZipCodeTxt = patientZip.getText().toString().trim();
-    final String patientPrefNumberTxt = patientContactPref.getText().toString().trim();
-    final String patientConsentCallTxt = patientConsentCall.getText().toString().trim();
-    final String patientConsentTextTxt = patientConsentText.getText().toString().trim();
-    final String patientInsuranceTxt = patientInsurance.getText().toString().trim();
-    final String patientEmailTxt = patientEmail.getText().toString().trim();
-    final String prefLangTxt = prefLang.getText().toString().trim();
-    final String translatorTxt = neededTranslator.getText().toString().trim();
-    final String maritalTxt = maritalStatusPatient.getText().toString().trim();
-    final String houseIncomeTxt = incomeHousehold.getText().toString().trim();
-    final String houseHoldTxt = houseHoldSize.getText().toString().trim();
-    final String occupationTxt = occupationPatient.getText().toString().trim();
-    final String veteranTxt = veteranStatus.getText().toString().trim();
-    final String emergencyNameTxt = emergencyContactName.getText().toString().trim();
-    final String relationshipTxt = relationshipToPatient.getText().toString().trim();
-    final String contactPhoneTxt = emergencyContactPhone.getText().toString().trim();
-    final String patientConsentName = patientNameConsent.getText().toString().trim();
-    final String patientSignedText = patientSigned.getText().toString().trim();
-    final String patientSignatureText = patientSig.getText().toString().trim();
-    final String consentDateTxt = consentDateSign.getText().toString().trim();
-
-    // information from checkbox input to store in a StringBuilder
-    StringBuilder patientRace = new StringBuilder();
-    final String patientRaceTxt = patientRace.toString().trim();
-
-    StringBuilder patientEthnicity = new StringBuilder();
-    final String patientEthnicityTxt = patientEthnicity.toString().trim();
-
-    StringBuilder patientIncome = new StringBuilder();
-    final String patientIncomeTxt = patientIncome.toString().trim();
-
-    StringBuilder patientEmp = new StringBuilder();
-    final String patientEmpTxt = patientEmp.toString().trim();
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
@@ -145,17 +45,117 @@ public class PatientForm extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_form);
 
+     //   DAOPatient dao = new DAOPatient();
+
+        // edittext
+        final EditText todayDate = findViewById(R.id.todaysDate);
+        final EditText visitReason = findViewById(R.id.visitReason);
+        final EditText firstName = findViewById(R.id.firstName);
+        final EditText lastName = findViewById(R.id.lastName);
+        final EditText patientSex = findViewById(R.id.patientSex);
+        final EditText patientSsn = findViewById(R.id.patientSSN);
+        final EditText patientDOB = findViewById(R.id.patientDob);
+        final EditText patientHome = findViewById(R.id.patientHomeNum);
+        final EditText patientCell = findViewById(R.id.patientCellNum);
+        final EditText patientAdd = findViewById(R.id.patientAddress);
+        final EditText patientCity = findViewById(R.id.patientCity);
+        final EditText patientState = findViewById(R.id.patientState);
+        final EditText patientZip = findViewById(R.id.patientZipCode);
+        final EditText patientContactPref = findViewById(R.id.patientPreferredNumber);
+        final EditText patientConsentCall = findViewById(R.id.consentToCall);
+        final EditText patientConsentText = findViewById(R.id.consentToText);
+        final EditText patientInsurance = findViewById(R.id.insuranceProvider);
+        final EditText patientEmail = findViewById(R.id.emailAddress);
+        final EditText prefLang = findViewById(R.id.langPref);
+        final EditText neededTranslator = findViewById(R.id.translatorNeeded);
+        final EditText maritalStatusPatient = findViewById(R.id.maritalStatus);
+        final EditText incomeHousehold = findViewById(R.id.income);
+        final EditText houseHoldSize = findViewById(R.id.houseHold);
+        final EditText occupationPatient = findViewById(R.id.occupation);
+        final EditText veteranStatus = findViewById(R.id.veteran);
+        final EditText emergencyContactName = findViewById(R.id.emergencyName);
+        final EditText relationshipToPatient = findViewById(R.id.relationship);
+        final EditText emergencyContactPhone = findViewById(R.id.emergencyNumber);
+        final EditText patientNameConsent = findViewById(R.id.patientNameFill);
+        final EditText patientSigned = findViewById(R.id.patientNamePrinted);
+        final EditText patientSig = findViewById(R.id.patientNameSignature);
+        final EditText consentDateSign = findViewById(R.id.consentDate);
 
 
+        // checkboxes
+        final CheckBox blackAfricanAmerican = findViewById(R.id.blackAfrican);
+        final CheckBox whiteCaucasian = findViewById(R.id.whiteCaucasian);
+        final CheckBox asianPatient = findViewById(R.id.asian);
+        final CheckBox middleEasternNA = findViewById(R.id.middleEastern);
+        final CheckBox hispanicLatinoPatient = findViewById(R.id.hispanicLatino);
+        final CheckBox nativeAmericanPatient = findViewById(R.id.nativeAmerican);
+        final CheckBox nativeHawiianPacificIslander = findViewById(R.id.nativeHawiianPacific);
+        final CheckBox HispanicOrLatino = findViewById(R.id.hispanicOrLatino);
+        final CheckBox NotHispanicOrLatino = findViewById(R.id.NotHispanicOrLatino);
+        final CheckBox weekly = findViewById(R.id.week);
+        final CheckBox biWeekly = findViewById(R.id.twoWeek);
+        final CheckBox monthly = findViewById(R.id.month);
+        final CheckBox yearly = findViewById(R.id.year);
+        final CheckBox unEmp = findViewById(R.id.unemployed);
+        final CheckBox empFull = findViewById(R.id.employedFt);
+        final CheckBox empPart = findViewById(R.id.employedPt);
+        final CheckBox empSelf = findViewById(R.id.selfEmployed);
+        final CheckBox empStudent = findViewById(R.id.student);
+        final CheckBox empRetired = findViewById(R.id.retired);
+        final CheckBox empSeek = findViewById(R.id.seekingEmployment);
 
-        DAOPatient dao = new DAOPatient();
+        final String dateTxt = todayDate.getText().toString().trim(); // convert the EditText to a String type
+        final String visitReasonTxt = visitReason.getText().toString().trim();
+        final String firstNameTxt = firstName.getText().toString().trim();
+        final String lastNameTxt = lastName.getText().toString().trim();
+        final String patientSexTxt = patientSex.getText().toString().trim();
+        final String patientSSNTxt = patientSsn.getText().toString().trim();
+        final String patientDOBTxt = patientDOB.getText().toString().trim();
+        final String patientHomeNumTxt = patientHome.getText().toString().trim();
+        final String patientCellNumTxt = patientCell.getText().toString().trim();
+        final String patientAddTxt = patientAdd.getText().toString().trim();
+        final String patientCityTxt = patientCity.getText().toString().trim();
+        final String patientStateTxt = patientState.getText().toString().trim();
+        final String patientZipCodeTxt = patientZip.getText().toString().trim();
+        final String patientPrefNumberTxt = patientContactPref.getText().toString().trim();
+        final String patientConsentCallTxt = patientConsentCall.getText().toString().trim();
+        final String patientConsentTextTxt = patientConsentText.getText().toString().trim();
+        final String patientInsuranceTxt = patientInsurance.getText().toString().trim();
+        final String patientEmailTxt = patientEmail.getText().toString().trim();
+        final String prefLangTxt = prefLang.getText().toString().trim();
+        final String translatorTxt = neededTranslator.getText().toString().trim();
+        final String maritalTxt = maritalStatusPatient.getText().toString().trim();
+        final String houseIncomeTxt = incomeHousehold.getText().toString().trim();
+        final String houseHoldTxt = houseHoldSize.getText().toString().trim();
+        final String occupationTxt = occupationPatient.getText().toString().trim();
+        final String veteranTxt = veteranStatus.getText().toString().trim();
+        final String emergencyNameTxt = emergencyContactName.getText().toString().trim();
+        final String relationshipTxt = relationshipToPatient.getText().toString().trim();
+        final String contactPhoneTxt = emergencyContactPhone.getText().toString().trim();
+        final String patientConsentName = patientNameConsent.getText().toString().trim();
+        final String patientSignedText = patientSigned.getText().toString().trim();
+        final String patientSignatureText = patientSig.getText().toString().trim();
+        final String consentDateTxt = consentDateSign.getText().toString().trim();
+
+        // information from checkbox input to store in a StringBuilder
+        StringBuilder patientRace = new StringBuilder();
+        final String patientRaceTxt = patientRace.toString().trim();
+
+        StringBuilder patientEthnicity = new StringBuilder();
+        final String patientEthnicityTxt = patientEthnicity.toString().trim();
+
+        StringBuilder patientIncome = new StringBuilder();
+        final String patientIncomeTxt = patientIncome.toString().trim();
+
+        StringBuilder patientEmp = new StringBuilder();
+        final String patientEmpTxt = patientEmp.toString().trim();
 
         Button nextFormButton = findViewById(R.id.nextForm); // set variable for button action
-        nextFormButton.setOnClickListener(new View.OnClickListener() {
+        nextFormButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view)
             {
-
 
                 if (TextUtils.isEmpty(dateTxt) || !DATE_PATTERN.matcher(dateTxt).matches()) // check if date is empty
                 {
@@ -432,7 +432,7 @@ public class PatientForm extends AppCompatActivity
 
 
                     Intent patientContract = new Intent(PatientForm.this, PatientContract.class);
-                    patientContract.putExtra("patientdata",formData );
+                      patientContract.putExtra("patientdata",formData );
                     startActivity(patientContract);
                 }
             }
