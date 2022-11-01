@@ -57,10 +57,10 @@
 
     <!--    Patient Form Strings -->
     <string name="Registration">REGISTRATION</string>
-    <string name="Date">Date (MM/DD/YY)</string>
+    <string name="Date">Date (MM-DD-YY)</string>
     <string name="VisitReason">Visit Reason</string>
     <string name="Sex">Sex</string>
-    <string name="DOB">DOB (MM/DD/YYYY)</string>
+    <string name="DOB">DOB (MM-DD-YYYY)</string>
     <string name="Address">Address (1234 Street St.)</string>
     <string name="City">City</string>
     <string name="State">State</string>
