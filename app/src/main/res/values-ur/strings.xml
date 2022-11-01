@@ -15,8 +15,8 @@
     <string name="email">ای میل درج کریں</string>
     <string name="Login">لاگ ان کریں</string>
     <string name="forgotpassword">پاسورڈ بھول گے</string>
-    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
-    <string name="alreadyAccount">Already Have an Account? Login</string>
+    <string name="dontAccount">اکاؤنٹ نہیں ہے؟ سائن اپ</string>
+    <string name="alreadyAccount">پہلے سے ہی اکاؤنٹ ہے؟ لاگ ان کریں</string>
     <string name="register">رجسٹر کریں۔</string>
     <string name="language">اردو</string>
     <string name="FirstName">پہلا نام درج کریں۔</string>
@@ -25,14 +25,23 @@
     <string name="EnterPass">پاس ورڈ درج کریں</string>
     <string name="Reenter">پاس ورڈ دوبارہ درج</string>
     <string name="reset">ری سیٹ بھیجیں۔</string>
-    <string name="home">ہوم پیج</string>
+    <string name ="loginHeader">اکاؤنٹ لاگ ان</string>
+    <string name ="registerHeader">اکاؤنٹ رجسٹر کریں۔</string>
+    <string name ="forgotPassHeader">پاس ورڈ ری سیٹ</string>
     <string name="login_dialog">اپنی اسناد درج کریں۔</string>
+    <string name="regDiaglogue">اکاؤنٹ رجسٹر کرنے کے لیے نیچے دیے گئے فیلڈز کو مکمل کریں۔ کامیاب رجسٹریشن پر آپ کو ایک تصدیقی ای میل موصول ہوگا۔</string>
+    <string name="forgotDialogue">اپنے اکاؤنٹ سے وابستہ ای میل درج کریں اور آپ کو اپنا پاس ورڈ دوبارہ ترتیب دینے کے لیے ہدایات موصول ہوں گی۔</string>
+
+    <!--    Main Menu Page-->
+    <string name="home">ہوم پیج</string>
     <string name="Annoucment">اعلان</string>
     <string name="services">خدمات</string>
     <string name="story">ہماری کہانی</string>
     <string name="partners">شراکت دار</string>
     <string name="contact">ہم سے رابطہ کریں۔</string>
     <string name="patients_page">تقرری</string>
+
+
     <string name="healthservices">مفت صحت کی خدمات</string>
     <string name="PrimaryCare">بنیادی دیکھ بھال</string>
     <string name="MentalCare">ذہنی نگہداشت</string>

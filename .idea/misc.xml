@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/drawable/buttonstyle.xml" value="0.154" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/drawable/roundedbutton.xml" value="0.154" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_admin_page.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_announcements.xml" value="0.2640562248995984" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_authorization_form.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_button_style.xml" value="0.30052083333333335" />
@@ -26,6 +27,10 @@
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_personal_representative.xml" value="0.2296884544899206" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_register_account.xml" value="0.30052083333333335" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_stress_form.xml" value="0.375" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_user_appointment.xml" value="0.18072916666666666" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/admin_user_list_item.xml" value="0.18072916666666666" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/appointment_list_item.xml" value="0.625" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/appointment_user_item.xml" value="0.55" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2425" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_admin_page.xml" value="0.15104166666666666" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_announcements.xml" value="0.2" />

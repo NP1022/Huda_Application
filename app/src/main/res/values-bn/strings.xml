@@ -15,8 +15,8 @@
     <string name="email">ইমেইল প্রদান করুন</string>
     <string name="Login">প্রবেশ করুন</string>
     <string name="forgotpassword">পাসওয়ার্ড ভুলে গেছেন</string>
-    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
-    <string name="alreadyAccount">Already Have an Account? Login</string>
+    <string name="dontAccount">একটি অ্যাকাউন্ট নেই? নিবন্ধন করুন</string>
+    <string name="alreadyAccount">ইতিমধ্যে একটি সদস্যপদ আছে? প্রবেশ করুন</string>
     <string name="register">নিবন্ধন</string>
     <string name="language">Bangla</string>
     <string name="FirstName">প্রথম নাম লিখুন</string>
@@ -25,6 +25,14 @@
     <string name="EnterPass">পাসওয়ার্ড লিখুন</string>
     <string name="Reenter">পাসওয়ার্ড পুনরায় প্রবেশ</string>
     <string name="reset">রিসেট পাঠান</string>
+    <string name ="loginHeader">অ্যাকাউন্টে লগইন</string>
+    <string name ="registerHeader">অ্যাকাউন্ট নিবন্ধন করুন</string>
+    <string name ="forgotPassHeader">পাসওয়ার্ড রিসেট করুন</string>
+    <string name="login_dialog">আপনার শংসাপত্র লিখুন</string>
+    <string name="regDiaglogue">একটি অ্যাকাউন্ট নিবন্ধন করতে নীচের ক্ষেত্রগুলি সম্পূর্ণ করুন৷ সফল রেজিস্ট্রেশনের পর আপনি একটি যাচাইকরণ ইমেল পাবেন।</string>
+    <string name="forgotDialogue">আপনার অ্যাকাউন্টের সাথে যুক্ত ইমেল লিখুন এবং আপনি আপনার পাসওয়ার্ড পুনরায় সেট করার নির্দেশাবলী পাবেন।</string>
+
+    <!--    Main Menu Page-->
     <string name="home">বাড়ি</string>
     <string name="Annoucment">ঘোষণা</string>
     <string name="services">সেবা</string>
@@ -32,12 +40,16 @@
     <string name="partners">অংশীদার</string>
     <string name="contact">যোগাযোগ করুন</string>
     <string name="patients_page">রোগীর পোর্টাল</string>
+
+<!--    Health Services-->
     <string name="healthservices">বিনামূল্যে স্বাস্থ্য সেবা</string>
     <string name="PrimaryCare">প্রাথমিক যত্ন</string>
     <string name="MentalCare">মানসিক যত্ন</string>
     <string name="VisionHealth">ভিশন কেয়ার</string>
     <string name="Dental">দাঁতের যত্ন</string>
     <string name="speciality">বিশেষ যত্ন</string>
+
+<!--    Patient Portal-->
     <string name="NewPatient">নতুন রোগী</string>
     <string name="patientForm">নতুন রোগীর ফর্ম</string>
     <string name="checkIn">চেক-ইন</string>
@@ -61,7 +73,8 @@
     <string name = "ConsentToText">টেক্সট সম্মতি? (হ্যাঁ বা না)</string>
     <string name = "InsuranceProvider">বীমা প্রদানকারী</string>
     <string name = "Email">ইমেল (রেজিস্ট্রেশন ইমেলের মতোই)</string>
-    <string name="login_dialog">আপনার শংসাপত্র লিখুন</string>
+
+
     <string name = "SelectRace">একটি জাতি নির্বাচন করুন:</string>
     <string name = "Black">কালো/আফ্রিকান আমেরিকান</string>
     <string name = "White">সাদা/ককেশীয়</string>

@@ -3,20 +3,20 @@
     <string name="app_name">Huda_Application</string>
     <string name="action_settings">الإعدادات</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">الجزء الأول</string>
-    <string name="second_fragment_label">الجزء الثاني</string>
-    <string name="next">التالي</string>
-    <string name="previous">سابق</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">مرحبا الجزء الأول</string>
-    <string name="hello_second_fragment">مرحبا الجزء الثاني</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string name="password">أدخل كلمة المرور</string>
     <string name="email">أدخل البريد الإلكتروني</string>
     <string name="Login">الدخول</string>
     <string name="forgotpassword">هل نسيت كلمة السر</string>
-    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
-    <string name="alreadyAccount">Already Have an Account? Login</string>
+    <string name="dontAccount">ليس لديك حساب؟ اشتراك</string>
+    <string name="alreadyAccount">هل لديك حساب؟ تسجيل الدخول</string>
     <string name="register">تسجيل</string>
     <string name="language">عربى</string>
     <string name="FirstName">أدخل الاسم الأول</string>
@@ -25,6 +25,14 @@
     <string name="EnterPass">إدخال كلمة المرور</string>
     <string name="Reenter">إعادة إدخال كلمة المرور</string>
     <string name="reset">إعادة إرسال</string>
+    <string name ="loginHeader">تسجل الدخول</string>
+    <string name ="registerHeader">تسجيل حساب</string>
+    <string name ="forgotPassHeader">إعادة تعيين كلمة المرور</string>
+    <string name="login_dialog">أدخل بيانات الاعتماد الخاصة بك</string>
+    <string name="regDiaglogue">أكمل الحقول أدناه لتسجيل حساب. سوف تتلقى رسالة بريد إلكتروني للتحقق عند التسجيل الناجح. </string>
+    <string name="forgotDialogue">أدخل البريد الإلكتروني المرتبط بحسابك وستتلقى تعليمات لإعادة تعيين كلمة المرور الخاصة بك.</string>
+
+    <!--    Main Menu Page-->
     <string name="home">الصفحة الرئيسية</string>
     <string name="Annoucment">إعلان</string>
     <string name="services">خدمات</string>
@@ -32,17 +40,22 @@
     <string name="partners">شركاء</string>
     <string name="contact">اتصل بنا</string>
     <string name="patients_page">تعيينات</string>
+
+<!--    Services-->
     <string name="healthservices"> خدمات صحية مجانية</string>
     <string name="PrimaryCare">الرعاية الأولية</string>
      <string name="MentalCare">رعاية نفسية</string>
     <string name="VisionHealth"> العناية بالبصر</string>
     <string name="Dental"> العناية بالأسنان</string>
     <string name="speciality">رعاية خاصة</string>
+
+<!--    Patient Portal-->
     <string name="NewPatient">مريض جديد</string>
     <string name="patientForm">نموذج جديد للمريض</string>
     <string name="checkIn">تحقق في</string>
     <string name="MedicalChart">الرسم البياني الطبي</string>
-    <string name="login_dialog">أدخل بيانات الاعتماد الخاصة بك</string>
+
+
 
     <!--    Patient Form Strings -->
     <string name = "Registration">التسجيل</string>

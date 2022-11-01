@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Huda_Application</string>
-
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -16,8 +15,8 @@
     <string name="email">Ingrese el Correo Electrónico</string>
     <string name="Login">Iniciar Sesión</string>
     <string name="forgotpassword">Olvidó Su Contraseña?</string>
-    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
-    <string name="alreadyAccount">Already Have an Account? Login</string>
+    <string name="dontAccount">¿No tienes una cuenta? Inscribirse</string>
+    <string name="alreadyAccount">¿Ya tienes una cuenta? Acceso</string>
     <string name="register">Registro</string>
     <string name="language">Español</string>
     <string name="FirstName">Ingrese el Nombre</string>
@@ -26,6 +25,14 @@
     <string name="EnterPass">Introduzca La Contraseña</string>
     <string name="Reenter">Reintroduzca La Contraseña</string>
     <string name="reset">Enviar Reinicio</string>
+    <string name ="loginHeader">CUENTA DE INGRESO</string>
+    <string name ="registerHeader">REGISTRAR CUENTA</string>
+    <string name ="forgotPassHeader">RESTABLECER</string>
+    <string name="login_dialog">Ingrese sus credenciales</string>
+    <string name="regDiaglogue">Complete los campos a continuación para registrar una cuenta. Recibirá un correo electrónico de verificación cuando se registre correctamente.</string>
+    <string name="forgotDialogue">Ingresa el correo electrónico asociado a tu cuenta y recibirás instrucciones para restablecer tu contraseña.</string>
+
+    <!--    Main Menu Page-->
     <string name="home">página de Inicio</string>
     <string name="Annoucment">Anuncio</string>
     <string name="services">Servicios</string>
@@ -33,17 +40,21 @@
     <string name="partners">Socios</string>
     <string name="contact">Contacta con Nosotros</string>
     <string name="patients_page">Equipo</string>
+
+<!--    Services -->
     <string name="healthservices">Servicios de salud gratuitos</string>
     <string name="PrimaryCare">Atención Primaria</string>
     <string name="MentalCare">Cuidado Mental</string>
     <string name="VisionHealth">Cuidado de La Visión</string>
     <string name="Dental">Cuidado Dental</string>
     <string name="speciality">Atención Especializada</string>
+
+<!--    Patient Portal-->
     <string name="NewPatient">Nuevo Paciente</string>
     <string name="patientForm">Formulario de Nuevo Paciente</string>
     <string name="checkIn">Registrarse</string>
     <string name="MedicalChart">Cuadro Médico</string>
-    <string name="login_dialog">Ingrese sus credenciales</string>
+
     <!--    Patient Form Strings -->
     <string name = "Registration">Registro</string>
     <string name="Date">Fecha (MM/DD/AAAA)</string>

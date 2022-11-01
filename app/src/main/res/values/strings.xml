@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Huda_Application</string>
     <string name="action_settings">Settings</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -24,24 +25,36 @@
     <string name="EnterPass">Enter Password</string>
     <string name="Reenter">Re-enter Password</string>
     <string name="reset">Send Reset</string>
+    <string name ="loginHeader">ACCOUNT LOGIN</string>
+    <string name ="registerHeader">REGISTER ACCOUNT</string>
+    <string name ="forgotPassHeader">RESET PASSWORD</string>
+    <string name="login_dialog">Enter your credentials below to log in.</string>
+    <string name="regDiaglogue">Complete the fields below to register an account. You will receive a verification email upon successful registration. </string>
+    <string name="forgotDialogue">Enter the email associated with your account and you will receive instructions to reset your password.</string>
+
+    <!--    Main Menu Page-->
     <string name="home">HOME</string>
     <string name="Annoucment">ANNOUNCEMENTS</string>
-    <string name="services">Services</string>
+    <string name="services">SERVICES</string>
     <string name="story">OUR STORY</string>
     <string name="partners">PARTNERS</string>
     <string name="contact">CONTACT US</string>
-    <string name="patients_page">Appointments</string>
+    <string name="patients_page">APPOINTMENTS</string>
+
+<!--    Services-->
     <string name="healthservices">Free Health Services</string>
     <string name="PrimaryCare">Primary Care</string>
     <string name="MentalCare">Mental Care</string>
     <string name="VisionHealth">Vision Care</string>
     <string name="Dental">Dental Care</string>
     <string name="speciality">Speciality Care</string>
+
+<!--    Patient Portal-->
     <string name="NewPatient">New Patient</string>
     <string name="patientForm">New Patient Form</string>
     <string name="checkIn">Check-in</string>
     <string name="MedicalChart">Medical Chart</string>
-    <string name="login_dialog">Enter your credentials below to log in.</string>
+
     <!--    Patient Form Strings -->
     <string name="Registration">REGISTRATION</string>
     <string name="Date">Date (MM/DD/YY)</string>
@@ -136,7 +149,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
 
     <!--    Our Story Page-->
     <string name="OurStoryHeader">OUR STORY</string>
-    <string name="History">History of the HUDA Clinic</string>
+    <string name="History">HISTORY OF THE HUDA CLINIC</string>
     <string name="HistoryPara">HUDA Clinic first opened its doors in May 2004 to serve the uninsured population of the Detroit area. The clinic initially operated on funds gathered by the Muslim community of Metro Detroit.</string>
     <string name="HistPara">When it began, the HUDA Clinic provided solely medical services. We then moved from our original facility at the Muslim Center of Detroit into a new, larger facility on Woodrow Wilson Street. Since then, we have expanded our care to include a full range of dental, vision care, podiatry, and mental health services, as well as a plethora of specialty services available at no-cost to our patients. Our new facility has allowed us to expand our services and our service times, but none of that would be possible without the generous support of our donors and volunteers.</string>
 
