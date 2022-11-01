@@ -60,8 +60,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="284dp"
-            android:layout_height="207dp"
+            android:layout_width="299dp"
+            android:layout_height="240dp"
             android:layout_marginStart="61dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="65dp"
@@ -74,9 +74,9 @@
 
         <TextView
             android:id="@+id/specialtyHealthPar1"
-            android:layout_width="348dp"
-            android:layout_height="310dp"
-            android:layout_marginStart="31dp"
+            android:layout_width="320dp"
+            android:layout_height="340dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
@@ -87,18 +87,16 @@
             android:textColor="#043670"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/specialityHealthHeader" />
 
         <TextView
             android:id="@+id/textView53"
-            android:layout_width="324dp"
-            android:layout_height="525dp"
+            android:layout_width="320dp"
+            android:layout_height="550dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="56dp"
-            android:layout_marginBottom="16dp"
             android:ems="10"
             android:fontFamily="sans-serif"
             android:gravity="start|top"
@@ -112,12 +110,10 @@
 
         <TextView
             android:id="@+id/textView47"
-            android:layout_width="344dp"
-            android:layout_height="750dp"
+            android:layout_width="320dp"
+            android:layout_height="800dp"
             android:layout_marginStart="56dp"
-            android:layout_marginTop="0dp"
             android:layout_marginEnd="56dp"
-            android:layout_marginBottom="32dp"
             android:ems="10"
             android:fontFamily="sans-serif"
             android:gravity="start|top"

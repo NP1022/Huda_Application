@@ -60,8 +60,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="284dp"
-            android:layout_height="207dp"
+            android:layout_width="303dp"
+            android:layout_height="236dp"
             android:layout_marginStart="61dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="65dp"
@@ -74,7 +74,7 @@
 
         <TextView
             android:id="@+id/specialtyHealthPar1"
-            android:layout_width="348dp"
+            android:layout_width="320dp"
             android:layout_height="200dp"
             android:layout_marginStart="31dp"
             android:layout_marginTop="20dp"
@@ -92,12 +92,11 @@
 
         <TextView
             android:id="@+id/textView53"
-            android:layout_width="324dp"
-            android:layout_height="370dp"
+            android:layout_width="320dp"
+            android:layout_height="375dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="56dp"
-            android:layout_marginBottom="16dp"
             android:ems="10"
             android:fontFamily="sans-serif"
             android:gravity="start|top"
@@ -111,12 +110,10 @@
 
         <TextView
             android:id="@+id/textView47"
-            android:layout_width="344dp"
-            android:layout_height="300dp"
+            android:layout_width="320dp"
+            android:layout_height="290dp"
             android:layout_marginStart="56dp"
-            android:layout_marginTop="0dp"
             android:layout_marginEnd="56dp"
-            android:layout_marginBottom="32dp"
             android:ems="10"
             android:fontFamily="sans-serif"
             android:gravity="start|top"

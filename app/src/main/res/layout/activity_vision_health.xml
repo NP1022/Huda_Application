@@ -74,7 +74,7 @@
 
     <TextView
         android:id="@+id/specialtyHealthPar1"
-        android:layout_width="348dp"
+        android:layout_width="320dp"
         android:layout_height="200dp"
         android:layout_marginStart="31dp"
         android:layout_marginTop="20dp"
@@ -92,12 +92,11 @@
 
     <TextView
         android:id="@+id/textView53"
-        android:layout_width="324dp"
-        android:layout_height="270dp"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginBottom="16dp"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:gravity="start|top"
@@ -111,12 +110,11 @@
 
     <TextView
         android:id="@+id/textView47"
-        android:layout_width="344dp"
-        android:layout_height="387dp"
+        android:layout_width="320dp"
+        android:layout_height="450dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginBottom="32dp"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:gravity="start|top"
