@@ -158,99 +158,99 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name = "PrimaryCarePar1">Les prestataires de soins primaires sont généralement la première ligne de contact pour les patients ; traiter les problèmes de santé généraux, fournir une éducation, des médicaments et des références spécialisées au besoin. HUDA vise à apporter des soins primaires et des services spécialisés aux personnes non assurées et sous-assurées dans la région métropolitaine de Detroit. Nous fournissons des services de soins primaires préventifs dans une clinique de santé communautaire axée sur la personne, notre objectif est de rendre le Michigan plus sain .
 La clinique HUDA fournit des médicaments GRATUITS à nos patients et fournit également des services de laboratoire sans frais à nos patients.</string>
     <string name = "PrimaryCarePar2"><b>Nos services de soins primaires comprennent:</b>
-        \n  <li>Bilans de santé</li>
-        \n  <li>Gestion des maladies aiguës et chroniques</li>
-        \n <li>Services de laboratoire (prise de sang)</li>
-        \n <li>Pharmacie sans frais</li>
-        \n <li>Dépistage et traitements du diabète</li>
-        \n <li>Éducation et ressources pour la santé</li>
-        \n <li>Dépistage du cholestérol et de la tension artérielle</li>
-        \n <li>Éducation nutritionnelle</li> </string>
+        \n\n  <li>Bilans de santé</li>
+        \n\n  <li>Gestion des maladies aiguës et chroniques</li>
+        \n\n <li>Services de laboratoire (prise de sang)</li>
+        \n\n <li>Pharmacie sans frais</li>
+        \n\n <li>Dépistage et traitements du diabète</li>
+        \n\n <li>Éducation et ressources pour la santé</li>
+        \n\n <li>Dépistage du cholestérol et de la tension artérielle</li>
+        \n\n <li>Éducation nutritionnelle</li> </string>
 
     <!--    Dental Health Page-->
     <string name = "DentalHealthHeader">Services Dentaires</string>
     <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
     <string name = "DentalHealthPar1">Beaucoup de gens attendent d\'avoir les soins dentaires nécessaires parce qu\'ils n\'ont pas d\'assurance, mais de petits problèmes dentaires peuvent rapidement devenir incroyablement douloureux s\'ils sont laissés seuls. Venez chez HUDA pour des nettoyages, des obturations, des extractions et des examens pour garder vos dents en bonne santé et être référé à un spécialiste si nécessaire.</string>
     <string name="DentalHealthPar2"><b>Nos services dentaires incluent:</b>
-        \n <li>Examens dentaires et radiographies</li>
-        \n <li>Nettoyages en profondeur</li>
-        \n <li>Remplissages composites</li>
-        \n <li>Extraction dentaire</li>
-        \n <li>Recommandations à des dentistes à bas prix si nécessaire</li></string>
+        \n\n <li>Examens dentaires et radiographies</li>
+        \n\n <li>Nettoyages en profondeur</li>
+        \n\n <li>Remplissages composites</li>
+        \n\n <li>Extraction dentaire</li>
+        \n\n <li>Recommandations à des dentistes à bas prix si nécessaire</li></string>
     <string name="DentalHealthPar3"><b>Nos Dentistes:</b>
-        \n <li>Shakeel Niazi, D.D.S.</li>
-        \n <li>Ahmed Allam, D.D.S.</li>
-        \n <li>Asmaa Abdel-Salam, D.D.S.</li>
-        \n <li>Sumera Khalid, D.D.S.</li>
-        \n <li>Umair Niazi, D.M.D.</li>
-        \n <li>Rachel Mundus, R.D.</li>
-        \n <li>Fatin Amireh, R.D.H.</li></string>
+        \n\n <li>Shakeel Niazi, D.D.S.</li>
+        \n\n <li>Ahmed Allam, D.D.S.</li>
+        \n\n <li>Asmaa Abdel-Salam, D.D.S.</li>
+        \n\n <li>Sumera Khalid, D.D.S.</li>
+        \n\n <li>Umair Niazi, D.M.D.</li>
+        \n\n <li>Rachel Mundus, R.D.</li>
+       \n\n <li>Fatin Amireh, R.D.H.</li></string>
 
     <!--    Vision Care Page-->
     <string name = "VisionCareHeader">Soins de la vue</string>
     <string name = "VisionCarePar1">Les dépistages visuels sont une méthode efficace pour identifier les personnes ayant une déficience visuelle ou des affections oculaires susceptibles d\'entraîner une perte de vision.  Nous effectuons des dépistages en interne et fournissons des lunettes gratuites et des références à des ophtalmologistes locaux à bas prix si nécessaire.</string>
     <string name="VisionCarePar2"><b>Nos options de dépistage visuel:</b>
-        \n <li>Dépistage du glaucome</li>
-        \n <li>Dépistage de la cataracte</li>
-        \n <li>Dépistage de la dégénérescence maculaire</li>
-        \n <li>Lunettes GRATUITES</li>
-        \n <li>Recommandations à des spécialistes de la vision</li></string>
+        \n\n <li>Dépistage du glaucome</li>
+        \n\n <li>Dépistage de la cataracte</li>
+        \n\n <li>Dépistage de la dégénérescence maculaire</li>
+        \n\n <li>Lunettes GRATUITES</li>
+        \n\n <li>Recommandations à des spécialistes de la vision</li></string>
     <string name="VisionCarePar3"><b>Nos ophtalmologistes/optométristes:</b>
-        \n <li>M. Hanif Peracha, M.D.</li>
-        \n <li>Meiraj Siddiqui, M.D.</li>
-        \n <li>Benjamin Whittredge, O.D.</li>
-        \n <li>Christopher Burgess, O.D.</li>
-        \n <li>Naureen Haroon, O.D.</li>
-        \n <li>Suleman Hans, O.D.</li>
-        \n <li>Elizabeth Borowiec, O.D.</li></string>
+        \n\n <li>M. Hanif Peracha, M.D.</li>
+        \n\n <li>Meiraj Siddiqui, M.D.</li>
+        \n\n <li>Benjamin Whittredge, O.D.</li>
+        \n\n <li>Christopher Burgess, O.D.</li>
+        \n\n <li>Naureen Haroon, O.D.</li>
+        \n\n <li>Suleman Hans, O.D.</li>
+        \n\n <li>Elizabeth Borowiec, O.D.</li></string>
 
     <!--    Mental Health Page-->
     <string name = "MentalHealthHeader">Santé mentale</string>
     <string name = "MentalHealthPar1">Nous avons des psychiatres parmi notre personnel ainsi que nos travailleurs sociaux agréés pour fournir une thérapie et un traitement pour un large éventail de problèmes de santé mentale.Nous offrons des conseils et des traitements gratuits aux anciens combattants, aux sans-abri , non assurés et les travailleurs sous-assurés.
         \n Depuis le début de la pandémie de Covid-19, nos services de psychiatrie sont passés à la télémédecine. Nous avons actuellement 2 psychiatres, une infirmière praticienne en santé mentale et un thérapeute qui sont tous bénévoles à la clinique HUDA, ce qui nous permet de traiter un large éventail de problèmes de santé mentale.</string>
     <string name="MentalHealthPar2"><b>Nos services de santé mentale incluent:</b>
-        \n <li>Psychiatre prescripteur sur place</li>
-        \n <li>Conseils pour adultes</li>
-        \n <li>Anxiété/Dépression</li>
-        \n <li>Troubles bipolaires</li>
-        \n <li>Troubles alimentaires</li>
-        \n <li>Troubles schizo-affectifs, et plus</li></string>
+        \n\n <li>Psychiatre prescripteur sur place</li>
+        \n\n <li>Conseils pour adultes</li>
+        \n\n <li>Anxiété/Dépression</li>
+        \n\n <li>Troubles bipolaires</li>
+        \n\n <li>Troubles alimentaires</li>
+        \n\n <li>Troubles schizo-affectifs, et plus</li></string>
     <string name="MentalHealthPar3">
         <b>Nos psychiatres:</b>
-        \n <li>Saba Maroof, M.D.</li>
-        \n <li>Mazhar Hussain, M.D.</li>
-        \n <b>Fournisseurs de Soutien:</b>
-        \n <li>Joann Harrison, MHNP, FNP-BC</li>
-        \n <li>Sarah Kappler, TLLP</li></string>
+        \n\n <li>Saba Maroof, M.D.</li>
+        \n\n <li>Mazhar Hussain, M.D.</li>
+        \n\n <b>Fournisseurs de Soutien:</b>
+        \n\n <li>Joann Harrison, MHNP, FNP-BC</li>
+        \n\n <li>Sarah Kappler, TLLP</li></string>
 
     <!--    Speciality Care Page-->
     <string name = "SpecialtyCareHeader"> Services spécialisés </string>
     <string name = "SpecialityCarePar1">  Dans le domaine de la médecine, il existe de nombreuses sous-spécialités lors de la coordination des soins aux patients. Chez HUDA, nous offrons une gamme de soins spécialisés et de consultations à nos patients, dans le but d\'élargir l\'accès aux services de santé.  Nous avons créé un modèle de santé intégré à HUDA en ouvrant plusieurs services spécialisés créant un lieu où la plupart des besoins des patients peuvent être satisfaits. Tous les services spécialisés nécessitent une recommandation d\'un fournisseur de soins primaires HUDA. </string>
     <string name="SpecialityCarePar2">  <b>Nos services/consultations spécialisés incluent:</b>
-        \n  <li>Physiothérapie</li>
-        \n  <li>Endocrinologie</li>
-        \n  <li>Cardiologie</li>
-        \n  <li>Podologie</li>
-        \n  <li>Néphrologie</li>
-        \n  <li>Gastro-entérologie</li>
-        \n  <li>Oreille, Nez, Gorge (ORL)</li>
-        \n  <li>Hépatologie</li>
-        \n  <li>Hématologie</li>
-        \n  <li>Pneumologie</li>  </string>
+        \n\n  <li>Physiothérapie</li>
+        \n\n  <li>Endocrinologie</li>
+        \n\n  <li>Cardiologie</li>
+        \n\n  <li>Podologie</li>
+        \n\n  <li>Néphrologie</li>
+        \n\n  <li>Gastro-entérologie</li>
+        \n\n  <li>Oreille, Nez, Gorge (ORL)</li>
+        \n\n  <li>Hépatologie</li>
+        \n\n  <li>Hématologie</li>
+        \n\n  <li>Pneumologie</li>  </string>
     <string name="SpecialityCarePar3">  <b>Nos fournisseurs spécialisés:</b>
-        \n <li>Jawwad Rashid, P.T.A</li>
-        \n <li>Asadullah Mohammed, M.D.</li>
-        \n <li>Naseer Ahmad, M.D.</li>
-        \n <li>Maha Alhusseini, M.D.</li>
-        \n <li>Samer Salka, M.D.</li>
-        \n <li>Maha Alhusseini, M.D.</li>
-        \n <li>Syed Ghani, D.P.M.</li>
-        \n <li>Naveed Aslam, M.D.</li>
-        \n <li>Jukaku Tayeb, M.D.</li>
-        \n <li>Firdous Siddiqui, M.D.</li>
-        \n <li>Yousef Siddiqui, M.D.</li>
-        \n <li>Uzma Rehman, D.O.</li>
-        \n <li>Zaahir Turfe, M.D.</li>
-        \n <li>Ranya Selim, M.D.</li>
-        \n <li>Syed Akbar, M.D.</li></string>
+        \n\n <li>Jawwad Rashid, P.T.A</li>
+        \n\n <li>Asadullah Mohammed, M.D.</li>
+        \n\n <li>Naseer Ahmad, M.D.</li>
+        \n\n <li>Maha Alhusseini, M.D.</li>
+        \n\n <li>Samer Salka, M.D.</li>
+        \n\n <li>Maha Alhusseini, M.D.</li>
+        \n\n <li>Syed Ghani, D.P.M.</li>
+        \n\n <li>Naveed Aslam, M.D.</li>
+        \n\n <li>Jukaku Tayeb, M.D.</li>
+        \n\n <li>Firdous Siddiqui, M.D.</li>
+        \n\n <li>Yousef Siddiqui, M.D.</li>
+        \n\n <li>Uzma Rehman, D.O.</li>
+        \n\n <li>Zaahir Turfe, M.D.</li>
+        \n\n <li>Ranya Selim, M.D.</li>
+        \n\n <li>Syed Akbar, M.D.</li></string>
 </resources>
