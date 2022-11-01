@@ -30,7 +30,7 @@
     <string name="story">OUR STORY</string>
     <string name="partners">PARTNERS</string>
     <string name="contact">CONTACT US</string>
-    <string name="patients_page">PATIENT PORTAL</string>
+    <string name="patients_page">Appointments</string>
     <string name="healthservices">Free Health Services</string>
     <string name="PrimaryCare">Primary Care</string>
     <string name="MentalCare">Mental Care</string>
@@ -41,7 +41,7 @@
     <string name="patientForm">New Patient Form</string>
     <string name="checkIn">Check-in</string>
     <string name="MedicalChart">Medical Chart</string>
-
+    <string name="login_dialog">Enter your credentials below to log in.</string>
     <!--    Patient Form Strings -->
     <string name="Registration">REGISTRATION</string>
     <string name="Date">Date (MM/DD/YY)</string>
@@ -126,7 +126,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="CheckInButton">Check-In</string>
 
     <!--    Contact Us Page-->
-    <string name="ContactUsHeader">Contact Us</string>
+    <string name="ContactUsHeader">CONTACT US</string>
     <string name="ContactUsPara">HUDA, a Free Community Health Clinic\nin Metro Detroit</string>
     <string name="CallHeader">Call:</string>
     <string name="ClinicPhone">(313) 865-8446</string>
@@ -135,13 +135,13 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="SocialMediaHeader">Find Us On:</string>
 
     <!--    Our Story Page-->
-    <string name="OurStoryHeader">Our Story</string>
+    <string name="OurStoryHeader">OUR STORY</string>
     <string name="History">History of the HUDA Clinic</string>
     <string name="HistoryPara">HUDA Clinic first opened its doors in May 2004 to serve the uninsured population of the Detroit area. The clinic initially operated on funds gathered by the Muslim community of Metro Detroit.</string>
     <string name="HistPara">When it began, the HUDA Clinic provided solely medical services. We then moved from our original facility at the Muslim Center of Detroit into a new, larger facility on Woodrow Wilson Street. Since then, we have expanded our care to include a full range of dental, vision care, podiatry, and mental health services, as well as a plethora of specialty services available at no-cost to our patients. Our new facility has allowed us to expand our services and our service times, but none of that would be possible without the generous support of our donors and volunteers.</string>
 
     <!--    Announcements Page-->
-    <string name="AnnouncementsHeader">Announcements</string>
+    <string name="AnnouncementsHeader">ANNOUNCEMENTS</string>
     <string name="ClosureHeader">2022 Holiday Closure Dates</string>
     <string name="Date1">Wednesday November 23, 2022 - Monday November 28th , 2022</string>
     <string name="Date2">Saturday December 24th, 2022</string>

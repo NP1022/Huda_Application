@@ -168,7 +168,7 @@ public class RegisterAccount extends AppCompatActivity
                                 });
                                 UserManager.getInstance().setCurrentUser(user);
                                 Toast.makeText(RegisterAccount.this,"Task is successful",Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(RegisterAccount.this,MainActivity.class));
+                                startActivity(new Intent(RegisterAccount.this,NewOrReturningUser.class));
                             }
                             else
                             {

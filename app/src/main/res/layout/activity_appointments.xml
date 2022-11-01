@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/loginPage"
+    android:id="@+id/appointmentsPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/huda_logo" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/language"
+        android:id="@+id/create"
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"

@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".UserAppointment"
+            android:exported="false" />
+        <activity
             android:name=".SpecialtyHealth"
             android:exported="false" />
         <activity
@@ -62,7 +65,7 @@
             android:name=".AuthorizationForm"
             android:exported="false" />
         <activity
-            android:name=".PatientContract"
+            android:name=".PatientForm"
             android:exported="false" />
         <activity
             android:name=".CheckIn"
@@ -71,7 +74,7 @@
             android:name=".PatientsPage"
             android:exported="false" />
         <activity
-            android:name=".PatientForm"
+            android:name=".PatientContract"
             android:exported="false" />
         <activity
             android:name=".HealthServices"

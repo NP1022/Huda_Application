@@ -4,74 +4,44 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.huda_application.user.PatientFormData;
+
+import java.util.regex.Pattern;
 
 public class PatientContract extends AppCompatActivity implements View.OnClickListener
 {
 
+    private static final Pattern DATE_PATTERN = Pattern.compile(
+            "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
+
+
+
+
+  //  private PatientFormData data;
     private TextView AuthorizationForm;
-    private String visitReasonTxt,firstNameTxt , lastNameTxt,patientSexTxt,patientDOBTxt,patientHomeNumTxt,patientCellNumTxt,patientAddTxt,
-            patientCityTxt,patientStateTxt,patientZipCodeTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,
-            patientEmailTxt,prefLangTxt,translatorTxt,maritalTxt,houseIncomeTxt,houseHoldTxt,occupationTxt,veteranTxt,emergencyNameTxt,relationshipTxt,
-            contactPhoneTxt,patientConsentName,patientSignedText,patientSignatureText,consentDateTxt,patientRaceTxt,patientEthnicityTxt,patientIncomeTxt,
-            patientEmpTxt,dateTxt,patientSSNTxt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_contract);
-        Bundle extras = getIntent().getExtras();
+        Intent extras = getIntent();
 
-        if (extras != null) {
-            dateTxt = extras.getString( "dateTxt");
-            lastNameTxt = extras.getString( "lastNameTxt");
-            firstNameTxt = extras.getString( "firstNameTxt");
-            visitReasonTxt = extras.getString( "visitReasonTxt");
-            patientSexTxt = extras.getString( "patientSexTxt");
-            patientSSNTxt = extras.getString( "patientSSNTxt");
-            patientDOBTxt = extras.getString( "patientDOBTxt");
-            patientHomeNumTxt = extras.getString( "patientHomeNumTxt");
-            patientCellNumTxt = extras.getString( "patientCellNumTxt");
-            patientAddTxt = extras.getString( "patientAddTxt");
-            patientCityTxt = extras.getString( "patientCityTxt");
-            patientStateTxt = extras.getString( "patientStateTxt");
-            patientZipCodeTxt = extras.getString( "patientZipCodeTxt");
-            patientPrefNumberTxt = extras.getString( "patientPrefNumberTxt");
-
-
-            patientConsentCallTxt = extras.getString( "patientConsentCallTxt");
-            patientConsentTextTxt = extras.getString( "patientConsentTextTxt");
-            patientInsuranceTxt = extras.getString( "patientInsuranceTxt");
-            patientEmailTxt = extras.getString( "patientEmailTxt");
-            prefLangTxt = extras.getString( "prefLangTxt");
-            translatorTxt = extras.getString( "translatorTxt");
-            maritalTxt = extras.getString( "maritalTxt");
-            houseIncomeTxt = extras.getString( "houseIncomeTxt");
-            houseHoldTxt = extras.getString( "houseHoldTxt");
-            occupationTxt = extras.getString( "occupationTxt");
-            veteranTxt = extras.getString( "veteranTxt");
-            emergencyNameTxt = extras.getString( "emergencyNameTxt");
-
-            relationshipTxt = extras.getString( "relationshipTxt");
-            contactPhoneTxt = extras.getString( "contactPhoneTxt");
-            patientConsentName = extras.getString( "patientConsentName");
-            patientSignedText = extras.getString( "patientSignedText");
-            patientSignatureText = extras.getString( "patientSignatureText");
-            consentDateTxt = extras.getString( "consentDateTxt");
-            patientRaceTxt = extras.getString( "patientRaceTxt");
-            patientEthnicityTxt = extras.getString( "patientEthnicityTxt");
-            patientIncomeTxt = extras.getString( "patientIncomeTxt");
-            patientEmpTxt = extras.getString( "patientEmpTxt");
-
-
-
-
-
+        if (extras != null)
+        {
+         //   data =  (PatientFormData)  extras.getSerializableExtra("patientdata");
         }
        // Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
-        AuthorizationForm = (TextView) findViewById(R.id.nextForm2);
+        AuthorizationForm = (Button) findViewById(R.id.nextForm2);
         AuthorizationForm.setOnClickListener(this);
     }
 
@@ -80,41 +50,44 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
     {
         if (view.getId() == R.id.nextForm2)
         {
-            Intent AuthorizationForm = new Intent (this, AuthorizationForm.class);
-            AuthorizationForm.putExtra("lastNameTxt" ,lastNameTxt );
-            AuthorizationForm.putExtra("dateTxt" ,dateTxt );
-            AuthorizationForm.putExtra("firstNameTxt" ,firstNameTxt );
-            AuthorizationForm.putExtra("visitReasonTxt" ,visitReasonTxt );
-            AuthorizationForm.putExtra("patientSexTxt" ,patientSexTxt );
-//AuthorizatAuthorizationForm
-            AuthorizationForm.putExtra("patientDOBTxt" ,patientDOBTxt );
-            AuthorizationForm.putExtra("patientSSNTxt" ,firstNameTxt );
-            AuthorizationForm.putExtra("patientHomeNumTxt" ,patientHomeNumTxt );
-            AuthorizationForm.putExtra("patientCellNumTxt" ,patientCellNumTxt );
-            AuthorizationForm.putExtra("patientAddTxt" ,patientAddTxt );
-            AuthorizationForm.putExtra("patientCityTxt" ,patientCityTxt );
-            AuthorizationForm.putExtra("patientStateTxt" ,patientStateTxt );
-            AuthorizationForm.putExtra("patientZipCodeTxt" ,patientZipCodeTxt );
-            AuthorizationForm.putExtra("patientPrefNumberTxt" ,patientPrefNumberTxt );
-            AuthorizationForm.putExtra("patientConsentCallTxt" ,patientConsentCallTxt );
-            AuthorizationForm.putExtra("patientConsentTextTxt" ,patientConsentTextTxt );
-            AuthorizationForm.putExtra("patientInsuranceTxt" ,patientInsuranceTxt );
-            AuthorizationForm.putExtra("patientEmailTxt" ,patientEmailTxt );
-            AuthorizationForm.putExtra("prefLangTxt" ,prefLangTxt );
-            AuthorizationForm.putExtra("translatorTxt" ,translatorTxt );
-            AuthorizationForm.putExtra("maritalTxt" ,maritalTxt );
-            AuthorizationForm.putExtra("houseIncomeTxt" ,houseIncomeTxt );
-            AuthorizationForm.putExtra("houseHoldTxt" ,houseHoldTxt );
-            AuthorizationForm.putExtra("occupationTxt" ,occupationTxt );
-            AuthorizationForm.putExtra("veteranTxt" ,veteranTxt );
-            AuthorizationForm.putExtra("emergencyNameTxt" ,emergencyNameTxt );
-            AuthorizationForm.putExtra("relationshipTxt" ,relationshipTxt );
-            AuthorizationForm.putExtra("contactPhoneTxt" ,contactPhoneTxt );
-            AuthorizationForm.putExtra("patientConsentName" ,patientConsentName );
-            AuthorizationForm.putExtra("patientSignedText" ,patientSignedText );
-            AuthorizationForm.putExtra("patientSignatureText" ,patientSignatureText );
-            AuthorizationForm.putExtra("consentDateTxt" ,consentDateTxt );
-            startActivity(AuthorizationForm);
+            final EditText patientSigned2 = findViewById(R.id.patientNamePrinted2);
+            final EditText patientSig2 = findViewById(R.id.patientNameSignature2);
+            final EditText consentDateSign2 = findViewById(R.id.consentFormDate2);
+
+            final String patientSignedText2 = patientSigned2.getText().toString().trim();
+            final String patientSignatureText2 = patientSig2.getText().toString().trim();
+            final String consentDateTxt2 = consentDateSign2.getText().toString().trim();
+
+            if(TextUtils.isEmpty(consentDateTxt2))
+            {
+                Toast.makeText(PatientContract.this, "Date cannot be empty", Toast.LENGTH_LONG).show();
+                consentDateSign2.setError("Date is required");
+                consentDateSign2.requestFocus();
+            }
+            else if(!DATE_PATTERN.matcher(consentDateTxt2).matches())
+            {
+                Toast.makeText(PatientContract.this, "Date format MM-DD-YYYY", Toast.LENGTH_LONG).show();
+                consentDateSign2.setError("Date format is required");
+                consentDateSign2.requestFocus();
+            }
+            else if(TextUtils.isEmpty(patientSignedText2) || patientSignedText2.length() > 30)
+            {
+                Toast.makeText(PatientContract.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
+                patientSigned2.setError("Signed name is required");
+                patientSigned2.requestFocus();
+            }
+            else if(TextUtils.isEmpty(patientSignatureText2) || patientSignatureText2.length() > 30)
+            {
+                Toast.makeText(PatientContract.this, "Signature cannot be empty", Toast.LENGTH_LONG).show();
+                patientSig2.setError("Signature is required");
+                patientSig2.requestFocus();
+            }
+            else
+            {
+                Intent AuthorizationForm = new Intent (this, AuthorizationForm.class);
+                startActivity(AuthorizationForm);
+           }
+
         }
     }
 }

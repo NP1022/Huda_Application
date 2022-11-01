@@ -1003,7 +1003,6 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
             app:layout_constraintTop_toBottomOf="@+id/patientNameSignature"
             tools:ignore="MissingConstraints" />
 
-
         <Button
             android:id="@+id/nextForm"
             android:layout_width="189dp"

@@ -1,15 +1,19 @@
 package com.example.huda_application.user;
 
+import com.example.huda_application.Patient;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class User implements Serializable {
 
     private String userId;
     private String firstName;
     private String lastName;
     private String emailAddress;
     private UserType userType;
+    private Patient patient;
 
     private final List<Appointment> appointments;
 
@@ -28,6 +32,7 @@ public class User {
     public User(String firstName, String lastName, String emailAddress) {
         this(firstName, lastName, emailAddress, UserType.PATIENT, new ArrayList<>());
     }
+
 
     public String getFirstName() {
         return firstName;
@@ -63,6 +68,14 @@ public class User {
 
     public String getUserId() {
         return userId;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
     }
 
     public void setUserId(String userId) {

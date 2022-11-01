@@ -1,5 +1,6 @@
 package com.example.huda_application.firebase;
 
+import com.example.huda_application.Patient;
 import com.example.huda_application.user.Appointment;
 import com.example.huda_application.user.AppointmentStatus;
 import com.example.huda_application.user.User;
@@ -28,6 +29,9 @@ public class FirebaseClient {
                 snapshot.child("emailAddress").getValue(String.class),
                 snapshot.child("userType").getValue(String.class)
         );
+        if (snapshot.hasChild("patient")) {
+            user.setPatient(snapshot.child("patient").getValue(Patient.class));
+        }
 
         if (snapshot.hasChild("appointments")) {
             for (DataSnapshot appointmentData : snapshot.getChildren()) {

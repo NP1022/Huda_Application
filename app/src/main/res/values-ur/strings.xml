@@ -26,12 +26,13 @@
     <string name="Reenter">پاس ورڈ دوبارہ درج</string>
     <string name="reset">ری سیٹ بھیجیں۔</string>
     <string name="home">ہوم پیج</string>
+    <string name="login_dialog">اپنی اسناد درج کریں۔</string>
     <string name="Annoucment">اعلان</string>
     <string name="services">خدمات</string>
     <string name="story">ہماری کہانی</string>
     <string name="partners">شراکت دار</string>
     <string name="contact">ہم سے رابطہ کریں۔</string>
-    <string name="patients_page">مریضوں کا پورٹل</string>
+    <string name="patients_page">تقرری</string>
     <string name="healthservices">مفت صحت کی خدمات</string>
     <string name="PrimaryCare">بنیادی دیکھ بھال</string>
     <string name="MentalCare">ذہنی نگہداشت</string>

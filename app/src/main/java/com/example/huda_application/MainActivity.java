@@ -266,7 +266,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     if (UserManager.getInstance().isAdmin()) {
                                         startActivity(new Intent(MainActivity.this , AdminPage.class));
                                     }else {
-                                        startActivity(new Intent(MainActivity.this , NewOrReturningUser.class));
+                                        startActivity(new Intent(MainActivity.this , MainApplication.class));
                                     }
                                 }
 

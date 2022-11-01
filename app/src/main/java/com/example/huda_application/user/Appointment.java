@@ -1,10 +1,13 @@
 package com.example.huda_application.user;
 
-public class Appointment {
+import java.io.Serializable;
+
+public class Appointment implements Serializable {
 
     private String time;
     private String date;
     private String reason;
+
     private AppointmentStatus status;
     private boolean checkedIn;
 
@@ -16,7 +19,7 @@ public class Appointment {
         this.checkedIn = checkedIn;
     }
 
-    public Appointment(String time, String date, String reason, AppointmentStatus status) {
+    public Appointment(String time, String date ,String reason,AppointmentStatus status) {
         this(time, date, reason, status, false);
     }
 
