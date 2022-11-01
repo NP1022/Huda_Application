@@ -19,6 +19,7 @@ import java.util.regex.Pattern;
 public class PatientContract extends AppCompatActivity implements View.OnClickListener
 {
 
+    private  PatientFormData data;
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
 
@@ -38,7 +39,7 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
 
         if (extras != null)
         {
-         //   data =  (PatientFormData)  extras.getSerializableExtra("patientdata");
+            data =  (PatientFormData)  extras.getSerializableExtra("patientdata");
         }
        // Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
         AuthorizationForm = (Button) findViewById(R.id.nextForm2);
@@ -85,7 +86,9 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
             else
             {
                 Intent AuthorizationForm = new Intent (this, AuthorizationForm.class);
+                AuthorizationForm.putExtra("patientdata",data);
                 startActivity(AuthorizationForm);
+
            }
 
         }

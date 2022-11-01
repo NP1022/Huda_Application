@@ -1,5 +1,6 @@
 package com.example.huda_application;
 
+import com.example.huda_application.user.PatientFormData;
 import com.google.firebase.database.DatabaseReference;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
@@ -13,10 +14,10 @@ public class DAOPatient
     public DAOPatient()
     {
         FirebaseDatabase db = FirebaseDatabase.getInstance();
-        dbRef = db.getReference(Patient.class.getSimpleName());
+        dbRef = db.getReference(PatientFormData.class.getSimpleName());
     }
 
-    public Task<Void> add(Patient patient)
+    public Task<Void> add(PatientFormData patient)
     {
         return dbRef.push().setValue(patient);
     }

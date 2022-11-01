@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAuth = FirebaseAuth.getInstance();
 
 
+
         int Registration_ID = R.id.registration;
         int forgot_password_ID = R.id.forgotpass;
         final String[] langs_options = {"English", "عربي" , "español", "français", "اردو" , "বাংলা"};
@@ -266,7 +267,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     if (UserManager.getInstance().isAdmin()) {
                                         startActivity(new Intent(MainActivity.this , AdminPage.class));
                                     }else {
-                                        startActivity(new Intent(MainActivity.this , MainApplication.class));
+                                        startActivity(new Intent(MainActivity.this , NewOrReturningUser.class));
                                     }
                                 }
 
@@ -304,7 +305,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_settings)
+        {
             return true;
         }
 

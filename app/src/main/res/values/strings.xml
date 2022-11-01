@@ -126,7 +126,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="VoluntaryConsent">voluntarily accept treatment/counseling as recommended </string>
     <string name="PatientNamePrinted">Patient Name (Printed)</string>
     <string name="PatientSignature">Patient/Guardian Signature</string>
-    <string name="TodayDate">Date (MM/DD/YYYY)</string>
+    <string name="TodayDate">Date (MM-DD-YYYY)</string>
     <string name="SubmitForm">Submit</string>
     <string name="NextForm">Next Form</string>
 
