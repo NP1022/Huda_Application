@@ -1,9 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/mentalHealth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MentalHealth">
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:context=".MentalHealth">
+
+        <TextView
+            android:id="@+id/specialityHealthHeader"
+            android:layout_width="251dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/white"
+            android:text="@string/MentalHealthHeader"
+            android:textAlignment="center"
+            android:textColor="#043670"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hudaLogo3" />
+
+        <ImageView
+            android:id="@+id/hudaLogo3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+
+            android:contentDescription="TODO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/huda_logo" />
+
+        <!--TextView
+            android:id="@+id/primaryCareInternalMedicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/PrimaryCareInternalMedicine"
+            android:textColor="#043670"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dentalHealthHeader" /-->
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="303dp"
+            android:layout_height="236dp"
+            android:layout_marginStart="61dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView53"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialtyHealthPar1"
+            app:srcCompat="@drawable/mental_huda" />
+
+        <TextView
+            android:id="@+id/specialtyHealthPar1"
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:gravity="start|top"
+            android:text="@string/MentalHealthPar1"
+            android:justificationMode="inter_word"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialityHealthHeader" />
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="320dp"
+            android:layout_height="375dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="56dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:gravity="start|top"
+            android:text="@string/MentalHealthPar2"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView47"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="320dp"
+            android:layout_height="290dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="56dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:gravity="start|top"
+            android:text="@string/MentalHealthPar3"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView53" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
