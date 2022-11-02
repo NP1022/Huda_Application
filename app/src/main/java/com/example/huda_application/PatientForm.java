@@ -40,8 +40,6 @@ public class PatientForm extends AppCompatActivity
 
     private static Pattern MARITAL_PATTERN = Pattern.compile("^(?:Single|single|Married|married|partner|Partner|Separated|separated|Divorced|divorced|Widowed|widowed)$");
 
-    private static Pattern LETTERS_PATTERN = Pattern.compile("^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$"); // Letters pattern match
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -180,22 +178,10 @@ public class PatientForm extends AppCompatActivity
                     firstName.requestFocus();
 
                 }
-                else if(!LETTERS_PATTERN.matcher(firstNameTxt).matches())
-                {
-                    Toast.makeText(PatientForm.this, "Name can only contain letters", Toast.LENGTH_LONG).show();
-                    firstName.setError("Name format is required");
-                    firstName.requestFocus();
-                }
                 else if (TextUtils.isEmpty(lastNameTxt) || lastNameTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this, "Please enter last name", Toast.LENGTH_LONG).show();
                     lastName.setError("Name is required");
-                    lastName.requestFocus();
-                }
-                else if(!LETTERS_PATTERN.matcher(lastNameTxt).matches())
-                {
-                    Toast.makeText(PatientForm.this, "Name can only contain letters", Toast.LENGTH_LONG).show();
-                    lastName.setError("Name format is required");
                     lastName.requestFocus();
                 }
                 else if (TextUtils.isEmpty(patientSexTxt))
@@ -225,37 +211,31 @@ public class PatientForm extends AppCompatActivity
                 else if (TextUtils.isEmpty(patientAddTxt))
                 {
                     Toast.makeText(PatientForm.this, "Address cannot be empty", Toast.LENGTH_LONG).show();
-                    patientAdd.setError("Address is required");
+                    patientAdd.setError("Address required");
                     patientAdd.requestFocus();
                 }
                 else if (TextUtils.isEmpty(patientCityTxt) || patientCityTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this, "City cannot be empty", Toast.LENGTH_LONG).show();
-                    patientCity.setError("City is required");
+                    patientCity.setError("City required");
                     patientCity.requestFocus();
                 }
                 else if (TextUtils.isEmpty(patientStateTxt) || patientStateTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this, "State cannot be empty", Toast.LENGTH_LONG).show();
-                    patientState.setError("State is required");
-                    patientState.requestFocus();
-                }
-                else if(!LETTERS_PATTERN.matcher(patientStateTxt).matches())
-                {
-                    Toast.makeText(PatientForm.this, "State must be valid", Toast.LENGTH_LONG).show();
-                    patientState.setError("State format is required");
+                    patientState.setError("Address required");
                     patientState.requestFocus();
                 }
                 else if (TextUtils.isEmpty(patientZipCodeTxt))
                 {
                     Toast.makeText(PatientForm.this, "Zipcode cannot be empty", Toast.LENGTH_LONG).show();
-                    patientZip.setError("Zipcode is required");
+                    patientZip.setError("Zipcode required");
                     patientZip.requestFocus();
                 }
                 else if (!ZIPCODE_PATTERN.matcher(patientZipCodeTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Zipcode must be 12345", Toast.LENGTH_LONG).show();
-                    patientZip.setError("Format is required");
+                    patientZip.setError("Format required");
                     patientZip.requestFocus();
                 }
                 else if (TextUtils.isEmpty(patientSSNTxt))
@@ -265,13 +245,13 @@ public class PatientForm extends AppCompatActivity
                 else if (!SSN_PATTERN.matcher(patientSSNTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be 123-12-1234", Toast.LENGTH_LONG).show();
-                    patientSsn.setError("Format is required");
+                    patientSsn.setError("Format required");
                     patientSsn.requestFocus();
                 }
                 else if (TextUtils.isEmpty(patientCellNumTxt))
                 {
                     Toast.makeText(PatientForm.this, "Number cannot be empty", Toast.LENGTH_LONG).show();
-                    patientCell.setError("Cell number is required");
+                    patientCell.setError("Cell number required");
                     patientCell.requestFocus();
                 }
                 else if (!PHONE_PATTERN.matcher(patientCellNumTxt).matches())
@@ -283,7 +263,7 @@ public class PatientForm extends AppCompatActivity
                 else if (TextUtils.isEmpty(patientHomeNumTxt))
                 {
                     Toast.makeText(PatientForm.this, "Number cannot be empty", Toast.LENGTH_LONG).show();
-                    patientHome.setError("Home phone number is required");
+                    patientHome.setError("Home phone number required");
                     patientHome.requestFocus();
                 }
                 else if (!PHONE_PATTERN.matcher(patientHomeNumTxt).matches())
@@ -380,12 +360,6 @@ public class PatientForm extends AppCompatActivity
                     prefLang.setError("Language is required");
                     prefLang.requestFocus();
                 }
-                else if(!LETTERS_PATTERN.matcher(prefLangTxt).matches())
-                {
-                    Toast.makeText(PatientForm.this, "Language must be valid", Toast.LENGTH_LONG).show();
-                    prefLang.setError("Language format is required");
-                    prefLang.requestFocus();
-                }
                 else if (TextUtils.isEmpty(translatorTxt))
                 {
                     Toast.makeText(PatientForm.this, "Translator cannot be empty", Toast.LENGTH_LONG).show();
@@ -466,12 +440,6 @@ public class PatientForm extends AppCompatActivity
                     occupationPatient.setError("Occupation is required");
                     occupationPatient.requestFocus();
                 }
-                else if(!LETTERS_PATTERN.matcher(occupationTxt).matches())
-                {
-                    Toast.makeText(PatientForm.this, "Occupation must contain only letters", Toast.LENGTH_LONG).show();
-                    occupationPatient.setError("Occupation format is required");
-                    occupationPatient.requestFocus();
-                }
                 else if (!CONSENT_PATTERN.matcher(veteranTxt).matches() || TextUtils.isEmpty(veteranTxt))
                 {
                     Toast.makeText(PatientForm.this, "Must be Yes or No", Toast.LENGTH_LONG).show();
@@ -484,22 +452,10 @@ public class PatientForm extends AppCompatActivity
                     emergencyContactName.setError("Contact name is required");
                     emergencyContactName.requestFocus();
                 }
-                else if(!LETTERS_PATTERN.matcher(emergencyNameTxt).matches())
-                {
-                    Toast.makeText(PatientForm.this, "Name must contain only letters", Toast.LENGTH_LONG).show();
-                    emergencyContactName.setError("Contact format is required");
-                    emergencyContactName.requestFocus();
-                }
                 else if (TextUtils.isEmpty(relationshipTxt) || relationshipTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this, "Relationship cannot be empty", Toast.LENGTH_LONG).show();
                     relationshipToPatient.setError("Contact relationship is required");
-                    relationshipToPatient.requestFocus();
-                }
-                else if(!LETTERS_PATTERN.matcher(relationshipTxt).matches())
-                {
-                    Toast.makeText(PatientForm.this, "Relation must contain only letters", Toast.LENGTH_LONG).show();
-                    relationshipToPatient.setError("Relationship format is required");
                     relationshipToPatient.requestFocus();
                 }
                 else if(!PHONE_PATTERN.matcher(contactPhoneTxt).matches())
@@ -520,34 +476,16 @@ public class PatientForm extends AppCompatActivity
                     patientNameConsent.setError("Name is required");
                     patientNameConsent.requestFocus();
                 }
-                else if(!LETTERS_PATTERN.matcher(patientConsentName).matches())
-                {
-                    Toast.makeText(PatientForm.this, "Name must contain only letters", Toast.LENGTH_LONG).show();
-                    patientNameConsent.setError("Name format is required");
-                    patientNameConsent.requestFocus();
-                }
                 else if (TextUtils.isEmpty(patientSignedText) || patientSignedText.length() > 30)
                 {
                     Toast.makeText(PatientForm.this, "Name must be filled", Toast.LENGTH_LONG).show();
                     patientSigned.setError("Signed name is required");
                     patientSigned.requestFocus();
                 }
-                else if(!LETTERS_PATTERN.matcher(patientSignedText).matches())
-                {
-                    Toast.makeText(PatientForm.this, "Name must contain only letters", Toast.LENGTH_LONG).show();
-                    patientSigned.setError("Name format is required");
-                    patientSigned.requestFocus();
-                }
                 else if (TextUtils.isEmpty(patientSignatureText) || patientSignatureText.length() > 30)
                 {
                     Toast.makeText(PatientForm.this, "Signature must be filled", Toast.LENGTH_LONG).show();
                     patientSig.setError("Signature is required");
-                    patientSig.requestFocus();
-                }
-                else if(!LETTERS_PATTERN.matcher(patientSignatureText).matches())
-                {
-                    Toast.makeText(PatientForm.this, "Name must contain only letters", Toast.LENGTH_LONG).show();
-                    patientSig.setError("Name format is required");
                     patientSig.requestFocus();
                 }
                 else if (TextUtils.isEmpty(consentDateTxt) || !DATE_PATTERN.matcher(consentDateTxt).matches())

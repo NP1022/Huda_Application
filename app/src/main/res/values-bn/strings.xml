@@ -41,7 +41,7 @@
     <string name="contact">যোগাযোগ করুন</string>
     <string name="patients_page">রোগীর পোর্টাল</string>
 
-    <!--    Health Services-->
+<!--    Health Services-->
     <string name="healthservices">বিনামূল্যে স্বাস্থ্য সেবা</string>
     <string name="PrimaryCare">প্রাথমিক যত্ন</string>
     <string name="MentalCare">মানসিক যত্ন</string>
@@ -49,18 +49,11 @@
     <string name="Dental">দাঁতের যত্ন</string>
     <string name="speciality">বিশেষ যত্ন</string>
 
-    <!--    Patient Portal-->
+<!--    Patient Portal-->
     <string name="NewPatient">নতুন রোগী</string>
     <string name="patientForm">নতুন রোগীর ফর্ম</string>
     <string name="checkIn">চেক-ইন</string>
     <string name="MedicalChart">চিকিৎসা চার্ট</string>
-
-    <!--    Appointments Page-->
-    <string name ="appointmentsHeader">অ্যাপয়েন্টমেন্ট</string>
-
-    <!--    Appointment Request Page-->
-    <string name ="appointmentRequest">অ্যাপয়েন্টমেন্টের জন্য অনুরোধ করুন</string>
-    <string name="requestAppointmentPara">একটি অ্যাপয়েন্টমেন্টের জন্য একটি অনুরোধ জমা দিতে নীচের ক্ষেত্রগুলি সম্পূর্ণ করুন৷</string>
 
     <!--    Patient Form Strings -->
     <string name = "Registration">নিবন্ধন</string>

@@ -54,13 +54,6 @@
     <string name="checkIn">چیک ان</string>
     <string name="MedicalChart">میڈیکل چارٹ</string>
 
-    <!--    Appointments Page-->
-    <string name ="appointmentsHeader">اپوائنٹمنٹس</string>
-
-    <!--    Appointment Request Page-->
-    <string name ="appointmentRequest">اپوائنٹمنٹ کی درخواست کریں۔</string>
-    <string name="requestAppointmentPara">ملاقات کے لیے درخواست جمع کرانے کے لیے نیچے دیے گئے فیلڈز کو مکمل کریں۔</string>
-
     <!--    Patient Form Strings -->
     <string name = "Registration">اندراج</string>
     <string name="Date">تاریخ (MM/DD/YY)</string>

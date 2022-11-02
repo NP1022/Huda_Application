@@ -41,7 +41,7 @@
     <string name="contact">اتصل بنا</string>
     <string name="patients_page">تعيينات</string>
 
-    <!--    Services-->
+<!--    Services-->
     <string name="healthservices"> خدمات صحية مجانية</string>
     <string name="PrimaryCare">الرعاية الأولية</string>
      <string name="MentalCare">رعاية نفسية</string>
@@ -49,18 +49,13 @@
     <string name="Dental"> العناية بالأسنان</string>
     <string name="speciality">رعاية خاصة</string>
 
-    <!--    Patient Portal-->
+<!--    Patient Portal-->
     <string name="NewPatient">مريض جديد</string>
     <string name="patientForm">نموذج جديد للمريض</string>
     <string name="checkIn">تحقق في</string>
     <string name="MedicalChart">الرسم البياني الطبي</string>
 
-    <!--    Appointments Page-->
-    <string name ="appointmentsHeader">تعيينات</string>
 
-    <!--    Appointment Request Page-->
-    <string name ="appointmentRequest">طلب موعد</string>
-    <string name="requestAppointmentPara">أكمل الحقول أدناه لتقديم طلب للحصول على موعد.</string>
 
     <!--    Patient Form Strings -->
     <string name = "Registration">التسجيل</string>
@@ -139,9 +134,7 @@
     <string name = "NextForm">الشكل التالي</string>
 
 
-
     <!--Appointment Check-In Page-->
-
     <string name = "FullName">الاسم الكامل</string>
     <string name = "Birthday">عيد الميلاد</string>
     <string name = "AppointmentTime">وقت الموعد</string>

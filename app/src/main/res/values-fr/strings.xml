@@ -42,7 +42,7 @@
     <string name="contact">Nous Contacter</string>
     <string name="patients_page">rendez-vous</string>
 
-    <!--    Services-->
+<!--    Services-->
     <string name="healthservices">Services de Santé Gratuits</string>
     <string name="PrimaryCare">Premiers Soins</string>
     <string name="MentalCare">Soins Mentaux</string>
@@ -50,18 +50,11 @@
     <string name="Dental">Soins dentaires</string>
     <string name="speciality">Soins Spécialisés</string>
 
-    <!--    Patient Portal-->
+<!--    Patient Portal-->
     <string name="NewPatient">Nouveau Patient</string>
     <string name="patientForm">Nouveau Formulaire Patient</string>
     <string name="checkIn">Enregistrement</string>
     <string name="MedicalChart">Charte Médicale</string>
-
-    <!--    Appointments Page-->
-    <string name ="appointmentsHeader">NOMINATIONS</string>
-
-    <!--    Appointment Request Page-->
-    <string name ="appointmentRequest">DEMANDE DE RENDEZ-VOUS</string>
-    <string name="requestAppointmentPara">Remplissez les champs ci-dessous pour soumettre une demande de rendez-vous.</string>
 
 
     <!--    Patient Form Strings -->
