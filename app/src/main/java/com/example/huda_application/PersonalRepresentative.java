@@ -22,7 +22,7 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
 
-    private static Pattern LETTERS_PATTERN = Pattern.compile("^[a-zA-Z]*$"); // Letters pattern match
+    private static Pattern LETTERS_PATTERN = Pattern.compile("^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$"); // Letters pattern match
 
     private static final Pattern ZIPCODE_PATTERN = Pattern.compile("^\\d{5}$"); // zipcode
 
@@ -108,7 +108,7 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
                 patientSigned4.setError("Signed name is required");
                 patientSigned4.requestFocus();
             }
-            if(!LETTERS_PATTERN.matcher(patientSignedTxt4).matches())
+            else if(!LETTERS_PATTERN.matcher(patientSignedTxt4).matches())
             {
                 Toast.makeText(PersonalRepresentative.this, "Name can only contain letters", Toast.LENGTH_LONG).show();
                 patientSigned4.setError("Name format is required");
@@ -224,8 +224,8 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             }
             else if(!LETTERS_PATTERN.matcher(personRep2Txt).matches())
             {
-                Toast.makeText(PersonalRepresentative.this, "Name must contain only letters", Toast.LENGTH_LONG).show();
-                personalRep2.setError("Name format is required");
+                Toast.makeText(PersonalRepresentative.this, "Relation must contain only letters", Toast.LENGTH_LONG).show();
+                personalRep2.setError("Relation format is required");
                 personalRep2.requestFocus();
             }
             else if(TextUtils.isEmpty(patientRelation2Txt) || patientRelation2Txt.length() > 20)
@@ -288,7 +288,7 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
                 patientRelationContact3.setError("Number format is required");
                 patientRelationContact3.requestFocus();
             }
-            if(TextUtils.isEmpty(patientSig4Txt) || patientSig4Txt.length() > 30)
+            else if(TextUtils.isEmpty(patientSig4Txt) || patientSig4Txt.length() > 30)
             {
                 Toast.makeText(PersonalRepresentative.this, "Signature name cannot be empty", Toast.LENGTH_LONG).show();
                 patientSigned4.setError("Signature is required");

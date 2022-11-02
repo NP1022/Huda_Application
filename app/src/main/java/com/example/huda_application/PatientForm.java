@@ -40,7 +40,7 @@ public class PatientForm extends AppCompatActivity
 
     private static Pattern MARITAL_PATTERN = Pattern.compile("^(?:Single|single|Married|married|partner|Partner|Separated|separated|Divorced|divorced|Widowed|widowed)$");
 
-    private static Pattern LETTERS_PATTERN = Pattern.compile("^[a-zA-Z]*$");
+    private static Pattern LETTERS_PATTERN = Pattern.compile("^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$"); // Letters pattern match
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
