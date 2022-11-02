@@ -46,7 +46,7 @@ public class AdminPage extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         if (UserManager.getInstance().isAdmin()) {
-            FirebaseDatabase.getInstance().getReference("User").addListenerForSingleValueEvent(new ValueEventListener() {
+            FirebaseDatabase.getInstance().getReference("User").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     List<User> users = new ArrayList<>();
@@ -90,16 +90,16 @@ public class AdminPage extends AppCompatActivity {
         public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
             final int pos = position;
             User user = users.get(position);
-            FirebaseDatabase.getInstance().getReference("User").child(user.getUserId()).addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    users.set(pos, FirebaseClient.convertToUser(snapshot));
-                }
+            // FirebaseDatabase.getInstance().getReference("User").child(user.getUserId()).addListenerForSingleValueEvent(new ValueEventListener() {
+            //     @Override
+            //     public void onDataChange(@NonNull DataSnapshot snapshot) {
+            //         users.set(pos, FirebaseClient.convertToUser(snapshot));
+            //     }
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                }
-            });
+            //     @Override
+            //     public void onCancelled(@NonNull DatabaseError error) {
+            //     }
+            // });
 
             List<Appointment> appointments = user.getAppointments();
             int Pending_count =0;

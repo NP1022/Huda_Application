@@ -11,22 +11,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.huda_application.firebase.FirebaseClient;
+import com.example.huda_application.user.PatientFormData;
 import com.example.huda_application.user.UserManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
 public class LabAccess extends AppCompatActivity
 {
-
+    private PatientFormData data;
     private FirebaseAuth mAuth;
     DatabaseReference ref;
 
     private TextView patientPortal;
-    private String visitReasonTxt,firstNameTxt , lastNameTxt,patientSexTxt,patientDOBTxt,patientHomeNumTxt,patientCellNumTxt,patientAddTxt,
-            patientCityTxt,patientStateTxt,patientZipCodeTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,
-            patientEmailTxt,prefLangTxt,translatorTxt,maritalTxt,houseIncomeTxt,houseHoldTxt,occupationTxt,veteranTxt,emergencyNameTxt,relationshipTxt,
-            contactPhoneTxt,patientConsentName,patientSignedText,patientSignatureText,consentDateTxt,patientRaceTxt,patientEthnicityTxt,patientIncomeTxt,
-            patientEmpTxt,dateTxt,patientSSNTxt;
+
 
 
     @Override
@@ -34,52 +31,17 @@ public class LabAccess extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lab_access);
-        Bundle extras = getIntent().getExtras();
+        Intent extras = getIntent();
+
+        DAOPatient dao = new DAOPatient();
 
         Button buttonSubmit = findViewById(R.id.returnPatientPortal); // set variable for button action
 
         if (extras != null)
         {
-            dateTxt = extras.getString( "dateTxt");
-            lastNameTxt = extras.getString( "lastNameTxt");
-            firstNameTxt = extras.getString( "firstNameTxt");
-            visitReasonTxt = extras.getString( "visitReasonTxt");
-            patientSexTxt = extras.getString( "patientSexTxt");
-            patientSSNTxt = extras.getString( "patientSSNTxt");
-            patientDOBTxt = extras.getString( "patientDOBTxt");
-            patientHomeNumTxt = extras.getString( "patientHomeNumTxt");
-            patientCellNumTxt = extras.getString( "patientCellNumTxt");
-            patientAddTxt = extras.getString( "patientAddTxt");
-            patientCityTxt = extras.getString( "patientCityTxt");
-            patientStateTxt = extras.getString( "patientStateTxt");
-            patientZipCodeTxt = extras.getString( "patientZipCodeTxt");
-            patientPrefNumberTxt = extras.getString( "patientPrefNumberTxt");
-            patientConsentCallTxt = extras.getString( "patientConsentCallTxt");
-            patientConsentTextTxt = extras.getString( "patientConsentTextTxt");
-            patientInsuranceTxt = extras.getString( "patientInsuranceTxt");
-            patientEmailTxt = extras.getString( "patientEmailTxt");
-            prefLangTxt = extras.getString( "prefLangTxt");
-            translatorTxt = extras.getString( "translatorTxt");
-            maritalTxt = extras.getString( "maritalTxt");
-            houseIncomeTxt = extras.getString( "houseIncomeTxt");
-            houseHoldTxt = extras.getString( "houseHoldTxt");
-            occupationTxt = extras.getString( "occupationTxt");
-            veteranTxt = extras.getString( "veteranTxt");
-            emergencyNameTxt = extras.getString( "emergencyNameTxt");
-            relationshipTxt = extras.getString( "relationshipTxt");
-            contactPhoneTxt = extras.getString( "contactPhoneTxt");
-            patientConsentName = extras.getString( "patientConsentName");
-            patientSignedText = extras.getString( "patientSignedText");
-            patientSignatureText = extras.getString( "patientSignatureText");
-            consentDateTxt = extras.getString( "consentDateTxt");
-            patientRaceTxt = extras.getString( "patientRaceTxt");
-            patientEthnicityTxt = extras.getString( "patientEthnicityTxt");
-            patientIncomeTxt = extras.getString( "patientIncomeTxt");
-            patientEmpTxt = extras.getString( "patientEmpTxt");
-
+            data =  (PatientFormData)  extras.getSerializableExtra("patientdata");
         }
 
-        DAOPatient dao = new DAOPatient();
 
         buttonSubmit.setOnClickListener(new View.OnClickListener()
         {
@@ -87,6 +49,15 @@ public class LabAccess extends AppCompatActivity
 
             public void onClick(View view)
             {
+
+                dao.add(data).addOnSuccessListener(suc->
+                {
+                    Toast.makeText(LabAccess.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
+                }).addOnFailureListener(er->
+                {
+                    Toast.makeText(LabAccess.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
+                });
+
 
             }
         });

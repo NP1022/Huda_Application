@@ -4,71 +4,33 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.huda_application.user.PatientFormData;
+
+import java.util.Locale;
 
 public class PersonalRepresentative extends AppCompatActivity implements View.OnClickListener{
 
+    private PatientFormData data;
     private TextView StressForm;
-    private String lastname;
-    private String visitReasonTxt,firstNameTxt , lastNameTxt,patientSexTxt,patientDOBTxt,patientHomeNumTxt,patientCellNumTxt,patientAddTxt,
-            patientCityTxt,patientStateTxt,patientZipCodeTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt,
-            patientEmailTxt,prefLangTxt,translatorTxt,maritalTxt,houseIncomeTxt,houseHoldTxt,occupationTxt,veteranTxt,emergencyNameTxt,relationshipTxt,
-            contactPhoneTxt,patientConsentName,patientSignedText,patientSignatureText,consentDateTxt,patientRaceTxt,patientEthnicityTxt,patientIncomeTxt,
-            patientEmpTxt,dateTxt,patientSSNTxt;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_representative);
-        Bundle extras = getIntent().getExtras();
+        Intent extras = getIntent();
 
-        if (extras != null) {
-            dateTxt = extras.getString( "dateTxt");
-            lastNameTxt = extras.getString( "lastNameTxt");
-            firstNameTxt = extras.getString( "firstNameTxt");
-            visitReasonTxt = extras.getString( "visitReasonTxt");
-            patientSexTxt = extras.getString( "patientSexTxt");
-            patientSSNTxt = extras.getString( "patientSSNTxt");
-            patientDOBTxt = extras.getString( "patientDOBTxt");
-            patientHomeNumTxt = extras.getString( "patientHomeNumTxt");
-            patientCellNumTxt = extras.getString( "patientCellNumTxt");
-            patientAddTxt = extras.getString( "patientAddTxt");
-            patientCityTxt = extras.getString( "patientCityTxt");
-            patientStateTxt = extras.getString( "patientStateTxt");
-            patientZipCodeTxt = extras.getString( "patientZipCodeTxt");
-            patientPrefNumberTxt = extras.getString( "patientPrefNumberTxt");
-
-
-            patientConsentCallTxt = extras.getString( "patientConsentCallTxt");
-            patientConsentTextTxt = extras.getString( "patientConsentTextTxt");
-            patientInsuranceTxt = extras.getString( "patientInsuranceTxt");
-            patientEmailTxt = extras.getString( "patientEmailTxt");
-            prefLangTxt = extras.getString( "prefLangTxt");
-            translatorTxt = extras.getString( "translatorTxt");
-            maritalTxt = extras.getString( "maritalTxt");
-            houseIncomeTxt = extras.getString( "houseIncomeTxt");
-            houseHoldTxt = extras.getString( "houseHoldTxt");
-            occupationTxt = extras.getString( "occupationTxt");
-            veteranTxt = extras.getString( "veteranTxt");
-            emergencyNameTxt = extras.getString( "emergencyNameTxt");
-
-            relationshipTxt = extras.getString( "relationshipTxt");
-            contactPhoneTxt = extras.getString( "contactPhoneTxt");
-            patientConsentName = extras.getString( "patientConsentName");
-            patientSignedText = extras.getString( "patientSignedText");
-            patientSignatureText = extras.getString( "patientSignatureText");
-            consentDateTxt = extras.getString( "consentDateTxt");
-            patientRaceTxt = extras.getString( "patientRaceTxt");
-            patientEthnicityTxt = extras.getString( "patientEthnicityTxt");
-            patientIncomeTxt = extras.getString( "patientIncomeTxt");
-            patientEmpTxt = extras.getString( "patientEmpTxt");
-
-
-
-
-
+        if (extras != null)
+        {
+            data =  (PatientFormData)  extras.getSerializableExtra("patientdata");
         }
         //Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
         StressForm = (TextView) findViewById(R.id.nextForm4);
@@ -77,44 +39,71 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
 
 
     @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.nextForm4) {
-            Intent StressForm = new Intent(this, StressForm.class);
-            StressForm.putExtra("lastNameTxt" ,lastNameTxt );
-            StressForm.putExtra("dateTxt" ,dateTxt );
-            StressForm.putExtra("firstNameTxt" ,firstNameTxt );
-            StressForm.putExtra("visitReasonTxt" ,visitReasonTxt );
-            StressForm.putExtra("patientSexTxt" ,patientSexTxt );
-//AuthorizatStressForm
-            StressForm.putExtra("patientDOBTxt" ,patientDOBTxt );
-            StressForm.putExtra("patientSSNTxt" ,firstNameTxt );
-            StressForm.putExtra("patientHomeNumTxt" ,patientHomeNumTxt );
-            StressForm.putExtra("patientCellNumTxt" ,patientCellNumTxt );
-            StressForm.putExtra("patientAddTxt" ,patientAddTxt );
-            StressForm.putExtra("patientCityTxt" ,patientCityTxt );
-            StressForm.putExtra("patientStateTxt" ,patientStateTxt );
-            StressForm.putExtra("patientZipCodeTxt" ,patientZipCodeTxt );
-            StressForm.putExtra("patientPrefNumberTxt" ,patientPrefNumberTxt );
-            StressForm.putExtra("patientConsentCallTxt" ,patientConsentCallTxt );
-            StressForm.putExtra("patientConsentTextTxt" ,patientConsentTextTxt );
-            StressForm.putExtra("patientInsuranceTxt" ,patientInsuranceTxt );
-            StressForm.putExtra("patientEmailTxt" ,patientEmailTxt );
-            StressForm.putExtra("prefLangTxt" ,prefLangTxt );
-            StressForm.putExtra("translatorTxt" ,translatorTxt );
-            StressForm.putExtra("maritalTxt" ,maritalTxt );
-            StressForm.putExtra("houseIncomeTxt" ,houseIncomeTxt );
-            StressForm.putExtra("houseHoldTxt" ,houseHoldTxt );
-            StressForm.putExtra("occupationTxt" ,occupationTxt );
-            StressForm.putExtra("veteranTxt" ,veteranTxt );
-            StressForm.putExtra("emergencyNameTxt" ,emergencyNameTxt );
-            StressForm.putExtra("relationshipTxt" ,relationshipTxt );
-            StressForm.putExtra("contactPhoneTxt" ,contactPhoneTxt );
-            StressForm.putExtra("patientConsentName" ,patientConsentName );
-            StressForm.putExtra("patientSignedText" ,patientSignedText );
-            StressForm.putExtra("patientSignatureText" ,patientSignatureText );
-            StressForm.putExtra("consentDateTxt" ,consentDateTxt );
+    public void onClick(View view)
+    {
+        if (view.getId() == R.id.nextForm4)
+        {
+            // EditText
+            final EditText patientSigned4 = findViewById(R.id.personalRepPatientName);
+            final EditText patientDOB4 = findViewById(R.id.personalRepDOB);
+            final EditText patientHomeAdd = findViewById(R.id.personalRepPatientAddress);
+            final EditText patientCity = findViewById(R.id.personalRepPatientCity);
+            final EditText patientState = findViewById(R.id.personalRepPatientState);
+            final EditText patientZip = findViewById(R.id.personalRepPatientZip);
+            final EditText patientHomeNumber = findViewById(R.id.personalRepPatientHome);
+            final EditText personalRep1 = findViewById(R.id.personalRep1);
+            final EditText patientRelation1 = findViewById(R.id.personalRepRelation1);
+            final EditText patientRelationContact1 = findViewById(R.id.personalRepNumber);
 
-            startActivity(StressForm);
+            final EditText personalRep2 = findViewById(R.id.personalRep2);
+            final EditText patientRelation2 = findViewById(R.id.personalRepRelation2);
+            final EditText patientRelationContact2 = findViewById(R.id.personalRepNumber2);
+
+            final EditText personalRep3 = findViewById(R.id.personalRep3);
+            final EditText patientRelation3 = findViewById(R.id.personalRepRelation3);
+            final EditText patientRelationContact3 = findViewById(R.id.personalRepNumber3);
+
+            final EditText patientSignature4 = findViewById(R.id.patientSignaturePersonalRep);
+            final EditText patientDate4 = findViewById(R.id.personalRepDate);
+
+            // Strings
+            final String patientSignedTxt4 = patientSigned4.getText().toString().trim();
+            final String patientDOB4Txt4 = patientDOB4.getText().toString().trim();
+            final String patientHomeAddTxt4 = patientHomeAdd.getText().toString().trim();
+            final String patientCityTxt4 = patientCity.getText().toString().trim();
+            final String PatientStateTxt4 = patientState.getText().toString().trim();
+            final String patientZipTxt4 = patientZip.getText().toString().trim();
+            final String patientHomeNumberTxt4 = patientHomeNumber.getText().toString().trim();
+            final String personRep1Txt = personalRep1.getText().toString().trim();
+            final String patientRelation1Txt = patientRelation1.getText().toString().trim();
+            final String patientRelationContact1Txt = patientRelationContact1.getText().toString().trim();
+
+            final String personRep2Txt = personalRep2.getText().toString().trim();
+            final String patientRelation2Txt = patientRelation2.getText().toString().trim();
+            final String patientRelationContact2Txt = patientRelationContact2.getText().toString().trim();
+
+            final String personRep3Txt = personalRep3.getText().toString().trim();
+            final String patientRelation3Txt = patientRelation3.getText().toString().trim();
+            final String patientRelationContact3Txt = patientRelationContact3.getText().toString().trim();
+
+            final String patientSig4Txt = patientSignature4.getText().toString().trim();
+            final String patientDate4Txt = patientDate4.getText().toString().trim();
+
+
+
+            if(TextUtils.isEmpty(patientSignedTxt4) || patientSignedTxt4.length() > 30)
+            {
+                Toast.makeText(PersonalRepresentative.this, "Signed name cannot be empty", Toast.LENGTH_LONG).show();
+                patientSigned4.setError("Date is required");
+                patientSigned4.requestFocus();
+            }
+            else
+            {
+                Intent StressForm = new Intent(this, StressForm.class);
+                StressForm.putExtra("patientdata",data);
+                startActivity(StressForm);
+            }
+
         }
     }
 }

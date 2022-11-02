@@ -35,7 +35,7 @@
             android:id="@+id/patientContractHeader"
             android:layout_width="275dp"
             android:layout_height="43dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="7dp"
             android:background="@color/white"
             android:text="Patient Contract"
             android:gravity="center"

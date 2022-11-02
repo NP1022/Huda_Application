@@ -15,8 +15,8 @@
     <string name="email">Entrez le-mail</string>
     <string name="Login">Connexion</string>
     <string name="forgotpassword">Mot de passe oublié</string>
-    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
-    <string name="alreadyAccount">Already Have an Account? Login</string>
+    <string name="dontAccount">Vous n\'avez pas de compte ? S\'inscrire</string>
+    <string name="alreadyAccount">Vous avez déjà un compte? Connexion</string>
     <string name="register">Sinscrire</string>
     <string name="language">Français</string>
     <string name="FirstName">Entrez Votre Nom</string>
@@ -25,6 +25,15 @@
     <string name="EnterPass">Entrer le mot de passe</string>
     <string name="Reenter">Entrez à nouveau le mot de passe</string>
     <string name="reset">Envoyer Réinitialiser</string>
+    <string name="loginHeader">CONNEXION</string>
+    <string name="registerHeader">CRÉER UN COMPTE</string>
+    <string name="forgotPassHeader">RÉINITIALISER</string>
+    <string name="login_dialog">Entrez vos identifiants</string>
+    <string name="regDiaglogue">Remplissez les champs ci-dessous pour créer un compte. Vous recevrez un e-mail de vérification une fois l\'inscription réussie.</string>
+    <string name="forgotDialogue">Entrez l\'e-mail associé à votre compte et vous recevrez des instructions pour réinitialiser votre mot de passe.</string>
+
+
+    <!--    Main Menu Page-->
     <string name="home">Page Daccueil</string>
     <string name="Annoucment">Les Annonces</string>
     <string name="services">Les Services</string>
@@ -32,17 +41,22 @@
     <string name="partners">Les Partenaires</string>
     <string name="contact">Nous Contacter</string>
     <string name="patients_page">rendez-vous</string>
+
+<!--    Services-->
     <string name="healthservices">Services de Santé Gratuits</string>
     <string name="PrimaryCare">Premiers Soins</string>
     <string name="MentalCare">Soins Mentaux</string>
     <string name="VisionHealth">Soins de La Vue</string>
     <string name="Dental">Soins dentaires</string>
     <string name="speciality">Soins Spécialisés</string>
+
+<!--    Patient Portal-->
     <string name="NewPatient">Nouveau Patient</string>
     <string name="patientForm">Nouveau Formulaire Patient</string>
     <string name="checkIn">Enregistrement</string>
     <string name="MedicalChart">Charte Médicale</string>
-    <string name="login_dialog">Entrez vos identifiants</string>
+
+
     <!--    Patient Form Strings -->
     <string name = "Registration">Inscription</string>
     <string name="Date">Date (MM/JJ/AAAA)</string>

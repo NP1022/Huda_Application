@@ -90,8 +90,18 @@ public class Appointments extends AppCompatActivity {
             holder.date.setText(appointment.getDate());
             holder.status.setText(appointment.getStatus().name().toLowerCase());
 
-            if (appointment.getStatus() != AppointmentStatus.PENDING && appointment.getStatus() != AppointmentStatus.APPROVED) {
+            holder.checkedInText.setVisibility(View.GONE);
+            if ((appointment.getStatus() != AppointmentStatus.PENDING && appointment.getStatus() != AppointmentStatus.APPROVED) || appointment.isCheckedIn()) {
                 holder.cancel.setVisibility(View.GONE);
+            }
+
+            if (appointment.getStatus() != AppointmentStatus.APPROVED || appointment.isCheckedIn()) {
+                holder.checkInButton.setVisibility(View.GONE);
+
+            }
+
+            if (appointment.isCheckedIn()) {
+                holder.checkedInText.setVisibility(View.VISIBLE);
             }
 
             holder.cancel.setOnClickListener(view -> {
@@ -111,6 +121,7 @@ public class Appointments extends AppCompatActivity {
                 appointments.get(position).setCheckedIn(true);
                 holder.cancel.setVisibility(View.GONE);
                 holder.checkInButton.setVisibility(View.GONE);
+                holder.checkedInText.setVisibility(View.VISIBLE);
                 FirebaseClient.updateUser(user);
                 UserManager.getInstance().setCurrentUser(user);
             });
@@ -127,16 +138,18 @@ public class Appointments extends AppCompatActivity {
         private final TextView time;
         private final TextView date;
         private final TextView status;
+        private final TextView checkedInText;
         private final AppCompatButton cancel;
         private final AppCompatButton checkInButton;
+
         public AppointmentViewHolder(@NonNull View itemView) {
             super(itemView);
             this.time = itemView.findViewById(R.id.time);
             this.date = itemView.findViewById(R.id.appointmentDate);
             this.status = itemView.findViewById(R.id.Status);
+            this.checkedInText = itemView.findViewById(R.id.checkedInText);
             this.cancel = itemView.findViewById(R.id.cancelAppointment);
             this.checkInButton = itemView.findViewById(R.id.checkInAppointment);
-
         }
 
         public TextView getDate() {
@@ -153,6 +166,14 @@ public class Appointments extends AppCompatActivity {
 
         public AppCompatButton getCancel() {
             return cancel;
+        }
+
+        public AppCompatButton getCheckInButton() {
+            return checkInButton;
+        }
+
+        public TextView getCheckedInText() {
+            return checkedInText;
         }
     }
 }

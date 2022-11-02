@@ -114,30 +114,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/language"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:background="@drawable/buttonstyle"
-        android:bottomLeftRadius="10dp"
-        android:bottomRightRadius="10dp"
-        android:foreground="@drawable/globe__3_"
-        android:foregroundGravity="center"
-        android:textColor="#ffffff"
-        android:topLeftRadius="10dp"
-        android:topRightRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
-    <TextView
+   <TextView
         android:id="@+id/loginHeader"
         android:layout_width="328dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:text="ACCOUNT LOGIN"
+        android:text="@string/loginHeader"
         android:textAlignment="center"
         android:textColor="#043670"
         android:textSize="30dp"

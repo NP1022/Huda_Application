@@ -124,6 +124,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="215dp"
         android:layout_marginTop="3dp"
+        android:textColor="@color/black"
         android:text="Checked In"/>
 
 

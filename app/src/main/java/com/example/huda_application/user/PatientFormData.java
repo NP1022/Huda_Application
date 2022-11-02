@@ -42,6 +42,16 @@ public class PatientFormData implements Serializable
     private String patientSignature;
     private String patientConsentDate;
 
+    public String getUID() {
+        return UID;
+    }
+
+    public void setUID(String UID) {
+        this.UID = UID;
+    }
+
+    private String UID;
+
     public String getTodaysDate() {
         return todaysDate;
     }
