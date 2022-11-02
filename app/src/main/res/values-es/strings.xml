@@ -41,7 +41,7 @@
     <string name="contact">Contacta con Nosotros</string>
     <string name="patients_page">Equipo</string>
 
-<!--    Services -->
+    <!--    Services -->
     <string name="healthservices">Servicios de salud gratuitos</string>
     <string name="PrimaryCare">Atención Primaria</string>
     <string name="MentalCare">Cuidado Mental</string>
@@ -49,11 +49,18 @@
     <string name="Dental">Cuidado Dental</string>
     <string name="speciality">Atención Especializada</string>
 
-<!--    Patient Portal-->
+    <!--    Patient Portal-->
     <string name="NewPatient">Nuevo Paciente</string>
     <string name="patientForm">Formulario de Nuevo Paciente</string>
     <string name="checkIn">Registrarse</string>
     <string name="MedicalChart">Cuadro Médico</string>
+
+    <!--    Appointments Page-->
+    <string name ="appointmentsHeader">EQUIPO</string>
+
+    <!--    Appointment Request Page-->
+    <string name ="appointmentRequest">SOLICITAR CITA</string>
+    <string name="requestAppointmentPara">Complete los campos a continuación para enviar una solicitud de cita.</string>
 
     <!--    Patient Form Strings -->
     <string name = "Registration">Registro</string>

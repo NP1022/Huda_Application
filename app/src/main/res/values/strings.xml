@@ -14,9 +14,9 @@
     <string name="password">Enter Password</string>
     <string name="email">Enter Email</string>
     <string name="Login">Login</string>
-    <string name="forgotpassword">Forgot Password? Reset</string>
-    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
-    <string name="alreadyAccount">Already Registered? Sign In</string>
+    <string name="forgotpassword">Forgot Password? <b>Reset</b></string>
+    <string name="dontAccount">Don\'t Have an Account? <b>Sign Up</b></string>
+    <string name="alreadyAccount">Already Registered? <b>Sign In</b></string>
     <string name="register">Register</string>
     <string name="language">English</string>
     <string name="FirstName">Enter First Name</string>
@@ -41,7 +41,8 @@
     <string name="contact">CONTACT US</string>
     <string name="patients_page">APPOINTMENTS</string>
 
-<!--    Services-->
+
+    <!--    Services-->
     <string name="healthservices">Free Health Services</string>
     <string name="PrimaryCare">Primary Care</string>
     <string name="MentalCare">Mental Care</string>
@@ -49,11 +50,18 @@
     <string name="Dental">Dental Care</string>
     <string name="speciality">Speciality Care</string>
 
-<!--    Patient Portal-->
+    <!--    Patient Portal-->
     <string name="NewPatient">New Patient</string>
     <string name="patientForm">New Patient Form</string>
     <string name="checkIn">Check-in</string>
     <string name="MedicalChart">Medical Chart</string>
+
+    <!--    Appointments Page-->
+    <string name ="appointmentsHeader">APPOINTMENTS</string>
+
+    <!--    Appointment Request Page-->
+    <string name ="appointmentRequest">REQUEST APPOINTMENT</string>
+    <string name="requestAppointmentPara">Complete the fields below to submit a request for an appointment.</string>
 
     <!--    Patient Form Strings -->
     <string name="Registration">REGISTRATION</string>
