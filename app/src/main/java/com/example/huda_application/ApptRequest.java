@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Pattern;
 
-public class CheckIn extends AppCompatActivity implements View.OnClickListener {
+public class ApptRequest extends AppCompatActivity implements View.OnClickListener {
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
@@ -37,7 +36,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_in);
+        setContentView(R.layout.activity_appt_request);
 
         date = findViewById(R.id.FullName);
         birthday = findViewById(R.id.birthday);
@@ -72,7 +71,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener {
         }
         if (view.getId() == R.id.appointmentTime) {
             TimePickerDialog apttimePicker = new TimePickerDialog(
-                    CheckIn.this,
+                    ApptRequest.this,
                     android.R.style.Theme_Holo_Dialog_MinWidth,
                     new TimePickerDialog.OnTimeSetListener() {
                         @Override

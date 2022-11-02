@@ -56,7 +56,7 @@ public class Appointments extends AppCompatActivity {
         AppCompatButton createButton = findViewById(R.id.create);
 
         createButton.setOnClickListener(view -> {
-            Intent createAppointmentIntent = new Intent(this, CheckIn.class);
+            Intent createAppointmentIntent = new Intent(this, ApptRequest.class);
             startActivity(createAppointmentIntent);
         });
     }
