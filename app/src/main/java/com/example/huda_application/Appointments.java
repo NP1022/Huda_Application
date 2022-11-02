@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,9 +29,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Appointments extends AppCompatActivity {
+public class Appointments extends AppCompatActivity implements View.OnClickListener {
 
     private AppointmentViewAdapter viewAdapter;
+    private ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +60,26 @@ public class Appointments extends AppCompatActivity {
         createButton.setOnClickListener(view -> {
             Intent createAppointmentIntent = new Intent(this, ApptRequest.class);
             startActivity(createAppointmentIntent);
+
         });
+
+        backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(this);
+
+
     }
+
+    @Override
+    public void onClick(View view) {
+        if(view.getId() == R.id.backButton)
+        {
+
+            Intent Main = new Intent(this ,MainApplication.class);
+            startActivity(Main);
+
+        }
+    }
+
 
     private static class AppointmentViewAdapter extends RecyclerView.Adapter<Appointments.AppointmentViewHolder> {
 
