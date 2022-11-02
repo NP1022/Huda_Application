@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int forgot_password_ID = R.id.forgotpass;
         final String[] langs_options = {"English", "عربي" , "español", "français", "اردو" , "বাংলা"};
 
-        language_Button = findViewById(R.id.language);
+
         Password_Text = findViewById(R.id.password);
         Email_Text = findViewById(R.id.email);
         forgot_pass = (TextView) findViewById(forgot_password_ID);
@@ -95,60 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         registration_button.setOnClickListener(this);
         forgot_pass.setOnClickListener(this);
 
-        language_Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                options.setSingleChoiceItems(langs_options, -1, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface Diag_options, int opts ) {
-
-                        switch(opts) {
-
-                            case (0):
-                                picklanguage("en");
-                                recreate();
-                                Toast.makeText(MainActivity.this,"Current Language: English",Toast.LENGTH_SHORT).show();
-                                break;
-
-                            case(1):
-
-                                picklanguage("ar");
-                                recreate();
-                                Toast.makeText(MainActivity.this,"اللغة الحالية: العربية",Toast.LENGTH_SHORT).show();
-                                break;
-                            case(2):
-
-                                picklanguage("es");
-                                recreate();
-                                Toast.makeText(MainActivity.this,"Idioma actual: español",Toast.LENGTH_SHORT).show();
-                                break;
-                            case(3):
-
-                                picklanguage("fr");
-                                recreate();
-                                Toast.makeText(MainActivity.this,"Langue actuelle: français",Toast.LENGTH_SHORT).show();
-                                break;
-
-                            case(4):
-
-                                picklanguage("ur");
-                                recreate();
-                                Toast.makeText(MainActivity.this,"موجودہ زبان: اردو",Toast.LENGTH_SHORT).show();
-                                break;
-                            case(5):
-
-                                picklanguage("bn");
-                                recreate();
-                                Toast.makeText(MainActivity.this,"বর্তমান ভাষা: বাংলা",Toast.LENGTH_SHORT).show();
-                                break;
-                        }
-                        Diag_options.dismiss();
-                    }
-                });
-                create_menu(options);
-            }
-        });
     }
 
 
@@ -178,13 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         picklanguage(saved_language.getString("prev_language" , ""));
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+
 
     public void language_swtich(String l , DisplayMetrics m , Locale lang) {
 
@@ -196,7 +137,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getBaseContext().getResources().updateConfiguration(page, m);
 
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
     @Override
     public void onClick(View view)
