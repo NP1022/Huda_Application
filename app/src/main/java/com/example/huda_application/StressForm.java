@@ -212,27 +212,27 @@ public class StressForm extends AppCompatActivity
                 }
 
                 //section 3 inputs
-                else if(TextUtils.isEmpty(q1s3Text) || !RANGE_PATTERN.matcher(q1s3Text).matches())
+                else if(TextUtils.isEmpty(q1s3Text) || !RESPONSE_PATTERN.matcher(q1s3Text).matches())
                 {
-                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    Toast.makeText(StressForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
                     q1s3.setError("Input is required");
                     q1s3.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q2s3Text) || !RANGE_PATTERN.matcher(q2s3Text).matches())
+                else if(TextUtils.isEmpty(q2s3Text) || !RESPONSE_PATTERN.matcher(q2s3Text).matches())
                 {
-                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    Toast.makeText(StressForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
                     q2s3.setError("Input is required");
                     q2s3.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q3s3Text) || !RANGE_PATTERN.matcher(q3s3Text).matches())
+                else if(TextUtils.isEmpty(q3s3Text) || !RESPONSE_PATTERN.matcher(q3s3Text).matches())
                 {
-                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    Toast.makeText(StressForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
                     q3s3.setError("Input is required");
                     q3s3.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q4s3Text) || !RANGE_PATTERN.matcher(q4s3Text).matches())
+                else if(TextUtils.isEmpty(q4s3Text) || !RESPONSE_PATTERN.matcher(q4s3Text).matches())
                 {
-                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    Toast.makeText(StressForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
                     q4s3.setError("Input is required");
                     q4s3.requestFocus();
                 }
