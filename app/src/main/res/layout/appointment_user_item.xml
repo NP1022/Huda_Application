@@ -166,7 +166,7 @@
         android:layout_height="wrap_content"
         android:text="Checked In:"
         android:textColor="@color/black"
-        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -174,8 +174,9 @@
         android:id="@+id/checkedIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="290dp"
+        android:layout_marginStart="280dp"
         android:text="temp"
+
 
         android:textColor="@color/black"
         android:textSize="10sp" />

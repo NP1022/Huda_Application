@@ -105,6 +105,12 @@ public class UserAppointment extends AppCompatActivity {
                 holder.deny.setVisibility(View.GONE);
 
             }
+            if(appointment.getStatus() == AppointmentStatus.PENDING )
+            {
+                holder.approve.setVisibility(View.VISIBLE);
+                holder.deny.setVisibility(View.VISIBLE);
+
+            }
             if(appointment.getStatus() == AppointmentStatus.CANCELED )
             {
                 holder.approve.setVisibility(View.GONE);

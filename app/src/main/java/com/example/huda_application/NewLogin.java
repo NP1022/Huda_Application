@@ -1,21 +1,32 @@
 package com.example.huda_application;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Locale;
 
 public class NewLogin extends AppCompatActivity implements View.OnClickListener {
 
     TextView login, signUp;
     TextView PrimaryCare_Button, MentalHealth_Button, VisionCare_Button, NewPatients_Button, DentalCare_Button, SpecialtyCare_Button;
-
+    private Button language_Button;
+    public AlertDialog menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_login);
+
 
         login = (TextView) findViewById(R.id.LoginButton);
         signUp = (TextView) findViewById(R.id.SignUpButton);
@@ -33,8 +44,104 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
         VisionCare_Button.setOnClickListener(this);
         DentalCare_Button.setOnClickListener(this);
         SpecialtyCare_Button.setOnClickListener(this);
+        final String[] langs_options = {"English", "عربي" , "español", "français", "اردو" , "বাংলা"};
+
+        AlertDialog.Builder options = new AlertDialog.Builder(NewLogin.this);
+        options.setTitle("Languages");
+        language_Button = findViewById(R.id.language2);
+        language_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                options.setSingleChoiceItems(langs_options, -1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface Diag_options, int opts ) {
+
+                        switch(opts) {
+
+                            case (0):
+                                picklanguage("en");
+                                recreate();
+                                Toast.makeText(NewLogin.this,"Current Language: English",Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case(1):
+
+                                picklanguage("ar");
+                                recreate();
+                                Toast.makeText(NewLogin.this,"اللغة الحالية: العربية",Toast.LENGTH_SHORT).show();
+                                break;
+                            case(2):
+
+                                picklanguage("es");
+                                recreate();
+                                Toast.makeText(NewLogin.this,"Idioma actual: español",Toast.LENGTH_SHORT).show();
+                                break;
+                            case(3):
+
+                                picklanguage("fr");
+                                recreate();
+                                Toast.makeText(NewLogin.this,"Langue actuelle: français",Toast.LENGTH_SHORT).show();
+                                break;
+
+                            case(4):
+
+                                picklanguage("ur");
+                                recreate();
+                                Toast.makeText(NewLogin.this,"موجودہ زبان: اردو",Toast.LENGTH_SHORT).show();
+                                break;
+                            case(5):
+
+                                picklanguage("bn");
+                                recreate();
+                                Toast.makeText(NewLogin.this,"বর্তমান ভাষা: বাংলা",Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+                        Diag_options.dismiss();
+                    }
+                });
+                create_menu(options);
+            }
+        });
     }
 
+    private void picklanguage(String l) {
+        SharedPreferences.Editor Saver = getSharedPreferences("langauge", MODE_MULTI_PROCESS).edit();
+        Locale language_option =  new Locale(l);
+        DisplayMetrics metrics =  getBaseContext().getResources().getDisplayMetrics();
+        language_swtich(l, metrics, language_option);
+
+
+        Saver.putString("prev_language" ,l);
+        Saver.apply();
+
+
+    }
+
+    public void create_menu(AlertDialog.Builder opts){
+
+        menu = opts.create();
+        menu.show();
+    }
+
+    public void Saved_language(){
+        SharedPreferences saved_language =getSharedPreferences("langauge", MODE_MULTI_PROCESS);
+
+        picklanguage(saved_language.getString("prev_language" , ""));
+    }
+
+
+
+    public void language_swtich(String l , DisplayMetrics m , Locale lang) {
+
+        Locale.setDefault(lang);
+
+        Configuration page = new Configuration();
+        page.locale = lang;
+
+        getBaseContext().getResources().updateConfiguration(page, m);
+
+    }
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.LoginButton) {
