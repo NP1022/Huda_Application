@@ -23,6 +23,8 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
 
+    private static Pattern LETTERS_PATTERN = Pattern.compile("^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$"); // Letters pattern match
+
 
 
 
@@ -77,10 +79,22 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
                 patientSigned2.setError("Signed name is required");
                 patientSigned2.requestFocus();
             }
+            else if(!LETTERS_PATTERN.matcher(patientSignedText2).matches())
+            {
+                Toast.makeText(PatientContract.this, "Name must contain only letters", Toast.LENGTH_LONG).show();
+                patientSigned2.setError("Name format is required");
+                patientSigned2.requestFocus();
+            }
             else if(TextUtils.isEmpty(patientSignatureText2) || patientSignatureText2.length() > 30)
             {
                 Toast.makeText(PatientContract.this, "Signature cannot be empty", Toast.LENGTH_LONG).show();
                 patientSig2.setError("Signature is required");
+                patientSig2.requestFocus();
+            }
+            else if(!LETTERS_PATTERN.matcher(patientSignatureText2).matches())
+            {
+                Toast.makeText(PatientContract.this, "Signature must contain only letters", Toast.LENGTH_LONG).show();
+                patientSig2.setError("Name format is required");
                 patientSig2.requestFocus();
             }
             else
