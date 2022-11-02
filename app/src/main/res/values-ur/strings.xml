@@ -135,6 +135,7 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
     <string name = "AppointmentTime">ملاقات کا وقت</string>
     <string name = "EnterCheckinEmail">ای میل درج کریں۔</string>
     <string name = "CheckInButton">چیک ان</string>
+    <string name ="appointmentsHeader">اپوائنٹمنٹس</string>
 
     <!--    Contact Us Page-->
     <string name = "ContactUsHeader">ہم سے رابطہ کریں۔</string>

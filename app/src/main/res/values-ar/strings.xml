@@ -140,6 +140,7 @@
     <string name = "AppointmentTime">وقت الموعد</string>
     <string name = "EnterCheckinEmail">أدخل البريد الإلكتروني</string>
     <string name = "CheckInButton">تحقق في</string>
+    <string name ="appointmentsHeader">تعيينات</string>
 
     <!--    Contact Us Page-->
     <string name = "ContactUsHeader">اتصل بنا</string>

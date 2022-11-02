@@ -137,6 +137,9 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name = "AppointmentTime">অ্যাপয়েন্টমেন্টের সময়</string>
     <string name = "EnterCheckinEmail">ইমেইল প্রদান করুন</string>
     <string name = "CheckInButton">চেক ইন</string>
+    <string name ="appointmentsHeader">অ্যাপয়েন্টমেন্ট</string>
+
+
 
     <!--    Contact Us Page-->
     <string name = "ContactUsHeader">যোগাযোগ করুন</string>

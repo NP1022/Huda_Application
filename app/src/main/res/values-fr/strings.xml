@@ -165,6 +165,7 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name = "Event2">Réveillon de Noël</string>
     <string name = "Event3">Réveillon de Nouvel An</string>
     <string name = "CalendarHeader">Calendrier de la Clinique</string>
+    <string name ="appointmentsHeader">NOMINATIONS</string>
 
     <!--    Primary Services Page-->
     <string name = "PrimaryServicesHeader">Services Primaires</string>
