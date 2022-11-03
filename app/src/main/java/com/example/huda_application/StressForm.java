@@ -244,12 +244,8 @@ public class StressForm extends AppCompatActivity
 
                 }
 
-
-
-
             }
         });
-
 
     }
 }
