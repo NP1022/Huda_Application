@@ -133,7 +133,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
 
     <!--Appointment Check-In Page-->
     <string name="FullName">Full Name</string>
-    <string name="Birthday">Birthday</string>
+    <string name="Birthday">Birthday (MM-DD-YY)</string>
     <string name="AppointmentTime">Appointment Time</string>
     <string name="EnterCheckinEmail">Enter Email</string>
     <string name="CheckInButton">Check-In</string>

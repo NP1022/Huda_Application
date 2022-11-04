@@ -5,12 +5,18 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+<<<<<<< Updated upstream
 import android.widget.TextView;
+=======
+import android.widget.TimePicker;
+import android.widget.Toast;
+>>>>>>> Stashed changes
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -27,11 +33,19 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+<<<<<<< Updated upstream
 import java.sql.Time;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+=======
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+>>>>>>> Stashed changes
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -105,15 +119,37 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener, 
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.checkin) {
+<<<<<<< Updated upstream
             String date = dateButton.getText().toString().replace("Date: ", "");
             Date currentTime = Calendar.getInstance().getTime();
             System.out.println(currentTime);
             System.out.println(date);
+=======
+
+            DateFormat format = new SimpleDateFormat("MM-DD-YY", Locale.US);
+            Date input = format.parse(date.getText().toString());
+            if (TextUtils.isEmpty(date) || TextUtils.isEmpty(time)) // check if the firstname and lastname are empty
+            {
+                Toast.makeText(ApptRequest.this,"Please enter a time and date",Toast.LENGTH_LONG).show();
+                time.setError("Appointment time is required");
+                date.setError("Appointment date is required");
+                time.requestFocus();
+                date.requestFocus();
+            }
+            else if (input.compareTo(System.currentTimeMillis()) < 0) {
+                Toast.makeText(ApptRequest.this, "Please enter a valid date for appointment", Toast.LENGTH_LONG).show();
+                date.setError("Valid date is required");
+                date.requestFocus();
+            }
+
+>>>>>>> Stashed changes
             Appointment appointment = new Appointment(
                     selectedTime,
                     date,
                     reason.getText().toString(),
                     AppointmentStatus.PENDING
+
+
             );
 
             UserManager.getInstance().getCurrentUser().addAppointment(appointment);
