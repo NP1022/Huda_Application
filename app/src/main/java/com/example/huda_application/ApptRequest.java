@@ -2,10 +2,13 @@ package com.example.huda_application;
 
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,13 +17,16 @@ import com.example.huda_application.user.Appointment;
 import com.example.huda_application.user.AppointmentStatus;
 import com.example.huda_application.user.UserManager;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.regex.Pattern;
 
-public class CheckIn extends AppCompatActivity implements View.OnClickListener {
+public class ApptRequest extends AppCompatActivity implements View.OnClickListener {
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
-    private t2Hour, t2Minute; 
+    private int t2Hour, t2Minute;
     private static final Pattern TIME_PATTERN = Pattern.compile("(1[012]|[1-9]):[0-5][0-9](\\s)?(?i)(am|pm)");
     private EditText date, birthday, reason, time;
     private Button checkin;
@@ -28,7 +34,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_in);
+        setContentView(R.layout.activity_appt_request);
 
         date = findViewById(R.id.FullName);
         birthday = findViewById(R.id.birthday);
@@ -61,23 +67,23 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener {
         }
         else if (view.getId() == R.id.appointmentTime) {
             TimePickerDialog apttimePicker = new TimePickerDialog(
-                    CheckIn.this,
+                    ApptRequest.this,
                     android.R.style.Theme_Holo_Dialog_MinWidth,
                     new TimePickerDialog.OnTimeSetListener() {
                         @Override
                         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                             t2Hour = hourOfDay;
                             t2Minute = minute;
-                            String time = t2Hour + ":" + t2Minute;
+                            String time1 = t2Hour + ":" + t2Minute;
                             SimpleDateFormat f24Hours = new SimpleDateFormat(
                                     "HH:mm"
                             );
                             try {
-                                Date date = f24Hours.parse(time);
+                                Date date1 = f24Hours.parse(time1);
                                 SimpleDateFormat f12Hours = new SimpleDateFormat(
                                         "hh:mm aa"
                                 );
-                                apptTime.setText(f12Hours.format(date));
+                                time.setText(f12Hours.format(date1));
                             } catch (ParseException e) {
                                 e.printStackTrace();
                             }
@@ -87,8 +93,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener {
             apttimePicker.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             apttimePicker.updateTime(t2Hour, t2Minute);
             apttimePicker.show();
-        });
+        };
 
     }
     }
-}
