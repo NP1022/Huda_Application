@@ -8,6 +8,7 @@
     tools:context=".CheckIn">
 
 
+
     <TextView
         android:id="@+id/loginPara2"
         android:layout_width="329dp"
@@ -20,6 +21,9 @@
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginHeader2" />
+
+
+
 
     <TextView
         android:id="@+id/loginHeader2"
@@ -35,24 +39,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
 
-    <EditText
-        android:id="@+id/FullName"
+    <Button
+        android:id="@+id/dateText"
         android:layout_width="320dp"
         android:layout_height="55dp"
+
         android:layout_marginTop="10dp"
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:hint="@string/Date"
+        android:gravity="left|center_vertical"
         android:inputType="text"
         android:padding="10dp"
-        android:textColor="@color/black"
+        android:textColor="#686868"
         android:textColorHint="#686868"
+
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/birthday"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/birthday"
+
         app:layout_constraintTop_toBottomOf="@+id/email_checkin"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -60,7 +66,7 @@
         android:id="@+id/birthday"
         android:layout_width="320dp"
         android:layout_height="55dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:hint="@string/Birthday"
@@ -70,27 +76,32 @@
         android:textColorHint="#686868"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FullName"
+        app:layout_constraintTop_toBottomOf="@+id/dateText"
         tools:ignore="MissingConstraints" />
 
-    <EditText
+    <TextView
+
         android:id="@+id/appointmentTime"
         android:layout_width="320dp"
         android:layout_height="55dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/edittextstyle"
         android:ems="10"
-        android:hint="@string/AppointmentTime"
-        android:inputType="text"
+        android:layout_marginTop="20dp"
         android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="#6A6A6A"
+        android:textColor="#686868"
+        android:textColorHint="#686868"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPara2" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPara2"
+        android:text="Appointment"
+
+
+
+        />
+
 
     <EditText
         android:id="@+id/email_checkin"

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.huda_application.appointment.AppointmentManager;
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.Appointment;
 import com.example.huda_application.user.AppointmentStatus;
@@ -26,7 +28,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+
+
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 public class Appointments extends AppCompatActivity implements View.OnClickListener {
@@ -39,8 +49,10 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointments);
 
+
         RecyclerView recyclerView = findViewById(R.id.appointmentsView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         FirebaseDatabase.getInstance().getReference("User").child(UserManager.getInstance().getCurrentUser().getUserId())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
@@ -81,7 +93,7 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    private static class AppointmentViewAdapter extends RecyclerView.Adapter<Appointments.AppointmentViewHolder> {
+    private class AppointmentViewAdapter extends RecyclerView.Adapter<Appointments.AppointmentViewHolder> {
 
         private LayoutInflater inflater;
         private List<Appointment> appointments;
@@ -128,7 +140,9 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
                 for (Appointment userAppointment : user.getAppointments()) {
                     if (userAppointment == appointment) {
                         userAppointment.setStatus(AppointmentStatus.CANCELED);
+                        AppointmentManager.deleteAppointment(appointment.getDate(),appointment.getTime());
                     }
+
                 }
 
                 appointments.get(position).setStatus(AppointmentStatus.CANCELED);
@@ -138,12 +152,53 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
             });
 
             holder.checkInButton.setOnClickListener(view -> {
-                appointments.get(position).setCheckedIn(true);
-                holder.cancel.setVisibility(View.GONE);
-                holder.checkInButton.setVisibility(View.GONE);
-                holder.checkedInText.setVisibility(View.VISIBLE);
-                FirebaseClient.updateUser(user);
-                UserManager.getInstance().setCurrentUser(user);
+                String currentDate = new SimpleDateFormat("MM-d-yyyy", Locale.getDefault()).format(new Date());
+                System.out.println(currentDate);
+
+                String currentTime = new SimpleDateFormat("h:mm a", Locale.getDefault()).format(new Date());
+
+                System.out.println(currentTime);
+
+
+                System.out.println(appointment.getTime().toUpperCase());
+                String appointment_time = appointment.getTime().toUpperCase();
+
+                System.out.println(appointment.getDate());
+                if(appointment.getDate().equals(currentDate))
+                {
+                    if(currentTime.substring(currentTime.length()-2).equals(appointment_time.substring(appointment_time.length()-2))){
+                        String startTime = currentTime.substring(0,4);
+                        String endTime = appointment_time.substring(0,4);
+                        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+                        Date d1 = null;
+                        try {
+                            d1 = sdf.parse(startTime);
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                        Date d2 = null;
+                        try {
+                            d2 = sdf.parse(endTime);
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                        long elapsed = d2.getTime() - d1.getTime();
+                        System.out.println(elapsed);
+                        if (elapsed < 1500000) {
+
+                        }
+
+                    }
+
+                    appointments.get(position).setCheckedIn(true);
+                    holder.cancel.setVisibility(View.GONE);
+                    holder.checkInButton.setVisibility(View.GONE);
+                    holder.checkedInText.setVisibility(View.VISIBLE);
+                    FirebaseClient.updateUser(user);
+                    UserManager.getInstance().setCurrentUser(user);
+                }
+                else
+                    Toast.makeText(Appointments.this,"Check-in on allowed on the same date! ",Toast.LENGTH_LONG).show();
             });
         }
 

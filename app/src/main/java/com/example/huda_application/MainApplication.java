@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.huda_application.appointment.AppointmentManager;
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.User;
 import com.example.huda_application.user.UserManager;
