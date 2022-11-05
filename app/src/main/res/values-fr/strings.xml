@@ -42,26 +42,27 @@
     <string name="contact">Nous Contacter</string>
     <string name="patients_page">rendez-vous</string>
 
-    <!--    Services-->
+<!--    Services-->
     <string name="healthservices">Services de Santé Gratuits</string>
+    <string name="PrimaryNewLogin"><u>Primaire</u></string>
+    <string name="MentalNewLogin"><u>Mentale</u></string>
+    <string name="VisionNewLogin"><u>Vision</u></string>
+    <string name="DentalNewLogin"><u>Dentaire</u></string>
+    <string name="SpecialityNewLogin"><u>Spécialité</u></string>
+    <string name="HaveAnAccount">Avoir un compte?</string>
+    <string name="DontHaveAnAccount">Vous n\'avez pas de compte?</string>
+    <string name="SignUp">S\'inscrire?</string>
     <string name="PrimaryCare">Premiers Soins</string>
     <string name="MentalCare">Soins Mentaux</string>
     <string name="VisionHealth">Soins de La Vue</string>
     <string name="Dental">Soins dentaires</string>
     <string name="speciality">Soins Spécialisés</string>
 
-    <!--    Patient Portal-->
+<!--    Patient Portal-->
     <string name="NewPatient">Nouveau Patient</string>
     <string name="patientForm">Nouveau Formulaire Patient</string>
     <string name="checkIn">Enregistrement</string>
     <string name="MedicalChart">Charte Médicale</string>
-
-    <!--    Appointments Page-->
-    <string name ="appointmentsHeader">NOMINATIONS</string>
-
-    <!--    Appointment Request Page-->
-    <string name ="appointmentRequest">DEMANDE DE RENDEZ-VOUS</string>
-    <string name="requestAppointmentPara">Remplissez les champs ci-dessous pour soumettre une demande de rendez-vous.</string>
 
 
     <!--    Patient Form Strings -->
@@ -172,6 +173,7 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name = "Event2">Réveillon de Noël</string>
     <string name = "Event3">Réveillon de Nouvel An</string>
     <string name = "CalendarHeader">Calendrier de la Clinique</string>
+    <string name ="appointmentsHeader">NOMINATIONS</string>
 
     <!--    Primary Services Page-->
     <string name = "PrimaryServicesHeader">Services Primaires</string>

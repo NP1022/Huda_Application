@@ -41,26 +41,27 @@
     <string name="contact">যোগাযোগ করুন</string>
     <string name="patients_page">রোগীর পোর্টাল</string>
 
-    <!--    Health Services-->
+<!--    Health Services-->
     <string name="healthservices">বিনামূল্যে স্বাস্থ্য সেবা</string>
+    <string name="PrimaryNewLogin"><u>প্রাথমিক</u></string>
+    <string name="MentalNewLogin"><u>মানসিক</u></string>
+    <string name="VisionNewLogin"><u>দৃষ্টি</u></string>
+    <string name="DentalNewLogin"><u>ডেন্টাল</u></string>
+    <string name="SpecialityNewLogin"><u>বিশেষত্ব</u></string>
+    <string name="HaveAnAccount">একাউন্ট আছে?</string>
+    <string name="DontHaveAnAccount">একটি একাউন্ট আছে কি না?</string>
+    <string name="SignUp">একটি একাউন্ট আছে কি না?</string>
     <string name="PrimaryCare">প্রাথমিক যত্ন</string>
     <string name="MentalCare">মানসিক যত্ন</string>
     <string name="VisionHealth">ভিশন কেয়ার</string>
     <string name="Dental">দাঁতের যত্ন</string>
     <string name="speciality">বিশেষ যত্ন</string>
 
-    <!--    Patient Portal-->
+<!--    Patient Portal-->
     <string name="NewPatient">নতুন রোগী</string>
     <string name="patientForm">নতুন রোগীর ফর্ম</string>
     <string name="checkIn">চেক-ইন</string>
     <string name="MedicalChart">চিকিৎসা চার্ট</string>
-
-    <!--    Appointments Page-->
-    <string name ="appointmentsHeader">অ্যাপয়েন্টমেন্ট</string>
-
-    <!--    Appointment Request Page-->
-    <string name ="appointmentRequest">অ্যাপয়েন্টমেন্টের জন্য অনুরোধ করুন</string>
-    <string name="requestAppointmentPara">একটি অ্যাপয়েন্টমেন্টের জন্য একটি অনুরোধ জমা দিতে নীচের ক্ষেত্রগুলি সম্পূর্ণ করুন৷</string>
 
     <!--    Patient Form Strings -->
     <string name = "Registration">নিবন্ধন</string>
@@ -144,6 +145,9 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name = "AppointmentTime">অ্যাপয়েন্টমেন্টের সময়</string>
     <string name = "EnterCheckinEmail">ইমেইল প্রদান করুন</string>
     <string name = "CheckInButton">চেক ইন</string>
+    <string name ="appointmentsHeader">অ্যাপয়েন্টমেন্ট</string>
+
+
 
     <!--    Contact Us Page-->
     <string name = "ContactUsHeader">যোগাযোগ করুন</string>

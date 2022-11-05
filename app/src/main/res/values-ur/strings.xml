@@ -43,6 +43,14 @@
 
 
     <string name="healthservices">مفت صحت کی خدمات</string>
+    <string name="PrimaryNewLogin"><u>پرائمری</u></string>
+    <string name="MentalNewLogin"><u>ذہنی</u></string>
+    <string name="VisionNewLogin"><u>اولین مقصد</u></string>
+    <string name="DentalNewLogin"><u>دانتوں</u></string>
+    <string name="SpecialityNewLogin"><u>خاصیت</u></string>
+    <string name="HaveAnAccount">ایک اکاؤنٹ ہے؟</string>
+    <string name="DontHaveAnAccount">کھاتہ نہیں ہے کیا؟</string>
+    <string name="SignUp">سائن اپ</string>
     <string name="PrimaryCare">بنیادی دیکھ بھال</string>
     <string name="MentalCare">ذہنی نگہداشت</string>
     <string name="VisionHealth">وژن کی دیکھ بھال</string>
@@ -53,13 +61,6 @@
     <string name="patientForm">نیا مریض فارم</string>
     <string name="checkIn">چیک ان</string>
     <string name="MedicalChart">میڈیکل چارٹ</string>
-
-    <!--    Appointments Page-->
-    <string name ="appointmentsHeader">اپوائنٹمنٹس</string>
-
-    <!--    Appointment Request Page-->
-    <string name ="appointmentRequest">اپوائنٹمنٹ کی درخواست کریں۔</string>
-    <string name="requestAppointmentPara">ملاقات کے لیے درخواست جمع کرانے کے لیے نیچے دیے گئے فیلڈز کو مکمل کریں۔</string>
 
     <!--    Patient Form Strings -->
     <string name = "Registration">اندراج</string>
@@ -142,6 +143,7 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
     <string name = "AppointmentTime">ملاقات کا وقت</string>
     <string name = "EnterCheckinEmail">ای میل درج کریں۔</string>
     <string name = "CheckInButton">چیک ان</string>
+    <string name ="appointmentsHeader">اپوائنٹمنٹس</string>
 
     <!--    Contact Us Page-->
     <string name = "ContactUsHeader">ہم سے رابطہ کریں۔</string>

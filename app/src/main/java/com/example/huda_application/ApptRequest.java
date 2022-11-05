@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class CheckIn extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
+public class ApptRequest extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
@@ -57,7 +57,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener, 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_in);
+        setContentView(R.layout.activity_appt_request);
 
         dateButton = findViewById(R.id.dateText);
         dateButton.setOnClickListener(v -> {
@@ -73,7 +73,7 @@ public class CheckIn extends AppCompatActivity implements View.OnClickListener, 
         checkin = findViewById(R.id.checkin);
         time.setOnClickListener(this);
 
-        options = new AlertDialog.Builder(CheckIn.this);
+        options = new AlertDialog.Builder(ApptRequest.this);
         options.setTitle("Available Times");
 
         time.setOnClickListener(new View.OnClickListener() {

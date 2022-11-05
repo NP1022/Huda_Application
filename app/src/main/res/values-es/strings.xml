@@ -41,26 +41,27 @@
     <string name="contact">Contacta con Nosotros</string>
     <string name="patients_page">Equipo</string>
 
-    <!--    Services -->
+<!--    Services -->
     <string name="healthservices">Servicios de salud gratuitos</string>
+    <string name="PrimaryNewLogin"><u>Primaria   </u></string>
+    <string name="MentalNewLogin"><u>Mental</u></string>
+    <string name="VisionNewLogin"><u>Visión</u></string>
+    <string name="DentalNewLogin"><u>Dental</u></string>
+    <string name="SpecialityNewLogin"><u>Especialidad</u></string>
+    <string name="HaveAnAccount">¿Tener una cuenta?</string>
+    <string name="DontHaveAnAccount">¿No tienes una cuenta?</string>
+    <string name="SignUp">Inscribirse</string>
     <string name="PrimaryCare">Atención Primaria</string>
     <string name="MentalCare">Cuidado Mental</string>
     <string name="VisionHealth">Cuidado de La Visión</string>
     <string name="Dental">Cuidado Dental</string>
     <string name="speciality">Atención Especializada</string>
 
-    <!--    Patient Portal-->
+<!--    Patient Portal-->
     <string name="NewPatient">Nuevo Paciente</string>
     <string name="patientForm">Formulario de Nuevo Paciente</string>
     <string name="checkIn">Registrarse</string>
     <string name="MedicalChart">Cuadro Médico</string>
-
-    <!--    Appointments Page-->
-    <string name ="appointmentsHeader">EQUIPO</string>
-
-    <!--    Appointment Request Page-->
-    <string name ="appointmentRequest">SOLICITAR CITA</string>
-    <string name="requestAppointmentPara">Complete los campos a continuación para enviar una solicitud de cita.</string>
 
     <!--    Patient Form Strings -->
     <string name = "Registration">Registro</string>
@@ -143,6 +144,7 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "AppointmentTime">Hora de La Cita</string>
     <string name = "EnterCheckinEmail">Ingrese Correo Electrónico</string>
     <string name = "CheckInButton">Registrarse</string>
+    <string name ="appointmentsHeader">EQUIPO</string>
 
     <!--    Contact Us Page-->
     <string name = "ContactUsHeader">Contacta Con Nosotros</string>

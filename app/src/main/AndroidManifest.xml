@@ -70,7 +70,7 @@
             android:name=".PatientForm"
             android:exported="false" />
         <activity
-            android:name=".CheckIn"
+            android:name=".ApptRequest"
             android:exported="false" />
         <activity
             android:name=".PatientsPage"

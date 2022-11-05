@@ -36,7 +36,7 @@ public class PatientsPage extends AppCompatActivity implements View.OnClickListe
             startActivity(PatientContract);
         }
        else if (view.getId() == R.id.Checkin){
-            Intent check_in = new Intent(PatientsPage.this ,CheckIn.class);
+            Intent check_in = new Intent(PatientsPage.this , ApptRequest.class);
             startActivity(check_in);
 
         }

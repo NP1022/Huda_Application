@@ -14,9 +14,9 @@
     <string name="password">Enter Password</string>
     <string name="email">Enter Email</string>
     <string name="Login">Login</string>
-    <string name="forgotpassword">Forgot Password? <b>Reset</b></string>
-    <string name="dontAccount">Don\'t Have an Account? <b>Sign Up</b></string>
-    <string name="alreadyAccount">Already Registered? <b>Sign In</b></string>
+    <string name="forgotpassword">Forgot Password? Reset</string>
+    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
+    <string name="alreadyAccount">Already Registered? Sign In</string>
     <string name="register">Register</string>
     <string name="language">English</string>
     <string name="FirstName">Enter First Name</string>
@@ -41,27 +41,28 @@
     <string name="contact">CONTACT US</string>
     <string name="patients_page">APPOINTMENTS</string>
 
-
-    <!--    Services-->
+<!--    New Login / Services-->
     <string name="healthservices">Free Health Services</string>
+    <string name="PrimaryNewLogin"><u>Primary</u></string>
+    <string name="MentalNewLogin"><u>Mental</u></string>
+    <string name="VisionNewLogin"><u>Vision</u></string>
+    <string name="DentalNewLogin"><u>Dental</u></string>
+    <string name="SpecialityNewLogin"><u>Specialty</u></string>
+    <string name="HaveAnAccount">Have An Account?</string>
+    <string name="DontHaveAnAccount">Don\'t Have An Account?</string>
+    <string name="SignUp">Sign Up</string>
     <string name="PrimaryCare">Primary Care</string>
     <string name="MentalCare">Mental Care</string>
     <string name="VisionHealth">Vision Care</string>
     <string name="Dental">Dental Care</string>
     <string name="speciality">Speciality Care</string>
 
-    <!--    Patient Portal-->
+
+<!--    Patient Portal-->
     <string name="NewPatient">New Patient</string>
     <string name="patientForm">New Patient Form</string>
     <string name="checkIn">Check-in</string>
     <string name="MedicalChart">Medical Chart</string>
-
-    <!--    Appointments Page-->
-    <string name ="appointmentsHeader">APPOINTMENTS</string>
-
-    <!--    Appointment Request Page-->
-    <string name ="appointmentRequest">REQUEST APPOINTMENT</string>
-    <string name="requestAppointmentPara">Complete the fields below to submit a request for an appointment.</string>
 
     <!--    Patient Form Strings -->
     <string name="Registration">REGISTRATION</string>
@@ -171,12 +172,14 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="Event2">Christmas Eve</string>
     <string name="Event3">New Year\'s Eve</string>
     <string name="CalendarHeader">Clinic Calendar</string>
+    <string name ="appointmentsHeader">APPOINTMENTS</string>
 
     <!--    Primary Services Page-->
     <string name = "PrimaryServicesHeader">Primary Services</string>
     <string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string>
-    <string name = "PrimaryCarePar1"><b>Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</b> HUDA aims to bring primary care and specialized services to uninsured and under-insured in the Metro Detroit area. We provide preventative primary care services in a person-focused community health clinic, our goal is to make Michigan healthier\!
-        \nThe HUDA clinic provides FREE medications to our patients, and also provides laboratory services at no-cost to our patients.</string>
+    <string name = "PrimaryCarePar1"><b>Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</b>
+        \n\nHUDA aims to bring primary care and specialized services to uninsured and under-insured in the Metro Detroit area. We provide preventative primary care services in a person-focused community health clinic, our goal is to make Michigan healthier\!
+        \n\nThe HUDA clinic provides FREE medications to our patients, and also provides laboratory services at no-cost to our patients.</string>
     <string name="PrimaryCarePar2"><b>Our Primary Care Services Include:</b>
         \n\n <li>Health Assessments</li>
         \n\n <li>Acute and Chronic Illness Management</li>
