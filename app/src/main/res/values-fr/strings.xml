@@ -49,9 +49,9 @@
     <string name="VisionNewLogin"><u>Vision</u></string>
     <string name="DentalNewLogin"><u>Dentaire</u></string>
     <string name="SpecialityNewLogin"><u>Spécialité</u></string>
-    <string name="HaveAnAccount">Have An Account?</string>
-    <string name="DontHaveAnAccount">Don\'t Have An Account?</string>
-    <string name="SignUp">Sign Up</string>
+    <string name="HaveAnAccount">Avoir un compte?</string>
+    <string name="DontHaveAnAccount">Vous n\'avez pas de compte?</string>
+    <string name="SignUp">S\'inscrire?</string>
     <string name="PrimaryCare">Premiers Soins</string>
     <string name="MentalCare">Soins Mentaux</string>
     <string name="VisionHealth">Soins de La Vue</string>
