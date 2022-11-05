@@ -48,6 +48,9 @@
     <string name="VisionNewLogin"><u>اولین مقصد</u></string>
     <string name="DentalNewLogin"><u>دانتوں</u></string>
     <string name="SpecialityNewLogin"><u>خاصیت</u></string>
+    <string name="HaveAnAccount">ایک اکاؤنٹ ہے؟</string>
+    <string name="DontHaveAnAccount">کھاتہ نہیں ہے کیا؟</string>
+    <string name="SignUp">سائن اپ</string>
     <string name="PrimaryCare">بنیادی دیکھ بھال</string>
     <string name="MentalCare">ذہنی نگہداشت</string>
     <string name="VisionHealth">وژن کی دیکھ بھال</string>

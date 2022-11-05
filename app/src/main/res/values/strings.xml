@@ -41,13 +41,16 @@
     <string name="contact">CONTACT US</string>
     <string name="patients_page">APPOINTMENTS</string>
 
-<!--    Services-->
+<!--    New Login / Services-->
     <string name="healthservices">Free Health Services</string>
     <string name="PrimaryNewLogin"><u>Primary</u></string>
     <string name="MentalNewLogin"><u>Mental</u></string>
     <string name="VisionNewLogin"><u>Vision</u></string>
     <string name="DentalNewLogin"><u>Dental</u></string>
     <string name="SpecialityNewLogin"><u>Specialty</u></string>
+    <string name="HaveAnAccount">Have An Account?</string>
+    <string name="DontHaveAnAccount">Don\'t Have An Account?</string>
+    <string name="SignUp">Sign Up</string>
     <string name="PrimaryCare">Primary Care</string>
     <string name="MentalCare">Mental Care</string>
     <string name="VisionHealth">Vision Care</string>

@@ -14,7 +14,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="62dp"
         android:layout_marginEnd="51dp"
-        android:text="Dental"
+        android:text="@string/DentalNewLogin"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25dp"
