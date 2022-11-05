@@ -44,6 +44,11 @@
 
 <!--    Services-->
     <string name="healthservices">Services de Santé Gratuits</string>
+    <string name="PrimaryNewLogin"><u>Primaire</u></string>
+    <string name="MentalNewLogin"><u>Mentale</u></string>
+    <string name="VisionNewLogin"><u>Vision</u></string>
+    <string name="DentalNewLogin"><u>Dentaire</u></string>
+    <string name="SpecialityNewLogin"><u>Spécialité</u></string>
     <string name="PrimaryCare">Premiers Soins</string>
     <string name="MentalCare">Soins Mentaux</string>
     <string name="VisionHealth">Soins de La Vue</string>

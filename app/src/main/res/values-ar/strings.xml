@@ -43,6 +43,11 @@
 
 <!--    Services-->
     <string name="healthservices"> خدمات صحية مجانية</string>
+    <string name="PrimaryNewLogin"><u>الأولية</u></string>
+    <string name="MentalNewLogin"><u>عقلي</u></string>
+    <string name="VisionNewLogin"><u>رؤية</u></string>
+    <string name="DentalNewLogin"><u>طب الأسنان</u></string>
+    <string name="SpecialityNewLogin"><u>تخصص</u></string>
     <string name="PrimaryCare">الرعاية الأولية</string>
      <string name="MentalCare">رعاية نفسية</string>
     <string name="VisionHealth"> العناية بالبصر</string>

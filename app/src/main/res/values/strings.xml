@@ -43,11 +43,17 @@
 
 <!--    Services-->
     <string name="healthservices">Free Health Services</string>
+    <string name="PrimaryNewLogin"><u>Primary</u></string>
+    <string name="MentalNewLogin"><u>Mental</u></string>
+    <string name="VisionNewLogin"><u>Vision</u></string>
+    <string name="DentalNewLogin"><u>Dental</u></string>
+    <string name="SpecialityNewLogin"><u>Specialty</u></string>
     <string name="PrimaryCare">Primary Care</string>
     <string name="MentalCare">Mental Care</string>
     <string name="VisionHealth">Vision Care</string>
     <string name="Dental">Dental Care</string>
     <string name="speciality">Speciality Care</string>
+
 
 <!--    Patient Portal-->
     <string name="NewPatient">New Patient</string>
@@ -168,8 +174,9 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <!--    Primary Services Page-->
     <string name = "PrimaryServicesHeader">Primary Services</string>
     <string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string>
-    <string name = "PrimaryCarePar1"><b>Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</b> HUDA aims to bring primary care and specialized services to uninsured and under-insured in the Metro Detroit area. We provide preventative primary care services in a person-focused community health clinic, our goal is to make Michigan healthier\!
-        \nThe HUDA clinic provides FREE medications to our patients, and also provides laboratory services at no-cost to our patients.</string>
+    <string name = "PrimaryCarePar1"><b>Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</b>
+        \n\nHUDA aims to bring primary care and specialized services to uninsured and under-insured in the Metro Detroit area. We provide preventative primary care services in a person-focused community health clinic, our goal is to make Michigan healthier\!
+        \n\nThe HUDA clinic provides FREE medications to our patients, and also provides laboratory services at no-cost to our patients.</string>
     <string name="PrimaryCarePar2"><b>Our Primary Care Services Include:</b>
         \n\n <li>Health Assessments</li>
         \n\n <li>Acute and Chronic Illness Management</li>
