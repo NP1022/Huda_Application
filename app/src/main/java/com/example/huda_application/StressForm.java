@@ -238,6 +238,30 @@ public class StressForm extends AppCompatActivity
                 }
                 else
                 {
+                    data.setQuestion1Section1Form5(q1s1Text);
+                    data.setQuestion2Section1Form5(q1s2Text);
+                    data.setQuestion3Section1Form5(q3s1Text);
+                    data.setQuestion4Section1Form5(q4s1Text);
+                    data.setQuestion5Section1Form5(q5s1Text);
+                    data.setQuestion6Section1Form5(q6s1Text);
+                    data.setQuestion7Section1Form5(q7s1Text);
+                    data.setQuestion8Section1Form5(q8s1Text);
+                    data.setSection1TotalsForm5(s1TotalsText);
+
+                    data.setQuestion1Section2Form5(q1s2Text);
+                    data.setQuestion2Section2Form5(q2s2Text);
+                    data.setQuestion3Section2Form5(q3s2Text);
+                    data.setQuestion4Section2Form5(q4s2Text);
+                    data.setQuestion5Section2Form5(q5s2Text);
+                    data.setQuestion6Section2Form5(q6s2Text);
+                    data.setQuestion7Section2Form5(q7s2Text);
+                    data.setSection2TotalsForm5(s2TotalsText);
+
+                    data.setQuestion1Section3Form5(q1s3Text);
+                    data.setQuestion2Section3Form5(q2s3Text);
+                    data.setQuestion3Section3Form5(q3s3Text);
+                    data.setQuestion4Section3Form5(q4s3Text);
+                    
                     Intent PatientInfoForm = new Intent(StressForm.this, PatientInfoForm.class);
                     PatientInfoForm.putExtra("patientdata",data);
                     startActivity(PatientInfoForm);

@@ -85,6 +85,9 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
             }
             else
             {
+                data.setConsentDateForm2(consentDateTxt2);
+                data.setPatientSignedForm2(patientSignedText2);
+                data.setPatientSignatureForm2(patientSignatureText2);
                 Intent AuthorizationForm = new Intent (this, AuthorizationForm.class);
                 AuthorizationForm.putExtra("patientdata",data);
                 startActivity(AuthorizationForm);

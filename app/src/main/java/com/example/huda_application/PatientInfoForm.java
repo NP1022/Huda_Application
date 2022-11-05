@@ -31,7 +31,8 @@ public class PatientInfoForm extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.nextForm6) {
+        if (view.getId() == R.id.nextForm6)
+        {
             Intent LabAccess = new Intent(this, LabAccess.class);
             LabAccess.putExtra("patientdata",data);
             startActivity(LabAccess);

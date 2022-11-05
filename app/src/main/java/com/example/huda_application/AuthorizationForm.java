@@ -80,6 +80,9 @@ public class AuthorizationForm extends AppCompatActivity implements View.OnClick
             }
             else
             {
+                data.setConsentDateForm3(consentDateTxt3);
+                data.setPatientSignatureForm2(patientSignatureText3);
+                data.setPatientSignedForm2(patientSignedText3);
                 Intent PersonalRepresentative = new Intent (AuthorizationForm.this, PersonalRepresentative.class);
                 PersonalRepresentative.putExtra("patientdata",data);
                 startActivity(PersonalRepresentative);
