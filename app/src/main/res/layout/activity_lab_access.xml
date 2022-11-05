@@ -32,28 +32,32 @@
 
     <TextView
         android:id="@+id/labAccessHeader"
-        android:layout_width="275dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
         android:background="@color/white"
-        android:text="Form 7 - Final Form"
-        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Lab Access"
         android:textColor="#043670"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hudaLogo11" />
 
     <ImageView
         android:id="@+id/hudaLogo11"
-        android:layout_width="98dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="28dp"
-
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/huda_logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
