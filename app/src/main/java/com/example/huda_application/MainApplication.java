@@ -64,7 +64,11 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
             });
         }
     }
-
+    @Override
+    public void onBackPressed() {
+// super.onBackPressed();
+// Not calling **super**, disables back button in current screen.
+    }
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.partnersPage) {
