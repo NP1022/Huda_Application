@@ -73,6 +73,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
         reason = findViewById(R.id.email_checkin);
         time = findViewById(R.id.appointmentTime);
         checkin = findViewById(R.id.checkin);
+        backButton = (ImageView) findViewById(R.id.backButton);
         time.setOnClickListener(this);
 
         options = new AlertDialog.Builder(ApptRequest.this);
