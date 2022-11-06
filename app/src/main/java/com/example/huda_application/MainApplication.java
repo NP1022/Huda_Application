@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.huda_application.appointment.AppointmentManager;
@@ -24,12 +25,14 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 
     private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, PatientPortal;
     private FirebaseAuth mAuth;
+    private ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_application);
-
+        backButton = (ImageView) findViewById(R.id.backButton);
+        backButton.setOnClickListener((View.OnClickListener) this);
         PatientPortal = findViewById(R.id.Patients);
         Partner_button = findViewById(R.id.partnersPage);
         Contact_Us = findViewById(R.id.contactUsPage);
@@ -86,6 +89,9 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         } else if (view.getId() == R.id.Patients) {
             Intent Patient_page = new Intent(this, Appointments.class);
             startActivity(Patient_page);
+        } else if (view.getId() == R.id.backButton) {
+            Intent prev = new Intent(this, NewLogin.class);
+            startActivity(prev);
         }
     }
 }

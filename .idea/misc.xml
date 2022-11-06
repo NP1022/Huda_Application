@@ -88,23 +88,41 @@
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_personal_representative.xml" value="0.2727624951569159" />
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_register_account.xml" value="0.25" />
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_stress_form.xml" value="0.26992753623188404" />
-        <entry key="app/src/main/res/layout/activity_announcements.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_admin_page.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/activity_announcements.xml" value="0.32867431640625" />
+        <entry key="app/src/main/res/layout/activity_appointments.xml" value="0.24876555623496077" />
+        <entry key="app/src/main/res/layout/activity_appt_request.xml" value="0.2055923461914063" />
+        <entry key="app/src/main/res/layout/activity_authorization_form.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/activity_check_in.xml" value="0.12639311043566362" />
-        <entry key="app/src/main/res/layout/activity_contact_us.xml" value="0.37311553955078125" />
+        <entry key="app/src/main/res/layout/activity_contact_us.xml" value="0.3382202148437502" />
         <entry key="app/src/main/res/layout/activity_dental_health.xml" value="0.15896739130434784" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_health_services.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.18020833333333333" />
+        <entry key="app/src/main/res/layout/activity_lab_access.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20652173913043478" />
-        <entry key="app/src/main/res/layout/activity_main_application.xml" value="0.4607025146484375" />
+        <entry key="app/src/main/res/layout/activity_main_application.xml" value="0.17046203613281247" />
+        <entry key="app/src/main/res/layout/activity_mental_health.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/activity_new_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_new_or_returning_user.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/activity_our_story.xml" value="0.15896739130434784" />
-        <entry key="app/src/main/res/layout/activity_partners.xml" value="0.2627105712890625" />
+        <entry key="app/src/main/res/layout/activity_partners.xml" value="0.14019219898247598" />
+        <entry key="app/src/main/res/layout/activity_patient_contract.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/activity_patient_form.xml" value="0.2867482092244055" />
         <entry key="app/src/main/res/layout/activity_patient_info_form.xml" value="0.2598958333333333" />
         <entry key="app/src/main/res/layout/activity_patients_page.xml" value="0.12639311043566362" />
+        <entry key="app/src/main/res/layout/activity_personal_representative.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/activity_primary_services.xml" value="0.15896739130434784" />
         <entry key="app/src/main/res/layout/activity_register_account.xml" value="0.15896739130434784" />
+        <entry key="app/src/main/res/layout/activity_specialty_health.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/activity_stress_form.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/activity_user_appointment.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/activity_vision_health.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/appointment_list_item.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/appointment_user_item.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.25833333333333336" />
       </map>
     </option>
   </component>

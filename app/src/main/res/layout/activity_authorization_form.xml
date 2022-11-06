@@ -23,25 +23,25 @@
             android:id="@+id/hudaLogo7"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/huda_logo" />
+            app:srcCompat="@drawable/huda_logo"
+            tools:layout_editor_absoluteX="164dp" />
 
         <TextView
             android:id="@+id/authorizationHeader"
             android:layout_width="216dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="90dp"
             android:background="@color/white"
-            android:text="HUDA Authorization for Release of Information "
             android:gravity="center"
+            android:text="HUDA Authorization for Release of Information "
             android:textColor="#043670"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hudaLogo7" />
 
@@ -49,15 +49,13 @@
             android:id="@+id/TextView3"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
             android:text="Occasionally it is necessary for the HUDA Clinic to consult with other providers, such as specialists or other facilities, such as hospitals or labs to provide you, our patient, with what our providers believe to be the most appropriate course of action for your treatment. By signing this form, you give us, HUDA Clinic, permission to share your pertinent medical information with other providers/facilities to best complete your treatment or request medical records from previous providers on your behalf."
             android:textColor="@color/black"
-            android:gravity="center"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.956"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/authorizationHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/authorizationHeader"
+            tools:layout_editor_absoluteX="34dp" />
 
         <TextView
             android:id="@+id/textView8"

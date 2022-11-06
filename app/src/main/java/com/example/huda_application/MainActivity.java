@@ -40,6 +40,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView registration_button, forgot_pass, login;
     private EditText Password_Text , Email_Text;
     private Button language_Button;
+    private ImageView backButton;
     public AlertDialog menu;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser mUser = mAuth.getCurrentUser();
@@ -94,6 +96,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         login.setOnClickListener(this);
         registration_button.setOnClickListener(this);
         forgot_pass.setOnClickListener(this);
+
+        backButton = (ImageView) findViewById(R.id.backButton);
+        backButton.setOnClickListener((View.OnClickListener) this);
 
 
     }
@@ -173,6 +178,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
+        if (view.getId() == R.id.backButton) {
+            Intent prev = new Intent(this, NewLogin.class);
+            startActivity(prev);
+        }
 
     }
 

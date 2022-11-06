@@ -65,14 +65,16 @@
             android:layout_width="60dp"
             android:layout_height="34dp"
 
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="296dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/CallHeader"
             android:textAlignment="textStart"
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/callIcon"
             app:layout_constraintTop_toBottomOf="@+id/divider17" />
 
@@ -94,7 +96,6 @@
             android:id="@+id/addressHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="120dp"
             android:fontFamily="sans-serif-medium"
@@ -177,9 +178,9 @@
             android:id="@+id/callIcon"
             android:layout_width="30dp"
             android:layout_height="33dp"
-            android:layout_marginStart="115dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toStartOf="@+id/CallHeader"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider17"
@@ -191,7 +192,6 @@
             android:layout_height="33dp"
             android:layout_marginStart="115dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="5dp"
             app:layout_constraintEnd_toStartOf="@+id/addressHeader"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider20"
@@ -203,6 +203,7 @@
             android:layout_height="60dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/twitter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/socialsHeader"
             app:srcCompat="@drawable/facebooklogo" />
@@ -212,8 +213,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toStartOf="@+id/linkedIn"
+            app:layout_constraintStart_toEndOf="@+id/facebook"
             app:layout_constraintTop_toBottomOf="@+id/socialsHeader"
             app:srcCompat="@drawable/twitterlogo" />
 
@@ -226,6 +227,7 @@
             android:layout_marginBottom="65dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linkedIn"
             app:layout_constraintTop_toBottomOf="@+id/socialsHeader"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/instagramlogo" />
@@ -235,13 +237,23 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="6dp"
             android:layout_marginBottom="65dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/instagram"
+            app:layout_constraintStart_toEndOf="@+id/twitter"
             app:layout_constraintTop_toBottomOf="@+id/socialsHeader"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/linkedinlogo" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8_back_arrow_100" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

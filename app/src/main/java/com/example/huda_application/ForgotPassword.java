@@ -3,22 +3,25 @@ package com.example.huda_application;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ForgotPassword extends AppCompatActivity
+public class ForgotPassword extends AppCompatActivity implements View.OnClickListener
 {
 
     private EditText email;
     private Button resetBtn;
+    private ImageView backButton;
 
     FirebaseAuth mAuth;
 
@@ -27,6 +30,8 @@ public class ForgotPassword extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
+        backButton = (ImageView) findViewById(R.id.backButton);
+        backButton.setOnClickListener((View.OnClickListener) this);
 
          email = findViewById(R.id.enterEmail);
         resetBtn = findViewById(R.id.sendReset);
@@ -45,8 +50,7 @@ public class ForgotPassword extends AppCompatActivity
                     email.requestFocus();
                     return;
                 }
-                else if(!Patterns.EMAIL_ADDRESS.matcher(emailStr).matches())
-                {
+                else if(!Patterns.EMAIL_ADDRESS.matcher(emailStr).matches()) {
                     email.setError("Please provide valid email!");
                     email.requestFocus();
                     return;
@@ -72,6 +76,14 @@ public class ForgotPassword extends AppCompatActivity
                 }
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.backButton) {
+            Intent prev = new Intent(this, MainActivity.class);
+            startActivity(prev);
+        }
     }
 
 }
