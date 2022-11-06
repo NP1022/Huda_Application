@@ -43,7 +43,7 @@ public class UserAppointment extends AppCompatActivity {
         TextView birthday = findViewById(R.id.birthday);
 
         name.setText(String.format("%s %s", user.getFirstName(), user.getLastName()));
-        birthday.setText("Birthday Here");
+
 
         RecyclerView recyclerView = findViewById(R.id.appointmentsView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

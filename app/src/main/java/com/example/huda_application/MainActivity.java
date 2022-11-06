@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.media.Image;
 import android.os.Bundle;
 
 import com.example.huda_application.firebase.FirebaseClient;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView registration_button, forgot_pass, login;
     private EditText Password_Text , Email_Text;
     private Button language_Button;
-    private ImageView backButton;
+    private ImageView backButton2;
     public AlertDialog menu;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser mUser = mAuth.getCurrentUser();
@@ -66,10 +67,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         Saved_language();
 
-        if(mUser != null && mUser.isEmailVerified())
-        {
-            startActivity(new Intent(MainActivity.this, MainApplication.class));
-        }
+//        if(mUser != null && mUser.isEmailVerified())
+//        {
+//            startActivity(new Intent(MainActivity.this, MainApplication.class));
+//        }
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int forgot_password_ID = R.id.forgotpass;
         final String[] langs_options = {"English", "عربي" , "español", "français", "اردو" , "বাংলা"};
 
+        backButton2 = findViewById(R.id.backButton2);
 
         Password_Text = findViewById(R.id.password);
         Email_Text = findViewById(R.id.email);
@@ -96,14 +98,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         login.setOnClickListener(this);
         registration_button.setOnClickListener(this);
         forgot_pass.setOnClickListener(this);
-
-        backButton = (ImageView) findViewById(R.id.backButton);
-        backButton.setOnClickListener((View.OnClickListener) this);
-
+        backButton2.setOnClickListener(this);
 
     }
 
 
+    @Override
+    public void onBackPressed() {
+// super.onBackPressed();
+// Not calling **super**, disables back button in current screen.
+    }
 
     private void picklanguage(String l) {
         SharedPreferences.Editor Saver = getSharedPreferences("langauge", MODE_MULTI_PROCESS).edit();
@@ -177,11 +181,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             login(emailTxt, passwordTxt);
 
         }
+        else if(view.getId() == R.id.backButton2){
+            Intent Newlogin = new Intent(this ,NewLogin.class);
+            startActivity(Newlogin);
 
-        if (view.getId() == R.id.backButton) {
-            Intent prev = new Intent(this, NewLogin.class);
-            startActivity(prev);
         }
+
 
     }
 

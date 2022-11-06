@@ -20,7 +20,7 @@
 
         <EditText
             android:id="@+id/personalRepPatientName"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:background="@drawable/edittextstyle"
@@ -33,14 +33,14 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/personalRepDOB"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.707"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/formText"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepDOB"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -53,14 +53,14 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/personalRepPatientAddress"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.696"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepPatientName"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepPatientAddress"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -74,14 +74,14 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/personalRepPatientCity"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.651"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepDOB"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepPatientCity"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -94,14 +94,14 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/personalRepPatientState"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.651"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepPatientAddress"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepPatientState"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -114,14 +114,14 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/personalRepPatientZip"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.651"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepPatientCity"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepPatientZip"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:background="@drawable/edittextstyle"
@@ -133,14 +133,14 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/personalRepPatientHome"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.651"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepPatientState"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepPatientHome"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -152,14 +152,14 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/formText2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.617"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepPatientZip"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRep1"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="@drawable/edittextstyle"
@@ -170,14 +170,14 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.707"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRep2"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="@drawable/edittextstyle"
@@ -189,14 +189,14 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.707"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRep3"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/edittextstyle"
@@ -208,14 +208,14 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/personalRepRelation3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.64"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepNumber"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="35dp"
@@ -229,14 +229,14 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/textView14"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.696"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepRelation1"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepNumber2"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -248,14 +248,14 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.719"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepRelation2"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepNumber3"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="50dp"
@@ -268,14 +268,14 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/divider19"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.629"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepRelation3"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/patientSignaturePersonalRep"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/edittextstyle"
@@ -288,17 +288,17 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/personalRepDate"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.696"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider19"
             tools:ignore="MissingConstraints" />
 
+
         <EditText
             android:id="@+id/personalRepDate"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:layout_marginBottom="21dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="Date MM-DD-YYYY"
@@ -308,31 +308,31 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.662"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/patientSignaturePersonalRep"
             tools:ignore="MissingConstraints" />
 
-
-
         <Button
             android:id="@+id/nextForm4"
-            android:layout_width="189dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/buttonstyle"
             android:text="Next Form"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.544"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepDate"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepRelation1"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -344,14 +344,14 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.674"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRep1"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepRelation2"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -362,14 +362,14 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.696"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRep2"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/personalRepRelation3"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -382,23 +382,24 @@
             android:textColorHint="#686868"
             app:layout_constraintBottom_toTopOf="@+id/personalRepNumber3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.606"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRep3"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/personalRepresentativeHeader"
-            android:layout_width="216dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:text="Designation of Personal Representative"
-            android:gravity="center"
-            android:textColor="#043670"
             android:layout_marginTop="7dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="Designation of Personal Representative"
+            android:textColor="#043670"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.674"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hudaLogo8" />
 
@@ -408,45 +409,46 @@
             android:layout_height="80dp"
             android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.525"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
 
         <TextView
             android:id="@+id/formText1"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="26dp"
             android:ems="10"
-            android:textSize="18sp"
             android:gravity="center"
             android:text="Completing this form allows the person designated to receive protected health information (PHI) such as test results. It also permits the personal representative to request and receive a patient's medical records."
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/formText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.696"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepresentativeHeader" />
 
         <TextView
             android:id="@+id/formText"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:ems="10"
-            android:textSize="18sp"
             android:gravity="center"
             android:text="A personal representative is not the same as a healthcare agent who is allowed to make medical decisions on the patient’s behalf. "
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/personalRepPatientName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.707"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/formText1" />
 
         <TextView
             android:id="@+id/formText2"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:ems="10"
@@ -456,23 +458,22 @@
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/textView8"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.971"
+            app:layout_constraintHorizontal_bias="0.629"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalRepPatientHome" />
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="wrap_content"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="31dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="62dp"
+            android:layout_marginTop="28dp"
             android:text="Personal Representatitve(s)"
             android:textColor="@color/black"
             android:textSize="23sp"
             android:textStyle="bold"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.674"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/formText2" />
 

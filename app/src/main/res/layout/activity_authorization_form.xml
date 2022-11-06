@@ -23,18 +23,17 @@
             android:id="@+id/hudaLogo7"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/huda_logo"
-            tools:layout_editor_absoluteX="164dp" />
+            app:srcCompat="@drawable/huda_logo" />
 
         <TextView
             android:id="@+id/authorizationHeader"
-            android:layout_width="216dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="90dp"
+            android:layout_marginTop="7dp"
             android:background="@color/white"
             android:gravity="center"
             android:text="HUDA Authorization for Release of Information "
@@ -42,55 +41,58 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.696"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hudaLogo7" />
 
         <TextView
             android:id="@+id/TextView3"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="28dp"
             android:gravity="center"
             android:text="Occasionally it is necessary for the HUDA Clinic to consult with other providers, such as specialists or other facilities, such as hospitals or labs to provide you, our patient, with what our providers believe to be the most appropriate course of action for your treatment. By signing this form, you give us, HUDA Clinic, permission to share your pertinent medical information with other providers/facilities to best complete your treatment or request medical records from previous providers on your behalf."
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/authorizationHeader"
-            tools:layout_editor_absoluteX="34dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.685"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/authorizationHeader" />
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="I, the patient, hereby authorize HUDA Clinic and its affiliates, its employees and agents, to use and disclose protected health information (e.g. information relating to the diagnosis, treatment, and health care services provided or to be provided to me and which identifies my name, address, social security number, date of birth) for the purpose of helping to coordinate my medical care. I understand that any personal health information or other information released to the person or organization identified above may be subject to re-disclosure by such person/organization and may be no longer protected by applicable federal and state privacy laws. I understand that I have a right to revoke this authorization by providing written notice to HUDA Clinic at any time. However, this authorization may not be revoked if its employees or agents have taken action on this authorization prior to receiving my written notice. I also understand I have the right to have a copy of this authorization.I further understand that this authorization is voluntary and that I may refuse to sign this authorization. I also understand that should I refuse to sign this form I greatly limit the services that HUDA Clinic will be able to perform for me. I understand that should I refuse to sign this,the HUDA Clinic will not be able to prescribe me medication to any pharmacy, nor be able to provide me with any lab work, physician referrals or medical record requests."
             android:gravity="center"
+            android:text="I, the patient, hereby authorize HUDA Clinic and its affiliates, its employees and agents, to use and disclose protected health information (e.g. information relating to the diagnosis, treatment, and health care services provided or to be provided to me and which identifies my name, address, social security number, date of birth) for the purpose of helping to coordinate my medical care. I understand that any personal health information or other information released to the person or organization identified above may be subject to re-disclosure by such person/organization and may be no longer protected by applicable federal and state privacy laws. I understand that I have a right to revoke this authorization by providing written notice to HUDA Clinic at any time. However, this authorization may not be revoked if its employees or agents have taken action on this authorization prior to receiving my written notice. I also understand I have the right to have a copy of this authorization.I further understand that this authorization is voluntary and that I may refuse to sign this authorization. I also understand that should I refuse to sign this form I greatly limit the services that HUDA Clinic will be able to perform for me. I understand that should I refuse to sign this,the HUDA Clinic will not be able to prescribe me medication to any pharmacy, nor be able to provide me with any lab work, physician referrals or medical record requests."
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintHorizontal_bias="0.64"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextView3" />
 
         <TextView
             android:id="@+id/TextView4"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="We take protecting your identity very seriously and do not share any unnecessary information with any of our partners. "
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintHorizontal_bias="0.606"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <EditText
             android:id="@+id/patientNamePrinted3"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="28dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="Patient Name (Printed)"
@@ -99,16 +101,16 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.768"
+            app:layout_constraintHorizontal_bias="0.606"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextView4"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/patientNameSignature3"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="Patient/Guardian Signature"
@@ -117,16 +119,16 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintHorizontal_bias="0.662"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/patientNamePrinted3"
             tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/consentFormDate3"
-            android:layout_width="340dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="@string/Date"
@@ -135,25 +137,26 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintHorizontal_bias="0.617"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/patientNameSignature3" />
 
         <Button
             android:id="@+id/nextForm3"
-            android:layout_width="189dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/buttonstyle"
             android:text="Next Form"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/consentFormDate3"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="MissingConstraints" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
