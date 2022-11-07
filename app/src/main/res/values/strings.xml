@@ -274,4 +274,8 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
         \n\n<li>Zaahir Turfe, M.D.</li>
         \n\n<li>Ranya Selim, M.D.</li>
         \n\n<li>Syed Akbar, M.D.</li></string>
+    <string name="prevMonthButton"><![CDATA[<-]]></string>
+    <string name="nextMonthButton"><![CDATA[->]]></string>
+    <string name="PrevMonthButton"><![CDATA[<-]]></string>
+    <string name="calItem">1</string>
 </resources>

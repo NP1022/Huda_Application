@@ -28,6 +28,12 @@
             android:name=".Messagepage"
             android:exported="false" />
         <activity
+            android:name=".calendar_item"
+            android:exported="false" />
+        <activity
+            android:name=".weeklyCalendar"
+            android:exported="false" />
+        <activity
             android:name=".UserAppointment"
             android:exported="false" />
         <activity
