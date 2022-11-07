@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.huda_application"
-    >
+    package="com.example.huda_application">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -16,7 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
-
+        <activity
+            android:name=".PatientMessages"
+            android:exported="false" />
+        <activity
+            android:name=".MessageSendPage"
+            android:exported="false" />
+        <activity
+            android:name=".Adminpanel"
+            android:exported="false" />
+        <activity
+            android:name=".Messagepage"
+            android:exported="false" />
+        <activity
+            android:name=".calendar_item"
+            android:exported="false" />
+        <activity
+            android:name=".weeklyCalendar"
+            android:exported="false" />
         <activity
             android:name=".UserAppointment"
             android:exported="false" />

@@ -269,7 +269,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="7. Moving or speaking so slowly\n that other \npeople could have noticed OR\nBeing so fidgety or restless that you’ve\n been moving around a lot more\n than usual
-       "
+   "
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -366,7 +366,7 @@
         android:layout_marginTop="28dp"
         android:gravity="center"
         android:text="Over the last two (2) weeks, how \noften have you been bothered\n by
- any of the following problems? Please input the number that applies to you"
+ of the following problems? Please input the number that applies to you"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"

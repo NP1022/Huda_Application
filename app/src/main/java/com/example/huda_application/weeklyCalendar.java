@@ -1,63 +1,61 @@
 package com.example.huda_application;
 
-import static com.example.huda_application.CalUtilities.daysInMonthArray;
+import static com.example.huda_application.CalUtilities.daysInWeekArray;
 import static com.example.huda_application.CalUtilities.monthYearFromDate;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Announcements extends AppCompatActivity implements CalAdapter.OnItemListener
-{
+public class weeklyCalendar extends AppCompatActivity implements CalAdapter.OnItemListener{
+
     private TextView monthYearText;
     private RecyclerView calRecycler;
 
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_announcements);
+        setContentView(R.layout.activity_weekly_calendar);
+
         initializeWidgets();
+        setWeeklyView();
     }
 
     private void initializeWidgets()
     {
         calRecycler = findViewById(R.id.calRecycler);
         monthYearText = findViewById(R.id.monthYearTV);
-        CalUtilities.selectedDate = LocalDate.now();
-        setMonthView();
     }
 
-    private void setMonthView()
+    private void setWeeklyView()
     {
         monthYearText.setText(monthYearFromDate(CalUtilities.selectedDate));
-        ArrayList<LocalDate> daysInMonth = daysInMonthArray(CalUtilities.selectedDate);
+        ArrayList<LocalDate> days = daysInWeekArray(CalUtilities.selectedDate);
 
-        CalAdapter calAdapter = new CalAdapter(daysInMonth, this);
+        CalAdapter calAdapter = new CalAdapter(days, this);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 7);
         calRecycler.setLayoutManager(layoutManager);
         calRecycler.setAdapter(calAdapter);
     }
 
-    public void navigatePrevMonth(View view)
-    {
+    public void navigatePrevWeek(View view) {
         // goes back one month
-        CalUtilities.selectedDate = CalUtilities.selectedDate.minusMonths(1);
-        setMonthView();
+        CalUtilities.selectedDate = CalUtilities.selectedDate.minusWeeks(1);
+        setWeeklyView();
     }
 
-    public void navigateNextMonth(View view)
-    {
+    public void navigateNextWeek(View view) {
         // forward one month
-        CalUtilities.selectedDate = CalUtilities.selectedDate.plusMonths(1);
-        setMonthView();
+        CalUtilities.selectedDate = CalUtilities.selectedDate.plusWeeks(1);
+        setWeeklyView();
     }
 
     @Override
@@ -65,14 +63,9 @@ public class Announcements extends AppCompatActivity implements CalAdapter.OnIte
     // change this
     public void onItemClick(int position, String dayText)
     {
-        if(dayText.equals(""))
-        {
-            String message = "Selected Date" + dayText + " " + monthYearFromDate(CalUtilities.selectedDate);
-        }
+
+        String message = "Selected Date" + dayText + " " + monthYearFromDate(CalUtilities.selectedDate);
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
-    public void weeklyView(View view)
-    {
-        startActivity(new Intent(this, weeklyCalendar.class));
-    }
 }
