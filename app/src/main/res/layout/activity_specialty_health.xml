@@ -75,7 +75,6 @@
             android:layout_marginStart="61dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="65dp"
-            android:layout_marginBottom="25dp"
             app:layout_constraintBottom_toTopOf="@+id/textView53"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +84,7 @@
         <TextView
             android:id="@+id/specialtyHealthPar1"
             android:layout_width="320dp"
-            android:layout_height="340dp"
+            android:layout_height="380dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="32dp"
@@ -121,7 +120,7 @@
         <TextView
             android:id="@+id/textView47"
             android:layout_width="320dp"
-            android:layout_height="800dp"
+            android:layout_height="775dp"
             android:layout_marginStart="56dp"
             android:layout_marginEnd="56dp"
             android:ems="10"
