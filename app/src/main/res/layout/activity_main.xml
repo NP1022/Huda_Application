@@ -114,7 +114,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
-   <TextView
+    <TextView
         android:id="@+id/loginHeader"
         android:layout_width="328dp"
         android:layout_height="50dp"

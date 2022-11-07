@@ -32,17 +32,14 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
+public class Messagepage extends AppCompatActivity {
 
-public class AdminPage extends AppCompatActivity {
-
-    private PatientViewAdapter viewAdapter;
-
+    private Messagepage.PatientViewAdapter viewAdapter;
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_page);
-
-        RecyclerView recyclerView = findViewById(R.id.usersView);
+        setContentView(R.layout.activity_messagepage);
+        RecyclerView recyclerView = findViewById(R.id.usersView4);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         if (UserManager.getInstance().isAdmin()) {
@@ -56,7 +53,7 @@ public class AdminPage extends AppCompatActivity {
                             users.add(user);
                     }
 
-                    viewAdapter = new PatientViewAdapter(AdminPage.this, users);
+                    viewAdapter = new PatientViewAdapter(Messagepage.this, users);
                     recyclerView.setAdapter(viewAdapter);
                 }
 
@@ -65,9 +62,11 @@ public class AdminPage extends AppCompatActivity {
                 }
             });
         }
+
+
     }
 
-    private static class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> implements View.OnClickListener {
+    private static class PatientViewAdapter extends RecyclerView.Adapter<Messagepage.PatientViewHolder> implements View.OnClickListener {
 
         private LayoutInflater inflater;
         private final List<User> users;
@@ -81,13 +80,13 @@ public class AdminPage extends AppCompatActivity {
 
         @NonNull
         @Override
-        public PatientViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = inflater.inflate(R.layout.admin_user_list_item, parent, false);
-            return new PatientViewHolder(view);
+        public Messagepage.PatientViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = inflater.inflate(R.layout.message_user_item, parent, false);
+            return new Messagepage.PatientViewHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull Messagepage.PatientViewHolder holder, int position) {
             final int pos = position;
             User user = users.get(position);
             // FirebaseDatabase.getInstance().getReference("User").child(user.getUserId()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -112,10 +111,10 @@ public class AdminPage extends AppCompatActivity {
             holder.name.setText(String.format("%s", user.getFirstName()));
             holder.lastname.setText(String.format("%s", user.getLastName()));
             holder.email.setText(user.getEmailAddress());
-            holder.appointments.setText("Appointments "+ Pending_count);
 
-            holder.appointments.setOnClickListener(view -> {
-                Intent intent = new Intent(context, UserAppointment.class);
+
+            holder.MessagePage.setOnClickListener(view -> {
+                Intent intent = new Intent(context, MessageSendPage.class);
                 intent.putExtra("user", user);
                 context.startActivity(intent);
             });
@@ -137,14 +136,14 @@ public class AdminPage extends AppCompatActivity {
         private final TextView name;
         private final TextView email;
         private final TextView lastname;
-        private final TextView appointments;
+        private final TextView MessagePage;
 
         public PatientViewHolder(@NonNull View itemView) {
             super(itemView);
             this.name = itemView.findViewById(R.id.name);
             this.lastname = itemView.findViewById(R.id.last_name);
             this.email = itemView.findViewById(R.id.email);
-            this.appointments = itemView.findViewById(R.id.Appointments_button);
+            this.MessagePage = itemView.findViewById(R.id.Message_button);
 
         }
 
@@ -161,7 +160,7 @@ public class AdminPage extends AppCompatActivity {
         }
 
         public TextView getAppointments() {
-            return appointments;
+            return MessagePage;
         }
     }
 }

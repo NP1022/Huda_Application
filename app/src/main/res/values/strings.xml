@@ -174,7 +174,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="CalendarHeader">Clinic Calendar</string>
     <string name ="appointmentsHeader">APPOINTMENTS</string>
 
-    <!--    Primary Services Page-->
+    <!--    Prim ary Services Page-->
     <string name = "PrimaryServicesHeader">Primary Services</string>
     <string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string>
     <string name = "PrimaryCarePar1"><b>Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</b>

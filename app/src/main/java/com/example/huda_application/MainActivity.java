@@ -226,7 +226,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     UserManager.getInstance().setCurrentUser(FirebaseClient.convertToUser(snapshot));
 
                                     if (UserManager.getInstance().isAdmin()) {
-                                        startActivity(new Intent(MainActivity.this , AdminPage.class));
+                                        startActivity(new Intent(MainActivity.this , Adminpanel.class));
                                     }else {
                                         startActivity(new Intent(MainActivity.this , MainApplication.class));
                                     }

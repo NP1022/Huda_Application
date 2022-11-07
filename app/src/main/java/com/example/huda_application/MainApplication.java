@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.huda_application.appointment.AppointmentManager;
 import com.example.huda_application.firebase.FirebaseClient;
+import com.example.huda_application.user.Message;
 import com.example.huda_application.user.User;
 import com.example.huda_application.user.UserManager;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,14 +23,14 @@ import com.google.firebase.database.ValueEventListener;
 public class MainApplication extends AppCompatActivity implements View.OnClickListener {
 
 
-    private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, PatientPortal;
+    private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, PatientPortal ,Message_tab;
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_application);
-
+        Message_tab = findViewById(R.id.messages_tab);
         PatientPortal = findViewById(R.id.Patients);
         Partner_button = findViewById(R.id.partnersPage);
         Contact_Us = findViewById(R.id.contactUsPage);
@@ -42,9 +43,13 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         signOut.setOnClickListener(this);
         Announcements.setOnClickListener(this);
         PatientPortal.setOnClickListener(this);
+        Message_tab.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser fbUser = mAuth.getCurrentUser();
+
+
+
 
         // if user is not null and their email is not verified
         if (fbUser != null && !fbUser.isEmailVerified()) {
@@ -52,10 +57,14 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         }
 
         if (fbUser != null) {
-            FirebaseDatabase.getInstance().getReference(User.class.getSimpleName()).child(fbUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            FirebaseDatabase.getInstance().getReference(User.class.getSimpleName()).child(fbUser.getUid()).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     UserManager.getInstance().setCurrentUser(FirebaseClient.convertToUser(snapshot));
+
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                        int read_count = (int) UserManager.getInstance().getCurrentUser().getMessages().stream().filter(message -> !message.isRead()).count();
+                        Message_tab.setText("messages "+ read_count); }
                 }
 
                 @Override
@@ -63,6 +72,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
                 }
             });
         }
+
     }
     @Override
     public void onBackPressed() {
@@ -90,6 +100,10 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         } else if (view.getId() == R.id.Patients) {
             Intent Patient_page = new Intent(this, Appointments.class);
             startActivity(Patient_page);
+        }
+        else if (view.getId() == R.id.messages_tab) {
+            Intent Messages_page = new Intent(this, PatientMessages.class);
+            startActivity(Messages_page);
         }
     }
 }

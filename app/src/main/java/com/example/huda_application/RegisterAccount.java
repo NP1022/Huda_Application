@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.User;
 import com.example.huda_application.user.UserManager;
+import com.example.huda_application.user.UserType;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -62,6 +63,7 @@ public class RegisterAccount extends AppCompatActivity
         final EditText email = findViewById(R.id.email);
         final EditText password = findViewById(R.id.password);
         final EditText conPassword = findViewById(R.id.confirmPass);
+        final EditText DOb = findViewById(R.id.registerDob);
 
         DAOUser dao = new DAOUser();
 
@@ -79,6 +81,7 @@ public class RegisterAccount extends AppCompatActivity
                 final String emailTxt = email.getText().toString().trim();
                 final String passwordTxt = password.getText().toString().trim();
                 final String conPasswordTxt = conPassword.getText().toString().trim();
+                final String dob = DOb.getText().toString().trim();
 
 
                 if (TextUtils.isEmpty(firstNameTxt) || TextUtils.isEmpty(lastNameTxt)) // check if the firstname and lastname are empty
@@ -129,7 +132,7 @@ public class RegisterAccount extends AppCompatActivity
                 }
                 else
                 {
-                    User user = new User(firstNameTxt,lastNameTxt,emailTxt);
+                    User user = new User(firstNameTxt,lastNameTxt,emailTxt,dob, UserType.PATIENT);
 
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();
                     mAuth.createUserWithEmailAndPassword(emailTxt,passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>()
