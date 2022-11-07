@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class OurStory extends AppCompatActivity {
+public class OurStory extends AppCompatActivity implements View.OnClickListener{
 
     private ImageView backButton;
 

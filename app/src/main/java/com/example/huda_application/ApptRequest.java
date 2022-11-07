@@ -75,6 +75,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
         checkin = findViewById(R.id.checkin);
         backButton = (ImageView) findViewById(R.id.backButton);
         time.setOnClickListener(this);
+        backButton.setOnClickListener(this);
 
         options = new AlertDialog.Builder(ApptRequest.this);
         options.setTitle("Available Times");

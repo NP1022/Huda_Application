@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class VisionHealth extends AppCompatActivity {
+public class VisionHealth extends AppCompatActivity implements View.OnClickListener {
     private ImageView backButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

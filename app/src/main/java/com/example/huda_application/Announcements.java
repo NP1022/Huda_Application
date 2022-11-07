@@ -10,7 +10,7 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 
 
-public class Announcements extends AppCompatActivity {
+public class Announcements extends AppCompatActivity implements View.OnClickListener {
 
     // web view var
     private WebView webView;

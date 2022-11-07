@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class MentalHealth extends AppCompatActivity {
+public class MentalHealth extends AppCompatActivity implements View.OnClickListener{
     private ImageView backButton;
 
     @Override
@@ -15,7 +15,7 @@ public class MentalHealth extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mental_health);
         backButton = (ImageView) findViewById(R.id.backButton);
-        backButton.setOnClickListener((View.OnClickListener) this);
+        backButton.setOnClickListener(this);
     }
     public void onClick(View view) {
         if (view.getId() == R.id.backButton) {
