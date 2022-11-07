@@ -8,18 +8,21 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class OurStory extends AppCompatActivity {
+
     private ImageView backButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_our_story);
+
         backButton = (ImageView) findViewById(R.id.backButton);
         backButton.setOnClickListener((View.OnClickListener) this);
     }
     public void onClick(View view) {
         if (view.getId() == R.id.backButton) {
-            Intent prev = new Intent(this, MainApplication.class);
-            startActivity(prev);
+            Intent Menu = new Intent(this, MainApplication.class);
+            startActivity(Menu);
         }
     }
 }
