@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/scrollViewAuthorization"
-    android:layout_width="409dp"
-    android:layout_height="729dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
     android:backgroundTint="@color/white"
     android:fillViewport="true"
@@ -16,7 +16,6 @@
         android:id="@+id/authorizationForm"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingRight="60dp"
         tools:context=".AuthorizationForm">
 
         <ImageView
@@ -25,6 +24,7 @@
             android:layout_height="80dp"
             android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
@@ -41,7 +41,7 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.696"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hudaLogo7" />
 
@@ -49,13 +49,13 @@
             android:id="@+id/TextView3"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="32dp"
             android:gravity="center"
             android:text="Occasionally it is necessary for the HUDA Clinic to consult with other providers, such as specialists or other facilities, such as hospitals or labs to provide you, our patient, with what our providers believe to be the most appropriate course of action for your treatment. By signing this form, you give us, HUDA Clinic, permission to share your pertinent medical information with other providers/facilities to best complete your treatment or request medical records from previous providers on your behalf."
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.685"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/authorizationHeader" />
 
@@ -69,7 +69,7 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextView3" />
 
@@ -84,7 +84,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.606"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -92,7 +92,7 @@
             android:id="@+id/patientNamePrinted3"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="Patient Name (Printed)"
@@ -101,7 +101,7 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.606"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextView4"
             tools:ignore="MissingConstraints" />
@@ -110,7 +110,7 @@
             android:id="@+id/patientNameSignature3"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="Patient/Guardian Signature"
@@ -119,7 +119,7 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.662"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/patientNamePrinted3"
             tools:ignore="MissingConstraints" />
@@ -128,7 +128,7 @@
             android:id="@+id/consentFormDate3"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="@string/Date"
@@ -137,7 +137,7 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.617"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/patientNameSignature3" />
 
@@ -152,7 +152,7 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/consentFormDate3"
             app:layout_constraintVertical_bias="0.0"

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/scrollViewAuthorization"
-    android:layout_width="409dp"
-    android:layout_height="729dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#9E9E9E"
     android:backgroundTint="#9E9E9E"
     android:fillViewport="true"
@@ -26,7 +26,7 @@
             android:layout_height="80dp"
             android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.431"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
@@ -43,7 +43,7 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hudaLogo6"
             app:layout_goneMarginEnd="72dp" />
@@ -52,14 +52,14 @@
             android:id="@+id/textView16"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:text="AUTHORIZATION FOR MEDICAL TREATMENT AT CLINIC. READ CAREFULLY - THIS IS A CONTRACT "
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/patientContractHeader" />
 
@@ -67,31 +67,31 @@
             android:id="@+id/editTextTextMultiLine3"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:gravity="center"
             android:text="I consent to receiving services at the Health Unit on Davison Avenue, henceforth referred to as HUDA Clinic. Services may include assessment, routine diagnostic procedures, medications, lab tests, and appropriate medical treatment as the attending Physician/Nurse practitioner/Physician’s Assistant considers necessary for my care. I understand that the practice of medicine is not an exact science and I acknowledge that I have received no guarantees regarding the result of examination or treatment at this clinic. I understand that the services I receive at HUDA Clinic or because of a referral from HUDA Clinic are being provided by health care practitioners and lay volunteers who are not receiving compensation and compensation will not be requested from any source. I understand, as provided by Federal and Michigan State Law (Michigan Public Health Code. MCL 333.16277), that these volunteers are not liable for civil damages because of acts or omissions which may occur while providing services to me. I understand that any fees incurred for referrals or any orders to an outside facility, from HUDA Clinic are my responsibility. I agree to be tested for blood borne pathogens in case of inadvertent exposure to blood and/or body fluids as recommended by the Centers for Disease Control.  I understand that any verbally abusive or threatening behavior to the clinic staff or other patients is grounds for the termination of clinic services. Falsifying my income or medical insurance information, whether private or public provided, is grounds for termination of clinic services. "
             android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
             android:text="I understand HUDA clinic’s No Call No Show policy which states for Primary Care  "
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3" />
-
 
         <TextView
             android:id="@+id/textView6"
@@ -104,7 +104,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -112,14 +112,14 @@
             android:id="@+id/textView10"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="B. If I have 3 or more No Call No Shows in a 12-month period, I could face termination of clinic services. I understand HUDA Clinic’s No Call No Show policy for Specialty Care (All appointments that are NOT primary care including., but not limited to Dental, Endocrinology, Psychiatry, ENT Optometry… etc.). "
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -134,7 +134,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -142,14 +142,14 @@
             android:id="@+id/textView12"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="24dp"
             android:gravity="center"
             android:text="D. If I do not keep 2 scheduled specialty care appointments within a 6-month period, you won’t be permitted to schedule further specialty services and could face termination of clinic services. "
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -157,13 +157,13 @@
             android:id="@+id/textView13"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="My signature below constitutes my acknowledgement that I understand this request for consent and that I agree to its contents. "
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -171,7 +171,7 @@
             android:id="@+id/consentFormDate2"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="@string/Date"
@@ -180,7 +180,7 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -197,7 +197,7 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/consentFormDate2"
             tools:ignore="MissingConstraints" />
@@ -215,7 +215,7 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/patientNamePrinted2"
             tools:ignore="MissingConstraints" />
@@ -231,7 +231,7 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.409"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/patientNameSignature2"
             app:layout_constraintVertical_bias="0.0"
