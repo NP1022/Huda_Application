@@ -14,7 +14,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:paddingRight="60dp"
         tools:context=".PersonalRepresentative">
 
@@ -222,7 +222,7 @@
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="Phone Number 123-123-1234"
-            android:inputType="text|phone"
+            android:inputType="text"
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
@@ -242,7 +242,7 @@
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="Phone Number 123-123-1234"
-            android:inputType="text|phone"
+            android:inputType="text"
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
@@ -262,7 +262,7 @@
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="Phone Number 123-123-1234"
-            android:inputType="text|phone"
+            android:inputType="text"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="#686868"
@@ -281,7 +281,7 @@
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="Signature of Patient"
-            android:inputType="text|phone"
+            android:inputType="text"
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
@@ -302,7 +302,7 @@
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="Date MM-DD-YYYY"
-            android:inputType="text|phone"
+            android:inputType="text"
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/black"
