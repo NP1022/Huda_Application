@@ -17,6 +17,16 @@
       android:background="#FFFFFF"
       tools:context=".VisionHealth">
 
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_back_arrow_100" />
+
     <TextView
         android:id="@+id/specialityHealthHeader"
         android:layout_width="251dp"
@@ -75,15 +85,15 @@
     <TextView
         android:id="@+id/specialtyHealthPar1"
         android:layout_width="320dp"
-        android:layout_height="200dp"
+        android:layout_height="220dp"
         android:layout_marginStart="31dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:gravity="start|top"
-        android:text="@string/VisionCarePar1"
         android:justificationMode="inter_word"
+        android:text="@string/VisionCarePar1"
         android:textColor="#043670"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

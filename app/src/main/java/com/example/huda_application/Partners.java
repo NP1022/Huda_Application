@@ -12,14 +12,15 @@ public class Partners extends AppCompatActivity implements View.OnClickListener 
 
     private ImageView bcbsButton, stJosephButton, MSUCHMButton, MSUComButton, cfscButton, deltaDentalButton, wsuPharmButton, eliteSmileButton;
     private ImageView familyRehabButton, sayButton, circleSocksButton, iagdButton, michiganMuslimButton, tawheedCenterButton, muslimCenterButton, wccdButton, detroitMercyButton;
-    private ImageView bccpButton, esaButton, ferndaleButton, premierButton, msuNursingButton, chamberlainButton, authorityButton, matrixButton, accessButton, lasmButton;
+    private ImageView bccpButton, esaButton, ferndaleButton, premierButton, msuNursingButton, chamberlainButton, authorityButton, matrixButton, accessButton, lasmButton, backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partners);
-
+        backButton = (ImageView) findViewById(R.id.backButton);
+        backButton.setOnClickListener((View.OnClickListener) this);
         bcbsButton  = (ImageView) findViewById(R.id.bcbsLogo);
         stJosephButton = (ImageView) findViewById(R.id.stJosephLogo);
         MSUCHMButton = (ImageView) findViewById(R.id.MSUCHMLogo);
@@ -218,6 +219,10 @@ public class Partners extends AppCompatActivity implements View.OnClickListener 
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.accesscommunity.org/")));
 
+        }
+        else if (view.getId() == R.id.backButton) {
+            Intent prev = new Intent(this, MainApplication.class);
+            startActivity(prev);
         }
 
     }

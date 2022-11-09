@@ -13,6 +13,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.huda_application.firebase.FirebaseClient;
@@ -32,7 +33,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegisterAccount extends AppCompatActivity
+public class RegisterAccount extends AppCompatActivity implements View.OnClickListener
 {
 
     private static final Pattern PASSWORD_PATTERN =
@@ -47,7 +48,7 @@ public class RegisterAccount extends AppCompatActivity
 
     FirebaseDatabase rootNode;
     DatabaseReference ref;
-
+    private ImageView backButton;
     private FirebaseAuth mAuth;
 
     @Override
@@ -57,7 +58,8 @@ public class RegisterAccount extends AppCompatActivity
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_account);
-
+        backButton = (ImageView) findViewById(R.id.backButton);
+        backButton.setOnClickListener((View.OnClickListener) this);
         final EditText firstName = findViewById(R.id.firstName);
         final EditText lastName = findViewById(R.id.lastName);
         final EditText email = findViewById(R.id.email);
@@ -130,6 +132,7 @@ public class RegisterAccount extends AppCompatActivity
                     password.clearComposingText();
                     conPassword.clearComposingText();
                 }
+
                 else
                 {
                     User user = new User(firstNameTxt,lastNameTxt,emailTxt,dob, UserType.PATIENT);
@@ -185,6 +188,14 @@ public class RegisterAccount extends AppCompatActivity
             }
 
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.backButton) {
+            Intent prev = new Intent(this, MainActivity.class);
+            startActivity(prev);
+        }
     }
 
 

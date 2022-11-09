@@ -15,7 +15,8 @@ import com.google.rpc.Help;
 public class Contact_Us extends AppCompatActivity implements View.OnClickListener {
 
     TextView HUDAnumber, HUDAaddresss;
-    private ImageView Facebook, Twitter, LinkedIn, Instagram;
+    private ImageView Facebook, Twitter, LinkedIn, Instagram, backButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,6 +29,7 @@ public class Contact_Us extends AppCompatActivity implements View.OnClickListene
         Twitter = (ImageView) findViewById(R.id.twitter);
         LinkedIn = (ImageView) findViewById(R.id.linkedIn);
         Instagram = (ImageView) findViewById(R.id.instagram);
+        backButton = (ImageView) findViewById(R.id.backButton);
 
 
 
@@ -37,6 +39,7 @@ public class Contact_Us extends AppCompatActivity implements View.OnClickListene
         Twitter.setOnClickListener((View.OnClickListener) this);
         LinkedIn.setOnClickListener((View.OnClickListener) this);
         Instagram.setOnClickListener((View.OnClickListener) this);
+        backButton.setOnClickListener((View.OnClickListener) this);
     }
 
     @Override
@@ -72,6 +75,10 @@ public class Contact_Us extends AppCompatActivity implements View.OnClickListene
         else if (view.getId() == R.id.instagram)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/hudaclinic/")));
+        }
+        else if (view.getId() == R.id.backButton) {
+            Intent prev = new Intent(this, MainApplication.class);
+            startActivity(prev);
         }
     }
 }

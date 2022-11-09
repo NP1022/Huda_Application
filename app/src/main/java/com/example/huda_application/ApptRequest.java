@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -45,6 +46,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     private EditText birthday, reason;
     private Button checkin, dateButton;
     private TextView time;
+    private ImageView backButton;
     private String selectedTime = "";
     private List<Time> availableTimes;
     private TextView date;
@@ -71,7 +73,9 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
         reason = findViewById(R.id.email_checkin);
         time = findViewById(R.id.appointmentTime);
         checkin = findViewById(R.id.checkin);
+        backButton = (ImageView) findViewById(R.id.backButton);
         time.setOnClickListener(this);
+        backButton.setOnClickListener(this);
 
         options = new AlertDialog.Builder(ApptRequest.this);
         options.setTitle("Available Times");
@@ -122,6 +126,10 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             Intent appointmentsIntent = new Intent(getApplicationContext(), Appointments.class);
             startActivity(appointmentsIntent);
         }
+            else if (view.getId() == R.id.backButton) {
+                Intent prev = new Intent(this, Appointments.class);
+                startActivity(prev);
+            }
     }
 
     @Override

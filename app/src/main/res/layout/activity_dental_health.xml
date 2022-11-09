@@ -17,6 +17,16 @@
         android:background="#FFFFFF"
         tools:context=".DentalHealth">
 
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8_back_arrow_100" />
+
         <TextView
             android:id="@+id/specialityHealthHeader"
             android:layout_width="251dp"
@@ -65,7 +75,6 @@
             android:layout_marginStart="61dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="65dp"
-            android:layout_marginBottom="25dp"
             app:layout_constraintBottom_toTopOf="@+id/textView53"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +84,7 @@
         <TextView
             android:id="@+id/specialtyHealthPar1"
             android:layout_width="320dp"
-            android:layout_height="239dp"
+            android:layout_height="260dp"
             android:layout_marginStart="31dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="32dp"

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.huda_application.appointment.AppointmentManager;
@@ -24,6 +25,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 
 
     private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, PatientPortal ,Message_tab;
+    private ImageView profile;
     private FirebaseAuth mAuth;
 
     @Override
@@ -37,6 +39,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Our_story = findViewById(R.id.ourStoryPage);
         signOut = findViewById(R.id.logoutButton);
         Announcements = findViewById(R.id.announcementsPage);
+        profile = (ImageView) findViewById(R.id.profileIcon);
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
@@ -44,6 +47,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Announcements.setOnClickListener(this);
         PatientPortal.setOnClickListener(this);
         Message_tab.setOnClickListener(this);
+        profile.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser fbUser = mAuth.getCurrentUser();
@@ -104,6 +108,10 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         else if (view.getId() == R.id.messages_tab) {
             Intent Messages_page = new Intent(this, PatientMessages.class);
             startActivity(Messages_page);
+        }
+        else if (view.getId() == R.id.profileIcon) {
+            Intent profilePage = new Intent(this, ProfilePage.class);
+            startActivity(profilePage);
         }
     }
 }
