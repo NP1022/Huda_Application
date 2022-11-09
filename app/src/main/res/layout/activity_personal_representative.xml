@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/scrollViewAuthorization"
-    android:layout_width="409dp"
-    android:layout_height="729dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
     android:backgroundTint="@color/white"
     android:fillViewport="true"
@@ -502,7 +502,8 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/personalRep1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintVertical_bias="0.807" />
 
         <TextView
             android:id="@+id/textView14"
@@ -523,7 +524,7 @@
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="70dp"
             android:layout_marginBottom="5dp"
             android:text="3."
