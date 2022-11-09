@@ -23,6 +23,9 @@
             android:name=".message_all_patients"
             android:exported="false" />
         <activity
+            android:name=".ProfilePage"
+            android:exported="false" />
+        <activity
             android:name=".WeeklyCal"
             android:exported="false" />
         <activity
