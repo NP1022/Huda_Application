@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    >
 
     <ImageView
         android:id="@+id/hudaLogo"
@@ -17,20 +18,20 @@
         android:layout_marginRight="120dp"
         app:srcCompat="@drawable/huda_logo"/>
 
+
     <TextView
         android:id="@+id/loginHeader"
         android:layout_width="330dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
         android:text="@string/AnnouncementsHeader"
         android:textAlignment="center"
         android:textColor="#043670"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/hudaLogo"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -151,9 +152,22 @@
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
+    <Button
+        android:id="@+id/addEvent"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/buttonstyle"
+        android:onClick="addEvent"
+        android:text="Add Event" />
+
     <ListView
+        android:id="@+id/eventListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5" />
+
 
 </LinearLayout>
