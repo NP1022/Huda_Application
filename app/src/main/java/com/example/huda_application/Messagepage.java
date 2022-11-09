@@ -35,8 +35,9 @@ import java.util.ArrayList;
 import java.util.List;
 public class Messagepage extends AppCompatActivity implements View.OnClickListener{
 
-    private Messagepage.PatientViewAdapter viewAdapter;
+    private Messagepage.PatientViewAdapter2 viewAdapter;
     private ImageView backbottun;
+    private TextView MessageAll;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +56,7 @@ public class Messagepage extends AppCompatActivity implements View.OnClickListen
                             users.add(user);
                     }
 
-                    viewAdapter = new PatientViewAdapter(Messagepage.this, users);
+                    viewAdapter = new PatientViewAdapter2(Messagepage.this, users);
                     recyclerView.setAdapter(viewAdapter);
                 }
 
@@ -65,7 +66,11 @@ public class Messagepage extends AppCompatActivity implements View.OnClickListen
             });
         }
         backbottun = findViewById(R.id.backButton_message_main);
+        MessageAll = findViewById(R.id.MessageAll);
+
+
         backbottun.setOnClickListener(this);
+        MessageAll.setOnClickListener(this);
 
     }
 
@@ -74,15 +79,18 @@ public class Messagepage extends AppCompatActivity implements View.OnClickListen
         if(v.getId() == R.id.backButton_message_main){
             startActivity(new Intent(this, Adminpanel.class));
         }
+        else if(v.getId() == R.id.MessageAll){
+            startActivity(new Intent(this, message_all_patients.class));
+        }
     }
 
-    private static class PatientViewAdapter extends RecyclerView.Adapter<Messagepage.PatientViewHolder> implements View.OnClickListener {
+    private static class PatientViewAdapter2 extends RecyclerView.Adapter<Messagepage.PatientViewHolder> implements View.OnClickListener {
 
         private LayoutInflater inflater;
         private final List<User> users;
         private final Context context;
 
-        public PatientViewAdapter(Context context, List<User> users) {
+        public PatientViewAdapter2(Context context, List<User> users) {
             this.context = context;
             this.users = users;
             this.inflater = LayoutInflater.from(context);

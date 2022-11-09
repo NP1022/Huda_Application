@@ -16,8 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
-
-        <activity android:name=".WeeklyCal"
+        <activity
+            android:name=".message_all_patients"
+            android:exported="false" />
+        <activity
+            android:name=".WeeklyCal"
             android:exported="false" />
         <activity
             android:name=".AddEvent"
