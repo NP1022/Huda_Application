@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.huda_application.firebase.FirebaseClient;
@@ -30,6 +31,7 @@ import java.util.Locale;
 public class MessageSendPage extends AppCompatActivity implements View.OnClickListener{
     private EditText Message_feild;
     private User user;
+    private ImageView backbotton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +41,11 @@ public class MessageSendPage extends AppCompatActivity implements View.OnClickLi
         user = (User) temp.getSerializableExtra("user");
         Message_feild = findViewById(R.id.Message);
         AppCompatButton sendButton = findViewById(R.id.send);
+        backbotton = findViewById(R.id.backButton_message);
 
         sendButton.setOnClickListener(this);
         Message_feild.setOnClickListener(this);
+        backbotton.setOnClickListener(this);
     }
 
     @Override
@@ -55,6 +59,10 @@ public class MessageSendPage extends AppCompatActivity implements View.OnClickLi
             user.addMessages(m);
             FirebaseClient.updateUser(user);
             startActivity( new Intent(this , Messagepage.class));
+
+        }
+        else if(view.getId() == R.id.backButton_message){
+            startActivity( new Intent(this ,Messagepage.class ));
 
         }
     }
