@@ -4,6 +4,7 @@
     package="com.example.huda_application">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +17,13 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".ProfilePage"
+            android:name=".message_all_patients"
+            android:exported="false" />
+        <activity
+            android:name=".WeeklyCal"
+            android:exported="false" />
+        <activity
+            android:name=".AddEvent"
             android:exported="false" />
         <activity
             android:name=".PatientMessages"
@@ -32,9 +39,6 @@
             android:exported="false" />
         <activity
             android:name=".calendar_item"
-            android:exported="false" />
-        <activity
-            android:name=".weeklyCalendar"
             android:exported="false" />
         <activity
             android:name=".UserAppointment"

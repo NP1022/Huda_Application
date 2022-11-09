@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class CalAdapter extends RecyclerView.Adapter<CalViewHolder>
 {
+
     private final ArrayList<LocalDate> days;
     private final OnItemListener onItemListener;
 
@@ -38,7 +39,7 @@ public class CalAdapter extends RecyclerView.Adapter<CalViewHolder>
         else
             layoutParams.height = (int) (parent.getHeight());
 
-        return new CalViewHolder(view, onItemListener);
+        return new CalViewHolder(view, onItemListener, days);
     }
 
     @Override
@@ -63,6 +64,8 @@ public class CalAdapter extends RecyclerView.Adapter<CalViewHolder>
 
     public interface OnItemListener
     {
-        void onItemClick(int position, String dayText);
+        void onItemClick(int position, LocalDate date);
     }
+
+
 }

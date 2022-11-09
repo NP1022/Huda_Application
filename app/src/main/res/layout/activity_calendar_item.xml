@@ -8,9 +8,11 @@
 
     <TextView
         android:id="@+id/calendarDayText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
         android:text="@string/calItem"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:flow_verticalBias="0.25"

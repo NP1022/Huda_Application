@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.example.huda_application.user.PatientFormData;
 import com.example.huda_application.user.UserManager;
 
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.regex.Pattern;
 
 public class PatientForm extends AppCompatActivity
@@ -41,6 +43,10 @@ public class PatientForm extends AppCompatActivity
     private static Pattern MARITAL_PATTERN = Pattern.compile("^(?:Single|single|Married|married|partner|Partner|Separated|separated|Divorced|divorced|Widowed|widowed)$");
 
     private static Pattern LETTERS_PATTERN = Pattern.compile("^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$"); // Letters pattern match
+
+    private static Pattern DIGITS_PATTERN = Pattern.compile("[0-9]+");
+
+    private static Pattern MONEY_PATTERN = Pattern.compile("^\\$(([1-9]\\d{0,2}(,\\d{3})*)|(([1-9]\\d*)?\\d))(\\.\\d\\d)?$");
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -404,10 +410,16 @@ public class PatientForm extends AppCompatActivity
                     maritalStatusPatient.setError("Marital Status is required");
                     maritalStatusPatient.requestFocus();
                 }
-                else if (TextUtils.isEmpty(houseIncomeTxt) || houseIncomeTxt.length() > 20)
+                else if (TextUtils.isEmpty(houseIncomeTxt) || houseIncomeTxt.length() > 8)
                 {
                     Toast.makeText(PatientForm.this, "Must fill in household income", Toast.LENGTH_LONG).show();
                     incomeHousehold.setError("Income is required");
+                    incomeHousehold.requestFocus();
+                }
+                else if (!MONEY_PATTERN.matcher(houseIncomeTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this, "Must be valid income", Toast.LENGTH_LONG).show();
+                    incomeHousehold.setError("Income format is required");
                     incomeHousehold.requestFocus();
                 }
                 if (weekly.isChecked())
@@ -426,10 +438,16 @@ public class PatientForm extends AppCompatActivity
                 {
                     patientIncome.append("Year");
                 }
-                else if (TextUtils.isEmpty(houseHoldTxt) || houseHoldTxt.length() > 20)
+                else if (TextUtils.isEmpty(houseHoldTxt) || houseHoldTxt.length() > 2)
                 {
                     Toast.makeText(PatientForm.this, "Must fill in Family size", Toast.LENGTH_LONG).show();
                     houseHoldSize.setError("Household size is required");
+                    houseHoldSize.requestFocus();
+                }
+                else if (!DIGITS_PATTERN.matcher(houseHoldTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this, "Must be only digits", Toast.LENGTH_LONG).show();
+                    houseHoldSize.setError("Number format is required");
                     houseHoldSize.requestFocus();
                 }
                 if (unEmp.isChecked())
@@ -505,7 +523,7 @@ public class PatientForm extends AppCompatActivity
                 else if(!PHONE_PATTERN.matcher(contactPhoneTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Contact phone must be filled", Toast.LENGTH_LONG).show();
-                    emergencyContactPhone.setError("Contact number is required");
+                    emergencyContactPhone.setError("Number format is required");
                     emergencyContactPhone.requestFocus();
                 }
                 else if (TextUtils.isEmpty(contactPhoneTxt))

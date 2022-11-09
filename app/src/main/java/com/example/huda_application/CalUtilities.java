@@ -2,6 +2,7 @@ package com.example.huda_application;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -10,13 +11,28 @@ public class CalUtilities {
 
     public static LocalDate selectedDate;
 
-    public static String monthYearFromDate(LocalDate date)
+    // Function formats the date input from the add event form
+    public static String dateFormatted(LocalDate date)
     {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy");
         return date.format(formatter);
     }
 
-    // Function declares and displays the days in the month
+    // Function formats the time input from the add event form
+    public static String timeFormatted(LocalTime time)
+    {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss ");
+        return time.format(formatter);
+    }
+
+    // function formats the month year display in the weekly and monthly calendar
+    public static String monthYearFromDate(LocalDate date)
+    {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+        return date.format(formatter);
+    }
+
+//     Function declares and displays the days in the month
     public static ArrayList<LocalDate> daysInMonthArray(LocalDate date)
     {
         ArrayList<LocalDate> daysInMonthArray = new ArrayList<>();

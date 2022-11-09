@@ -57,7 +57,8 @@ public class LabAccess extends AppCompatActivity
                 {
                     Toast.makeText(LabAccess.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
                 });
-
+                Intent intent = new Intent(LabAccess.this, MainApplication.class);
+                startActivity(intent);
 
             }
         });

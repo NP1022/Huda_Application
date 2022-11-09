@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.huda_application.user.UserManager;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Adminpanel extends AppCompatActivity implements View.OnClickListener {
-    private TextView Appointments, Messagepage;
+    private TextView Appointments, Messagepage, signout;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,9 +20,11 @@ public class Adminpanel extends AppCompatActivity implements View.OnClickListene
 
         Appointments = (TextView) findViewById(R.id.Appointments);
         Messagepage =(TextView) findViewById(R.id.MessagePatient);
-
+        signout = findViewById(R.id.logoutButton_admin);
         Appointments.setOnClickListener(this);
         Messagepage.setOnClickListener(this);
+        signout.setOnClickListener(this);
+        mAuth = FirebaseAuth.getInstance();
 
     }
 
@@ -33,5 +39,9 @@ public class Adminpanel extends AppCompatActivity implements View.OnClickListene
             Intent Message_Patient = new Intent(this , Messagepage.class);
             startActivity(Message_Patient);
         }
+        else if(view.getId() == R.id.logoutButton_admin) {
+
+            mAuth.signOut();
+            startActivity(new Intent(Adminpanel.this, MainActivity.class));}
     }
 }

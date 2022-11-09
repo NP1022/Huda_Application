@@ -175,7 +175,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="appointmentsHeader">APPOINTMENTS</string>
 
     <!--    Prim ary Services Page-->
-    <string name="PrimaryServicesHeader">PRIMARY SERVICES</string>
+    <string name="PrimaryServicesHeader">Primary Services</string>
     <string name="PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string>
     <string name="PrimaryCarePar1"><b>Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</b>
         \n\nHUDA aims to bring primary care and specialized services to uninsured and under-insured in the Metro Detroit area. We provide preventative primary care services in a person-focused community health clinic, our goal is to make Michigan healthier\!
@@ -191,8 +191,8 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
         \n\n<li>Nutrition Education</li>  </string>
 
     <!--    Dental Health Page-->
-    <string name="DentalHealthHeader">DENTAL CARE</string>
-    <string name="DentalHealthPar1"><b>Many people wait to have necessary dental work done because they don’t have insurance, however small dental problems can quickly become incredibly painful if left alone.</b> \n\nCome in to HUDA for cleanings, fillings, extractions and exams to keep your teeth healthy and receive a referral to a specialist if needed.</string>
+    <string name="DentalHealthHeader">Dental Services</string>
+    <string name="DentalHealthPar1"><b>Many people wait to have necessary dental work done because they don’t have insurance, however small dental problems can quickly become incredibly painful if left alone.</b> Come in to HUDA for cleanings, fillings, extractions and exams to keep your teeth healthy and receive a referral to a specialist if needed.</string>
     <string name="DentalHealthPar2"><b>Our Dental Services Include:</b>
         \n\n<li>Dental screenings, and X-Rays</li>
         \n\n<li>Deep Cleanings</li>
@@ -209,8 +209,8 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
         \n\n<li>Fatin Amireh, R.D.H.</li></string>
 
     <!--    Vision Care Page-->
-    <string name="VisionCareHeader">VISION CARE</string>
-    <string name="VisionCarePar1"><b>Vision screenings is an effective method to identify individuals with visual impairment or eye conditions that are likely to lead to vision loss. </b>  \n\nWe perform screenings in-house and provide no-cost eye wear and referrals to low-cost local ophthalmologists as needed.</string>
+    <string name="VisionCareHeader">Vision Care</string>
+    <string name="VisionCarePar1"><b>Vision screenings is an effective method to identify individuals with visual impairment or eye conditions that are likely to lead to vision loss. </b>  We perform screenings in-house and provide no-cost eye wear and referrals to low-cost local ophthalmologists as needed.</string>
     <string name="VisionCarePar2"><b>Our Vision Screening Options:</b>
         \n\n<li>Glaucoma Screenings</li>
         \n\n<li>Cataract Screenings</li>
@@ -227,8 +227,8 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
         \n\n<li>Elizabeth Borowiec, O.D</li></string>
 
     <!--    Mental Health Page-->
-    <string name="MentalHealthHeader">MENTAL HEALTH</string>
-    <string name="MentalHealthPar1"><b>We have psychiatrists on staff along with our licensed social workers to provide therapy and treatment for a wide range of mental health concerns. </b> \n\nWe offer free counseling and treatment to veterans, homeless, uninsured, and the working underinsured.
+    <string name="MentalHealthHeader">Mental Health</string>
+    <string name="MentalHealthPar1"><b>We have psychiatrists on staff along with our licensed social workers to provide therapy and treatment for a wide range of mental health concerns. </b> We offer free counseling and treatment to veterans, homeless, uninsured, and the working underinsured.
         \n\nSince the onset of the Covid-19 pandemic our psychiatry services have transitioned to telemedicine. We currently have 2 Psychiatrists, a Mental Health Nurse Practitioner and a Therapist who all volunteer with HUDA Clinic allowing us to provide treatment for a wide range of mental health concerns.</string>
     <string name="MentalHealthPar2"><b>Our Mental Health Services Include:</b>
         \n\n<li>Prescribing psychiatrist on site</li>
@@ -245,8 +245,8 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
         \n\n<li>Sarah Kappler, TLLP</li></string>
 
     <!--    Speciality Care Page-->
-    <string name="SpecialtyCareHeader">SPECIALTY SERVICES</string>
-    <string name="SpecialityCarePar1"><b>Within the field of medicine, there are many sub-specialties when coordinating care to patients. At HUDA, we provide a range of specialty care and consultations to our patients, with the aim of expanding access to healthcare services. </b> \n\nWe have created an integrated health model at HUDA through opening multiple specialty services creating a place where most patient needs can be met. All specialty services require a referral from a HUDA primary care provider. </string>
+    <string name="SpecialtyCareHeader">Speciality Services</string>
+    <string name="SpecialityCarePar1"><b>Within the field of medicine, there are many sub-specialties when coordinating care to patients. At HUDA, we provide a range of specialty care and consultations to our patients, with the aim of expanding access to healthcare services. </b> We have created an integrated health model at HUDA through opening multiple specialty services creating a place where most patient needs can be met. All specialty services require a referral from a HUDA primary care provider. </string>
     <string name="SpecialityCarePar2">  <b>Our Speciality Services/Consultations Include:</b>
         \n\n <li>Physical Therapy</li>
         \n\n <li>Endocrinology</li>
