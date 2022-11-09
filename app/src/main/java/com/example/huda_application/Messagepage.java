@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -32,9 +33,10 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
-public class Messagepage extends AppCompatActivity {
+public class Messagepage extends AppCompatActivity implements View.OnClickListener{
 
     private Messagepage.PatientViewAdapter viewAdapter;
+    private ImageView backbottun;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,8 +64,16 @@ public class Messagepage extends AppCompatActivity {
                 }
             });
         }
+        backbottun = findViewById(R.id.backButton_message_main);
+        backbottun.setOnClickListener(this);
 
+    }
 
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.backButton_message_main){
+            startActivity(new Intent(this, Adminpanel.class));
+        }
     }
 
     private static class PatientViewAdapter extends RecyclerView.Adapter<Messagepage.PatientViewHolder> implements View.OnClickListener {
