@@ -17,10 +17,12 @@
     android:layout_height="match_parent"
     tools:context=".LabAccess">
 
+
     <Button
         android:id="@+id/returnPatientPortal"
         android:layout_width="189dp"
         android:layout_height="56dp"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/buttonstyle"
         android:text="Submit"
@@ -28,6 +30,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -72,5 +75,34 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labAccessHeader" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="If you would like to access your visit notes in section1 you will select:\n 'For Period' (All time is selected by default)\n'Outpatient Visit Documents': CCDA is the Consolidated Clinical Document Architecture and provides your complete Health Record in XML or PDF format.\nCCD is The Continuity of Care Document which provides a a snapshot of your medical history based on visits, including information critical to continuing care in XML format only"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Referral Notes are created when you are referred to another healthcare provider XML only. Referral notes are generated AFTER your visit at HUDA to share your labs with your designated Primary Care Provider. All of these directions are also available on the Patient Portal."
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
