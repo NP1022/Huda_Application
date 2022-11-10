@@ -134,7 +134,7 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                 else // once every check is successful then the else block shall be executed
                 {
                     // Call method to update the password for the user
-                   updatePass(currentPassTxt,newPassTxt);
+                   updatePass(emailTxt,currentPassTxt,newPassTxt);
                 }
 
 
@@ -142,43 +142,53 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
 
     }
 
-    private void updatePass(String oldPassStr, String newPassStr)
+    private void updatePass(String emailStr, String oldPassStr, String newPassStr)
     {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        AuthCredential authCredential = EmailAuthProvider.getCredential(user.getEmail() ,oldPassStr);
+        AuthCredential authCredential = EmailAuthProvider.getCredential(emailStr ,oldPassStr);
 
-        user.reauthenticate(authCredential).addOnSuccessListener(new OnSuccessListener<Void>()
+        // try catch block to catch exception
+        try
         {
-            @Override
-            public void onSuccess(Void unused)
+
+            user.reauthenticate(authCredential).addOnSuccessListener(new OnSuccessListener<Void>()
             {
-                user.updatePassword(newPassStr).addOnSuccessListener(new OnSuccessListener<Void>()
+                @Override
+                public void onSuccess(Void unused)
                 {
-                    @Override
-                    public void onSuccess(Void unused)
+                    user.updatePassword(newPassStr).addOnSuccessListener(new OnSuccessListener<Void>()
                     {
-                        // Password updated toast message shown to user
-                        Toast.makeText(updatePassword.this,"Password updated",Toast.LENGTH_SHORT).show();
-                    }
-                }).addOnFailureListener(new OnFailureListener()
+                        @Override
+                        public void onSuccess(Void unused)
+                        {
+                            // Password updated toast message shown to user
+                            Toast.makeText(updatePassword.this,"Password updated",Toast.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener()
+                    {
+                        @Override
+                        public void onFailure(@NonNull Exception e)
+                        {
+                            // Password failure toast message shown to user
+                            Toast.makeText(updatePassword.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            }).addOnFailureListener(new OnFailureListener()
+            {
+                @Override
+                public void onFailure(@NonNull Exception e)
                 {
-                    @Override
-                    public void onFailure(@NonNull Exception e)
-                    {
-                        // Password failure toast message shown to user
-                        Toast.makeText(updatePassword.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-        }).addOnFailureListener(new OnFailureListener()
+                    // Authentication failed, display reason to user
+                    Toast.makeText(updatePassword.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+        catch(Exception e) // catch the exception
         {
-            @Override
-            public void onFailure(@NonNull Exception e)
-            {
-                // Authentication failed, display reason to user
-                Toast.makeText(updatePassword.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
-            }
-        });
+            Toast.makeText(updatePassword.this,"" +e.getMessage(),Toast.LENGTH_SHORT).show();
+        }
+
     }
 }
