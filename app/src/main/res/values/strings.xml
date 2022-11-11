@@ -278,4 +278,14 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="nextMonthButton"><![CDATA[->]]></string>
     <string name="PrevMonthButton"><![CDATA[<-]]></string>
     <string name="calItem">1</string>
+    <string name="title_activity_profile_menu">ProfileMenu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_update_password">Update Password</string>
+    <string name="menu_messages">Messages</string>
+    <string name="menu_logout">Logout</string>
 </resources>
