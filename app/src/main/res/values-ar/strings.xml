@@ -178,106 +178,56 @@
 
     <!--    Primary Services Page-->
     <string name = "PrimaryServicesHeader">الخدمات الأولية</string>
-    <string name = "PrimaryCareInternalMedicine">الرعاية الأولية / الطب الباطني</string>
-    <string name = "PrimaryCarePar1">عادة ما يكون مقدمو الرعاية الأولية هم خط الاتصال الأول للمرضى ؛ معالجة المخاوف الصحية العامة وتوفير التعليم والأدوية والإحالات المتخصصة حسب الحاجة. تهدف هدى إلى تقديم الرعاية الأولية والخدمات المتخصصة لغير المؤمن عليهم وغير المؤمن عليهم في منطقة مترو ديترويت. نحن نقدم خدمات الرعاية الأولية الوقائية في عيادة صحية مجتمعية تركز على الفرد ، وهدفنا هو جعل ميشيغان أكثر صحة.
-توفر عيادة هدى الأدوية المجانية لمرضانا ، كما تقدم خدمات معملية مجانية لمرضانا.</string>
-    <string name = "PrimaryCarePar2"><b>
-        ہماری بنیادی دیکھ بھال کی خدمات میں شامل ہیں:</b>
-        \n\n  <li>صحت کے جائزے</li>
-        \n\n <li> شدید اور دائمی بیماری کا انتظام</li>
-         \n\n<li> لیبارٹری کی خدمات (خون کا کام)</li>
-         \n\n<li> کوئی لاگت فارمیسی</li>
-         \n\n<li> ذیابیطس کی اسکریننگ اور علاج</li>
-         \n\n<li> صحت کی تعلیم اور وسائل</li>
-         \n\n<li> کولیسٹرول اور بلڈ پریشر کی جانچ</li>
-        \n\n<li> غذائیت کی تعلیم</li></string>
+    <string name = "PrimaryCarePar1">عادة ما يكون مقدمو الرعاية الأولية هم خط الاتصال الأول للمرضى ؛ معالجة المخاوف الصحية العامة وتوفير التعليم والأدوية والإحالات المتخصصة حسب الحاجة.</string>
+    <string name = "HealthAssessments">التقييمات الصحية</string>
+    <string name = "IllnessManagement">إدارة الأمراض الحادة والمزمنة</string>
+    <string name = "LabServices">خدمات المختبرات</string>
+    <string name = "NoCostPharm">صيدلية بدون تكلفة</string>
+    <string name = "DiabetesScreening">فحص مرض السكري وعلاجه</string>
+    <string name = "CholBP">فحوصات الكوليسترول وضغط الدم</string>
+    <string name = "HealthEd">التثقيف الصحي والموارد</string>
+    <string name ="servicesInclude">تشمل الخدمات</string>
 
     <!--    Dental Health Page-->
     <string name = "DentalHealthHeader">خدمات طب الأسنان</string>
-    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
-    <string name = "DentalHealthPar1"> ينتظر العديد من الأشخاص إجراء أعمال الأسنان الضرورية لأنهم لا يملكون تأمينًا ، ومع ذلك يمكن أن تصبح مشاكل الأسنان الصغيرة مؤلمة بشكل لا يُصدق إذا تُركت بمفردها.  تعال إلى هدى للتنظيف والحشوات والقلع والفحوصات اللازمة حافظ على صحة أسنانك واحصل على إحالة إلى أخصائي إذا لزم الأمر.</string>
-    <string name="DentalHealthPar2"><b>تشمل خدمات طب الأسنان لدينا:</b>
-        \n\n <li> فحوصات الأسنان والأشعة السينية</li>
-         \n\n <li> التنظيف العميق</li>
-         \n\n <li> الحشوات المركبة</li>
-         \n\n  <li>خلع الأسنان</li>
-         \n\n  <li>الإحالات إلى أطباء الأسنان منخفضي التكلفة حسب الحاجة </li></string>
-    <string name="DentalHealthPar3"><b>أطباء الأسنان لدينا:</b>
-        \n\n <li>Shakeel Niazi, D.D.S.</li>
-        \n\n <li>Ahmed Allam, D.D.S.</li>
-        \n\n <li>Asmaa Abdel-Salam, D.D.S.</li>
-        \n\n <li>Sumera Khalid, D.D.S.</li>
-        \n\n <li>Umair Niazi, D.M.D.</li>
-        \n\n <li>Rachel Mundus, R.D.</li>
-        \n\n <li>Fatin Amireh, R.D.H.</li></string>
+    <string name="DentalHealthPar1">ينتظر الكثير من الناس لإنجاز أعمال الأسنان الضرورية لأنهم ليس لديهم تأمين ، ولكن مشاكل الأسنان الصغيرة يمكن أن تصبح مؤلمة بشكل لا يصدق بسرعة إذا تُركت بمفردها. تعال إلى HUDA للتنظيف والحشوات والقلع والفحوصات للحفاظ على صحة أسنانك وتلقي إحالة إلى أخصائي إذا لزم الأمر.</string>
+    <string name="DentalScreenings">فحوصات الأسنان والأشعة السينية</string>
+    <string name="DeepCleanings">التنظيف العميق</string>
+    <string name="CompositeFillings">الحشوات المركبة</string>
+    <string name="ToothExtractions">قلع الأسنان</string>
 
     <!--    Vision Care Page-->
     <string name = "VisionCareHeader"> العناية بالرؤية </string>
     <string name = "VisionCarePar1">  تعد فحوصات الرؤية طريقة فعالة لتحديد الأفراد الذين يعانون من ضعف البصر أو حالات العين التي من المحتمل أن تؤدي إلى فقدان البصر.  نجري فحوصات داخل الشركة ونقدم ملابس عيون مجانية وإحالات لأطباء العيون المحليين منخفضي التكلفة حسب الحاجة. </string>
-    <string name = "VisionCarePar2"><b>  خيارات فحص الرؤية لدينا:</b>
-        \n\n  <li>فحوصات الجلوكوما</li>
-        \n\n  <li>فحوصات المياه البيضاء</li>
-        \n\n  <li>فحوصات التنكس البقعي</li>
-        \n\n  <li>ارتداء مجاني للعينين</li>
-        \n\n  <li>الإحالات إلى اختصاصيي الرؤية </li></string>
-    <string name = "VisionCarePar3">  أطباء العيون / فاحصي البصريات لدينا:
-        \n\n <li>M. Hanif Peracha, M.D.</li>
-        \n\n <li>Meiraj Siddiqui, M.D.</li>
-        \n\n <li>Benjamin Whittredge, O.D.</li>
-        \n\n <li>Christopher Burgess, O.D.</li>
-        \n\n <li>Naureen Haroon, O.D.</li>
-        \n\n <li>Suleman Hans, O.D.</li>
-        \n\n <li>Elizabeth Borowiec, O.D</li></string>
+    <string name ="Glaucoma">فحوصات الجلوكوما</string>
+    <string name ="Cataract">فحوصات المياه البيضاء</string>
+    <string name ="Macular">فحوصات التنكس البقعي</string>
+    <string name ="EyeWear">ارتداء مجاني للعينين</string>
 
     <!-- Mental Health Page -->
     <string name = "MentalHealthHeader"> الصحة العقلية </string>
-    <string name = "MentalHealthPar1">  لدينا أطباء نفسيون ضمن طاقم العمل جنبًا إلى جنب مع الأخصائيين الاجتماعيين المرخصين لدينا لتوفير العلاج والعلاج لمجموعة كبيرة من مشكلات الصحة العقلية.  نحن نقدم المشورة والعلاج مجانًا لقدامى المحاربين والمشردين ، غير المؤمن عليهم ، والعاملين غير المؤمن عليهم.
-        \n\n منذ ظهور جائحة كوفيد -19 ، تحولت خدمات الطب النفسي لدينا إلى التطبيب عن بعد. لدينا حاليًا طبيبان نفسيان وممارس للصحة العقلية ومعالج يتطوع جميعًا مع عيادة هدى مما يسمح لنا بتوفير العلاج لمجموعة واسعة من مشكلات الصحة العقلية. </string>
-    <string name = "MentalHealthPar2"><b>  تشمل خدمات الصحة العقلية لدينا:</b>
-        \n\n  <li>وصف الطبيب النفسي في الموقع</li>
-        \n\n  <li>إرشاد الكبار</li>
-        \n\n  <li>القلق / الاكتئاب</li>
-        \n\n  <li>الاضطرابات ثنائية القطب</li>
-        \n\n  <li>اضطرابات الأكل</li>
-        \n\n  <li>الاضطرابات الفصامية العاطفية والمزيد  </li></string>
-    <string name = "MentalHealthPar3">
-        <b>أطبائنا النفسيين:</b>
-        \n\n <li>Saba Maroof, M.D.</li>
-        \n\n <li>Mazhar Hussain, M.D.</li>
-        \n\n <b>مقدمي الدعم:</b>
-        \n\n <li>Joann Harrison, MHNP, FNP-BC</li>
-        \n\n <li>Sarah Kappler, TLLP</li></string>
+    <string name="MentalHealthPar1">لدينا أطباء نفسيون ضمن طاقم العمل جنبًا إلى جنب مع الأخصائيين الاجتماعيين لدينا لتقديم العلاج والعلاج لمجموعة واسعة من مشكلات الصحة العقلية. نحن نقدم الاستشارات والعلاج المجاني لقدامى المحاربين ، والمشردين ، وغير المؤمن عليهم ، والعاملين غير المؤمن عليهم.</string>
+    <string name="Psych">وصف الطبيب النفسي في الموقع</string>
+    <string name="AdultCounseling">إرشاد الكبار</string>
+    <string name="AnxietyandDep">القلق / الاكتئاب</string>
+    <string name="Bipolar">الاضطرابات ثنائية القطب</string>
+    <string name="Eating">اضطرابات الأكل</string>
+    <string name="Schiz">اضطرابات الفصام العاطفي</string>
+    <string name="AndMore">و اكثر</string>
 
     <!--    Speciality Care Page-->
     <string name = "SpecialtyCareHeader"> الخدمات المتخصصة </string>
-    <string name = "SpecialityCarePar1">  في مجال الطب ، هناك العديد من التخصصات الفرعية عند تنسيق الرعاية للمرضى. في هدى ، نقدم مجموعة من الرعاية المتخصصة والاستشارات لمرضانا ، بهدف توسيع نطاق الوصول إلى خدمات الرعاية الصحية.  لقد أنشأنا نموذجًا صحيًا متكاملًا في هدى من خلال فتح خدمات متخصصة متعددة لخلق مكان يمكن فيه تلبية معظم احتياجات المرضى. تتطلب جميع الخدمات المتخصصة إحالة من مقدم الرعاية الأولية من HUDA. </string>
-    <string name = "SpecialityCarePar2"><b>  تشمل خدماتنا / استشاراتنا المتخصصة:</b>
-        \n\n  <li>العلاج الطبيعي</li>
-        \n\n  <li>طب الغدد الصماء</li>
-        \n\n  <li>أمراض القلب</li>
-        \n\n  <li>معالجة الأقدام</li>
-        \n\n  <li>أمراض الكلى</li>
-        \n\n  <li>أمراض الجهاز الهضمي</li>
-        \n\n  <li>أنف وأذن وحنجرة</li>
-        \n\n  <li>أمراض الكبد</li>
-        \n\n  <li>أمراض الدم</li>
-        \n\n  <li>أمراض الرئة  </li></string>
-    <string name = "SpecialityCarePar3"><b>  مزودو الخدمات المتخصصون لدينا:</b>
-        \n\n <li>Jawwad Rashid, P.T.A</li>
-        \n\n <li>Asadullah Mohammed, M.D.</li>
-        \n\n <li>Naseer Ahmad, M.D.</li>
-        \n\n <li>Maha Alhusseini, M.D.</li>
-        \n\n <li>Samer Salka, M.D.</li>
-        \n\n <li>Maha Alhusseini, M.D.</li>
-        \n\n <li>Syed Ghani, D.P.M.</li>
-        \n\n <li>Naveed Aslam, M.D.</li>
-        \n\n <li>Jukaku Tayeb, M.D.</li>
-        \n\n <li>Firdous Siddiqui, M.D.</li>
-        \n\n <li>Yousef Siddiqui, M.D.</li>
-        \n\n <li>Uzma Rehman, D.O.</li>
-        \n\n <li>Zaahir Turfe, M.D.</li>
-        \n\n <li>Ranya Selim, M.D.</li>
-        \n\n <li>Syed Akbar, M.D.</li></string>
+    <string name ="SpecialityCarePar1">في مجال الطب ، هناك العديد من التخصصات الفرعية عند تنسيق الرعاية للمرضى. في هدى ، نقدم مجموعة من الرعاية المتخصصة والاستشارات لمرضانا ، بهدف توسيع نطاق الوصول إلى خدمات الرعاية الصحية. تتطلب جميع الخدمات المتخصصة إحالة من مقدم الرعاية الأولية من HUDA.</string>
+    <string name="PhysTherapy">العلاج الطبيعي</string>
+    <string name="Endocrinology">طب الغدد الصماء</string>
+    <string name="Cardiology">أمراض القلب</string>
+    <string name="Podiatry">معالجة الأقدام</string>
+    <string name="Nephrology">أمراض الكلى</string>
+    <string name="Gastroenterology">أمراض الجهاز الهضمي</string>
+    <string name="ENT">أنف وأذن وحنجرة</string>
+    <string name="Hepatology">أمراض الكبد</string>
+    <string name="Hematology">أمراض الدم</string>
+    <string name="Pulmonology">أمراض الرئة</string>
 
     <string name="prevMonthButton"><![CDATA[<-]]></string>
     <string name="nextMonthButton"><![CDATA[->]]></string>

@@ -3,12 +3,14 @@ package com.example.huda_application;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
-public class PrimaryServices extends AppCompatActivity implements View.OnClickListener {
-
+public class PrimaryServices extends AppCompatActivity implements View.OnClickListener
+{
     private ImageView backButton;
 
     @Override
@@ -20,8 +22,10 @@ public class PrimaryServices extends AppCompatActivity implements View.OnClickLi
         backButton.setOnClickListener(this);
     }
 
-    public void onClick(View view) {
-        if (view.getId() == R.id.backButton) {
+    public void onClick(View view)
+    {
+        if (view.getId() == R.id.backButton)
+        {
             Intent prev = new Intent(this, NewLogin.class);
             startActivity(prev);
         }

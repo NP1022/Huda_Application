@@ -17,14 +17,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icons8_back_arrow_100" />
+
     <ImageView
         android:id="@+id/hudaLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="130dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="0dp"
         android:layout_marginRight="120dp"
-        app:srcCompat="@drawable/huda_logo"/>
+        app:srcCompat="@drawable/huda_logo" />
 
     <TextView
         android:id="@+id/loginHeader"

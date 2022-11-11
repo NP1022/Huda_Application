@@ -176,105 +176,57 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
 
     <!--    Primary Services Page-->
     <string name = "PrimaryServicesHeader">প্রাথমিক পরিষেবা</string>
-    <string name = "PrimaryCareInternalMedicine">প্রাইমারি কেয়ার / ইন্টারনাল মেডিসিন</string>
-    <string name = "PrimaryCarePar1">প্রাথমিক যত্ন প্রদানকারীরা সাধারণত রোগীদের যোগাযোগের প্রথম লাইন হয়; সাধারণ স্বাস্থ্য উদ্বেগের চিকিৎসা করা, শিক্ষা, ওষুধ এবং প্রয়োজন অনুযায়ী বিশেষ রেফারেল প্রদান করা। HUDA-এর লক্ষ্য মেট্রো ডেট্রয়েট এলাকায় বীমাবিহীন এবং কম-বীমাকৃতদের প্রাথমিক যত্ন এবং বিশেষায়িত পরিষেবা আনা। আমরা একটি ব্যক্তি-কেন্দ্রিক কমিউনিটি স্বাস্থ্য ক্লিনিকে প্রতিরোধমূলক প্রাথমিক যত্ন পরিষেবা প্রদান করি, আমাদের লক্ষ্য মিশিগানকে স্বাস্থ্যকর করা.
-HUDA ক্লিনিক আমাদের রোগীদের বিনামূল্যে ওষুধ সরবরাহ করে, এবং আমাদের রোগীদের বিনা মূল্যে পরীক্ষাগার পরিষেবা প্রদান করে।</string>
-    <string name = "PrimaryCarePar2"><b>আমাদের প্রাথমিক পরিচর্যা পরিষেবাগুলির মধ্যে রয়েছে:</b>
-        \n\n  <li>স্বাস্থ্য মূল্যায়ন</li>
-        \n\n  <li>তীব্র এবং দীর্ঘস্থায়ী অসুস্থতা ব্যবস্থাপনা</li>
-        \n\n <li>ল্যাবরেটরি পরিষেবা (রক্তের কাজ)</li>
-        \n\n <li>কোন খরচ নেই ফার্মেসি</li>
-        \n\n <li>ডায়াবেটিস স্ক্রীনিং এবং চিকিৎসা</li>
-         \n\n <li>স্বাস্থ্য শিক্ষা এবং সম্পদ</li>
-        \n\n <li>কোলেস্টেরল এবং রক্তচাপ স্ক্রীনিং</li>
-        \n\n <li>পুষ্টি শিক্ষা </li></string>
+    <string name="PrimaryCarePar1">প্রাথমিক যত্ন প্রদানকারীরা সাধারণত রোগীদের যোগাযোগের প্রথম লাইন হয়; সাধারণ স্বাস্থ্য উদ্বেগের চিকিৎসা করা, শিক্ষা, ওষুধ এবং প্রয়োজন অনুযায়ী বিশেষ রেফারেল প্রদান করা।</string>
+    <string name = "HealthAssessments">স্বাস্থ্য মূল্যায়ন</string>
+    <string name = "IllnessManagement">তীব্র এবং দীর্ঘস্থায়ী অসুস্থতা ব্যবস্থাপনা</string>
+    <string name = "LabServices">ল্যাবরেটরি পরিষেবা</string>
+    <string name = "NoCostPharm">নো কস্ট ফার্মেসি</string>
+    <string name = "DiabetesScreening">ডায়াবেটিস স্ক্রীনিং এবং চিকিত্সা</string>
+    <string name = "CholBP">কোলেস্টেরল এবং রক্তচাপ স্ক্রীনিং</string>
+    <string name = "HealthEd">স্বাস্থ্য শিক্ষা এবং সম্পদ</string>
+    <string name ="servicesInclude">পরিষেবা অন্তর্ভুক্ত</string>
+
 
     <!--    Dental Health Page-->
     <string name = "DentalHealthHeader">ডেন্টাল পরিষেবা</string>
-    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
     <string name = "DentalHealthPar1">অনেক লোক প্রয়োজনীয় দাঁতের কাজ করার জন্য অপেক্ষা করে কারণ তাদের বীমা নেই, তবে ছোট দাঁতের সমস্যাগুলি একা থাকলে দ্রুত অবিশ্বাস্যভাবে বেদনাদায়ক হয়ে উঠতে পারে। আপনার দাঁত সুস্থ রাখতে পরিষ্কার, ফিলিংস, নিষ্কাশন এবং পরীক্ষার জন্য HUDA-তে আসুন এবং প্রয়োজনে বিশেষজ্ঞের কাছে রেফারেল পান।</string>
-    <string name="DentalHealthPar2"><b>আমাদের ডেন্টাল পরিষেবাগুলি অন্তর্ভুক্ত:</b>
-        \n\n <li>ডেন্টাল স্ক্রীনিং, এবং এক্স-রে</li>
-        \n\n <li>গভীর পরিচ্ছন্নতা</li>
-        \n\n <li>কম্পোজিট ফিলিংস</li>
-        \n\n <li>দাঁত তোলা</li>
-        \n\n <li>প্রয়োজনে কম খরচে দাঁতের ডাক্তারের কাছে রেফারেল</li></string>
-    <string name="DentalHealthPar3"><b>আমাদের দাঁতের ডাক্তার:</b>
-        \n\n <li>Shakeel Niazi, D.D.S.</li>
-        \n\n <li>Ahmed Allam, D.D.S.</li>
-        \n\n <li>Asmaa Abdel-Salam, D.D.S.</li>
-        \n\n <li>Sumera Khalid, D.D.S.</li>
-        \n\n <li>Umair Niazi, D.M.D.</li>
-        \n\n <li>Rachel Mundus, R.D.</li>
-        \n\n <li>Fatin Amireh, R.D.H.</li></string>
+    <string name="DentalScreenings">ডেন্টাল স্ক্রীনিং, এবং এক্স-রে</string>
+    <string name="DeepCleanings">গভীর পরিচ্ছন্নত</string>
+    <string name="CompositeFillings">কম্পোজিট ফিলিংস</string>
+    <string name="ToothExtractions">দাঁত তোলা</string>
 
     <!--    Vision Care Page-->
     <string name = "VisionCareHeader">ভিশন কেয়ার</string>
     <string name = "VisionCarePar1">দৃষ্টি স্ক্রীনিং হল দৃষ্টি প্রতিবন্ধকতা বা চোখের অবস্থা যা দৃষ্টিশক্তি হারাতে পারে এমন ব্যক্তিদের সনাক্ত করার একটি কার্যকর পদ্ধতি। আমরা ঘরে বসেই স্ক্রীনিং করি এবং প্রয়োজনে কম খরচে স্থানীয় চক্ষু বিশেষজ্ঞদের কাছে বিনা খরচে চোখের পরিধান এবং রেফারেল প্রদান করি।</string>
-    <string name = "VisionCarePar2"><b>আমাদের দৃষ্টি স্ক্রীনিং বিকল্প:</b>
-        \n\n <li>গ্লুকোমা স্ক্রীনিং</li>
-        \n\n <li>ছানি স্ক্রীনিং</li>
-        \n\n <li>ম্যাকুলার ডিজেনারেশন স্ক্রীনিং</li>
-        \n\n <li>বিনামূল্যে চক্ষু পরিধান</li>
-        \n\n <li>দর্শন বিশেষজ্ঞদের রেফারেল</li></string>
-    <string name="VisionCarePar3"><b>আমাদের চক্ষু বিশেষজ্ঞ / চক্ষু বিশেষজ্ঞ:</b>
-        \n\n <li>M. Hanif Peracha, M.D.</li>
-        \n\n <li>Meiraj Siddiqui, M.D.</li>
-        \n\n <li>Benjamin Whittredge, O.D.</li>
-        \n\n <li>Christopher Burgess, O.D.</li>
-        \n\n <li>Naureen Haroon, O.D.</li>
-        \n\n <li>Suleman Hans, O.D.</li>
-        \n\n <li>Elizabeth Borowiec, O.D.</li></string>
+    <string name ="Glaucoma">গ্লুকোমা স্ক্রীনিং</string>
+    <string name ="Cataract">ছানি স্ক্রীনিং</string>
+    <string name ="Macular">ম্যাকুলার ডিজেনারেশন স্ক্রীনিং</string>
+    <string name ="EyeWear">দর্শন বিশেষজ্ঞদের রেফারেল</string>
 
     <!--    Mental Health Page-->
     <string name = "MentalHealthHeader">মানসিক স্বাস্থ্য</string>
-    <string name = "MentalHealthPar1">মানসিক স্বাস্থ্য সংক্রান্ত বিস্তৃত উদ্বেগের জন্য থেরাপি ও চিকিৎসা প্রদানের জন্য আমাদের লাইসেন্সপ্রাপ্ত সামাজিক কর্মীদের সাথে কর্মীদের মধ্যে মনোরোগ বিশেষজ্ঞ রয়েছে।আমরা প্রবীণ, গৃহহীনদের বিনামূল্যে পরামর্শ ও চিকিৎসা প্রদান করি , বিমাবিহীন, এবং কর্মরতরা কম বীমাকৃত।
-        \n কোভিড-১৯ মহামারী শুরু হওয়ার পর থেকে আমাদের সাইকিয়াট্রি পরিষেবাগুলি টেলিমেডিসিনে রূপান্তরিত হয়েছে৷ আমাদের বর্তমানে 2 জন মনোরোগ বিশেষজ্ঞ, একজন মানসিক স্বাস্থ্য নার্স অনুশীলনকারী এবং একজন থেরাপিস্ট আছেন যারা HUDA ক্লিনিকের সাথে স্বেচ্ছাসেবক হিসেবে আমাদের বিস্তৃত মানসিক স্বাস্থ্য সংক্রান্ত উদ্বেগগুলির জন্য চিকিত্সা প্রদান করার অনুমতি দেয়৷</string>
-    <string name="MentalHealthPar2"><b>আমাদের মানসিক স্বাস্থ্য পরিষেবাগুলি অন্তর্ভুক্ত:</b>
-        \n\n <li>সাইটে মনোরোগ বিশেষজ্ঞের পরামর্শ দেওয়া হচ্ছে</li>
-        \n\n <li>প্রাপ্তবয়স্কদের কাউন্সেলিং</li>
-        \n\n <li>উদ্বেগ/বিষণ্নতা</li>
-        \n\n <li>বাইপোলার ডিসঅর্ডার</li>
-        \n\n <li>খাবার ব্যাধি</li>
-        \n\n <li>শিজোঅ্যাফেক্টিভ ডিসঅর্ডার, এবং আরও অনেক কিছু</li></string>
-    <string name="MentalHealthPar3">
-        <b>আমাদের মনোরোগ বিশেষজ্ঞ:</b>
-        \n\n <li>Saba Maroof, M.D.</li>
-        \n\n <li>Mazhar Hussain, M.D.</li>
-        \n\n <b>সহায়তা প্রদানকারী:</b>
-        \n\n <li>Joann Harrison, MHNP, FNP-BC</li>
-        \n\n <li>Sarah Kappler, TLLP</li></string>
+    <string name="MentalHealthPar1">বিস্তৃত মানসিক স্বাস্থ্য সংক্রান্ত উদ্বেগগুলির জন্য থেরাপি এবং চিকিত্সা দেওয়ার জন্য আমাদের লাইসেন্সপ্রাপ্ত সামাজিক কর্মীদের সাথে আমাদের কর্মীদের মনোরোগ বিশেষজ্ঞ রয়েছে। আমরা প্রবীণ, গৃহহীন, বীমাবিহীন, এবং কর্মরত কম বীমাকৃতদের বিনামূল্যে কাউন্সেলিং এবং চিকিত্সা অফার করি।</string>
+    <string name="Psych">সাইটে মনোরোগ বিশেষজ্ঞ</string>
+    <string name="AdultCounseling">প্রাপ্তবয়স্কদের কাউন্সেলিং</string>
+    <string name="AnxietyandDep">উদ্বেগ/বিষণ্নতা</string>
+    <string name="Bipolar">বাইপোলার ডিসঅর্ডার</string>
+    <string name="Eating">খাবার ব্যাধি</string>
+    <string name="Schiz">স্কিজোঅ্যাফেক্টিভ ডিসঅর্ডার</string>
+    <string name="AndMore">এবং আরো</string>
 
     <!--    Speciality Care Page-->
     <string name = "SpecialtyCareHeader" > বিশেষ সেবা </string>
-    <string name = "SpecialityCarePar1" >  ওষুধের ক্ষেত্রে, রোগীদের যত্নের সমন্বয় করার সময় অনেক উপ-বিশেষত্ব রয়েছে। HUDA-তে, আমরা স্বাস্থ্যসেবা পরিষেবাগুলিতে অ্যাক্সেস সম্প্রসারণের লক্ষ্যে আমাদের রোগীদের বিশেষ যত্ন এবং পরামর্শের একটি পরিসীমা প্রদান করি। আমরা HUDA-তে একটি সমন্বিত স্বাস্থ্য মডেল তৈরি করেছি একাধিক বিশেষ পরিষেবা খোলার মাধ্যমে এমন একটি জায়গা তৈরি করেছি যেখানে বেশিরভাগ রোগীর চাহিদা মেটানো যায়। সমস্ত বিশেষ পরিষেবার জন্য একজন HUDA প্রাথমিক যত্ন প্রদানকারীর কাছ থেকে রেফারেল প্রয়োজন। </string>
-    <string name="SpecialityCarePar2">  <b>আমাদের বিশেষ পরিষেবা/পরামর্শ অন্তর্ভুক্ত:</b>
-        \n\n  <li>শারীরিক থেরাপি</li>
-        \n\n  <li>এন্ডোক্রিনোলজি</li>
-        \n\n  <li>কার্ডিওলজি</li>
-        \n\n  <li>পডিয়াট্রি</li>
-        \n\n  <li>নেফ্রোলজি</li>
-        \n\n  <li>গ্যাস্ট্রোএন্টারোলজি</li>
-        \n\n  <li>কান, নাক, গলা (ENT)</li>
-        \n\n  <li>হেপাটোলজি</li>
-        \n\n  <li>হেমাটোলজি</li>
-        \n\n  <li>পালমোনোলজি</li>  </string>
-    <string name="SpecialityCarePar3">  <b>আমাদের বিশেষত্ব প্রদানকারী:</b>
-        \n\n <li>Jawwad Rashid, P.T.A</li>
-        \n\n <li>Asadullah Mohammed, M.D.</li>
-        \n\n <li>Naseer Ahmad, M.D.</li>
-        \n\n <li>Maha Alhusseini, M.D.</li>
-        \n\n <li>Samer Salka, M.D.</li>
-        \n\n <li>Maha Alhusseini, M.D.</li>
-        \n\n <li>Syed Ghani, D.P.M.</li>
-        \n\n <li>Naveed Aslam, M.D.</li>
-        \n\n <li>Jukaku Tayeb, M.D.</li>
-        \n\n <li>Firdous Siddiqui, M.D.</li>
-        \n\n <li>Yousef Siddiqui, M.D.</li>
-        \n\n <li>Uzma Rehman, D.O.</li>
-        \n\n <li>Zaahir Turfe, M.D.</li>
-        \n\n <li>Ranya Selim, M.D.</li>
-        \n\n <li>Syed Akbar, M.D.</li></string>
+    <string name ="SpecialityCarePar1">ওষুধের ক্ষেত্রে, রোগীদের যত্নের সমন্বয় করার সময় অনেকগুলি উপ-বিশেষত্ব রয়েছে। HUDA-তে, আমরা স্বাস্থ্যসেবা পরিষেবাগুলিতে অ্যাক্সেস সম্প্রসারণের লক্ষ্যে আমাদের রোগীদের বিশেষ যত্ন এবং পরামর্শের একটি পরিসীমা প্রদান করি। সমস্ত বিশেষ পরিষেবার জন্য একজন HUDA প্রাথমিক যত্ন প্রদানকারীর কাছ থেকে রেফারেল প্রয়োজন।</string>
+    <string name="PhysTherapy">শারীরিক থেরাপি</string>
+    <string name="Endocrinology">এন্ডোক্রিনোলজি</string>
+    <string name="Cardiology">কার্ডিওলজি</string>
+    <string name="Podiatry">পডিয়াট্রি</string>
+    <string name="Nephrology">নেফ্রোলজি</string>
+    <string name="Gastroenterology">গ্যাস্ট্রোএন্টারোলজি</string>
+    <string name="ENT">কান, নাক, গলা</string>
+    <string name="Hepatology">হেপাটোলজি</string>
+    <string name="Hematology">হেমাটোলজি</string>
+    <string name="Pulmonology">পালমোনোলজি</string>
 
     <string name="prevMonthButton"><![CDATA[<-]]></string>
     <string name="nextMonthButton"><![CDATA[->]]></string>

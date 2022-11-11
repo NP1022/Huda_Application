@@ -29,7 +29,7 @@
             app:srcCompat="@drawable/icons8_back_arrow_100" />
 
         <TextView
-            android:id="@+id/specialityHealthHeader"
+            android:id="@+id/healthHeader"
             android:layout_width="217dp"
             android:layout_height="47dp"
             android:layout_marginTop="7dp"
@@ -67,7 +67,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/specialityHealthHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/healthHeader" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"

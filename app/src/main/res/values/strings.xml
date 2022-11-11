@@ -51,11 +51,11 @@
     <string name="HaveAnAccount">Have An Account?</string>
     <string name="DontHaveAnAccount">Don\'t Have An Account?</string>
     <string name="SignUp">Sign Up</string>
-    <string name="PrimaryCare">Primary Care</string>
-    <string name="MentalCare">Mental Care</string>
-    <string name="VisionHealth">Vision Care</string>
-    <string name="Dental">Dental Care</string>
-    <string name="speciality">Speciality Care</string>
+    <string name="PrimaryCare">PRIMARY CARE</string>
+    <string name="MentalCare">MENTAL CARE</string>
+    <string name="VisionHealth">VISION CARE</string>
+    <string name="Dental">DENTAL CARE</string>
+    <string name="speciality">SPECIALTY CARE</string>
 
 
     <!--    Patient Portal-->
@@ -174,106 +174,66 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="CalendarHeader">Clinic Calendar</string>
     <string name="appointmentsHeader">APPOINTMENTS</string>
 
-    <!--    Prim ary Services Page-->
+    <!--  ############################################  !->
+    <!-        Health Services-->
+    <!--  ############################################  -->
+
+
+    <!--    Primary Services Page-->
     <string name="PrimaryServicesHeader">PRIMARY SERVICES</string>
-    <string name="PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string>
-    <string name="PrimaryCarePar1"><b>Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</b>
-        \n\nHUDA aims to bring primary care and specialized services to uninsured and under-insured in the Metro Detroit area. We provide preventative primary care services in a person-focused community health clinic, our goal is to make Michigan healthier\!
-        \n\nThe HUDA clinic provides FREE medications to our patients, and also provides laboratory services at no-cost to our patients.</string>
-    <string name="PrimaryCarePar2"><b>Our Primary Care Services Include:</b>
-        \n\n <li>Health Assessments</li>
-        \n\n <li>Acute and Chronic Illness Management</li>
-        \n\n<li>Laboratory Services (blood work)</li>
-        \n\n<li>No Cost Pharmacy</li>
-        \n\n<li>Diabetes Screening &amp; Treatments</li>
-        \n\n<li>Health Education and Resources</li>
-        \n\n<li>Cholesterol &amp; Blood Pressure screenings</li>
-        \n\n<li>Nutrition Education</li>  </string>
+    <string name="PrimaryCarePar1">Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</string>
+    <string name = "HealthAssessments">Health Assessments</string>
+    <string name = "IllnessManagement">Acute and Chronic Illness Management</string>
+    <string name = "LabServices">Laboratory Services</string>
+    <string name = "NoCostPharm">No Cost Pharmacy</string>
+    <string name = "DiabetesScreening">Diabetes Screening and Treatment</string>
+    <string name = "CholBP">Cholesterol and Blood Pressure Screenings</string>
+    <string name = "HealthEd">Health Education and Resources</string>
+    <string name ="servicesInclude">SERVICES INCLUDE</string>
 
     <!--    Dental Health Page-->
     <string name="DentalHealthHeader">DENTAL CARE</string>
-    <string name="DentalHealthPar1"><b>Many people wait to have necessary dental work done because they don’t have insurance, however small dental problems can quickly become incredibly painful if left alone.</b> Come in to HUDA for cleanings, fillings, extractions and exams to keep your teeth healthy and receive a referral to a specialist if needed.</string>
-    <string name="DentalHealthPar2"><b>Our Dental Services Include:</b>
-        \n\n<li>Dental screenings, and X-Rays</li>
-        \n\n<li>Deep Cleanings</li>
-        \n\n<li>Composite Fillings</li>
-        \n\n<li>Tooth Extraction</li>
-        \n\n<li>Referrals to low-cost dentists as needed</li></string>
-    <string name="DentalHealthPar3"><b>Our Dentists:</b>
-        \n\n<li>Shakeel Niazi, D.D.S.</li>
-        \n\n<li>Ahmed Allam, D.D.S.</li>
-        \n\n<li>Asmaa Abdel-Salam, D.D.S.</li>
-        \n\n<li>Sumera Khalid, D.D.S.</li>
-        \n\n<li>Umair Niazi, D.M.D.</li>
-        \n\n<li>Rachel Mundus, R.D.</li>
-        \n\n<li>Fatin Amireh, R.D.H.</li></string>
+    <string name="DentalHealthPar1">Many people wait to have necessary dental work done because they don’t have insurance, however small dental problems can quickly become incredibly painful if left alone. Come in to HUDA for cleanings, fillings, extractions and exams to keep your teeth healthy and receive a referral to a specialist if needed.</string>
+    <string name="DentalScreenings">Dental Screenings and X-Rays</string>
+    <string name="DeepCleanings">Deep Cleanings</string>
+    <string name="CompositeFillings">Composite Fillings</string>
+    <string name="ToothExtractions">Tooth Extractions</string>
 
     <!--    Vision Care Page-->
     <string name="VisionCareHeader">VISION CARE</string>
-    <string name="VisionCarePar1"><b>Vision screenings is an effective method to identify individuals with visual impairment or eye conditions that are likely to lead to vision loss. </b>  We perform screenings in-house and provide no-cost eye wear and referrals to low-cost local ophthalmologists as needed.</string>
-    <string name="VisionCarePar2"><b>Our Vision Screening Options:</b>
-        \n\n<li>Glaucoma Screenings</li>
-        \n\n<li>Cataract Screenings</li>
-        \n\n<li>Macular Degeneration Screenings</li>
-        \n\n<li>FREE eye-wear</li>
-        \n\n<li>Referrals to vision specialists</li></string>
-    <string name="VisionCarePar3"><b>Our Ophthalmologists / Optometrists:</b>
-        \n\n<li>M. Hanif Peracha, M.D.</li>
-        \n\n<li>Meiraj Siddiqui, M.D.</li>
-        \n\n<li>Benjamin Whittredge, O.D.</li>
-        \n\n<li>Christopher Burgess, O.D.</li>
-        \n\n<li>Naureen Haroon, O.D.</li>
-        \n\n<li>Suleman Hans, O.D.</li>
-        \n\n<li>Elizabeth Borowiec, O.D</li></string>
+    <string name="VisionCarePar1">Vision screenings are an effective method to identify individuals with visual impairment or eye conditions that are likely to lead to vision loss. We perform screenings in-house and provide no-cost eye wear and referrals to low-cost local ophthalmologists as needed.</string>
+    <string name ="Glaucoma">Glaucoma Screenings</string>
+    <string name ="Cataract">Cataract Screenings</string>
+    <string name ="Macular">Macular Degeneration Screenings</string>
+    <string name ="EyeWear">FREE Eye-Wear</string>
 
     <!--    Mental Health Page-->
     <string name="MentalHealthHeader">MENTAL HEALTH</string>
-    <string name="MentalHealthPar1"><b>We have psychiatrists on staff along with our licensed social workers to provide therapy and treatment for a wide range of mental health concerns. </b> We offer free counseling and treatment to veterans, homeless, uninsured, and the working underinsured.
-        \n\nSince the onset of the Covid-19 pandemic our psychiatry services have transitioned to telemedicine. We currently have 2 Psychiatrists, a Mental Health Nurse Practitioner and a Therapist who all volunteer with HUDA Clinic allowing us to provide treatment for a wide range of mental health concerns.</string>
-    <string name="MentalHealthPar2"><b>Our Mental Health Services Include:</b>
-        \n\n<li>Prescribing psychiatrist on site</li>
-        \n\n<li>Adult Counseling</li>
-        \n\n<li>Anxiety/Depression</li>
-        \n\n<li>Bipolar Disorders</li>
-        \n\n<li>Eating Disorders</li>
-        \n\n<li>Schizoaffective Disorders, and more</li></string>
-    <string name="MentalHealthPar3"><b>Our Psychiatrists:</b>
-        \n\n<li>Saba Maroof, M.D.</li>
-        \n\n<li>Mazhar Hussain, M.D.</li>
-        \n\n<b>Supporting Providers:</b>
-        \n\n<li>Joann Harrison, MHNP, FNP-BC</li>
-        \n\n<li>Sarah Kappler, TLLP</li></string>
+    <string name="MentalHealthPar1">We have psychiatrists on staff along with our licensed social workers to provide therapy and treatment for a wide range of mental health concerns. We offer free counseling and treatment to veterans, homeless, uninsured, and the working underinsured.</string>
+    <string name="Psych">Psychiatrists On Site</string>
+    <string name="AdultCounseling">Adult Counseling</string>
+    <string name="AnxietyandDep">Anxiety and Depression</string>
+    <string name="Bipolar">Bipolar Disorders</string>
+    <string name="Eating">Eating Disorders</string>
+    <string name="Schiz">Schizoaffective Disorders</string>
+    <string name="AndMore">And More</string>
 
     <!--    Speciality Care Page-->
     <string name="SpecialtyCareHeader">SPECIALTY SERVICES</string>
-    <string name="SpecialityCarePar1"><b>Within the field of medicine, there are many sub-specialties when coordinating care to patients. At HUDA, we provide a range of specialty care and consultations to our patients, with the aim of expanding access to healthcare services. </b> We have created an integrated health model at HUDA through opening multiple specialty services creating a place where most patient needs can be met. All specialty services require a referral from a HUDA primary care provider. </string>
-    <string name="SpecialityCarePar2">  <b>Our Speciality Services/Consultations Include:</b>
-        \n\n <li>Physical Therapy</li>
-        \n\n <li>Endocrinology</li>
-        \n\n <li>Cardiology</li>
-        \n\n <li>Podiatry</li>
-        \n\n <li>Nephrology</li>
-        \n\n <li>Gastroenterology</li>
-        \n\n <li>Ear, Nose, Throat (ENT)</li>
-        \n\n <li>Hepatology</li>
-        \n\n <li>Hematology</li>
-        \n\n <li>Pulmonology</li>  </string>
-    <string name="SpecialityCarePar3">  <b>Our Speciality Providers:</b>
-        \n\n<li>Jawwad Rashid, P.T.A</li>
-        \n\n<li>Asadullah Mohammed, M.D.</li>
-        \n\n<li>Naseer Ahmad, M.D.</li>
-        \n\n<li>Maha Alhusseini, M.D.</li>
-        \n\n<li>Samer Salka, M.D.</li>
-        \n\n<li>Maha Alhusseini, M.D.</li>
-        \n\n<li>Syed Ghani, D.P.M.</li>
-        \n\n<li>Naveed Aslam, M.D.</li>
-        \n\n<li>Jukaku Tayeb, M.D.</li>
-        \n\n<li>Firdous Siddiqui, M.D.</li>
-        \n\n<li>Yousef Siddiqui, M.D.</li>
-        \n\n<li>Uzma Rehman, D.O.</li>
-        \n\n<li>Zaahir Turfe, M.D.</li>
-        \n\n<li>Ranya Selim, M.D.</li>
-        \n\n<li>Syed Akbar, M.D.</li></string>
+    <string name ="SpecialityCarePar1">Within the field of medicine, there are many sub-specialties when coordinating care to patients. At HUDA, we provide a range of specialty care and consultations to our patients, with the aim of expanding access to healthcare services. All specialty services require a referral from a HUDA primary care provider.</string>
+    <string name="PhysTherapy">Physical Therapy</string>
+    <string name="Endocrinology">Endocrinology</string>
+    <string name="Cardiology">Cardiology</string>
+    <string name="Podiatry">Podiatry</string>
+    <string name="Nephrology">Nephrology</string>
+    <string name="Gastroenterology">Gastroenterology</string>
+    <string name="ENT">Ear, Nose, Throat (ENT)</string>
+    <string name="Hepatology">Hepatology</string>
+    <string name="Hematology">Hematology</string>
+    <string name="Pulmonology">Pulmonology</string>
+
+
+<!--Announcements Page-->
     <string name="prevMonthButton"><![CDATA[<-]]></string>
     <string name="nextMonthButton"><![CDATA[->]]></string>
     <string name="PrevMonthButton"><![CDATA[<-]]></string>

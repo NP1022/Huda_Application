@@ -173,106 +173,58 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "CalendarHeader">Calendario de la Clínica</string>
 
     <!--    Primary Services Page-->
-    <string name = "PrimaryServicesHeader">Servicios Primarios</string>
-    <string name = "PrimaryCareInternalMedicine">Atención Primaria / Medicina Interna</string>
-    <string name = "PrimaryCarePar1">Los proveedores de atención primaria suelen ser la primera línea de contacto para los pacientes; tratar problemas generales de salud, brindar educación, medicamentos y referencias especializadas según sea necesario. HUDA tiene como objetivo brindar atención primaria y servicios especializados a las personas sin seguro y con seguro insuficiente en el área metropolitana de Detroit. Brindamos servicios preventivos de atención primaria en una clínica de salud comunitaria centrada en la persona. Nuestro objetivo es hacer que Michigan sea más saludable.
-La clínica HUDA brinda medicamentos GRATIS a nuestros pacientes y también brinda servicios de laboratorio sin costo para nuestros pacientes.</string>
-    <string name="PrimaryCarePar2"><b>Nuestros servicios de atención primaria incluyen:</b>
-        \n\n  <li>Evaluaciones de salud</li>
-        \n\n  <li>Manejo de enfermedades agudas y crónicas</li>
-        \n\n <li>Servicios de laboratorio (análisis de sangre)</li>
-        \n\n <li>Farmacia sin costo</li>
-        \n\n <li>Exámenes de detección y tratamientos de la diabetes</li>
-        \n\n <li>Educación y recursos para la salud</li>
-        \n\n <li>Exámenes de colesterol y presión arterial</li>
-        \n\n <li>Educación nutricional</li> </string>
+    <string name = "PrimaryServicesHeader">SERVICIOS PRIMARIOS</string>
+    <string name="PrimaryCarePar1">Los proveedores de atención primaria suelen ser la primera línea de contacto para los pacientes; tratar problemas generales de salud, brindar educación, medicamentos y referencias especializadas según sea necesario.</string>
+    <string name = "HealthAssessments">Evaluaciones de salud</string>
+    <string name = "IllnessManagement">Manejo de enfermedades agudas y crónicas</string>
+    <string name = "LabServices">Servicios de laboratorio</string>
+    <string name = "NoCostPharm">Farmacia Sin Costo</string>
+    <string name = "DiabetesScreening">Detección y tratamiento de la diabetes</string>
+    <string name = "CholBP">Exámenes de colesterol y presión arterial</string>
+    <string name = "HealthEd">Recursos y educación para la salud</string>
+    <string name ="servicesInclude">LOS SERVICIOS INCLUYEN</string>
 
     <!--    Dental Health Page-->
-    <string name = "DentalHealthHeader">Servicios Dentales</string>
-    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
-    <string name = "DentalHealthPar1">Muchas personas esperan para hacerse el trabajo dental necesario porque no tienen seguro, sin embargo, los pequeños problemas dentales pueden convertirse rápidamente en increíblemente dolorosos si no se toman en cuenta. Visite HUDA para limpiezas, empastes, extracciones y exámenes para mantener sus dientes saludable y recibir una derivación a un especialista si es necesario.</string>
-    <string name="DentalHealthPar2"><b>Nuestros servicios dentales incluyen:</b>
-        \n\n <li>Exámenes dentales y radiografías</li>
-        \n\n <li>Limpiezas profundas</li>
-        \n\n <li>Rellenos compuestos</li>
-        \n\n <li>Extracción de dientes</li>
-        \n\n <li>Referencias a dentistas de bajo costo según sea necesario</li></string>
-    <string name="DentalHealthPar3">Nuestros Dentistas:
-        \n\n <li>Shakeel Niazi, D.D.S.</li>
-        \n\n <li>Ahmed Allam, D.D.S.</li>
-        \n\n <li>Asmaa Abdel-Salam, D.D.S.</li>
-        \n\n <li>Sumera Khalid, D.D.S.</li>
-        \n\n <li>Umair Niazi, D.M.D.</li>
-        \n\n <li>Rachel Mundus, R.D.</li>
-        \n\n <li>Fatin Amireh, R.D.H.</li></string>
+    <string name = "DentalHealthHeader">SERVICIOS DENTALES</string>
+    <string name="DentalHealthPar1">Muchas ersonas esperan para hacerse el trabajo dental necesario porque no tienen seguro, sin embargo, los pequeños problemas dentales pueden convertirse rápidamente en increíblemente dolorosos si no se toman en cuenta. Visite HUDA para limpiezas, empastes, extracciones y exámenes para mantener sus dientes saludable y recibir una derivación a un especialista si es necesario.</string>
+    <string name="DentalScreenings">Exámenes Fentales y Radiografías</string>
+    <string name="DeepCleanings">Limpiezas Profundas</string>
+    <string name="CompositeFillings">Rellenos Compuestos</string>
+    <string name="ToothExtractions">Extracción de Dientes</string>
+
 
     <!--    Vision Care Page-->
-    <string name = "VisionCareHeader">Cuidado de la vista</string>
+    <string name = "VisionCareHeader">CUIDADO DE LA VISTA</string>
     <string name = "VisionCarePar1">Los exámenes de la vista son un método eficaz para identificar a las personas con discapacidad visual o afecciones oculares que probablemente provoquen la pérdida de la visión.  Realizamos exámenes internos y proporcionamos anteojos sin costo y remisiones a oftalmólogos locales de bajo costo según sea necesario.</string>
-    <string name="VisionCarePar2"><b>Nuestras opciones de exámenes de la vista:</b>
-        \n\n <li>Exámenes de detección de glaucoma</li>
-        \n\n <li>Exámenes de cataratas</li>
-        \n\n <li>Exámenes de detección de degeneración macular</li>
-        \n\n <li>Gafas GRATIS</li>
-        \n\n <li>Referencias a especialistas de la vista</li></string>
-    <string name="VisionCarePar3"><b>Nuestros Oftalmólogos / Optometristas:</b>
-        \n\n <li>M. Hanif Peracha, M.D.</li>
-        \n\n <li>Meiraj Siddiqui, M.D.</li>
-        \n\n <li>Benjamin Whittredge, O.D.</li>
-        \n\n <li>Christopher Burgess, O.D.</li>
-        \n\n <li>Naureen Haroon, O.D.</li>
-        \n\n <li>Suleman Hans, O.D.</li>
-        \n\n <li>Elizabeth Borowiec, O.D</li></string>
+    <string name ="Glaucoma">Exámenes de detección de glaucoma</string>
+    <string name ="Cataract">Exámenes de cataratas</string>
+    <string name ="Macular">Exámenes de detección de degeneración macular</string>
+    <string name ="EyeWear">Gafas GRATIS</string>
 
     <!--    Mental Health Page-->
-    <string name = "MentalHealthHeader">Salud Mental</string>
-    <string name = "MentalHealthPar1">Tenemos psiquiatras en el personal junto con nuestros trabajadores sociales autorizados para brindar terapia y tratamiento para una amplia gama de problemas de salud mental.Ofrecemos asesoramiento y tratamiento gratuitos a veteranos, personas sin hogar , sin seguro y trabajadores con seguro insuficiente.
-        \n Desde el inicio de la pandemia de Covid-19, nuestros servicios de psiquiatría han hecho la transición a la telemedicina. Actualmente contamos con 2 psiquiatras, una enfermera practicante de salud mental y un terapeuta que se ofrecen como voluntarios en la Clínica HUDA, lo que nos permite brindar tratamiento para una amplia gama de problemas de salud mental.</string>
-    <string name="MentalHealthPar2"><b>Nuestros servicios de salud mental incluyen:</b>
-        \n\n <li>Psiquiatra prescriptor en el sitio</li>
-        \n\n <li>Consejería para adultos</li>
-        \n\n <li>Ansiedad/Depresión</li>
-        \n\n <li>Trastornos bipolares</li>
-        \n\n <li>Trastornos de la alimentación</li>
-        \n\n <li>Trastornos esquizoafectivos y más</li></string>
-    <string name="MentalHealthPar3">
-        <b>Nuestros Psiquiatras:</b>
-        \n\n <li>Saba Maroof, M.D.</li>
-        \n\n <li>Mazhar Hussain, M.D.</li>
-        \n\n <b>Proveedores de Apoyo:</b>
-        \n\n <li>Joann Harrison, MHNP, FNP-BC</li>
-        \n\n <li>Sarah Kappler, TLLP</li></string>
+    <string name = "MentalHealthHeader">SALUD MENTAL</string>
+    <string name = "MentalHealthPar1">Tenemos psiquiatras en el personal junto con nuestros trabajadores sociales autorizados para brindar terapia y tratamiento para una amplia gama de problemas de salud mental.Ofrecemos asesoramiento y tratamiento gratuitos a veteranos, personas sin hogar , sin seguro y trabajadores con seguro insuficiente.</string>
+    <string name="Psych">Psiquiatra prescriptor en el sitio</string>
+    <string name="AdultCounseling">Consejería para adultos</string>
+    <string name="AnxietyandDep">Ansiedad/Depresión</string>
+    <string name="Bipolar">Trastornos bipolares</string>
+    <string name="Eating">Trastornos de la alimentación</string>
+    <string name="Schiz">Trastornos esquizoafectivos</string>
+    <string name="AndMore">Y más</string>
 
     <!--    Speciality Care Page-->
-    <string name = "SpecialtyCareHeader"> Servicios especializados </string>
-    <string name = "SpecialityCarePar1">  Dentro del campo de la medicina, existen muchas subespecialidades a la hora de coordinar la atención a los pacientes. En HUDA, brindamos una gama de atención especializada y consultas a nuestros pacientes, con el objetivo de ampliar el acceso a los servicios de atención médica.  Hemos creado un modelo de salud integrado en HUDA a través de la apertura de múltiples servicios especializados creando un lugar donde se pueden satisfacer la mayoría de las necesidades de los pacientes. Todos los servicios especializados requieren una remisión de un proveedor de atención primaria de HUDA. </string>
-    <string name="SpecialityCarePar2">  <b>Nuestras consultas/servicios especializados incluyen:</b>
-        \n\n  <li>Fisioterapia</li>
-        \n\n  <li>Endocrinología</li>
-        \n\n  <li>Cardiología</li>
-        \n\n  <li>Podología</li>
-        \n\n  <li>Nefrología</li>
-        \n\n  <li>Gastroenterología</li>
-        \n\n  <li>Otorrinolaringología (ENT)</li>
-        \n\n  <li>Hepatología</li>
-        \n\n  <li>Hematología</li>
-        \n\n  <li>Neumología</li></string>
-    <string name="SpecialityCarePar3">  <b>Nuestros proveedores especializados:</b>
-        \n\n <li>Jawwad Rashid, P.T.A</li>
-        \n\n <li>Asadullah Mohammed, M.D.</li>
-        \n\n <li>Naseer Ahmad, M.D.</li>
-        \n\n <li>Maha Alhusseini, M.D.</li>
-        \n\n <li>Samer Salka, M.D.</li>
-        \n\n <li>Maha Alhusseini, M.D.</li>
-        \n\n <li>Syed Ghani, D.P.M.</li>
-        \n\n <li>Naveed Aslam, M.D.</li>
-        \n\n <li>Jukaku Tayeb, M.D.</li>
-        \n\n <li>Firdous Siddiqui, M.D.</li>
-        \n\n <li>Yousef Siddiqui, M.D.</li>
-        \n\n <li>Uzma Rehman, D.O.</li>
-        \n\n <li>Zaahir Turfe, M.D.</li>
-        \n\n <li>Ranya Selim, M.D.</li>
-        \n\n <li>Syed Akbar, M.D.</li></string>
+    <string name = "SpecialtyCareHeader">SERVICIOS ESPECIALES</string>
+    <string name ="SpecialityCarePar1">Dentro del campo de la medicina, existen muchas subespecialidades a la hora de coordinar la atención a los pacientes. En HUDA, brindamos una gama de atención especializada y consultas a nuestros pacientes, con el objetivo de ampliar el acceso a los servicios de atención médica. Todos los servicios especializados requieren una remisión de un proveedor de atención primaria de HUDA.</string>
+    <string name="PhysTherapy">Fisioterapia</string>
+    <string name="Endocrinology">Endocrinología</string>
+    <string name="Cardiology">Cardiología</string>
+    <string name="Podiatry">Podología</string>
+    <string name="Nephrology">Nefrología</string>
+    <string name="Gastroenterology">Gastroenterología</string>
+    <string name="ENT">Otorrinolaringología (ENT)</string>
+    <string name="Hepatology">Hepatología</string>
+    <string name="Hematology">Hematología</string>
+    <string name="Pulmonology">Neumología</string>
 
     <string name="prevMonthButton"><![CDATA[<-]]></string>
     <string name="nextMonthButton"><![CDATA[->]]></string>
