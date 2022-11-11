@@ -37,7 +37,6 @@ public class AppointmentManager {
 
     public AppointmentManager(String date) {
         this.date = date;
-        getAppointmentTimes();
     }
 
     public List<Time> getAvailableTimes() {
@@ -48,30 +47,12 @@ public class AppointmentManager {
         return new ArrayList<>();
     }
 
-    public static  void createAppointment(String date, String time, String userId) {
+    public static void createAppointment(String date, String time, String userId) {
         FirebaseDatabase.getInstance().getReference("Appointment").child(date).child(time).setValue(userId);
     }
 
     public static void deleteAppointment (String date , String time){
-
         FirebaseDatabase.getInstance().getReference("Appointment").child(date).child(time).removeValue();
-
-    }
-
-    private void getAppointmentTimes() {
-        FirebaseDatabase.getInstance().getReference("Appointment").child(date).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot child : snapshot.getChildren()) {
-                    convertAppointment(child);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 
     public void convertAppointment(DataSnapshot snapshot) {

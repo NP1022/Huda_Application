@@ -67,10 +67,12 @@ public class message_all_patients extends AppCompatActivity implements View.OnCl
             String date = new SimpleDateFormat("MM-d-yyyy", Locale.getDefault()).format(new Date());
             String message = Message_feild.getText().toString().trim();
             Message m = new Message(date, message, false);
+
             for (int i = 0; i < users.size(); i++) {
                 users.get(i).addMessages(m);
                 FirebaseClient.updateUser(users.get(i));
             }
+
             startActivity( new Intent(this , Messagepage.class));
 
         }

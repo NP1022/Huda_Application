@@ -30,8 +30,8 @@ android {
         // Flag to enable support for the new language APIs
         coreLibraryDesugaringEnabled = true
         // Sets Java compatibility to Java 8
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_9
+        targetCompatibility = JavaVersion.VERSION_1_9
     }
     packagingOptions{
         exclude 'META-INF/NOTICE.md'
