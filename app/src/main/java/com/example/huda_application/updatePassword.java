@@ -43,11 +43,11 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                     "$");
 
 
-    private Button updatePassBtn;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -57,7 +57,7 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_password);
 
-        updatePassBtn = findViewById(R.id.registerButton);
+        Button updatePassBtn = findViewById(R.id.registerButton);
        updatePassBtn.setOnClickListener(this);
 
     }
@@ -67,16 +67,16 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
     {
         if (view.getId() == R.id.registerButton)
         {
-                EditText email = findViewById(R.id.email); // Setting variable for the EditText views
-                EditText currentPass = findViewById(R.id.password);
-                EditText newPassword = findViewById(R.id.password2);
-                EditText conNewPassword = findViewById(R.id.confirmPass);
 
-                String emailTxt = email.getText().toString().trim(); // Converted the EditText views to a String variable
-                String currentPassTxt = currentPass.getText().toString().trim();
-                String newPassTxt = newPassword.getText().toString().trim();
-                String conNewPassTxt = conNewPassword.getText().toString().trim();
+            EditText email = findViewById(R.id.email); // Setting variable for the EditText views
+            EditText currentPass = findViewById(R.id.password);
+            EditText newPassword = findViewById(R.id.password2);
+            EditText conNewPassword = findViewById(R.id.confirmPass);
 
+            String emailTxt = email.getText().toString().trim(); // Converted the EditText views to a String variable
+            String currentPassTxt = currentPass.getText().toString().trim();
+            String newPassTxt = newPassword.getText().toString().trim();
+            String conNewPassTxt = conNewPassword.getText().toString().trim();
 
                 // if statement that checks if the email text box is empty
                 if(TextUtils.isEmpty(emailTxt))
@@ -133,8 +133,10 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                 }
                 else // once every check is successful then the else block shall be executed
                 {
+                    Toast.makeText(updatePassword.this, "Else block", Toast.LENGTH_LONG).show();
                     // Call method to update the password for the user
                    updatePass(emailTxt,currentPassTxt,newPassTxt);
+                    Toast.makeText(updatePassword.this, "Post updatePass method Else block", Toast.LENGTH_LONG).show();
                 }
 
 
@@ -146,49 +148,31 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
     {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+        Toast.makeText(updatePassword.this,"In updatePass method ",Toast.LENGTH_SHORT).show();
         AuthCredential authCredential = EmailAuthProvider.getCredential(emailStr ,oldPassStr);
 
-        // try catch block to catch exception
-        try
-        {
+        Toast.makeText(updatePassword.this,"After AuthCredential ",Toast.LENGTH_SHORT).show();
 
-            user.reauthenticate(authCredential).addOnSuccessListener(new OnSuccessListener<Void>()
-            {
-                @Override
-                public void onSuccess(Void unused)
+                Toast.makeText(updatePassword.this,"If statement ",Toast.LENGTH_SHORT).show();
+                 assert user != null;
+                user.reauthenticate(authCredential).addOnSuccessListener(new OnSuccessListener<Void>()
                 {
-                    user.updatePassword(newPassStr).addOnSuccessListener(new OnSuccessListener<Void>()
+                    @Override
+                    public void onSuccess(Void unused)
                     {
-                        @Override
-                        public void onSuccess(Void unused)
-                        {
-                            // Password updated toast message shown to user
-                            Toast.makeText(updatePassword.this,"Password updated",Toast.LENGTH_SHORT).show();
-                        }
-                    }).addOnFailureListener(new OnFailureListener()
-                    {
-                        @Override
-                        public void onFailure(@NonNull Exception e)
-                        {
-                            // Password failure toast message shown to user
-                            Toast.makeText(updatePassword.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-            }).addOnFailureListener(new OnFailureListener()
-            {
-                @Override
-                public void onFailure(@NonNull Exception e)
-                {
-                    // Authentication failed, display reason to user
-                    Toast.makeText(updatePassword.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-        catch(Exception e) // catch the exception
-        {
-            Toast.makeText(updatePassword.this,"" +e.getMessage(),Toast.LENGTH_SHORT).show();
-        }
+                        user.updatePassword(newPassStr);
+                        Toast.makeText(updatePassword.this,"Password updated successfully  ",Toast.LENGTH_SHORT).show();
 
-    }
+                    }
+                }).addOnFailureListener(new OnFailureListener()
+                {
+                    @Override
+                    public void onFailure(@NonNull Exception e)
+                    {
+                        // Authentication failed, display reason to user
+                        Toast.makeText(updatePassword.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        }
 }
