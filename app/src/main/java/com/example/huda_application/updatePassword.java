@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -133,10 +134,8 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                 }
                 else // once every check is successful then the else block shall be executed
                 {
-                    Toast.makeText(updatePassword.this, "Else block", Toast.LENGTH_LONG).show();
                     // Call method to update the password for the user
                    updatePass(emailTxt,currentPassTxt,newPassTxt);
-                    Toast.makeText(updatePassword.this, "Post updatePass method Else block", Toast.LENGTH_LONG).show();
                 }
 
 
@@ -144,24 +143,21 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
 
     }
 
+    // update password method that takes 3 String parameters, email, old password, and new password
     private void updatePass(String emailStr, String oldPassStr, String newPassStr)
     {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        Toast.makeText(updatePassword.this,"In updatePass method ",Toast.LENGTH_SHORT).show();
         AuthCredential authCredential = EmailAuthProvider.getCredential(emailStr ,oldPassStr);
-
-        Toast.makeText(updatePassword.this,"After AuthCredential ",Toast.LENGTH_SHORT).show();
-
-                Toast.makeText(updatePassword.this,"If statement ",Toast.LENGTH_SHORT).show();
-                 assert user != null;
                 user.reauthenticate(authCredential).addOnSuccessListener(new OnSuccessListener<Void>()
                 {
                     @Override
                     public void onSuccess(Void unused)
                     {
+                        // user object calls the update password function that takes the new password String
                         user.updatePassword(newPassStr);
                         Toast.makeText(updatePassword.this,"Password updated successfully  ",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(updatePassword.this , MainActivity.class));
 
                     }
                 }).addOnFailureListener(new OnFailureListener()
