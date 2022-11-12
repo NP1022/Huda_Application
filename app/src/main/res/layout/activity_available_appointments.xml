@@ -23,6 +23,15 @@
 
         android:layout_marginTop="270dp"
         app:layout_constraintTop_toBottomOf="@+id/dateText2"/>
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_back_arrow_100" />
     <Button
         android:id="@+id/dateText2"
         android:layout_width="320dp"
@@ -35,7 +44,7 @@
         android:gravity="left|center_vertical"
         android:inputType="text"
         android:padding="10dp"
-        android:textColor="#686868"
+        android:textColor="#000000"
         android:textColorHint="#686868"
 
         android:textSize="20sp"

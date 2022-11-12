@@ -15,7 +15,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/huda_logo" />
-
+    <ImageView
+        android:id="@+id/backButton_message_patient"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_back_arrow_100" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/usersView5"
         android:layout_width="match_parent"
