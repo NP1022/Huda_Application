@@ -192,7 +192,6 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                             }
                             else
                             {
-
                                 Toast.makeText(RegisterAccount.this,"Registration failed: " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
                             }
                         }
