@@ -37,9 +37,10 @@
     <string name="Annoucment">Anuncio</string>
     <string name="services">Servicios</string>
     <string name="story">Nuestra Historia</string>
-    <string name="partners">Socios</string>
+    <string name="partners">SOCIAS</string>
     <string name="contact">Contacta con Nosotros</string>
     <string name="patients_page">Equipo</string>
+    <string name = "logout">Cerrar Sesión</string>
 
 <!--    Services -->
     <string name="healthservices">Servicios de salud gratuitos</string>
@@ -147,7 +148,7 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name ="appointmentsHeader">EQUIPO</string>
 
     <!--    Contact Us Page-->
-    <string name = "ContactUsHeader">Contacta Con Nosotros</string>
+    <string name = "ContactUsHeader">CONTACTA</string>
     <string name = "ContactUsPara">HUDA, una clínica de salud comunitaria gratuita\nen Metro Detroit</string>
     <string name = "CallHeader">Llamar:</string>
     <string name = "ClinicPhone">(313) 865-8446</string>
@@ -156,13 +157,13 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "SocialMediaHeader">Encuéntranos en:</string>
 
 <!--    Our Story Page-->
-    <string name = "OurStoryHeader">Nuestra historia</string>
+    <string name = "OurStoryHeader">NUESTRA HISTORIA</string>
     <string name = "History">Historia de la Clínica HUDA</string>
     <string name = "HistoryPara">La Clínica HUDA abrió sus puertas por primera vez en mayo de 2004 para atender a la población sin seguro del área de Detroit. La clínica funcionó inicialmente con fondos recaudados por la comunidad musulmana de Metro Detroit.</string>
     <string name = "HistPara">Cuando comenzó, la Clínica HUDA brindaba únicamente servicios médicos. Luego nos mudamos de nuestra instalación original en el Centro Musulmán de Detroit a una instalación nueva y más grande en Woodrow Wilson Street. Desde entonces, hemos ampliado nuestra atención para incluir una gama completa de servicios dentales, de atención de la vista, de podología y de salud mental, así como una plétora de servicios especializados disponibles sin costo para nuestros pacientes. Nuestras nuevas instalaciones nos han permitido ampliar nuestros servicios y nuestros tiempos de servicio, pero nada de eso sería posible sin el generoso apoyo de nuestros donantes y voluntarios.</string>
 
     <!--    Announcements Page-->
-    <string name = "AnnouncementsHeader">Anuncios</string>
+    <string name = "AnnouncementsHeader">ANUNCIOS</string>
     <string name = "ClosureHeader">Fechas de Cierre de Vacaciones de 2022</string>
     <string name = "Date1">23 de Noviembre de 2022 - 28 de Noviembre de 2022</string>
     <string name = "Date2">24 de Diciembre de 2022</string>

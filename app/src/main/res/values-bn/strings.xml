@@ -40,6 +40,7 @@
     <string name="partners">অংশীদার</string>
     <string name="contact">যোগাযোগ করুন</string>
     <string name="patients_page">রোগীর পোর্টাল</string>
+    <string name = "logout">Logout</string>
 
 <!--    Health Services-->
     <string name="healthservices">বিনামূল্যে স্বাস্থ্য সেবা</string>
