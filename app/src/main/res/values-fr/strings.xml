@@ -207,7 +207,7 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <!--    Mental Health Page-->
     <string name = "MentalHealthHeader">SANTÉ MENTALE</string>
     <string name = "MentalHealthPar1">Nous avons des psychiatres parmi notre personnel ainsi que nos travailleurs sociaux agréés pour fournir une thérapie et un traitement pour un large éventail de problèmes de santé mentale.Nous offrons des conseils et des traitements gratuits aux anciens combattants, aux sans-abri , non assurés et les travailleurs sous-assurés.</string>
-    <string name="Psych">Psychiatre Prescripteur sur Place</string>
+    <string name="Psych">Psychiatre Prescripteur</string>
     <string name="AdultCounseling">Conseils Pour Adultes</string>
     <string name="AnxietyandDep">Anxiété/Dépression</string>
     <string name="Bipolar">Troubles Bpolaires</string>

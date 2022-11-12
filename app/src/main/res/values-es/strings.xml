@@ -204,13 +204,13 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <!--    Mental Health Page-->
     <string name = "MentalHealthHeader">SALUD MENTAL</string>
     <string name = "MentalHealthPar1">Tenemos psiquiatras en el personal junto con nuestros trabajadores sociales autorizados para brindar terapia y tratamiento para una amplia gama de problemas de salud mental.Ofrecemos asesoramiento y tratamiento gratuitos a veteranos, personas sin hogar , sin seguro y trabajadores con seguro insuficiente.</string>
-    <string name="Psych">Psiquiatra prescriptor en el sitio</string>
-    <string name="AdultCounseling">Consejería para adultos</string>
+    <string name="Psych">Psiquiatra Prescriptor</string>
+    <string name="AdultCounseling">Consejería Para Adultos</string>
     <string name="AnxietyandDep">Ansiedad/Depresión</string>
-    <string name="Bipolar">Trastornos bipolares</string>
-    <string name="Eating">Trastornos de la alimentación</string>
-    <string name="Schiz">Trastornos esquizoafectivos</string>
-    <string name="AndMore">Y más</string>
+    <string name="Bipolar">Trastornos Bipolares</string>
+    <string name="Eating">Trastornos de la Alimentación</string>
+    <string name="Schiz">Trastornos Esquizoafectivos</string>
+    <string name="AndMore">Y Más</string>
 
     <!--    Speciality Care Page-->
     <string name = "SpecialtyCareHeader">SERVICIOS ESPECIALES</string>
