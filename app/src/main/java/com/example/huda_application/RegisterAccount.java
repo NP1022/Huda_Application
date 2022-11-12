@@ -46,6 +46,9 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                     ".{8,}" +               //at least 8 characters
                     "$");
 
+    private static final Pattern DATE_PATTERN = Pattern.compile(
+            "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
+
     FirebaseDatabase rootNode;
     DatabaseReference ref;
     private ImageView backButton;
@@ -132,7 +135,18 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                     password.clearComposingText();
                     conPassword.clearComposingText();
                 }
-
+                else if(!TextUtils.isEmpty(dob))
+                {
+                    Toast.makeText(RegisterAccount.this,"Date of birth cannot be empty",Toast.LENGTH_LONG).show();
+                    DOb.setError("Date of birth is required");
+                    DOb.requestFocus();
+                }
+                else if(!DATE_PATTERN.matcher(dob).matches())
+                {
+                    Toast.makeText(RegisterAccount.this,"Date of birth must be MM-DD-YYYY",Toast.LENGTH_LONG).show();
+                    DOb.setError("Date format is required");
+                    DOb.requestFocus();
+                }
                 else
                 {
                     User user = new User(firstNameTxt,lastNameTxt,emailTxt,dob, UserType.PATIENT);

@@ -43,17 +43,14 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                     ".{8,}" +               //at least 8 characters
                     "$");
 
-
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_password);
@@ -78,6 +75,7 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
             String currentPassTxt = currentPass.getText().toString().trim();
             String newPassTxt = newPassword.getText().toString().trim();
             String conNewPassTxt = conNewPassword.getText().toString().trim();
+
 
                 // if statement that checks if the email text box is empty
                 if(TextUtils.isEmpty(emailTxt))
@@ -137,10 +135,7 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                     // Call method to update the password for the user
                    updatePass(emailTxt,currentPassTxt,newPassTxt);
                 }
-
-
         }
-
     }
 
     // update password method that takes 3 String parameters, email, old password, and new password
@@ -148,6 +143,7 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
     {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+        // Set AuthCredential variable to get emailAuthProvider
         AuthCredential authCredential = EmailAuthProvider.getCredential(emailStr ,oldPassStr);
                 user.reauthenticate(authCredential).addOnSuccessListener(new OnSuccessListener<Void>()
                 {
@@ -155,11 +151,25 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                     public void onSuccess(Void unused)
                     {
                         // user object calls the update password function that takes the new password String
-                        user.updatePassword(newPassStr);
-                        Toast.makeText(updatePassword.this,"Password updated successfully  ",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(updatePassword.this , MainActivity.class));
-
+                        user.updatePassword(newPassStr).addOnSuccessListener(new OnSuccessListener<Void>()
+                        {
+                            @Override
+                            public void onSuccess(Void unused)
+                            {
+                                Toast.makeText(updatePassword.this,"Password updated successfully  ",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(updatePassword.this , MainActivity.class));
+                            }
+                        }).addOnFailureListener(new OnFailureListener()
+                        {
+                            @Override
+                            public void onFailure(@NonNull Exception e)
+                            {
+                                // Failed to update password, display to user
+                                Toast.makeText(updatePassword.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
                     }
+                    // onFailure listener to check for failed attempt and display reason to user
                 }).addOnFailureListener(new OnFailureListener()
                 {
                     @Override
@@ -169,6 +179,5 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                         Toast.makeText(updatePassword.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
                     }
                 });
-
         }
 }
