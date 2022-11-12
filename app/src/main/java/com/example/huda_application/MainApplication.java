@@ -14,6 +14,7 @@ import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.Message;
 import com.example.huda_application.user.User;
 import com.example.huda_application.user.UserManager;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,11 +28,16 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
     private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, PatientPortal ,Message_tab;
     private ImageView profile;
     private FirebaseAuth mAuth;
+    private TextView name;
+    private TextView email;
+    private TextView DOB;
+    NavigationView profileMenu;
+    View headerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_activity_main_application);
+        setContentView(R.layout.new_profile_menu);
         Message_tab = findViewById(R.id.messages_tab);
         PatientPortal = findViewById(R.id.Patients);
         Partner_button = findViewById(R.id.partnersPage);
@@ -40,6 +46,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         signOut = findViewById(R.id.logoutButton);
         Announcements = findViewById(R.id.announcementsPage);
         profile = (ImageView) findViewById(R.id.profileIcon);
+        profileMenu = findViewById(R.id.nav_view);
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
@@ -51,9 +58,6 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser fbUser = mAuth.getCurrentUser();
-
-
-
 
         // if user is not null and their email is not verified
         if (fbUser != null && !fbUser.isEmailVerified()) {

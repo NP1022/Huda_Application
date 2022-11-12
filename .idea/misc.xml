@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/drawable/buttonstyle.xml" value="0.154" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/drawable/roundedbutton.xml" value="0.154" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_admin_page.xml" value="0.18072916666666666" />
@@ -112,7 +113,7 @@
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20652173913043478" />
         <entry key="app/src/main/res/layout/activity_main_application.xml" value="0.4607025146484375" />
-        <entry key="app/src/main/res/layout/activity_new_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_new_login.xml" value="0.27810211181640626" />
         <entry key="app/src/main/res/layout/activity_our_story.xml" value="0.15896739130434784" />
         <entry key="app/src/main/res/layout/activity_partners.xml" value="0.2627105712890625" />
         <entry key="app/src/main/res/layout/activity_patient_form.xml" value="0.2867482092244055" />
@@ -126,7 +127,8 @@
         <entry key="app/src/main/res/layout/content_profile_menu.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/menu_activity_main.xml" value="0.33958333333333335" />
         <entry key="app/src/main/res/layout/menu_activity_main_application.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/nav_header_profile_menu.xml" value="0.37272727272727274" />
+        <entry key="app/src/main/res/layout/nav_header_profile_menu.xml" value="0.19234924316406252" />
+        <entry key="app/src/main/res/layout/new_profile_menu.xml" value="0.14322916666666666" />
         <entry key="app/src/main/res/menu/activity_profile_menu_drawer.xml" value="0.6204722086588542" />
       </map>
     </option>

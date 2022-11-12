@@ -1,9 +1,12 @@
 package com.example.huda_application;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +17,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.huda_application.databinding.ActivityProfileMenuBinding;
-import com.example.huda_application.databinding.MenuActivityMainApplicationBinding;
+import com.example.huda_application.databinding.NewProfileMenuBinding;
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.User;
 import com.example.huda_application.user.UserManager;
@@ -28,7 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 public class ProfileMenu extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private MenuActivityMainApplicationBinding binding;
+    private NewProfileMenuBinding binding;
     private TextView name;
     private TextView email;
     private TextView DOB;
@@ -39,7 +42,7 @@ public class ProfileMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = MenuActivityMainApplicationBinding.inflate(getLayoutInflater());
+        binding = NewProfileMenuBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarProfileMenu.toolbar);
@@ -63,31 +66,34 @@ public class ProfileMenu extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
         headerView = navigationView.getHeaderView(0);
         name = (TextView) headerView.findViewById(R.id.profile_user_name);
         email = (TextView) headerView.findViewById(R.id.profile_user_email);
         DOB = (TextView) headerView.findViewById(R.id.profile_user_dob);
 
-        FirebaseDatabase.getInstance().getReference("User").child(UserManager.getInstance().getCurrentUser().getUserId())
-                .addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        User user = FirebaseClient.convertToUser(snapshot);
-                        user = snapshot.getValue(User.class);
-                        name.setText(String.format("%s", user.getFirstName() + " " + user.getLastName()));
-                        email.setText(String.format("%s", user.getEmailAddress()));
-                        DOB.setText(String.format("%s", user.getBirthday()));
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                    }
-                });
-
         User user = UserManager.getInstance().getCurrentUser();
         name.setText(String.format("%s", user.getFirstName() + " " + user.getLastName()));
         email.setText(String.format("%s", user.getEmailAddress()));
         DOB.setText(String.format("%s", user.getBirthday()));
+
+//        FirebaseDatabase.getInstance().getReference("User").child(UserManager.getInstance().getCurrentUser().getUserId())
+//                .addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                        User user = FirebaseClient.convertToUser(snapshot);
+//                        user = snapshot.getValue(User.class);
+//                        name.setText(String.format("%s", user.getFirstName() + " " + user.getLastName()));
+//                        email.setText(String.format("%s", user.getEmailAddress()));
+//                        DOB.setText(String.format("%s", user.getBirthday()));
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//                    }
+//                });
+
+
     }
 
     @Override
