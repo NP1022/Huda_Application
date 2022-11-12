@@ -40,6 +40,7 @@
     <string name="partners">شركاء</string>
     <string name="contact">اتصل بنا</string>
     <string name="patients_page">تعيينات</string>
+    <string name = "logout">تسجيل خروج</string>
 
 <!--    Services-->
     <string name="healthservices"> خدمات صحية مجانية</string>

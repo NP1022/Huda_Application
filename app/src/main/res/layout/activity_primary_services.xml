@@ -32,7 +32,7 @@
             android:id="@+id/healthHeader"
             android:layout_width="330dp"
             android:layout_height="55dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="8dp"
             android:background="@color/white"
             android:text="@string/PrimaryServicesHeader"
             android:textAlignment="center"
@@ -208,7 +208,7 @@
         <TextView
             android:id="@+id/healthPara"
             android:layout_width="320dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
             android:fontFamily="sans-serif-light"
@@ -226,11 +226,9 @@
             android:id="@+id/imageView9"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="59dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toStartOf="@+id/healthAssessments"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/visionServices"
             app:srcCompat="@drawable/done" />
 

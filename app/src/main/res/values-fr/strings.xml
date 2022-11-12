@@ -14,7 +14,7 @@
     <string name="password">Entrer le mot de passe</string>
     <string name="email">Entrez le-mail</string>
     <string name="Login">Connexion</string>
-    <string name="forgotpassword">Mot de passe oublié</string>
+    <string name="forgotpassword">Mot de passe oublié?</string>
     <string name="dontAccount">Vous n\'avez pas de compte ? S\'inscrire</string>
     <string name="alreadyAccount">Vous avez déjà un compte? Connexion</string>
     <string name="register">Sinscrire</string>
@@ -34,13 +34,14 @@
 
 
     <!--    Main Menu Page-->
-    <string name="home">Page Daccueil</string>
-    <string name="Annoucment">Les Annonces</string>
-    <string name="services">Les Services</string>
-    <string name="story">Notre Histoire</string>
-    <string name="partners">Les Partenaires</string>
-    <string name="contact">Nous Contacter</string>
-    <string name="patients_page">rendez-vous</string>
+    <string name="home">PAGE DACCUEIL</string>
+    <string name="Annoucment">LES ANNONCES</string>
+    <string name="services">LES SERVICES</string>
+    <string name="story">NOTRE HISTOIRE</string>
+    <string name="partners">PARTENAIRES</string>
+    <string name="contact">CONTACTER</string>
+    <string name="patients_page">RENDEZ-VOUS</string>
+    <string name = "logout">Se Déconnecter</string>
 
 <!--    Services-->
     <string name="healthservices">Services de Santé Gratuits</string>
@@ -148,7 +149,7 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name = "CheckInButton">Enregistrement</string>
 
     <!--    Contact Us Page-->
-    <string name = "ContactUsHeader">Nous Contacter</string>
+    <string name = "ContactUsHeader">NOUS CONTACTER</string>
     <string name = "ContactUsPara">HUDA, une clinique de santé communautaire gratuite\n Metro Detroit</string>
     <string name = "CallHeader">Appel:</string>
     <string name = "ClinicPhone">(313) 865-8446</string>
@@ -157,14 +158,14 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name = "SocialMediaHeader">Trouvez-Nous Sur:</string>
 
     <!--    Our Story Page-->
-    <string name = "OurStoryHeader">Notre Histoire</string>
+    <string name = "OurStoryHeader">NOTRE HISTOIRE</string>
     <string name = "History">Histoire de La Clinique HUDA</string>
     <string name = "HistoryPara">La clinique HUDA a ouvert ses portes en mai 2004 pour servir la population non assurée de la région de Detroit. La clinique fonctionnait initialement grâce aux fonds recueillis par la communauté musulmane de Metro Detroit.</string>
     <string name = "HistPara">À ses débuts, la clinique HUDA fournissait uniquement des services médicaux. Nous avons ensuite déménagé de notre installation d\'origine au Muslim Center de Detroit dans une nouvelle installation plus grande sur Woodrow Wilson Street. Depuis lors, nous avons élargi nos soins pour inclure une gamme complète de services dentaires, de soins de la vue, de podiatrie et de santé mentale, ainsi qu\'une pléthore de services spécialisés disponibles sans frais pour nos patients. Notre nouvelle installation nous a permis d\'étendre nos services et nos heures de service, mais rien de tout cela ne serait possible sans le généreux soutien de nos donateurs et bénévoles.</string>
 
 
     <!--    Announcements Page-->
-    <string name = "AnnouncementsHeader">Annonces</string>
+    <string name = "AnnouncementsHeader">ANNONCES</string>
     <string name = "ClosureHeader">Dates de Fermeture des fêtes 2022</string>
     <string name = "Date1">Mercredi 23 Novembre 2022 - Lundi 28 Novembre 2022</string>
     <string name = "Date2">Samedi 24 Décembre 2022</string>
@@ -207,7 +208,7 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <!--    Mental Health Page-->
     <string name = "MentalHealthHeader">SANTÉ MENTALE</string>
     <string name = "MentalHealthPar1">Nous avons des psychiatres parmi notre personnel ainsi que nos travailleurs sociaux agréés pour fournir une thérapie et un traitement pour un large éventail de problèmes de santé mentale.Nous offrons des conseils et des traitements gratuits aux anciens combattants, aux sans-abri , non assurés et les travailleurs sous-assurés.</string>
-    <string name="Psych">Psychiatre Prescripteur sur Place</string>
+    <string name="Psych">Psychiatre Prescripteur</string>
     <string name="AdultCounseling">Conseils Pour Adultes</string>
     <string name="AnxietyandDep">Anxiété/Dépression</string>
     <string name="Bipolar">Troubles Bpolaires</string>

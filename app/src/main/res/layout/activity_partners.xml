@@ -205,7 +205,7 @@
             android:layout_marginTop="7dp"
             android:layout_marginBottom="10dp"
             android:background="@color/white"
-            android:text="PARTNERS"
+            android:text="@string/partners"
             android:textAlignment="center"
             android:textColor="#043670"
             android:textSize="30dp"

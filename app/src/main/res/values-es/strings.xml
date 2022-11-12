@@ -15,8 +15,8 @@
     <string name="email">Ingrese el Correo Electrónico</string>
     <string name="Login">Iniciar Sesión</string>
     <string name="forgotpassword">Olvidó Su Contraseña?</string>
-    <string name="dontAccount">¿No tienes una cuenta? Inscribirse</string>
-    <string name="alreadyAccount">¿Ya tienes una cuenta? Acceso</string>
+    <string name="dontAccount">¿No tienes una cuenta?</string>
+    <string name="alreadyAccount">¿Ya tienes una cuenta?<b>Acceso</b></string>
     <string name="register">Registro</string>
     <string name="language">Español</string>
     <string name="FirstName">Ingrese el Nombre</string>
@@ -37,9 +37,10 @@
     <string name="Annoucment">Anuncio</string>
     <string name="services">Servicios</string>
     <string name="story">Nuestra Historia</string>
-    <string name="partners">Socios</string>
+    <string name="partners">SOCIAS</string>
     <string name="contact">Contacta con Nosotros</string>
     <string name="patients_page">Equipo</string>
+    <string name = "logout">Cerrar Sesión</string>
 
 <!--    Services -->
     <string name="healthservices">Servicios de salud gratuitos</string>
@@ -68,7 +69,7 @@
     <string name="Date">Fecha (MM/DD/AAAA)</string>
     <string name="VisitReason">Motivo de la visita</string>
     <string name="Sex">Sexo</string>
-    <string name="DOB">Fecha de Nacimiento (MM/DD/AAAA)</string>
+    <string name="DOB">Cumpleaños (MM/DD/AAAA)</string>
     <string name="Address">Dirección (1234 Street St.)</string>
     <string name = "City">Dirección</string>
     <string name = "State">Estado</string>
@@ -147,7 +148,7 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name ="appointmentsHeader">EQUIPO</string>
 
     <!--    Contact Us Page-->
-    <string name = "ContactUsHeader">Contacta Con Nosotros</string>
+    <string name = "ContactUsHeader">CONTACTA</string>
     <string name = "ContactUsPara">HUDA, una clínica de salud comunitaria gratuita\nen Metro Detroit</string>
     <string name = "CallHeader">Llamar:</string>
     <string name = "ClinicPhone">(313) 865-8446</string>
@@ -156,13 +157,13 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "SocialMediaHeader">Encuéntranos en:</string>
 
 <!--    Our Story Page-->
-    <string name = "OurStoryHeader">Nuestra historia</string>
+    <string name = "OurStoryHeader">NUESTRA HISTORIA</string>
     <string name = "History">Historia de la Clínica HUDA</string>
     <string name = "HistoryPara">La Clínica HUDA abrió sus puertas por primera vez en mayo de 2004 para atender a la población sin seguro del área de Detroit. La clínica funcionó inicialmente con fondos recaudados por la comunidad musulmana de Metro Detroit.</string>
     <string name = "HistPara">Cuando comenzó, la Clínica HUDA brindaba únicamente servicios médicos. Luego nos mudamos de nuestra instalación original en el Centro Musulmán de Detroit a una instalación nueva y más grande en Woodrow Wilson Street. Desde entonces, hemos ampliado nuestra atención para incluir una gama completa de servicios dentales, de atención de la vista, de podología y de salud mental, así como una plétora de servicios especializados disponibles sin costo para nuestros pacientes. Nuestras nuevas instalaciones nos han permitido ampliar nuestros servicios y nuestros tiempos de servicio, pero nada de eso sería posible sin el generoso apoyo de nuestros donantes y voluntarios.</string>
 
     <!--    Announcements Page-->
-    <string name = "AnnouncementsHeader">Anuncios</string>
+    <string name = "AnnouncementsHeader">ANUNCIOS</string>
     <string name = "ClosureHeader">Fechas de Cierre de Vacaciones de 2022</string>
     <string name = "Date1">23 de Noviembre de 2022 - 28 de Noviembre de 2022</string>
     <string name = "Date2">24 de Diciembre de 2022</string>
@@ -204,13 +205,13 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <!--    Mental Health Page-->
     <string name = "MentalHealthHeader">SALUD MENTAL</string>
     <string name = "MentalHealthPar1">Tenemos psiquiatras en el personal junto con nuestros trabajadores sociales autorizados para brindar terapia y tratamiento para una amplia gama de problemas de salud mental.Ofrecemos asesoramiento y tratamiento gratuitos a veteranos, personas sin hogar , sin seguro y trabajadores con seguro insuficiente.</string>
-    <string name="Psych">Psiquiatra prescriptor en el sitio</string>
-    <string name="AdultCounseling">Consejería para adultos</string>
+    <string name="Psych">Psiquiatra Prescriptor</string>
+    <string name="AdultCounseling">Consejería Para Adultos</string>
     <string name="AnxietyandDep">Ansiedad/Depresión</string>
-    <string name="Bipolar">Trastornos bipolares</string>
-    <string name="Eating">Trastornos de la alimentación</string>
-    <string name="Schiz">Trastornos esquizoafectivos</string>
-    <string name="AndMore">Y más</string>
+    <string name="Bipolar">Trastornos Bipolares</string>
+    <string name="Eating">Trastornos de la Alimentación</string>
+    <string name="Schiz">Trastornos Esquizoafectivos</string>
+    <string name="AndMore">Y Más</string>
 
     <!--    Speciality Care Page-->
     <string name = "SpecialtyCareHeader">SERVICIOS ESPECIALES</string>

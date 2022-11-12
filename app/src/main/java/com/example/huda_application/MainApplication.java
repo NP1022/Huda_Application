@@ -25,7 +25,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 
 
     private TextView Partner_button, Contact_Us, Our_story, signOut, Announcements, PatientPortal ,Message_tab;
-    private ImageView profile;
+    private ImageView profile, Inbox;
     private FirebaseAuth mAuth;
 
     @Override
@@ -38,6 +38,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Contact_Us = findViewById(R.id.contactUsPage);
         Our_story = findViewById(R.id.ourStoryPage);
         signOut = findViewById(R.id.logoutButton);
+        Inbox = findViewById(R.id.inbox);
         Announcements = findViewById(R.id.announcementsPage);
         profile = (ImageView) findViewById(R.id.profileIcon);
         Partner_button.setOnClickListener(this);
@@ -48,6 +49,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         PatientPortal.setOnClickListener(this);
         Message_tab.setOnClickListener(this);
         profile.setOnClickListener(this);
+        Inbox.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser fbUser = mAuth.getCurrentUser();
@@ -68,7 +70,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 
                     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                         int read_count = (int) UserManager.getInstance().getCurrentUser().getMessages().stream().filter(message -> !message.isRead()).count();
-                        Message_tab.setText("messages "+ read_count); }
+                        Message_tab.setText(String.valueOf(read_count)); }
                 }
 
                 @Override
@@ -111,6 +113,10 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         }
         else if (view.getId() == R.id.profileIcon) {
             Intent profilePage = new Intent(this, ProfilePage.class);
+            startActivity(profilePage);
+        }
+        else if (view.getId() == R.id.inbox) {
+            Intent profilePage = new Intent(this, PatientMessages.class);
             startActivity(profilePage);
         }
     }
