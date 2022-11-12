@@ -58,7 +58,10 @@
     <string name="Dental">Cuidado Dental</string>
     <string name="speciality">Atención Especializada</string>
 
-<!--    Patient Portal-->
+    <!--    Inbox Page-->
+    <string name="Inbox">BANDEJA DE ENTRADA</string>
+
+    <!--    Patient Portal-->
     <string name="NewPatient">Nuevo Paciente</string>
     <string name="patientForm">Formulario de Nuevo Paciente</string>
     <string name="checkIn">Registrarse</string>

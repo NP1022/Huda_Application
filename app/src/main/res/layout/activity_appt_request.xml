@@ -55,8 +55,8 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/edittextstyle"
         android:ems="10"
-        android:hint="Date                         "
         android:gravity="left|center_vertical"
+        android:hint="Select Date                         "
         android:inputType="text"
         android:padding="10dp"
         android:textColor="@color/black"
@@ -91,9 +91,10 @@
         android:id="@+id/appointmentTime"
         android:layout_width="320dp"
         android:layout_height="55dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/edittextstyle"
         android:ems="10"
-        android:layout_marginTop="20dp"
+        android:hint="Appointment Time"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="#686868"
@@ -101,8 +102,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dateText"
-        android:hint="Appointment  Time"
-
 
 
         />

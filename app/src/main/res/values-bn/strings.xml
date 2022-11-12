@@ -58,6 +58,9 @@
     <string name="Dental">দাঁতের যত্ন</string>
     <string name="speciality">বিশেষ যত্ন</string>
 
+    <!--    Inbox Page-->
+    <string name="Inbox">ইনবক্স</string>
+
 <!--    Patient Portal-->
     <string name="NewPatient">নতুন রোগী</string>
     <string name="patientForm">নতুন রোগীর ফর্ম</string>

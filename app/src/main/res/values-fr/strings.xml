@@ -59,7 +59,10 @@
     <string name="Dental">Soins dentaires</string>
     <string name="speciality">Soins Spécialisés</string>
 
-<!--    Patient Portal-->
+    <!--    Inbox Page-->
+    <string name="Inbox">BOÎTE DE RÉCEPTION</string>
+
+    <!--    Patient Portal-->
     <string name="NewPatient">Nouveau Patient</string>
     <string name="patientForm">Nouveau Formulaire Patient</string>
     <string name="checkIn">Enregistrement</string>

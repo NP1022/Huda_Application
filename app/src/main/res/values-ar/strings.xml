@@ -64,7 +64,8 @@
     <string name="checkIn">تحقق في</string>
     <string name="MedicalChart">الرسم البياني الطبي</string>
 
-
+    <!--    Inbox Page-->
+    <string name="Inbox">صندوق الوارد</string>
 
     <!--    Patient Form Strings -->
     <string name = "Registration">التسجيل</string>

@@ -58,6 +58,8 @@
     <string name="Dental">DENTAL CARE</string>
     <string name="speciality">SPECIALTY CARE</string>
 
+    <!--    Inbox Page-->
+    <string name="Inbox">INBOX</string>
 
     <!--    Patient Portal-->
     <string name="NewPatient">New Patient</string>

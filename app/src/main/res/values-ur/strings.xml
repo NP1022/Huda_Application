@@ -57,6 +57,9 @@
     <string name="VisionHealth">وژن کی دیکھ بھال</string>
     <string name="Dental">دانتوں کی دیکھ بھال</string>
 
+    <!--    Inbox Page-->
+    <string name="Inbox">ان باکس</string>
+
     <string name="speciality">خصوصی دیکھ بھال</string>
     <string name="NewPatient">نیا مریض</string>
     <string name="patientForm">نیا مریض فارم</string>
