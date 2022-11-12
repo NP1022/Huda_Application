@@ -14,7 +14,7 @@
     <string name="password">Entrer le mot de passe</string>
     <string name="email">Entrez le-mail</string>
     <string name="Login">Connexion</string>
-    <string name="forgotpassword">Mot de passe oublié</string>
+    <string name="forgotpassword">Mot de passe oublié?</string>
     <string name="dontAccount">Vous n\'avez pas de compte ? S\'inscrire</string>
     <string name="alreadyAccount">Vous avez déjà un compte? Connexion</string>
     <string name="register">Sinscrire</string>

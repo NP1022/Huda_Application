@@ -15,8 +15,8 @@
     <string name="email">Ingrese el Correo Electrónico</string>
     <string name="Login">Iniciar Sesión</string>
     <string name="forgotpassword">Olvidó Su Contraseña?</string>
-    <string name="dontAccount">¿No tienes una cuenta? Inscribirse</string>
-    <string name="alreadyAccount">¿Ya tienes una cuenta? Acceso</string>
+    <string name="dontAccount">¿No tienes una cuenta?</string>
+    <string name="alreadyAccount">¿Ya tienes una cuenta?<b>Acceso</b></string>
     <string name="register">Registro</string>
     <string name="language">Español</string>
     <string name="FirstName">Ingrese el Nombre</string>
@@ -68,7 +68,7 @@
     <string name="Date">Fecha (MM/DD/AAAA)</string>
     <string name="VisitReason">Motivo de la visita</string>
     <string name="Sex">Sexo</string>
-    <string name="DOB">Fecha de Nacimiento (MM/DD/AAAA)</string>
+    <string name="DOB">Cumpleaños (MM/DD/AAAA)</string>
     <string name="Address">Dirección (1234 Street St.)</string>
     <string name = "City">Dirección</string>
     <string name = "State">Estado</string>
