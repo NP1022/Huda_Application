@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.huda_application.appointment.AppointmentManager;
@@ -36,13 +37,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class AvailableAppointments extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
+public class AvailableAppointments extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, View.OnClickListener {
 
     private Button dateButton;
     private AppointmentManager appointmentManager;
     private List<Time> availableTimes = new ArrayList<>();
     private PatientViewAdapter viewAdapter;
-
+    private ImageView backbutton;
     private ValueEventListener dbListener;
     private RecyclerView recyclerView;
 
@@ -53,14 +54,21 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
 
         recyclerView = findViewById(R.id.usersView6);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        backbutton = findViewById(R.id.backButton_7);
         dateButton = findViewById(R.id.dateText2);
         dateButton.setOnClickListener(v -> {
             DialogFragment datePicker = new DatePickerFragment();
 
             datePicker.show(getSupportFragmentManager(), "Available Times");
         });
+        backbutton.setOnClickListener( this);
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.backButton_7)
+            startActivity(new Intent(this, Adminpanel.class));
     }
 
     private class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> implements View.OnClickListener {

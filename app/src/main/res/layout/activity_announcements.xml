@@ -9,7 +9,7 @@
     android:background="@color/white">
 
     <ImageView
-        android:id="@+id/backButton"
+        android:id="@+id/backButton_10"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"

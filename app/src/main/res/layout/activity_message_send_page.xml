@@ -59,7 +59,7 @@
         android:ems="10"
         android:padding="10dp"
         android:hint="Message"
-        android:textColor="#686868"
+        android:textColor="@color/black"
         android:textColorHint="#686868"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
