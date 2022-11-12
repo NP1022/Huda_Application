@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -14,6 +13,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/backbutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icons8_back_arrow_100" />
@@ -22,29 +22,37 @@
         android:id="@+id/hudaLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="120dp"
-        app:srcCompat="@drawable/huda_logo" />
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/huda_logo"
+        android:contentDescription="hudaLogo" />
 
     <TextView
         android:id="@+id/loginHeader"
         android:layout_width="330dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
         android:layout_gravity="center"
+        android:layout_marginTop="8dp"
         android:text="@string/AnnouncementsHeader"
         android:textAlignment="center"
         android:textColor="#043670"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/hudaLogo"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
 
     <WebView
         android:id="@+id/calendarWebView"
         android:layout_width="360dp"
         android:layout_height="500dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginHeader" />
 
 
     <!--    <TextView-->
@@ -180,4 +188,4 @@
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent"/>-->
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
