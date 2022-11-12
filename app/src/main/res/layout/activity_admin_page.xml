@@ -36,7 +36,7 @@
         android:layout_width="330dp"
         android:layout_height="55dp"
         android:layout_marginTop="7dp"
-        android:text="Patients"
+        android:text="PATIENTS"
         android:textAlignment="center"
         android:textColor="#043670"
         android:textSize="30dp"
