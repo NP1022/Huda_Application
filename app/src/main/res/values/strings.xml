@@ -14,9 +14,9 @@
     <string name="password">Enter Password</string>
     <string name="email">Enter Email</string>
     <string name="Login">Login</string>
-    <string name="forgotpassword">Forgot Password? Reset</string>
-    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
-    <string name="alreadyAccount">Already Registered? Sign In</string>
+    <string name="forgotpassword">Forgot Password? <b>Reset</b></string>
+    <string name="dontAccount">Don\'t Have an Account? <b>Sign Up</b></string>
+    <string name="alreadyAccount">Already Registered? <b>Sign In</b></string>
     <string name="register">Register</string>
     <string name="language">English</string>
     <string name="FirstName">Enter First Name</string>
@@ -29,7 +29,7 @@
     <string name="registerHeader">REGISTER ACCOUNT</string>
     <string name="forgotPassHeader">RESET PASSWORD</string>
     <string name="login_dialog">Enter your credentials below to log in.</string>
-    <string name="regDiaglogue">Complete the fields below to register an account. You will receive a verification email upon successful registration. </string>
+    <string name="regDiaglogue">Complete the fields below to register an account. You will receive a verification email upon successful registration.</string>
     <string name="forgotDialogue">Enter the email associated with your account and you will receive instructions to reset your password.</string>
 
     <!--    Main Menu Page-->
@@ -238,5 +238,5 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="nextMonthButton"><![CDATA[->]]></string>
     <string name="PrevMonthButton"><![CDATA[<-]]></string>
     <string name="calItem">1</string>
-    <string name="backbutton">backButton</string>
+
 </resources>
