@@ -269,4 +269,37 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="Relation">Relationship to Patient</string>
     <string name="PhoneNumber">Phone Number 123–123–1234</string>
 
+    <!-- Stress Form -->
+    <string name="StressFormHeader">Stress\n Questionaire</string>
+    <string name="StressFormbody">Over the last two (2) weeks, how often have you been bothered by any of the following problems? Please input the number that applies to you</string>
+    <string name="StressFormInstruction">0 = Not at all\n1 = Several Days\n2 = More than half the days\n3 = Nearly everyday</string>
+    <string name="Q1S1">1. Feeling down, depressed or hopeless</string>
+    <string name="StressFormAnswer">Enter 0, 1, 2 or 3</string>
+    <string name="q2s1">2. Trouble falling or stay asleep or\n Sleeping too much</string>
+    <string name="q3s1">3. Feeling tired or having little\n energy</string>
+    <string name="q4s1">4. Poor appetite OR Overeating</string>
+    <string name="q5s1">5. Feeling bad about yourself or\n what that you are a failure or \n have let yourself or your family\n down</string>
+    <string name="q6s1">6. Trouble concentrating on things such\n as reading the newspaper or \n watching television</string>
+    <string name="q7s1">7. Moving or speaking so slowly\n that other \npeople could have noticed OR\nBeing so fidgety or restless that you’ve\n been moving around a lot more\n than usual</string>
+    <string name="q8s1">8. Thoughts that you would be \nbetter off\n dead OR Hurting yourself in\n some way</string>
+    <string name="totals">Add numbers for total</string>
+    <string name="section2Header">Section 2</string>
+    <string name="section2Header2">Over the last two (2) weeks, how \noften have you been bothered\n by of the following problems? Please input the number that applies to you</string>
+    <string name="s2q1">1. Feeling nervous, anxious or\n on edge</string>
+    <string name="s2q2">2. Not being able to stop or\n control worrying</string>
+    <string name="s2q3">3. Worrying too much about\n different things</string>
+    <string name="s2q4">4. Trouble Relaxing</string>
+    <string name="s2q5">5. Being so restless that it is hard\n to sit still</string>
+    <string name="s2q6">6. Becoming Easily annoyed or irritable</string>
+    <string name="s2q7">7. Feeling afraid as if something\n awful might happen</string>
+    <string name="section3Header">Section 3</string>
+    <string name="section3Header2">In your life have you ever had any experience that was so frightening, horrible or upsetting that in the past month you: (Yes or No)</string>
+    <string name="s3q1">1. Have had nightmares about it or\n thought about it when you did not\n want to?</string>
+    <string name="StressFormYesOrNo">Enter Yes or No</string>
+    <string name="s3q2">2. Tried hard not to think about it or\n went out of your way to avoid situations\n that remind you of it?</string>
+    <string name="s3q3">3. Were constantly on guard, watchful\n or easily startled?</string>
+    <string name="s3q4">4. Felt numb or detached from others,\n activities, or your surroundings?</string>
+
+
+
 </resources>

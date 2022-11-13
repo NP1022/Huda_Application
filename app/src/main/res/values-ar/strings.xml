@@ -263,4 +263,35 @@
     <string name="Relation">العلاقة مع المريض</string>
     <string name="PhoneNumber">رقم الهاتف 123-12-1234</string>
 
+    <!--Patient Stress Form-->
+    <string name="StressFormHeader">إجهاد \ n سؤال</string>
+    <string name="StressFormbody">على مدار الأسبوعين الماضيين (2) ، كم مرة تضايقك من أي من المشكلات التالية؟ الرجاء إدخال الرقم الذي ينطبق عليك</string>
+    <string name="StressFormInstruction">0 = لا على الإطلاق \ n1 = عدة أيام \ n2 = أكثر من نصف الأيام \ n3 = كل يوم تقريبًا</string>
+    <string name="Q1S1">1. الشعور بالاكتئاب أو اليأس</string>
+    <string name="StressFormAnswer">Enter 0, 1, 2 or 3</string>
+    <string name="q2s1">2. صعوبة في السقوط أو الاستمرار في النوم أو \ n النوم كثيرًا</string>
+    <string name="q3s1">3. الشعور بالتعب أو قلة \ n الطاقة</string>
+    <string name="q4s1">4. ضعف الشهية أو الإفراط في الأكل</string>
+    <string name="q5s1">5. الشعور بالسوء حيال نفسك أو \ n ما هو أنك فاشل أو \ n تخذل نفسك أو عائلتك \ n</string>
+    <string name="q6s1">6. مشكلة في التركيز على أشياء مثل \ n قراءة الجريدة أو \ n مشاهدة التلفزيون</string>
+    <string name="q7s1">7. التحرك أو التحدث ببطء شديد \ n بحيث يمكن لأشخاص آخرين \ n أن يلاحظوا أو \ n الشعور بالضيق أو القلق لدرجة أنك \ n تتنقل كثيرًا \ n أكثر من المعتاد</string>
+    <string name="q8s1">8. التفكير في أنك ستكون \ n أفضل للموت \ n أو تؤذي نفسك \ n بطريقة ما</string>
+    <string name="totals">اجمع الأرقام في المجموع</string>
+    <string name="section2Header">القسم 2</string>
+    <string name="section2Header2">على مدار الأسبوعين الماضيين (2) ، كيف \ n كثيرًا ما تزعجك \ n بالمشكلات التالية؟ الرجاء إدخال الرقم الذي ينطبق عليك</string>
+    <string name="s2q1">1. الشعور بالتوتر أو القلق أو \ n التوتر</string>
+    <string name="s2q2">2. عدم القدرة على التوقف أو \ n التحكم في القلق</string>
+    <string name="s2q3">3. القلق كثيرا حول \ n أشياء مختلفة</string>
+    <string name="s2q4">4. مشكلة الاسترخاء</string>
+    <string name="s2q5">5. القلق لدرجة أنه من الصعب \ n الجلوس</string>
+    <string name="s2q6">6. سهولة الانزعاج أو الانفعال</string>
+    <string name="s2q7">7. الشعور بالخوف كما لو أن شيئًا فظيعًا قد يحدث \ n</string>
+    <string name="section3Header">قسم 3</string>
+    <string name="section3Header2">هل مررت في حياتك بأي تجربة كانت مخيفة جدًا أو مروعة أو مزعجة لدرجة أنك في الشهر الماضي: (نعم أو لا)</string>
+    <string name="s3q1">1. هل راودتك كوابيس حول هذا الأمر أو \ n فكرت فيه عندما لم ترغب في ذلك؟</string>
+    <string name="StressFormYesOrNo">أدخل نعم أو لا</string>
+    <string name="s3q2">2. حاولت جاهدًا ألا تفكر في الأمر أو \ n خرجت عن طريقك لتجنب المواقف \ n التي تذكرك بها؟</string>
+    <string name="s3q3">3. هل كنت متيقظًا باستمرار ، متيقظًا \ n أو أذهل بسهولة؟</string>
+    <string name="s3q4">4. هل شعرت بالخدر أو الانفصال عن الآخرين ، \ n الأنشطة ، أو محيطك؟</string>
+
 </resources>

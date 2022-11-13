@@ -265,4 +265,35 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name="Relation">Relation avec le patient</string>
     <string name="PhoneNumber">Numéro de téléphone 123–123–1234</string>
 
+    <!-- Stress Form -->
+    <string name="StressFormHeader">Questionnaire\n sur le stress</string>
+    <string name="StressFormbody">Au cours des deux (2) dernières semaines, à quelle fréquence avez-vous été dérangé par l\'un des problèmes suivants ? Veuillez entrer le numéro qui s\'applique à vous</string>
+    <string name="StressFormInstruction">0 = Pas du tout\n1 = Plusieurs jours\n2 = Plus de la moitié des jours\n3 = Presque tous les jours</string>
+    <string name="Q1S1">1. Se sentir déprimé, déprimé ou désespéré</string>
+    <string name="StressFormAnswer">Entrez 0, 1, 2 ou 3</string>
+    <string name="q2s1">2. Difficulté à s\'endormir ou à rester endormi ou\n trop dormir</string>
+    <string name="q3s1">3. Se sentir fatigué ou avoir peu\n d\'énergie</string>
+    <string name="q4s1">4. Manque d\'appétit OU suralimentation</string>
+    <string name="q5s1">5. Vous sentir mal dans votre peau ou\n ce que vous êtes un échec ou \n vous avez laissé tomber vous-même ou votre famille\n</string>
+    <string name="q6s1">6. Difficulté à se concentrer sur des choses telles\n que lire le journal ou \n regarder la télévision</string>
+    <string name="q7s1">7. Bouger ou parler si lentement\n que d\'autres \npersonnes auraient pu le remarquer OU\nÊtre si agité ou agité que vous\n avez bougé beaucoup plus\n que d\'habitude</string>
+    <string name="q8s1">8. Penser que vous seriez \nmieux\n mort OU vous blesser\n d\'une manière ou d\'une autre</string>
+    <string name="totals">Ajouter des nombres pour le total</string>
+    <string name="section2Header">Section 2</string>
+    <string name="section2Header2">Au cours des deux (2) dernières semaines, à quelle \n fréquence avez-vous été dérangé\n par les problèmes suivants? Veuillez entrer le numéro qui s\'applique à vous</string>
+    <string name="s2q1">1. Se sentir nerveux, anxieux ou\n nerveux</string>
+    <string name="s2q2">2. Ne pas être capable d\'arrêter ou\n de contrôler ses inquiétudes</string>
+    <string name="s2q3">3. Trop s\'inquiéter pour\n différentes choses</string>
+    <string name="s2q4">4. Difficulté à se détendre</string>
+    <string name="s2q5">5. Être si agité qu\'il est difficile\n de rester assis</string>
+    <string name="s2q6">6. Devenir facilement agacé ou irritable</string>
+    <string name="s2q7">7. Avoir peur comme si quelque chose\n d\'horrible pouvait arriver</string>
+    <string name="section3Header">Section 3</string>
+    <string name="section3Header2">Dans votre vie, avez-vous déjà vécu une expérience si effrayante, horrible ou bouleversante qu\'au cours du dernier mois vous : (Oui ou Non)</string>
+    <string name="s3q1">1. Vous en avez fait des cauchemars ou\n y avez pensé alors que vous ne le vouliez pas?</string>
+    <string name="StressFormYesOrNo">Entrez Oui ou Non</string>
+    <string name="s3q2">2. Vous avez essayé de ne pas y penser ou\n avez fait tout votre possible pour éviter les situations\n qui vous le rappellent?</string>
+    <string name="s3q3">3. Étiez-vous constamment sur vos gardes, vigilant\n ou facilement surpris?</string>
+    <string name="s3q4">4. Vous vous êtes senti engourdi ou détaché des autres,\n de vos activités ou de votre environnement?</string>
+
 </resources>

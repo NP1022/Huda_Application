@@ -262,4 +262,35 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name="Relation">Relación con el paciente</string>
     <string name="PhoneNumber">Número de teléfono 123–123–1234</string>
 
+    <!-- Stress Form -->
+    <string name="StressFormHeader">Estrés\n Cuestionario</string>
+    <string name="StressFormbody">En las últimas dos (2) semanas, ¿con qué frecuencia le ha molestado alguno de los siguientes problemas? Ingrese el número que se aplica a usted</string>
+    <string name="StressFormInstruction">0 = Nada\n1 = Varios días\n2 = Más de la mitad de los días\n3 = Casi todos los días</string>
+    <string name="Q1S1">1. Sentirse decaído, deprimido o sin esperanza</string>
+    <string name="StressFormAnswer">Introduzca 0, 1, 2 o 3</string>
+    <string name="q2s1">2. Dificultad para quedarse o quedarse dormido o \ n Dormir demasiado</string>
+    <string name="q3s1">3. Sentirse cansado o tener poca energía</string>
+    <string name="q4s1">4. Falta de apetito O Comer en exceso</string>
+    <string name="q5s1">5. Sentirse mal consigo mismo o\n por ser un fracaso o\n haber decepcionado a usted mismo o a su familia\n</string>
+    <string name="q6s1">6. Problemas para concentrarse en cosas\n como leer el periódico o\n ver la televisión</string>
+    <string name="q7s1">7. Moverse o hablar tan despacio\n que otras \npersonas podrían haberlo notado O\nEstar tan inquieto o inquieto que\n se ha estado moviendo mucho más\n de lo habitual</string>
+    <string name="q8s1">8. Pensamientos de que estarías \nmejor\n muerto O lastimándote\n de alguna manera</string>
+    <string name="totals">Agregar números para el total</string>
+    <string name="section2Header">Sección 2</string>
+    <string name="section2Header2">Durante las últimas dos (2) semanas, ¿con qué frecuencia le han molestado\n los siguientes problemas? Ingrese el número que se aplica a usted</string>
+    <string name="s2q1">1. Sentirse nervioso, ansioso o \ n al borde.</string>
+    <string name="s2q2">2. No ser capaz de detener o\n controlar la preocupación</string>
+    <string name="s2q3">3. Preocuparse demasiado por\n cosas diferentes</string>
+    <string name="s2q4">4. Problemas para relajarse</string>
+    <string name="s2q5">5. Estar tan inquieto que es difícil \ n quedarse quieto</string>
+    <string name="s2q6">6. Volverse fácilmente molesto o irritable</string>
+    <string name="s2q7">7. Sentir miedo como si algo terrible pudiera suceder.</string>
+    <string name="section3Header">Seccion 3</string>
+    <string name="section3Header2">En su vida, ¿alguna vez ha tenido alguna experiencia que haya sido tan aterradora, horrible o perturbadora que en el último mes usted: (Sí o No)</string>
+    <string name="s3q1">1. ¿Ha tenido pesadillas al respecto o\n pensado en ello cuando no\n quería?</string>
+    <string name="StressFormYesOrNo">Ingrese Sí o No</string>
+    <string name="s3q2">2. ¿Se esforzó por no pensar en ello o\n hizo todo lo posible para evitar situaciones\n que se lo recuerden?</string>
+    <string name="s3q3">3. ¿Estaba constantemente en guardia, alerta\n o se asustaba fácilmente?</string>
+    <string name="s3q4">4. ¿Se sintió insensible o separado de los demás,\n de sus actividades o de su entorno?</string>
+
 </resources>

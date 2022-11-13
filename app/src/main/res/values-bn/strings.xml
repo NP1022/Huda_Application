@@ -264,4 +264,35 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name="Relation">রোগীর সাথে সম্পর্ক</string>
     <string name="PhoneNumber">ফোন নম্বর 123–123–1234৷</string>
 
+    <!-- Stress Form -->
+    <string name="StressFormHeader">স্ট্রেস\n প্রশ্নপত্র</string>
+    <string name="StressFormbody">গত দুই (2) সপ্তাহে, আপনি কতবার নিচের কোন সমস্যায় বিরক্ত হয়েছেন? অনুগ্রহ করে আপনার ক্ষেত্রে প্রযোজ্য নম্বরটি ইনপুট করুন</string>
+    <string name="StressFormInstruction">0 = একেবারেই নয়\n1 = বেশ কিছু দিন\n2 = অর্ধেকেরও বেশি দিন\n3 = প্রায় প্রতিদিন</string>
+    <string name="Q1S1">1. হতাশ, হতাশ বা আশাহীন বোধ করা</string>
+    <string name="StressFormAnswer">0, 1, 2 বা 3 লিখুন</string>
+    <string name="q2s1">2. পড়ে যাওয়া বা ঘুমাতে সমস্যা হওয়া বা\n বেশি ঘুমানো</string>
+    <string name="q3s1">3. ক্লান্ত বোধ করা বা অল্প\n শক্তি থাকা</string>
+    <string name="q4s1">4. দুর্বল ক্ষুধা বা অতিরিক্ত খাওয়া</string>
+    <string name="q5s1">5. নিজের সম্পর্কে খারাপ বোধ করা বা\n কী যে আপনি ব্যর্থ হয়েছেন বা \n নিজেকে বা আপনার পরিবারকে হতাশ করেছেন\n</string>
+    <string name="q6s1">6. Trouble concentrating on things such\n as reading the newspaper or \n watching television</string>
+    <string name="q7s1">7. এত ধীরে চলা বা কথা বলা\n যাতে অন্য \nলোকেরা লক্ষ্য করতে পারে বা\nএত অস্থির বা অস্থির হওয়া যে আপনি স্বাভাবিকের চেয়ে অনেক বেশি ঘোরাফেরা করছেন\n</string>
+    <string name="q8s1">8. চিন্তা করা যে আপনি \nমৃত হয়ে যাবেন বা নিজেকে কোনোভাবে আঘাত করবেন\n</string>
+    <string name="totals">মোট সংখ্যা যোগ করুন</string>
+    <string name="section2Header">অধ্যায় 2</string>
+    <string name="section2Header2">গত দুই (2) সপ্তাহে, নিম্নলিখিত সমস্যাগুলির মধ্যে আপনি কতবার বিরক্ত হয়েছেন? অনুগ্রহ করে আপনার ক্ষেত্রে প্রযোজ্য নম্বরটি ইনপুট করুন</string>
+    <string name="s2q1">1. নার্ভাস, উদ্বিগ্ন বা\n প্রান্তে বোধ করা</string>
+    <string name="s2q2">2. দুশ্চিন্তাকে থামাতে বা নিয়ন্ত্রণ করতে না পারা</string>
+    <string name="s2q3">3. বিভিন্ন বিষয় নিয়ে খুব বেশি চিন্তা করা</string>
+    <string name="s2q4">4. শিথিল সমস্যা</string>
+    <string name="s2q5">5. এতটাই অস্থির হওয়া যে স্থির হয়ে বসে থাকা কঠিন</string>
+    <string name="s2q6">6. সহজেই বিরক্ত বা খিটখিটে হওয়া</string>
+    <string name="s2q7">7. ভয় বোধ করা যেন ভয়ংকর কিছু ঘটতে পারে</string>
+    <string name="section3Header">ধারা 3</string>
+    <string name="section3Header2">আপনার জীবনে কি কখনো এমন কোনো অভিজ্ঞতা হয়েছে যা এতটাই ভীতিকর, ভয়ঙ্কর বা বিরক্তিকর ছিল যে গত মাসে আপনি: (হ্যাঁ বা না)</string>
+    <string name="s3q1">1. এটি সম্পর্কে দুঃস্বপ্ন দেখেছেন বা\n যখন আপনি চাননি তখন এটি নিয়ে ভেবেছেন?</string>
+    <string name="StressFormYesOrNo">হ্যাঁ বা না লিখুন</string>
+    <string name="s3q2">2. এটি সম্পর্কে চিন্তা না করার জন্য কঠোর চেষ্টা করেছেন বা\n পরিস্থিতি এড়াতে আপনার পথের বাইরে চলে গেছেন\n যা আপনাকে এটি মনে করিয়ে দেয়?</string>
+    <string name="s3q3">3. ক্রমাগত সতর্ক, সতর্ক\n বা সহজেই চমকে গিয়েছিলেন?</string>
+    <string name="s3q4">4. অসাড় বা অন্যদের থেকে বিচ্ছিন্ন বোধ করেছেন, ক্রিয়াকলাপ, বা আপনার চারপাশ থেকে?</string>
+
 </resources>
