@@ -46,7 +46,7 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
         RecyclerView recyclerView = findViewById(R.id.usersView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        if (UserManager.getInstance().isAdmin()) {
+       // if (UserManager.getInstance().isAdmin()) {
             FirebaseDatabase.getInstance().getReference("User").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -65,7 +65,7 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
                 public void onCancelled(@NonNull DatabaseError error) {
                 }
             });
-        }
+      //  }
         backbutton = findViewById(R.id.backButton_9);
         backbutton.setOnClickListener(this);
     }

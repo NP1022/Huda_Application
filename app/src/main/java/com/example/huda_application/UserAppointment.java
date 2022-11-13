@@ -67,7 +67,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.backButton_8)
-            startActivity(new Intent(this , AdminPage.class));
+            startActivity(new Intent(UserAppointment.this , AdminPage.class));
     }
 
     private static class AppointmentViewAdapter extends RecyclerView.Adapter<AppointmentViewHolder> {

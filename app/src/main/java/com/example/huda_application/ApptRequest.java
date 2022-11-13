@@ -12,6 +12,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -30,9 +31,12 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.sql.Time;
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -109,10 +113,17 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.checkin) {
+            boolean temp = true;
             String date = dateButton.getText().toString().replace("Date: ", "");
-            Date currentTime = Calendar.getInstance().getTime();
-            System.out.println(currentTime);
-            System.out.println(date);
+            String currentDate = new SimpleDateFormat("MM-d-yyyy", Locale.getDefault()).format(new Date());
+            SimpleDateFormat sdf = new SimpleDateFormat("MM-d-yyyy");
+            try {
+                temp = sdf.parse(currentDate).before(sdf.parse(date));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            if (temp == true){
             Appointment appointment = new Appointment(
                     selectedTime,
                     date,
@@ -124,7 +135,9 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             AppointmentManager.createAppointment(date, selectedTime, UserManager.getInstance().getCurrentUser().getUserId());
             FirebaseClient.updateUser(UserManager.getInstance().getCurrentUser());
             Intent appointmentsIntent = new Intent(getApplicationContext(), Appointments.class);
-            startActivity(appointmentsIntent);
+            startActivity(appointmentsIntent);}
+            else
+                Toast.makeText(ApptRequest.this,"Appointments can't be made for previous days",Toast.LENGTH_LONG).show();
         }
             else if (view.getId() == R.id.backButton) {
                 Intent prev = new Intent(this, Appointments.class);

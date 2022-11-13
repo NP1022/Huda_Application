@@ -35,17 +35,17 @@ import java.util.ArrayList;
 import java.util.List;
 public class Messagepage extends AppCompatActivity implements View.OnClickListener{
 
-    private Messagepage.PatientViewAdapter2 viewAdapter;
+    private PatientViewAdapter2 viewAdapter;
     private ImageView backbottun;
     private TextView MessageAll;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messagepage);
-        RecyclerView recyclerView = findViewById(R.id.usersView4);
+        RecyclerView recyclerView = findViewById(R.id.usersView11);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        if (UserManager.getInstance().isAdmin()) {
+       // if (UserManager.getInstance().isAdmin()) {
             FirebaseDatabase.getInstance().getReference("User").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -64,7 +64,7 @@ public class Messagepage extends AppCompatActivity implements View.OnClickListen
                 public void onCancelled(@NonNull DatabaseError error) {
                 }
             });
-        }
+        //}
         backbottun = findViewById(R.id.backButton_message_main);
         MessageAll = findViewById(R.id.MessageAll);
 
@@ -84,7 +84,7 @@ public class Messagepage extends AppCompatActivity implements View.OnClickListen
         }
     }
 
-    private static class PatientViewAdapter2 extends RecyclerView.Adapter<Messagepage.PatientViewHolder> implements View.OnClickListener {
+    private static class PatientViewAdapter2 extends RecyclerView.Adapter<PatientViewHolder> implements View.OnClickListener {
 
         private LayoutInflater inflater;
         private final List<User> users;
@@ -98,13 +98,13 @@ public class Messagepage extends AppCompatActivity implements View.OnClickListen
 
         @NonNull
         @Override
-        public Messagepage.PatientViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        public PatientViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = inflater.inflate(R.layout.message_user_item, parent, false);
-            return new Messagepage.PatientViewHolder(view);
+            return new PatientViewHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(@NonNull Messagepage.PatientViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
             final int pos = position;
             User user = users.get(position);
             // FirebaseDatabase.getInstance().getReference("User").child(user.getUserId()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -118,14 +118,14 @@ public class Messagepage extends AppCompatActivity implements View.OnClickListen
             //     }
             // });
 
-            List<Appointment> appointments = user.getAppointments();
-            int Pending_count =0;
-            for (int i =0; i< appointments.size(); i ++){
-                if (appointments.get(i).getStatus() == AppointmentStatus.PENDING){
-                    Pending_count++;
-
-                }
-            }
+//            List<Appointment> appointments = user.getAppointments();
+//            int Pending_count =0;
+//            for (int i =0; i< appointments.size(); i ++){
+//                if (appointments.get(i).getStatus() == AppointmentStatus.PENDING){
+//                    Pending_count++;
+//
+//                }
+//            }
             holder.name.setText(String.format("%s", user.getFirstName()));
             holder.lastname.setText(String.format("%s", user.getLastName()));
             holder.email.setText(user.getEmailAddress());
@@ -158,9 +158,9 @@ public class Messagepage extends AppCompatActivity implements View.OnClickListen
 
         public PatientViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.name = itemView.findViewById(R.id.name);
-            this.lastname = itemView.findViewById(R.id.last_name);
-            this.email = itemView.findViewById(R.id.email);
+            this.name = itemView.findViewById(R.id.name2);
+            this.lastname = itemView.findViewById(R.id.last_name2);
+            this.email = itemView.findViewById(R.id.email2);
             this.MessagePage = itemView.findViewById(R.id.Message_button);
 
         }
