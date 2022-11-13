@@ -28,20 +28,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Time:"
+                android:text="TIME:"
                 android:textColor="@color/black"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                />
             <TextView
                 android:id="@+id/Time_appointment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="0dp"
                 android:text="temp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="0dp"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="20sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -67,14 +71,15 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Remove"
-        android:layout_width="70dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="215dp"
-        android:layout_marginTop="3dp"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+
+        android:layout_marginLeft="235dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/buttonstyle"
         android:text="Remove"
         android:textColor="#ffffff"
-        android:textSize="8sp" />
+        android:textSize="11sp" />
 
 
 </androidx.cardview.widget.CardView>

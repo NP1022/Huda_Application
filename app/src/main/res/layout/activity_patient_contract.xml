@@ -63,6 +63,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/patientContractHeader" />
 
+
         <TextView
             android:id="@+id/editTextTextMultiLine3"
             android:layout_width="320dp"
@@ -77,7 +78,6 @@
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
 
         <TextView
             android:id="@+id/textView4"
