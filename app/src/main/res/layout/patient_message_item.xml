@@ -15,19 +15,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date:"
+        android:layout_marginLeft="5dp"
+        android:text="DATE: "
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginLeft="5dp"
-        />
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
-        android:text="Message: "
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="MESSAGE:"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -36,22 +38,22 @@
         android:id="@+id/DateMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="15dp"
         android:text="date"
         android:textColor="@color/black"
-        android:textSize="15sp"
-        android:layout_marginTop="3dp"
-         />
+        android:textSize="15sp" />
+
     <TextView
         android:id="@+id/Message3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="97dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="10dp"
         android:text="message"
         android:textColor="@color/black"
-        android:textSize="15sp"
 
-        android:layout_marginTop="34dp"
-        />
+        android:textSize="15sp" />
 
 </androidx.cardview.widget.CardView>
