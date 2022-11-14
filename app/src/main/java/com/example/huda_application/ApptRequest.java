@@ -1,6 +1,5 @@
 package com.example.huda_application;
 
-import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
@@ -28,11 +27,13 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.sql.Time;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -67,9 +68,30 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 
         dateButton = findViewById(R.id.dateText);
         dateButton.setOnClickListener(v -> {
-            DialogFragment datePicker = new DatePickerFragment();
+            Calendar now = Calendar.getInstance();
+            DatePickerDialog dialog = DatePickerDialog.newInstance(
+                    this,
+                    now.get(Calendar.YEAR),
+                    now.get(Calendar.MONTH),
+                    now.get(Calendar.DAY_OF_MONTH)
+            );
+            dialog.setAccentColor(0x043670);
+            dialog.setMinDate(Calendar.getInstance());
 
-            datePicker.show(getSupportFragmentManager(), "Available Times");
+            List<Calendar> days = new ArrayList<>();
+            for (int i = 0; i < 90; i++) {
+                Calendar day = Calendar.getInstance();
+                day.add(Calendar.DAY_OF_MONTH, i);
+
+                if (day.get(Calendar.DAY_OF_WEEK) != Calendar.TUESDAY &&
+                        day.get(Calendar.DAY_OF_WEEK) != Calendar.THURSDAY &&
+                        day.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY) {
+                    days.add(day);
+                }
+            }
+
+            dialog.setDisabledDays(days.toArray(new Calendar[0]));
+            dialog.show(getSupportFragmentManager(), "Available Times");
         });
 
         // date = findViewById(R.id.dateText);
@@ -146,8 +168,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     }
 
     @Override
-    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
+    public void onDateSet(DatePickerDialog view, int year, int month, int dayOfMonth) {
         Calendar c = Calendar.getInstance();
         c.set(Calendar.YEAR, year);
         c.set(Calendar.MONTH, month);

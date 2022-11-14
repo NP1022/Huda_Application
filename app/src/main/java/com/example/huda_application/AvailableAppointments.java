@@ -6,7 +6,6 @@ import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -28,6 +27,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.sql.Time;
 import java.text.DateFormat;
@@ -57,9 +57,30 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
         backbutton = findViewById(R.id.backButton_7);
         dateButton = findViewById(R.id.dateText2);
         dateButton.setOnClickListener(v -> {
-            DialogFragment datePicker = new DatePickerFragment();
+            Calendar now = Calendar.getInstance();
+            com.wdullaer.materialdatetimepicker.date.DatePickerDialog dialog = com.wdullaer.materialdatetimepicker.date.DatePickerDialog.newInstance(
+                    this,
+                    now.get(Calendar.YEAR),
+                    now.get(Calendar.MONTH),
+                    now.get(Calendar.DAY_OF_MONTH)
+            );
+            dialog.setAccentColor(0x043670);
+            dialog.setMinDate(Calendar.getInstance());
 
-            datePicker.show(getSupportFragmentManager(), "Available Times");
+            List<Calendar> days = new ArrayList<>();
+            for (int i = 0; i < 90; i++) {
+                Calendar day = Calendar.getInstance();
+                day.add(Calendar.DAY_OF_MONTH, i);
+
+                if (day.get(Calendar.DAY_OF_WEEK) != Calendar.TUESDAY &&
+                        day.get(Calendar.DAY_OF_WEEK) != Calendar.THURSDAY &&
+                        day.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY) {
+                    days.add(day);
+                }
+            }
+
+            dialog.setDisabledDays(days.toArray(new Calendar[0]));
+            dialog.show(getSupportFragmentManager(), "Available Times");
         });
         backbutton.setOnClickListener( this);
 
@@ -70,6 +91,8 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
         if(v.getId() == R.id.backButton_7)
             startActivity(new Intent(this, Adminpanel.class));
     }
+
+
 
     private class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> implements View.OnClickListener {
 
@@ -130,10 +153,10 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
     }
 
     @Override
-    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+    public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         Calendar c = Calendar.getInstance();
         c.set(Calendar.YEAR, year);
-        c.set(Calendar.MONTH, month);
+        c.set(Calendar.MONTH, monthOfYear);
         c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
         String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
