@@ -293,4 +293,48 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name="s3q3">3. ¿Estaba constantemente en guardia, alerta\n o se asustaba fácilmente?</string>
     <string name="s3q4">4. ¿Se sintió insensible o separado de los demás,\n de sus actividades o de su entorno?</string>
 
+    <!-- Patient Info Form-->
+    <string name="infoFormHeader">Formulario de información del paciente</string>
+    <string name="infoFormBody">Tu información. Tus derechos. Nuestras responsabilidades\nEste aviso describe cómo se puede usar y divulgar su información médica y cómo puede acceder a esta información.</string>
+    <string name="yourRights">TUS DERECHOS:</string>
+    <string name="infoFormBody2">- Luego se trata de su información de salud, usted tiene ciertos derechos. Esta sección explica sus derechos y algunas de nuestras responsabilidades para ayudarlo. Pregúntenos cómo hacer esto.</string>
+    <string name="infoFormTitle">- Obtenga una copia de sus registros de salud y reclamos:</string>
+    <string name="infoFormBody3">- Puede solicitar ver u obtener una copia de sus registros médicos y de reclamos y otra información médica que tengamos sobre usted. Pregúntenos cómo hacerlo.\n- Le proporcionaremos una copia o un resumen de sus registros médicos y de reclamos, generalmente dentro de los 30 días posteriores a su solicitud. Podemos cobrar una tarifa razonable basada en el costo.</string>
+    <string name="inforFormTitle2">- Pedirnos que corrijamos registros de salud y siniestros:</string>
+    <string name="infoFormBody4">- Puede pedirnos que corrijamos sus registros médicos y de reclamos si cree que son incorrectos o están incompletos. Pregúntenos cómo hacerlo.\n- Podemos decir \'No\' a su solicitud, pero le informaremos el motivo por escrito dentro de los 60 días.</string>
+    <string name="infoFormTitle3">- Solicitar comunicaciones confidenciales:</string>
+    <string name="infoFormBody5">- Puede pedirnos que nos comuniquemos con usted de una manera específica (por ejemplo, teléfono de casa o de la oficina; este es su método de contacto "preferido") o que le enviemos un correo a una dirección diferente.\n- Consideraremos todas las solicitudes razonables y debe decir \'Sí\' si nos dice que estaría en peligro si no lo hacemos.</string>
+    <string name="infoFormTitle4">- Pedirnos que limitemos lo que usamos o compartimos:</string>
+    <string name="infoFormBody6">- Puede pedirnos que NO usemos o compartamos cierta información de salud para el tratamiento, el pago o nuestras operaciones.\n- No estamos obligados a aceptar su solicitud, y podemos decir \'No\' si afectaría su atención.</string>
+    <string name="infoFormTitle5">- Obtener una lista de aquellos con quienes hemos compartido información:</string>
+    <string name="infoFormBody7">- Puede solicitar una lista de las veces que compartimos su información de salud durante los seis años anteriores a la fecha de su solicitud, con quién la compartimos y por qué.\n- Incluiremos todas las divulgaciones excepto aquellas sobre el tratamiento, el pago y las operaciones de atención médica y ciertas otras divulgaciones (como cualquiera que nos haya pedido que hagamos) Le proporcionaremos un informe al año de forma gratuita, pero le cobraremos una tarifa razonable basada en el costo si solicita otro dentro de los 12 meses. .</string>
+    <string name="infoFormTitle6">- Obtener una copia de este aviso de privacidad:</string>
+    <string name="infoFormBody8">- Puede solicitar una copia impresa de este aviso en cualquier momento, incluso si ha aceptado recibir el aviso electrónicamente. Le proporcionaremos una copia en papel de inmediato.</string>
+    <string name="infoFormTitle7">- Elija a alguien para que actúe por usted:</string>
+    <string name="infoFormBody9">- Si le ha otorgado a alguien un poder notarial médico o si alguien es su tutor legal, esa persona puede ejercer sus derechos y tomar decisiones sobre su información de salud.\n- Nos aseguraremos de que la persona tenga esta autoridad y pueda actuar en su nombre antes tomamos cualquier acción.</string>
+    <string name="infoFormTitle8">- Presentar una denuncia si se vulneran sus derechos:</string>
+    <string name="infoFormBody10">– Puede presentar una queja si cree que hemos violado sus derechos comunicándose con nosotros utilizando la información de la página 1.\n– Puede presentar una queja ante la Oficina de Derechos Civiles del Departamento de Salud y Servicios Humanos de EE. UU. enviando una carta a 200 Independence Ave. S.O. Washington, D.C. 20201, llamando al 1–877–696-6775, o visitando www.hhs.gov/ocr/privacy/hipaa/complaints/,\n- No tomaremos represalias contra usted por presentar una queja.</string>
+    <string name="yourChoices">TUS OPCIONES:</string>
+    <string name="infoFormBody11">Para cierta información de salud, puede decirnos sus opciones sobre lo que compartimos. Si tiene una preferencia clara sobre cómo compartimos su información en las situaciones que se describen a continuación, hable con nosotros. Díganos qué quiere que hagamos y seguiremos sus instrucciones.</string>
+    <string name="infoFormTitle9">\t- En estos casos, tiene el derecho y la opción de decirnos que:</string>
+    <string name="shareInfo">\t\t- Compartir información con su familia, amigos cercanos u otras personas involucradas en el pago de su atención\n\t\t- Compartir información en una situación de socorro en caso de desastre\n\t\t- Contactarlo para los esfuerzos de recaudación de fondos</string>
+    <string name="infoFormBody12">\t- Si no puede decirnos su preferencia, por ejemplo, si está inconsciente, podemos seguir adelante y compartir su información si creemos que es lo mejor para usted. También podemos compartir su información cuando sea necesario para disminuir una amenaza grave o inminente para la salud o la seguridad.</string>
+    <string name="infoFormTitle10">\t- En estos casos, nunca compartimos su información a menos que nos dé permiso por escrito:</string>
+    <string name="marketingInfo">\t\t- Fines de marketing\n\t\t- Venta de su información</string>
+    <string name="usesAndDisclosure">NUESTROS USOS Y DIVULGACIONES:</string>
+    <string name="useAndDisclosure2">¿Cómo usamos o compartimos normalmente su información de salud? Por lo general, usamos o compartimos su información de salud de las siguientes maneras:</string>
+    <string name="manageHealthTreatment">\t- Ayudar a administrar el tratamiento de atención médica que recibe:</string>
+    <string name="manageHealth2">\t\t- Podemos usar su información de salud y compartirla con los profesionales que lo están tratando.</string>
+    <string name="org">\t- Dirige nuestra organización:</string>
+    <string name="org2">\t\t- Podemos usar y divulgar su información para administrar nuestra organización y comunicarnos con usted cuando sea necesario.</string>
+    <string name="orgExample">\t\t\t- Ejemplo: Usamos su información de salud para desarrollar mejores servicios para usted.</string>
+    <string name="geneticInfo">\t\t- No se nos permite usar información genética para decidir si le daremos cobertura y el precio de la cobertura. Esto no se aplica a los planes de atención a largo plazo.</string>
+    <string name="payForServices">\t- Pagar por sus servicios de salud:</string>
+    <string name="payServices2">\t\t- Podemos usar y divulgar su información de salud mientras pagamos por sus servicios de salud.</string>
+    <string name="payServicesEx">\t\t\t- Ejemplo: Compartimos información sobre usted con nuestro proveedor de servicios de laboratorio para coordinar el pago de su trabajo de laboratorio.</string>
+    <string name="administerPlan">\t- Administra tu plan:</string>
+    <string name="adminPlan2">\t\t- Podemos divulgar su información de salud al patrocinador de su plan de salud para la administración del plan.</string>
+    <string name="adminPlanEx">\t\t\t- Ejemplo: Su empresa tiene un contrato con nosotros para proporcionar un plan de salud, y le proporcionamos a su empresa ciertas estadísticas para explicar las primas que cobramos.</string>
+    <string name="lastHeader">¿De qué otra manera podemos usar o compartir su información de salud? Se nos permite o se nos exige que compartamos su información de otras maneras, generalmente de manera que contribuya al bien público, como la salud pública y la investigación. Debemos cumplir con muchas condiciones en la ley antes de que podamos compartir su información para estos fines. Para obtener más información, consulte: www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/index.html.</string>
+
 </resources>

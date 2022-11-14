@@ -300,6 +300,57 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="s3q3">3. Were constantly on guard, watchful\n or easily startled?</string>
     <string name="s3q4">4. Felt numb or detached from others,\n activities, or your surroundings?</string>
 
+    <!-- Patient Info Form-->
+    <string name="infoFormHeader">Patient Information Form</string>
+    <string name="infoFormBody">Your Information. Your Rights. Our Responsibilities\nThis notice describes how medical information about you may be used and disclosed and how you can get access to this information.</string>
+    <string name="yourRights">YOUR RIGHTS:</string>
+    <string name="infoFormBody2">- Then it comes to your health information, you have certain rights. This section explains your rights and some of our responsibilities to help you. Ask us how to do this.</string>
+    <string name="infoFormTitle">- Get a copy of your health and claims records:</string>
+    <string name="infoFormBody3">- You can ask to see or get a copy of your health and claims records and other health information we have about you. Ask us how to do this.\n- We will provide a copy or a summary of your health and claims records, usually within 30 days of your request. We may charge a reasonable, cost based fee.</string>
+    <string name="inforFormTitle2">- Ask us to correct health and claim records:</string>
+    <string name="infoFormBody4">- You can ask us to correct your health and claims records if you think they are incorrect or incomplete. Ask us how to do this.\n- We may say \'No\' to your request, but we will tell you why in writing within 60 days.</string>
+    <string name="infoFormTitle3">- Request confidential communications:</string>
+    <string name="infoFormBody5">- You can ask us to contact you in a specific way (for example, home or office phone - this is your \'preferred\' contact method) or to send mail to a different address.\n- We will consider all reasonable requests and must say \'Yes\' if you tell us you would be in danger if we do not.</string>
+    <string name="infoFormTitle4">- Ask us to limit what we use or share:</string>
+    <string name="infoFormBody6">- You can ask us NOT to use or share certain health information for treatment, payment or our operations.\n- We are not required to agree to your request, and we may say \'No\' if it would affect your care.</string>
+    <string name="infoFormTitle5">- Get a list of those with whom we\'ve shared information:</string>
+    <string name="infoFormBody7">- You can ask for a list accounting of the times we\'ve shared your health information for six years prior to the date you ask, who we shared it with, and why.\n- We will include all the disclosures except for those about treatment, payment and health care operations and certain other disclosures (such as any you asked us to make) We will provide one accounting a year for free but will charge a reasonable, cost-based fee if you ask for another one within 12 months.</string>
+    <string name="infoFormTitle6">- Get a copy of this privacy notice:</string>
+    <string name="infoFormBody8">- You can ask for a paper copy of this notice at any time, even if you have agreed to receive the notice electronically. We will provide you with a paper copy promptly.</string>
+    <string name="infoFormTitle7">- Choose someone to act for you:</string>
+    <string name="infoFormBody9">- If you have given someone medical power of attorney or if someone is your legal guardian, that person can exercise your rights and make choices about your health information.\n- We will make sure the person has this authority and can act for you before we take any action.</string>
+    <string name="infoFormTitle8">- File a complaint if you fee your rights are violated:</string>
+    <string name="infoFormBody10">– You can complain if you feel we have violated your rights by contacting us using the information on page 1.\n– You can file a complaint with the U.S. Department of Health and Humans Services Office for Civil Rights by sending a letter to 200 Independence Ave. S.W. Washington, D.C. 20201, calling 1–877–696-6775, or visiting www.hhs.gov/ocr/privacy/hipaa/complaints/,\n- We will not retaliate against you for filing a complaint.</string>
+    <string name="yourChoices">YOUR CHOICES:</string>
+    <string name="infoFormBody11">For certain health information, you can tell us your choices about what we share. If you have a clear preference for how we share your information in the situations described below, talk to us. Tell us what you want us to do, and we will follow your instructions.</string>
+    <string name="infoFormTitle9">\t- In these cases, you have both the right and choice to tell us to:</string>
+    <string name="shareInfo">\t\t- Share information with your family, close friends, or others involved in payment for your care\n\t\t- Share information in a disaster relief situation\n\t\t- Contact you for fundraising efforts</string>
+    <string name="infoFormBody12">\t- If you are not able to tell us your preference, for example, if you are unconscious, we may go ahead and share your information if we believe it is in your best interest. We may also share your information when needed to lessen a serious an imminent threat to health or safety.</string>
+    <string name="infoFormTitle10">\t- In these cases, we never share your information unless you gives us written permission:</string>
+    <string name="marketingInfo">\t\t- Marketing purposes\n\t\t- Sale of your information</string>
+    <string name="usesAndDisclosure">OUR USES AND DISCLOSURES:</string>
+    <string name="useAndDisclosure2">How do we typically use or share your health information? We typically use or share your health information in the following ways:</string>
+    <string name="manageHealthTreatment">\t- Help manage the health care treatment you receive:</string>
+    <string name="manageHealth2">\t\t- We can use your health information and share it with professionals who are treating you.</string>
+    <string name="org">\t- Run our organization:</string>
+    <string name="org2">\t\t- We can use and disclose your information to run our organization and contact you when necessary.</string>
+    <string name="orgExample">\t\t\t- Example: We use health information about you to develop better services for you.</string>
+    <string name="geneticInfo">\t\t- We are not allowed to use genetic information to decide whether we will give you coverage and the price of coverage. This does not apply to long term care plans.</string>
+    <string name="payForServices">\t- Pay for your health services:</string>
+    <string name="payServices2">\t\t- We can use and disclose your health information as we pay for your health services.</string>
+    <string name="payServicesEx">\t\t\t- Example: We share information about you with our laboratory services provider to coordinate payment for your lab work.</string>
+    <string name="administerPlan">\t- Administer your plan:</string>
+    <string name="adminPlan2">\t\t- We may disclose your health information to your health plan sponsor for plan administration.</string>
+    <string name="adminPlanEx">\t\t\t- Example: Your company contracts with us to provide a health plan, and we provide your company with certain statistics to explain the premiums we charge.</string>
+    <string name="lastHeader">How else can we use or share your health information? We are allowed or required to share your information in other ways-usually in ways that contribute to the public good, such as public health and research. We mus meet many conditions in the law before we can share your information for these purposes. For more information see: www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/index.html.</string>
+
+
+    <!--Lab Access Form-->
+    <string name="AccessHeader">Lab Access</string>
+    <string name="AccessBody">Part of the information we have collected from you is your email address. By providing your email address you will receive an invitation to join our HUDA Clinic patient portal. Once your register for the patient portal you will have access to all your visits at HUDA, as well as your lab results. Lab results will come into the portal as a \'new message\'</string>
+    <string name="AccessBody2">If you would like to access your visit notes in section1 you will select:\n \'For Period\' (All time is selected by default)\n\'Outpatient Visit Documents\': CCDA is the Consolidated Clinical Document Architecture and provides your complete Health Record in XML or PDF format.\nCCD is The Continuity of Care Document which provides a a snapshot of your medical history based on visits, including information critical to continuing care in XML format only</string>
+    <string name="AccessBody3">Referral Notes are created when you are referred to another healthcare provider XML only. Referral notes are generated AFTER your visit at HUDA to share your labs with your designated Primary Care Provider. All of these directions are also available on the Patient Portal.</string>
+    <string name="submitBtn">Submit</string>
 
 
 </resources>

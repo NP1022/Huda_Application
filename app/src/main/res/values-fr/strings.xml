@@ -296,4 +296,47 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name="s3q3">3. Étiez-vous constamment sur vos gardes, vigilant\n ou facilement surpris?</string>
     <string name="s3q4">4. Vous vous êtes senti engourdi ou détaché des autres,\n de vos activités ou de votre environnement?</string>
 
+    <!-- Patient Info Form-->
+    <string name="infoFormHeader">Formulaire d\'informations sur les patients</string>
+    <string name="infoFormBody">Vos informations. Tes droits. Nos responsabilités\nCet avis décrit comment les informations médicales vous concernant peuvent être utilisées et divulguées et comment vous pouvez accéder à ces informations.</string>
+    <string name="yourRights">TES DROITS:</string>
+    <string name="infoFormBody2">- Ensuite, il s\'agit de vos informations de santé, vous avez certains droits. Cette section explique vos droits et certaines de nos responsabilités pour vous aider. Demandez-nous comment procéder.</string>
+    <string name="infoFormTitle">- Obtenez une copie de vos dossiers de santé et de sinistres:</string>
+    <string name="infoFormBody3">- Vous pouvez demander à voir ou à obtenir une copie de vos dossiers de santé et de réclamations et d\'autres informations de santé que nous possédons à votre sujet. Demandez-nous comment procéder.\n- Nous vous fournirons une copie ou un résumé de vos dossiers de santé et de réclamations, généralement dans les 30 jours suivant votre demande. Nous pouvons facturer des frais raisonnables basés sur les coûts.</string>
+    <string name="inforFormTitle2">- Nous demander de corriger les dossiers médicaux et sinistres :</string>
+    <string name="infoFormBody4">- Vous pouvez nous demander de corriger vos dossiers de santé et de sinistres si vous pensez qu\'ils sont incorrects ou incomplets. Demandez-nous comment procéder.\n- Nous pouvons dire \'Non\' à votre demande, mais nous vous dirons pourquoi par écrit dans les 60 jours.</string>
+    <string name="infoFormTitle3">- Demander des communications confidentielles:</string>
+    <string name="infoFormBody5">- Vous pouvez nous demander de vous contacter d\'une manière spécifique (par exemple, par téléphone à la maison ou au bureau - c\'est votre méthode de contact \'préférée\') ou d\'envoyer un courrier à une adresse différente.\n- Nous examinerons toutes les demandes raisonnables et doit dire \'Oui\' si vous nous dites que vous seriez en danger si nous ne le faisions pas.</string>
+    <string name="infoFormTitle4">- Demandez-nous de limiter ce que nous utilisons ou partageons:</string>
+    <string name="infoFormBody6">- Vous pouvez nous demander de NE PAS utiliser ou partager certaines informations de santé pour le traitement, le paiement ou nos opérations.\n- Nous ne sommes pas tenus d\'accepter votre demande, et nous pouvons dire \'Non\' si cela affecterait vos soins.</string>
+    <string name="infoFormTitle5">- Obtenir une liste de ceux avec qui nous avons partagé des informations:</string>
+    <string name="infoFormBody7">- Vous pouvez demander une liste comptabilisant les fois où nous avons partagé vos informations de santé pendant six ans avant la date à laquelle vous demandez, avec qui nous les avons partagées et pourquoi.\n- Nous inclurons toutes les divulgations à l\'exception de celles sur les opérations de traitement, de paiement et de soins de santé et certaines autres divulgations (telles que celles que vous nous avez demandées de faire) Nous fournirons une comptabilité par an gratuitement mais facturerons des frais raisonnables et basés sur les coûts si vous en demandez une autre dans les 12 mois .</string>
+    <string name="infoFormTitle6">- Obtenez une copie de cet avis de confidentialité:</string>
+    <string name="infoFormBody8">- Vous pouvez demander une copie papier de cet avis à tout moment, même si vous avez accepté de recevoir l\'avis par voie électronique. Nous vous fournirons rapidement une copie papier.</string>
+    <string name="infoFormTitle7">- Choisissez quelqu\'un pour agir pour vous :</string>
+    <string name="infoFormBody9">- Si vous avez donné une procuration médicale à quelqu\'un ou si quelqu\'un est votre tuteur légal, cette personne peut exercer vos droits et faire des choix concernant vos informations de santé.\n- Nous nous assurerons que la personne a cette autorité et peut agir pour vous avant nous prenons n\'importe quelle mesure.</string>
+    <string name="infoFormTitle8">- Déposez une plainte si vous estimez que vos droits sont violés:</string>
+    <string name="infoFormBody10">– Vous pouvez déposer une plainte si vous pensez que nous avons violé vos droits en nous contactant en utilisant les informations de la page 1.\n– Vous pouvez déposer une plainte auprès du Bureau des droits civils du Département américain de la santé et des services sociaux en envoyant une lettre à 200 Independence Avenue S.W. Washington, D.C. 20201, en appelant le 1-877-696-6775, ou en visitant www.hhs.gov/ocr/privacy/hipaa/complaints/,\n- Nous n\'exercerons pas de représailles contre vous pour avoir déposé une plainte.</string>
+    <string name="yourChoices">VOS CHOIX:</string>
+    <string name="infoFormBody11">Pour certaines informations de santé, vous pouvez nous indiquer vos choix concernant ce que nous partageons. Si vous avez une nette préférence quant à la manière dont nous partageons vos informations dans les situations décrites ci-dessous, contactez-nous. Dites-nous ce que vous voulez que nous fassions, et nous suivrons vos instructions.</string>
+    <string name="infoFormTitle9">\t- Dans ces cas, vous avez à la fois le droit et le choix de nous dire de:</string>
+    <string name="shareInfo">\t\t- Partagez des informations avec votre famille, vos amis proches ou d\'autres personnes impliquées dans le paiement de vos soins\n\t\t- Partagez des informations dans une situation de secours en cas de catastrophe\n\t\t- Vous contactez pour les efforts de collecte de fonds</string>
+    <string name="infoFormBody12">\t- Si vous n\'êtes pas en mesure de nous dire votre préférence, par exemple, si vous êtes inconscient, nous pouvons aller de l\'avant et partager vos informations si nous pensons que c\'est dans votre meilleur intérêt. Nous pouvons également partager vos informations lorsque cela est nécessaire pour atténuer une menace grave ou imminente pour la santé ou la sécurité.</string>
+    <string name="infoFormTitle10">\t- Dans ces cas, nous ne partageons jamais vos informations à moins que vous ne nous en donniez l\'autorisation écrite:</string>
+    <string name="marketingInfo">\t\t- À des fins de marketing\n\t\t- Vente de vos informations</string>
+    <string name="usesAndDisclosure">NOS UTILISATIONS ET DIVULGATIONS:</string>
+    <string name="useAndDisclosure2">Comment utilisons-nous ou partageons-nous généralement vos informations de santé? Nous utilisons ou partageons généralement vos informations de santé des manières suivantes:</string>
+    <string name="manageHealthTreatment">\t- Aidez à gérer les soins de santé que vous recevez:</string>
+    <string name="manageHealth2">\t\t- Nous pouvons utiliser vos informations de santé et les partager avec les professionnels qui vous traitent.</string>
+    <string name="org">\t- Gérez notre organisation:</string>
+    <string name="org2">\t\t- Nous pouvons utiliser et divulguer vos informations pour gérer notre organisation et vous contacter si nécessaire.</string>
+    <string name="orgExample">\t\t\t- Exemple : Nous utilisons les informations de santé vous concernant pour développer de meilleurs services pour vous.</string>
+    <string name="geneticInfo">\t\t- Nous ne sommes pas autorisés à utiliser des informations génétiques pour décider si nous vous accorderons une couverture et le prix de la couverture. Cela ne s\'applique pas aux régimes de soins de longue durée.</string>
+    <string name="payForServices">\t- Payez vos services de santé:</string>
+    <string name="payServices2">\t\t- Nous pouvons utiliser et divulguer vos informations médicales lorsque nous payons vos services de santé.</string>
+    <string name="payServicesEx">\t\t\t- Exemple: Nous partageons des informations vous concernant avec notre fournisseur de services de laboratoire afin de coordonner le paiement de vos travaux de laboratoire.</string>
+    <string name="administerPlan">\t- Administrez votre plan:</string>
+    <string name="adminPlan2">\t\t- Nous pouvons divulguer vos informations médicales à votre sponsor de plan de santé pour l\'administration du plan.</string>
+    <string name="adminPlanEx">\t\t\t-Exemple:Votre entreprise passe un contrat avec nous pour fournir un plan de santé, et nous fournissons à votre entreprise certaines statistiques pour expliquer les primes que nous facturons.</string>
+    <string name="lastHeader">De quelle autre manière pouvons-nous utiliser ou partager vos informations de santé? Nous sommes autorisés ou tenus de partager vos informations par d\'autres moyens, généralement de manière à contribuer au bien public, comme la santé publique et la recherche. Nous devons remplir de nombreuses conditions dans la loi avant de pouvoir partager vos informations à ces fins. Pour plus d\'informations, consultez : www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/index.html.</string>
 </resources>

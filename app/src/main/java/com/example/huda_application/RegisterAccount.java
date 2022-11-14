@@ -204,8 +204,10 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
     }
 
     @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.backButton) {
+    public void onClick(View view)
+    {
+        if (view.getId() == R.id.backButton)
+        {
             Intent prev = new Intent(this, MainActivity.class);
             startActivity(prev);
         }

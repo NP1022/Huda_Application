@@ -98,7 +98,6 @@ public class PatientForm extends AppCompatActivity
                 final EditText patientSig = findViewById(R.id.patientNameSignature);
                 final EditText consentDateSign = findViewById(R.id.consentDate);
 
-
                 // checkboxes
                 final CheckBox blackAfricanAmerican = findViewById(R.id.blackAfrican);
                 final CheckBox whiteCaucasian = findViewById(R.id.whiteCaucasian);
