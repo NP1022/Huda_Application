@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,10 +28,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserAppointment extends AppCompatActivity {
+public class UserAppointment extends AppCompatActivity implements View.OnClickListener {
 
     private AppointmentViewAdapter viewAdapter;
-
+    private ImageView backbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +48,7 @@ public class UserAppointment extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.appointmentsView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        backbutton = findViewById(R.id.backButton_8);
         FirebaseDatabase.getInstance().getReference("User").child(user.getUserId()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -60,6 +61,13 @@ public class UserAppointment extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
+        backbutton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.backButton_8)
+            startActivity(new Intent(UserAppointment.this , AdminPage.class));
     }
 
     private static class AppointmentViewAdapter extends RecyclerView.Adapter<AppointmentViewHolder> {

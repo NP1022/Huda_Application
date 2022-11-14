@@ -1,6 +1,5 @@
 package com.example.huda_application;
 
-import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
@@ -12,6 +11,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -27,12 +27,17 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.sql.Time;
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -63,9 +68,30 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 
         dateButton = findViewById(R.id.dateText);
         dateButton.setOnClickListener(v -> {
-            DialogFragment datePicker = new DatePickerFragment();
+            Calendar now = Calendar.getInstance();
+            DatePickerDialog dialog = DatePickerDialog.newInstance(
+                    this,
+                    now.get(Calendar.YEAR),
+                    now.get(Calendar.MONTH),
+                    now.get(Calendar.DAY_OF_MONTH)
+            );
+            dialog.setAccentColor(0x043670);
+            dialog.setMinDate(Calendar.getInstance());
 
-            datePicker.show(getSupportFragmentManager(), "Available Times");
+            List<Calendar> days = new ArrayList<>();
+            for (int i = 0; i < 90; i++) {
+                Calendar day = Calendar.getInstance();
+                day.add(Calendar.DAY_OF_MONTH, i);
+
+                if (day.get(Calendar.DAY_OF_WEEK) != Calendar.TUESDAY &&
+                        day.get(Calendar.DAY_OF_WEEK) != Calendar.THURSDAY &&
+                        day.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY) {
+                    days.add(day);
+                }
+            }
+
+            dialog.setDisabledDays(days.toArray(new Calendar[0]));
+            dialog.show(getSupportFragmentManager(), "Available Times");
         });
 
         // date = findViewById(R.id.dateText);
@@ -109,10 +135,17 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.checkin) {
+            boolean temp = true;
             String date = dateButton.getText().toString().replace("Date: ", "");
-            Date currentTime = Calendar.getInstance().getTime();
-            System.out.println(currentTime);
-            System.out.println(date);
+            String currentDate = new SimpleDateFormat("MM-d-yyyy", Locale.getDefault()).format(new Date());
+            SimpleDateFormat sdf = new SimpleDateFormat("MM-d-yyyy");
+            try {
+                temp = sdf.parse(currentDate).before(sdf.parse(date));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            if (temp == true){
             Appointment appointment = new Appointment(
                     selectedTime,
                     date,
@@ -124,7 +157,9 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             AppointmentManager.createAppointment(date, selectedTime, UserManager.getInstance().getCurrentUser().getUserId());
             FirebaseClient.updateUser(UserManager.getInstance().getCurrentUser());
             Intent appointmentsIntent = new Intent(getApplicationContext(), Appointments.class);
-            startActivity(appointmentsIntent);
+            startActivity(appointmentsIntent);}
+            else
+                Toast.makeText(ApptRequest.this,"Appointments can't be made for previous days",Toast.LENGTH_LONG).show();
         }
             else if (view.getId() == R.id.backButton) {
                 Intent prev = new Intent(this, Appointments.class);
@@ -133,8 +168,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     }
 
     @Override
-    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
+    public void onDateSet(DatePickerDialog view, int year, int month, int dayOfMonth) {
         Calendar c = Calendar.getInstance();
         c.set(Calendar.YEAR, year);
         c.set(Calendar.MONTH, month);

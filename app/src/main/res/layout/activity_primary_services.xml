@@ -29,10 +29,10 @@
             app:srcCompat="@drawable/icons8_back_arrow_100" />
 
         <TextView
-            android:id="@+id/specialityHealthHeader"
-            android:layout_width="351dp"
-            android:layout_height="51dp"
-            android:layout_marginTop="7dp"
+            android:id="@+id/healthHeader"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
             android:background="@color/white"
             android:text="@string/PrimaryServicesHeader"
             android:textAlignment="center"
@@ -43,10 +43,159 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hudaLogo3" />
 
+        <TextView
+            android:id="@+id/visionServices"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            android:text="@string/servicesInclude"
+            android:textAlignment="center"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/healthPara" />
+
+        <TextView
+            android:id="@+id/healthAssessments"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/HealthAssessments"
+            android:textAlignment="textStart"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.656"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/visionServices" />
+
+        <TextView
+            android:id="@+id/illnessManagement"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/IllnessManagement"
+            android:textAlignment="textStart"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.656"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/healthAssessments" />
+
+        <TextView
+            android:id="@+id/noCostPharm"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/NoCostPharm"
+            android:textAlignment="textStart"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.656"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labServices" />
+
+        <TextView
+            android:id="@+id/diabetesScreenning"
+            android:layout_width="200dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/DiabetesScreening"
+            android:textAlignment="viewStart"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.656"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noCostPharm" />
+
+        <TextView
+            android:id="@+id/healthEducation"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="40dp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/CholBP"
+            android:textAlignment="textStart"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.656"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diabetesScreenning"
+            app:layout_constraintVertical_bias="0.016" />
+
+        <TextView
+            android:id="@+id/healthEducation2"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/HealthEd"
+            android:textAlignment="textStart"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.656"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/healthEducation" />
+
+        <TextView
+            android:id="@+id/labServices"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/LabServices"
+            android:textAlignment="textStart"
+            android:textColor="#043670"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.656"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/illnessManagement" />
+
+        <ImageView
+            android:id="@+id/doctorImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/healthHeader"
+            app:srcCompat="@drawable/doctor" />
+
         <ImageView
             android:id="@+id/hudaLogo3"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="30dp"
 
             android:contentDescription="TODO"
@@ -55,67 +204,93 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/huda_logo" />
 
-        <!--TextView
-            android:id="@+id/primaryCareInternalMedicine"
-            android:layout_width="wrap_content"
+
+        <TextView
+            android:id="@+id/healthPara"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
             android:fontFamily="sans-serif-light"
-            android:text="@string/PrimaryCareInternalMedicine"
+            android:gravity="start|top"
+            android:text="@string/PrimaryCarePar1"
+            android:textAlignment="viewStart"
             android:textColor="#043670"
-            android:textSize="25sp"
-            android:textStyle="bold"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/primaryServicesHeader" /-->
+            app:layout_constraintTop_toBottomOf="@+id/doctorImage" />
 
         <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="79dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="80dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/specialtyHealthPar1"
-            app:srcCompat="@drawable/primarycare_huda" />
+            android:id="@+id/imageView9"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/healthAssessments"
+            app:layout_constraintTop_toBottomOf="@+id/visionServices"
+            app:srcCompat="@drawable/done" />
 
-        <TextView
-            android:id="@+id/specialtyHealthPar1"
-            android:layout_width="320dp"
-            android:layout_height="450dp"
-            android:layout_marginStart="32dp"
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/illnessManagement"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9"
+            app:srcCompat="@drawable/done" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/labServices"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12"
+            app:srcCompat="@drawable/done" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/noCostPharm"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13"
+            app:srcCompat="@drawable/done" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/diabetesScreenning"
+            app:layout_constraintTop_toBottomOf="@+id/imageView14"
+            app:srcCompat="@drawable/done" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="32dp"
-            android:ems="10"
-            android:fontFamily="sans-serif"
-            android:gravity="start|top"
-            android:justificationMode="inter_word"
-            android:text="@string/PrimaryCarePar1"
-            android:textColor="#043670"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/specialityHealthHeader" />
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/healthEducation"
+            app:layout_constraintTop_toBottomOf="@+id/imageView15"
+            app:srcCompat="@drawable/done" />
 
-        <TextView
-            android:id="@+id/textView53"
-            android:layout_width="322dp"
-            android:layout_height="475dp"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="45dp"
-            android:ems="10"
-            android:fontFamily="sans-serif"
-            android:gravity="start|top"
-            android:text="@string/PrimaryCarePar2"
-            android:textColor="#043670"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/healthEducation2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView16"
+            app:srcCompat="@drawable/done" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

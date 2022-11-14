@@ -1,182 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/backButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icons8_back_arrow_100" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backButton_10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8_back_arrow_100" />
+
     <ImageView
         android:id="@+id/hudaLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="130dp"
         android:layout_marginTop="30dp"
-        android:layout_marginRight="120dp"
-        app:srcCompat="@drawable/huda_logo"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/huda_logo"
+        android:contentDescription="hudaLogo" />
 
     <TextView
         android:id="@+id/loginHeader"
         android:layout_width="330dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
         android:layout_gravity="center"
+        android:layout_marginTop="8dp"
         android:text="@string/AnnouncementsHeader"
         android:textAlignment="center"
         android:textColor="#043670"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/hudaLogo"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
 
     <WebView
         android:id="@+id/calendarWebView"
         android:layout_width="360dp"
         android:layout_height="500dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginHeader" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--    <TextView-->
-<!--        android:id="@+id/weeklyView"-->
-<!--        android:layout_width="70dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_marginLeft="140dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginRight="10dp"-->
-<!--        android:onClick="weeklyView"-->
-<!--        android:text="Weekly"-->
-<!--        android:textAlignment="textEnd"-->
-<!--        android:textColor="#043670"-->
-<!--        android:textSize="20sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_marginBottom="20dp"-->
-<!--        android:layout_marginTop="20dp">-->
-
-<!--        <Button-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:background="@null"-->
-<!--            android:onClick="navigatePrevMonth"-->
-<!--            android:text="@string/PrevMonthButton"-->
-<!--            android:textColor="@color/hudaBlue"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textStyle="bold" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/monthYearTV"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_weight="2"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Feb 2021"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="@color/black"/>-->
-
-<!--        <Button-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:background="@null"-->
-<!--            android:onClick="navigateNextMonth"-->
-<!--            android:text="@string/nextMonthButton"-->
-<!--            android:textColor="@color/hudaBlue"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textStyle="bold" />-->
-
-<!--    </LinearLayout>-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal">-->
-
-<!--        <TextView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="SUN"-->
-<!--            android:textColor="@color/hudaGrey"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textSize="16sp"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="MON"-->
-<!--            android:textColor="@color/hudaGrey"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textSize="16sp"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="TUE"-->
-<!--            android:textColor="@color/hudaGrey"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textSize="16sp"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="WED"-->
-<!--            android:textColor="@color/hudaGrey"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textSize="16sp"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="THUR"-->
-<!--            android:textColor="@color/hudaGrey"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textSize="16sp"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="FRI"-->
-<!--            android:textColor="@color/hudaGrey"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textSize="16sp"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="SAT"-->
-<!--            android:textColor="@color/hudaGrey"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textSize="16sp"/>-->
-
-
-<!--    </LinearLayout>-->
-
-
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/calRecycler"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"/>-->
-
-</LinearLayout>
+</ScrollView>

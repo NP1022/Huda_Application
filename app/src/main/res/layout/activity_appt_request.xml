@@ -55,20 +55,17 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/edittextstyle"
         android:ems="10"
-        android:hint="@string/Date"
         android:gravity="left|center_vertical"
+        android:hint="Select Date"
         android:inputType="text"
         android:padding="10dp"
-        android:textColor="#686868"
+        android:textColor="@color/black"
         android:textColorHint="#686868"
 
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/birthday"
-
-        app:layout_constraintTop_toBottomOf="@+id/email_checkin"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPara2" />
 
     <EditText
         android:id="@+id/birthday"
@@ -86,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateText"
+        app:layout_constraintTop_toBottomOf="@+id/email_checkin"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -94,18 +91,17 @@
         android:id="@+id/appointmentTime"
         android:layout_width="320dp"
         android:layout_height="55dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/edittextstyle"
         android:ems="10"
-        android:layout_marginTop="20dp"
+        android:hint="Select Time"
         android:padding="10dp"
-        android:textColor="#686868"
+        android:textColor="@color/black"
         android:textColorHint="#686868"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPara2"
-        android:text="Appointment"
-
+        app:layout_constraintTop_toBottomOf="@+id/dateText"
 
 
         />

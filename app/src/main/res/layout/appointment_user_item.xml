@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:text="Time:"
                 android:textColor="@color/black"
-
+                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="temp"
-
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -58,6 +58,7 @@
                 android:layout_height="wrap_content"
                 android:text="Date:"
                 android:textColor="@color/black"
+                android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -67,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="temp"
-
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -83,6 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Status:"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -93,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="temp"
-
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -109,6 +111,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Reason:"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -119,7 +123,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="temp"
-
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -131,7 +136,7 @@
         android:layout_width="80dp"
         android:layout_height="35dp"
         android:layout_marginLeft="215dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/buttonstyle"
         android:text="Approve"
         android:textColor="#ffffff"
@@ -142,7 +147,7 @@
         android:layout_width="80dp"
         android:layout_height="35dp"
         android:layout_marginLeft="215dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/buttonstyle"
         android:text="Decline"
         android:textColor="#ffffff"
@@ -167,6 +172,8 @@
         android:text="Checked In:"
         android:textColor="@color/black"
         android:layout_marginLeft="190dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="5dp"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -175,10 +182,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="277dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="6dp"
         android:text="temp"
-
-
+        android:layout_marginRight="5dp"
         android:textColor="@color/black"
         android:textSize="14sp" />
 

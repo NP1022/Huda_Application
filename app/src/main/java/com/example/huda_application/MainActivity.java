@@ -47,7 +47,8 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
+{
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
@@ -104,9 +105,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     @Override
-    public void onBackPressed() {
-// super.onBackPressed();
-// Not calling **super**, disables back button in current screen.
+    public void onBackPressed()
+    {
+        // super.onBackPressed();
+        // Not calling **super**, disables back button in current screen.
     }
 
     private void picklanguage(String l) {
@@ -233,7 +235,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
 
                                 @Override
-                                public void onCancelled(@NonNull DatabaseError error) {
+                                public void onCancelled(@NonNull DatabaseError error)
+                                {
+
                                 }
                             });
 

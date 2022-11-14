@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminPage"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/hudaLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/huda_logo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersView6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="270dp"
+        app:layout_constraintTop_toBottomOf="@+id/dateText2"/>
+    <ImageView
+        android:id="@+id/backButton_7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_back_arrow_100" />
+    <Button
+        android:id="@+id/dateText2"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:hint="Select Date"
+        android:gravity="left|center_vertical"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#686868"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/loginHeader4"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/loginHeader4"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="7dp"
+        android:text="AVALABLE TIMES"
+        android:textAlignment="center"
+        android:textColor="#043670"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

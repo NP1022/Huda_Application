@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.huda_application.firebase.FirebaseClient;
@@ -28,10 +29,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PatientMessages extends AppCompatActivity {
+public class PatientMessages extends AppCompatActivity implements View.OnClickListener{
 
     private PatientViewAdapter viewAdapter;
-
+    private ImageView backbottun;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +49,14 @@ public class PatientMessages extends AppCompatActivity {
 
         viewAdapter =  new PatientViewAdapter(this, UserManager.getInstance().getCurrentUser());
         recyclerView.setAdapter(viewAdapter);
+        backbottun = findViewById(R.id.backButton_message_patient);
+        backbottun.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.backButton_message_patient)
+            startActivity(new Intent(this , MainApplication.class));
     }
 
     private static class PatientViewAdapter extends RecyclerView.Adapter<PatientMessages.PatientViewHolder> implements View.OnClickListener {

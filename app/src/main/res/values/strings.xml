@@ -14,9 +14,9 @@
     <string name="password">Enter Password</string>
     <string name="email">Enter Email</string>
     <string name="Login">Login</string>
-    <string name="forgotpassword">Forgot Password? Reset</string>
-    <string name="dontAccount">Don\'t Have an Account? Sign Up</string>
-    <string name="alreadyAccount">Already Registered? Sign In</string>
+    <string name="forgotpassword">Forgot Password? <b>Reset</b></string>
+    <string name="dontAccount">Don\'t Have an Account? <b>Sign Up</b></string>
+    <string name="alreadyAccount">Already Registered? <b>Sign In</b></string>
     <string name="register">Register</string>
     <string name="language">English</string>
     <string name="FirstName">Enter First Name</string>
@@ -29,7 +29,7 @@
     <string name="registerHeader">REGISTER ACCOUNT</string>
     <string name="forgotPassHeader">RESET PASSWORD</string>
     <string name="login_dialog">Enter your credentials below to log in.</string>
-    <string name="regDiaglogue">Complete the fields below to register an account. You will receive a verification email upon successful registration. </string>
+    <string name="regDiaglogue">Complete the fields below to register an account. You will receive a verification email upon successful registration.</string>
     <string name="forgotDialogue">Enter the email associated with your account and you will receive instructions to reset your password.</string>
 
     <!--    Main Menu Page-->
@@ -40,23 +40,26 @@
     <string name="partners">PARTNERS</string>
     <string name="contact">CONTACT US</string>
     <string name="patients_page">APPOINTMENTS</string>
+    <string name = "logout">Logout</string>
 
     <!--    New Login / Services-->
     <string name="healthservices">Free Health Services</string>
-    <string name="PrimaryNewLogin"><u>Primary</u></string>
-    <string name="MentalNewLogin"><u>Mental</u></string>
-    <string name="VisionNewLogin"><u>Vision</u></string>
-    <string name="DentalNewLogin"><u>Dental</u></string>
-    <string name="SpecialityNewLogin"><u>Specialty</u></string>
+    <string name="PrimaryNewLogin"><u>PRIMARY</u></string>
+    <string name="MentalNewLogin"><u>MENTAL</u></string>
+    <string name="VisionNewLogin"><u>VISION</u></string>
+    <string name="DentalNewLogin"><u>DENTAL</u></string>
+    <string name="SpecialityNewLogin"><u>SPECIALTY</u></string>
     <string name="HaveAnAccount">Have An Account?</string>
     <string name="DontHaveAnAccount">Don\'t Have An Account?</string>
     <string name="SignUp">Sign Up</string>
-    <string name="PrimaryCare">Primary Care</string>
-    <string name="MentalCare">Mental Care</string>
-    <string name="VisionHealth">Vision Care</string>
-    <string name="Dental">Dental Care</string>
-    <string name="speciality">Speciality Care</string>
+    <string name="PrimaryCare">PRIMARY CARE</string>
+    <string name="MentalCare">MENTAL CARE</string>
+    <string name="VisionHealth">VISION CARE</string>
+    <string name="Dental">DENTAL CARE</string>
+    <string name="speciality">SPECIALTY CARE</string>
 
+    <!--    Inbox Page-->
+    <string name="Inbox">INBOX</string>
 
     <!--    Patient Portal-->
     <string name="NewPatient">New Patient</string>
@@ -174,118 +177,180 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="CalendarHeader">Clinic Calendar</string>
     <string name="appointmentsHeader">APPOINTMENTS</string>
 
-    <!--    Prim ary Services Page-->
+    <!--  ############################################  !->
+    <!-        Health Services-->
+    <!--  ############################################  -->
+
+
+    <!--    Primary Services Page-->
     <string name="PrimaryServicesHeader">PRIMARY SERVICES</string>
-    <string name="PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string>
-    <string name="PrimaryCarePar1"><b>Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</b>
-        \n\nHUDA aims to bring primary care and specialized services to uninsured and under-insured in the Metro Detroit area. We provide preventative primary care services in a person-focused community health clinic, our goal is to make Michigan healthier\!
-        \n\nThe HUDA clinic provides FREE medications to our patients, and also provides laboratory services at no-cost to our patients.</string>
-    <string name="PrimaryCarePar2"><b>Our Primary Care Services Include:</b>
-        \n\n <li>Health Assessments</li>
-        \n\n <li>Acute and Chronic Illness Management</li>
-        \n\n<li>Laboratory Services (blood work)</li>
-        \n\n<li>No Cost Pharmacy</li>
-        \n\n<li>Diabetes Screening &amp; Treatments</li>
-        \n\n<li>Health Education and Resources</li>
-        \n\n<li>Cholesterol &amp; Blood Pressure screenings</li>
-        \n\n<li>Nutrition Education</li>  </string>
+    <string name="PrimaryCarePar1">Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</string>
+    <string name = "HealthAssessments">Health Assessments</string>
+    <string name = "IllnessManagement">Acute and Chronic Illness Management</string>
+    <string name = "LabServices">Laboratory Services</string>
+    <string name = "NoCostPharm">No Cost Pharmacy</string>
+    <string name = "DiabetesScreening">Diabetes Screening and Treatment</string>
+    <string name = "CholBP">Cholesterol and Blood Pressure Screenings</string>
+    <string name = "HealthEd">Health Education and Resources</string>
+    <string name ="servicesInclude">SERVICES INCLUDE</string>
 
     <!--    Dental Health Page-->
     <string name="DentalHealthHeader">DENTAL CARE</string>
-    <string name="DentalHealthPar1"><b>Many people wait to have necessary dental work done because they don’t have insurance, however small dental problems can quickly become incredibly painful if left alone.</b> Come in to HUDA for cleanings, fillings, extractions and exams to keep your teeth healthy and receive a referral to a specialist if needed.</string>
-    <string name="DentalHealthPar2"><b>Our Dental Services Include:</b>
-        \n\n<li>Dental screenings, and X-Rays</li>
-        \n\n<li>Deep Cleanings</li>
-        \n\n<li>Composite Fillings</li>
-        \n\n<li>Tooth Extraction</li>
-        \n\n<li>Referrals to low-cost dentists as needed</li></string>
-    <string name="DentalHealthPar3"><b>Our Dentists:</b>
-        \n\n<li>Shakeel Niazi, D.D.S.</li>
-        \n\n<li>Ahmed Allam, D.D.S.</li>
-        \n\n<li>Asmaa Abdel-Salam, D.D.S.</li>
-        \n\n<li>Sumera Khalid, D.D.S.</li>
-        \n\n<li>Umair Niazi, D.M.D.</li>
-        \n\n<li>Rachel Mundus, R.D.</li>
-        \n\n<li>Fatin Amireh, R.D.H.</li></string>
+    <string name="DentalHealthPar1">Many people wait to have necessary dental work done because they don’t have insurance, however small dental problems can quickly become incredibly painful if left alone. Come in to HUDA for cleanings, fillings, extractions and exams to keep your teeth healthy and receive a referral to a specialist if needed.</string>
+    <string name="DentalScreenings">Dental Screenings and X-Rays</string>
+    <string name="DeepCleanings">Deep Cleanings</string>
+    <string name="CompositeFillings">Composite Fillings</string>
+    <string name="ToothExtractions">Tooth Extractions</string>
 
     <!--    Vision Care Page-->
     <string name="VisionCareHeader">VISION CARE</string>
-    <string name="VisionCarePar1"><b>Vision screenings is an effective method to identify individuals with visual impairment or eye conditions that are likely to lead to vision loss. </b>  We perform screenings in-house and provide no-cost eye wear and referrals to low-cost local ophthalmologists as needed.</string>
-    <string name="VisionCarePar2"><b>Our Vision Screening Options:</b>
-        \n\n<li>Glaucoma Screenings</li>
-        \n\n<li>Cataract Screenings</li>
-        \n\n<li>Macular Degeneration Screenings</li>
-        \n\n<li>FREE eye-wear</li>
-        \n\n<li>Referrals to vision specialists</li></string>
-    <string name="VisionCarePar3"><b>Our Ophthalmologists / Optometrists:</b>
-        \n\n<li>M. Hanif Peracha, M.D.</li>
-        \n\n<li>Meiraj Siddiqui, M.D.</li>
-        \n\n<li>Benjamin Whittredge, O.D.</li>
-        \n\n<li>Christopher Burgess, O.D.</li>
-        \n\n<li>Naureen Haroon, O.D.</li>
-        \n\n<li>Suleman Hans, O.D.</li>
-        \n\n<li>Elizabeth Borowiec, O.D</li></string>
+    <string name="VisionCarePar1">Vision screenings are an effective method to identify individuals with visual impairment or eye conditions that are likely to lead to vision loss. We perform screenings in-house and provide no-cost eye wear and referrals to low-cost local ophthalmologists as needed.</string>
+    <string name ="Glaucoma">Glaucoma Screenings</string>
+    <string name ="Cataract">Cataract Screenings</string>
+    <string name ="Macular">Macular Degeneration Screenings</string>
+    <string name ="EyeWear">FREE Eye-Wear</string>
 
     <!--    Mental Health Page-->
     <string name="MentalHealthHeader">MENTAL HEALTH</string>
-    <string name="MentalHealthPar1"><b>We have psychiatrists on staff along with our licensed social workers to provide therapy and treatment for a wide range of mental health concerns. </b> We offer free counseling and treatment to veterans, homeless, uninsured, and the working underinsured.
-        \n\nSince the onset of the Covid-19 pandemic our psychiatry services have transitioned to telemedicine. We currently have 2 Psychiatrists, a Mental Health Nurse Practitioner and a Therapist who all volunteer with HUDA Clinic allowing us to provide treatment for a wide range of mental health concerns.</string>
-    <string name="MentalHealthPar2"><b>Our Mental Health Services Include:</b>
-        \n\n<li>Prescribing psychiatrist on site</li>
-        \n\n<li>Adult Counseling</li>
-        \n\n<li>Anxiety/Depression</li>
-        \n\n<li>Bipolar Disorders</li>
-        \n\n<li>Eating Disorders</li>
-        \n\n<li>Schizoaffective Disorders, and more</li></string>
-    <string name="MentalHealthPar3"><b>Our Psychiatrists:</b>
-        \n\n<li>Saba Maroof, M.D.</li>
-        \n\n<li>Mazhar Hussain, M.D.</li>
-        \n\n<b>Supporting Providers:</b>
-        \n\n<li>Joann Harrison, MHNP, FNP-BC</li>
-        \n\n<li>Sarah Kappler, TLLP</li></string>
+    <string name="MentalHealthPar1">We have psychiatrists on staff along with our licensed social workers to provide therapy and treatment for a wide range of mental health concerns. We offer free counseling and treatment to veterans, homeless, uninsured, and the working underinsured.</string>
+    <string name="Psych">Psychiatrists On Site</string>
+    <string name="AdultCounseling">Adult Counseling</string>
+    <string name="AnxietyandDep">Anxiety and Depression</string>
+    <string name="Bipolar">Bipolar Disorders</string>
+    <string name="Eating">Eating Disorders</string>
+    <string name="Schiz">Schizoaffective Disorders</string>
+    <string name="AndMore">And More</string>
 
     <!--    Speciality Care Page-->
     <string name="SpecialtyCareHeader">SPECIALTY SERVICES</string>
-    <string name="SpecialityCarePar1"><b>Within the field of medicine, there are many sub-specialties when coordinating care to patients. At HUDA, we provide a range of specialty care and consultations to our patients, with the aim of expanding access to healthcare services. </b> We have created an integrated health model at HUDA through opening multiple specialty services creating a place where most patient needs can be met. All specialty services require a referral from a HUDA primary care provider. </string>
-    <string name="SpecialityCarePar2">  <b>Our Speciality Services/Consultations Include:</b>
-        \n\n <li>Physical Therapy</li>
-        \n\n <li>Endocrinology</li>
-        \n\n <li>Cardiology</li>
-        \n\n <li>Podiatry</li>
-        \n\n <li>Nephrology</li>
-        \n\n <li>Gastroenterology</li>
-        \n\n <li>Ear, Nose, Throat (ENT)</li>
-        \n\n <li>Hepatology</li>
-        \n\n <li>Hematology</li>
-        \n\n <li>Pulmonology</li>  </string>
-    <string name="SpecialityCarePar3">  <b>Our Speciality Providers:</b>
-        \n\n<li>Jawwad Rashid, P.T.A</li>
-        \n\n<li>Asadullah Mohammed, M.D.</li>
-        \n\n<li>Naseer Ahmad, M.D.</li>
-        \n\n<li>Maha Alhusseini, M.D.</li>
-        \n\n<li>Samer Salka, M.D.</li>
-        \n\n<li>Maha Alhusseini, M.D.</li>
-        \n\n<li>Syed Ghani, D.P.M.</li>
-        \n\n<li>Naveed Aslam, M.D.</li>
-        \n\n<li>Jukaku Tayeb, M.D.</li>
-        \n\n<li>Firdous Siddiqui, M.D.</li>
-        \n\n<li>Yousef Siddiqui, M.D.</li>
-        \n\n<li>Uzma Rehman, D.O.</li>
-        \n\n<li>Zaahir Turfe, M.D.</li>
-        \n\n<li>Ranya Selim, M.D.</li>
-        \n\n<li>Syed Akbar, M.D.</li></string>
+    <string name ="SpecialityCarePar1">Within the field of medicine, there are many sub-specialties when coordinating care to patients. At HUDA, we provide a range of specialty care and consultations to our patients, with the aim of expanding access to healthcare services. All specialty services require a referral from a HUDA primary care provider.</string>
+    <string name="PhysTherapy">Physical Therapy</string>
+    <string name="Endocrinology">Endocrinology</string>
+    <string name="Cardiology">Cardiology</string>
+    <string name="Podiatry">Podiatry</string>
+    <string name="Nephrology">Nephrology</string>
+    <string name="Gastroenterology">Gastroenterology</string>
+    <string name="ENT">Ear, Nose, Throat (ENT)</string>
+    <string name="Hepatology">Hepatology</string>
+    <string name="Hematology">Hematology</string>
+    <string name="Pulmonology">Pulmonology</string>
+
+
+<!--Announcements Page-->
     <string name="prevMonthButton"><![CDATA[<-]]></string>
     <string name="nextMonthButton"><![CDATA[->]]></string>
     <string name="PrevMonthButton"><![CDATA[<-]]></string>
     <string name="calItem">1</string>
-    <string name="title_activity_profile_menu">ProfileMenu</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
 
-    <string name="menu_update_password">Update Password</string>
-    <string name="menu_messages">Messages</string>
-    <string name="menu_logout">Logout</string>
+    <!--Patient Contract-->
+    <string name="PatientContractHeader">Patient Contract</string>
+    <string name="PatientContractHeader2">AUTHORIZATION FOR MEDICAL TREATMENT AT CLINIC. READ CAREFULLY - THIS IS A CONTRACT</string>
+    <string name="PatientContractBody">I consent to receiving services at the Health Unit on Davison Avenue, henceforth referred to as HUDA Clinic. Services may include assessment, routine diagnostic procedures, medications, lab tests, and appropriate medical treatment as the attending Physician/Nurse practitioner/Physician\’s Assistant considers necessary for my care. I understand that the practice of medicine is not an exact science and I acknowledge that I have received no guarantees regarding the result of examination or treatment at this clinic. I understand that the services I receive at HUDA Clinic or because of a referral from HUDA Clinic are being provided by health care practitioners and lay volunteers who are not receiving compensation and compensation will not be requested from any source. I understand, as provided by Federal and Michigan State Law (Michigan Public Health Code. MCL 333.16277), that these volunteers are not liable for civil damages because of acts or omissions which may occur while providing services to me. I understand that any fees incurred for referrals or any orders to an outside facility, from HUDA Clinic are my responsibility. I agree to be tested for blood borne pathogens in case of inadvertent exposure to blood and/or body fluids as recommended by the Centers for Disease Control. I understand that any verbally abusive or threatening behavior to the clinic staff or other patients is grounds for the termination of clinic services. Falsifying my income or medical insurance information, whether private or public provided, is grounds for termination of clinic services.</string>
+    <string name="PatientContractBody2">I understand HUDA clinic’s No Call No Show policy which states for Primary Care</string>
+    <string name="PatientContractBody3">A. If I do not keep a scheduled appointment and do not call to cancel or reschedule with reasonable notice, I will only be eligible to be seen as a Walk-In for the following visit.</string>
+    <string name="PatientContractBody4">B. If I have 3 or more No Call No Shows in a 12-month period, I could face termination of clinic services. I understand HUDA Clinic’s No Call No Show policy for Specialty Care (All appointments that are NOT primary care including., but not limited to Dental, Endocrinology, Psychiatry, ENT Optometry… etc.).</string>
+    <string name="PatientContractBody5">C. If I do not keep a scheduled appointment and do not call to cancel or reschedule with a reasonable time, I will need to find alternatives for my specialty care needs.</string>
+    <string name="PatientContractBody6">D. If I do not keep 2 scheduled specialty care appointments within a 6-month period, you won’t be permitted to schedule further specialty services and could face termination of clinic services.</string>
+    <string name="PatientContractBody7">My signature below constitutes my acknowledgement that I understand this request for consent and that I agree to its contents.</string>
+
+    <!--Patient Auth for release information-->
+    <string name="AuthFormHeader">HUDA Authorization for Release of Information</string>
+    <string name="AuthFormBody">Occasionally it is necessary for the HUDA Clinic to consult with other providers, such as specialists or other facilities, such as hospitals or labs to provide you, our patient, with what our providers believe to be the most appropriate course of action for your treatment. By signing this form, you give us, HUDA Clinic, permission to share your pertinent medical information with other providers/facilities to best complete your treatment or request medical records from previous providers on your behalf.</string>
+    <string name="AuthFormBody2">I, the patient, hereby authorize HUDA Clinic and its affiliates, its employees and agents, to use and disclose protected health information (e.g. information relating to the diagnosis, treatment, and health care services provided or to be provided to me and which identifies my name, address, social security number, date of birth) for the purpose of helping to coordinate my medical care. I understand that any personal health information or other information released to the person or organization identified above may be subject to re-disclosure by such person/organization and may be no longer protected by applicable federal and state privacy laws. I understand that I have a right to revoke this authorization by providing written notice to HUDA Clinic at any time. However, this authorization may not be revoked if its employees or agents have taken action on this authorization prior to receiving my written notice. I also understand I have the right to have a copy of this authorization.I further understand that this authorization is voluntary and that I may refuse to sign this authorization. I also understand that should I refuse to sign this form I greatly limit the services that HUDA Clinic will be able to perform for me. I understand that should I refuse to sign this,the HUDA Clinic will not be able to prescribe me medication to any pharmacy, nor be able to provide me with any lab work, physician referrals or medical record requests.</string>
+    <string name="AuthFormBody3">We take protecting your identity very seriously and do not share any unnecessary information with any of our partners.</string>
+
+    <!--Patient personal representative -->
+    <string name="PersonRepHeader">Designation of Personal Representative</string>
+    <string name="PersonRepBody">Completing this form allows the person designated to receive protected health information (PHI) such as test results. It also permits the personal representative to request and receive a patient\'s medical records.</string>
+    <string name="PersonRepBody2">A personal representative is not the same as a healthcare agent who is allowed to make medical decisions on the patient’s behalf.</string>
+    <string name="PersonRepBody3">I designate the following person(s) below as my personal representative(s) and understand and acknowledge that this designation gives the Personal Representative(s) the same power over my protected health information as I have, including the right to inspect my records, authorize disclosures and request restrictions and amendments. I hereby waive any restrictions on my personal representative(s)’ access to my protected health information. I understand that I am not required to list anyone. I also understand that this designation shall remain in place until such time as I revoke it in writing by letter to the Privacy Officer of HUDA Clinic.</string>
+    <string name="PersonRepHeader2">Personal Representatitve(s)</string>
+    <string name="PersonRep">Print Name</string>
+    <string name="Relation">Relationship to Patient</string>
+    <string name="PhoneNumber">Phone Number 123–123–1234</string>
+
+    <!-- Stress Form -->
+    <string name="StressFormHeader">Stress\n Questionaire</string>
+    <string name="StressFormbody">Over the last two (2) weeks, how often have you been bothered by any of the following problems? Please input the number that applies to you</string>
+    <string name="StressFormInstruction">0 = Not at all\n1 = Several Days\n2 = More than half the days\n3 = Nearly everyday</string>
+    <string name="Q1S1">1. Feeling down, depressed or hopeless</string>
+    <string name="StressFormAnswer">Enter 0, 1, 2 or 3</string>
+    <string name="q2s1">2. Trouble falling or stay asleep or\n Sleeping too much</string>
+    <string name="q3s1">3. Feeling tired or having little\n energy</string>
+    <string name="q4s1">4. Poor appetite OR Overeating</string>
+    <string name="q5s1">5. Feeling bad about yourself or\n what that you are a failure or \n have let yourself or your family\n down</string>
+    <string name="q6s1">6. Trouble concentrating on things such\n as reading the newspaper or \n watching television</string>
+    <string name="q7s1">7. Moving or speaking so slowly\n that other \npeople could have noticed OR\nBeing so fidgety or restless that you’ve\n been moving around a lot more\n than usual</string>
+    <string name="q8s1">8. Thoughts that you would be \nbetter off\n dead OR Hurting yourself in\n some way</string>
+    <string name="totals">Add numbers for total</string>
+    <string name="section2Header">Section 2</string>
+    <string name="section2Header2">Over the last two (2) weeks, how \noften have you been bothered\n by of the following problems? Please input the number that applies to you</string>
+    <string name="s2q1">1. Feeling nervous, anxious or\n on edge</string>
+    <string name="s2q2">2. Not being able to stop or\n control worrying</string>
+    <string name="s2q3">3. Worrying too much about\n different things</string>
+    <string name="s2q4">4. Trouble Relaxing</string>
+    <string name="s2q5">5. Being so restless that it is hard\n to sit still</string>
+    <string name="s2q6">6. Becoming Easily annoyed or irritable</string>
+    <string name="s2q7">7. Feeling afraid as if something\n awful might happen</string>
+    <string name="section3Header">Section 3</string>
+    <string name="section3Header2">In your life have you ever had any experience that was so frightening, horrible or upsetting that in the past month you: (Yes or No)</string>
+    <string name="s3q1">1. Have had nightmares about it or\n thought about it when you did not\n want to?</string>
+    <string name="StressFormYesOrNo">Enter Yes or No</string>
+    <string name="s3q2">2. Tried hard not to think about it or\n went out of your way to avoid situations\n that remind you of it?</string>
+    <string name="s3q3">3. Were constantly on guard, watchful\n or easily startled?</string>
+    <string name="s3q4">4. Felt numb or detached from others,\n activities, or your surroundings?</string>
+
+    <!-- Patient Info Form-->
+    <string name="infoFormHeader">Patient Information Form</string>
+    <string name="infoFormBody">Your Information. Your Rights. Our Responsibilities\nThis notice describes how medical information about you may be used and disclosed and how you can get access to this information.</string>
+    <string name="yourRights">YOUR RIGHTS:</string>
+    <string name="infoFormBody2">- Then it comes to your health information, you have certain rights. This section explains your rights and some of our responsibilities to help you. Ask us how to do this.</string>
+    <string name="infoFormTitle">- Get a copy of your health and claims records:</string>
+    <string name="infoFormBody3">- You can ask to see or get a copy of your health and claims records and other health information we have about you. Ask us how to do this.\n- We will provide a copy or a summary of your health and claims records, usually within 30 days of your request. We may charge a reasonable, cost based fee.</string>
+    <string name="inforFormTitle2">- Ask us to correct health and claim records:</string>
+    <string name="infoFormBody4">- You can ask us to correct your health and claims records if you think they are incorrect or incomplete. Ask us how to do this.\n- We may say \'No\' to your request, but we will tell you why in writing within 60 days.</string>
+    <string name="infoFormTitle3">- Request confidential communications:</string>
+    <string name="infoFormBody5">- You can ask us to contact you in a specific way (for example, home or office phone - this is your \'preferred\' contact method) or to send mail to a different address.\n- We will consider all reasonable requests and must say \'Yes\' if you tell us you would be in danger if we do not.</string>
+    <string name="infoFormTitle4">- Ask us to limit what we use or share:</string>
+    <string name="infoFormBody6">- You can ask us NOT to use or share certain health information for treatment, payment or our operations.\n- We are not required to agree to your request, and we may say \'No\' if it would affect your care.</string>
+    <string name="infoFormTitle5">- Get a list of those with whom we\'ve shared information:</string>
+    <string name="infoFormBody7">- You can ask for a list accounting of the times we\'ve shared your health information for six years prior to the date you ask, who we shared it with, and why.\n- We will include all the disclosures except for those about treatment, payment and health care operations and certain other disclosures (such as any you asked us to make) We will provide one accounting a year for free but will charge a reasonable, cost-based fee if you ask for another one within 12 months.</string>
+    <string name="infoFormTitle6">- Get a copy of this privacy notice:</string>
+    <string name="infoFormBody8">- You can ask for a paper copy of this notice at any time, even if you have agreed to receive the notice electronically. We will provide you with a paper copy promptly.</string>
+    <string name="infoFormTitle7">- Choose someone to act for you:</string>
+    <string name="infoFormBody9">- If you have given someone medical power of attorney or if someone is your legal guardian, that person can exercise your rights and make choices about your health information.\n- We will make sure the person has this authority and can act for you before we take any action.</string>
+    <string name="infoFormTitle8">- File a complaint if you fee your rights are violated:</string>
+    <string name="infoFormBody10">– You can complain if you feel we have violated your rights by contacting us using the information on page 1.\n– You can file a complaint with the U.S. Department of Health and Humans Services Office for Civil Rights by sending a letter to 200 Independence Ave. S.W. Washington, D.C. 20201, calling 1–877–696-6775, or visiting www.hhs.gov/ocr/privacy/hipaa/complaints/,\n- We will not retaliate against you for filing a complaint.</string>
+    <string name="yourChoices">YOUR CHOICES:</string>
+    <string name="infoFormBody11">For certain health information, you can tell us your choices about what we share. If you have a clear preference for how we share your information in the situations described below, talk to us. Tell us what you want us to do, and we will follow your instructions.</string>
+    <string name="infoFormTitle9">\t- In these cases, you have both the right and choice to tell us to:</string>
+    <string name="shareInfo">\t\t- Share information with your family, close friends, or others involved in payment for your care\n\t\t- Share information in a disaster relief situation\n\t\t- Contact you for fundraising efforts</string>
+    <string name="infoFormBody12">\t- If you are not able to tell us your preference, for example, if you are unconscious, we may go ahead and share your information if we believe it is in your best interest. We may also share your information when needed to lessen a serious an imminent threat to health or safety.</string>
+    <string name="infoFormTitle10">\t- In these cases, we never share your information unless you gives us written permission:</string>
+    <string name="marketingInfo">\t\t- Marketing purposes\n\t\t- Sale of your information</string>
+    <string name="usesAndDisclosure">OUR USES AND DISCLOSURES:</string>
+    <string name="useAndDisclosure2">How do we typically use or share your health information? We typically use or share your health information in the following ways:</string>
+    <string name="manageHealthTreatment">\t- Help manage the health care treatment you receive:</string>
+    <string name="manageHealth2">\t\t- We can use your health information and share it with professionals who are treating you.</string>
+    <string name="org">\t- Run our organization:</string>
+    <string name="org2">\t\t- We can use and disclose your information to run our organization and contact you when necessary.</string>
+    <string name="orgExample">\t\t\t- Example: We use health information about you to develop better services for you.</string>
+    <string name="geneticInfo">\t\t- We are not allowed to use genetic information to decide whether we will give you coverage and the price of coverage. This does not apply to long term care plans.</string>
+    <string name="payForServices">\t- Pay for your health services:</string>
+    <string name="payServices2">\t\t- We can use and disclose your health information as we pay for your health services.</string>
+    <string name="payServicesEx">\t\t\t- Example: We share information about you with our laboratory services provider to coordinate payment for your lab work.</string>
+    <string name="administerPlan">\t- Administer your plan:</string>
+    <string name="adminPlan2">\t\t- We may disclose your health information to your health plan sponsor for plan administration.</string>
+    <string name="adminPlanEx">\t\t\t- Example: Your company contracts with us to provide a health plan, and we provide your company with certain statistics to explain the premiums we charge.</string>
+    <string name="lastHeader">How else can we use or share your health information? We are allowed or required to share your information in other ways-usually in ways that contribute to the public good, such as public health and research. We mus meet many conditions in the law before we can share your information for these purposes. For more information see: www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/index.html.</string>
+
+
+    <!--Lab Access Form-->
+    <string name="AccessHeader">Lab Access</string>
+    <string name="AccessBody">Part of the information we have collected from you is your email address. By providing your email address you will receive an invitation to join our HUDA Clinic patient portal. Once your register for the patient portal you will have access to all your visits at HUDA, as well as your lab results. Lab results will come into the portal as a \'new message\'</string>
+    <string name="AccessBody2">If you would like to access your visit notes in section1 you will select:\n \'For Period\' (All time is selected by default)\n\'Outpatient Visit Documents\': CCDA is the Consolidated Clinical Document Architecture and provides your complete Health Record in XML or PDF format.\nCCD is The Continuity of Care Document which provides a a snapshot of your medical history based on visits, including information critical to continuing care in XML format only</string>
+    <string name="AccessBody3">Referral Notes are created when you are referred to another healthcare provider XML only. Referral notes are generated AFTER your visit at HUDA to share your labs with your designated Primary Care Provider. All of these directions are also available on the Patient Portal.</string>
+    <string name="submitBtn">Submit</string>
+
+
 </resources>

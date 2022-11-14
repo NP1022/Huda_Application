@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -33,10 +34,10 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdminPage extends AppCompatActivity {
+public class AdminPage extends AppCompatActivity implements View.OnClickListener {
 
     private PatientViewAdapter viewAdapter;
-
+    private ImageView backbutton;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +46,7 @@ public class AdminPage extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.usersView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        if (UserManager.getInstance().isAdmin()) {
+       // if (UserManager.getInstance().isAdmin()) {
             FirebaseDatabase.getInstance().getReference("User").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -64,7 +65,15 @@ public class AdminPage extends AppCompatActivity {
                 public void onCancelled(@NonNull DatabaseError error) {
                 }
             });
-        }
+      //  }
+        backbutton = findViewById(R.id.backButton_9);
+        backbutton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.backButton_9)
+            startActivity(new Intent(this , Adminpanel.class));
     }
 
     private static class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> implements View.OnClickListener {

@@ -15,8 +15,8 @@
     <string name="email">Ingrese el Correo Electrónico</string>
     <string name="Login">Iniciar Sesión</string>
     <string name="forgotpassword">Olvidó Su Contraseña?</string>
-    <string name="dontAccount">¿No tienes una cuenta? Inscribirse</string>
-    <string name="alreadyAccount">¿Ya tienes una cuenta? Acceso</string>
+    <string name="dontAccount">¿No tienes una cuenta?</string>
+    <string name="alreadyAccount">¿Ya tienes una cuenta?<b>Acceso</b></string>
     <string name="register">Registro</string>
     <string name="language">Español</string>
     <string name="FirstName">Ingrese el Nombre</string>
@@ -37,9 +37,10 @@
     <string name="Annoucment">Anuncio</string>
     <string name="services">Servicios</string>
     <string name="story">Nuestra Historia</string>
-    <string name="partners">Socios</string>
+    <string name="partners">SOCIAS</string>
     <string name="contact">Contacta con Nosotros</string>
     <string name="patients_page">Equipo</string>
+    <string name = "logout">Cerrar Sesión</string>
 
 <!--    Services -->
     <string name="healthservices">Servicios de salud gratuitos</string>
@@ -57,7 +58,10 @@
     <string name="Dental">Cuidado Dental</string>
     <string name="speciality">Atención Especializada</string>
 
-<!--    Patient Portal-->
+    <!--    Inbox Page-->
+    <string name="Inbox">BANDEJA DE ENTRADA</string>
+
+    <!--    Patient Portal-->
     <string name="NewPatient">Nuevo Paciente</string>
     <string name="patientForm">Formulario de Nuevo Paciente</string>
     <string name="checkIn">Registrarse</string>
@@ -68,7 +72,7 @@
     <string name="Date">Fecha (MM/DD/AAAA)</string>
     <string name="VisitReason">Motivo de la visita</string>
     <string name="Sex">Sexo</string>
-    <string name="DOB">Fecha de Nacimiento (MM/DD/AAAA)</string>
+    <string name="DOB">Cumpleaños (MM/DD/AAAA)</string>
     <string name="Address">Dirección (1234 Street St.)</string>
     <string name = "City">Dirección</string>
     <string name = "State">Estado</string>
@@ -147,7 +151,7 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name ="appointmentsHeader">EQUIPO</string>
 
     <!--    Contact Us Page-->
-    <string name = "ContactUsHeader">Contacta Con Nosotros</string>
+    <string name = "ContactUsHeader">CONTACTA</string>
     <string name = "ContactUsPara">HUDA, una clínica de salud comunitaria gratuita\nen Metro Detroit</string>
     <string name = "CallHeader">Llamar:</string>
     <string name = "ClinicPhone">(313) 865-8446</string>
@@ -156,13 +160,13 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "SocialMediaHeader">Encuéntranos en:</string>
 
 <!--    Our Story Page-->
-    <string name = "OurStoryHeader">Nuestra historia</string>
+    <string name = "OurStoryHeader">NUESTRA HISTORIA</string>
     <string name = "History">Historia de la Clínica HUDA</string>
     <string name = "HistoryPara">La Clínica HUDA abrió sus puertas por primera vez en mayo de 2004 para atender a la población sin seguro del área de Detroit. La clínica funcionó inicialmente con fondos recaudados por la comunidad musulmana de Metro Detroit.</string>
     <string name = "HistPara">Cuando comenzó, la Clínica HUDA brindaba únicamente servicios médicos. Luego nos mudamos de nuestra instalación original en el Centro Musulmán de Detroit a una instalación nueva y más grande en Woodrow Wilson Street. Desde entonces, hemos ampliado nuestra atención para incluir una gama completa de servicios dentales, de atención de la vista, de podología y de salud mental, así como una plétora de servicios especializados disponibles sin costo para nuestros pacientes. Nuestras nuevas instalaciones nos han permitido ampliar nuestros servicios y nuestros tiempos de servicio, pero nada de eso sería posible sin el generoso apoyo de nuestros donantes y voluntarios.</string>
 
     <!--    Announcements Page-->
-    <string name = "AnnouncementsHeader">Anuncios</string>
+    <string name = "AnnouncementsHeader">ANUNCIOS</string>
     <string name = "ClosureHeader">Fechas de Cierre de Vacaciones de 2022</string>
     <string name = "Date1">23 de Noviembre de 2022 - 28 de Noviembre de 2022</string>
     <string name = "Date2">24 de Diciembre de 2022</string>
@@ -173,110 +177,170 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "CalendarHeader">Calendario de la Clínica</string>
 
     <!--    Primary Services Page-->
-    <string name = "PrimaryServicesHeader">Servicios Primarios</string>
-    <string name = "PrimaryCareInternalMedicine">Atención Primaria / Medicina Interna</string>
-    <string name = "PrimaryCarePar1">Los proveedores de atención primaria suelen ser la primera línea de contacto para los pacientes; tratar problemas generales de salud, brindar educación, medicamentos y referencias especializadas según sea necesario. HUDA tiene como objetivo brindar atención primaria y servicios especializados a las personas sin seguro y con seguro insuficiente en el área metropolitana de Detroit. Brindamos servicios preventivos de atención primaria en una clínica de salud comunitaria centrada en la persona. Nuestro objetivo es hacer que Michigan sea más saludable.
-La clínica HUDA brinda medicamentos GRATIS a nuestros pacientes y también brinda servicios de laboratorio sin costo para nuestros pacientes.</string>
-    <string name="PrimaryCarePar2"><b>Nuestros servicios de atención primaria incluyen:</b>
-        \n\n  <li>Evaluaciones de salud</li>
-        \n\n  <li>Manejo de enfermedades agudas y crónicas</li>
-        \n\n <li>Servicios de laboratorio (análisis de sangre)</li>
-        \n\n <li>Farmacia sin costo</li>
-        \n\n <li>Exámenes de detección y tratamientos de la diabetes</li>
-        \n\n <li>Educación y recursos para la salud</li>
-        \n\n <li>Exámenes de colesterol y presión arterial</li>
-        \n\n <li>Educación nutricional</li> </string>
+    <string name = "PrimaryServicesHeader">SERVICIOS PRIMARIOS</string>
+    <string name="PrimaryCarePar1">Los proveedores de atención primaria suelen ser la primera línea de contacto para los pacientes; tratar problemas generales de salud, brindar educación, medicamentos y referencias especializadas según sea necesario.</string>
+    <string name = "HealthAssessments">Evaluaciones de salud</string>
+    <string name = "IllnessManagement">Manejo de enfermedades agudas y crónicas</string>
+    <string name = "LabServices">Servicios de laboratorio</string>
+    <string name = "NoCostPharm">Farmacia Sin Costo</string>
+    <string name = "DiabetesScreening">Detección y tratamiento de la diabetes</string>
+    <string name = "CholBP">Exámenes de colesterol y presión arterial</string>
+    <string name = "HealthEd">Recursos y educación para la salud</string>
+    <string name ="servicesInclude">LOS SERVICIOS INCLUYEN</string>
 
     <!--    Dental Health Page-->
-    <string name = "DentalHealthHeader">Servicios Dentales</string>
-    <!-- string name = "PrimaryCareInternalMedicine">Primary Care / Internal Medicine</string> -->
-    <string name = "DentalHealthPar1">Muchas personas esperan para hacerse el trabajo dental necesario porque no tienen seguro, sin embargo, los pequeños problemas dentales pueden convertirse rápidamente en increíblemente dolorosos si no se toman en cuenta. Visite HUDA para limpiezas, empastes, extracciones y exámenes para mantener sus dientes saludable y recibir una derivación a un especialista si es necesario.</string>
-    <string name="DentalHealthPar2"><b>Nuestros servicios dentales incluyen:</b>
-        \n\n <li>Exámenes dentales y radiografías</li>
-        \n\n <li>Limpiezas profundas</li>
-        \n\n <li>Rellenos compuestos</li>
-        \n\n <li>Extracción de dientes</li>
-        \n\n <li>Referencias a dentistas de bajo costo según sea necesario</li></string>
-    <string name="DentalHealthPar3">Nuestros Dentistas:
-        \n\n <li>Shakeel Niazi, D.D.S.</li>
-        \n\n <li>Ahmed Allam, D.D.S.</li>
-        \n\n <li>Asmaa Abdel-Salam, D.D.S.</li>
-        \n\n <li>Sumera Khalid, D.D.S.</li>
-        \n\n <li>Umair Niazi, D.M.D.</li>
-        \n\n <li>Rachel Mundus, R.D.</li>
-        \n\n <li>Fatin Amireh, R.D.H.</li></string>
+    <string name = "DentalHealthHeader">SERVICIOS DENTALES</string>
+    <string name="DentalHealthPar1">Muchas ersonas esperan para hacerse el trabajo dental necesario porque no tienen seguro, sin embargo, los pequeños problemas dentales pueden convertirse rápidamente en increíblemente dolorosos si no se toman en cuenta. Visite HUDA para limpiezas, empastes, extracciones y exámenes para mantener sus dientes saludable y recibir una derivación a un especialista si es necesario.</string>
+    <string name="DentalScreenings">Exámenes Fentales y Radiografías</string>
+    <string name="DeepCleanings">Limpiezas Profundas</string>
+    <string name="CompositeFillings">Rellenos Compuestos</string>
+    <string name="ToothExtractions">Extracción de Dientes</string>
+
 
     <!--    Vision Care Page-->
-    <string name = "VisionCareHeader">Cuidado de la vista</string>
+    <string name = "VisionCareHeader">CUIDADO DE LA VISTA</string>
     <string name = "VisionCarePar1">Los exámenes de la vista son un método eficaz para identificar a las personas con discapacidad visual o afecciones oculares que probablemente provoquen la pérdida de la visión.  Realizamos exámenes internos y proporcionamos anteojos sin costo y remisiones a oftalmólogos locales de bajo costo según sea necesario.</string>
-    <string name="VisionCarePar2"><b>Nuestras opciones de exámenes de la vista:</b>
-        \n\n <li>Exámenes de detección de glaucoma</li>
-        \n\n <li>Exámenes de cataratas</li>
-        \n\n <li>Exámenes de detección de degeneración macular</li>
-        \n\n <li>Gafas GRATIS</li>
-        \n\n <li>Referencias a especialistas de la vista</li></string>
-    <string name="VisionCarePar3"><b>Nuestros Oftalmólogos / Optometristas:</b>
-        \n\n <li>M. Hanif Peracha, M.D.</li>
-        \n\n <li>Meiraj Siddiqui, M.D.</li>
-        \n\n <li>Benjamin Whittredge, O.D.</li>
-        \n\n <li>Christopher Burgess, O.D.</li>
-        \n\n <li>Naureen Haroon, O.D.</li>
-        \n\n <li>Suleman Hans, O.D.</li>
-        \n\n <li>Elizabeth Borowiec, O.D</li></string>
+    <string name ="Glaucoma">Exámenes de detección de glaucoma</string>
+    <string name ="Cataract">Exámenes de cataratas</string>
+    <string name ="Macular">Exámenes de detección de degeneración macular</string>
+    <string name ="EyeWear">Gafas GRATIS</string>
 
     <!--    Mental Health Page-->
-    <string name = "MentalHealthHeader">Salud Mental</string>
-    <string name = "MentalHealthPar1">Tenemos psiquiatras en el personal junto con nuestros trabajadores sociales autorizados para brindar terapia y tratamiento para una amplia gama de problemas de salud mental.Ofrecemos asesoramiento y tratamiento gratuitos a veteranos, personas sin hogar , sin seguro y trabajadores con seguro insuficiente.
-        \n Desde el inicio de la pandemia de Covid-19, nuestros servicios de psiquiatría han hecho la transición a la telemedicina. Actualmente contamos con 2 psiquiatras, una enfermera practicante de salud mental y un terapeuta que se ofrecen como voluntarios en la Clínica HUDA, lo que nos permite brindar tratamiento para una amplia gama de problemas de salud mental.</string>
-    <string name="MentalHealthPar2"><b>Nuestros servicios de salud mental incluyen:</b>
-        \n\n <li>Psiquiatra prescriptor en el sitio</li>
-        \n\n <li>Consejería para adultos</li>
-        \n\n <li>Ansiedad/Depresión</li>
-        \n\n <li>Trastornos bipolares</li>
-        \n\n <li>Trastornos de la alimentación</li>
-        \n\n <li>Trastornos esquizoafectivos y más</li></string>
-    <string name="MentalHealthPar3">
-        <b>Nuestros Psiquiatras:</b>
-        \n\n <li>Saba Maroof, M.D.</li>
-        \n\n <li>Mazhar Hussain, M.D.</li>
-        \n\n <b>Proveedores de Apoyo:</b>
-        \n\n <li>Joann Harrison, MHNP, FNP-BC</li>
-        \n\n <li>Sarah Kappler, TLLP</li></string>
+    <string name = "MentalHealthHeader">SALUD MENTAL</string>
+    <string name = "MentalHealthPar1">Tenemos psiquiatras en el personal junto con nuestros trabajadores sociales autorizados para brindar terapia y tratamiento para una amplia gama de problemas de salud mental.Ofrecemos asesoramiento y tratamiento gratuitos a veteranos, personas sin hogar , sin seguro y trabajadores con seguro insuficiente.</string>
+    <string name="Psych">Psiquiatra Prescriptor</string>
+    <string name="AdultCounseling">Consejería Para Adultos</string>
+    <string name="AnxietyandDep">Ansiedad/Depresión</string>
+    <string name="Bipolar">Trastornos Bipolares</string>
+    <string name="Eating">Trastornos de la Alimentación</string>
+    <string name="Schiz">Trastornos Esquizoafectivos</string>
+    <string name="AndMore">Y Más</string>
 
     <!--    Speciality Care Page-->
-    <string name = "SpecialtyCareHeader"> Servicios especializados </string>
-    <string name = "SpecialityCarePar1">  Dentro del campo de la medicina, existen muchas subespecialidades a la hora de coordinar la atención a los pacientes. En HUDA, brindamos una gama de atención especializada y consultas a nuestros pacientes, con el objetivo de ampliar el acceso a los servicios de atención médica.  Hemos creado un modelo de salud integrado en HUDA a través de la apertura de múltiples servicios especializados creando un lugar donde se pueden satisfacer la mayoría de las necesidades de los pacientes. Todos los servicios especializados requieren una remisión de un proveedor de atención primaria de HUDA. </string>
-    <string name="SpecialityCarePar2">  <b>Nuestras consultas/servicios especializados incluyen:</b>
-        \n\n  <li>Fisioterapia</li>
-        \n\n  <li>Endocrinología</li>
-        \n\n  <li>Cardiología</li>
-        \n\n  <li>Podología</li>
-        \n\n  <li>Nefrología</li>
-        \n\n  <li>Gastroenterología</li>
-        \n\n  <li>Otorrinolaringología (ENT)</li>
-        \n\n  <li>Hepatología</li>
-        \n\n  <li>Hematología</li>
-        \n\n  <li>Neumología</li></string>
-    <string name="SpecialityCarePar3">  <b>Nuestros proveedores especializados:</b>
-        \n\n <li>Jawwad Rashid, P.T.A</li>
-        \n\n <li>Asadullah Mohammed, M.D.</li>
-        \n\n <li>Naseer Ahmad, M.D.</li>
-        \n\n <li>Maha Alhusseini, M.D.</li>
-        \n\n <li>Samer Salka, M.D.</li>
-        \n\n <li>Maha Alhusseini, M.D.</li>
-        \n\n <li>Syed Ghani, D.P.M.</li>
-        \n\n <li>Naveed Aslam, M.D.</li>
-        \n\n <li>Jukaku Tayeb, M.D.</li>
-        \n\n <li>Firdous Siddiqui, M.D.</li>
-        \n\n <li>Yousef Siddiqui, M.D.</li>
-        \n\n <li>Uzma Rehman, D.O.</li>
-        \n\n <li>Zaahir Turfe, M.D.</li>
-        \n\n <li>Ranya Selim, M.D.</li>
-        \n\n <li>Syed Akbar, M.D.</li></string>
+    <string name = "SpecialtyCareHeader">SERVICIOS ESPECIALES</string>
+    <string name ="SpecialityCarePar1">Dentro del campo de la medicina, existen muchas subespecialidades a la hora de coordinar la atención a los pacientes. En HUDA, brindamos una gama de atención especializada y consultas a nuestros pacientes, con el objetivo de ampliar el acceso a los servicios de atención médica. Todos los servicios especializados requieren una remisión de un proveedor de atención primaria de HUDA.</string>
+    <string name="PhysTherapy">Fisioterapia</string>
+    <string name="Endocrinology">Endocrinología</string>
+    <string name="Cardiology">Cardiología</string>
+    <string name="Podiatry">Podología</string>
+    <string name="Nephrology">Nefrología</string>
+    <string name="Gastroenterology">Gastroenterología</string>
+    <string name="ENT">Otorrinolaringología (ENT)</string>
+    <string name="Hepatology">Hepatología</string>
+    <string name="Hematology">Hematología</string>
+    <string name="Pulmonology">Neumología</string>
 
     <string name="prevMonthButton"><![CDATA[<-]]></string>
     <string name="nextMonthButton"><![CDATA[->]]></string>
     <string name="PrevMonthButton"><![CDATA[<-]]></string>
     <string name="calItem">1</string>
 
+    <!--Patient Contract Spanish-->
+    <string name="PatientContractHeader">Contrato del paciente</string>
+    <string name="PatientContractHeader2">AUTORIZACIÓN PARA TRATAMIENTO MÉDICO EN CLÍNICA. LEA CUIDADOSAMENTE - ESTE ES UN CONTRATO</string>
+    <string name="PatientContractBody">Doy mi consentimiento para recibir servicios en la Unidad de Salud en Davison Avenue, en lo sucesivo denominada Clínica HUDA. Los servicios pueden incluir evaluación, procedimientos de diagnóstico de rutina, medicamentos, pruebas de laboratorio y tratamiento médico adecuado según lo considere necesario el médico tratante, la enfermera practicante o el asistente médico para mi atención. Entiendo que la práctica de la medicina no es una ciencia exacta y reconozco que no he recibido garantías con respecto al resultado del examen o tratamiento en esta clínica. Entiendo que los servicios que recibo en la Clínica HUDA o debido a una remisión de la Clínica HUDA están siendo proporcionados por profesionales de la salud y voluntarios laicos que no reciben compensación y no se solicitará compensación de ninguna fuente. Entiendo, según lo dispuesto por la Ley Federal y del Estado de Michigan (Código de Salud Pública de Michigan. MCL 333.16277), que estos voluntarios no son responsables de daños civiles debido a actos u omisiones que puedan ocurrir mientras me brindan servicios. Entiendo que cualquier cargo incurrido por referencias o cualquier pedido a un centro externo de la Clínica HUDA es mi responsabilidad. Acepto que me hagan la prueba de patógenos transmitidos por la sangre en caso de exposición inadvertida a sangre y/o fluidos corporales según lo recomendado por los Centros para el Control de Enfermedades. Entiendo que cualquier comportamiento verbalmente abusivo o amenazante hacia el personal de la clínica u otros pacientes es motivo para la terminación de los servicios de la clínica. Falsificar mis ingresos o la información de mi seguro médico, ya sea privado o público, es motivo para la terminación de los servicios de la clínica.</string>
+    <string name="PatientContractBody2">Entiendo la política de No Call No Show de la clínica HUDA que establece para Atención Primaria</string>
+    <string name="PatientContractBody3">A. Si no acudo a una cita programada y no llamo para cancelar o reprogramar con un aviso razonable, solo seré elegible para ser visto como un Walk-In para la siguiente visita.</string>
+    <string name="PatientContractBody4">B. Si tengo 3 o más No Call No Shows en un período de 12 meses, podría enfrentar la terminación de los servicios de la clínica. Entiendo la política de No llamar y No presentarse de la clínica HUDA para atención especializada (todas las citas que NO son de atención primaria, incluidas, entre otras, odontología, endocrinología, psiquiatría, optometría ENT, etc.).</string>
+    <string name="PatientContractBody5">C. Si no acudo a una cita programada y no llamo para cancelar o reprogramar con un tiempo razonable, necesitaré encontrar alternativas para mis necesidades de atención especializada.</string>
+    <string name="PatientContractBody6">D. Si no asisto a 2 citas programadas de atención especializada dentro de un período de 6 meses, no se le permitirá programar más servicios especializados y podría terminar con los servicios de la clínica.</string>
+    <string name="PatientContractBody7">Mi firma a continuación constituye mi reconocimiento de que entiendo esta solicitud de consentimiento y que estoy de acuerdo con su contenido.</string>
+
+    <!--Patient Auth for release information Spanish-->
+    <string name="AuthFormHeader">Autorización de HUDA para la divulgación de información</string>
+    <string name="AuthFormBody">Ocasionalmente, es necesario que la Clínica HUDA consulte con otros proveedores, como especialistas u otras instalaciones, como hospitales o laboratorios, para brindarle a usted, nuestro paciente, lo que nuestros proveedores creen que es el curso de acción más apropiado para su tratamiento. Al firmar este formulario, nos da permiso a la Clínica HUDA para compartir su información médica pertinente con otros proveedores/instalaciones para completar mejor su tratamiento o solicitar registros médicos de proveedores anteriores en su nombre.</string>
+    <string name="AuthFormBody2">Yo, el paciente, por la presente autorizo a la Clínica HUDA y sus afiliados, sus empleados y agentes, a usar y divulgar información médica protegida (por ejemplo, información relacionada con el diagnóstico, tratamiento y servicios de atención médica proporcionados o que se me proporcionarán y que identifica a mi nombre, dirección, número de seguro social, fecha de nacimiento) con el fin de ayudar a coordinar mi atención médica. Entiendo que cualquier información de salud personal u otra información divulgada a la persona u organización identificada anteriormente puede estar sujeta a una nueva divulgación por parte de dicha persona u organización y es posible que ya no esté protegida por las leyes de privacidad federales y estatales aplicables. Entiendo que tengo derecho a revocar esta autorización mediante notificación por escrito a la Clínica HUDA en cualquier momento. Sin embargo, esta autorización no se puede revocar si sus empleados o agentes han tomado medidas sobre esta autorización antes de recibir mi notificación por escrito. También entiendo que tengo derecho a tener una copia de esta autorización. También entiendo que esta autorización es voluntaria y que puedo negarme a firmar esta autorización. También entiendo que si me niego a firmar este formulario, limitaré en gran medida los servicios que la Clínica HUDA podrá brindarme. Entiendo que si me niego a firmar esto, la Clínica HUDA no podrá recetarme medicamentos a ninguna farmacia, ni podrá proporcionarme ningún trabajo de laboratorio, referencias médicas o solicitudes de registros médicos.</string>
+    <string name="AuthFormBody3">Nos tomamos muy en serio la protección de su identidad y no compartimos ninguna información innecesaria con ninguno de nuestros socios.</string>
+
+    <!--Patient personal representative -->
+    <string name="PersonRepHeader">Designación de Representante Personal</string>
+    <string name="PersonRepBody">Completar este formulario le permite a la persona designada recibir información de salud protegida (PHI), como los resultados de las pruebas. También permite que el representante personal solicite y reciba los registros médicos de un paciente.</string>
+    <string name="PersonRepBody2">Un representante personal no es lo mismo que un agente de atención médica que puede tomar decisiones médicas en nombre del paciente.</string>
+    <string name="PersonRepBody3">Designo a la(s) siguiente(s) persona(s) a continuación como mi(s) representante(s) personal(es) y entiendo y reconozco que esta designación le otorga al(los) Representante(s) personal(es) el mismo poder que tengo sobre mi información médica protegida, incluido el derecho a inspeccionar mis registros, autorizar divulgaciones y solicitar restricciones y enmiendas. Por la presente, renuncio a cualquier restricción sobre el acceso de mi(s) representante(s) personal(es) a mi información médica protegida. Entiendo que no estoy obligado a enumerar a nadie. También entiendo que esta designación permanecerá vigente hasta el momento en que la revoque por escrito mediante una carta al Oficial de Privacidad de la Clínica HUDA.</string>
+    <string name="PersonRepHeader2">Representante(s) personal(es)</string>
+    <string name="PersonRep">Imprimir nombre</string>
+    <string name="Relation">Relación con el paciente</string>
+    <string name="PhoneNumber">Número de teléfono 123–123–1234</string>
+
+    <!-- Stress Form -->
+    <string name="StressFormHeader">Estrés\n Cuestionario</string>
+    <string name="StressFormbody">En las últimas dos (2) semanas, ¿con qué frecuencia le ha molestado alguno de los siguientes problemas? Ingrese el número que se aplica a usted</string>
+    <string name="StressFormInstruction">0 = Nada\n1 = Varios días\n2 = Más de la mitad de los días\n3 = Casi todos los días</string>
+    <string name="Q1S1">1. Sentirse decaído, deprimido o sin esperanza</string>
+    <string name="StressFormAnswer">Introduzca 0, 1, 2 o 3</string>
+    <string name="q2s1">2. Dificultad para quedarse o quedarse dormido o \ n Dormir demasiado</string>
+    <string name="q3s1">3. Sentirse cansado o tener poca energía</string>
+    <string name="q4s1">4. Falta de apetito O Comer en exceso</string>
+    <string name="q5s1">5. Sentirse mal consigo mismo o\n por ser un fracaso o\n haber decepcionado a usted mismo o a su familia\n</string>
+    <string name="q6s1">6. Problemas para concentrarse en cosas\n como leer el periódico o\n ver la televisión</string>
+    <string name="q7s1">7. Moverse o hablar tan despacio\n que otras \npersonas podrían haberlo notado O\nEstar tan inquieto o inquieto que\n se ha estado moviendo mucho más\n de lo habitual</string>
+    <string name="q8s1">8. Pensamientos de que estarías \nmejor\n muerto O lastimándote\n de alguna manera</string>
+    <string name="totals">Agregar números para el total</string>
+    <string name="section2Header">Sección 2</string>
+    <string name="section2Header2">Durante las últimas dos (2) semanas, ¿con qué frecuencia le han molestado\n los siguientes problemas? Ingrese el número que se aplica a usted</string>
+    <string name="s2q1">1. Sentirse nervioso, ansioso o \ n al borde.</string>
+    <string name="s2q2">2. No ser capaz de detener o\n controlar la preocupación</string>
+    <string name="s2q3">3. Preocuparse demasiado por\n cosas diferentes</string>
+    <string name="s2q4">4. Problemas para relajarse</string>
+    <string name="s2q5">5. Estar tan inquieto que es difícil \ n quedarse quieto</string>
+    <string name="s2q6">6. Volverse fácilmente molesto o irritable</string>
+    <string name="s2q7">7. Sentir miedo como si algo terrible pudiera suceder.</string>
+    <string name="section3Header">Seccion 3</string>
+    <string name="section3Header2">En su vida, ¿alguna vez ha tenido alguna experiencia que haya sido tan aterradora, horrible o perturbadora que en el último mes usted: (Sí o No)</string>
+    <string name="s3q1">1. ¿Ha tenido pesadillas al respecto o\n pensado en ello cuando no\n quería?</string>
+    <string name="StressFormYesOrNo">Ingrese Sí o No</string>
+    <string name="s3q2">2. ¿Se esforzó por no pensar en ello o\n hizo todo lo posible para evitar situaciones\n que se lo recuerden?</string>
+    <string name="s3q3">3. ¿Estaba constantemente en guardia, alerta\n o se asustaba fácilmente?</string>
+    <string name="s3q4">4. ¿Se sintió insensible o separado de los demás,\n de sus actividades o de su entorno?</string>
+
+    <!-- Patient Info Form-->
+    <string name="infoFormHeader">Formulario de información del paciente</string>
+    <string name="infoFormBody">Tu información. Tus derechos. Nuestras responsabilidades\nEste aviso describe cómo se puede usar y divulgar su información médica y cómo puede acceder a esta información.</string>
+    <string name="yourRights">TUS DERECHOS:</string>
+    <string name="infoFormBody2">- Luego se trata de su información de salud, usted tiene ciertos derechos. Esta sección explica sus derechos y algunas de nuestras responsabilidades para ayudarlo. Pregúntenos cómo hacer esto.</string>
+    <string name="infoFormTitle">- Obtenga una copia de sus registros de salud y reclamos:</string>
+    <string name="infoFormBody3">- Puede solicitar ver u obtener una copia de sus registros médicos y de reclamos y otra información médica que tengamos sobre usted. Pregúntenos cómo hacerlo.\n- Le proporcionaremos una copia o un resumen de sus registros médicos y de reclamos, generalmente dentro de los 30 días posteriores a su solicitud. Podemos cobrar una tarifa razonable basada en el costo.</string>
+    <string name="inforFormTitle2">- Pedirnos que corrijamos registros de salud y siniestros:</string>
+    <string name="infoFormBody4">- Puede pedirnos que corrijamos sus registros médicos y de reclamos si cree que son incorrectos o están incompletos. Pregúntenos cómo hacerlo.\n- Podemos decir \'No\' a su solicitud, pero le informaremos el motivo por escrito dentro de los 60 días.</string>
+    <string name="infoFormTitle3">- Solicitar comunicaciones confidenciales:</string>
+    <string name="infoFormBody5">- Puede pedirnos que nos comuniquemos con usted de una manera específica (por ejemplo, teléfono de casa o de la oficina; este es su método de contacto "preferido") o que le enviemos un correo a una dirección diferente.\n- Consideraremos todas las solicitudes razonables y debe decir \'Sí\' si nos dice que estaría en peligro si no lo hacemos.</string>
+    <string name="infoFormTitle4">- Pedirnos que limitemos lo que usamos o compartimos:</string>
+    <string name="infoFormBody6">- Puede pedirnos que NO usemos o compartamos cierta información de salud para el tratamiento, el pago o nuestras operaciones.\n- No estamos obligados a aceptar su solicitud, y podemos decir \'No\' si afectaría su atención.</string>
+    <string name="infoFormTitle5">- Obtener una lista de aquellos con quienes hemos compartido información:</string>
+    <string name="infoFormBody7">- Puede solicitar una lista de las veces que compartimos su información de salud durante los seis años anteriores a la fecha de su solicitud, con quién la compartimos y por qué.\n- Incluiremos todas las divulgaciones excepto aquellas sobre el tratamiento, el pago y las operaciones de atención médica y ciertas otras divulgaciones (como cualquiera que nos haya pedido que hagamos) Le proporcionaremos un informe al año de forma gratuita, pero le cobraremos una tarifa razonable basada en el costo si solicita otro dentro de los 12 meses. .</string>
+    <string name="infoFormTitle6">- Obtener una copia de este aviso de privacidad:</string>
+    <string name="infoFormBody8">- Puede solicitar una copia impresa de este aviso en cualquier momento, incluso si ha aceptado recibir el aviso electrónicamente. Le proporcionaremos una copia en papel de inmediato.</string>
+    <string name="infoFormTitle7">- Elija a alguien para que actúe por usted:</string>
+    <string name="infoFormBody9">- Si le ha otorgado a alguien un poder notarial médico o si alguien es su tutor legal, esa persona puede ejercer sus derechos y tomar decisiones sobre su información de salud.\n- Nos aseguraremos de que la persona tenga esta autoridad y pueda actuar en su nombre antes tomamos cualquier acción.</string>
+    <string name="infoFormTitle8">- Presentar una denuncia si se vulneran sus derechos:</string>
+    <string name="infoFormBody10">– Puede presentar una queja si cree que hemos violado sus derechos comunicándose con nosotros utilizando la información de la página 1.\n– Puede presentar una queja ante la Oficina de Derechos Civiles del Departamento de Salud y Servicios Humanos de EE. UU. enviando una carta a 200 Independence Ave. S.O. Washington, D.C. 20201, llamando al 1–877–696-6775, o visitando www.hhs.gov/ocr/privacy/hipaa/complaints/,\n- No tomaremos represalias contra usted por presentar una queja.</string>
+    <string name="yourChoices">TUS OPCIONES:</string>
+    <string name="infoFormBody11">Para cierta información de salud, puede decirnos sus opciones sobre lo que compartimos. Si tiene una preferencia clara sobre cómo compartimos su información en las situaciones que se describen a continuación, hable con nosotros. Díganos qué quiere que hagamos y seguiremos sus instrucciones.</string>
+    <string name="infoFormTitle9">\t- En estos casos, tiene el derecho y la opción de decirnos que:</string>
+    <string name="shareInfo">\t\t- Compartir información con su familia, amigos cercanos u otras personas involucradas en el pago de su atención\n\t\t- Compartir información en una situación de socorro en caso de desastre\n\t\t- Contactarlo para los esfuerzos de recaudación de fondos</string>
+    <string name="infoFormBody12">\t- Si no puede decirnos su preferencia, por ejemplo, si está inconsciente, podemos seguir adelante y compartir su información si creemos que es lo mejor para usted. También podemos compartir su información cuando sea necesario para disminuir una amenaza grave o inminente para la salud o la seguridad.</string>
+    <string name="infoFormTitle10">\t- En estos casos, nunca compartimos su información a menos que nos dé permiso por escrito:</string>
+    <string name="marketingInfo">\t\t- Fines de marketing\n\t\t- Venta de su información</string>
+    <string name="usesAndDisclosure">NUESTROS USOS Y DIVULGACIONES:</string>
+    <string name="useAndDisclosure2">¿Cómo usamos o compartimos normalmente su información de salud? Por lo general, usamos o compartimos su información de salud de las siguientes maneras:</string>
+    <string name="manageHealthTreatment">\t- Ayudar a administrar el tratamiento de atención médica que recibe:</string>
+    <string name="manageHealth2">\t\t- Podemos usar su información de salud y compartirla con los profesionales que lo están tratando.</string>
+    <string name="org">\t- Dirige nuestra organización:</string>
+    <string name="org2">\t\t- Podemos usar y divulgar su información para administrar nuestra organización y comunicarnos con usted cuando sea necesario.</string>
+    <string name="orgExample">\t\t\t- Ejemplo: Usamos su información de salud para desarrollar mejores servicios para usted.</string>
+    <string name="geneticInfo">\t\t- No se nos permite usar información genética para decidir si le daremos cobertura y el precio de la cobertura. Esto no se aplica a los planes de atención a largo plazo.</string>
+    <string name="payForServices">\t- Pagar por sus servicios de salud:</string>
+    <string name="payServices2">\t\t- Podemos usar y divulgar su información de salud mientras pagamos por sus servicios de salud.</string>
+    <string name="payServicesEx">\t\t\t- Ejemplo: Compartimos información sobre usted con nuestro proveedor de servicios de laboratorio para coordinar el pago de su trabajo de laboratorio.</string>
+    <string name="administerPlan">\t- Administra tu plan:</string>
+    <string name="adminPlan2">\t\t- Podemos divulgar su información de salud al patrocinador de su plan de salud para la administración del plan.</string>
+    <string name="adminPlanEx">\t\t\t- Ejemplo: Su empresa tiene un contrato con nosotros para proporcionar un plan de salud, y le proporcionamos a su empresa ciertas estadísticas para explicar las primas que cobramos.</string>
+    <string name="lastHeader">¿De qué otra manera podemos usar o compartir su información de salud? Se nos permite o se nos exige que compartamos su información de otras maneras, generalmente de manera que contribuya al bien público, como la salud pública y la investigación. Debemos cumplir con muchas condiciones en la ley antes de que podamos compartir su información para estos fines. Para obtener más información, consulte: www.hhs.gov/ocr/privacy/hipaa/understanding/consumers/index.html.</string>
+
+    <!--Lab Access Form-->
+    <string name="AccessHeader">Acceso al laboratorio</string>
+    <string name="AccessBody">Parte de la información que hemos recopilado de usted es su dirección de correo electrónico. Al proporcionar su dirección de correo electrónico, recibirá una invitación para unirse a nuestro portal para pacientes de la Clínica HUDA. Una vez que se registre en el portal del paciente, tendrá acceso a todas sus visitas a HUDA, así como a sus resultados de laboratorio. Los resultados del laboratorio aparecerán en el portal como \'mensaje nuevo\'</string>
+    <string name="AccessBody2">Si desea acceder a sus notas de visita en la sección 1, seleccione:\n \'Por período\' (Todo el tiempo está seleccionado de manera predeterminada)\n\'Documentos de visitas ambulatorias\': CCDA es la arquitectura de documentos clínicos consolidados y proporciona su historial médico completo en formato XML o PDF.\nCCD es el documento de continuidad de la atención que proporciona una instantánea de su historial médico en función de las visitas, incluida la información crítica para la atención continua en formato XML solamente</string>
+    <string name="AccessBody3">Las notas de derivación se crean cuando lo derivan a otro proveedor de atención médica únicamente en formato XML. Las notas de remisión se generan DESPUÉS de su visita a HUDA para compartir sus laboratorios con su proveedor de atención primaria designado. Todas estas instrucciones también están disponibles en el Portal del paciente.</string>
+    <string name="submitBtn">Enviar</string>
 </resources>

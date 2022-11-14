@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.time.LocalDate;
@@ -19,11 +20,11 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 
-public class Announcements extends AppCompatActivity {
+public class Announcements extends AppCompatActivity implements View.OnClickListener {
 
     // web view var
     private WebView webView;
-
+    private ImageView backbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,14 @@ public class Announcements extends AppCompatActivity {
         //String googleHTML = "<iframe src=\"https://calendar.google.com/calendar/embed?src=c_tns32v5e01q5kjs1jj1rcuehao%40group.calendar.google.com&ctz=America%2FDetroit\" style=\"width=\"390\" height=\"350\"></iframe>";
         String googleHTML = "https://embed.styledcalendar.com/#my4zA7wGz2FkThs3z3eJ";
         webView.loadUrl(googleHTML);
+        backbutton = findViewById(R.id.backButton_10);
+        backbutton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.backButton_10)
+            startActivity( new Intent(this , MainApplication.class));
     }
 }
 

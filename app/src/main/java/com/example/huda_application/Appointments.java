@@ -123,7 +123,7 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
             holder.status.setText(appointment.getStatus().name().toLowerCase());
 
             holder.checkedInText.setVisibility(View.GONE);
-            if ((appointment.getStatus() != AppointmentStatus.PENDING && appointment.getStatus() != AppointmentStatus.APPROVED) || appointment.isCheckedIn()) {
+            if (appointment.getStatus() != AppointmentStatus.PENDING) {
                 holder.cancel.setVisibility(View.GONE);
             }
 
