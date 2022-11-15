@@ -344,5 +344,23 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
     <string name="AccessBody3">ریفرل نوٹس اس وقت بنائے جاتے ہیں جب آپ کو صرف دوسرے ہیلتھ کیئر پرووائیڈر XML کے پاس بھیجا جاتا ہے۔ HUDA میں آپ کے دورے کے بعد آپ کی لیبز کو آپ کے نامزد پرائمری کیئر پرووائیڈر کے ساتھ شیئر کرنے کے لیے ریفرل نوٹس تیار کیے جاتے ہیں۔ یہ تمام ہدایات پیشنٹ پورٹل پر بھی دستیاب ہیں۔</string>
     <string name="submitBtn">جمع کرائیں</string>
 
+    <!--  update Email-->
+    <string name="updateEmail">ای میل کو اپ ڈیٹ کریں۔</string>
+    <string name="headerUpdateEmail">موجودہ ای میل اور پاس ورڈ درج کریں۔</string>
+    <string name="header2UpdateEmail">نیا ای میل درج کریں۔</string>
+    <string name="enterNewEmail">نیا ای میل درج کرنا</string>
+    <string name="conNewEmail">نئے ای میل کی تصدیق کریں۔</string>
+    <string name="update">اپ ڈیٹ</string>
+
+    <!-- update Password-->
+    <string name="updatePass">پاس ورڈ اپ ڈیٹ کریں۔</string>
+    <string name="enterNewPassTitle">نیا پاس ورڈ درج کریں</string>
+
+    <!--delete user account-->
+    <string name="deleteUserHeader">کھاتہ مٹا دو</string>
+    <string name="deleteUserHeader2">اکاؤنٹ حذف کرنے کی تصدیق کریں۔</string>
+    <string name="userDeleteInput">ہاں یا نہیں درج کریں۔</string>
+    <string name="userConfirmDelete">ہاں یا نہیں کی تصدیق کریں۔</string>
+
 
 </resources>

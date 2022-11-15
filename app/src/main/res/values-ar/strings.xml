@@ -345,4 +345,22 @@
     <string name="AccessBody3">يتم إنشاء ملاحظات الإحالة عندما تتم إحالتك إلى مزود رعاية صحية آخر بتنسيق XML فقط. يتم إنشاء ملاحظات الإحالة بعد زيارتك في HUDA لمشاركة مختبراتك مع مقدم الرعاية الأولية المعين لك. كل هذه التوجيهات متاحة أيضًا على بوابة المريض.</string>
     <string name="submitBtn">يُقدِّم</string>
 
+    <!--  update Email-->
+    <string name="updateEmail">تحديث البريد الإلكتروني</string>
+    <string name="headerUpdateEmail">أدخل البريد الإلكتروني الحالي وكلمة المرور</string>
+    <string name="header2UpdateEmail">أدخل بريدًا إلكترونيًا جديدًا</string>
+    <string name="enterNewEmail">أدخل البريد الإلكتروني الجديد</string>
+    <string name="conNewEmail">تأكيد البريد الإلكتروني الجديد</string>
+    <string name="update">تحديث</string>
+
+    <!-- update Password-->
+    <string name="updatePass">تطوير كلمة السر</string>
+    <string name="enterNewPassTitle">أدخل كلمة مرور جديدة</string>
+
+    <!--delete user account-->
+    <string name="deleteUserHeader">حذف الحساب</string>
+    <string name="deleteUserHeader2">قم بتأكيد حذف الحساب</string>
+    <string name="userDeleteInput">أدخل نعم أو لا</string>
+    <string name="userConfirmDelete">أكد نعم أو لا</string>
+
 </resources>

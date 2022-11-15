@@ -168,10 +168,11 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                                     @Override
                                     public void onSuccess(Void unused)
                                     {
-                                        Toast.makeText(RegisterAccount.this,"Verification email sent",Toast.LENGTH_LONG).show(); // toast meessage to user
                                         FirebaseClient.addUser(user).addOnSuccessListener(suc->
                                         {
-                                            Toast.makeText(RegisterAccount.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
+                                            Toast.makeText(RegisterAccount.this,"Verification email sent",Toast.LENGTH_LONG).show(); // toast meessage to user
+                                            Toast.makeText(RegisterAccount.this,"Please verify your email",Toast.LENGTH_LONG).show(); // toast meessage to user
+                                            startActivity(new Intent(RegisterAccount.this,NewOrReturningUser.class));
                                         }).addOnFailureListener(er->
                                         {
                                             Toast.makeText(RegisterAccount.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
@@ -187,8 +188,6 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                                     }
                                 });
                                 UserManager.getInstance().setCurrentUser(user);
-                                Toast.makeText(RegisterAccount.this,"Task is successful",Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(RegisterAccount.this,NewOrReturningUser.class));
                             }
                             else
                             {
