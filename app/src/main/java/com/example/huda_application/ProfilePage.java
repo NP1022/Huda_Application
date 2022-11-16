@@ -67,9 +67,9 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         DOB = findViewById(R.id.et_date_of_birth);
         upload = findViewById(R.id.uploadPicture);
         profilePicture = findViewById(R.id.profile_image);
-        backbutton = findViewById(R.id.backButton_10);
         signOut = findViewById(R.id.logoutButton);
         updatePass = findViewById(R.id.updatePassword);
+        backbutton = findViewById(R.id.backButton_10);
         backbutton.setOnClickListener(this);
         signOut.setOnClickListener(this);
         updatePass.setOnClickListener(this);
@@ -194,7 +194,9 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
             UserManager.getInstance().removeCurrentUser();
             mAuth.signOut();
             startActivity(new Intent(this, MainActivity.class));
-        } 
+        } else if (v.getId() == R.id.updatePassword) {
+            startActivity(new Intent(this, updatePassword.class));
+        }
 }
 
 
