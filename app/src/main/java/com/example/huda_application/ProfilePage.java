@@ -30,9 +30,9 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
     private TextView lastName;
     private TextView DOB;
     private ImageView backbutton;
-    private Button updatePass, signOut;
+    private Button updatePass, signOut, deleteAcc;
     private FirebaseAuth mAuth;
-    private FloatingActionButton upload;
+    private FloatingActionButton updateEmail;
     //private CircleImageView profilePicture;
     private static final int PERMISSION_CODE = 1000;
     private static final int IMAGE_CAPTURE_CODE = 1001;
@@ -48,13 +48,16 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         firstName = findViewById(R.id.name);
         email = findViewById(R.id.et_email);
         DOB = findViewById(R.id.et_date_of_birth);
-//        upload = findViewById(R.id.uploadPicture);
+        updateEmail = (FloatingActionButton) findViewById(R.id.floatingEmail);
 //        profilePicture = findViewById(R.id.profile_image);
+        deleteAcc = findViewById(R.id.deleteUserButton);
         signOut = findViewById(R.id.logoutButton);
         updatePass = findViewById(R.id.updatePassword);
         backbutton = findViewById(R.id.backButton_10);
         backbutton.setOnClickListener(this);
         signOut.setOnClickListener(this);
+        deleteAcc.setOnClickListener(this);
+        updateEmail.setOnClickListener(this);
         updatePass.setOnClickListener(this);
 
         User user = UserManager.getInstance().getCurrentUser();
@@ -151,14 +154,14 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == RESULT_OK) {
-            upload.setImageURI(image_uri);
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        if (resultCode == RESULT_OK) {
+//            upload.setImageURI(image_uri);
+//        }
+//    }
 //        private void getImageFromAlbum(){
 //        try {
 //            Intent i = new Intent(Intent.ACTION_PICK,
@@ -179,9 +182,11 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
             startActivity(new Intent(this, MainActivity.class));
         } else if (v.getId() == R.id.updatePassword) {
             startActivity(new Intent(this, updatePassword.class));
+        } else if (v.getId() == R.id.floatingEmail) {
+            startActivity(new Intent(this, updateEmail.class));
+        } else if (v.getId() == R.id.deleteUserButton) {
+            startActivity(new Intent(this, deleteUserAccount.class));
         }
 }
-
-
 
 }

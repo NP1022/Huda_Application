@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profilePage"
@@ -43,16 +44,6 @@
         app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_heading">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:focusable="true"
-            android:focusableInTouchMode="true">
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -70,20 +61,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.7">
 
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="330dp"
-                    android:layout_height="55dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/edittextstyle"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="First Name"
-                    android:textAllCaps="true"
-                    android:textColor="@color/hudaBlue"
-                    android:textColorHint="#808080"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -113,22 +90,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/layout_last_name"
                 app:layout_constraintWidth_percent="0.7">
 
-                <TextView
-                    android:id="@+id/et_date_of_birth"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/edittextstyle"
-                    android:gravity="center"
-                    android:inputType="date"
-                    android:minHeight="48dp"
-                    android:padding="10dp"
-                    android:text="Date of Birth"
-                    android:textColor="@color/hudaBlue"
-                    android:textColorHint="#808080"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    tools:ignore="TouchTargetSizeCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -145,58 +106,141 @@
                 app:layout_constraintTop_toBottomOf="@+id/layout_email"
                 app:layout_constraintWidth_percent="0.7">
 
-                <TextView
-                    android:id="@+id/et_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/edittextstyle"
-                    android:gravity="center"
-                    android:inputType="textEmailAddress"
-                    android:minHeight="48dp"
-                    android:padding="10dp"
-                    android:text="Email Address"
-                    android:textAllCaps="true"
-                    android:textColor="@color/hudaBlue"
-                    android:textColorHint="#808080"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    tools:ignore="TouchTargetSizeCheck" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/updatePassword"
-                android:layout_width="330dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="69dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="70dp"
-                android:background="@drawable/buttonstyle"
-                android:text="Update Password"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.486"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout_" />
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/updateEmailButton"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="55dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:background="@drawable/buttonstyle"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/et_email"-->
+<!--        android:src="@drawable/ic_baseline_edit_24"-->
+<!--        app:fabCustomSize="40dp"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteY="307dp" />-->
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/logoutButton"
-                android:layout_width="330dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="62dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="62dp"
-                android:background="@drawable/buttonstyle"
-                android:text="@string/logout"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/updatePassword"
-                tools:ignore="SpeakableTextPresentCheck" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/deleteUserButton"
+        android:layout_width="144dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="42dp"
+        android:background="@drawable/buttonstyle"
+        android:text="DELETE ACCOUNT"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/updatePassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
-            <!--            <TextView-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/updatePassword"
+        android:layout_width="177dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/buttonstyle"
+        android:text="Change Password"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logoutButton"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="62dp"
+        android:background="@drawable/buttonstyle"
+        android:text="@string/logout"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteUserButton"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/et_email"
+        android:layout_width="260dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittextstyle"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:text="Email Address"
+        android:textAllCaps="true"
+        android:textColor="@color/hudaBlue"
+        android:textColorHint="#808080"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_date_of_birth"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/et_date_of_birth"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittextstyle"
+        android:gravity="center"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:text="Date of Birth"
+        android:textColor="@color/hudaBlue"
+        android:textColorHint="#808080"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittextstyle"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="First Name"
+        android:textAllCaps="true"
+        android:textColor="@color/hudaBlue"
+        android:textColorHint="#808080"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_heading"
+        app:layout_constraintStart_toStartOf="@+id/tv_heading"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heading" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="@color/hudaBlue"
+        android:clickable="true"
+        app:layout_constraintStart_toEndOf="@+id/et_email"
+        app:layout_constraintTop_toBottomOf="@+id/et_date_of_birth"
+        app:srcCompat="@drawable/ic_baseline_edit_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <!--            <TextView-->
             <!--                android:id="@+id/textView"-->
             <!--                android:layout_width="282dp"-->
             <!--                android:layout_height="57dp"-->
@@ -204,9 +248,5 @@
             <!--                tools:layout_editor_absoluteX="22dp"-->
             <!--                tools:layout_editor_absoluteY="202dp" />-->
 
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

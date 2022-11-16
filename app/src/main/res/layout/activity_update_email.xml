@@ -13,13 +13,22 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:id="@+id/form1"
+        android:id="@+id/updateEmail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
         android:visibility="visible"
         tools:context=".updateEmail">
 
+        <ImageView
+            android:id="@+id/backButton_10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8_back_arrow_100" />
 
         <ImageView
             android:id="@+id/hudaLogo5"

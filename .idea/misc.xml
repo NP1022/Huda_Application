@@ -3,38 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/drawable/buttonstyle.xml" value="0.154" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/drawable/roundedbutton.xml" value="0.154" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_admin_page.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_announcements.xml" value="0.17037037037037037" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_appointments.xml" value="0.25" />
-        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_appt_request.xml" value="0.24074074074074073" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_authorization_form.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_button_style.xml" value="0.30052083333333335" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_calendar_item.xml" value="0.335" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_check_in.xml" value="0.25" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_contact_us.xml" value="0.335" />
-        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_delete_user_account.xml" value="0.25" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_forgot_password.xml" value="0.2898148148148148" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_health_services.xml" value="0.1638888888888889" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_home_page.xml" value="0.21851851851851853" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_lab_access.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_main_application.xml" value="0.335" />
-        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_mental_health.xml" value="0.18958333333333333" />
-        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_new_login.xml" value="0.2466866182129115" />
-        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_our_story.xml" value="0.2466866182129115" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_our_story.xml" value="0.25" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_partners.xml" value="0.335" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patient_consent.xml" value="0.335" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patient_contract.xml" value="0.21023622047244095" />
-        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patient_form.xml" value="0.335" />
+        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patient_form.xml" value="0.24213176668065464" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patient_info_form.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_patients_page.xml" value="0.1826086956521739" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_personal_representative.xml" value="0.2296884544899206" />
-        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_profile_page.xml" value="0.2466866182129115" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_register_account.xml" value="0.30052083333333335" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_stress_form.xml" value="0.375" />
-        <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_update_password.xml" value="0.2239010989010989" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_user_appointment.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/activity_weekly_calendar.xml" value="0.25" />
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/admin_user_list_item.xml" value="0.18072916666666666" />
@@ -44,46 +39,41 @@
         <entry key="..\:/Users/ahmed/OneDrive/Documents/GitHub/Huda_Application/app/src/main/res/layout/calendaritem.xml" value="0.2984375" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2425" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_add_event.xml" value="0.25" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_admin_page.xml" value="0.128" />
+        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_admin_page.xml" value="0.15104166666666666" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_adminpanel.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_announcements.xml" value="0.2" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_appointments.xml" value="0.25" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_appt_request.xml" value="0.264" />
+        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_appt_request.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_authorization_form.xml" value="0.234375" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_available_appointments.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_button_style.xml" value="0.234375" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_calendar_item.xml" value="0.234375" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_check_in.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_contact_us.xml" value="0.24320652173913043" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_delete_user_account.xml" value="0.15677083333333333" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_dental_health.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_forgot_password.xml" value="0.11170212765957446" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_health_services.xml" value="0.2" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_home_page.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_lab_access.xml" value="0.175" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_main_application.xml" value="0.2" />
+        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_main_application.xml" value="0.264" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_mental_health.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_message_all_patients.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_message_send_page.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_messagepage.xml" value="0.25" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_new_login.xml" value="0.2" />
+        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_new_login.xml" value="0.1111111111111111" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_new_or_returning_user.xml" value="0.175" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_our_story.xml" value="0.25" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_partners.xml" value="0.1404811404811405" />
+        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_partners.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_patient_contract.xml" value="0.175" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_patient_form.xml" value="0.2" />
+        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_patient_form.xml" value="0.1" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_patient_info_form.xml" value="0.1" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_patient_messages.xml" value="0.234375" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_patients_page.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_personal_representative.xml" value="0.1" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_primary_services.xml" value="0.234375" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_profile_page.xml" value="0.15677083333333333" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_register_account.xml" value="0.264" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_specialty_health.xml" value="0.234375" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_stress_form.xml" value="0.10144927536231885" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_update_email.xml" value="0.234375" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_update_password.xml" value="0.24635416666666668" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_user_appointment.xml" value="0.1" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_vision_health.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/activity_weekly_cal.xml" value="0.25" />
@@ -91,7 +81,6 @@
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/admin_user_list_item.xml" value="0.4" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/appointment_list_item.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/appointment_user_item.xml" value="0.4" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/available_appointments_item.xml" value="0.4" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/content_main.xml" value="0.25" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/create_appointment_popup.xml" value="0.4" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/event_item.xml" value="0.25" />
@@ -103,7 +92,6 @@
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/layout/register_account.xml" value="0.1" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Huda_Application/app/src/main/res/menu/menu_main.xml" value="0.25" />
         <entry key="..\:/Users/syed_/OneDrive/Desktop/HUDA/app/src/main/res/layout/activity_authorization_form.xml" value="0.3671875" />
-        <entry key="..\:/Users/syed_/OneDrive/Desktop/HUDA/app/src/main/res/layout/activity_lab_access.xml" value="0.29030797101449274" />
         <entry key="..\:/Users/syed_/OneDrive/Desktop/HUDA/app/src/main/res/layout/activity_patient_contract.xml" value="0.32147742818057456" />
         <entry key="..\:/Users/syed_/OneDrive/Desktop/HUDA/app/src/main/res/layout/activity_patient_form.xml" value="0.15935804701627487" />
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_forgot_password.xml" value="0.2318840579710145" />
@@ -115,23 +103,49 @@
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_personal_representative.xml" value="0.2727624951569159" />
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_register_account.xml" value="0.25" />
         <entry key="..\:/Users/syed_/OneDrive/Desktop/Huda_Application/app/src/main/res/layout/activity_stress_form.xml" value="0.26992753623188404" />
-        <entry key="app/src/main/res/layout/activity_announcements.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/buttonstyle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.265" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.21213836669921876" />
+        <entry key="app/src/main/res/drawable/ic_logout.xml" value="0.1615" />
+        <entry key="app/src/main/res/drawable/ic_mail.xml" value="0.1615" />
+        <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.1955" />
+        <entry key="app/src/main/res/drawable/ic_update_password.xml" value="0.192" />
+        <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2565" />
+        <entry key="app/src/main/res/layout-v31/activity_profile_page.xml" value="0.24139492753623187" />
+        <entry key="app/src/main/res/layout/activity_announcements.xml" value="0.3330718994140625" />
         <entry key="app/src/main/res/layout/activity_check_in.xml" value="0.12639311043566362" />
         <entry key="app/src/main/res/layout/activity_contact_us.xml" value="0.37311553955078125" />
+        <entry key="app/src/main/res/layout/activity_delete_user_account.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/activity_dental_health.xml" value="0.15896739130434784" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_health_services.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20652173913043478" />
-        <entry key="app/src/main/res/layout/activity_main_application.xml" value="0.4607025146484375" />
-        <entry key="app/src/main/res/layout/activity_new_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main_application.xml" value="0.4232223510742188" />
+        <entry key="app/src/main/res/layout/activity_new_login.xml" value="0.337469482421875" />
         <entry key="app/src/main/res/layout/activity_our_story.xml" value="0.15896739130434784" />
         <entry key="app/src/main/res/layout/activity_partners.xml" value="0.2627105712890625" />
         <entry key="app/src/main/res/layout/activity_patient_form.xml" value="0.2867482092244055" />
         <entry key="app/src/main/res/layout/activity_patient_info_form.xml" value="0.2598958333333333" />
         <entry key="app/src/main/res/layout/activity_patients_page.xml" value="0.12639311043566362" />
         <entry key="app/src/main/res/layout/activity_primary_services.xml" value="0.15896739130434784" />
+        <entry key="app/src/main/res/layout/activity_profile_menu.xml" value="0.3440658569335938" />
+        <entry key="app/src/main/res/layout/activity_profile_page.xml" value="0.3112183353437877" />
         <entry key="app/src/main/res/layout/activity_register_account.xml" value="0.15896739130434784" />
+        <entry key="app/src/main/res/layout/activity_update_email.xml" value="0.24818840579710144" />
+        <entry key="app/src/main/res/layout/activity_update_password.xml" value="0.12639311043566362" />
+        <entry key="app/src/main/res/layout/app_bar_profile_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/content_profile_menu.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/menu_activity_main.xml" value="0.33958333333333335" />
+        <entry key="app/src/main/res/layout/menu_activity_main_application.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/nav_header_profile_menu.xml" value="0.33758697509765623" />
+        <entry key="app/src/main/res/layout/new_profile_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/patient_message_item.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/menu/activity_profile_menu_drawer.xml" value="0.6204722086588542" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/menu/profile_menu.xml" value="0.24947916666666667" />
       </map>
     </option>
   </component>

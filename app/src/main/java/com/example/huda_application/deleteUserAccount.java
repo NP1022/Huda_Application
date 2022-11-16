@@ -10,6 +10,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -30,6 +31,7 @@ public class deleteUserAccount extends AppCompatActivity implements View.OnClick
     FirebaseUser user;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    private ImageView backbutton;
 
     private static Pattern CONSENT_PATTERN = Pattern.compile("^(?:yes|Yes|No|no)$");
 
@@ -41,6 +43,9 @@ public class deleteUserAccount extends AppCompatActivity implements View.OnClick
 
         Button deleteUserBtn = findViewById(R.id.deleteUserButton);
         deleteUserBtn.setOnClickListener(this);
+
+        backbutton = findViewById(R.id.backButton_10);
+        backbutton.setOnClickListener(this);
     }
 
     @Override
@@ -111,6 +116,8 @@ public class deleteUserAccount extends AppCompatActivity implements View.OnClick
                 }
             }
 
+        } else if (view.getId() == R.id.backButton_10) {
+            startActivity(new Intent(this, ProfilePage.class));
         }
     }
 
