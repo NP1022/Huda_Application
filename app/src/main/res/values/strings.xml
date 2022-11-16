@@ -352,5 +352,10 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="AccessBody3">Referral Notes are created when you are referred to another healthcare provider XML only. Referral notes are generated AFTER your visit at HUDA to share your labs with your designated Primary Care Provider. All of these directions are also available on the Patient Portal.</string>
     <string name="submitBtn">Submit</string>
 
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_update_password">Update Password</string>
+    <string name="menu_messages">Messages</string>
+    <string name="menu_logout">Logout</string>
+
 
 </resources>

@@ -50,7 +50,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
 
-    private AppBarConfiguration appBarConfiguration;
+    private AppBarConfiguration appBarConfiguration, mAppBarConfiguration;
     private ActivityMainBinding binding;
     private TextView registration_button, forgot_pass, login;
     private EditText Password_Text , Email_Text;
