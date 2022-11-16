@@ -40,7 +40,7 @@
     <string name="partners">PARTNERS</string>
     <string name="contact">CONTACT US</string>
     <string name="patients_page">APPOINTMENTS</string>
-    <string name = "logout">Logout</string>
+    <string name="logout">Logout</string>
 
     <!--    New Login / Services-->
     <string name="healthservices">Free Health Services</string>
@@ -185,14 +185,14 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <!--    Primary Services Page-->
     <string name="PrimaryServicesHeader">PRIMARY SERVICES</string>
     <string name="PrimaryCarePar1">Primary care providers are typically the first line of contact for patients; treating general health concerns, providing education, medications and specialty referrals as needed.</string>
-    <string name = "HealthAssessments">Health Assessments</string>
-    <string name = "IllnessManagement">Acute and Chronic Illness Management</string>
-    <string name = "LabServices">Laboratory Services</string>
-    <string name = "NoCostPharm">No Cost Pharmacy</string>
-    <string name = "DiabetesScreening">Diabetes Screening and Treatment</string>
-    <string name = "CholBP">Cholesterol and Blood Pressure Screenings</string>
-    <string name = "HealthEd">Health Education and Resources</string>
-    <string name ="servicesInclude">SERVICES INCLUDE</string>
+    <string name="HealthAssessments">Health Assessments</string>
+    <string name="IllnessManagement">Acute and Chronic Illness Management</string>
+    <string name="LabServices">Laboratory Services</string>
+    <string name="NoCostPharm">No Cost Pharmacy</string>
+    <string name="DiabetesScreening">Diabetes Screening and Treatment</string>
+    <string name="CholBP">Cholesterol and Blood Pressure Screenings</string>
+    <string name="HealthEd">Health Education and Resources</string>
+    <string name="servicesInclude">SERVICES INCLUDE</string>
 
     <!--    Dental Health Page-->
     <string name="DentalHealthHeader">DENTAL CARE</string>
@@ -205,10 +205,10 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <!--    Vision Care Page-->
     <string name="VisionCareHeader">VISION CARE</string>
     <string name="VisionCarePar1">Vision screenings are an effective method to identify individuals with visual impairment or eye conditions that are likely to lead to vision loss. We perform screenings in-house and provide no-cost eye wear and referrals to low-cost local ophthalmologists as needed.</string>
-    <string name ="Glaucoma">Glaucoma Screenings</string>
-    <string name ="Cataract">Cataract Screenings</string>
-    <string name ="Macular">Macular Degeneration Screenings</string>
-    <string name ="EyeWear">FREE Eye-Wear</string>
+    <string name="Glaucoma">Glaucoma Screenings</string>
+    <string name="Cataract">Cataract Screenings</string>
+    <string name="Macular">Macular Degeneration Screenings</string>
+    <string name="EyeWear">FREE Eye-Wear</string>
 
     <!--    Mental Health Page-->
     <string name="MentalHealthHeader">MENTAL HEALTH</string>
@@ -223,7 +223,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
 
     <!--    Speciality Care Page-->
     <string name="SpecialtyCareHeader">SPECIALTY SERVICES</string>
-    <string name ="SpecialityCarePar1">Within the field of medicine, there are many sub-specialties when coordinating care to patients. At HUDA, we provide a range of specialty care and consultations to our patients, with the aim of expanding access to healthcare services. All specialty services require a referral from a HUDA primary care provider.</string>
+    <string name="SpecialityCarePar1">Within the field of medicine, there are many sub-specialties when coordinating care to patients. At HUDA, we provide a range of specialty care and consultations to our patients, with the aim of expanding access to healthcare services. All specialty services require a referral from a HUDA primary care provider.</string>
     <string name="PhysTherapy">Physical Therapy</string>
     <string name="Endocrinology">Endocrinology</string>
     <string name="Cardiology">Cardiology</string>
@@ -236,7 +236,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="Pulmonology">Pulmonology</string>
 
 
-<!--Announcements Page-->
+    <!--Announcements Page-->
     <string name="prevMonthButton"><![CDATA[<-]]></string>
     <string name="nextMonthButton"><![CDATA[->]]></string>
     <string name="PrevMonthButton"><![CDATA[<-]]></string>
