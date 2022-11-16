@@ -154,9 +154,9 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="ContactUsHeader">CONTACT US</string>
     <string name="ContactUsPara">HUDA, a Free Community Health Clinic\nin Metro Detroit</string>
     <string name="CallHeader">Call:</string>
-    <string name="ClinicPhone">(313) 865-8446</string>
+    <string name="ClinicPhone"><u>(313) 865-8446</u></string>
     <string name="AddressHeader">Address:</string>
-    <string name="ClinicAddress">13240 Woodrow Wilson St.\nDetroit, MI 48238</string>
+    <string name="ClinicAddress"><u>13240 Woodrow Wilson St.\nDetroit, MI 48238</u></string>
     <string name="SocialMediaHeader">Find Us On:</string>
 
     <!--    Our Story Page-->
@@ -369,5 +369,9 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="deleteUserHeader2">Confirm Account Deletion</string>
     <string name="userDeleteInput">Enter Yes or No</string>
     <string name="userConfirmDelete">Confirm Yes or No</string>
+
+    <string name="menu_update_password">Update Password</string>
+    <string name="menu_messages">Messages</string>
+    <string name="menu_logout">Logout</string>
 
 </resources>
