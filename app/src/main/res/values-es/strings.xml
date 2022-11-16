@@ -343,4 +343,23 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name="AccessBody2">Si desea acceder a sus notas de visita en la sección 1, seleccione:\n \'Por período\' (Todo el tiempo está seleccionado de manera predeterminada)\n\'Documentos de visitas ambulatorias\': CCDA es la arquitectura de documentos clínicos consolidados y proporciona su historial médico completo en formato XML o PDF.\nCCD es el documento de continuidad de la atención que proporciona una instantánea de su historial médico en función de las visitas, incluida la información crítica para la atención continua en formato XML solamente</string>
     <string name="AccessBody3">Las notas de derivación se crean cuando lo derivan a otro proveedor de atención médica únicamente en formato XML. Las notas de remisión se generan DESPUÉS de su visita a HUDA para compartir sus laboratorios con su proveedor de atención primaria designado. Todas estas instrucciones también están disponibles en el Portal del paciente.</string>
     <string name="submitBtn">Enviar</string>
+
+    <!--  update Email-->
+    <string name="updateEmail">ACTUALIZAR CORREO ELECTRÓNICO</string>
+    <string name="headerUpdateEmail">Ingrese el correo electrónico y la contraseña actuales</string>
+    <string name="header2UpdateEmail">Ingrese nuevo correo electrónico</string>
+    <string name="enterNewEmail">Ingrese nuevo correo electrónico</string>
+    <string name="conNewEmail">Confirme nuevo correo electrónico</string>
+    <string name="update">Actualizar</string>
+
+    <!-- update Password-->
+    <string name="updatePass">ACTUALIZA CONTRASEÑA</string>
+    <string name="enterNewPassTitle">Ingrese nueva clave</string>
+
+    <!--delete user account-->
+    <string name="deleteUserHeader">BORRAR CUENTA</string>
+    <string name="deleteUserHeader2">Confirmar eliminación de cuenta</string>
+    <string name="userDeleteInput">Ingrese Sí o No</string>
+    <string name="userConfirmDelete">Confirmar Sí o No</string>
+
 </resources>

@@ -345,4 +345,22 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name="AccessBody2">আপনি যদি বিভাগ 1-এ আপনার ভিজিট নোটগুলি অ্যাক্সেস করতে চান তবে আপনি নির্বাচন করবেন:\n \'সময়কালের জন্য\' (সর্বকাল ডিফল্টরূপে নির্বাচিত)\n\'বহিরাগত রোগীদের ভিজিট ডকুমেন্টস\': CCDA হল একত্রিত ক্লিনিকাল ডকুমেন্ট আর্কিটেকচার এবং প্রদান করে এক্সএমএল বা পিডিএফ ফরম্যাটে আপনার সম্পূর্ণ স্বাস্থ্য রেকর্ড।\nসিসিডি হল দ্য কন্টিনিউটি অফ কেয়ার ডকুমেন্ট যা ভিজিটের উপর ভিত্তি করে আপনার চিকিৎসা ইতিহাসের একটি স্ন্যাপশট প্রদান করে, শুধুমাত্র XML ফর্ম্যাটে অবিরত যত্নের জন্য গুরুত্বপূর্ণ তথ্য সহ</string>
     <string name="AccessBody3">রেফারেল নোট তৈরি করা হয় যখন আপনাকে শুধুমাত্র অন্য স্বাস্থ্যসেবা প্রদানকারী XML-এর কাছে রেফার করা হয়। আপনার মনোনীত প্রাথমিক যত্ন প্রদানকারীর সাথে আপনার ল্যাবগুলি ভাগ করার জন্য আপনার HUDA-তে যাওয়ার পরে রেফারেল নোট তৈরি করা হয়। এই সমস্ত নির্দেশাবলী রোগীর পোর্টালেও উপলব্ধ।</string>
     <string name="submitBtn">জমা দিন</string>
+
+    <!--  update Email-->
+    <string name="updateEmail">আপডেট ইমেল</string>
+    <string name="headerUpdateEmail">বর্তমান ইমেল এবং পাসওয়ার্ড লিখুন</string>
+    <string name="header2UpdateEmail">নতুন ইমেল লিখুন</string>
+    <string name="enterNewEmail">নতুন ইমেইল লিখুন</string>
+    <string name="conNewEmail">নতুন ইমেল নিশ্চিত করুন</string>
+    <string name="update">হালনাগাদ</string>
+
+    <!-- update Password-->
+    <string name="updatePass">পাসওয়ার্ড আপডেট করুন</string>
+    <string name="enterNewPassTitle">নতুন পাসস্বরদ দিন</string>
+
+    <!--delete user account-->
+    <string name="deleteUserHeader">হিসাব মুছে ফেলা</string>
+    <string name="deleteUserHeader2">অ্যাকাউন্ট মুছে ফেলা নিশ্চিত করুন</string>
+    <string name="userDeleteInput">হ্যাঁ বা না লিখুন</string>
+    <string name="userConfirmDelete">হ্যাঁ বা না নিশ্চিত করুন</string>
 </resources>

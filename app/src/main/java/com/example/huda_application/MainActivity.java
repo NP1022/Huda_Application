@@ -179,14 +179,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (view.getId() == R.id.login)
         {
-
             login(emailTxt, passwordTxt);
-
         }
+
         else if(view.getId() == R.id.backButton2){
             Intent Newlogin = new Intent(this ,NewLogin.class);
             startActivity(Newlogin);
-
         }
 
 

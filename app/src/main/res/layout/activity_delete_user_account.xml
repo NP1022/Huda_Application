@@ -21,6 +21,32 @@
         tools:context=".deleteUserAccount">
 
 
+        <TextView
+            android:id="@+id/registerPara2"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/headerUpdateEmail"
+            android:textColor="#5A5959"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registrationFormHeader" />
+
+        <TextView
+            android:id="@+id/registerPara3"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/deleteUserHeader2"
+            android:textColor="#5A5959"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
         <ImageView
             android:id="@+id/hudaLogo5"
             android:layout_width="100dp"
@@ -33,11 +59,11 @@
 
         <TextView
             android:id="@+id/registrationFormHeader"
-            android:layout_width="216dp"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:layout_marginTop="7dp"
-            android:text="DELETE ACCOUNT"
+            android:background="@color/white"
+            android:text="@string/deleteUserHeader"
             android:textAlignment="center"
             android:textColor="#043670"
             android:textSize="30sp"
@@ -46,34 +72,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hudaLogo5" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Enter Current Email and Password"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registrationFormHeader" />
-
-        <TextView
-            android:id="@+id/textView39"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
-            android:text="Confirm account deletion"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
-
         <EditText
             android:id="@+id/email"
             android:layout_width="330dp"
             android:layout_height="55dp"
             android:layout_centerInParent="true"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
             android:hint="@string/email"
@@ -85,7 +89,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.533"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            app:layout_constraintTop_toBottomOf="@+id/registerPara2" />
 
         <EditText
             android:id="@+id/password"
@@ -110,10 +114,10 @@
             android:layout_width="330dp"
             android:layout_height="55dp"
             android:layout_centerInParent="true"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
-            android:hint="Enter Yes or No"
+            android:hint="@string/userDeleteInput"
             android:inputType="textPassword"
             android:padding="10dp"
             android:textColor="@color/black"
@@ -121,7 +125,7 @@
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView39" />
+            app:layout_constraintTop_toBottomOf="@+id/registerPara3" />
 
         <EditText
             android:id="@+id/confirmYesOrNo"
@@ -130,7 +134,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
             android:ems="10"
-            android:hint="Confirm Yes or No"
+            android:hint="@string/userConfirmDelete"
             android:inputType="textPassword"
             android:padding="10dp"
             android:textColor="@color/black"
@@ -143,11 +147,11 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/deleteUserButton"
-            android:layout_width="wrap_content"
+            android:layout_width="330dp"
             android:layout_height="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/buttonstyle"
-            android:text="DELETE"
+            android:text="@string/update"
             android:textColor="#ffffff"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"

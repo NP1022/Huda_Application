@@ -16,11 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
-        <!--activity
-            android:name=".ProfileMenu"
-            android:exported="false"
-            android:label="@string/title_activity_profile_menu"
-            android:theme="@style/NoActionBar" /-->
         <activity
             android:name=".updateEmail"
             android:exported="false" />
@@ -82,7 +77,7 @@
             android:name=".PrimaryServices"
             android:exported="false" />
         <activity
-            android:name=".PatientForm"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".AdminPage"
@@ -104,13 +99,13 @@
             android:name=".StressForm"
             android:exported="false" />
         <activity
-            android:name=".PersonalRepresentative"
-            android:exported="false" />
-        <activity
             android:name=".AuthorizationForm"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".PatientContract"
+            android:exported="false" />
+        <activity
+            android:name=".PersonalRepresentative"
             android:exported="false" />
         <activity
             android:name=".ApptRequest"
@@ -119,7 +114,7 @@
             android:name=".PatientsPage"
             android:exported="false" />
         <activity
-            android:name=".PatientContract"
+            android:name=".PatientForm"
             android:exported="false" />
         <activity
             android:name=".HealthServices"

@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +24,8 @@ import java.util.regex.Pattern;
 public class PatientForm extends AppCompatActivity
 {
 
+    private EditText todayDate;
+    private EditText consentDate;
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
@@ -51,12 +55,80 @@ public class PatientForm extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_form);
 
         //   DAOPatient dao = new DAOPatient();
 
+        EditText todayDate = findViewById(R.id.todaysDate);
+        todayDate.addTextChangedListener(new TextWatcher() {
+            int prevL = 0;
 
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                prevL = todayDate.getText().toString().length();
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                int length = editable.length();
+                if ((prevL < length) && (length == 2 || length == 5)) {
+                    editable.append("-");
+                }
+            }
+        });
+
+        EditText patientDOB = findViewById(R.id.patientDob);
+        patientDOB.addTextChangedListener(new TextWatcher() {
+            int prevL = 0;
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                prevL = patientDOB.getText().toString().length();
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                int length = editable.length();
+                if ((prevL < length) && (length == 2 || length == 5)) {
+                    editable.append("-");
+                }
+            }
+        });
+
+        EditText consentDate = findViewById(R.id.consentDate);
+        consentDate.addTextChangedListener(new TextWatcher() {
+            int prevL = 0;
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                prevL = consentDate.getText().toString().length();
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                int length = editable.length();
+                if ((prevL < length) && (length == 2 || length == 5)) {
+                    editable.append("-");
+                }
+            }
+        });
 
         Button nextFormButton = findViewById(R.id.nextForm); // set variable for button action
         nextFormButton.setOnClickListener(new View.OnClickListener()
@@ -65,7 +137,6 @@ public class PatientForm extends AppCompatActivity
             public void onClick(View view)
             {
                 // edittext
-                final EditText todayDate = findViewById(R.id.todaysDate);
                 final EditText visitReason = findViewById(R.id.visitReason);
                 final EditText firstName = findViewById(R.id.firstName);
                 final EditText lastName = findViewById(R.id.lastName);

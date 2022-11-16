@@ -352,10 +352,22 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="AccessBody3">Referral Notes are created when you are referred to another healthcare provider XML only. Referral notes are generated AFTER your visit at HUDA to share your labs with your designated Primary Care Provider. All of these directions are also available on the Patient Portal.</string>
     <string name="submitBtn">Submit</string>
 
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="menu_update_password">Update Password</string>
-    <string name="menu_messages">Messages</string>
-    <string name="menu_logout">Logout</string>
+    <!--  update Email-->
+    <string name="updateEmail">UPDATE EMAIL</string>
+    <string name="headerUpdateEmail">Enter Current Email and Password</string>
+    <string name="header2UpdateEmail">Enter New email</string>
+    <string name="enterNewEmail">Enter New Email</string>
+    <string name="conNewEmail">Confirm New Email</string>
+    <string name="update">Update</string>
 
+    <!-- update Password-->
+    <string name="updatePass">UPDATE PASSWORD</string>
+    <string name="enterNewPassTitle">Enter New Password</string>
+
+    <!--delete user account-->
+    <string name="deleteUserHeader">DELETE ACCOUNT</string>
+    <string name="deleteUserHeader2">Confirm Account Deletion</string>
+    <string name="userDeleteInput">Enter Yes or No</string>
+    <string name="userConfirmDelete">Confirm Yes or No</string>
 
 </resources>

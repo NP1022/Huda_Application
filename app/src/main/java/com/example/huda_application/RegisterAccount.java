@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
@@ -72,6 +74,28 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
 
         DAOUser dao = new DAOUser();
 
+        EditText registerDob = findViewById(R.id.registerDob);
+        registerDob.addTextChangedListener(new TextWatcher() {
+            int prevL = 0;
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                prevL = registerDob.getText().toString().length();
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                int length = editable.length();
+                if ((prevL < length) && (length == 2 || length == 5)) {
+                    editable.append("-");
+                }
+            }
+        });
 
         Button buttonRegister = findViewById(R.id.registerButton); // set variable for button action
 
@@ -168,10 +192,11 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                                     @Override
                                     public void onSuccess(Void unused)
                                     {
-                                        Toast.makeText(RegisterAccount.this,"Verification email sent",Toast.LENGTH_LONG).show(); // toast meessage to user
                                         FirebaseClient.addUser(user).addOnSuccessListener(suc->
                                         {
-                                            Toast.makeText(RegisterAccount.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
+                                            Toast.makeText(RegisterAccount.this,"Verification email sent",Toast.LENGTH_LONG).show(); // toast meessage to user
+                                            Toast.makeText(RegisterAccount.this,"Please verify your email",Toast.LENGTH_LONG).show(); // toast meessage to user
+                                            startActivity(new Intent(RegisterAccount.this,NewOrReturningUser.class));
                                         }).addOnFailureListener(er->
                                         {
                                             Toast.makeText(RegisterAccount.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
@@ -187,8 +212,6 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                                     }
                                 });
                                 UserManager.getInstance().setCurrentUser(user);
-                                Toast.makeText(RegisterAccount.this,"Task is successful",Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(RegisterAccount.this,NewOrReturningUser.class));
                             }
                             else
                             {
