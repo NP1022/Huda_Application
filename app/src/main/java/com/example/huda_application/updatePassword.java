@@ -13,6 +13,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,6 +48,8 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
     FirebaseUser user;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    private ImageView backbutton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -57,6 +60,9 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
 
         Button updatePassBtn = findViewById(R.id.registerButton);
        updatePassBtn.setOnClickListener(this);
+
+        backbutton = findViewById(R.id.backButton_10);
+        backbutton.setOnClickListener(this);
 
     }
 
@@ -135,6 +141,8 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                     // Call method to update the password for the user
                    updatePass(emailTxt,currentPassTxt,newPassTxt);
                 }
+        } else if (view.getId() == R.id.backButton_10) {
+            startActivity(new Intent(this, ProfilePage.class));
         }
     }
 
