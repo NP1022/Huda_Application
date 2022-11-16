@@ -2,26 +2,42 @@ package com.example.huda_application;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.User;
 import com.example.huda_application.user.UserManager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-//import de.hdodenhof.circleimageview.CircleImageView;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfilePage extends AppCompatActivity implements View.OnClickListener {
     private TextView header;
@@ -33,7 +49,7 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
     private Button updatePass, signOut;
     private FirebaseAuth mAuth;
     private FloatingActionButton upload;
-    //private CircleImageView profilePicture;
+    private CircleImageView profilePicture;
     private static final int PERMISSION_CODE = 1000;
     private static final int IMAGE_CAPTURE_CODE = 1001;
 
@@ -45,11 +61,12 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_profile_page);
 
         header = findViewById(R.id.tv_heading);
-        firstName = findViewById(R.id.name);
+        firstName = findViewById(R.id.et_first_name);
+        lastName = findViewById(R.id.et_last_name);
         email = findViewById(R.id.et_email);
         DOB = findViewById(R.id.et_date_of_birth);
-//        upload = findViewById(R.id.uploadPicture);
-//        profilePicture = findViewById(R.id.profile_image);
+        upload = findViewById(R.id.uploadPicture);
+        profilePicture = findViewById(R.id.profile_image);
         signOut = findViewById(R.id.logoutButton);
         updatePass = findViewById(R.id.updatePassword);
         backbutton = findViewById(R.id.backButton_10);
@@ -59,32 +76,32 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
 
         User user = UserManager.getInstance().getCurrentUser();
         header.setText(String.format("%s", "Welcome, " + user.getFirstName() + "!"));
-        firstName.setText(String.format("%s", user.getFirstName() + " " + user.getLastName()));
-//        lastName.setText(String.format("%s", user.getLastName()));
+        firstName.setText(String.format("%s", user.getFirstName()));
+        lastName.setText(String.format("%s", user.getLastName()));
         email.setText(String.format("%s", user.getEmailAddress()));
         DOB.setText(String.format("%s", user.getBirthday()));
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser fbUser = mAuth.getCurrentUser();
 
-//        upload.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//                    if (checkSelfPermission(Manifest.permission.CAMERA) ==
-//                            PackageManager.PERMISSION_DENIED ||
-//                            checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
-//                                    PackageManager.PERMISSION_DENIED) {
-//                        String[] permission = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
-//                        requestPermissions(permission, PERMISSION_CODE);
-//                    } else {
-//                        openCamera();
-//                    }
-//                } else {
-//
-//                }
-//            }
-//        });
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (checkSelfPermission(Manifest.permission.CAMERA) ==
+                            PackageManager.PERMISSION_DENIED ||
+                            checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
+                                    PackageManager.PERMISSION_DENIED) {
+                        String[] permission = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                        requestPermissions(permission, PERMISSION_CODE);
+                    } else {
+                        openCamera();
+                    }
+                } else {
+
+                }
+            }
+        });
     }
 //        upload.setOnClickListener(new View.OnClickListener() {
 //            @Override
