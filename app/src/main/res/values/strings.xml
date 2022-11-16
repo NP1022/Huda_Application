@@ -362,7 +362,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
 
     <!-- update Password-->
     <string name="updatePass">UPDATE PASSWORD</string>
-    <string name="enterNewPassTitle">Enter New password</string>
+    <string name="enterNewPassTitle">Enter New Password</string>
 
     <!--delete user account-->
     <string name="deleteUserHeader">DELETE ACCOUNT</string>
