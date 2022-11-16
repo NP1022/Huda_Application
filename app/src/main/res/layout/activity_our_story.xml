@@ -31,7 +31,7 @@
         <TextView
             android:id="@+id/healthHeader"
             android:layout_width="217dp"
-            android:layout_height="47dp"
+            android:layout_height="55dp"
             android:layout_marginTop="7dp"
             android:background="@color/white"
             android:text="@string/OurStoryHeader"
@@ -59,7 +59,7 @@
             android:id="@+id/primaryCareInternalMedicine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-light"
             android:text="@string/History"
             android:textColor="#043670"
@@ -74,7 +74,7 @@
             android:layout_width="330dp"
             android:layout_height="162dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="180dp"
             android:layout_marginEnd="31dp"
             android:ems="10"
             android:fontFamily="sans-serif-light"
@@ -84,7 +84,7 @@
             android:textColor="#043670"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintHorizontal_bias="0.451"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/primaryCareInternalMedicine" />
 
@@ -92,7 +92,6 @@
             android:id="@+id/imageView2"
             android:layout_width="330dp"
             android:layout_height="320dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
@@ -102,8 +101,6 @@
             android:id="@+id/editTextTextMultiLine2"
             android:layout_width="330dp"
             android:layout_height="444dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="33dp"
             android:ems="10"
             android:fontFamily="sans-serif-light"
             android:gravity="start|top"
@@ -111,11 +108,19 @@
             android:text="@string/HistPara"
             android:textColor="#043670"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/imageView38"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/primaryCareInternalMedicine"
+            app:srcCompat="@drawable/history" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

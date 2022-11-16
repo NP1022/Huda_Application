@@ -10,10 +10,14 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class NewLogin extends AppCompatActivity implements View.OnClickListener {
@@ -22,11 +26,12 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
     TextView PrimaryCare_Button, MentalHealth_Button, VisionCare_Button, NewPatients_Button, DentalCare_Button, SpecialtyCare_Button;
     private Button language_Button;
     public AlertDialog menu;
+    Spinner ServicesSpinner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_login);
-
 
         login = (TextView) findViewById(R.id.LoginButton);
         signUp = (TextView) findViewById(R.id.SignUpButton);
@@ -103,19 +108,61 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
                 create_menu(options);
             }
         });
+
+        // Adding Spinner for Services menu
+//        ServicesSpinner = findViewById(R.id.servicesSpinner);
+//        ArrayList<String> ServicesArray = new ArrayList<>();
+//        ServicesArray.add("Our Services");
+//        ServicesArray.add("Primary");
+//        ServicesArray.add("Dental");
+//        ServicesArray.add("Vision");
+//        ServicesArray.add("Mental");
+//        ServicesArray.add("Specialty");
+//
+//        ArrayAdapter<String> ServicesArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ServicesArray);
+//        ServicesSpinner.setAdapter(ServicesArrayAdapter);
+//
+//        ServicesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+//        {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+//            {
+//               String Service=((TextView)view).getText().toString();
+//
+//                if(Service.equals("Primary") || Service.equals("الأولية") || Service.equals("প্রাথমিক") || Service.equals("Primaria") || Service.equals("Primaire") || Service.equals("پرائمری") )
+//                    startActivity(new Intent(view.getContext(), PrimaryServices.class));
+//
+//                if(Service.equals("Dental") || Service.equals("طب الأسنان") || Service.equals("ডেন্টাল") || Service.equals("Dental") || Service.equals("Dentaire") || Service.equals("دانتوں") )
+//                    startActivity(new Intent(view.getContext(), DentalHealth.class));
+//
+//                if(Service.equals("Vision")  || Service.equals("رؤية") || Service.equals("দৃষ্টি") || Service.equals("Visión") || Service.equals("Vision") || Service.equals("اولین مقصد"))
+//                    startActivity(new Intent(view.getContext(), VisionHealth.class));
+//
+//                if(Service.equals("Mental")  || Service.equals("رعاية نفسية") || Service.equals("মানসিক") || Service.equals("Mental") || Service.equals("Mentale") || Service.equals("ذہنی"))
+//                    startActivity(new Intent(view.getContext(), MentalHealth.class));
+//
+//                if(Service.equals("Specialty") || Service.equals("رعاية خاصة") || Service.equals("বিশেষত্ব") || Service.equals("Especialidad") || Service.equals("Spécialité") || Service.equals("خاصیت"))
+//                    startActivity(new Intent(view.getContext(), SpecialtyHealth.class));
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView <?> parent)
+//            {
+//
+//            }
+//        });
+
     }
 
-    private void picklanguage(String l) {
+    private void picklanguage(String l)
+    {
         SharedPreferences.Editor Saver = getSharedPreferences("langauge", MODE_MULTI_PROCESS).edit();
         Locale language_option =  new Locale(l);
         DisplayMetrics metrics =  getBaseContext().getResources().getDisplayMetrics();
         language_swtich(l, metrics, language_option);
 
-
         Saver.putString("prev_language" ,l);
         Saver.apply();
-
-
     }
 
     public void create_menu(AlertDialog.Builder opts){
@@ -126,7 +173,6 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
 
     public void Saved_language(){
         SharedPreferences saved_language =getSharedPreferences("langauge", MODE_MULTI_PROCESS);
-
         picklanguage(saved_language.getString("prev_language" , ""));
     }
 
