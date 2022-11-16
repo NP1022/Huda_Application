@@ -142,7 +142,7 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                    updatePass(emailTxt,currentPassTxt,newPassTxt);
                 }
         } else if (view.getId() == R.id.backButton_10) {
-            startActivity(new Intent(this, MainApplication.class));
+            startActivity(new Intent(this, ProfilePage.class));
         }
     }
 
