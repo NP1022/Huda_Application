@@ -4,6 +4,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -123,6 +125,30 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
         reason.setOnClickListener(this);
 
         checkin.setOnClickListener(this);
+
+        EditText birthday = findViewById(R.id.birthday);
+        birthday.addTextChangedListener(new TextWatcher() {
+            int prevL = 0;
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                prevL = birthday.getText().toString().length();
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                int length = editable.length();
+                if ((prevL < length) && (length == 2 || length == 5)) {
+                    editable.append("-");
+                }
+            }
+        });
+
     }
 
     public void create_menu(AlertDialog.Builder opts) {

@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -26,11 +28,9 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
     private static Pattern LETTERS_PATTERN = Pattern.compile("^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$"); // Letters pattern match
 
 
-
-
     //  private PatientFormData data;
     private TextView AuthorizationForm;
-
+    private EditText consentDateSign2;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -46,6 +46,28 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
         // Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
         AuthorizationForm = (Button) findViewById(R.id.nextForm2);
         AuthorizationForm.setOnClickListener(this);
+        consentDateSign2 = findViewById(R.id.consentFormDate2);
+        consentDateSign2.addTextChangedListener(new TextWatcher() {
+            int prevL = 0;
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                prevL = consentDateSign2.getText().toString().length();
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                int length = editable.length();
+                if ((prevL < length) && (length == 2 || length == 5)) {
+                    editable.append("-");
+                }
+            }
+        });
     }
 
     @Override
@@ -55,7 +77,7 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
         {
             final EditText patientSigned2 = findViewById(R.id.patientNamePrinted2);
             final EditText patientSig2 = findViewById(R.id.patientNameSignature2);
-            final EditText consentDateSign2 = findViewById(R.id.consentFormDate2);
+
 
             final String patientSignedText2 = patientSigned2.getText().toString().trim();
             final String patientSignatureText2 = patientSig2.getText().toString().trim();

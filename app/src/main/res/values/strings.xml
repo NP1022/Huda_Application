@@ -355,18 +355,18 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <!--  update Email-->
     <string name="updateEmail">UPDATE EMAIL</string>
     <string name="headerUpdateEmail">Enter Current Email and Password</string>
-    <string name="header2UpdateEmail">Enter new email</string>
-    <string name="enterNewEmail">Enter new Email</string>
-    <string name="conNewEmail">Confirm new Email</string>
+    <string name="header2UpdateEmail">Enter New email</string>
+    <string name="enterNewEmail">Enter New Email</string>
+    <string name="conNewEmail">Confirm New Email</string>
     <string name="update">Update</string>
 
     <!-- update Password-->
     <string name="updatePass">UPDATE PASSWORD</string>
-    <string name="enterNewPassTitle">Enter new password</string>
+    <string name="enterNewPassTitle">Enter New password</string>
 
     <!--delete user account-->
     <string name="deleteUserHeader">DELETE ACCOUNT</string>
-    <string name="deleteUserHeader2">Confirm account deletion</string>
+    <string name="deleteUserHeader2">Confirm Account Deletion</string>
     <string name="userDeleteInput">Enter Yes or No</string>
     <string name="userConfirmDelete">Confirm Yes or No</string>
 

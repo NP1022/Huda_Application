@@ -133,6 +133,7 @@
             android:ems="10"
             android:hint="@string/Date"
             android:inputType="text"
+            android:maxLength="10"
             android:padding="15dp"
             android:textColor="@color/black"
             android:textColorHint="#686868"
