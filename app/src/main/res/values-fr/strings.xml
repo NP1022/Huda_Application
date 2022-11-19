@@ -45,11 +45,11 @@
 
 <!--    Services-->
     <string name="healthservices">Services de Santé Gratuits</string>
-    <string name="PrimaryNewLogin"><u>Primaire</u></string>
-    <string name="MentalNewLogin"><u>Mentale</u></string>
-    <string name="VisionNewLogin"><u>Vision</u></string>
-    <string name="DentalNewLogin"><u>Dentaire</u></string>
-    <string name="SpecialityNewLogin"><u>Spécialité</u></string>
+    <string name="PrimaryNewLogin">Primaire</string>
+    <string name="MentalNewLogin">Mentale</string>
+    <string name="VisionNewLogin">Vision</string>
+    <string name="DentalNewLogin">Dentaire</string>
+    <string name="SpecialityNewLogin">Spécialité</string>
     <string name="HaveAnAccount">Avoir un compte?</string>
     <string name="DontHaveAnAccount">Vous n\'avez pas de compte?</string>
     <string name="SignUp">S\'inscrire?</string>

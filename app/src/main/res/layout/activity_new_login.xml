@@ -9,15 +9,19 @@
 
     <TextView
         android:id="@+id/DentalHeader"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/servicebuttonstyle"
+        android:minWidth="140dp"
+        android:padding="10dp"
+        android:paddingTop="10dp"
         android:text="@string/DentalNewLogin"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/hudaBlue"
         android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/VisionHeader"
+        android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@+id/PrimaryHeader"
         app:layout_constraintTop_toBottomOf="@+id/profileIcon" />
 
@@ -42,70 +46,78 @@
 
     <TextView
         android:id="@+id/PrimaryHeader"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/servicebuttonstyle"
+        android:minWidth="140dp"
+        android:padding="10dp"
         android:text="@string/PrimaryNewLogin"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/hudaBlue"
         android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/DentalHeader"
+        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileIcon" />
 
     <TextView
         android:id="@+id/MentalHeader"
-        android:layout_width="110dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/servicebuttonstyle"
+        android:minWidth="140dp"
+        android:padding="10dp"
         android:text="@string/MentalNewLogin"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/hudaBlue"
         android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/SpecialtyHeader"
+        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DentalHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/PrimaryHeader" />
 
     <TextView
         android:id="@+id/SpecialtyHeader"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/servicebuttonstyle"
+        android:minWidth="140dp"
+        android:padding="10dp"
         android:text="@string/SpecialityNewLogin"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/hudaBlue"
         android:textSize="22sp"
-        android:textStyle="bold"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/MentalHeader"
-        app:layout_constraintTop_toBottomOf="@+id/DentalHeader" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MentalHeader" />
 
     <TextView
         android:id="@+id/VisionHeader"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/servicebuttonstyle"
+        android:minWidth="140dp"
+        android:padding="10dp"
         android:text="@string/VisionNewLogin"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/hudaBlue"
         android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/DentalHeader"
-        app:layout_constraintTop_toBottomOf="@+id/profileIcon" />
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/MentalHeader"
+        app:layout_constraintTop_toBottomOf="@+id/DentalHeader" />
 
     <TextView
         android:id="@+id/HaveAnAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="138dp"
         android:text="@string/HaveAnAccount"
         android:textAlignment="center"
         android:textColor="@color/hudaBlue"
@@ -113,7 +125,7 @@
         android:textStyle="normal"
         app:layout_constraintEnd_toStartOf="@+id/LoginButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MentalHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/SpecialtyHeader" />
 
     <TextView
         android:id="@+id/DoNotHaveAnAccount"
@@ -134,7 +146,7 @@
         android:id="@+id/LoginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="138dp"
         android:layout_marginEnd="90dp"
         android:text="@string/Login"
         android:textAlignment="center"
@@ -148,7 +160,7 @@
 
     <TextView
         android:id="@+id/SignUpButton"
-        android:layout_width="74dp"
+        android:layout_width="wrap_content"
         android:layout_height="29dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="60dp"
@@ -174,14 +186,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/huda_logo" />
 
-<!--    <Spinner-->
-<!--        android:id="@+id/servicesSpinner"-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="55dp"-->
-<!--        android:layout_marginTop="23dp"-->
-<!--        android:background="@drawable/edittextstyle"-->
-<!--        android:textAlignment="center"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/MentalHeader" />-->
+    <!--    <Spinner-->
+    <!--        android:id="@+id/servicesSpinner"-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="55dp"-->
+    <!--        android:layout_marginTop="23dp"-->
+    <!--        android:background="@drawable/edittextstyle"-->
+    <!--        android:textAlignment="center"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/MentalHeader" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

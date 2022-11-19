@@ -44,11 +44,11 @@
 
 <!--    Services -->
     <string name="healthservices">Servicios de salud gratuitos</string>
-    <string name="PrimaryNewLogin"><u>Primaria</u></string>
-    <string name="MentalNewLogin"><u>Mental</u></string>
-    <string name="VisionNewLogin"><u>Visión</u></string>
-    <string name="DentalNewLogin"><u>Dental</u></string>
-    <string name="SpecialityNewLogin"><u>Especialidad</u></string>
+    <string name="PrimaryNewLogin">Primaria</string>
+    <string name="MentalNewLogin">Mental</string>
+    <string name="VisionNewLogin">Visión</string>
+    <string name="DentalNewLogin">Dental</string>
+    <string name="SpecialityNewLogin">Especialidad</string>
     <string name="HaveAnAccount">¿Tener una cuenta?</string>
     <string name="DontHaveAnAccount">¿No tienes una cuenta?</string>
     <string name="SignUp">Inscribirse</string>

@@ -44,11 +44,11 @@
 
     <!--    New Login / Services-->
     <string name="healthservices">Free Health Services</string>
-    <string name="PrimaryNewLogin"><u>PRIMARY</u></string>
-    <string name="MentalNewLogin"><u>MENTAL</u></string>
-    <string name="VisionNewLogin"><u>VISION</u></string>
-    <string name="DentalNewLogin"><u>DENTAL</u></string>
-    <string name="SpecialityNewLogin"><u>SPECIALTY</u></string>
+    <string name="PrimaryNewLogin">PRIMARY</string>
+    <string name="MentalNewLogin">MENTAL</string>
+    <string name="VisionNewLogin">VISION</string>
+    <string name="DentalNewLogin">DENTAL</string>
+    <string name="SpecialityNewLogin">SPECIALTY</string>
     <string name="HaveAnAccount">Have An Account?</string>
     <string name="DontHaveAnAccount">Don\'t Have An Account?</string>
     <string name="SignUp">Sign Up</string>
@@ -370,8 +370,8 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="userDeleteInput">Enter Yes or No</string>
     <string name="userConfirmDelete">Confirm Yes or No</string>
 
-    <string name="menu_update_password">Update Password</string>
-    <string name="menu_messages">Messages</string>
-    <string name="menu_logout">Logout</string>
+<!--    <string name="menu_update_password">Update Password</string>-->
+<!--    <string name="menu_messages">Messages</string>-->
+<!--    <string name="menu_logout">Logout</string>-->
 
 </resources>

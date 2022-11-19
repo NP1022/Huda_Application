@@ -44,11 +44,11 @@
 
 
     <string name="healthservices">مفت صحت کی خدمات</string>
-    <string name="PrimaryNewLogin"><u>پرائمری</u></string>
-    <string name="MentalNewLogin"><u>ذہنی</u></string>
-    <string name="VisionNewLogin"><u>اولین مقصد</u></string>
-    <string name="DentalNewLogin"><u>دانتوں</u></string>
-    <string name="SpecialityNewLogin"><u>خاصیت</u></string>
+    <string name="PrimaryNewLogin">پرائمری</string>
+    <string name="MentalNewLogin">ذہنی</string>
+    <string name="VisionNewLogin">اولین مقصد</string>
+    <string name="DentalNewLogin">دانتوں</string>
+    <string name="SpecialityNewLogin">خاصیت</string>
     <string name="HaveAnAccount">ایک اکاؤنٹ ہے؟</string>
     <string name="DontHaveAnAccount">کھاتہ نہیں ہے کیا؟</string>
     <string name="SignUp">سائن اپ</string>

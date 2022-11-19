@@ -31,6 +31,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainApplication extends AppCompatActivity implements View.OnClickListener {
 
@@ -98,6 +99,8 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
                 }
             });
         }
+
+
 
 //        binding = ActivityMainApplicationBinding.inflate(getLayoutInflater());
 //        setContentView(binding.getRoot());

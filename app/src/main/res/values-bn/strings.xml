@@ -44,14 +44,14 @@
 
 <!--    Health Services-->
     <string name="healthservices">বিনামূল্যে স্বাস্থ্য সেবা</string>
-    <string name="PrimaryNewLogin"><u>প্রাথমিক</u></string>
-    <string name="MentalNewLogin"><u>মানসিক</u></string>
-    <string name="VisionNewLogin"><u>দৃষ্টি</u></string>
-    <string name="DentalNewLogin"><u>ডেন্টাল</u></string>
-    <string name="SpecialityNewLogin"><u>বিশেষত্ব</u></string>
+    <string name="PrimaryNewLogin">প্রাথমিক</string>
+    <string name="MentalNewLogin">মানসিক</string>
+    <string name="VisionNewLogin">দৃষ্টি</string>
+    <string name="DentalNewLogin">ডেন্টাল</string>
+    <string name="SpecialityNewLogin">বিশেষত্ব</string>
     <string name="HaveAnAccount">একাউন্ট আছে?</string>
-    <string name="DontHaveAnAccount">একটি একাউন্ট আছে কি না?</string>
-    <string name="SignUp">একটি একাউন্ট আছে কি না?</string>
+    <string name="DontHaveAnAccount">আছে কি না?</string>
+    <string name="SignUp">আছে কি না?</string>
     <string name="PrimaryCare">প্রাথমিক যত্ন</string>
     <string name="MentalCare">মানসিক যত্ন</string>
     <string name="VisionHealth">ভিশন কেয়ার</string>
