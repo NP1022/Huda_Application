@@ -49,7 +49,7 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         email = findViewById(R.id.et_email);
         DOB = findViewById(R.id.et_date_of_birth);
         updateEmail = (FloatingActionButton) findViewById(R.id.floatingEmail);
-//        profilePicture = findViewById(R.id.profile_image);
+        // profilePicture = findViewById(R.id.profile_image);
         deleteAcc = findViewById(R.id.deleteUserButton);
         signOut = findViewById(R.id.logoutButton);
         updatePass = findViewById(R.id.updatePassword);
@@ -63,7 +63,7 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         User user = UserManager.getInstance().getCurrentUser();
         header.setText(String.format("%s", "Welcome, " + user.getFirstName() + "!"));
         firstName.setText(String.format("%s", user.getFirstName() + " " + user.getLastName()));
-//        lastName.setText(String.format("%s", user.getLastName()));
+       lastName.setText(String.format("%s", user.getLastName()));
         email.setText(String.format("%s", user.getEmailAddress()));
         DOB.setText(String.format("%s", user.getBirthday()));
 
