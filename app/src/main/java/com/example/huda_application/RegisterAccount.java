@@ -171,9 +171,11 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
 //                    DOb.setError("Date format is required");
 //                    DOb.requestFocus();
 //                }
+
                 else
                 {
                     User user = new User(firstNameTxt,lastNameTxt,emailTxt,dob, UserType.PATIENT);
+
 
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();
                     mAuth.createUserWithEmailAndPassword(emailTxt,passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>()
@@ -196,7 +198,8 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                                         {
                                             Toast.makeText(RegisterAccount.this,"Verification email sent",Toast.LENGTH_LONG).show(); // toast meessage to user
                                             Toast.makeText(RegisterAccount.this,"Please verify your email",Toast.LENGTH_LONG).show(); // toast meessage to user
-                                            startActivity(new Intent(RegisterAccount.this,NewOrReturningUser.class));
+
+                                            startActivity(new Intent(RegisterAccount.this,MainActivity.class));
                                         }).addOnFailureListener(er->
                                         {
                                             Toast.makeText(RegisterAccount.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
