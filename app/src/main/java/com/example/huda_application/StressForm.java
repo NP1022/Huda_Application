@@ -105,135 +105,262 @@ public class StressForm extends AppCompatActivity
                 final String s1TotalsText = s1Totals.getText().toString().trim();
                 final String s2TotalsText = s2Totals.getText().toString().trim();
 
-                if(TextUtils.isEmpty(q1s1Text) || !RANGE_PATTERN.matcher(q1s1Text).matches())
+                if(TextUtils.isEmpty(q1s1Text))
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q1s1.setError("Input is required");
+                    q1s1.setError("Input cannot be empty");
                     q1s1.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q2s1Text) || !RANGE_PATTERN.matcher(q2s1Text).matches())
+                else if(!RANGE_PATTERN.matcher(q1s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q2s1.setError("Input is required");
+                    q1s1.setError("Input must be 0,1,2,3");
+                    q1s1.requestFocus();
+                }
+                else if(TextUtils.isEmpty(q2s1Text))
+                {
+                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    q2s1.setError("Valid input is required");
                     q2s1.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q3s1Text) || !RANGE_PATTERN.matcher(q3s1Text).matches())
+                else if(!RANGE_PATTERN.matcher(q2s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q3s1.setError("Input is required");
+                    q2s1.setError("Input must be 0,1,2,3");
+                    q2s1.requestFocus();
+                }
+                else if(TextUtils.isEmpty(q3s1Text))
+                {
+                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    q3s1.setError("Valid input is required");
                     q3s1.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q4s1Text) || !RANGE_PATTERN.matcher(q4s1Text).matches())
+                else if(!RANGE_PATTERN.matcher(q3s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q4s1.setError("Input is required");
+                    q3s1.setError("Input must be 0,1,2,3");
+                    q3s1.requestFocus();
+                }
+                else if(TextUtils.isEmpty(q4s1Text))
+                {
+                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    q4s1.setError("Valid input is required");
                     q4s1.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q5s1Text) || !RANGE_PATTERN.matcher(q5s1Text).matches())
+                else if(!RANGE_PATTERN.matcher(q4s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q5s1.setError("Input is required");
+                    q4s1.setError("Input must be 0,1,2,3");
+                    q4s1.requestFocus();
+                }
+                else if(TextUtils.isEmpty(q5s1Text))
+                {
+                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    q5s1.setError("Valid input is required");
                     q5s1.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q6s1Text) || !RANGE_PATTERN.matcher(q6s1Text).matches())
+                else if(!RANGE_PATTERN.matcher(q5s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q6s1.setError("Input is required");
+                    q5s1.setError("Input must be 0,1,2,3");
+                    q5s1.requestFocus();
+                }
+                else if(TextUtils.isEmpty(q6s1Text))
+                {
+                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    q6s1.setError("Valid input is required");
                     q6s1.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q7s1Text) || !RANGE_PATTERN.matcher(q7s1Text).matches())
+                else if(!RANGE_PATTERN.matcher(q6s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q7s1.setError("Input is required");
+                    q6s1.setError("Input must be 0,1,2,3");
+                    q6s1.requestFocus();
+                }
+                else if(TextUtils.isEmpty(q7s1Text))
+                {
+                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    q7s1.setError("Valid input is required");
                     q7s1.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q8s1Text) || !RANGE_PATTERN.matcher(q8s1Text).matches())
+                else if(!RANGE_PATTERN.matcher(q7s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q8s1.setError("Input is required");
+                    q7s1.setError("Input must be 0,1,2,3");
+                    q7s1.requestFocus();
+                }
+                else if(TextUtils.isEmpty(q8s1Text))
+                {
+                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    q8s1.setError("Valid input is required");
                     q8s1.requestFocus();
                 }
-                 else if(TextUtils.isEmpty(s1TotalsText) || !SUM_PATTERN.matcher(s1TotalsText).matches())
+                else if(!RANGE_PATTERN.matcher(q8s1Text).matches())
                 {
-                    Toast.makeText(StressForm.this,"Must be an accurate number",Toast.LENGTH_LONG).show();
-                    s1Totals.setError("Number is required");
+                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    q8s1.setError("Input must be 0,1,2,3");
+                    q8s1.requestFocus();
+                }
+                 else if(TextUtils.isEmpty(s1TotalsText))
+                {
+                    Toast.makeText(StressForm.this,"Total cannot be empty",Toast.LENGTH_LONG).show();
+                    s1Totals.setError("Total is required");
                     s1Totals.requestFocus();
+                }
+                 else if (!SUM_PATTERN.matcher(s1TotalsText).matches())
+                 {
+                     Toast.makeText(StressForm.this,"Total cannot be empty",Toast.LENGTH_LONG).show();
+                     s1Totals.setError("Total is required");
+                     s1Totals.requestFocus();
                 }
 
 
                 // section 2 inputs
-                else if(TextUtils.isEmpty(q1s2Text) || !RANGE_PATTERN.matcher(q1s2Text).matches())
+                else if (TextUtils.isEmpty(q1s2Text))
                 {
-                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q1s2.setError("Input is required");
+                    Toast.makeText(StressForm.this, "Must be 0,1,2 or 3", Toast.LENGTH_LONG).show();
+                    q1s2.setError("Valid input is required");
                     q1s2.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q2s2Text) || !RANGE_PATTERN.matcher(q2s2Text).matches())
+                else if(!RANGE_PATTERN.matcher(q1s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q2s2.setError("Input is required");
+                    q1s2.setError("Input must be 0,1,2,3");
+                    q1s2.requestFocus();
+                }
+                else if (TextUtils.isEmpty(q2s2Text))
+                {
+                    Toast.makeText(StressForm.this, "Must be 0,1,2 or 3", Toast.LENGTH_LONG).show();
+                    q2s2.setError("Valid input is required");
                     q2s2.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q3s2Text) || !RANGE_PATTERN.matcher(q3s2Text).matches())
+                else if(!RANGE_PATTERN.matcher(q2s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q3s2.setError("Input is required");
+                    q2s2.setError("Input must be 0,1,2,3");
+                    q2s2.requestFocus();
+                }
+                else if (TextUtils.isEmpty(q3s2Text))
+                {
+                    Toast.makeText(StressForm.this, "Must be 0,1,2 or 3", Toast.LENGTH_LONG).show();
+                    q3s2.setError("Valid input is required");
                     q3s2.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q4s2Text) || !RANGE_PATTERN.matcher(q4s2Text).matches())
+                else if(!RANGE_PATTERN.matcher(q3s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q4s2.setError("Input is required");
+                    q3s2.setError("Input must be 0,1,2,3");
+                    q3s2.requestFocus();
+                }
+                else if (TextUtils.isEmpty(q4s2Text))
+                {
+                    Toast.makeText(StressForm.this, "Must be 0,1,2 or 3", Toast.LENGTH_LONG).show();
+                    q4s2.setError("Valid input is required");
                     q4s2.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q5s2Text) || !RANGE_PATTERN.matcher(q5s2Text).matches())
+                else if(!RANGE_PATTERN.matcher(q4s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q5s2.setError("Input is required");
+                    q4s2.setError("Input must be 0,1,2,3");
+                    q4s2.requestFocus();
+                }
+                else if (TextUtils.isEmpty(q5s2Text))
+                {
+                    Toast.makeText(StressForm.this, "Must be 0,1,2 or 3", Toast.LENGTH_LONG).show();
+                    q5s2.setError("Valid input is required");
                     q5s2.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q6s2Text) || !RANGE_PATTERN.matcher(q6s2Text).matches())
+                else if(!RANGE_PATTERN.matcher(q5s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q6s2.setError("Input is required");
+                    q5s2.setError("Input must be 0,1,2,3");
+                    q5s2.requestFocus();
+                }
+                else if (TextUtils.isEmpty(q6s2Text))
+                {
+                    Toast.makeText(StressForm.this, "Must be 0,1,2 or 3", Toast.LENGTH_LONG).show();
+                    q6s2.setError("Valid input is required");
                     q6s2.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q7s2Text) || !RANGE_PATTERN.matcher(q7s2Text).matches())
+                else if(!RANGE_PATTERN.matcher(q6s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q7s2.setError("Input is required");
+                    q6s2.setError("Input must be 0,1,2,3");
+                    q6s2.requestFocus();
+                }
+                else if (TextUtils.isEmpty(q7s2Text))
+                {
+                    Toast.makeText(StressForm.this, "Must be 0,1,2 or 3", Toast.LENGTH_LONG).show();
+                    q7s2.setError("Valid input is required");
                     q7s2.requestFocus();
                 }
-                else if(TextUtils.isEmpty(s1TotalsText) || !SUM_PATTERN.matcher(s2TotalsText).matches())
+                else if(!RANGE_PATTERN.matcher(q7s2Text).matches())
                 {
-                    Toast.makeText(StressForm.this,"Must be an accurate number",Toast.LENGTH_LONG).show();
+                    Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
+                    q7s2.setError("Input must be 0,1,2,3");
+                    q7s2.requestFocus();
+                }
+                else if (TextUtils.isEmpty(s2TotalsText))
+                {
+                    Toast.makeText(StressForm.this, "Must be an accurate number", Toast.LENGTH_LONG).show();
                     s2Totals.setError("Number is required");
                     s2Totals.requestFocus();
                 }
+                else if (!SUM_PATTERN.matcher(s2TotalsText).matches())
+                {
+                    Toast.makeText(StressForm.this,"Total cannot be empty",Toast.LENGTH_LONG).show();
+                    s2Totals.setError("Total is required");
+                    s2Totals.requestFocus();
+                }
+
 
                 //section 3 inputs
-                else if(TextUtils.isEmpty(q1s3Text) || !RESPONSE_PATTERN.matcher(q1s3Text).matches())
+                else if (TextUtils.isEmpty(q1s3Text))
                 {
-                    Toast.makeText(StressForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
+                    Toast.makeText(StressForm.this, "Response cannot be empty", Toast.LENGTH_LONG).show();
                     q1s3.setError("Input is required");
                     q1s3.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q2s3Text) || !RESPONSE_PATTERN.matcher(q2s3Text).matches())
+                else if(!RESPONSE_PATTERN.matcher(q1s3Text).matches())
                 {
-                    Toast.makeText(StressForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
-                    q2s3.setError("Input is required");
+                    Toast.makeText(StressForm.this, "Must be Yes or No", Toast.LENGTH_LONG).show();
+                    q1s3.setError("Input must be Yes or No");
+                    q1s3.requestFocus();
+                }
+                else if (TextUtils.isEmpty(q2s3Text))
+                {
+                    Toast.makeText(StressForm.this, "Response cannot be empty", Toast.LENGTH_LONG).show();
+                    q2s3.setError("Valid input is required");
                     q2s3.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q3s3Text) || !RESPONSE_PATTERN.matcher(q3s3Text).matches())
+                else if(!RESPONSE_PATTERN.matcher(q2s3Text).matches())
                 {
-                    Toast.makeText(StressForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
-                    q3s3.setError("Input is required");
+                    Toast.makeText(StressForm.this, "Must be Yes or No", Toast.LENGTH_LONG).show();
+                    q2s3.setError("Input must be Yes or No");
+                    q2s3.requestFocus();
+                }
+                else if (TextUtils.isEmpty(q3s3Text))
+                {
+                    Toast.makeText(StressForm.this, "Response cannot be empty", Toast.LENGTH_LONG).show();
+                    q3s3.setError("Valid input is required");
                     q3s3.requestFocus();
                 }
-                else if(TextUtils.isEmpty(q4s3Text) || !RESPONSE_PATTERN.matcher(q4s3Text).matches())
+                else if(!RESPONSE_PATTERN.matcher(q3s3Text).matches())
                 {
-                    Toast.makeText(StressForm.this,"Must be Yes or No",Toast.LENGTH_LONG).show();
-                    q4s3.setError("Input is required");
+                    Toast.makeText(StressForm.this, "Must be Yes or No", Toast.LENGTH_LONG).show();
+                    q3s3.setError("Input must be Yes or No");
+                    q3s3.requestFocus();
+                }
+                else if (TextUtils.isEmpty(q4s3Text))
+                {
+                    Toast.makeText(StressForm.this, "Response cannot be empty", Toast.LENGTH_LONG).show();
+                    q4s3.setError("Valid input is required");
+                    q4s3.requestFocus();
+                }
+                else if(!RESPONSE_PATTERN.matcher(q4s3Text).matches())
+                {
+                    Toast.makeText(StressForm.this, "Must be Yes or No", Toast.LENGTH_LONG).show();
+                    q4s3.setError("Input must be Yes or No");
                     q4s3.requestFocus();
                 }
                 else
@@ -261,9 +388,9 @@ public class StressForm extends AppCompatActivity
                     data.setQuestion2Section3Form5(q2s3Text);
                     data.setQuestion3Section3Form5(q3s3Text);
                     data.setQuestion4Section3Form5(q4s3Text);
-                    
+
                     Intent PatientInfoForm = new Intent(StressForm.this, PatientInfoForm.class);
-                    PatientInfoForm.putExtra("patientdata",data);
+                    PatientInfoForm.putExtra("patientdata", data);
                     startActivity(PatientInfoForm);
 
                 }

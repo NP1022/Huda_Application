@@ -196,13 +196,13 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             else if(TextUtils.isEmpty(patientHomeNumberTxt4))
             {
                 Toast.makeText(PersonalRepresentative.this, "Number cannot be empty", Toast.LENGTH_LONG).show();
-                patientHomeNumber.setError("Number is required");
+                patientHomeNumber.setError("Phone number is required");
                 patientHomeNumber.requestFocus();
             }
             else if(!PHONE_PATTERN.matcher(patientHomeNumberTxt4).matches())
             {
                 Toast.makeText(PersonalRepresentative.this, "Number must be 123-123-1234", Toast.LENGTH_LONG).show();
-                patientHomeNumber.setError("Number format is required");
+                patientHomeNumber.setError("Phone number format is required");
                 patientHomeNumber.requestFocus();
             }
             else if(TextUtils.isEmpty(personRep1Txt) || personRep1Txt.length() > 20) // First Representative
@@ -219,8 +219,8 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             }
             else if(TextUtils.isEmpty(patientRelation1Txt) || patientRelation1Txt.length() > 20)
             {
-                Toast.makeText(PersonalRepresentative.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
-                patientRelation1.setError("Name is required");
+                Toast.makeText(PersonalRepresentative.this, "Relationship cannot be empty", Toast.LENGTH_LONG).show();
+                patientRelation1.setError("Relationship is required");
                 patientRelation1.requestFocus();
             }
             else if(!LETTERS_PATTERN.matcher(patientRelation1Txt).matches())
@@ -232,13 +232,13 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             else if(TextUtils.isEmpty(patientRelationContact1Txt))
             {
                 Toast.makeText(PersonalRepresentative.this, "Number cannot be empty", Toast.LENGTH_LONG).show();
-                patientRelationContact1.setError("Number is required");
+                patientRelationContact1.setError("Phone number is required");
                 patientRelationContact1.requestFocus();
             }
             else if(!PHONE_PATTERN.matcher(patientRelationContact1Txt).matches())
             {
                 Toast.makeText(PersonalRepresentative.this, "Number must be 123-123-1234", Toast.LENGTH_LONG).show();
-                patientRelationContact1.setError("Number format is required");
+                patientRelationContact1.setError("Phone number format is required");
                 patientRelationContact1.requestFocus();
             }
             else if(TextUtils.isEmpty(personRep2Txt) || personRep2Txt.length() > 20) // 2nd Representative
@@ -250,13 +250,13 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             else if(!LETTERS_PATTERN.matcher(personRep2Txt).matches())
             {
                 Toast.makeText(PersonalRepresentative.this, "Relation must contain only letters", Toast.LENGTH_LONG).show();
-                personalRep2.setError("Relation format is required");
+                personalRep2.setError("Name format is required");
                 personalRep2.requestFocus();
             }
             else if(TextUtils.isEmpty(patientRelation2Txt) || patientRelation2Txt.length() > 20)
             {
-                Toast.makeText(PersonalRepresentative.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
-                patientRelation2.setError("Name is required");
+                Toast.makeText(PersonalRepresentative.this, "Relationship cannot be empty", Toast.LENGTH_LONG).show();
+                patientRelation2.setError("Relationship is required");
                 patientRelation2.requestFocus();
             }
             else if(!LETTERS_PATTERN.matcher(patientRelation2Txt).matches())
@@ -268,13 +268,13 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             else if(TextUtils.isEmpty(patientRelationContact2Txt))
             {
                 Toast.makeText(PersonalRepresentative.this, "Number cannot be empty", Toast.LENGTH_LONG).show();
-                patientRelationContact2.setError("Number is required");
+                patientRelationContact2.setError("Phone number is required");
                 patientRelationContact2.requestFocus();
             }
             else if(!PHONE_PATTERN.matcher(patientRelationContact2Txt).matches())
             {
                 Toast.makeText(PersonalRepresentative.this, "Number must be 123-123-1234", Toast.LENGTH_LONG).show();
-                patientRelationContact2.setError("Number format is required");
+                patientRelationContact2.setError("Phone number format is required");
                 patientRelationContact2.requestFocus();
             }
             else if(TextUtils.isEmpty(personRep3Txt) || personRep3Txt.length() > 20) // 3rd Representative
@@ -291,8 +291,8 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             }
             else if(TextUtils.isEmpty(patientRelation3Txt) || patientRelation3Txt.length() > 20)
             {
-                Toast.makeText(PersonalRepresentative.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
-                patientRelation3.setError("Name is required");
+                Toast.makeText(PersonalRepresentative.this, "Relationship cannot be empty", Toast.LENGTH_LONG).show();
+                patientRelation3.setError("Relationship is required");
                 patientRelation3.requestFocus();
             }
             else if(!LETTERS_PATTERN.matcher(patientRelation3Txt).matches())
@@ -303,14 +303,14 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             }
             else if(TextUtils.isEmpty(patientRelationContact3Txt))
             {
-                Toast.makeText(PersonalRepresentative.this, "Number cannot be empty", Toast.LENGTH_LONG).show();
-                patientRelationContact3.setError("Number is required");
+                Toast.makeText(PersonalRepresentative.this, "Phone number cannot be empty", Toast.LENGTH_LONG).show();
+                patientRelationContact3.setError("Phone number is required");
                 patientRelationContact3.requestFocus();
             }
             else if(!PHONE_PATTERN.matcher(patientRelationContact3Txt).matches())
             {
                 Toast.makeText(PersonalRepresentative.this, "Number must be 123-123-1234", Toast.LENGTH_LONG).show();
-                patientRelationContact3.setError("Number format is required");
+                patientRelationContact3.setError("Phone number format is required");
                 patientRelationContact3.requestFocus();
             }
             else if(TextUtils.isEmpty(patientSig4Txt) || patientSig4Txt.length() > 30)
@@ -323,6 +323,12 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             {
                 Toast.makeText(PersonalRepresentative.this, "Name can only contain letters", Toast.LENGTH_LONG).show();
                 patientSignature4.setError("Name format is required");
+                patientSignature4.requestFocus();
+            }
+            else if(!patientSig4Txt.equals(patientSignedTxt4))
+            {
+                Toast.makeText(PersonalRepresentative.this, "Signature must match name", Toast.LENGTH_LONG).show();
+                patientSignature4.setError("Name match is required");
                 patientSignature4.requestFocus();
             }
             else if(TextUtils.isEmpty(patientDate4Txt))
