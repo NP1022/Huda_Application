@@ -32,6 +32,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.SimpleTimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -159,19 +163,24 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                     password.clearComposingText();
                     conPassword.clearComposingText();
                 }
-//                else if(!TextUtils.isEmpty(dob))
-//                {
-//                    Toast.makeText(RegisterAccount.this,"Date of birth cannot be empty",Toast.LENGTH_LONG).show();
-//                    DOb.setError("Date of birth is required");
-//                    DOb.requestFocus();
-//                }
-//                else if(!DATE_PATTERN.matcher(dob).matches())
-//                {
-//                    Toast.makeText(RegisterAccount.this,"Date of birth must be MM-DD-YYYY",Toast.LENGTH_LONG).show();
-//                    DOb.setError("Date format is required");
-//                    DOb.requestFocus();
-//                }
-
+                else if(TextUtils.isEmpty(dob))
+                {
+                    Toast.makeText(RegisterAccount.this,"Date of birth cannot be empty",Toast.LENGTH_LONG).show();
+                    DOb.setError("Date of birth is required");
+                    DOb.requestFocus();
+                }
+                else if(!DATE_PATTERN.matcher(dob).matches())
+                {
+                    Toast.makeText(RegisterAccount.this,"Date of birth must be MM-DD-YYYY",Toast.LENGTH_LONG).show();
+                    DOb.setError("Date format is required");
+                    DOb.requestFocus();
+                }
+               else if(calcAge(dob) <= 18)
+                {
+                    Toast.makeText(RegisterAccount.this,"Patient must be 18 or older",Toast.LENGTH_LONG).show();
+                    DOb.setError("Minimum age is required");
+                    DOb.requestFocus();
+                }
                 else
                 {
                     User user = new User(firstNameTxt,lastNameTxt,emailTxt,dob, UserType.PATIENT);
@@ -239,5 +248,27 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    // function to calculate date of birth, that takes a string value of the date of birth
+    // in the format of MM-DD-YYYY
+    public static long calcAge(String dob)
+    {
+        SimpleDateFormat sdf1 = new SimpleDateFormat("mm-dd-yyyy");
+        Date udob = null;
+        try {
+            udob = sdf1.parse(dob);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
+        Date sysdate=new Date();
+
+        long ms=System.currentTimeMillis()-udob.getTime();
+
+        long age = (long)((long)ms/(1000.0*60*60*24*365));
+
+        // String ageStr = String.valueOf(age);
+
+        return age;
+
+    }
 }
