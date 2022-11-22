@@ -114,7 +114,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q1s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q1s1.setError("Valid input range is required");
+                    q1s1.setError("Valid input is required");
                     q1s1.requestFocus();
                 }
                 else if(TextUtils.isEmpty(q2s1Text))
@@ -126,7 +126,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q2s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q2s1.setError("Valid input range is required");
+                    q2s1.setError("Valid input is required");
                     q2s1.requestFocus();
                 }
                 else if(TextUtils.isEmpty(q3s1Text))
@@ -138,7 +138,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q3s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q3s1.setError("Valid input range is required");
+                    q3s1.setError("Valid input is required");
                     q3s1.requestFocus();
                 }
                 else if(TextUtils.isEmpty(q4s1Text))
@@ -150,7 +150,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q4s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q4s1.setError("Valid input range is required");
+                    q4s1.setError("Valid input is required");
                     q4s1.requestFocus();
                 }
                 else if(TextUtils.isEmpty(q5s1Text))
@@ -162,7 +162,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q5s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q5s1.setError("Valid input range is required");
+                    q5s1.setError("Valid input is required");
                     q5s1.requestFocus();
                 }
                 else if(TextUtils.isEmpty(q6s1Text))
@@ -174,7 +174,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q6s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q6s1.setError("Valid input range is required");
+                    q6s1.setError("Valid input is required");
                     q6s1.requestFocus();
                 }
                 else if(TextUtils.isEmpty(q7s1Text))
@@ -186,7 +186,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q7s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q7s1.setError("Valid input range is required");
+                    q7s1.setError("Valid input is required");
                     q7s1.requestFocus();
                 }
                 else if(TextUtils.isEmpty(q8s1Text))
@@ -198,7 +198,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q8s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q8s1.setError("Valid input range is required");
+                    q8s1.setError("Valid input is required");
                     q8s1.requestFocus();
                 }
                  else if(TextUtils.isEmpty(s1TotalsText))
@@ -225,7 +225,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q1s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q1s2.setError("Valid input range is required");
+                    q1s2.setError("Valid input is required");
                     q1s2.requestFocus();
                 }
                 else if (TextUtils.isEmpty(q2s2Text))
@@ -237,7 +237,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q2s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q2s2.setError("Valid input range is required");
+                    q2s2.setError("Valid input is required");
                     q2s2.requestFocus();
                 }
                 else if (TextUtils.isEmpty(q3s2Text))
@@ -249,7 +249,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q3s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q3s2.setError("Valid input range is required");
+                    q3s2.setError("Valid input is required");
                     q3s2.requestFocus();
                 }
                 else if (TextUtils.isEmpty(q4s2Text))
@@ -261,7 +261,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q4s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q4s2.setError("Valid input range is required");
+                    q4s2.setError("Valid input is required");
                     q4s2.requestFocus();
                 }
                 else if (TextUtils.isEmpty(q5s2Text))
@@ -273,7 +273,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q5s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q5s2.setError("Valid input range is required");
+                    q5s2.setError("Valid input is required");
                     q5s2.requestFocus();
                 }
                 else if (TextUtils.isEmpty(q6s2Text))
@@ -285,7 +285,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q6s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q6s2.setError("Valid input range is required");
+                    q6s2.setError("Valid input is required");
                     q6s2.requestFocus();
                 }
                 else if (TextUtils.isEmpty(q7s2Text))
@@ -297,7 +297,7 @@ public class StressForm extends AppCompatActivity
                 else if(!RANGE_PATTERN.matcher(q7s2Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
-                    q7s2.setError("Valid input range is required");
+                    q7s2.setError("Valid input is required");
                     q7s2.requestFocus();
                 }
                 else if (TextUtils.isEmpty(s2TotalsText))
