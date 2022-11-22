@@ -55,6 +55,9 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
 
+    private static Pattern LETTERS_PATTERN = Pattern.compile("^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$"); // Letters pattern match
+
+
     FirebaseDatabase rootNode;
     DatabaseReference ref;
     private ImageView backButton;
@@ -117,12 +120,29 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                 final String dob = DOb.getText().toString().trim();
 
 
-                if (TextUtils.isEmpty(firstNameTxt) || TextUtils.isEmpty(lastNameTxt)) // check if the firstname and lastname are empty
+                if (TextUtils.isEmpty(firstNameTxt)) // check if the firstname and lastname are empty
                 {
-                    Toast.makeText(RegisterAccount.this,"Please enter first and last name",Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterAccount.this,"Please enter first name",Toast.LENGTH_LONG).show();
                     firstName.setError("First Name is required");
-                    lastName.setError("Last Name is required");
                     firstName.requestFocus();
+                }
+                else if(TextUtils.isEmpty(lastNameTxt))
+                {
+                    Toast.makeText(RegisterAccount.this,"Please enter last name",Toast.LENGTH_LONG).show();
+                    lastName.setError("Last Name is required");
+                    lastName.requestFocus();
+                }
+                else if(!LETTERS_PATTERN.matcher(firstNameTxt).matches()) // Pattern matcher to check if the
+                // name does not contain letter
+                {
+                    Toast.makeText(RegisterAccount.this,"Name must be alphabetic",Toast.LENGTH_LONG).show();
+                    firstName.setError("Name format is required");
+                    firstName.requestFocus();
+                }
+                else if(!LETTERS_PATTERN.matcher(lastNameTxt).matches())
+                {
+                    Toast.makeText(RegisterAccount.this,"Name must be alphabetic",Toast.LENGTH_LONG).show();
+                    lastName.setError("Name format is required");
                     lastName.requestFocus();
                 }
                 else if(TextUtils.isEmpty(emailTxt)) // check if email is empty
