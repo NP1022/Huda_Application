@@ -290,7 +290,7 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
 
         InternetAddress s_sender = new InternetAddress(sender_email);
         InternetAddress reciever = new InternetAddress("ali.bilal.said@gmail.com");
-        final String message_text = "Dear Admin, " + ",\n\n"+ "Patient: " + Fullname_text + " Birthday: " + birthday_text + " is checking in for their appointment"+".\n\n" + "Appointment Date: " + Date+ "\nAppointment Time: " + Time+"\n\n Thank You" ;
+        final String message_text = "Dear Admin, " + ",\n\n"+ "Patient: " + Fullname_text + " Birthday: " + birthday_text + " is checking in for their appointment"+".\n\n" + "Appointment Date: " + Date+ "\nAppointment Time: " + Time+"\n\nThank You" ;
         Properties settings = Settings(smtp);
 
 
