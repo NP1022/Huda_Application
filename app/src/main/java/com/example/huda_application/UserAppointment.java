@@ -136,6 +136,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
                 holder.checkedIn.setVisibility(View.VISIBLE);
                 holder.checkedInText.setVisibility(View.VISIBLE);
             }
+
+
             if(appointment.getStatus() == AppointmentStatus.DENIED )
             {
                 holder.approve.setVisibility(View.GONE);
@@ -152,6 +154,11 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             {
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
+            }
+            if(!appointment.isCheckedIn() )
+            {
+                holder.checkedIntime.setVisibility(View.GONE);
+                holder.checkedIntimeText.setVisibility(View.GONE);
             }
 
             holder.approve.setOnClickListener(listener -> {
@@ -210,6 +217,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
 
         private final AppCompatButton approve;
         private final AppCompatButton deny;
+        private final TextView checkedIntime;
+        private final TextView checkedIntimeText;
 
         public AppointmentViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -221,6 +230,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             deny = itemView.findViewById(R.id.decline);
             checkedIn = itemView.findViewById(R.id.checkedIn);
             checkedInText = itemView.findViewById(R.id.checkedInText);
+            checkedIntimeText = itemView.findViewById(R.id.CheckinTimeText);
+            checkedIntime = itemView.findViewById(R.id.CheckinTime);
         }
 
         public TextView getTime() {

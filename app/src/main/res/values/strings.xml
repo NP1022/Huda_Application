@@ -370,8 +370,8 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="userDeleteInput">Enter Yes or No</string>
     <string name="userConfirmDelete">Confirm Yes or No</string>
 
-<!--    <string name="menu_update_password">Update Password</string>-->
-<!--    <string name="menu_messages">Messages</string>-->
-<!--    <string name="menu_logout">Logout</string>-->
+    <!--    <string name="menu_update_password">Update Password</string>-->
+    <!--    <string name="menu_messages">Messages</string>-->
+    <!--    <string name="menu_logout">Logout</string>-->
 
 </resources>

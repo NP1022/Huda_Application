@@ -18,25 +18,27 @@ import java.util.stream.Collectors;
 
 public class AppointmentManager {
 
-    private final List<Time> availableTimes = List.of(
-            Time.valueOf("08:30:00"),
-            Time.valueOf("09:00:00"),
-            Time.valueOf("09:30:00"),
-            Time.valueOf("10:00:00"),
-            Time.valueOf("10:30:00"),
-            Time.valueOf("11:00:00"),
-            Time.valueOf("11:30:00"),
-            Time.valueOf("12:00:00"),
-            Time.valueOf("12:30:00"),
-            Time.valueOf("13:00:00"),
-            Time.valueOf("13:30:00")
-    );
-
+    private static final String TIME_PATTERN = "%s:%s:00";
+    private final List<Time> availableTimes = new ArrayList<>();
     private final Map<Time, String> appointments = new HashMap<>();
     private final String date;
 
     public AppointmentManager(String date) {
         this.date = date;
+    }
+
+    public void createTimesOpen(Float hours) {
+        if (hours == null) {
+            hours = 5f;
+        }
+
+
+        for (float i = 0.5f; i < hours + 1f; i += 0.5f) {
+            int hour = 8 + (int) i;
+            String minute = i != (int) i ? "30" : "00";
+            String timeStr = String.format(TIME_PATTERN, hour < 10 ? "0" + hour : hour, minute);
+            availableTimes.add(Time.valueOf(timeStr));
+        }
     }
 
     public List<Time> getAvailableTimes() {

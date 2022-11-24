@@ -68,8 +68,6 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                     .permitAll().build();
             StrictMode.setThreadPolicy(policy);
-
-
         }
 
         RecyclerView recyclerView = findViewById(R.id.appointmentsView);
