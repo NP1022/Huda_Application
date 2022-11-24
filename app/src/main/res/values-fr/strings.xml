@@ -85,7 +85,7 @@
     <string name = "PreferredNumber">Numéro Préféré (Fixe ou Cellulaire)</string>
     <string name = "ConsentToCall">Consentement à Appeler? (Oui ou Non)</string>
     <string name = "ConsentToText">Consentement au Texto? (Oui ou Non)</string>
-    <string name = "InsuranceProvider">Fournisseur d\'Assurance</string>
+    <string name = "InsuranceProvider">Assurance (Type NA pour aucune assurance)</string>
     <string name = "Email">E-mail (Identique à l\'E-mail d\'Inscription)</string>
 
     <string name = "SelectRace">Veuillez Sélectionner une Race:</string>

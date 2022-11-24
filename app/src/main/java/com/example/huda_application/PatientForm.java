@@ -44,6 +44,8 @@ public class PatientForm extends AppCompatActivity
 
     private static Pattern CONSENT_PATTERN = Pattern.compile("^(?:yes|Yes|No|no)$");
 
+    private static Pattern INSURANCE_PATTERN = Pattern.compile("^(?:NA|na|Na)$");
+
     private static Pattern MARITAL_PATTERN = Pattern.compile("^(?:Single|single|Married|married|partner|Partner|Separated|separated|Divorced|divorced|Widowed|widowed)$");
 
     private static Pattern LETTERS_PATTERN = Pattern.compile("^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$"); // Letters pattern match
@@ -416,6 +418,13 @@ public class PatientForm extends AppCompatActivity
                     patientInsurance.setError("Insurance is required");
                     patientInsurance.requestFocus();
                 }
+//                else if (INSURANCE_PATTERN.matcher(patientInsuranceTxt).matches())
+//                {
+//                    Toast.makeText(PatientForm.this, "Insurance has been detected", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(PatientForm.this, "Please wait for further instructions", Toast.LENGTH_LONG).show();
+//                    Intent insuranceApproval = new Intent(PatientForm.this, MainActivity.class);
+//                    startActivity(insuranceApproval);
+//                }
                 else if (TextUtils.isEmpty(patientEmailTxt))
                 {
                     Toast.makeText(PatientForm.this, "Email cannot be empty", Toast.LENGTH_LONG).show();
@@ -450,20 +459,20 @@ public class PatientForm extends AppCompatActivity
                 if (nativeHawiianPacificIslander.isChecked()) {
                     patientRace.append("Native Hawaiian/Pacific Islander");
                 }
-                else if(TextUtils.isEmpty(patientRaceTxt))
-                {
-                    Toast.makeText(PatientForm.this, "Race cannot cannot be empty", Toast.LENGTH_LONG).show();
-                }
+//                else if(TextUtils.isEmpty(patientRaceTxt))
+//                {
+//                    Toast.makeText(PatientForm.this, "Race cannot cannot be empty", Toast.LENGTH_LONG).show();
+//                }
                 if (HispanicOrLatino.isChecked()) {
                     patientEthnicity.append("Hispanic or Latino/a");
                 }
                 if (NotHispanicOrLatino.isChecked()) {
                     patientEthnicity.append("Not Hispanic or Latino/a");
                 }
-                else if(TextUtils.isEmpty(patientEthnicityTxt))
-                {
-                    Toast.makeText(PatientForm.this, "Ethnicity cannot cannot be empty", Toast.LENGTH_LONG).show();
-                }
+//                else if(TextUtils.isEmpty(patientEthnicityTxt))
+//                {
+//                    Toast.makeText(PatientForm.this, "Ethnicity cannot cannot be empty", Toast.LENGTH_LONG).show();
+//                }
                 else if (TextUtils.isEmpty(prefLangTxt) || prefLangTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this, "Language cannot be empty", Toast.LENGTH_LONG).show();
@@ -500,7 +509,7 @@ public class PatientForm extends AppCompatActivity
                     incomeHousehold.setError("Income is required");
                     incomeHousehold.requestFocus();
                 }
-                else if (!MONEY_PATTERN.matcher(houseIncomeTxt).matches())
+                else if (!DIGITS_PATTERN.matcher(houseIncomeTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be valid income", Toast.LENGTH_LONG).show();
                     incomeHousehold.setError("Income format is required");
@@ -522,10 +531,10 @@ public class PatientForm extends AppCompatActivity
                 {
                     patientIncome.append("Year");
                 }
-                else if(TextUtils.isEmpty(patientIncomeTxt))
-                {
-                    Toast.makeText(PatientForm.this,"Duration cannot be empty",Toast.LENGTH_LONG);
-                }
+//                else if(TextUtils.isEmpty(patientIncomeTxt))
+//                {
+//                    Toast.makeText(PatientForm.this,"Duration cannot be empty",Toast.LENGTH_LONG);
+//                }
                 else if (TextUtils.isEmpty(houseHoldTxt) || houseHoldTxt.length() > 2)
                 {
                     Toast.makeText(PatientForm.this, "Must fill in Family size", Toast.LENGTH_LONG).show();
@@ -566,10 +575,10 @@ public class PatientForm extends AppCompatActivity
                 {
                     patientEmp.append("Seeking employment");
                 }
-                else if(TextUtils.isEmpty(patientEmpTxt))
-                {
-                    Toast.makeText(PatientForm.this, "Employment status is required", Toast.LENGTH_LONG).show();
-                }
+//                else if(TextUtils.isEmpty(patientEmpTxt))
+//                {
+//                    Toast.makeText(PatientForm.this, "Employment status is required", Toast.LENGTH_LONG).show();
+//                }
                 else if (TextUtils.isEmpty(occupationTxt) || occupationTxt.length() > 30)
                 {
                     Toast.makeText(PatientForm.this, "Please fill occupation", Toast.LENGTH_LONG).show();
@@ -636,7 +645,7 @@ public class PatientForm extends AppCompatActivity
 //                    patientNameConsent.setError("Name format is required");
 //                    patientNameConsent.requestFocus();
 //                }
-                else if(patientConsentName.equals(firstNameTxt + " " + lastNameTxt))
+                else if(!patientConsentName.equals(firstNameTxt + " " + lastNameTxt))
                 {
                     Toast.makeText(PatientForm.this, "Name must match First name and Last name", Toast.LENGTH_LONG).show();
                     patientNameConsent.setError("Name match is required");
@@ -720,9 +729,19 @@ public class PatientForm extends AppCompatActivity
                     formData.setEmploymentStatus(patientEmpTxt);
                     formData.setUID(UserManager.getInstance().getCurrentUser().getUserId());
 
-                    Intent patientContract = new Intent(PatientForm.this, PatientContract.class);
-                    patientContract.putExtra("patientdata",formData );
-                    startActivity(patientContract);
+                    if(!INSURANCE_PATTERN.matcher(patientInsuranceTxt).matches())
+                    {
+                        Toast.makeText(PatientForm.this, "Insurance has been detected", Toast.LENGTH_LONG).show();
+                        Toast.makeText(PatientForm.this, "Please wait for further instructions to see if you Qualify for HUDA Clinic ", Toast.LENGTH_LONG).show();
+                        Intent insuranceApproval = new Intent(PatientForm.this, MainActivity.class);
+                        startActivity(insuranceApproval);
+                    }
+                    else
+                    {
+                        Intent patientContract = new Intent(PatientForm.this, PatientContract.class);
+                        patientContract.putExtra("patientdata",formData );
+                        startActivity(patientContract);
+                    }
                 }
             }
         });

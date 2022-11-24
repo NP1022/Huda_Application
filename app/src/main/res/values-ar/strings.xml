@@ -83,7 +83,7 @@
     <string name = "PreferredNumber">رقم الهاتف المفضل (المنزل أو الهاتف المحمول)</string>
     <string name = "ConsentToCall">الموافقة على الاتصال؟ (نعم ام لا)</string>
     <string name = "ConsentToText">الموافقة على النص؟ (نعم ام لا)</string>
-    <string name = "InsuranceProvider">شركة التأمين</string>
+    <string name = "InsuranceProvider">التأمين (اكتب NA بدون تأمين)</string>
     <string name = "Email">البريد الإلكتروني (مثل التسجيل)</string>
 
     <string name = "SelectRace">الرجاء تحديد العرق</string>
