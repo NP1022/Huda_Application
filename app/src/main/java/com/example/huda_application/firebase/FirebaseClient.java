@@ -40,9 +40,12 @@ public class FirebaseClient {
             for (DataSnapshot child : snapshot.child("appointments").getChildren()) {
                 user.addAppointment(
                         new Appointment(
+
                                 child.child("time").getValue(String.class),
                                 child.child("date").getValue(String.class),
                                 child.child("reason").getValue(String.class),
+                                child.child("checkedInTime").getValue(String.class),
+                                child.child("adminActionTime").getValue(String.class),
                                 AppointmentStatus.valueOf(child.child("status").getValue(String.class)),
                                 child.hasChild("checkedIn") ? child.child("checkedIn").getValue(Boolean.class) : false
                         ));

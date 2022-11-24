@@ -26,6 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
@@ -155,6 +156,10 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
 
             holder.approve.setOnClickListener(listener -> {
                 user.getAppointments().get(position).setStatus(AppointmentStatus.APPROVED);
+                SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy HH:mm z");
+
+                String currentDateAndTime = date.format(new Date());
+                user.getAppointments().get(position).setAdminActionTime(currentDateAndTime);
                 FirebaseClient.updateUser(user);
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
