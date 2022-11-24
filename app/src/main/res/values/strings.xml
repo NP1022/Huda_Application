@@ -83,7 +83,7 @@
     <string name="PreferredNumber">Preferred Number (Home or Mobile)</string>
     <string name="ConsentToCall">Consent to Call? (Yes or No)</string>
     <string name="ConsentToText">Consent to Text? (Yes or No)</string>
-    <string name="InsuranceProvider">Insurance Provider</string>
+    <string name="InsuranceProvider">Insurance (Type NA for no insurance)</string>
     <string name="Email">Email (Same as Registration Email)</string>
 
     <string name="SelectRace">Please Select a Race:</string>
