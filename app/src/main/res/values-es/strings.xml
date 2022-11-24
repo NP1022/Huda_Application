@@ -83,7 +83,7 @@
     <string name = "PreferredNumber">Número Preferido (¿Casa o Móvil?)</string>
     <string name = "ConsentToCall">¿Consentimiento para llamar? (Si o No)</string>
     <string name = "ConsentToText">¿Consentimiento para enviar mensajes de texto? (Si o no)</string>
-    <string name = "InsuranceProvider">Proveedor de Seguros</string>
+    <string name = "InsuranceProvider">Seguro (Escriba NA si no tiene seguro)</string>
     <string name = "Email">Correo Electrónico (Igual que el correo electrónico de registro)</string>
 
     <string name = "SelectRace">Selecciona una carrera:</string>

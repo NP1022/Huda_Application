@@ -82,7 +82,7 @@
     <string name = "PreferredNumber">ترجیحی نمبر (گھر یا موبائل)</string>
     <string name = "ConsentToCall">کال کرنے کی رضامندی (ہاں یا نہیں)</string>
     <string name = "ConsentToText">متن پر رضامندی (ہاں یا نہیں)</string>
-    <string name = "InsuranceProvider">بیمہ فراہم کرنے والا</string>
+    <string name = "InsuranceProvider">انشورنس (بغیر انشورنس کے لیے NA ٹائپ کریں)</string>
     <string name = "Email">ای میل (رجسٹریشن کی طرح)</string>
 
     <string name = "SelectRace">براہ کرم ایک ریس منتخب کریں۔:</string>
