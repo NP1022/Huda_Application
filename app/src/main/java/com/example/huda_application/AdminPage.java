@@ -4,17 +4,24 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,16 +40,21 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class AdminPage extends AppCompatActivity implements View.OnClickListener {
 
     private PatientViewAdapter viewAdapter;
     private ImageView backbutton;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_page);
 
+        toolbar = findViewById(R.id.Tool_bar);
+        this.setSupportActionBar(toolbar);
+        this.getSupportActionBar().setTitle("");
         RecyclerView recyclerView = findViewById(R.id.usersView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -76,15 +88,17 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
             startActivity(new Intent(this , Adminpanel.class));
     }
 
-    private static class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> implements View.OnClickListener {
+    private static class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> implements View.OnClickListener, Filterable {
 
         private LayoutInflater inflater;
-        private final List<User> users;
+        private  List<User> users;
+        private  List<User> Filteredusers;
         private final Context context;
 
         public PatientViewAdapter(Context context, List<User> users) {
             this.context = context;
             this.users = users;
+            this.Filteredusers = users;
             this.inflater = LayoutInflater.from(context);
         }
 
@@ -139,6 +153,47 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
         public void onClick(View v) {
 
         }
+
+        @Override
+        public Filter getFilter() {
+            Filter filter = new Filter() {
+                @Override
+                protected FilterResults performFiltering(CharSequence charSequence) {
+                    FilterResults filterresults = new FilterResults();
+
+                    if (charSequence == null || charSequence.length() == 0){
+
+                        filterresults.values = Filteredusers;
+                        filterresults.count = Filteredusers.size();
+                    }
+                    else{
+                        String character = charSequence.toString().toLowerCase();
+
+                        List<User> usersresults = new ArrayList<User>();
+                        for (User user : users) {
+                            String temp = user.getFirstName().toLowerCase()+" "+user.getLastName().toLowerCase();
+                            if (temp.toLowerCase().contains(character.toLowerCase())) {
+
+                                usersresults.add(user);
+                            }
+
+                        }
+
+                        filterresults.values = usersresults;
+                        filterresults.count = usersresults.size();
+                    }
+                    return filterresults;
+
+                }
+
+                @Override
+                protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                    users = (ArrayList<User>) filterResults.values ;
+                    notifyDataSetChanged();
+                }
+            };
+            return filter;
+        }
     }
 
     public static class PatientViewHolder extends RecyclerView.ViewHolder {
@@ -172,5 +227,29 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
         public TextView getAppointments() {
             return appointments;
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search ,menu);
+        MenuItem menuItem =  menu.findItem(R.id.searchView);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                viewAdapter.getFilter().filter(newText);
+
+
+                return true;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
     }
 }
