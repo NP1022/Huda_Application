@@ -219,7 +219,7 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
                         }
 
                     }
-                    SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy HH:mm z");
+                    SimpleDateFormat date = new SimpleDateFormat("HH:mm z");
 
                     String currentDateAndTime = date.format(new Date());
 

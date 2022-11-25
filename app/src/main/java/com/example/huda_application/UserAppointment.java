@@ -123,6 +123,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             holder.date.setText(appointment.getDate());
             holder.status.setText(appointment.getStatus().name().toLowerCase());
             holder.Reason.setText(appointment.getReason());
+            holder.checkedIntimeText.setText(appointment.getCheckedInTime());
 
             holder.checkedIn.setVisibility(View.GONE);
             holder.checkedInText.setVisibility(View.GONE);
@@ -159,6 +160,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             {
                 holder.checkedIntime.setVisibility(View.GONE);
                 holder.checkedIntimeText.setVisibility(View.GONE);
+
             }
 
             holder.approve.setOnClickListener(listener -> {
