@@ -736,14 +736,12 @@ public class PatientForm extends AppCompatActivity
                     formData.setPatientEthnicity(patientEthnicityTxt);
                     formData.setIncomePayTime(patientIncomeTxt);
                     formData.setEmploymentStatus(patientEmpTxt);
-//                    formData.setUID(UserManager.getInstance().getCurrentUser().getUserId());
-                    formData.setUID("User Test");
+                    formData.setUID(UserManager.getInstance().getCurrentUser().getUserId());
 
 
                     if(!INSURANCE_PATTERN.matcher(patientInsuranceTxt).matches())
                     {
-                        Toast.makeText(PatientForm.this, "Insurance has been detected", Toast.LENGTH_LONG).show();
-                        Toast.makeText(PatientForm.this, "Please wait for further instructions to see if you Qualify for HUDA Clinic ", Toast.LENGTH_LONG).show();
+                        Toast.makeText(PatientForm.this, "Please wait for further instructions to see if you Qualify for care", Toast.LENGTH_LONG).show();
 
 
                         dao.add(info).addOnSuccessListener(suc->
