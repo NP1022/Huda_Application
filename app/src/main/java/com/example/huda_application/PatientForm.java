@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.huda_application.user.PatientFormData;
 import com.example.huda_application.user.UserManager;
+import com.example.huda_application.patientInsurance;
 
 import java.text.NumberFormat;
 import java.util.Locale;
@@ -62,6 +63,8 @@ public class PatientForm extends AppCompatActivity
         setContentView(R.layout.activity_patient_form);
 
         //   DAOPatient dao = new DAOPatient();
+
+        DAOInsurance dao = new DAOInsurance();
 
         EditText todayDate = findViewById(R.id.todaysDate);
         todayDate.addTextChangedListener(new TextWatcher() {
@@ -238,6 +241,12 @@ public class PatientForm extends AppCompatActivity
 
                 StringBuilder patientEmp = new StringBuilder();
                 final String patientEmpTxt = patientEmp.toString().trim();
+
+                // patientInsurance object
+                com.example.huda_application.patientInsurance info = new patientInsurance(dateTxt,visitReasonTxt,lastNameTxt,firstNameTxt,patientSexTxt,
+                        patientDOBTxt,patientAddTxt,patientCityTxt,patientStateTxt,patientZipCodeTxt,
+                        patientSSNTxt,patientHomeNumTxt,patientCellNumTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt);
+
 
                 if (TextUtils.isEmpty(dateTxt) || !DATE_PATTERN.matcher(dateTxt).matches()) // check if date is empty
                 {
@@ -727,12 +736,24 @@ public class PatientForm extends AppCompatActivity
                     formData.setPatientEthnicity(patientEthnicityTxt);
                     formData.setIncomePayTime(patientIncomeTxt);
                     formData.setEmploymentStatus(patientEmpTxt);
-                    formData.setUID(UserManager.getInstance().getCurrentUser().getUserId());
+//                    formData.setUID(UserManager.getInstance().getCurrentUser().getUserId());
+                    formData.setUID("User Test");
+
 
                     if(!INSURANCE_PATTERN.matcher(patientInsuranceTxt).matches())
                     {
                         Toast.makeText(PatientForm.this, "Insurance has been detected", Toast.LENGTH_LONG).show();
                         Toast.makeText(PatientForm.this, "Please wait for further instructions to see if you Qualify for HUDA Clinic ", Toast.LENGTH_LONG).show();
+
+
+                        dao.add(info).addOnSuccessListener(suc->
+                        {
+                            Toast.makeText(PatientForm.this, "Insurance information recorded", Toast.LENGTH_SHORT).show();
+                        }).addOnFailureListener(er->
+                        {
+                            Toast.makeText(PatientForm.this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
+                        });
+
                         Intent insuranceApproval = new Intent(PatientForm.this, MainActivity.class);
                         startActivity(insuranceApproval);
                     }
