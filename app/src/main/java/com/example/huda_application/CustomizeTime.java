@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.FirebaseDatabase;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
@@ -96,7 +97,9 @@ public class CustomizeTime extends AppCompatActivity implements DatePickerDialog
             try {
                 float hours = Float.parseFloat(amount.getText().toString());
                 FirebaseDatabase.getInstance().getReference("ClinicHours").child(textView.getText().toString()).setValue(hours);
+                Toast.makeText(CustomizeTime.this,"Hours Of Operation have been changed. ",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this , Adminpanel.class));
+
             }catch (NumberFormatException e) {
                 //TODO Show dialog telling admins that the entered hours is invalid
             }

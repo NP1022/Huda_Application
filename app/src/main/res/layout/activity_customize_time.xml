@@ -78,7 +78,7 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:hint="Hours of operation"
-        android:inputType="text"
+        android:inputType="number"
         android:padding="10dp"
         android:textColor="@color/black"
 

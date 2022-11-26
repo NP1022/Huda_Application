@@ -38,9 +38,6 @@
             android:name=".ProfilePage"
             android:exported="false" />
         <activity
-            android:name=".WeeklyCal"
-            android:exported="false" />
-        <activity
             android:name=".AddEvent"
             android:exported="false" />
         <activity
