@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -87,24 +88,29 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+            public void onCancelled(@NonNull DatabaseError error)
+            {
+
             }
         });
         backbutton.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v)
+    {
         if (v.getId() == R.id.backButton_8)
             startActivity(new Intent(UserAppointment.this , AdminPage.class));
     }
 
-    private class AppointmentViewAdapter extends RecyclerView.Adapter<AppointmentViewHolder> {
+    private class AppointmentViewAdapter extends RecyclerView.Adapter<AppointmentViewHolder>
+    {
 
         private LayoutInflater inflater;
         private final User user;
 
-        public AppointmentViewAdapter(Context context, User user) {
+        public AppointmentViewAdapter(Context context, User user)
+        {
             this.user = user;
             this.inflater = LayoutInflater.from(context);
         }
@@ -163,7 +169,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
 
             }
 
-            holder.approve.setOnClickListener(listener -> {
+            holder.approve.setOnClickListener(listener ->
+            {
                 user.getAppointments().get(position).setStatus(AppointmentStatus.APPROVED);
                 SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy HH:mm z");
 
@@ -179,26 +186,32 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
 
                 holder.status.setText(appointment.getStatus().name().toLowerCase());
 
-                try {
+                try
+                {
                     sendemail(user.getAppointments().get(position).getDate(), user.getAppointments().get(position).getTime() , "approved");
                 } catch (MessagingException e) {
                     e.printStackTrace();
                 }
-
+                Toast.makeText(UserAppointment.this,"Appointment has been successfully accepted",Toast.LENGTH_LONG).show();
             });
 
-            holder.deny.setOnClickListener(listener -> {
+            holder.deny.setOnClickListener(listener ->
+            {
                 user.getAppointments().get(position).setStatus(AppointmentStatus.DENIED);
                 FirebaseClient.updateUser(user);
 
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
                 holder.status.setText(appointment.getStatus().name().toLowerCase());
-                try {
+                try
+                {
                     sendemail(user.getAppointments().get(position).getDate(), user.getAppointments().get(position).getTime() , "denied");
-                } catch (MessagingException e) {
+                }
+                catch (MessagingException e)
+                {
                     e.printStackTrace();
                 }
+                Toast.makeText(UserAppointment.this,"Appointment has been denied",Toast.LENGTH_LONG).show();
             });
         }
 
@@ -260,9 +273,9 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             return checkedInText;
         }
     }
-    private  void sendemail(String Date, String Time , String Status) throws MessagingException {
+    private  void sendemail(String Date, String Time , String Status) throws MessagingException
+    {
         final String sender_username = "appclinichuda@gmail.com";
-
 
         String Fullname_text = updatedUser.getFirstName() + " " + updatedUser.getLastName();
         String birthday_text = updatedUser.getBirthday();
