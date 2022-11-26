@@ -249,7 +249,7 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
                     }
                 }
                 else
-                    Toast.makeText(Appointments.this,"Check-in on allowed on the same date! ",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Appointments.this,"Check-in id only allowed on the same day! ",Toast.LENGTH_LONG).show();
             });
         }
 
