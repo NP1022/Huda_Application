@@ -58,7 +58,6 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
         RecyclerView recyclerView = findViewById(R.id.usersView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-       // if (UserManager.getInstance().isAdmin()) {
             FirebaseDatabase.getInstance().getReference("User").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -77,7 +76,7 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
                 public void onCancelled(@NonNull DatabaseError error) {
                 }
             });
-      //  }
+
         backbutton = findViewById(R.id.backButton_9);
         backbutton.setOnClickListener(this);
     }
@@ -113,17 +112,6 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
         public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
             final int pos = position;
             User user = users.get(position);
-            // FirebaseDatabase.getInstance().getReference("User").child(user.getUserId()).addListenerForSingleValueEvent(new ValueEventListener() {
-            //     @Override
-            //     public void onDataChange(@NonNull DataSnapshot snapshot) {
-            //         users.set(pos, FirebaseClient.convertToUser(snapshot));
-            //     }
-
-            //     @Override
-            //     public void onCancelled(@NonNull DatabaseError error) {
-            //     }
-            // });
-
             List<Appointment> appointments = user.getAppointments();
             int Pending_count =0;
             for (int i =0; i< appointments.size(); i ++){

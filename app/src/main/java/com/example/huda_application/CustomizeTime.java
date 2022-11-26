@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.FirebaseDatabase;
@@ -25,6 +26,7 @@ public class CustomizeTime extends AppCompatActivity implements DatePickerDialog
     private TextView textView;
     private TextView  submit;
     private EditText amount;
+    private ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,14 @@ public class CustomizeTime extends AppCompatActivity implements DatePickerDialog
         setContentView(R.layout.activity_customize_time);
         textView = findViewById(R.id.dateText2);
         amount = findViewById(R.id.appointmentTime2);
-        submit = findViewById(R.id.checkin5);
+        submit = findViewById(R.id.modify);
         dateButton = findViewById(R.id.dateText2);
+        backButton = (ImageView) findViewById(R.id.timebackButton);
+
+        backButton.setOnClickListener(this);
+
+
+
         dateButton.setOnClickListener(v -> {
             Calendar now = Calendar.getInstance();
             DatePickerDialog dialog = DatePickerDialog.newInstance(
@@ -84,7 +92,7 @@ public class CustomizeTime extends AppCompatActivity implements DatePickerDialog
     @Override
     public void onClick(View v) {
 
-        if(v.getId() == R.id.checkin5){
+        if(v.getId() == R.id.modify){
             try {
                 float hours = Float.parseFloat(amount.getText().toString());
                 FirebaseDatabase.getInstance().getReference("ClinicHours").child(textView.getText().toString()).setValue(hours);
@@ -93,6 +101,9 @@ public class CustomizeTime extends AppCompatActivity implements DatePickerDialog
                 //TODO Show dialog telling admins that the entered hours is invalid
             }
 
+        }
+        else if (v.getId() == R.id.timebackButton){
+            startActivity(new Intent(this , Adminpanel.class));
         }
     }
 }
