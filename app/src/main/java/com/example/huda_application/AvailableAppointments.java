@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.huda_application.appointment.AppointmentManager;
 import com.example.huda_application.user.Appointment;
@@ -120,6 +121,7 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
             holder.Time.setText(time.toString());
             holder.Remove.setOnClickListener(view -> {
                 AppointmentManager.createAppointment(AvailableAppointments.this.dateButton.getText().toString(), time.toString(), "Admin");
+                Toast.makeText(AvailableAppointments.this,times.get(position) + " time slot has been removed",Toast.LENGTH_LONG).show();
             });
         }
 
