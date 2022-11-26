@@ -2,6 +2,7 @@ package com.example.huda_application;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
@@ -51,7 +52,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     private static final Pattern TIME_PATTERN = Pattern.compile("(1[012]|[1-9]):[0-5][0-9](\\s)?(?i)(am|pm)");
 
     private EditText birthday, reason;
-    private Button checkin, dateButton;
+    private Button checkin, dateButton, phoneButton;
     private TextView time;
     private ImageView backButton;
     private String selectedTime = "";
@@ -96,6 +97,8 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             dialog.show(getSupportFragmentManager(), "Available Times");
         });
 
+        phoneButton = findViewById(R.id.callClinic);
+
         // date = findViewById(R.id.dateText);
         birthday = findViewById(R.id.birthday);
         reason = findViewById(R.id.email_checkin);
@@ -121,6 +124,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 //        time.setAdapter(adapter);
 
         //date.setOnClickListener(this);
+        phoneButton.setOnClickListener(this);
         birthday.setOnClickListener(this);
         reason.setOnClickListener(this);
 
@@ -187,10 +191,19 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             else
                 Toast.makeText(ApptRequest.this,"Appointments can't be made for previous days",Toast.LENGTH_LONG).show();
         }
-            else if (view.getId() == R.id.backButton) {
-                Intent prev = new Intent(this, Appointments.class);
-                startActivity(prev);
-            }
+
+        else if (view.getId() == R.id.backButton)
+        {
+            Intent prev = new Intent(this, Appointments.class);
+            startActivity(prev);
+        }
+
+        else if (view.getId() == R.id.callClinic)
+        {
+            Intent HUDACall = new Intent(Intent.ACTION_DIAL);
+            HUDACall.setData(Uri.parse("tel:3138658446"));
+            startActivity(HUDACall);
+        }
     }
 
     @Override

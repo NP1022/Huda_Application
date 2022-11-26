@@ -2,12 +2,14 @@ package com.example.huda_application;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,6 +59,8 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
     private String smtp = "mail.smtp.";
     private String sender_email = "appclinichuda@gmail.com";
     private String sender_password = "ldjtuhzvtetjofld";
+    private Button callClinic;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,6 +104,9 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
         backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(this);
 
+        callClinic = findViewById(R.id.callClinic2);
+        callClinic.setOnClickListener(this);
+
 
     }
 
@@ -107,10 +114,14 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if(view.getId() == R.id.backButton)
         {
-
             Intent Main = new Intent(this ,MainApplication.class);
             startActivity(Main);
-
+        }
+        else if(view.getId() == R.id.callClinic2)
+        {
+            Intent HUDACall = new Intent(Intent.ACTION_DIAL);
+            HUDACall.setData(Uri.parse("tel:3138658446"));
+            startActivity(HUDACall);
         }
     }
 
