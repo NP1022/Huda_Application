@@ -222,31 +222,44 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
         String key = String.format("%d-%d-%d", date.getMonth() + 1, date.getDate(), date.getYear() + 1900);
         textView.setText(String.format("Date: %s", key));
         appointmentManager = new AppointmentManager(key);
-        FirebaseDatabase.getInstance().getReference("Appointment").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+
+        FirebaseDatabase.getInstance().getReference("ClinicHours").child(key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot child : snapshot.getChildren()) {
-                    appointmentManager.convertAppointment(child);
-                }
-                availableTimes = appointmentManager.getAvailableTimes();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                appointmentManager.createTimesOpen(snapshot.getValue(Float.class));
 
-
-                    options.setSingleChoiceItems(appointmentManager.getAvailableTimes().stream().map(Time::toString).collect(Collectors.toList()).toArray(new String[0]), -1, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface Diag_options, int opts) {
-                            Time appointmentTime = availableTimes.get(opts);
-                            time.setText(appointmentTime.toString());
-                            selectedTime = appointmentTime.toString();
-                            Diag_options.dismiss();
+                FirebaseDatabase.getInstance().getReference("Appointment").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot child : snapshot.getChildren()) {
+                            appointmentManager.convertAppointment(child);
                         }
-                    });
+                        availableTimes = appointmentManager.getAvailableTimes();
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 
-                }
+
+                            options.setSingleChoiceItems(appointmentManager.getAvailableTimes().stream().map(Time::toString).collect(Collectors.toList()).toArray(new String[0]), -1, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface Diag_options, int opts) {
+                                    Time appointmentTime = availableTimes.get(opts);
+                                    time.setText(appointmentTime.toString());
+                                    selectedTime = appointmentTime.toString();
+                                    Diag_options.dismiss();
+                                }
+                            });
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                    }
+                });
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }

@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.huda_application.user.PatientFormData;
 import com.example.huda_application.user.UserManager;
+import com.example.huda_application.patientInsurance;
 
 import java.text.NumberFormat;
 import java.util.Locale;
@@ -26,6 +27,10 @@ public class PatientForm extends AppCompatActivity
 
     private EditText todayDate;
     private EditText consentDate;
+    String patientRaceTxt = "";
+    String patientEthnicityTxt = "";
+    String patientIncomeTxt = "";
+    String patientEmpTxt = "";
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
@@ -44,6 +49,8 @@ public class PatientForm extends AppCompatActivity
 
     private static Pattern CONSENT_PATTERN = Pattern.compile("^(?:yes|Yes|No|no)$");
 
+    private static Pattern INSURANCE_PATTERN = Pattern.compile("^(?:NA|na|Na)$");
+
     private static Pattern MARITAL_PATTERN = Pattern.compile("^(?:Single|single|Married|married|partner|Partner|Separated|separated|Divorced|divorced|Widowed|widowed)$");
 
     private static Pattern LETTERS_PATTERN = Pattern.compile("^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$"); // Letters pattern match
@@ -60,6 +67,8 @@ public class PatientForm extends AppCompatActivity
         setContentView(R.layout.activity_patient_form);
 
         //   DAOPatient dao = new DAOPatient();
+
+        DAOInsurance dao = new DAOInsurance();
 
         EditText todayDate = findViewById(R.id.todaysDate);
         todayDate.addTextChangedListener(new TextWatcher() {
@@ -130,6 +139,28 @@ public class PatientForm extends AppCompatActivity
             }
         });
 
+        // checkboxes
+        CheckBox blackAfricanAmerican = findViewById(R.id.blackAfrican);
+        CheckBox whiteCaucasian = findViewById(R.id.whiteCaucasian);
+        CheckBox asianPatient = findViewById(R.id.asian);
+        CheckBox middleEasternNA = findViewById(R.id.middleEastern);
+        CheckBox hispanicLatinoPatient = findViewById(R.id.hispanicLatino);
+        CheckBox nativeAmericanPatient = findViewById(R.id.nativeAmerican);
+        CheckBox nativeHawiianPacificIslander = findViewById(R.id.nativeHawiianPacific);
+        CheckBox HispanicOrLatino = findViewById(R.id.hispanicOrLatino);
+        CheckBox NotHispanicOrLatino = findViewById(R.id.NotHispanicOrLatino);
+        CheckBox weekly = findViewById(R.id.week);
+        CheckBox biWeekly = findViewById(R.id.twoWeek);
+        CheckBox monthly = findViewById(R.id.month);
+        CheckBox yearly = findViewById(R.id.year);
+        CheckBox unEmp = findViewById(R.id.unemployed);
+        CheckBox empFull = findViewById(R.id.employedFt);
+        CheckBox empPart = findViewById(R.id.employedPt);
+        CheckBox empSelf = findViewById(R.id.selfEmployed);
+        CheckBox empStudent = findViewById(R.id.student);
+        CheckBox empRetired = findViewById(R.id.retired);
+        CheckBox empSeek = findViewById(R.id.seekingEmployment);
+        
         Button nextFormButton = findViewById(R.id.nextForm); // set variable for button action
         nextFormButton.setOnClickListener(new View.OnClickListener()
         {
@@ -168,28 +199,7 @@ public class PatientForm extends AppCompatActivity
                 final EditText patientSigned = findViewById(R.id.patientNamePrinted);
                 final EditText patientSig = findViewById(R.id.patientNameSignature);
                 final EditText consentDateSign = findViewById(R.id.consentDate);
-
-                // checkboxes
-                final CheckBox blackAfricanAmerican = findViewById(R.id.blackAfrican);
-                final CheckBox whiteCaucasian = findViewById(R.id.whiteCaucasian);
-                final CheckBox asianPatient = findViewById(R.id.asian);
-                final CheckBox middleEasternNA = findViewById(R.id.middleEastern);
-                final CheckBox hispanicLatinoPatient = findViewById(R.id.hispanicLatino);
-                final CheckBox nativeAmericanPatient = findViewById(R.id.nativeAmerican);
-                final CheckBox nativeHawiianPacificIslander = findViewById(R.id.nativeHawiianPacific);
-                final CheckBox HispanicOrLatino = findViewById(R.id.hispanicOrLatino);
-                final CheckBox NotHispanicOrLatino = findViewById(R.id.NotHispanicOrLatino);
-                final CheckBox weekly = findViewById(R.id.week);
-                final CheckBox biWeekly = findViewById(R.id.twoWeek);
-                final CheckBox monthly = findViewById(R.id.month);
-                final CheckBox yearly = findViewById(R.id.year);
-                final CheckBox unEmp = findViewById(R.id.unemployed);
-                final CheckBox empFull = findViewById(R.id.employedFt);
-                final CheckBox empPart = findViewById(R.id.employedPt);
-                final CheckBox empSelf = findViewById(R.id.selfEmployed);
-                final CheckBox empStudent = findViewById(R.id.student);
-                final CheckBox empRetired = findViewById(R.id.retired);
-                final CheckBox empSeek = findViewById(R.id.seekingEmployment);
+                
 
                 final String dateTxt = todayDate.getText().toString().trim(); // convert the EditText to a String type
                 final String visitReasonTxt = visitReason.getText().toString().trim();
@@ -224,18 +234,11 @@ public class PatientForm extends AppCompatActivity
                 final String patientSignatureText = patientSig.getText().toString().trim();
                 final String consentDateTxt = consentDateSign.getText().toString().trim();
 
-                // information from checkbox input to store in a StringBuilder
-                StringBuilder patientRace = new StringBuilder();
-                final String patientRaceTxt = patientRace.toString().trim();
+                // patientInsurance object
+                com.example.huda_application.patientInsurance info = new patientInsurance(dateTxt,visitReasonTxt,lastNameTxt,firstNameTxt,patientSexTxt,
+                        patientDOBTxt,patientAddTxt,patientCityTxt,patientStateTxt,patientZipCodeTxt,
+                        patientSSNTxt,patientHomeNumTxt,patientCellNumTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt);
 
-                StringBuilder patientEthnicity = new StringBuilder();
-                final String patientEthnicityTxt = patientEthnicity.toString().trim();
-
-                StringBuilder patientIncome = new StringBuilder();
-                final String patientIncomeTxt = patientIncome.toString().trim();
-
-                StringBuilder patientEmp = new StringBuilder();
-                final String patientEmpTxt = patientEmp.toString().trim();
 
                 if (TextUtils.isEmpty(dateTxt) || !DATE_PATTERN.matcher(dateTxt).matches()) // check if date is empty
                 {
@@ -430,35 +433,43 @@ public class PatientForm extends AppCompatActivity
                 }
                 if (blackAfricanAmerican.isChecked())
                 {
-                    patientRace.append("Black/African American");
+                    patientRaceTxt += blackAfricanAmerican.getText().toString();
                 }
-                if (whiteCaucasian.isChecked()) {
-                    patientRace.append("White/Caucasian");
+                if (whiteCaucasian.isChecked())
+                {
+                    patientRaceTxt += whiteCaucasian.getText().toString();
                 }
-                if (asianPatient.isChecked()) {
-                    patientRace.append("Asian");
+                if (asianPatient.isChecked())
+                {
+                    patientRaceTxt += asianPatient.getText().toString();
                 }
-                if (middleEasternNA.isChecked()) {
-                    patientRace.append("Middle Eastern/North African");
+                if (middleEasternNA.isChecked())
+                {
+                    patientRaceTxt += middleEasternNA.getText().toString();
                 }
-                if (hispanicLatinoPatient.isChecked()) {
-                    patientRace.append("Hispanic/Latino");
+                if (hispanicLatinoPatient.isChecked())
+                {
+                    patientRaceTxt += hispanicLatinoPatient.getText().toString();
                 }
-                if (nativeAmericanPatient.isChecked()) {
-                    patientRace.append("Native American");
+                if (nativeAmericanPatient.isChecked())
+                {
+                    patientRaceTxt += nativeAmericanPatient.getText().toString();
                 }
-                if (nativeHawiianPacificIslander.isChecked()) {
-                    patientRace.append("Native Hawaiian/Pacific Islander");
+                if (nativeHawiianPacificIslander.isChecked())
+                {
+                    patientRaceTxt += nativeHawiianPacificIslander.getText().toString();
                 }
                 else if(TextUtils.isEmpty(patientRaceTxt))
                 {
                     Toast.makeText(PatientForm.this, "Race cannot cannot be empty", Toast.LENGTH_LONG).show();
                 }
-                if (HispanicOrLatino.isChecked()) {
-                    patientEthnicity.append("Hispanic or Latino/a");
+                if (HispanicOrLatino.isChecked())
+                {
+                    patientEthnicityTxt += HispanicOrLatino.getText().toString();
                 }
-                if (NotHispanicOrLatino.isChecked()) {
-                    patientEthnicity.append("Not Hispanic or Latino/a");
+                if (NotHispanicOrLatino.isChecked())
+                {
+                    patientEthnicityTxt += NotHispanicOrLatino.getText().toString();
                 }
                 else if(TextUtils.isEmpty(patientEthnicityTxt))
                 {
@@ -500,7 +511,7 @@ public class PatientForm extends AppCompatActivity
                     incomeHousehold.setError("Income is required");
                     incomeHousehold.requestFocus();
                 }
-                else if (!MONEY_PATTERN.matcher(houseIncomeTxt).matches())
+                else if (!DIGITS_PATTERN.matcher(houseIncomeTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be valid income", Toast.LENGTH_LONG).show();
                     incomeHousehold.setError("Income format is required");
@@ -508,19 +519,19 @@ public class PatientForm extends AppCompatActivity
                 }
                 if (weekly.isChecked())
                 {
-                    patientIncome.append("Week");
+                    patientIncomeTxt += weekly.getText().toString();
                 }
                 if (biWeekly.isChecked())
                 {
-                    patientIncome.append("2 Weeks");
+                    patientIncomeTxt += biWeekly.getText().toString();
                 }
                 if (monthly.isChecked())
                 {
-                    patientIncome.append("Month");
+                    patientIncomeTxt += monthly.getText().toString();
                 }
                 if (yearly.isChecked())
                 {
-                    patientIncome.append("Year");
+                    patientIncomeTxt += yearly.getText().toString();
                 }
                 else if(TextUtils.isEmpty(patientIncomeTxt))
                 {
@@ -540,31 +551,31 @@ public class PatientForm extends AppCompatActivity
                 }
                 if (unEmp.isChecked())
                 {
-                    patientEmp.append("Unemployed");
+                    patientEmpTxt += unEmp.getText().toString();
                 }
                 if (empFull.isChecked())
                 {
-                    patientEmp.append("Employed (Full time)");
+                    patientEmpTxt += empFull.getText().toString();
                 }
                 if (empPart.isChecked())
                 {
-                    patientEmp.append("Employed (Part time)");
+                    patientEmpTxt += empPart.getText().toString();
                 }
                 if (empSelf.isChecked())
                 {
-                    patientEmp.append("Self-employed");
+                    patientEmpTxt += empSelf.getText().toString();
                 }
                 if (empStudent.isChecked())
                 {
-                    patientEmp.append("Student");
+                    patientEmpTxt += empStudent.getText().toString();
                 }
                 if (empRetired.isChecked())
                 {
-                    patientEmp.append("Retired");
+                    patientEmpTxt += empRetired.getText().toString();
                 }
                 if (empSeek.isChecked())
                 {
-                    patientEmp.append("Seeking employment");
+                    patientEmpTxt += empSeek.getText().toString();
                 }
                 else if(TextUtils.isEmpty(patientEmpTxt))
                 {
@@ -636,7 +647,7 @@ public class PatientForm extends AppCompatActivity
 //                    patientNameConsent.setError("Name format is required");
 //                    patientNameConsent.requestFocus();
 //                }
-                else if(patientConsentName.equals(firstNameTxt + " " + lastNameTxt))
+                else if(!patientConsentName.equals(firstNameTxt + " " + lastNameTxt))
                 {
                     Toast.makeText(PatientForm.this, "Name must match First name and Last name", Toast.LENGTH_LONG).show();
                     patientNameConsent.setError("Name match is required");
@@ -718,11 +729,31 @@ public class PatientForm extends AppCompatActivity
                     formData.setPatientEthnicity(patientEthnicityTxt);
                     formData.setIncomePayTime(patientIncomeTxt);
                     formData.setEmploymentStatus(patientEmpTxt);
-                    formData.setUID(UserManager.getInstance().getCurrentUser().getUserId());
+//                    formData.setUID(UserManager.getInstance().getCurrentUser().getUserId());
+                    formData.setUID("Test UID");
 
-                    Intent patientContract = new Intent(PatientForm.this, PatientContract.class);
-                    patientContract.putExtra("patientdata",formData );
-                    startActivity(patientContract);
+                    if(!INSURANCE_PATTERN.matcher(patientInsuranceTxt).matches())
+                    {
+                        Toast.makeText(PatientForm.this, "Please wait for further instructions to see if you Qualify for care", Toast.LENGTH_LONG).show();
+
+
+                        dao.add(info).addOnSuccessListener(suc->
+                        {
+                            Toast.makeText(PatientForm.this, "Insurance information recorded", Toast.LENGTH_SHORT).show();
+                        }).addOnFailureListener(er->
+                        {
+                            Toast.makeText(PatientForm.this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
+                        });
+
+                        Intent insuranceApproval = new Intent(PatientForm.this, MainActivity.class);
+                        startActivity(insuranceApproval);
+                    }
+                    else
+                    {
+                        Intent patientContract = new Intent(PatientForm.this, PatientContract.class);
+                        patientContract.putExtra("patientdata",formData );
+                        startActivity(patientContract);
+                    }
                 }
             }
         });

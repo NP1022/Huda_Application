@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +27,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
@@ -86,24 +88,29 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+            public void onCancelled(@NonNull DatabaseError error)
+            {
+
             }
         });
         backbutton.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v)
+    {
         if (v.getId() == R.id.backButton_8)
             startActivity(new Intent(UserAppointment.this , AdminPage.class));
     }
 
-    private class AppointmentViewAdapter extends RecyclerView.Adapter<AppointmentViewHolder> {
+    private class AppointmentViewAdapter extends RecyclerView.Adapter<AppointmentViewHolder>
+    {
 
         private LayoutInflater inflater;
         private final User user;
 
-        public AppointmentViewAdapter(Context context, User user) {
+        public AppointmentViewAdapter(Context context, User user)
+        {
             this.user = user;
             this.inflater = LayoutInflater.from(context);
         }
@@ -122,6 +129,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             holder.date.setText(appointment.getDate());
             holder.status.setText(appointment.getStatus().name().toLowerCase());
             holder.Reason.setText(appointment.getReason());
+            holder.checkedIntimeText.setText(appointment.getCheckedInTime());
 
             holder.checkedIn.setVisibility(View.GONE);
             holder.checkedInText.setVisibility(View.GONE);
@@ -135,6 +143,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
                 holder.checkedIn.setVisibility(View.VISIBLE);
                 holder.checkedInText.setVisibility(View.VISIBLE);
             }
+
+
             if(appointment.getStatus() == AppointmentStatus.DENIED )
             {
                 holder.approve.setVisibility(View.GONE);
@@ -152,9 +162,20 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
             }
+            if(!appointment.isCheckedIn() )
+            {
+                holder.checkedIntime.setVisibility(View.GONE);
+                holder.checkedIntimeText.setVisibility(View.GONE);
 
-            holder.approve.setOnClickListener(listener -> {
+            }
+
+            holder.approve.setOnClickListener(listener ->
+            {
                 user.getAppointments().get(position).setStatus(AppointmentStatus.APPROVED);
+                SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy HH:mm z");
+
+                String currentDateAndTime = date.format(new Date());
+                user.getAppointments().get(position).setAdminActionTime(currentDateAndTime);
                 FirebaseClient.updateUser(user);
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
@@ -165,26 +186,32 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
 
                 holder.status.setText(appointment.getStatus().name().toLowerCase());
 
-                try {
+                try
+                {
                     sendemail(user.getAppointments().get(position).getDate(), user.getAppointments().get(position).getTime() , "approved");
                 } catch (MessagingException e) {
                     e.printStackTrace();
                 }
-
+                Toast.makeText(UserAppointment.this,"Appointment has been successfully accepted",Toast.LENGTH_LONG).show();
             });
 
-            holder.deny.setOnClickListener(listener -> {
+            holder.deny.setOnClickListener(listener ->
+            {
                 user.getAppointments().get(position).setStatus(AppointmentStatus.DENIED);
                 FirebaseClient.updateUser(user);
 
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
                 holder.status.setText(appointment.getStatus().name().toLowerCase());
-                try {
+                try
+                {
                     sendemail(user.getAppointments().get(position).getDate(), user.getAppointments().get(position).getTime() , "denied");
-                } catch (MessagingException e) {
+                }
+                catch (MessagingException e)
+                {
                     e.printStackTrace();
                 }
+                Toast.makeText(UserAppointment.this,"Appointment has been denied",Toast.LENGTH_LONG).show();
             });
         }
 
@@ -205,6 +232,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
 
         private final AppCompatButton approve;
         private final AppCompatButton deny;
+        private final TextView checkedIntime;
+        private final TextView checkedIntimeText;
 
         public AppointmentViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -216,6 +245,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             deny = itemView.findViewById(R.id.decline);
             checkedIn = itemView.findViewById(R.id.checkedIn);
             checkedInText = itemView.findViewById(R.id.checkedInText);
+            checkedIntimeText = itemView.findViewById(R.id.CheckinTimeText);
+            checkedIntime = itemView.findViewById(R.id.CheckinTime);
         }
 
         public TextView getTime() {
@@ -242,9 +273,9 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             return checkedInText;
         }
     }
-    private  void sendemail(String Date, String Time , String Status) throws MessagingException {
+    private  void sendemail(String Date, String Time , String Status) throws MessagingException
+    {
         final String sender_username = "appclinichuda@gmail.com";
-
 
         String Fullname_text = updatedUser.getFirstName() + " " + updatedUser.getLastName();
         String birthday_text = updatedUser.getBirthday();

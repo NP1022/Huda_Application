@@ -83,7 +83,7 @@
     <string name="PreferredNumber">Preferred Number (Home or Mobile)</string>
     <string name="ConsentToCall">Consent to Call? (Yes or No)</string>
     <string name="ConsentToText">Consent to Text? (Yes or No)</string>
-    <string name="InsuranceProvider">Insurance Provider</string>
+    <string name="InsuranceProvider">Insurance (Type NA for no insurance)</string>
     <string name="Email">Email (Same as Registration Email)</string>
 
     <string name="SelectRace">Please Select a Race:</string>
@@ -370,8 +370,8 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="userDeleteInput">Enter Yes or No</string>
     <string name="userConfirmDelete">Confirm Yes or No</string>
 
-<!--    <string name="menu_update_password">Update Password</string>-->
-<!--    <string name="menu_messages">Messages</string>-->
-<!--    <string name="menu_logout">Logout</string>-->
+    <!--    <string name="menu_update_password">Update Password</string>-->
+    <!--    <string name="menu_messages">Messages</string>-->
+    <!--    <string name="menu_logout">Logout</string>-->
 
 </resources>

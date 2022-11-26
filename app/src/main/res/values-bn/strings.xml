@@ -83,7 +83,7 @@
     <string name = "PreferredNumber">পছন্দের নম্বর (বাড়ি বা মোবাইল)</string>
     <string name = "ConsentToCall">কল করতে সম্মতি? (হ্যাঁ বা না)</string>
     <string name = "ConsentToText">টেক্সট সম্মতি? (হ্যাঁ বা না)</string>
-    <string name = "InsuranceProvider">বীমা প্রদানকারী</string>
+    <string name = "InsuranceProvider">বীমা (কোন বীমার জন্য NA টাইপ করুন)</string>
     <string name = "Email">ইমেল (রেজিস্ট্রেশন ইমেলের মতোই)</string>
 
 

@@ -72,8 +72,6 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                     .permitAll().build();
             StrictMode.setThreadPolicy(policy);
-
-
         }
 
         RecyclerView recyclerView = findViewById(R.id.appointmentsView);
@@ -154,12 +152,22 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
             holder.time.setText(appointment.getTime());
             holder.date.setText(appointment.getDate());
             holder.status.setText(appointment.getStatus().name().toLowerCase());
+            holder.response.setText(appointment.getAdminActionTime());
 
             holder.checkedInText.setVisibility(View.GONE);
             if (appointment.getStatus() != AppointmentStatus.PENDING) {
                 holder.cancel.setVisibility(View.GONE);
             }
-
+            if(appointment.getStatus() == AppointmentStatus.DENIED){
+                holder.responsestatic.setText("Denied:");
+            }
+            if (appointment.getStatus() != AppointmentStatus.APPROVED && appointment.getStatus() != AppointmentStatus.DENIED) {
+                holder.response.setVisibility(View.GONE);
+                holder.responsestatic.setVisibility(View.GONE);
+            }
+            if (appointment.getStatus() != AppointmentStatus.PENDING) {
+                holder.cancel.setVisibility(View.GONE);
+            }
             if (appointment.getStatus() != AppointmentStatus.APPROVED || appointment.isCheckedIn()) {
                 holder.checkInButton.setVisibility(View.GONE);
 
@@ -222,8 +230,13 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
                         }
 
                     }
+                    SimpleDateFormat date = new SimpleDateFormat("HH:mm z");
 
+                    String currentDateAndTime = date.format(new Date());
+
+                    appointments.get(position).setCheckedInTime(currentDateAndTime);
                     appointments.get(position).setCheckedIn(true);
+
                     holder.cancel.setVisibility(View.GONE);
                     holder.checkInButton.setVisibility(View.GONE);
                     holder.checkedInText.setVisibility(View.VISIBLE);
@@ -254,6 +267,8 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
         private final TextView checkedInText;
         private final AppCompatButton cancel;
         private final AppCompatButton checkInButton;
+        private final TextView responsestatic;
+        private final TextView response;
 
         public AppointmentViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -263,6 +278,8 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
             this.checkedInText = itemView.findViewById(R.id.checkedInText);
             this.cancel = itemView.findViewById(R.id.cancelAppointment);
             this.checkInButton = itemView.findViewById(R.id.checkInAppointment);
+            this.responsestatic = itemView.findViewById(R.id.responsestatic);
+            this.response = itemView.findViewById(R.id.response);
         }
 
         public TextView getDate() {

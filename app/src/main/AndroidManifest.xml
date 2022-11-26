@@ -17,6 +17,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".CustomizeTime"
+            android:exported="false" />
+        <activity
             android:name=".updateEmail"
             android:exported="false" />
         <activity
@@ -86,7 +89,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".NewOrReturningUser"
             android:exported="false" />
