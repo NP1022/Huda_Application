@@ -14,15 +14,18 @@ import com.google.rpc.Help;
 
 public class Contact_Us extends AppCompatActivity implements View.OnClickListener {
 
+    // Initializing variables that connect to activity_contact_us.xml
     TextView HUDAnumber, HUDAaddresss;
+    // ImageViews of social media logos to redirect on click
     private ImageView Facebook, Twitter, LinkedIn, Instagram, backButton;
 
-
+    // onCreate function
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
+        // Defining all variables to find associated View IDs from XML page
         HUDAnumber = (TextView) findViewById(R.id.HUDAnumber);
         HUDAaddresss = (TextView) findViewById(R.id.HUDAaddress);
         Facebook = (ImageView) findViewById(R.id.facebook);
@@ -31,8 +34,7 @@ public class Contact_Us extends AppCompatActivity implements View.OnClickListene
         Instagram = (ImageView) findViewById(R.id.instagram);
         backButton = (ImageView) findViewById(R.id.backButton);
 
-
-
+        // Wiring all variables to View.OnClickListener in order to click on
         HUDAnumber.setOnClickListener((View.OnClickListener) this);
         HUDAaddresss.setOnClickListener((View.OnClickListener) this);
         Facebook.setOnClickListener((View.OnClickListener) this);
@@ -42,6 +44,8 @@ public class Contact_Us extends AppCompatActivity implements View.OnClickListene
         backButton.setOnClickListener((View.OnClickListener) this);
     }
 
+    // onClick function, takes a view as input, outputs new Intent to start activity, redirecting to
+    // desired page
     @Override
     public void onClick(View view)
     {
