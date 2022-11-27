@@ -32,6 +32,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.SimpleTimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -50,6 +54,9 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
 
     private static final Pattern DATE_PATTERN = Pattern.compile(
             "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
+
+    private static Pattern LETTERS_PATTERN = Pattern.compile("^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$"); // Letters pattern match
+
 
     FirebaseDatabase rootNode;
     DatabaseReference ref;
@@ -113,12 +120,29 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                 final String dob = DOb.getText().toString().trim();
 
 
-                if (TextUtils.isEmpty(firstNameTxt) || TextUtils.isEmpty(lastNameTxt)) // check if the firstname and lastname are empty
+                if (TextUtils.isEmpty(firstNameTxt)) // check if the firstname and lastname are empty
                 {
-                    Toast.makeText(RegisterAccount.this,"Please enter first and last name",Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterAccount.this,"Please enter first name",Toast.LENGTH_LONG).show();
                     firstName.setError("First Name is required");
-                    lastName.setError("Last Name is required");
                     firstName.requestFocus();
+                }
+                else if(TextUtils.isEmpty(lastNameTxt))
+                {
+                    Toast.makeText(RegisterAccount.this,"Please enter last name",Toast.LENGTH_LONG).show();
+                    lastName.setError("Last Name is required");
+                    lastName.requestFocus();
+                }
+                else if(!LETTERS_PATTERN.matcher(firstNameTxt).matches()) // Pattern matcher to check if the
+                // name does not contain letter
+                {
+                    Toast.makeText(RegisterAccount.this,"Name must be alphabetic",Toast.LENGTH_LONG).show();
+                    firstName.setError("Name format is required");
+                    firstName.requestFocus();
+                }
+                else if(!LETTERS_PATTERN.matcher(lastNameTxt).matches())
+                {
+                    Toast.makeText(RegisterAccount.this,"Name must be alphabetic",Toast.LENGTH_LONG).show();
+                    lastName.setError("Name format is required");
                     lastName.requestFocus();
                 }
                 else if(TextUtils.isEmpty(emailTxt)) // check if email is empty
@@ -159,21 +183,28 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                     password.clearComposingText();
                     conPassword.clearComposingText();
                 }
-//                else if(!TextUtils.isEmpty(dob))
-//                {
-//                    Toast.makeText(RegisterAccount.this,"Date of birth cannot be empty",Toast.LENGTH_LONG).show();
-//                    DOb.setError("Date of birth is required");
-//                    DOb.requestFocus();
-//                }
-//                else if(!DATE_PATTERN.matcher(dob).matches())
-//                {
-//                    Toast.makeText(RegisterAccount.this,"Date of birth must be MM-DD-YYYY",Toast.LENGTH_LONG).show();
-//                    DOb.setError("Date format is required");
-//                    DOb.requestFocus();
-//                }
+                else if(TextUtils.isEmpty(dob))
+                {
+                    Toast.makeText(RegisterAccount.this,"Date of birth cannot be empty",Toast.LENGTH_LONG).show();
+                    DOb.setError("Date of birth is required");
+                    DOb.requestFocus();
+                }
+                else if(!DATE_PATTERN.matcher(dob).matches())
+                {
+                    Toast.makeText(RegisterAccount.this,"Date of birth must be MM-DD-YYYY",Toast.LENGTH_LONG).show();
+                    DOb.setError("Date format is required");
+                    DOb.requestFocus();
+                }
+               else if(calcAge(dob) <= 18)
+                {
+                    Toast.makeText(RegisterAccount.this,"Patient must be 18 or older",Toast.LENGTH_LONG).show();
+                    DOb.setError("Minimum age is required");
+                    DOb.requestFocus();
+                }
                 else
                 {
                     User user = new User(firstNameTxt,lastNameTxt,emailTxt,dob, UserType.PATIENT);
+
 
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();
                     mAuth.createUserWithEmailAndPassword(emailTxt,passwordTxt).addOnCompleteListener(new OnCompleteListener<AuthResult>()
@@ -196,7 +227,8 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                                         {
                                             Toast.makeText(RegisterAccount.this,"Verification email sent",Toast.LENGTH_LONG).show(); // toast meessage to user
                                             Toast.makeText(RegisterAccount.this,"Please verify your email",Toast.LENGTH_LONG).show(); // toast meessage to user
-                                            startActivity(new Intent(RegisterAccount.this,NewOrReturningUser.class));
+
+                                            startActivity(new Intent(RegisterAccount.this,MainActivity.class));
                                         }).addOnFailureListener(er->
                                         {
                                             Toast.makeText(RegisterAccount.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
@@ -236,5 +268,27 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    // function to calculate date of birth, that takes a string value of the date of birth
+    // in the format of MM-DD-YYYY
+    public static long calcAge(String dob)
+    {
+        SimpleDateFormat sdf1 = new SimpleDateFormat("mm-dd-yyyy");
+        Date udob = null;
+        try {
+            udob = sdf1.parse(dob);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
+        Date sysdate=new Date();
+
+        long ms=System.currentTimeMillis()-udob.getTime();
+
+        long age = (long)((long)ms/(1000.0*60*60*24*365));
+
+        // String ageStr = String.valueOf(age);
+
+        return age;
+
+    }
 }

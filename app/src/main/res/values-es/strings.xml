@@ -44,11 +44,11 @@
 
 <!--    Services -->
     <string name="healthservices">Servicios de salud gratuitos</string>
-    <string name="PrimaryNewLogin"><u>Primaria</u></string>
-    <string name="MentalNewLogin"><u>Mental</u></string>
-    <string name="VisionNewLogin"><u>Visión</u></string>
-    <string name="DentalNewLogin"><u>Dental</u></string>
-    <string name="SpecialityNewLogin"><u>Especialidad</u></string>
+    <string name="PrimaryNewLogin">Primaria</string>
+    <string name="MentalNewLogin">Mental</string>
+    <string name="VisionNewLogin">Visión</string>
+    <string name="DentalNewLogin">Dental</string>
+    <string name="SpecialityNewLogin">Especialidad</string>
     <string name="HaveAnAccount">¿Tener una cuenta?</string>
     <string name="DontHaveAnAccount">¿No tienes una cuenta?</string>
     <string name="SignUp">Inscribirse</string>
@@ -83,7 +83,7 @@
     <string name = "PreferredNumber">Número Preferido (¿Casa o Móvil?)</string>
     <string name = "ConsentToCall">¿Consentimiento para llamar? (Si o No)</string>
     <string name = "ConsentToText">¿Consentimiento para enviar mensajes de texto? (Si o no)</string>
-    <string name = "InsuranceProvider">Proveedor de Seguros</string>
+    <string name = "InsuranceProvider">Seguro (Escriba NA si no tiene seguro)</string>
     <string name = "Email">Correo Electrónico (Igual que el correo electrónico de registro)</string>
 
     <string name = "SelectRace">Selecciona una carrera:</string>

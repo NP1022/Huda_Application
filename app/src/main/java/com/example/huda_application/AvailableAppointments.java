@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.huda_application.appointment.AppointmentManager;
 import com.example.huda_application.user.Appointment;
@@ -44,6 +45,7 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
     private List<Time> availableTimes = new ArrayList<>();
     private PatientViewAdapter viewAdapter;
     private ImageView backbutton;
+    private ValueEventListener hoursListener;
     private ValueEventListener dbListener;
     private RecyclerView recyclerView;
 
@@ -119,6 +121,7 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
             holder.Time.setText(time.toString());
             holder.Remove.setOnClickListener(view -> {
                 AppointmentManager.createAppointment(AvailableAppointments.this.dateButton.getText().toString(), time.toString(), "Admin");
+                Toast.makeText(AvailableAppointments.this,"Appointment Time "+times.get(position) + " time slot has been removed",Toast.LENGTH_SHORT).show();
             });
         }
 
@@ -167,30 +170,47 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
 
         String key = String.format("%d-%d-%d", date.getMonth() + 1, date.getDate(), date.getYear() + 1900);
         textView.setText(key);
+
+
         appointmentManager = new AppointmentManager(key);
 
-        if (dbListener != null) {
+        if (hoursListener != null) {
+            FirebaseDatabase.getInstance().getReference("ClinicHours").child(key).removeEventListener(hoursListener);
             FirebaseDatabase.getInstance().getReference("Appointment").child(key).removeEventListener(dbListener);
         }
 
-        dbListener = new ValueEventListener() {
+        hoursListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot child : snapshot.getChildren()) {
-                    appointmentManager.convertAppointment(child);
-                }
+                appointmentManager.createTimesOpen(snapshot.getValue(Float.class));
 
-                availableTimes = appointmentManager.getAvailableTimes();
+                dbListener = new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot child : snapshot.getChildren()) {
+                            appointmentManager.convertAppointment(child);
+                        }
 
-                viewAdapter = new PatientViewAdapter(AvailableAppointments.this, availableTimes);
-                recyclerView.setAdapter(viewAdapter);
+                        availableTimes = appointmentManager.getAvailableTimes();
+
+                        viewAdapter = new PatientViewAdapter(AvailableAppointments.this, availableTimes);
+                        recyclerView.setAdapter(viewAdapter);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                    }
+                };
+
+                FirebaseDatabase.getInstance().getReference("Appointment").child(key).addValueEventListener(dbListener);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+
             }
         };
 
-        FirebaseDatabase.getInstance().getReference("Appointment").child(key).addValueEventListener(dbListener);
+        FirebaseDatabase.getInstance().getReference("ClinicHours").child(key).addValueEventListener(hoursListener);
     }
 }

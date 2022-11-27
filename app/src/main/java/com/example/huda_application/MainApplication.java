@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import com.example.huda_application.appointment.AppointmentManager;
 import com.example.huda_application.databinding.ActivityMainApplicationBinding;
-import com.example.huda_application.databinding.NewProfileMenuBinding;
+
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.Message;
 import com.example.huda_application.user.User;
@@ -31,6 +31,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 
 public class MainApplication extends AppCompatActivity implements View.OnClickListener {
 
@@ -60,7 +61,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Inbox = findViewById(R.id.inbox);
         Announcements = findViewById(R.id.announcementsPage);
         profile = (ImageView) findViewById(R.id.profileIcon);
-        profileMenu = findViewById(R.id.nav_view);
+
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
@@ -98,6 +99,8 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
                 }
             });
         }
+
+
 
 //        binding = ActivityMainApplicationBinding.inflate(getLayoutInflater());
 //        setContentView(binding.getRoot());
@@ -173,17 +176,5 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
             startActivity(profilePage);
         }
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.profile_menu, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_profile_menu);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
 }

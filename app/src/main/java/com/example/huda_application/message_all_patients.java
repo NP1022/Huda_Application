@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.Message;
@@ -67,14 +68,19 @@ public class message_all_patients extends AppCompatActivity implements View.OnCl
             String date = new SimpleDateFormat("MM-d-yyyy", Locale.getDefault()).format(new Date());
             String message = Message_feild.getText().toString().trim();
             Message m = new Message(date, message, false);
+            if(message.length() < 15){
 
-            for (int i = 0; i < users.size(); i++) {
-                users.get(i).addMessages(m);
-                FirebaseClient.updateUser(users.get(i));
+                Toast.makeText(message_all_patients.this, "Message has to be more than 15 characters.", Toast.LENGTH_LONG).show();
             }
+            else {
+                for (int i = 0; i < users.size(); i++) {
+                    users.get(i).addMessages(m);
+                    FirebaseClient.updateUser(users.get(i));
+                }
 
-            startActivity( new Intent(this , Messagepage.class));
-
+                startActivity(new Intent(this, Messagepage.class));
+                Toast.makeText(message_all_patients.this, "Message successfully sent.", Toast.LENGTH_LONG).show();
+            }
         }
         else if(v.getId() == R.id.backButton_message_all){
             startActivity( new Intent(this ,Messagepage.class ));

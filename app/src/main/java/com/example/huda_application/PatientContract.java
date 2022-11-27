@@ -119,6 +119,12 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
                 patientSig2.setError("Name format is required");
                 patientSig2.requestFocus();
             }
+            else if(!patientSignatureText2.equals(patientSignedText2))
+            {
+                Toast.makeText(PatientContract.this, "Signature must match Signed name", Toast.LENGTH_LONG).show();
+                patientSig2.setError("Name match is required");
+                patientSig2.requestFocus();
+            }
             else
             {
                 data.setConsentDateForm2(consentDateTxt2);

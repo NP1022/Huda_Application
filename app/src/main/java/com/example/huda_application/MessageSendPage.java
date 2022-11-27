@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.Message;
@@ -52,14 +53,19 @@ public class MessageSendPage extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         if(view.getId() == R.id.send){
 
-
             String date = new SimpleDateFormat("MM-d-yyyy", Locale.getDefault()).format(new Date());
             String message = Message_feild.getText().toString().trim();
-            Message m = new Message(date, message, false);
-            user.addMessages(m);
-            FirebaseClient.updateUser(user);
-            startActivity( new Intent(this , Messagepage.class));
+            if(message.length() < 15){
 
+                Toast.makeText(MessageSendPage.this, "Message has to be more than 15 characters.", Toast.LENGTH_LONG).show();
+            }
+            else {
+                Message m = new Message(date, message, false);
+                user.addMessages(m);
+                FirebaseClient.updateUser(user);
+                startActivity(new Intent(this, Messagepage.class));
+                Toast.makeText(MessageSendPage.this, "Message successfully sent.", Toast.LENGTH_LONG).show();
+            }
         }
         else if(view.getId() == R.id.backButton_message){
             startActivity( new Intent(this ,Messagepage.class ));

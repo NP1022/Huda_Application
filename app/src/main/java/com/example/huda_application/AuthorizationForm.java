@@ -120,6 +120,12 @@ public class AuthorizationForm extends AppCompatActivity implements View.OnClick
                 patientSigned3.setError("Name format is required");
                 patientSigned3.requestFocus();
             }
+            else if(!patientSignatureText3.equals(patientSignedText3))
+            {
+                Toast.makeText(AuthorizationForm.this, "Signature must match Signed name", Toast.LENGTH_LONG).show();
+                patientSig3.setError("Name match is required");
+                patientSig3.requestFocus();
+            }
             else
             {
                 data.setConsentDateForm3(consentDateTxt3);

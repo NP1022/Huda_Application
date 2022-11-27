@@ -2,11 +2,14 @@ package com.example.huda_application;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,18 +40,39 @@ import java.util.Date;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.Properties;
 import java.util.stream.Collectors;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 public class Appointments extends AppCompatActivity implements View.OnClickListener {
 
     private AppointmentViewAdapter viewAdapter;
     private ImageView backButton;
+    private String smtp = "mail.smtp.";
+    private String sender_email = "appclinichuda@gmail.com";
+    private String sender_password = "ldjtuhzvtetjofld";
+    private Button callClinic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_appointments);
 
+        int SDK_INT = android.os.Build.VERSION.SDK_INT;
+        setContentView(R.layout.activity_appointments);
+        if (SDK_INT > 8)
+        {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                    .permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
 
         RecyclerView recyclerView = findViewById(R.id.appointmentsView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -78,6 +102,9 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
         backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(this);
 
+        callClinic = findViewById(R.id.callClinic2);
+        callClinic.setOnClickListener(this);
+
 
     }
 
@@ -85,10 +112,14 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if(view.getId() == R.id.backButton)
         {
-
             Intent Main = new Intent(this ,MainApplication.class);
             startActivity(Main);
-
+        }
+        else if(view.getId() == R.id.callClinic2)
+        {
+            Intent HUDACall = new Intent(Intent.ACTION_DIAL);
+            HUDACall.setData(Uri.parse("tel:3138658446"));
+            startActivity(HUDACall);
         }
     }
 
@@ -121,12 +152,22 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
             holder.time.setText(appointment.getTime());
             holder.date.setText(appointment.getDate());
             holder.status.setText(appointment.getStatus().name().toLowerCase());
+            holder.response.setText(appointment.getAdminActionTime());
 
             holder.checkedInText.setVisibility(View.GONE);
             if (appointment.getStatus() != AppointmentStatus.PENDING) {
                 holder.cancel.setVisibility(View.GONE);
             }
-
+            if(appointment.getStatus() == AppointmentStatus.DENIED){
+                holder.responsestatic.setText("Denied:");
+            }
+            if (appointment.getStatus() != AppointmentStatus.APPROVED && appointment.getStatus() != AppointmentStatus.DENIED) {
+                holder.response.setVisibility(View.GONE);
+                holder.responsestatic.setVisibility(View.GONE);
+            }
+            if (appointment.getStatus() != AppointmentStatus.PENDING) {
+                holder.cancel.setVisibility(View.GONE);
+            }
             if (appointment.getStatus() != AppointmentStatus.APPROVED || appointment.isCheckedIn()) {
                 holder.checkInButton.setVisibility(View.GONE);
 
@@ -189,16 +230,26 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
                         }
 
                     }
+                    SimpleDateFormat date = new SimpleDateFormat("HH:mm z");
 
+                    String currentDateAndTime = date.format(new Date());
+
+                    appointments.get(position).setCheckedInTime(currentDateAndTime);
                     appointments.get(position).setCheckedIn(true);
+
                     holder.cancel.setVisibility(View.GONE);
                     holder.checkInButton.setVisibility(View.GONE);
                     holder.checkedInText.setVisibility(View.VISIBLE);
                     FirebaseClient.updateUser(user);
                     UserManager.getInstance().setCurrentUser(user);
+                    try {
+                        sendemail(appointment.getDate(), appointment.getTime() );
+                    } catch (MessagingException e) {
+                        e.printStackTrace();
+                    }
                 }
                 else
-                    Toast.makeText(Appointments.this,"Check-in on allowed on the same date! ",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Appointments.this,"Check-in id only allowed on the same day! ",Toast.LENGTH_LONG).show();
             });
         }
 
@@ -216,6 +267,8 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
         private final TextView checkedInText;
         private final AppCompatButton cancel;
         private final AppCompatButton checkInButton;
+        private final TextView responsestatic;
+        private final TextView response;
 
         public AppointmentViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -225,6 +278,8 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
             this.checkedInText = itemView.findViewById(R.id.checkedInText);
             this.cancel = itemView.findViewById(R.id.cancelAppointment);
             this.checkInButton = itemView.findViewById(R.id.checkInAppointment);
+            this.responsestatic = itemView.findViewById(R.id.responsestatic);
+            this.response = itemView.findViewById(R.id.response);
         }
 
         public TextView getDate() {
@@ -250,5 +305,82 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
         public TextView getCheckedInText() {
             return checkedInText;
         }
+
+    }
+    private  void sendemail(String Date, String Time ) throws MessagingException {
+        final String sender_username = "appclinichuda@gmail.com";
+
+
+        String Fullname_text = UserManager.getInstance().getCurrentUser().getFirstName() + " " + UserManager.getInstance().getCurrentUser().getLastName();
+        String birthday_text = UserManager.getInstance().getCurrentUser().getBirthday();
+        String email_text = UserManager.getInstance().getCurrentUser().getEmailAddress();
+
+
+        InternetAddress s_sender = new InternetAddress(sender_email);
+        InternetAddress reciever = new InternetAddress("ali.bilal.said@gmail.com");
+        final String message_text = "Dear Admin, " + ",\n\n"+ "Patient: " + Fullname_text + " Birthday: " + birthday_text + " is checking in for their appointment"+".\n\n" + "Appointment Date: " + Date+ "\nAppointment Time: " + Time+"\n\nThank You" ;
+        Properties settings = Settings(smtp);
+
+
+
+
+        Session pass_auth = Session.getInstance(settings, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+
+
+
+
+                return new PasswordAuthentication(sender_email, sender_password);
+
+
+
+            }
+        });
+
+        Message f_email = sendmimmessage(pass_auth, s_sender , reciever, "order", message_text);
+
+        Transport.send(f_email);
+
+
+
+    }
+
+    private Properties Settings(String smtp) {
+        String smtp_gmail ="smtp.gmail.com";
+
+        Properties settings = new Properties();
+
+
+        settings.put(smtp+"auth", "true");
+
+        settings.put(smtp+"starttls.enable", "true");
+
+        settings.put(smtp+"host", smtp_gmail);
+        settings.put(smtp+"port", "587");
+        return settings;
+
+    }
+
+    private static Message sendmimmessage(Session f_email, InternetAddress s_sender, InternetAddress reciever, String order, String message_text) throws MessagingException {
+        Message mimmessage = new MimeMessage(f_email);
+
+
+
+
+        mimmessage.setFrom(s_sender);
+
+
+        mimmessage.setSentDate(new Date());
+
+        mimmessage.setRecipient(Message.RecipientType.TO,  reciever);
+
+        mimmessage.setText(message_text);
+
+        mimmessage.setSubject("Patient Appointment Status");
+
+
+        return mimmessage;
+
     }
 }

@@ -8,6 +8,25 @@
     tools:context=".ApptRequest">
 
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/callClinic"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/buttonstyle"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:foreground="@drawable/phone"
+        android:foregroundGravity="center"
+        android:textColor="#ffffff"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="50dp"
@@ -21,9 +40,9 @@
     <TextView
         android:id="@+id/loginPara2"
         android:layout_width="329dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="15dp"
-        android:text="Complete the fields below to submit a request for an appointment."
+        android:text="Complete the fields below to submit a request for an appointment or click the phone icon above to call us."
         android:textColor="#5A5959"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"

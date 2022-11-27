@@ -3,6 +3,7 @@ package com.example.huda_application;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
@@ -53,8 +54,9 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     private static final Pattern TIME_PATTERN = Pattern.compile("(1[012]|[1-9]):[0-5][0-9](\\s)?(?i)(am|pm)");
 
     private EditText reason;
-    private Button checkin, dateButton, birthday;
+    private Button checkin, dateButton, phoneButton;
     private TextView time, char_Count;
+
     private ImageView backButton;
     private String selectedTime = "";
     private List<Time> availableTimes;
@@ -97,6 +99,8 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             dialog.setDisabledDays(days.toArray(new Calendar[0]));
             dialog.show(getSupportFragmentManager(), "Available Times");
         });
+
+        phoneButton = findViewById(R.id.callClinic);
 
         // date = findViewById(R.id.dateText);
         // birthday = findViewById(R.id.birthday);
@@ -164,6 +168,8 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 //            dialog.setDisabledDays(days.toArray(new Calendar[0]));
 //            dialog.show(getSupportFragmentManager(), "Available Times");
 //        });
+
+        phoneButton.setOnClickListener(this);
         reason.setOnClickListener(this);
         checkin.setOnClickListener(this);
 
@@ -228,10 +234,19 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             else
                 Toast.makeText(ApptRequest.this,"Appointments can't be made for previous days",Toast.LENGTH_LONG).show();
         }
-            else if (view.getId() == R.id.backButton) {
-                Intent prev = new Intent(this, Appointments.class);
-                startActivity(prev);
-            }
+
+        else if (view.getId() == R.id.backButton)
+        {
+            Intent prev = new Intent(this, Appointments.class);
+            startActivity(prev);
+        }
+
+        else if (view.getId() == R.id.callClinic)
+        {
+            Intent HUDACall = new Intent(Intent.ACTION_DIAL);
+            HUDACall.setData(Uri.parse("tel:3138658446"));
+            startActivity(HUDACall);
+        }
     }
 
     @Override
@@ -252,31 +267,44 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 
 
         appointmentManager = new AppointmentManager(key);
-        FirebaseDatabase.getInstance().getReference("Appointment").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+
+        FirebaseDatabase.getInstance().getReference("ClinicHours").child(key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot child : snapshot.getChildren()) {
-                    appointmentManager.convertAppointment(child);
-                }
-                availableTimes = appointmentManager.getAvailableTimes();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                appointmentManager.createTimesOpen(snapshot.getValue(Float.class));
 
-
-                    options.setSingleChoiceItems(appointmentManager.getAvailableTimes().stream().map(Time::toString).collect(Collectors.toList()).toArray(new String[0]), -1, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface Diag_options, int opts) {
-                            Time appointmentTime = availableTimes.get(opts);
-                            time.setText(appointmentTime.toString());
-                            selectedTime = appointmentTime.toString();
-                            Diag_options.dismiss();
+                FirebaseDatabase.getInstance().getReference("Appointment").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot child : snapshot.getChildren()) {
+                            appointmentManager.convertAppointment(child);
                         }
-                    });
+                        availableTimes = appointmentManager.getAvailableTimes();
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 
-                }
+
+                            options.setSingleChoiceItems(appointmentManager.getAvailableTimes().stream().map(Time::toString).collect(Collectors.toList()).toArray(new String[0]), -1, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface Diag_options, int opts) {
+                                    Time appointmentTime = availableTimes.get(opts);
+                                    time.setText(appointmentTime.toString());
+                                    selectedTime = appointmentTime.toString();
+                                    Diag_options.dismiss();
+                                }
+                            });
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                    }
+                });
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }

@@ -31,7 +31,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Time:"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/time"
@@ -57,7 +57,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Date:"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/appointmentDate"
@@ -83,8 +83,9 @@
                 android:layout_marginBottom="5dp"
                 android:text="Status:"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/Status"
                 android:layout_width="wrap_content"
@@ -96,7 +97,35 @@
                 android:textColor="@color/black"
                 android:textSize="15sp" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/responsestatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="5dp"
+                android:text="Approved:"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/response"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="temp"
+
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
 
     </LinearLayout>
 

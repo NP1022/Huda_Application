@@ -44,11 +44,11 @@
 
 <!--    Services-->
     <string name="healthservices"> خدمات صحية مجانية</string>
-    <string name="PrimaryNewLogin"><u>الأولية</u></string>
-    <string name="MentalNewLogin"><u>عقلي</u></string>
-    <string name="VisionNewLogin"><u>رؤية</u></string>
-    <string name="DentalNewLogin"><u>طب الأسنان</u></string>
-    <string name="SpecialityNewLogin"><u>تخصص</u></string>
+    <string name="PrimaryNewLogin">الأولية</string>
+    <string name="MentalNewLogin">عقلي</string>
+    <string name="VisionNewLogin">رؤية</string>
+    <string name="DentalNewLogin">طب الأسنان</string>
+    <string name="SpecialityNewLogin">تخصص</string>
     <string name="HaveAnAccount">لديك حساب؟</string>
     <string name="DontHaveAnAccount">لا تملك حساب؟</string>
     <string name="SignUp">اشتراك</string>
@@ -83,7 +83,7 @@
     <string name = "PreferredNumber">رقم الهاتف المفضل (المنزل أو الهاتف المحمول)</string>
     <string name = "ConsentToCall">الموافقة على الاتصال؟ (نعم ام لا)</string>
     <string name = "ConsentToText">الموافقة على النص؟ (نعم ام لا)</string>
-    <string name = "InsuranceProvider">شركة التأمين</string>
+    <string name = "InsuranceProvider">التأمين (اكتب NA بدون تأمين)</string>
     <string name = "Email">البريد الإلكتروني (مثل التسجيل)</string>
 
     <string name = "SelectRace">الرجاء تحديد العرق</string>
