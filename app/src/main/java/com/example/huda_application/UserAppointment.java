@@ -46,7 +46,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserAppointment extends AppCompatActivity implements View.OnClickListener {
-
+                                                                                // Appointments page for the Admin of the application which includes the recycle view
+                                                                                // The Appointments page will show the appointments for the Current patient
+                                                                                // and allow then to Approve or Deny an appointment
     private AppointmentViewAdapter viewAdapter;
     private ImageView backbutton;
     private User updatedUser;
@@ -58,7 +60,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
         int SDK_INT = android.os.Build.VERSION.SDK_INT;
         if (SDK_INT > 8)
         {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()               // Use of more than 1 Thread in the application
                     .permitAll().build();
             StrictMode.setThreadPolicy(policy);
 
@@ -68,7 +70,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_user_appointment);
 
         Intent intent = getIntent();
-        User user = (User) intent.getSerializableExtra("user");
+        User user = (User) intent.getSerializableExtra("user");                    //setting up recycle view equal to the recycle view in the UI
+                                                                                                    // and that recycle view will be passed into the adapater
 
         TextView name = findViewById(R.id.firstName);
 
@@ -84,7 +87,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 updatedUser = FirebaseClient.convertToUser(snapshot);
-                viewAdapter = new AppointmentViewAdapter(UserAppointment.this, updatedUser);
+                viewAdapter = new AppointmentViewAdapter(UserAppointment.this, updatedUser);      // Firebase call to get all the updated changes to the user that is logg
+                                                                                                                    // pass the User object to the appointment Adapter to display the appointments
                 recyclerView.setAdapter(viewAdapter);
             }
 
@@ -101,25 +105,27 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v)
     {
         if (v.getId() == R.id.backButton_8)
-            startActivity(new Intent(UserAppointment.this , AdminPage.class));
+            startActivity(new Intent(UserAppointment.this , AdminPage.class));      // Back buttons for the application
     }
 
     private class AppointmentViewAdapter extends RecyclerView.Adapter<AppointmentViewHolder>
     {
 
-        private LayoutInflater inflater;
+        private LayoutInflater inflater;                                         // Variables used by adapter to show the items in the recycler view in the application.
+
         private final User user;
 
         public AppointmentViewAdapter(Context context, User user)
         {
             this.user = user;
-            this.inflater = LayoutInflater.from(context);
+            this.inflater = LayoutInflater.from(context);                       // Constructor used to set the variables equal to the parameters for the recycler adapter
         }
 
         @NonNull
         @Override
         public AppointmentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = inflater.inflate(R.layout.appointment_user_item, parent, false);
+            View view = inflater.inflate(R.layout.appointment_user_item, parent, false);// over ride method to check the view of the Adapter for the recycle view
+
             return new AppointmentViewHolder(view);
         }
 
@@ -127,7 +133,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
         public void onBindViewHolder(@NonNull AppointmentViewHolder holder, int position) {
             Appointment appointment = user.getAppointments().get(position);
             holder.time.setText(appointment.getTime());
-            holder.date.setText(appointment.getDate());
+            holder.date.setText(appointment.getDate());                                             // Holder for each Item that is used in the recycle view of page which use the holder object
             holder.status.setText(appointment.getStatus().name().toLowerCase());
             holder.Reason.setText(appointment.getReason());
             holder.checkedIntimeText.setText(appointment.getCheckedInTime());
@@ -137,7 +143,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             if(appointment.getStatus() == AppointmentStatus.APPROVED)
             {
                 holder.approve.setVisibility(View.GONE);
-                holder.deny.setVisibility(View.GONE);
+                holder.deny.setVisibility(View.GONE);                                   // If status is approved the following buttons will be gone from the view and
+                                                                                        // the check-in text will show in the application
 
 
                 holder.checkedIn.setText(appointment.isCheckedIn() ? "Yes" : "No");
@@ -146,27 +153,27 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             }
 
 
-            if(appointment.getStatus() == AppointmentStatus.DENIED )
+            if(appointment.getStatus() == AppointmentStatus.DENIED )            // If Status is denied the approve and deny button will be gone
             {
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
 
             }
-            if(appointment.getStatus() == AppointmentStatus.PENDING )
+            if(appointment.getStatus() == AppointmentStatus.PENDING )           // If status is pending the approve and denied will show
             {
                 holder.approve.setVisibility(View.VISIBLE);
                 holder.deny.setVisibility(View.VISIBLE);
 
             }
             if(appointment.getStatus() == AppointmentStatus.CANCELED )
-            {
+            {                                                                   // if status is canceled the approve and deny will be gone from the Item of the Item
                 holder.approve.setVisibility(View.GONE);
                 holder.deny.setVisibility(View.GONE);
             }
             if(!appointment.isCheckedIn() )
             {
-                holder.checkedIntime.setVisibility(View.GONE);
-                holder.checkedIntimeText.setVisibility(View.GONE);
+                holder.checkedIntime.setVisibility(View.GONE);                  // if the appointment is checked in then the checkin time text is gone
+                holder.checkedIntimeText.setVisibility(View.GONE);              // Also the checkin text with the time is shown in the application
 
             }
 
@@ -176,11 +183,13 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
                 SimpleDateFormat date = new SimpleDateFormat("MM-d-yyyy HH:mm z");
 
                 String currentDateAndTime = date.format(new Date());
-                user.getAppointments().get(position).setAdminActionTime(currentDateAndTime);
-                FirebaseClient.updateUser(user);
+                user.getAppointments().get(position).setAdminActionTime(currentDateAndTime);        // Gets the current time that is used and then stores it with the appointment
+                FirebaseClient.updateUser(user);                                                    // that is being made for and then it updates the User in the database
+
+
                 holder.approve.setVisibility(View.GONE);
-                holder.deny.setVisibility(View.GONE);
-                holder.checkedIn.setText(appointment.isCheckedIn() ? "Yes" : "No");
+                holder.deny.setVisibility(View.GONE);                                               // The Approve and deny button will be set to gone from the application
+                holder.checkedIn.setText(appointment.isCheckedIn() ? "Yes" : "No");                 // It was show if the patient is checkin in or no depending on the status
                 holder.checkedIn.setVisibility(View.VISIBLE);
                 holder.checkedInText.setVisibility(View.VISIBLE);
 
@@ -189,7 +198,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
 
                 try
                 {
-                    sendemail(user.getAppointments().get(position).getDate(), user.getAppointments().get(position).getTime() , "approved");
+                    sendemail(user.getAppointments().get(position).getDate(), user.getAppointments().get(position).getTime() , "approved"); // Used to send the email to the patient after the patient approves the application
                 } catch (MessagingException e) {
                     e.printStackTrace();
                 }
@@ -201,16 +210,18 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
                 user.getAppointments().get(position).setStatus(AppointmentStatus.DENIED);
                 SimpleDateFormat date2 = new SimpleDateFormat("MM-d-yyyy HH:mm z");
 
-                String currentDateAndTime2 = date2.format(new Date());
+                String currentDateAndTime2 = date2.format(new Date());                                  // If the Admin declines the appointment the current time
+                                                                                                        // for the appointment will be stored to show the patient that it was denied
                 user.getAppointments().get(position).setAdminActionTime(currentDateAndTime2);
                 FirebaseClient.updateUser(user);
 
-                holder.approve.setVisibility(View.GONE);
+                holder.approve.setVisibility(View.GONE);                                                // The visitbility of the approve and deny will be gone from the
+                                                                                                        // view and the status of the appointment will change in the Item
                 holder.deny.setVisibility(View.GONE);
                 holder.status.setText(appointment.getStatus().name().toLowerCase());
                 try
                 {
-                    sendemail(user.getAppointments().get(position).getDate(), user.getAppointments().get(position).getTime() , "denied");
+                    sendemail(user.getAppointments().get(position).getDate(), user.getAppointments().get(position).getTime() , "denied"); // The call for send email function in the application
                 }
                 catch (MessagingException e)
                 {
@@ -223,6 +234,11 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
         @Override
         public int getItemCount() {
             return user.getAppointments().size();
+        }                                           // returns the amount of items in the adapter that is being called
+
+        @Override
+        public int getItemViewType(int position) {
+            return position;
         }
     }
 
@@ -230,7 +246,10 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
 
         private final TextView time;
         private final TextView date;
-        private final TextView status;
+        private final TextView status;                                                  // Holder variables to set equal to the position that is found on the UI of the
+                                                                                        // application Each one of the holder variables will be connected to
+                                                                                        //the Item list that is used in the recycle view of the application
+
         private final TextView Reason;
         private final TextView checkedIn;
         private final TextView checkedInText;
@@ -246,8 +265,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             date = itemView.findViewById(R.id.appointmentDate2);
             status = itemView.findViewById(R.id.Status2);
             Reason = itemView.findViewById(R.id.Reason2);
-            approve = itemView.findViewById(R.id.Approve2);
-            deny = itemView.findViewById(R.id.decline2);
+            approve = itemView.findViewById(R.id.Approve2);                             //Setting the holder variables equal to the ID of the item in the UI
+            deny = itemView.findViewById(R.id.decline2);                                // Each of the Items are in the recycle view Item
             checkedIn = itemView.findViewById(R.id.checkedIn2);
             checkedInText = itemView.findViewById(R.id.checkedInText2);
             checkedIntimeText = itemView.findViewById(R.id.CheckinTimeText2);
@@ -279,16 +298,17 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
         }
     }
     private  void sendemail(String Date, String Time , String Status) throws MessagingException
-    {
+    {                                                                                               // Sending an email function for the applciation which uses the set email that the clinic
+                                                                                                    // uses also it takes the message of the email with the reciever email which is taken from the user
         final String sender_username = "appclinichuda@gmail.com";
 
         String Fullname_text = updatedUser.getFirstName() + " " + updatedUser.getLastName();
-        String birthday_text = updatedUser.getBirthday();
+        String birthday_text = updatedUser.getBirthday();                                       // Used variables to get the current user information
         String email_text = updatedUser.getEmailAddress();
 
 
         InternetAddress s_sender = new InternetAddress(sender_email);
-        InternetAddress reciever = new InternetAddress(email_text);
+        InternetAddress reciever = new InternetAddress(email_text);                             // Message that is being sent to the clinic
         final String message_text = "Dear "+ Fullname_text + ",\n\n"+ "Appointment for Patient: " + Fullname_text + " Birthday: " + birthday_text + " has been "+Status+".\n\n" + "Appointment Date: " + Date+ "\nAppointment Time: " + Time+"\n\nFor any Questions please Contact Us at (313) 865-8446" ;
         Properties settings = Settings(smtp);
 
@@ -298,13 +318,9 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
         Session pass_auth = Session.getInstance(settings, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-
-
-
+                                                                                        // Authentication of the email and password for the email that is being used to email
 
                 return new PasswordAuthentication(sender_email, sender_password);
-
-
 
             }
         });
@@ -323,7 +339,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
         Properties settings = new Properties();
 
 
-        settings.put(smtp+"auth", "true");
+        settings.put(smtp+"auth", "true");              // settings for email sending with the port being used
 
         settings.put(smtp+"starttls.enable", "true");
 
@@ -342,7 +358,8 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
         mimmessage.setFrom(s_sender);
 
 
-        mimmessage.setSentDate(new Date());
+        mimmessage.setSentDate(new Date());                                             // mim message function to send the function used gmail to send the emails the function will take the text of the
+                                                                                        // message and also the sender email with the session that the authentication happens with
 
         mimmessage.setRecipient(Message.RecipientType.TO,  reciever);
 

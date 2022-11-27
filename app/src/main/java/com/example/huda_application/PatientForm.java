@@ -66,74 +66,88 @@ public class PatientForm extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_form);
 
-        //   DAOPatient dao = new DAOPatient();
 
-        DAOInsurance dao = new DAOInsurance();
+        DAOInsurance dao = new DAOInsurance(); // new DAOInsurance object
 
         EditText todayDate = findViewById(R.id.todaysDate);
-        todayDate.addTextChangedListener(new TextWatcher() {
+        todayDate.addTextChangedListener(new TextWatcher()  // function that autofills the '-' for todayDate text field
+        {
             int prevL = 0;
 
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
                 prevL = todayDate.getText().toString().length();
             }
 
             @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
 
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
+            public void afterTextChanged(Editable editable)
+            {
                 int length = editable.length();
-                if ((prevL < length) && (length == 2 || length == 5)) {
+                if ((prevL < length) && (length == 2 || length == 5))
+                {
                     editable.append("-");
                 }
             }
         });
 
         EditText patientDOB = findViewById(R.id.patientDob);
-        patientDOB.addTextChangedListener(new TextWatcher() {
+        patientDOB.addTextChangedListener(new TextWatcher()
+        {  // function that autofills the '-' for patientDOB text field
             int prevL = 0;
 
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
                 prevL = patientDOB.getText().toString().length();
             }
 
             @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
 
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
+            public void afterTextChanged(Editable editable)
+            {
                 int length = editable.length();
-                if ((prevL < length) && (length == 2 || length == 5)) {
+                if ((prevL < length) && (length == 2 || length == 5))
+                {
                     editable.append("-");
                 }
             }
         });
 
         EditText consentDate = findViewById(R.id.consentDate);
-        consentDate.addTextChangedListener(new TextWatcher() {
+        consentDate.addTextChangedListener(new TextWatcher()  // function that autofills the '-' for consentDate text field
+        {
             int prevL = 0;
 
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
                 prevL = consentDate.getText().toString().length();
             }
 
             @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
 
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
+            public void afterTextChanged(Editable editable)
+            {
                 int length = editable.length();
-                if ((prevL < length) && (length == 2 || length == 5)) {
+                if ((prevL < length) && (length == 2 || length == 5))
+                {
                     editable.append("-");
                 }
             }
@@ -165,9 +179,9 @@ public class PatientForm extends AppCompatActivity
         nextFormButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View view)
+            public void onClick(View view) // om click method
             {
-                // edittext
+                // setting the EditText variable equal to the ID from the PatientForm XML
                 final EditText visitReason = findViewById(R.id.visitReason);
                 final EditText firstName = findViewById(R.id.firstName);
                 final EditText lastName = findViewById(R.id.lastName);
@@ -199,9 +213,10 @@ public class PatientForm extends AppCompatActivity
                 final EditText patientSigned = findViewById(R.id.patientNamePrinted);
                 final EditText patientSig = findViewById(R.id.patientNameSignature);
                 final EditText consentDateSign = findViewById(R.id.consentDate);
-                
 
-                final String dateTxt = todayDate.getText().toString().trim(); // convert the EditText to a String type
+
+                // convert the EditText to a String type
+                final String dateTxt = todayDate.getText().toString().trim();
                 final String visitReasonTxt = visitReason.getText().toString().trim();
                 final String firstNameTxt = firstName.getText().toString().trim();
                 final String lastNameTxt = lastName.getText().toString().trim();
@@ -234,24 +249,35 @@ public class PatientForm extends AppCompatActivity
                 final String patientSignatureText = patientSig.getText().toString().trim();
                 final String consentDateTxt = consentDateSign.getText().toString().trim();
 
-                // patientInsurance object
+                // patientInsurance object that takes all the string parameters up to the insurance information
                 com.example.huda_application.patientInsurance info = new patientInsurance(dateTxt,visitReasonTxt,lastNameTxt,firstNameTxt,patientSexTxt,
                         patientDOBTxt,patientAddTxt,patientCityTxt,patientStateTxt,patientZipCodeTxt,
                         patientSSNTxt,patientHomeNumTxt,patientCellNumTxt,patientPrefNumberTxt,patientConsentCallTxt,patientConsentTextTxt,patientInsuranceTxt);
 
-
-                if (TextUtils.isEmpty(dateTxt) || !DATE_PATTERN.matcher(dateTxt).matches()) // check if date is empty
+                // if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string matches the DATE_PATTERN and if it does not,
+                // another error will be thrown
+                if (TextUtils.isEmpty(dateTxt) || !DATE_PATTERN.matcher(dateTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be mm-dd-yyyy", Toast.LENGTH_LONG).show();
                     todayDate.setError("Date format is required");
                     todayDate.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(visitReasonTxt) || visitReasonTxt.length() > 30) // check if visit reason is empty and too long
                 {
                     Toast.makeText(PatientForm.this, "Please enter a visit reason", Toast.LENGTH_LONG).show();
                     visitReason.setError("Visit reason is required");
                     visitReason.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(firstNameTxt) || firstNameTxt.length() > 20) // check if name is empty
                 {
                     Toast.makeText(PatientForm.this, "Please enter first name", Toast.LENGTH_LONG).show();
@@ -259,178 +285,248 @@ public class PatientForm extends AppCompatActivity
                     firstName.requestFocus();
 
                 }
+                // else if statement that uses LETTERS_PATTERN to check if the string follows the pattern
+                // if it does not, an error will be displayed.
                 else if(!LETTERS_PATTERN.matcher(firstNameTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Name can only contain letters", Toast.LENGTH_LONG).show();
                     firstName.setError("Name format is required");
                     firstName.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(lastNameTxt) || lastNameTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this, "Please enter last name", Toast.LENGTH_LONG).show();
                     lastName.setError("Name is required");
                     lastName.requestFocus();
                 }
+                // else if statement that uses LETTERS_PATTERN to check if the string follows the pattern
+                // if it does not, an error will be displayed.
                 else if(!LETTERS_PATTERN.matcher(lastNameTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Name can only contain letters", Toast.LENGTH_LONG).show();
                     lastName.setError("Name format is required");
                     lastName.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(patientSexTxt))
                 {
                     Toast.makeText(PatientForm.this, "Please enter a sex (Male or Female)", Toast.LENGTH_LONG).show();
                     patientSex.setError("Sex is required");
                     patientSex.requestFocus();
                 }
+                // else if statement that checks if the string follows the PATIENTSEX_PATTERN,
+                // if it does not, then an error will be displayed
                 else if (!PATIENTSEX_PATTERN.matcher(patientSexTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Please enter a sex (Male or Female)", Toast.LENGTH_LONG).show();
                     patientSex.setError("Sex pattern is required");
                     patientSex.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(patientDOBTxt))
                 {
                     Toast.makeText(PatientForm.this, "Please enter a Date of birth", Toast.LENGTH_LONG).show();
                     patientDOB.setError("Date of birth is required");
                     patientDOB.requestFocus();
                 }
+                // else if statement that checks if the string follows the DATE_PATTERN,
+                // if it does not, then an error will be displayed
                 else if (!DATE_PATTERN.matcher(patientDOBTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be MM-DD-YYYY", Toast.LENGTH_LONG).show();
                     patientDOB.setError("Date format is required");
                     patientDOB.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(patientAddTxt) || patientAddTxt.length() > 30)
                 {
                     Toast.makeText(PatientForm.this, "Address cannot be empty", Toast.LENGTH_LONG).show();
                     patientAdd.setError("Address is required");
                     patientAdd.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(patientCityTxt) || patientCityTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this, "City cannot be empty", Toast.LENGTH_LONG).show();
                     patientCity.setError("City is required");
                     patientCity.requestFocus();
                 }
+                // else if statement that checks if the string follows the LETTERS_PATTERN,
+                // if it does not, then an error will be displayed
                 else if(!LETTERS_PATTERN.matcher(patientCityTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "City must be alphabetic", Toast.LENGTH_LONG).show();
                     patientCity.setError("City name format is required");
                     patientCity.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(patientStateTxt) || patientStateTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this, "State cannot be empty", Toast.LENGTH_LONG).show();
                     patientState.setError("State is required");
                     patientState.requestFocus();
                 }
+                // else if statement that checks if the string follows the LETTERS_PATTERN,
+                // if it does not, then an error will be displayed
                 else if(!LETTERS_PATTERN.matcher(patientStateTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "State must be valid", Toast.LENGTH_LONG).show();
                     patientState.setError("State name format is required");
                     patientState.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(patientZipCodeTxt))
                 {
                     Toast.makeText(PatientForm.this, "Zipcode cannot be empty", Toast.LENGTH_LONG).show();
                     patientZip.setError("Zipcode is required");
                     patientZip.requestFocus();
                 }
+                // else if statement that checks if the string follows the ZIPCODE_PATTERN,
+                // if it does not, then an error will be displayed
                 else if (!ZIPCODE_PATTERN.matcher(patientZipCodeTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Zipcode must be 12345", Toast.LENGTH_LONG).show();
                     patientZip.setError("Zipcode Format is required");
                     patientZip.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(patientSSNTxt))
                 {
                     Toast.makeText(PatientForm.this, "Please enter a SSN", Toast.LENGTH_LONG).show();
                 }
+                // else if statement that checks if the string follows the SSN_PATTERN,
+                // if it does not, then an error will be displayed
                 else if (!SSN_PATTERN.matcher(patientSSNTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be 123-12-1234", Toast.LENGTH_LONG).show();
                     patientSsn.setError("SSN format is required");
                     patientSsn.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(patientCellNumTxt))
                 {
                     Toast.makeText(PatientForm.this, "Number cannot be empty", Toast.LENGTH_LONG).show();
                     patientCell.setError("Cell number is required");
                     patientCell.requestFocus();
                 }
+                // else if statement that checks if the string follows the PHONE_PATTERN,
+                // if it does not, then an error will be displayed
                 else if (!PHONE_PATTERN.matcher(patientCellNumTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Number must be 123-123-1234", Toast.LENGTH_LONG).show();
                     patientCell.setError("Phone number format is required");
                     patientCell.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(patientHomeNumTxt))
                 {
                     Toast.makeText(PatientForm.this, "Number cannot be empty", Toast.LENGTH_LONG).show();
                     patientHome.setError("Home phone number is required");
                     patientHome.requestFocus();
                 }
+                // else if statement that checks if the string follows the PHONE_PATTERN,
+                // if it does not, then an error will be displayed
                 else if (!PHONE_PATTERN.matcher(patientHomeNumTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Number must be 123-123-1234", Toast.LENGTH_LONG).show();
                     patientHome.setError("Phone number format is required");
                     patientHome.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(patientPrefNumberTxt))
                 {
                     Toast.makeText(PatientForm.this, "Preference cannot be empty", Toast.LENGTH_LONG).show();
                     patientContactPref.setError("Preferred number is required");
                     patientContactPref.requestFocus();
                 }
+                // else if statement that checks if the string follows the PHONE_PATTERN,
+                // if it does not, then an error will be displayed
                 else if (!CONTACTPREF_PATTERN.matcher(patientPrefNumberTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Preference must be Home or Mobile", Toast.LENGTH_LONG).show();
                     patientContactPref.setError("Preference option format is required");
                     patientContactPref.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(patientConsentCallTxt))
                 {
                     Toast.makeText(PatientForm.this, "Consent cannot be empty", Toast.LENGTH_LONG).show();
                     patientConsentCall.setError("Consent is required");
                     patientConsentCall.requestFocus();
                 }
+                // else if statement that checks if the string follows the CONSENT_PATTERN,
+                // if it does not, then an error will be displayed
                 else if (!CONSENT_PATTERN.matcher(patientConsentCallTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be Yes or No", Toast.LENGTH_LONG).show();
                     patientConsentCall.setError("Consent format is required");
                     patientConsentCall.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(patientConsentTextTxt))
                 {
                     Toast.makeText(PatientForm.this, "Consent cannot be empty", Toast.LENGTH_LONG).show();
                     patientConsentText.setError("Consent is required");
                     patientConsentText.requestFocus();
                 }
+                // else if statement that checks if the string follows the CONSENT_PATTERN,
+                // if it does not, then an error will be displayed
                 else if (!CONSENT_PATTERN.matcher(patientConsentTextTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be Yes or No", Toast.LENGTH_LONG).show();
                     patientConsentText.setError("Consent is required");
                     patientConsentText.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(patientInsuranceTxt) || patientInsuranceTxt.length() > 30)
                 {
                     Toast.makeText(PatientForm.this, "Insurance must be filled", Toast.LENGTH_LONG).show();
                     patientInsurance.setError("Insurance is required");
                     patientInsurance.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(patientEmailTxt))
                 {
                     Toast.makeText(PatientForm.this, "Email cannot be empty", Toast.LENGTH_LONG).show();
                     patientEmail.setError("Email is required");
                     patientEmail.requestFocus();
                 }
+                // else if statement that checks if the string follows the pattern within the block and
+                // if it does not, then an error will be displayed
                 else if (!Patterns.EMAIL_ADDRESS.matcher(patientEmailTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be a valid email", Toast.LENGTH_LONG).show();
                     patientEmail.setError("Email format is required");
                     patientEmail.requestFocus();
                 }
+                // if statements to check if selected race CheckBox was clicked,
+                // if yes then set patientRacTxt to the selected race
                 if (blackAfricanAmerican.isChecked())
                 {
                     patientRaceTxt += blackAfricanAmerican.getText().toString();
@@ -459,236 +555,322 @@ public class PatientForm extends AppCompatActivity
                 {
                     patientRaceTxt += nativeHawiianPacificIslander.getText().toString();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if(TextUtils.isEmpty(patientRaceTxt))
                 {
                     Toast.makeText(PatientForm.this, "Race cannot cannot be empty", Toast.LENGTH_LONG).show();
                 }
+                // if statements to check if selected ethnicity CheckBox was clicked,
+                // if yes then set patientRacTxt to the selected ethnicity
                 if (HispanicOrLatino.isChecked())
                 {
-                    patientEthnicityTxt += HispanicOrLatino.getText().toString();
+                    patientEthnicityTxt = HispanicOrLatino.getText().toString();
                 }
                 if (NotHispanicOrLatino.isChecked())
                 {
-                    patientEthnicityTxt += NotHispanicOrLatino.getText().toString();
+                    patientEthnicityTxt = NotHispanicOrLatino.getText().toString();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if(TextUtils.isEmpty(patientEthnicityTxt))
                 {
                     Toast.makeText(PatientForm.this, "Ethnicity cannot cannot be empty", Toast.LENGTH_LONG).show();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(prefLangTxt) || prefLangTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this, "Language cannot be empty", Toast.LENGTH_LONG).show();
                     prefLang.setError("Language is required");
                     prefLang.requestFocus();
                 }
+                // else if statement that checks if the string follows the pattern within the block and
+                // if it does not, then an error will be displayed
                 else if(!LETTERS_PATTERN.matcher(prefLangTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Language must be valid", Toast.LENGTH_LONG).show();
                     prefLang.setError("Language format is required");
                     prefLang.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(translatorTxt))
                 {
                     Toast.makeText(PatientForm.this, "Translator cannot be empty", Toast.LENGTH_LONG).show();
                     neededTranslator.setError("Translator need is required");
                     neededTranslator.requestFocus();
                 }
+                // else if statement that checks if the string follows the pattern within the block and
+                // if it does not, then an error will be displayed
                 else if (!CONSENT_PATTERN.matcher(translatorTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be Yes or No", Toast.LENGTH_LONG).show();
                     neededTranslator.setError("Input format is required");
                     neededTranslator.requestFocus();
                 }
+                // if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string matches the MARITAL_PATTERN and if it does not,
+                // another error will be displayed
                 else if (!MARITAL_PATTERN.matcher(maritalTxt).matches() || TextUtils.isEmpty(maritalTxt))
                 {
                     Toast.makeText(PatientForm.this, "Must fill in marital status", Toast.LENGTH_LONG).show();
                     maritalStatusPatient.setError("Valid marital status is required");
                     maritalStatusPatient.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 8 characters, if > 8 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(houseIncomeTxt) || houseIncomeTxt.length() > 8)
                 {
                     Toast.makeText(PatientForm.this, "Must fill in household income", Toast.LENGTH_LONG).show();
                     incomeHousehold.setError("Income is required");
                     incomeHousehold.requestFocus();
                 }
+                // else if statement that checks if the string follows the pattern within the block and
+                // if it does not, then an error will be displayed
                 else if (!DIGITS_PATTERN.matcher(houseIncomeTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be valid income", Toast.LENGTH_LONG).show();
                     incomeHousehold.setError("Income format is required");
                     incomeHousehold.requestFocus();
                 }
+                // if statements to check if the pay schedule CheckBox was clicked,
+                // if yes then set it to the patientIncomeTxt to the selected pay schedule
                 if (weekly.isChecked())
                 {
-                    patientIncomeTxt += weekly.getText().toString();
+                    patientIncomeTxt = weekly.getText().toString();
                 }
                 if (biWeekly.isChecked())
                 {
-                    patientIncomeTxt += biWeekly.getText().toString();
+                    patientIncomeTxt = biWeekly.getText().toString();
                 }
                 if (monthly.isChecked())
                 {
-                    patientIncomeTxt += monthly.getText().toString();
+                    patientIncomeTxt = monthly.getText().toString();
                 }
                 if (yearly.isChecked())
                 {
-                    patientIncomeTxt += yearly.getText().toString();
+                    patientIncomeTxt = yearly.getText().toString();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if(TextUtils.isEmpty(patientIncomeTxt))
                 {
                     Toast.makeText(PatientForm.this,"Duration cannot be empty",Toast.LENGTH_LONG);
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 2 characters, if > 2 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(houseHoldTxt) || houseHoldTxt.length() > 2)
                 {
                     Toast.makeText(PatientForm.this, "Must fill in Family size", Toast.LENGTH_LONG).show();
                     houseHoldSize.setError("Household size is required");
                     houseHoldSize.requestFocus();
                 }
+                // else if statement that checks if the string follows the pattern within the block and
+                // if it does not, then an error will be displayed
                 else if (!DIGITS_PATTERN.matcher(houseHoldTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Must be only digits", Toast.LENGTH_LONG).show();
                     houseHoldSize.setError("Number format is required");
                     houseHoldSize.requestFocus();
                 }
+                // if statements to check if the employment status CheckBox was clicked,
+                // if yes then set it to the patientEmpTxt to the selected pay schedule
                 if (unEmp.isChecked())
                 {
-                    patientEmpTxt += unEmp.getText().toString();
+                    patientEmpTxt = unEmp.getText().toString();
                 }
                 if (empFull.isChecked())
                 {
-                    patientEmpTxt += empFull.getText().toString();
+                    patientEmpTxt = empFull.getText().toString();
                 }
                 if (empPart.isChecked())
                 {
-                    patientEmpTxt += empPart.getText().toString();
+                    patientEmpTxt = empPart.getText().toString();
                 }
                 if (empSelf.isChecked())
                 {
-                    patientEmpTxt += empSelf.getText().toString();
+                    patientEmpTxt = empSelf.getText().toString();
                 }
                 if (empStudent.isChecked())
                 {
-                    patientEmpTxt += empStudent.getText().toString();
+                    patientEmpTxt = empStudent.getText().toString();
                 }
                 if (empRetired.isChecked())
                 {
-                    patientEmpTxt += empRetired.getText().toString();
+                    patientEmpTxt = empRetired.getText().toString();
                 }
                 if (empSeek.isChecked())
                 {
-                    patientEmpTxt += empSeek.getText().toString();
+                    patientEmpTxt = empSeek.getText().toString();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if(TextUtils.isEmpty(patientEmpTxt))
                 {
                     Toast.makeText(PatientForm.this, "Employment status is required", Toast.LENGTH_LONG).show();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(occupationTxt) || occupationTxt.length() > 30)
                 {
                     Toast.makeText(PatientForm.this, "Please fill occupation", Toast.LENGTH_LONG).show();
                     occupationPatient.setError("Occupation is required");
                     occupationPatient.requestFocus();
                 }
+                // else if statement that checks if the string follows the pattern within the block and
+                // if it does not, then an error will be displayed
                 else if(!LETTERS_PATTERN.matcher(occupationTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Occupation must contain only letters", Toast.LENGTH_LONG).show();
                     occupationPatient.setError("Occupation format is required");
                     occupationPatient.requestFocus();
                 }
+                // if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string matches the CONSENT_PATTERN and if it does not,
+                // another error will be displayed
                 else if (!CONSENT_PATTERN.matcher(veteranTxt).matches() || TextUtils.isEmpty(veteranTxt))
                 {
                     Toast.makeText(PatientForm.this, "Must be Yes or No", Toast.LENGTH_LONG).show();
                     veteranStatus.setError("Veteran status is required");
                     veteranStatus.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(emergencyNameTxt) || emergencyNameTxt.length() > 30)
                 {
                     Toast.makeText(PatientForm.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
                     emergencyContactName.setError("Contact name is required");
                     emergencyContactName.requestFocus();
                 }
+                // else if statement that checks if the string follows the pattern within the block and
+                // if it does not, then an error will be displayed
                 else if(!LETTERS_PATTERN.matcher(emergencyNameTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Name must contain only letters", Toast.LENGTH_LONG).show();
                     emergencyContactName.setError("Contact format is required");
                     emergencyContactName.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(relationshipTxt) || relationshipTxt.length() > 20)
                 {
                     Toast.makeText(PatientForm.this, "Relationship cannot be empty", Toast.LENGTH_LONG).show();
                     relationshipToPatient.setError("Contact relationship is required");
                     relationshipToPatient.requestFocus();
                 }
+                // else if statement that checks if the string follows the pattern within the block and
+                // if it does not, then an error will be displayed
                 else if(!LETTERS_PATTERN.matcher(relationshipTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Relation must contain only letters", Toast.LENGTH_LONG).show();
                     relationshipToPatient.setError("Relationship format is required");
                     relationshipToPatient.requestFocus();
                 }
+                // else if statement that checks if the string follows the pattern within the block and
+                // if it does not, then an error will be displayed
                 else if(!PHONE_PATTERN.matcher(contactPhoneTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Contact phone must be filled", Toast.LENGTH_LONG).show();
                     emergencyContactPhone.setError("Phone number format is required");
                     emergencyContactPhone.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 else if (TextUtils.isEmpty(contactPhoneTxt))
                 {
                     Toast.makeText(PatientForm.this, "Contact phone must not be empty", Toast.LENGTH_LONG).show();
                     emergencyContactPhone.setError("Contact number is required");
                     emergencyContactPhone.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(patientConsentName) || patientConsentName.length() > 30)
                 {
                     Toast.makeText(PatientForm.this, "Name must be filled", Toast.LENGTH_LONG).show();
                     patientNameConsent.setError("Name is required");
                     patientNameConsent.requestFocus();
                 }
-//                else if(!LETTERS_PATTERN.matcher(patientConsentName).matches())
-//                {
-//                    Toast.makeText(PatientForm.this, "Name must contain only letters", Toast.LENGTH_LONG).show();
-//                    patientNameConsent.setError("Name format is required");
-//                    patientNameConsent.requestFocus();
-//                }
+                // else if statement that checks if the patient name matches the the firstname + lastname,
+                // if not, then an error will be displayed
                 else if(!patientConsentName.equals(firstNameTxt + " " + lastNameTxt))
                 {
                     Toast.makeText(PatientForm.this, "Name must match First name and Last name", Toast.LENGTH_LONG).show();
                     patientNameConsent.setError("Name match is required");
                     patientNameConsent.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(patientSignedText) || patientSignedText.length() > 30)
                 {
                     Toast.makeText(PatientForm.this, "Name must be filled", Toast.LENGTH_LONG).show();
                     patientSigned.setError("Signed name is required");
                     patientSigned.requestFocus();
                 }
+                // else if statement that checks if the patient signed name matches the consent name,
+                // if not, then an error will be displayed
                 else if(!patientSignedText.equals(patientConsentName))
                 {
                     Toast.makeText(PatientForm.this, "Patient name must match", Toast.LENGTH_LONG).show();
                     patientSigned.setError("Name match is required");
                     patientSigned.requestFocus();
                 }
+                // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
                 else if (TextUtils.isEmpty(patientSignatureText) || patientSignatureText.length() > 30)
                 {
                     Toast.makeText(PatientForm.this, "Signature must be filled", Toast.LENGTH_LONG).show();
                     patientSig.setError("Signature is required");
                     patientSig.requestFocus();
                 }
+                // else if statement that checks if the patient signature name matches the signed name,
+                // if not, then an error will be displayed
                 else if(!patientSignatureText.equals(patientConsentName))
                 {
                     Toast.makeText(PatientForm.this, "Patient name must match", Toast.LENGTH_LONG).show();
                     patientSig.setError("Name match is required");
                     patientSig.requestFocus();
                 }
+                // if statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
+                // || operator to also check if the string matches the DATE_PATTERN and if it does not,
+                // another error will be displayed
                 else if (TextUtils.isEmpty(consentDateTxt) || !DATE_PATTERN.matcher(consentDateTxt).matches())
                 {
                     Toast.makeText(PatientForm.this, "Date must be filled", Toast.LENGTH_LONG).show();
                     consentDateSign.setError("Date format is required");
                     consentDateSign.requestFocus();
                 }
+                // else if statement that checks if the consent date matches the todayDate field.
+                // if not, then an error will be displayed
                 else if(!consentDateTxt.equals(dateTxt))
                 {
                     Toast.makeText(PatientForm.this, "Date must match today's date", Toast.LENGTH_LONG).show();
                     consentDateSign.setError("Date match is required");
                     consentDateSign.requestFocus();
                 }
+                // If all the inputs are valid then it will go into the else block where all the strings will be set
+                // to the formData object and pushed to the database
                 else
                 {
                     //first form
@@ -732,6 +914,10 @@ public class PatientForm extends AppCompatActivity
 //                    formData.setUID(UserManager.getInstance().getCurrentUser().getUserId());
                     formData.setUID("Test UID");
 
+                    // If statement to check if the patient does not have insurance,
+                    // if they do have insurance then this block of code will be executed where
+                    // only the information up til the insurance will get saved and pushed to the
+                    // realtime database.
                     if(!INSURANCE_PATTERN.matcher(patientInsuranceTxt).matches())
                     {
                         Toast.makeText(PatientForm.this, "Please wait for further instructions to see if you Qualify for care", Toast.LENGTH_LONG).show();
@@ -745,13 +931,17 @@ public class PatientForm extends AppCompatActivity
                             Toast.makeText(PatientForm.this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
                         });
 
+                        // After the insurance information is pushed, the user will be taken back to the login activity
                         Intent insuranceApproval = new Intent(PatientForm.this, MainActivity.class);
                         startActivity(insuranceApproval);
                     }
+                    // Else block will execute if the patient does not have insurance and they will continue onto
+                    // the next patient form
                     else
                     {
+                        // Intent to take patient to the next form
                         Intent patientContract = new Intent(PatientForm.this, PatientContract.class);
-                        patientContract.putExtra("patientdata",formData );
+                        patientContract.putExtra("patientdata",formData ); // take information from this java file and move it to the next form
                         startActivity(patientContract);
                     }
                 }

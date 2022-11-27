@@ -48,23 +48,22 @@ import java.util.stream.Collectors;
 
 public class ApptRequest extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
 
-    private static final Pattern DATE_PATTERN = Pattern.compile(
-            "^((0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])-(19|2[0-9])[0-9]{2})$"); // date pattern match
 
-    private static final Pattern TIME_PATTERN = Pattern.compile("(1[012]|[1-9]):[0-5][0-9](\\s)?(?i)(am|pm)");
 
     private EditText reason;
     private Button checkin, dateButton, phoneButton;
     private TextView time, char_Count;
 
     private ImageView backButton;
-    private String selectedTime = "";
-    private List<Time> availableTimes;
+    private String selectedTime = "";                                    // Two of the variables are the available time list for the patient and the selected time that is used
+    private List<Time> availableTimes;                                  // Appointment request variables that will store the date and the required information
+                                                                        // for the appointment that is being requested
+
     private TextView date;
     private TextView textView;
-    private AlertDialog.Builder options;
+    private AlertDialog.Builder options;                                // Alert builder that is used to show all the available appointments
     private AlertDialog menu;
-    private AppointmentManager appointmentManager;
+    private AppointmentManager appointmentManager;                        // Instance of the appointment manager that will be used to filter the appointments
 
 
     @Override
@@ -77,36 +76,33 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             Calendar now = Calendar.getInstance();
             DatePickerDialog dialog = DatePickerDialog.newInstance(
                     this,
-                    now.get(Calendar.YEAR),
+                    now.get(Calendar.YEAR),                             // The date button is used as the to show the date picker dialog for the application
                     now.get(Calendar.MONTH),
                     now.get(Calendar.DAY_OF_MONTH)
             );
             dialog.setAccentColor(0x043670);
             dialog.setMinDate(Calendar.getInstance());
 
-            List<Calendar> days = new ArrayList<>();
-            for (int i = 0; i < 90; i++) {
+            List<Calendar> days = new ArrayList<>();                        // Create the limited days for the calendar in the datepicker object for the application
+            for (int i = 0; i < 120; i++) {
                 Calendar day = Calendar.getInstance();
                 day.add(Calendar.DAY_OF_MONTH, i);
 
-                if (day.get(Calendar.DAY_OF_WEEK) != Calendar.TUESDAY &&
+                if (day.get(Calendar.DAY_OF_WEEK) != Calendar.TUESDAY &&            // Eliminate the following days from the Datepicker for the Days
                         day.get(Calendar.DAY_OF_WEEK) != Calendar.THURSDAY &&
                         day.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY) {
                     days.add(day);
                 }
             }
 
-            dialog.setDisabledDays(days.toArray(new Calendar[0]));
+            dialog.setDisabledDays(days.toArray(new Calendar[0]));                   // setting the disabled days for the application
             dialog.show(getSupportFragmentManager(), "Available Times");
         });
 
         phoneButton = findViewById(R.id.callClinic);
 
-        // date = findViewById(R.id.dateText);
-        // birthday = findViewById(R.id.birthday);
-
         reason = findViewById(R.id.email_checkin);
-        char_Count = findViewById(R.id.charCount);
+        char_Count = findViewById(R.id.charCount);                                  // Take the ID of the items in the UI of the application
         char_Count.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -127,13 +123,13 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
         });
         time = findViewById(R.id.appointmentTime);
         checkin = findViewById(R.id.checkin);
-        backButton = (ImageView) findViewById(R.id.backButton);
-        time.setOnClickListener(this);
+        backButton = (ImageView) findViewById(R.id.backButton);                     //All the Textview items used and button to request an appointment
+        time.setOnClickListener(this);                                              // The time and the checkin button will be set only to the textview
         backButton.setOnClickListener(this);
 
         options = new AlertDialog.Builder(ApptRequest.this);
         options.setTitle("Available Times");
-
+                                                                                    // Alert Dialog to show the available times for the patient
         time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -142,77 +138,29 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
                 create_menu(options);
             }
         });
-//        adapter = new ArrayAdapter(CheckIn.this, android.R.layout.simple_spinner_item, new ArrayList<String>());
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        time.setAdapter(adapter);
 
-        //date.setOnClickListener(this);
-//        birthday.setOnClickListener(v -> {
-//            Calendar now = Calendar.getInstance();
-//            DatePickerDialog dialog = DatePickerDialog.newInstance(
-//                    this,
-//                    now.get(Calendar.YEAR),
-//                    now.get(Calendar.MONTH),
-//                    now.get(Calendar.DAY_OF_MONTH)
-//            );
-//            dialog.setAccentColor(0x043670);
-//            dialog.setMaxDate(Calendar.getInstance());
-//
-//            List<Calendar> days = new ArrayList<>();
-//            for (int i = 0; i < 90; i++) {
-//                Calendar day = Calendar.getInstance();
-//                day.add(Calendar.DAY_OF_MONTH, i);
-//
-//            }
-//
-//            dialog.setDisabledDays(days.toArray(new Calendar[0]));
-//            dialog.show(getSupportFragmentManager(), "Available Times");
-//        });
 
         phoneButton.setOnClickListener(this);
-        reason.setOnClickListener(this);
+        reason.setOnClickListener(this);                                        // Setting all the buttons for the onclicklistener to be used in the application
         checkin.setOnClickListener(this);
-
-//        EditText birthday = findViewById(R.id.birthday);
-//        birthday.addTextChangedListener(new TextWatcher() {
-//            int prevL = 0;
-//
-//            @Override
-//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//                prevL = birthday.getText().toString().length();
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable editable) {
-//                int length = editable.length();
-//                if ((prevL < length) && (length == 2 || length == 5)) {
-//                    editable.append("-");
-//                }
-//            }
-//        });
 
     }
 
     public void create_menu(AlertDialog.Builder opts) {
 
-        menu = opts.create();
+        menu = opts.create();                                                           // Create the dialog for the available times in the application
         menu.show();
     }
 
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.checkin) {
+        if (view.getId() == R.id.checkin) {                     // The request button that is used to request an appointment
             boolean temp = true;
             String date = dateButton.getText().toString().replace("Date: ", "");
             String currentDate = new SimpleDateFormat("MM-d-yyyy", Locale.getDefault()).format(new Date());
             SimpleDateFormat sdf = new SimpleDateFormat("MM-d-yyyy");
-            try {
+            try {                                                                   // parse the current date that picked from the date button
                 temp = sdf.parse(currentDate).before(sdf.parse(date));
             } catch (ParseException e) {
                 e.printStackTrace();
@@ -220,14 +168,14 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 
             if (temp == true){
             Appointment appointment = new Appointment(
-                    selectedTime,
+                    selectedTime,                                       //create the appointment object from the request page of the application
                     date,
                     reason.getText().toString(),
                     AppointmentStatus.PENDING
             );
 
             UserManager.getInstance().getCurrentUser().addAppointment(appointment);
-            AppointmentManager.createAppointment(date, selectedTime, UserManager.getInstance().getCurrentUser().getUserId());
+            AppointmentManager.createAppointment(date, selectedTime, UserManager.getInstance().getCurrentUser().getUserId());       // added the appointment to the current user and pushed the object to the database
             FirebaseClient.updateUser(UserManager.getInstance().getCurrentUser());
             Intent appointmentsIntent = new Intent(getApplicationContext(), Appointments.class);
             startActivity(appointmentsIntent);}
@@ -240,7 +188,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             Intent prev = new Intent(this, Appointments.class);
             startActivity(prev);
         }
-
+                                                                                // Two buttons used to call the clinic and back button
         else if (view.getId() == R.id.callClinic)
         {
             Intent HUDACall = new Intent(Intent.ACTION_DIAL);
@@ -253,14 +201,14 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     public void onDateSet(DatePickerDialog view, int year, int month, int dayOfMonth) {
         Calendar c = Calendar.getInstance();
         c.set(Calendar.YEAR, year);
-        c.set(Calendar.MONTH, month);
+        c.set(Calendar.MONTH, month);                                                                // Once the date is set in the date picker the current date will be taken and set
         c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
         String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
         TextView textView = findViewById(R.id.dateText);
         dateButton.setText(currentDateString);
 
-        Date date = c.getTime();
+        Date date = c.getTime();                                                                     // Sets the current date in the text view of the application
 
         String key = String.format("%d-%d-%d", date.getMonth() + 1, date.getDate(), date.getYear() + 1900);
         textView.setText(String.format("Date: %s", key));
@@ -271,14 +219,14 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
         FirebaseDatabase.getInstance().getReference("ClinicHours").child(key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                appointmentManager.createTimesOpen(snapshot.getValue(Float.class));
+                appointmentManager.createTimesOpen(snapshot.getValue(Float.class));  // create the available times for that specific days of the patients by checking if there was any modifications in the database
 
                 FirebaseDatabase.getInstance().getReference("Appointment").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         for (DataSnapshot child : snapshot.getChildren()) {
                             appointmentManager.convertAppointment(child);
-                        }
+                        }                                                               // on data exchange to get the available times after filtering appointments that already exist
                         availableTimes = appointmentManager.getAvailableTimes();
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 
@@ -287,7 +235,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
                                 @Override
                                 public void onClick(DialogInterface Diag_options, int opts) {
                                     Time appointmentTime = availableTimes.get(opts);
-                                    time.setText(appointmentTime.toString());
+                                    time.setText(appointmentTime.toString());                       // adding the Available times for in the dialog alert that is shown to the patient
                                     selectedTime = appointmentTime.toString();
                                     Diag_options.dismiss();
                                 }
