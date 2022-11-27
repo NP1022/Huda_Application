@@ -54,7 +54,7 @@ import javax.mail.internet.MimeMessage;
 
 public class Appointments extends AppCompatActivity implements View.OnClickListener {
 
-    private AppointmentViewAdapter viewAdapter;
+    private AppointmentViewAdapter2 viewAdapter;
     private ImageView backButton;
     private String smtp = "mail.smtp.";
     private String sender_email = "appclinichuda@gmail.com";
@@ -63,16 +63,18 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
         int SDK_INT = android.os.Build.VERSION.SDK_INT;
-        setContentView(R.layout.activity_appointments);
+
         if (SDK_INT > 8)
         {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                     .permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
+        super.onCreate(savedInstanceState);
+
+
+        setContentView(R.layout.activity_appointments);
 
         RecyclerView recyclerView = findViewById(R.id.appointmentsView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -82,7 +84,7 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         User user = FirebaseClient.convertToUser(snapshot);
-                        viewAdapter = new AppointmentViewAdapter(Appointments.this, user);
+                        viewAdapter = new AppointmentViewAdapter2(Appointments.this, user);
                         recyclerView.setAdapter(viewAdapter);
                     }
 
@@ -124,30 +126,34 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    private class AppointmentViewAdapter extends RecyclerView.Adapter<Appointments.AppointmentViewHolder> {
+    private class AppointmentViewAdapter2 extends RecyclerView.Adapter<AppointmentViewHolder2> {
 
         private LayoutInflater inflater;
         private List<Appointment> appointments;
         private User user;
+        private final Context context;
 
-        public AppointmentViewAdapter(Context context, User user) {
-            this.inflater = LayoutInflater.from(context);
+        public AppointmentViewAdapter2(Context context, User user) {
+            this.context= context;
+
             this.user = user;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 appointments = user.getAppointments().stream()
                         .filter(appointment -> appointment.getStatus() != AppointmentStatus.CANCELED).collect(Collectors.toList());
             }
+            this.inflater = LayoutInflater.from(context);
         }
 
         @NonNull
         @Override
-        public AppointmentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        public AppointmentViewHolder2 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = inflater.inflate(R.layout.appointment_list_item, parent, false);
-            return new AppointmentViewHolder(view);
+
+            return new AppointmentViewHolder2(view);
         }
 
         @Override
-        public void onBindViewHolder(@NonNull AppointmentViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull AppointmentViewHolder2 holder, int position) {
             Appointment appointment = appointments.get(position);
             holder.time.setText(appointment.getTime());
             holder.date.setText(appointment.getDate());
@@ -249,7 +255,7 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
                     }
                 }
                 else
-                    Toast.makeText(Appointments.this,"Check-in id only allowed on the same day! ",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Appointments.this,"Check-in is only allowed on the same day! ",Toast.LENGTH_LONG).show();
             });
         }
 
@@ -257,9 +263,13 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
         public int getItemCount() {
             return appointments.size();
         }
+        @Override
+        public int getItemViewType(int position) {
+            return position;
+        }
     }
 
-    private static class AppointmentViewHolder extends RecyclerView.ViewHolder {
+    private static class AppointmentViewHolder2 extends RecyclerView.ViewHolder  {
 
         private final TextView time;
         private final TextView date;
@@ -270,8 +280,9 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
         private final TextView responsestatic;
         private final TextView response;
 
-        public AppointmentViewHolder(@NonNull View itemView) {
+        public AppointmentViewHolder2(@NonNull View itemView) {
             super(itemView);
+
             this.time = itemView.findViewById(R.id.time);
             this.date = itemView.findViewById(R.id.appointmentDate);
             this.status = itemView.findViewById(R.id.Status);
@@ -305,6 +316,7 @@ public class Appointments extends AppCompatActivity implements View.OnClickListe
         public TextView getCheckedInText() {
             return checkedInText;
         }
+
 
     }
     private  void sendemail(String Date, String Time ) throws MessagingException {

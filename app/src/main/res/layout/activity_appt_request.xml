@@ -152,15 +152,13 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:counterEnabled="true"
-    app:counterMaxLength="100"
     tools:ignore="MissingConstraints">
     <TextView
         android:id="@+id/charCount"
         android:layout_width="23dp"
         android:layout_height="19dp"
         android:layout_marginStart="310dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="490dp"
         android:text=""
         android:textAlignment="textEnd"
         android:textColor="#686868"
@@ -172,34 +170,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="490dp"
         android:text=""
         android:textColor="#686868"
         app:layout_constraintEnd_toEndOf="@+id/email_checkin"
         app:layout_constraintTop_toBottomOf="@+id/email_checkin" />
 
+</LinearLayout>
+
+
     <EditText
         android:id="@+id/email_checkin"
         android:layout_width="320dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="-287dp"
-        android:layout_marginTop="435dp"
-        android:layout_marginEnd="0dp"
+        android:layout_height="130dp"
+        android:gravity="left"
+        android:layout_marginTop="10dp"
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:hint="Reason (max 100 char.)"
+
         android:maxLength="100"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="#686868"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birthday" />
-
-</LinearLayout>
-
+        app:layout_constraintTop_toBottomOf="@+id/appointmentTime" />
 
 
 
