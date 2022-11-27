@@ -1,5 +1,6 @@
 package com.example.huda_application;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -20,6 +21,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
+// import android.app.DatePickerDialog;
 
 import com.example.huda_application.appointment.AppointmentManager;
 import com.example.huda_application.firebase.FirebaseClient;
@@ -51,9 +53,10 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 
     private static final Pattern TIME_PATTERN = Pattern.compile("(1[012]|[1-9]):[0-5][0-9](\\s)?(?i)(am|pm)");
 
-    private EditText birthday, reason;
+    private EditText reason;
     private Button checkin, dateButton, phoneButton;
-    private TextView time;
+    private TextView time, char_Count;
+
     private ImageView backButton;
     private String selectedTime = "";
     private List<Time> availableTimes;
@@ -100,8 +103,28 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
         phoneButton = findViewById(R.id.callClinic);
 
         // date = findViewById(R.id.dateText);
-        birthday = findViewById(R.id.birthday);
+        // birthday = findViewById(R.id.birthday);
+
         reason = findViewById(R.id.email_checkin);
+        char_Count = findViewById(R.id.charCount);
+        char_Count.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                char_Count.setText(reason.getText().toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                char_Count.setText(reason.getText().toString());
+
+            }
+        });
         time = findViewById(R.id.appointmentTime);
         checkin = findViewById(R.id.checkin);
         backButton = (ImageView) findViewById(R.id.backButton);
@@ -124,34 +147,54 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 //        time.setAdapter(adapter);
 
         //date.setOnClickListener(this);
-        phoneButton.setOnClickListener(this);
-        birthday.setOnClickListener(this);
-        reason.setOnClickListener(this);
+//        birthday.setOnClickListener(v -> {
+//            Calendar now = Calendar.getInstance();
+//            DatePickerDialog dialog = DatePickerDialog.newInstance(
+//                    this,
+//                    now.get(Calendar.YEAR),
+//                    now.get(Calendar.MONTH),
+//                    now.get(Calendar.DAY_OF_MONTH)
+//            );
+//            dialog.setAccentColor(0x043670);
+//            dialog.setMaxDate(Calendar.getInstance());
+//
+//            List<Calendar> days = new ArrayList<>();
+//            for (int i = 0; i < 90; i++) {
+//                Calendar day = Calendar.getInstance();
+//                day.add(Calendar.DAY_OF_MONTH, i);
+//
+//            }
+//
+//            dialog.setDisabledDays(days.toArray(new Calendar[0]));
+//            dialog.show(getSupportFragmentManager(), "Available Times");
+//        });
 
+        phoneButton.setOnClickListener(this);
+        reason.setOnClickListener(this);
         checkin.setOnClickListener(this);
 
-        EditText birthday = findViewById(R.id.birthday);
-        birthday.addTextChangedListener(new TextWatcher() {
-            int prevL = 0;
-
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                prevL = birthday.getText().toString().length();
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                int length = editable.length();
-                if ((prevL < length) && (length == 2 || length == 5)) {
-                    editable.append("-");
-                }
-            }
-        });
+//        EditText birthday = findViewById(R.id.birthday);
+//        birthday.addTextChangedListener(new TextWatcher() {
+//            int prevL = 0;
+//
+//            @Override
+//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//                prevL = birthday.getText().toString().length();
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable editable) {
+//                int length = editable.length();
+//                if ((prevL < length) && (length == 2 || length == 5)) {
+//                    editable.append("-");
+//                }
+//            }
+//        });
 
     }
 
@@ -221,6 +264,8 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 
         String key = String.format("%d-%d-%d", date.getMonth() + 1, date.getDate(), date.getYear() + 1900);
         textView.setText(String.format("Date: %s", key));
+
+
         appointmentManager = new AppointmentManager(key);
 
         FirebaseDatabase.getInstance().getReference("ClinicHours").child(key).addValueEventListener(new ValueEventListener() {
