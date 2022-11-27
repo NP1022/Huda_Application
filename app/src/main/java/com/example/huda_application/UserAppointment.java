@@ -71,13 +71,14 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
         User user = (User) intent.getSerializableExtra("user");
 
         TextView name = findViewById(R.id.firstName);
-        TextView birthday = findViewById(R.id.birthday);
+
 
         name.setText(String.format("%s %s", user.getFirstName(), user.getLastName()));
 
 
         RecyclerView recyclerView = findViewById(R.id.appointmentsView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
         backbutton = findViewById(R.id.backButton_8);
         FirebaseDatabase.getInstance().getReference("User").child(user.getUserId()).addValueEventListener(new ValueEventListener() {
             @Override
@@ -172,7 +173,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             holder.approve.setOnClickListener(listener ->
             {
                 user.getAppointments().get(position).setStatus(AppointmentStatus.APPROVED);
-                SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy HH:mm z");
+                SimpleDateFormat date = new SimpleDateFormat("MM-d-yyyy HH:mm z");
 
                 String currentDateAndTime = date.format(new Date());
                 user.getAppointments().get(position).setAdminActionTime(currentDateAndTime);
@@ -198,7 +199,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             holder.deny.setOnClickListener(listener ->
             {
                 user.getAppointments().get(position).setStatus(AppointmentStatus.DENIED);
-                SimpleDateFormat date2 = new SimpleDateFormat("dd-MM-yyyy HH:mm z");
+                SimpleDateFormat date2 = new SimpleDateFormat("MM-d-yyyy HH:mm z");
 
                 String currentDateAndTime2 = date2.format(new Date());
                 user.getAppointments().get(position).setAdminActionTime(currentDateAndTime2);
@@ -241,16 +242,16 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
 
         public AppointmentViewHolder(@NonNull View itemView) {
             super(itemView);
-            time = itemView.findViewById(R.id.time);
-            date = itemView.findViewById(R.id.appointmentDate);
-            status = itemView.findViewById(R.id.Status);
-            Reason = itemView.findViewById(R.id.Reason);
-            approve = itemView.findViewById(R.id.Approve);
-            deny = itemView.findViewById(R.id.decline);
-            checkedIn = itemView.findViewById(R.id.checkedIn);
-            checkedInText = itemView.findViewById(R.id.checkedInText);
-            checkedIntimeText = itemView.findViewById(R.id.CheckinTimeText);
-            checkedIntime = itemView.findViewById(R.id.CheckinTime);
+            time = itemView.findViewById(R.id.time2);
+            date = itemView.findViewById(R.id.appointmentDate2);
+            status = itemView.findViewById(R.id.Status2);
+            Reason = itemView.findViewById(R.id.Reason2);
+            approve = itemView.findViewById(R.id.Approve2);
+            deny = itemView.findViewById(R.id.decline2);
+            checkedIn = itemView.findViewById(R.id.checkedIn2);
+            checkedInText = itemView.findViewById(R.id.checkedInText2);
+            checkedIntimeText = itemView.findViewById(R.id.CheckinTimeText2);
+            checkedIntime = itemView.findViewById(R.id.CheckinTime2);
         }
 
         public TextView getTime() {
