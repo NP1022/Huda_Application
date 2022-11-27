@@ -40,9 +40,9 @@ import java.util.stream.Collectors;
 
 public class AvailableAppointments extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, View.OnClickListener {
 
-    private Button dateButton;
-    private AppointmentManager appointmentManager;
-    private List<Time> availableTimes = new ArrayList<>();
+    private Button dateButton;                                          // Available appointment class used to show the available appointment times for the Admin to allow them
+    private AppointmentManager appointmentManager;                      // to remove specific appointment times for the patients of the application
+    private List<Time> availableTimes = new ArrayList<>();              // The removed times will be stored in the database and filtered when displayed for the patient
     private PatientViewAdapter viewAdapter;
     private ImageView backbutton;
     private ValueEventListener hoursListener;
@@ -54,32 +54,33 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_appointments);
 
-        recyclerView = findViewById(R.id.usersView6);
+        recyclerView = findViewById(R.id.usersView6);                                               // Setting the recycler view to show all the appointment times for the admin to remove from
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        backbutton = findViewById(R.id.backButton_7);
+        backbutton = findViewById(R.id.backButton_7);                                               //back button and the date button
         dateButton = findViewById(R.id.dateText2);
+
         dateButton.setOnClickListener(v -> {
             Calendar now = Calendar.getInstance();
             com.wdullaer.materialdatetimepicker.date.DatePickerDialog dialog = com.wdullaer.materialdatetimepicker.date.DatePickerDialog.newInstance(
                     this,
-                    now.get(Calendar.YEAR),
+                    now.get(Calendar.YEAR),                  // The date button is used as the to show the date picker dialog for the application
                     now.get(Calendar.MONTH),
                     now.get(Calendar.DAY_OF_MONTH)
             );
             dialog.setAccentColor(0x043670);
             dialog.setMinDate(Calendar.getInstance());
 
-            List<Calendar> days = new ArrayList<>();
+            List<Calendar> days = new ArrayList<>();                    // Create the limited days for the calendar in the datepicker object for the application
             for (int i = 0; i < 90; i++) {
                 Calendar day = Calendar.getInstance();
                 day.add(Calendar.DAY_OF_MONTH, i);
 
-                if (day.get(Calendar.DAY_OF_WEEK) != Calendar.TUESDAY &&
+                if (day.get(Calendar.DAY_OF_WEEK) != Calendar.TUESDAY &&            // Eliminate the following days from the Datepicker for the Days
                         day.get(Calendar.DAY_OF_WEEK) != Calendar.THURSDAY &&
                         day.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY) {
                     days.add(day);
                 }
-            }
+            }                                                                             // setting the disabled days for the application
 
             dialog.setDisabledDays(days.toArray(new Calendar[0]));
             dialog.show(getSupportFragmentManager(), "Available Times");
@@ -96,48 +97,54 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
 
 
 
-    private class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder> implements View.OnClickListener {
+    private class PatientViewAdapter extends RecyclerView.Adapter<PatientViewHolder>  {
 
-        private LayoutInflater inflater;
+        private LayoutInflater inflater;                                         // Variables used by adapter to show the items in the recycler view in the application.
+
         private final Context context;
         private List<Time> times;
 
         public PatientViewAdapter(Context context, List<Time> times) {
             this.context = context;
-            this.times = times;
+            this.times = times;                                             // Constructor used to set the variables equal to the parameters for the recycler adapter
             this.inflater = LayoutInflater.from(context);
         }
 
         @NonNull
         @Override
         public PatientViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = inflater.inflate(R.layout.available_appointments_item, parent, false);
+            View view = inflater.inflate(R.layout.available_appointments_item, parent, false);                                      // over ride method to check the view of the Adapter for the recycle view
+
+
             return new PatientViewHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {          // Holder for each Item that is used in the recycle view of page which use the holder object
             Time time = times.get(position);
             holder.Time.setText(time.toString());
             holder.Remove.setOnClickListener(view -> {
                 AppointmentManager.createAppointment(AvailableAppointments.this.dateButton.getText().toString(), time.toString(), "Admin");
-                Toast.makeText(AvailableAppointments.this,"Appointment Time "+times.get(position) + " time slot has been removed",Toast.LENGTH_SHORT).show();
+                Toast.makeText(AvailableAppointments.this,"Appointment Time "+times.get(position) + " time slot has been removed",Toast.LENGTH_SHORT).show(); // The remove created an appointment at that specific time to take it off the view for the patients
             });
         }
 
         @Override
         public int getItemCount() {
             return times.size();
-        }
+        }           // Returns the amount of items in the recycler view
 
         @Override
-        public void onClick(View v) {
+        public int getItemViewType(int position) {
+            return position;
         }
     }
 
     public static class PatientViewHolder extends RecyclerView.ViewHolder {
 
-        private final TextView Time;
+        private final TextView Time;                                                     // Holder variables to set equal to the position that is found on the UI of the
+                                                                                          // application Each one of the holder variables will be connected to
+                                                                                          //the Item list that is used in the recycle view of the application
         private final TextView Remove;
 
         public PatientViewHolder(@NonNull View itemView) {
@@ -158,7 +165,8 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         Calendar c = Calendar.getInstance();
-        c.set(Calendar.YEAR, year);
+        c.set(Calendar.YEAR, year);                                                                      // Once the date is set in the date picker the current date will be taken and set
+
         c.set(Calendar.MONTH, monthOfYear);
         c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
@@ -166,7 +174,7 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
         TextView textView = findViewById(R.id.dateText2);
         dateButton.setText(currentDateString);
 
-        Date date = c.getTime();
+        Date date = c.getTime();                                                                        // Sets the current date in the text view of the application
 
         String key = String.format("%d-%d-%d", date.getMonth() + 1, date.getDate(), date.getYear() + 1900);
         textView.setText(key);
@@ -175,19 +183,21 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
         appointmentManager = new AppointmentManager(key);
 
         if (hoursListener != null) {
-            FirebaseDatabase.getInstance().getReference("ClinicHours").child(key).removeEventListener(hoursListener);
+            FirebaseDatabase.getInstance().getReference("ClinicHours").child(key).removeEventListener(hoursListener);   // If the picked day isn't empty it will remove the listener for that
+                                                                                                                             // day that is displayed
             FirebaseDatabase.getInstance().getReference("Appointment").child(key).removeEventListener(dbListener);
         }
 
         hoursListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                appointmentManager.createTimesOpen(snapshot.getValue(Float.class));
+                appointmentManager.createTimesOpen(snapshot.getValue(Float.class));                 // create the available times for that specific days of the patients by checking if
+                                                                                                    // there was any modifications in the database
 
                 dbListener = new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for (DataSnapshot child : snapshot.getChildren()) {
+                        for (DataSnapshot child : snapshot.getChildren()) {                         // on data exchange to get the available times after filtering appointments that already exist
                             appointmentManager.convertAppointment(child);
                         }
 
