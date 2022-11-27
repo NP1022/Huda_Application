@@ -114,6 +114,7 @@
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2565" />
         <entry key="app/src/main/res/layout-v31/activity_profile_page.xml" value="0.24139492753623187" />
         <entry key="app/src/main/res/layout/activity_announcements.xml" value="0.3330718994140625" />
+        <entry key="app/src/main/res/layout/activity_appt_request.xml" value="0.363855421686747" />
         <entry key="app/src/main/res/layout/activity_check_in.xml" value="0.12639311043566362" />
         <entry key="app/src/main/res/layout/activity_contact_us.xml" value="0.37311553955078125" />
         <entry key="app/src/main/res/layout/activity_delete_user_account.xml" value="0.1503623188405797" />
@@ -123,11 +124,15 @@
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20652173913043478" />
         <entry key="app/src/main/res/layout/activity_main_application.xml" value="0.4232223510742188" />
+        <entry key="app/src/main/res/layout/activity_message_all_patients.xml" value="0.30480072463768115" />
+        <entry key="app/src/main/res/layout/activity_message_send_page.xml" value="0.30480072463768115" />
+        <entry key="app/src/main/res/layout/activity_messagepage.xml" value="0.30480072463768115" />
         <entry key="app/src/main/res/layout/activity_new_login.xml" value="0.337469482421875" />
         <entry key="app/src/main/res/layout/activity_our_story.xml" value="0.15896739130434784" />
         <entry key="app/src/main/res/layout/activity_partners.xml" value="0.2627105712890625" />
         <entry key="app/src/main/res/layout/activity_patient_form.xml" value="0.2867482092244055" />
         <entry key="app/src/main/res/layout/activity_patient_info_form.xml" value="0.2598958333333333" />
+        <entry key="app/src/main/res/layout/activity_patient_messages.xml" value="0.34103260869565216" />
         <entry key="app/src/main/res/layout/activity_patients_page.xml" value="0.12639311043566362" />
         <entry key="app/src/main/res/layout/activity_primary_services.xml" value="0.15896739130434784" />
         <entry key="app/src/main/res/layout/activity_profile_menu.xml" value="0.3440658569335938" />
@@ -140,6 +145,7 @@
         <entry key="app/src/main/res/layout/content_profile_menu.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/menu_activity_main.xml" value="0.33958333333333335" />
         <entry key="app/src/main/res/layout/menu_activity_main_application.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/message_user_item.xml" value="0.30480072463768115" />
         <entry key="app/src/main/res/layout/nav_header_profile_menu.xml" value="0.33758697509765623" />
         <entry key="app/src/main/res/layout/new_profile_menu.xml" value="0.1" />
         <entry key="app/src/main/res/layout/patient_message_item.xml" value="0.24947916666666667" />
