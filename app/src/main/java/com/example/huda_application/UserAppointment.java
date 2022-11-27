@@ -198,6 +198,10 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             holder.deny.setOnClickListener(listener ->
             {
                 user.getAppointments().get(position).setStatus(AppointmentStatus.DENIED);
+                SimpleDateFormat date2 = new SimpleDateFormat("dd-MM-yyyy HH:mm z");
+
+                String currentDateAndTime2 = date2.format(new Date());
+                user.getAppointments().get(position).setAdminActionTime(currentDateAndTime2);
                 FirebaseClient.updateUser(user);
 
                 holder.approve.setVisibility(View.GONE);

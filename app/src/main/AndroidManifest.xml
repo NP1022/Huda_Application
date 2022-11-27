@@ -111,9 +111,6 @@
             android:name=".ApptRequest"
             android:exported="false" />
         <activity
-            android:name=".PatientsPage"
-            android:exported="false" />
-        <activity
             android:name=".PatientForm"
             android:exported="false" />
         <activity
