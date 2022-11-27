@@ -85,7 +85,7 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
     {
         if (view.getId() == R.id.nextForm2)
         {
-            // setting the EditText variable equal to the ID from the PatientForm XML
+            // setting the EditText variable equal to the ID from the PatientContract XML
             final EditText patientSigned2 = findViewById(R.id.patientNamePrinted2);
             final EditText patientSig2 = findViewById(R.id.patientNameSignature2);
 
