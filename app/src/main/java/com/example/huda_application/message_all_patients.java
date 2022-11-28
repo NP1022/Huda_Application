@@ -27,7 +27,9 @@ import java.util.List;
 import java.util.Locale;
 
 public class message_all_patients extends AppCompatActivity implements View.OnClickListener {
-    private EditText Message_feild;
+    private EditText Message_feild;                                                             // Class used to send the Message using the user that is selected from the message page
+                                                                                                // The object of the user is brought through a serializable object that is passed through
+                                                                                                // once the message is added to the object it is pushed to the database
     private User user;
     private ImageView backbotton;
     private List<User> users;
@@ -39,7 +41,9 @@ public class message_all_patients extends AppCompatActivity implements View.OnCl
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 users = new ArrayList<>();
-                for (DataSnapshot child : snapshot.getChildren()) {
+                for (DataSnapshot child : snapshot.getChildren()) {              // Variables used to get the information that is brought for the message
+
+
                     User user = FirebaseClient.convertToUser(child);
                     if (user.getUserType() != UserType.ADMIN)
                         users.add(user);
@@ -51,10 +55,11 @@ public class message_all_patients extends AppCompatActivity implements View.OnCl
             }
         });
         Message_feild = findViewById(R.id.Message_all);
-        AppCompatButton sendButton = findViewById(R.id.send_all);
+        AppCompatButton sendButton = findViewById(R.id.send_all); // On click listener for the  message field the send button
         backbotton = findViewById(R.id.backButton_message_all);
 
         sendButton.setOnClickListener(this);
+
         Message_feild.setOnClickListener(this);
         backbotton.setOnClickListener(this);
 
@@ -63,7 +68,8 @@ public class message_all_patients extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.send_all){
-
+            // The send button will take the current time of the message
+            // Minimum character are 15 characters required
 
             String date = new SimpleDateFormat("MM-d-yyyy", Locale.getDefault()).format(new Date());
             String message = Message_feild.getText().toString().trim();
@@ -75,7 +81,7 @@ public class message_all_patients extends AppCompatActivity implements View.OnCl
             else {
                 for (int i = 0; i < users.size(); i++) {
                     users.get(i).addMessages(m);
-                    FirebaseClient.updateUser(users.get(i));
+                    FirebaseClient.updateUser(users.get(i));                // Added the message to all the users in the application to be stored in the database of the application
                 }
 
                 startActivity(new Intent(this, Messagepage.class));

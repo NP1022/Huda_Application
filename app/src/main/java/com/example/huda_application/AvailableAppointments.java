@@ -63,19 +63,19 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
             Calendar now = Calendar.getInstance();
             com.wdullaer.materialdatetimepicker.date.DatePickerDialog dialog = com.wdullaer.materialdatetimepicker.date.DatePickerDialog.newInstance(
                     this,
-                    now.get(Calendar.YEAR),                  // The date button is used as the to show the date picker dialog for the application
+                    now.get(Calendar.YEAR),                                           // The date button is used as the to show the date picker dialog for the application
                     now.get(Calendar.MONTH),
                     now.get(Calendar.DAY_OF_MONTH)
             );
             dialog.setAccentColor(0x043670);
             dialog.setMinDate(Calendar.getInstance());
 
-            List<Calendar> days = new ArrayList<>();                    // Create the limited days for the calendar in the datepicker object for the application
+            List<Calendar> days = new ArrayList<>();                                   // Create the limited days for the calendar in the datepicker object for the application
             for (int i = 0; i < 90; i++) {
                 Calendar day = Calendar.getInstance();
                 day.add(Calendar.DAY_OF_MONTH, i);
 
-                if (day.get(Calendar.DAY_OF_WEEK) != Calendar.TUESDAY &&            // Eliminate the following days from the Datepicker for the Days
+                if (day.get(Calendar.DAY_OF_WEEK) != Calendar.TUESDAY &&                // Eliminate the following days from the Datepicker for the Days
                         day.get(Calendar.DAY_OF_WEEK) != Calendar.THURSDAY &&
                         day.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY) {
                     days.add(day);
