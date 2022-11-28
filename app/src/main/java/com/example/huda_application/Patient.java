@@ -3,6 +3,7 @@ package com.example.huda_application;
 
 public class Patient
 {
+    // creating the Strings that will be used in the patient class
     private String todaysDate;
     private String reasonForVisit;
     private String lastName;
@@ -40,6 +41,7 @@ public class Patient
     private String patientSignature;
     private String patientConsentDate;
 
+    // setting the default constructor for the Patient parameter
     public Patient(String todaysDate, String reasonForVisit, String lastName, String firstName, String patientSex, String dateOfBirth,
                    String patientAddress, String patientCity, String patientState, String patientZipCode, String patientSSN,
                    String homePhoneNo, String cellPhoneNo, String prefContactMethod, String consentToCall, String consentToText, String insuranceProvider, String emailAddress,
@@ -48,6 +50,7 @@ public class Patient
                    String emergencyRelationship, String emergencyContactNumber, String patientNameSelfVolunteer, String patientNamePrinted, String patientSignature,
                    String patientConsentDate)
     {
+        // setting the string to the current object
         this.todaysDate = todaysDate;
         this.reasonForVisit = reasonForVisit;
         this.lastName = lastName;
@@ -86,6 +89,7 @@ public class Patient
         this.patientConsentDate = patientConsentDate;
     }
 
+    // getters and setters for the class
     public String getTodaysDate() {
         return todaysDate;
     }
