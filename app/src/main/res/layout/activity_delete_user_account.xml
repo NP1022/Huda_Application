@@ -32,28 +32,28 @@
 
         <TextView
             android:id="@+id/registerPara2"
-            android:layout_width="320dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/headerUpdateEmail"
             android:textColor="#5A5959"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintEnd_toEndOf="@id/vg4"
             app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/registrationFormHeader" />
 
         <TextView
             android:id="@+id/registerPara3"
-            android:layout_width="320dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="@string/deleteUserHeader2"
             android:textColor="#5A5959"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintEnd_toEndOf="@id/vg4"
             app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <ImageView
@@ -84,7 +84,7 @@
 
         <EditText
             android:id="@+id/email"
-            android:layout_width="330dp"
+            android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
@@ -96,14 +96,14 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintEnd_toEndOf="@id/vg4"
             app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/registerPara2" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="330dp"
+            android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
@@ -115,13 +115,13 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintEnd_toEndOf="@id/vg4"
+            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/email" />
 
         <EditText
             android:id="@+id/yesOrNo"
-            android:layout_width="330dp"
+            android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
@@ -133,13 +133,13 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintEnd_toEndOf="@id/vg4"
+            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/registerPara3" />
 
         <EditText
             android:id="@+id/confirmYesOrNo"
-            android:layout_width="330dp"
+            android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -150,13 +150,13 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintEnd_toEndOf="@id/vg4"
+            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/yesOrNo" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/deleteUserButton"
-            android:layout_width="330dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/buttonstyle"

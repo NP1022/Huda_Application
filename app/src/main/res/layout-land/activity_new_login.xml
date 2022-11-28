@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".NewLogin">
+
+    <TextView
+        android:id="@+id/DentalHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/servicebuttonstyle"
+        android:minWidth="140dp"
+        android:padding="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/DentalNewLogin"
+        android:textAlignment="center"
+        android:textColor="@color/hudaBlue"
+        android:textSize="22sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/hudalogo"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/language2"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/buttonstyle"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:foreground="@drawable/globe__3_"
+        android:foregroundGravity="center"
+        android:textColor="#ffffff"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+
+    <TextView
+        android:id="@+id/PrimaryHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/servicebuttonstyle"
+        android:minWidth="140dp"
+        android:padding="10dp"
+        android:text="@string/PrimaryNewLogin"
+        android:textAlignment="center"
+        android:textColor="@color/hudaBlue"
+        android:textSize="22sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/hudalogo"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <TextView
+        android:id="@+id/MentalHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/servicebuttonstyle"
+        android:minWidth="140dp"
+        android:padding="10dp"
+        android:text="@string/MentalNewLogin"
+        android:textAlignment="center"
+        android:textColor="@color/hudaBlue"
+        android:textSize="22sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/SpecialtyHeader"
+        app:layout_constraintTop_toBottomOf="@+id/PrimaryHeader" />
+
+    <TextView
+        android:id="@+id/SpecialtyHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/servicebuttonstyle"
+        android:minWidth="140dp"
+        android:padding="10dp"
+        android:text="@string/SpecialityNewLogin"
+        android:textAlignment="center"
+        android:textColor="@color/hudaBlue"
+        android:textSize="22sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="255dp" />
+
+    <TextView
+        android:id="@+id/VisionHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/servicebuttonstyle"
+        android:minWidth="140dp"
+        android:padding="10dp"
+        android:text="@string/VisionNewLogin"
+        android:textAlignment="center"
+        android:textColor="@color/hudaBlue"
+        android:textSize="22sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/SpecialtyHeader"
+        app:layout_constraintTop_toBottomOf="@+id/DentalHeader" />
+
+    <TextView
+        android:id="@+id/DoNotHaveAnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DontHaveAnAccount"
+        android:textAlignment="center"
+        android:textColor="@color/hudaBlue"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@id/vg5"
+        app:layout_constraintTop_toTopOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/LoginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/Login"
+        android:textAlignment="center"
+        android:textColor="@color/hudaBlue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/HaveAnAccount"
+        app:layout_constraintTop_toTopOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/vg4"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/HaveAnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/HaveAnAccount"
+        android:textAlignment="center"
+        android:textColor="@color/hudaBlue"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/vg3" />
+
+    <TextView
+        android:id="@+id/SignUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/SignUp"
+        android:textAlignment="center"
+        android:textColor="@color/hudaBlue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/DoNotHaveAnAccount"
+        app:layout_constraintTop_toTopOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/vg6"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/hudalogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"
+        app:srcCompat="@drawable/huda_logo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
