@@ -7,146 +7,86 @@
     android:background="#FFFFFF"
     tools:context=".MainApplication">
 
-<!--    <ImageView-->
-<!--        android:id="@+id/backButton"-->
-<!--        android:layout_width="50dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@drawable/icons8_back_arrow_100" />-->
-
-<!--    <androidx.drawerlayout.widget.DrawerLayout-->
-<!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--        xmlns:tools="http://schemas.android.com/tools"-->
-<!--        android:id="@+id/drawer_layout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:fitsSystemWindows="true"-->
-<!--        tools:openDrawer="start">-->
-
-<!--        <include-->
-<!--            android:id="@+id/app_bar_profile_menu"-->
-<!--            layout="@layout/app_bar_profile_menu"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent" />-->
-
-<!--        <com.google.android.material.navigation.NavigationView-->
-<!--            android:id="@+id/nav_view"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_gravity="start"-->
-<!--            android:fitsSystemWindows="true"-->
-<!--            app:headerLayout="@layout/nav_header_profile_menu"-->
-<!--            app:menu="@menu/activity_profile_menu_drawer" />-->
-<!--    </androidx.drawerlayout.widget.DrawerLayout>-->
-
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:id="@+id/toolbar"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:background="?attr/colorPrimary"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:popupTheme="@style/PopupOverlay" />-->
-
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_gravity="bottom|end"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@android:drawable/ic_dialog_email" />-->
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/partnersPage"
-        android:layout_width="330dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="96dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="6:1"
         android:background="@drawable/buttonstyle"
         android:text="@string/partners"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ourStoryPage" />
+        app:layout_constraintEnd_toEndOf="@id/buttonRight"
+        app:layout_constraintStart_toStartOf="@id/buttonLeft"
+        app:layout_constraintTop_toBottomOf="@+id/partnersTop"
+        app:layout_constraintBottom_toTopOf="@id/contactUsTop"/>
 
     <ImageView
         android:id="@+id/hudaLogo3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/hg1"
+        app:layout_constraintBottom_toBottomOf="@id/hg2"
+        app:layout_constraintEnd_toEndOf="@id/vg2"
+        app:layout_constraintStart_toStartOf="@id/vg1"
         app:srcCompat="@drawable/huda_logo" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/announcementsPage"
         android:layout_width="330dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="96dp"
+        android:layout_height="0dp"
         android:background="@drawable/buttonstyle"
         android:text="@string/Annoucment"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hudaLogo3" />
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintEnd_toEndOf="@id/buttonRight"
+        app:layout_constraintStart_toStartOf="@id/buttonLeft"
+        app:layout_constraintTop_toBottomOf="@+id/announcementTop"
+        app:layout_constraintBottom_toBottomOf="@id/appTop"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Patients"
-        android:layout_width="330dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="96dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="6:1"
         android:background="@drawable/buttonstyle"
         android:text="@string/patients_page"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/announcementsPage" />
+        app:layout_constraintEnd_toEndOf="@id/buttonRight"
+        app:layout_constraintStart_toStartOf="@id/buttonLeft"
+        app:layout_constraintBottom_toBottomOf="@id/ourStoryTop"
+        app:layout_constraintTop_toBottomOf="@+id/appTop" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ourStoryPage"
-        android:layout_width="330dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="96dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="6:1"
         android:background="@drawable/buttonstyle"
         android:text="@string/story"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Patients" />
+        app:layout_constraintEnd_toEndOf="@id/buttonRight"
+        app:layout_constraintStart_toStartOf="@id/buttonLeft"
+        app:layout_constraintTop_toBottomOf="@+id/ourStoryTop"
+        app:layout_constraintBottom_toBottomOf="@id/partnersTop"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/contactUsPage"
-        android:layout_width="330dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="96dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="6:1"
         android:background="@drawable/buttonstyle"
         android:text="@string/contact"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/partnersPage" />
+        app:layout_constraintEnd_toEndOf="@id/buttonRight"
+        app:layout_constraintStart_toStartOf="@id/buttonLeft"
+        app:layout_constraintTop_toBottomOf="@+id/contactUsTop"
+        app:layout_constraintBottom_toBottomOf="@id/contactUsBottom"/>
 
     <ImageView
         android:id="@+id/profileIcon"
@@ -181,35 +121,94 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_mail_outline_24" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/profile_user_name"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="45dp"-->
-<!--        android:layout_marginBottom="27dp"-->
-<!--        android:text="TextView"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/announcementsPage"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/profile_user_email"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="73dp"-->
-<!--        android:layout_marginBottom="27dp"-->
-<!--        android:text="TextView"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/announcementsPage"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/profile_user_name" />-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/profile_user_dob"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="41dp"-->
-<!--        android:layout_marginBottom="27dp"-->
-<!--        android:text="TextView"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/announcementsPage"-->
-<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/buttonLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/buttonRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.175" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/announcementTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/appTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ourStoryTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.47" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/partnersTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".59" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contactUsTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.71" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/contactUsBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

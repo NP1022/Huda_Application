@@ -21,9 +21,8 @@
             android:id="@+id/imageView10"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="67dp"
             android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/checkLeft"
             app:layout_constraintTop_toBottomOf="@+id/specialtyServices"
             app:srcCompat="@drawable/done" />
 
@@ -32,7 +31,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="@id/checkLeft"
             app:layout_constraintEnd_toStartOf="@+id/endocrinology"
             app:layout_constraintTop_toBottomOf="@+id/imageView10"
             app:srcCompat="@drawable/done" />
@@ -42,7 +41,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="@id/checkLeft"
             app:layout_constraintEnd_toStartOf="@+id/podiatry"
             app:layout_constraintTop_toBottomOf="@+id/imageView23"
             app:srcCompat="@drawable/done" />
@@ -52,7 +51,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="@id/checkLeft"
             app:layout_constraintEnd_toStartOf="@+id/cardiology"
             app:layout_constraintTop_toBottomOf="@+id/imageView21"
             app:srcCompat="@drawable/done" />
@@ -62,7 +61,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="@id/checkLeft"
             app:layout_constraintEnd_toStartOf="@+id/nephrology"
             app:layout_constraintTop_toBottomOf="@+id/imageView22"
             app:srcCompat="@drawable/done" />
@@ -72,17 +71,17 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
-            app:layout_constraintEnd_toStartOf="@+id/ent"
+            app:layout_constraintStart_toStartOf="@id/checkLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView27"
-            app:srcCompat="@drawable/done" />
+            app:srcCompat="@drawable/done"
+            tools:layout_editor_absoluteX="81dp" />
 
         <ImageView
             android:id="@+id/imageView28"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="@id/checkLeft"
             app:layout_constraintEnd_toStartOf="@+id/pulmonology"
             app:layout_constraintTop_toBottomOf="@+id/imageView29"
             app:srcCompat="@drawable/done" />
@@ -92,8 +91,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
-            app:layout_constraintEnd_toStartOf="@+id/pulmonology"
+            app:layout_constraintStart_toStartOf="@id/checkLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView25"
             app:srcCompat="@drawable/done" />
 
@@ -102,7 +100,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="@id/checkLeft"
             app:layout_constraintEnd_toStartOf="@+id/gastroenterology"
             app:layout_constraintTop_toBottomOf="@+id/imageView24"
             app:srcCompat="@drawable/done" />
@@ -112,14 +110,14 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="@id/checkLeft"
             app:layout_constraintEnd_toStartOf="@+id/ent"
             app:layout_constraintTop_toBottomOf="@+id/imageView26"
             app:srcCompat="@drawable/done" />
 
         <TextView
             android:id="@+id/physTherapy"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
@@ -137,6 +135,7 @@
             android:id="@+id/podiatry"
             android:layout_width="200dp"
             android:layout_height="30dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
             android:background="@color/white"
             android:fontFamily="sans-serif-light"
@@ -145,15 +144,14 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.7"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView22"
             app:layout_constraintTop_toBottomOf="@+id/cardiology" />
 
         <TextView
             android:id="@+id/ent"
-            android:layout_width="223dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="8dp"
             android:background="@color/white"
             android:fontFamily="sans-serif-light"
@@ -162,15 +160,14 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.817"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView27"
             app:layout_constraintTop_toBottomOf="@+id/gastroenterology" />
 
         <TextView
             android:id="@+id/pulmonology"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="40dp"
             android:background="@color/white"
@@ -181,15 +178,14 @@
             android:textSize="20sp"
             android:textStyle="normal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.7"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView28"
             app:layout_constraintTop_toBottomOf="@+id/hematology" />
 
         <TextView
             android:id="@+id/hematology"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
             android:background="@color/white"
             android:fontFamily="sans-serif-light"
@@ -198,16 +194,15 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.7"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView29"
             app:layout_constraintTop_toBottomOf="@+id/hepatology" />
 
         <TextView
             android:id="@+id/hepatology"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
             android:background="@color/white"
             android:fontFamily="sans-serif-light"
             android:text="@string/Hepatology"
@@ -215,15 +210,14 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.7"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView25"
             app:layout_constraintTop_toBottomOf="@+id/ent" />
 
         <TextView
             android:id="@+id/gastroenterology"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
             android:background="@color/white"
             android:fontFamily="sans-serif-light"
@@ -232,15 +226,14 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.7"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView26"
             app:layout_constraintTop_toBottomOf="@+id/nephrology" />
 
         <TextView
             android:id="@+id/nephrology"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
             android:background="@color/white"
             android:fontFamily="sans-serif-light"
@@ -249,15 +242,14 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.7"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView24"
             app:layout_constraintTop_toBottomOf="@+id/podiatry" />
 
         <TextView
             android:id="@+id/cardiology"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
             android:background="@color/white"
             android:fontFamily="sans-serif-light"
@@ -266,15 +258,14 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.7"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView23"
             app:layout_constraintTop_toBottomOf="@+id/endocrinology" />
 
         <TextView
             android:id="@+id/endocrinology"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
             android:background="@color/white"
             android:fontFamily="sans-serif-light"
@@ -283,14 +274,12 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.7"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView21"
             app:layout_constraintTop_toBottomOf="@+id/physTherapy" />
 
         <TextView
             android:id="@+id/specialtyServices"
-            android:layout_width="330dp"
+            android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
             android:background="@color/white"
@@ -299,15 +288,15 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/paraRight"
             app:layout_constraintHorizontal_bias="0.466"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/paraLeft"
             app:layout_constraintTop_toBottomOf="@+id/specialtyPara2" />
 
         <TextView
             android:id="@+id/specialtyPara2"
-            android:layout_width="320dp"
-            android:layout_height="280dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
             android:fontFamily="sans-serif-light"
@@ -316,8 +305,8 @@
             android:textAlignment="textStart"
             android:textColor="#043670"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/paraRight"
+            app:layout_constraintStart_toStartOf="@id/paraLeft"
             app:layout_constraintTop_toBottomOf="@+id/specialtyImage" />
 
         <ImageView
@@ -332,54 +321,102 @@
 
         <TextView
             android:id="@+id/healthHeader"
-            android:layout_width="360dp"
+            android:layout_width="0dp"
             android:layout_height="55dp"
-            android:layout_marginTop="20dp"
             android:background="@color/white"
             android:text="@string/SpecialtyCareHeader"
             android:textAlignment="center"
             android:textColor="#043670"
             android:textSize="30dp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hudaLogo3" />
+            app:layout_constraintEnd_toEndOf="@id/paraRight"
+            app:layout_constraintStart_toStartOf="@id/paraLeft"
+            app:layout_constraintTop_toBottomOf="@+id/hg2" />
 
         <ImageView
             android:id="@+id/hudaLogo3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-
-            android:contentDescription="TODO"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/hg1"
+            app:layout_constraintBottom_toBottomOf="@id/hg2"
+            app:layout_constraintEnd_toEndOf="@id/vg2"
+            app:layout_constraintStart_toStartOf="@id/vg1"
             app:srcCompat="@drawable/huda_logo" />
-
-        <!--TextView
-            android:id="@+id/primaryCareInternalMedicine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/PrimaryCareInternalMedicine"
-            android:textColor="#043670"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dentalHealthHeader" /-->
 
         <ImageView
             android:id="@+id/specialtyImage"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
             android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageRight"
+            app:layout_constraintStart_toStartOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/healthHeader"
             app:srcCompat="@drawable/healthcare" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.36" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.64" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/checkLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/paraLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/paraRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/imageLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/imageRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

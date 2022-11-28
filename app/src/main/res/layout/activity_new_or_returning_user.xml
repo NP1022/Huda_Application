@@ -39,59 +39,137 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/returningUser"
-        android:layout_width="250dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="14:3"
+        android:layout_marginLeft="5dp"
         android:background="@drawable/buttonstyle"
         android:text="Returning Patient?"
-        android:textColor="#ffffff"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newUser" />
+        app:layout_constraintTop_toTopOf="@id/hg5"
+        app:layout_constraintBottom_toBottomOf="@id/hg6"
+        app:layout_constraintStart_toStartOf="@id/vg4"
+        app:layout_constraintTop_toBottomOf="@+id/newUser"
+        tools:layout_editor_absoluteX="136dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/newUser"
-        android:layout_width="250dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="25dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="14:3"
+        android:layout_marginLeft="5dp"
         android:background="@drawable/buttonstyle"
         android:text="New Patient?"
-        android:textColor="#ffffff"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPara3" />
+        app:layout_constraintTop_toTopOf="@id/hg3"
+        app:layout_constraintBottom_toBottomOf="@id/hg4"
+        app:layout_constraintStart_toStartOf="@id/vg4"
+        app:layout_constraintTop_toBottomOf="@+id/loginPara3"
+        tools:layout_editor_absoluteX="136dp" />
 
     <ImageView
         android:id="@+id/hudaLogo5"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/hg1"
+        app:layout_constraintBottom_toBottomOf="@id/hg2"
+        app:layout_constraintEnd_toEndOf="@id/vg2"
+        app:layout_constraintStart_toStartOf="@id/vg1"
         app:srcCompat="@drawable/huda_logo" />
 
     <ImageView
         android:id="@+id/imageView37"
-        android:layout_width="50dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/returningUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/hg5"
+        app:layout_constraintBottom_toBottomOf="@id/hg6"
+        app:layout_constraintStart_toStartOf="@id/vg3"
+        app:layout_constraintEnd_toStartOf="@+id/vg4"
         app:layout_constraintTop_toBottomOf="@+id/imageView39"
         app:srcCompat="@drawable/returning_patient" />
 
     <ImageView
         android:id="@+id/imageView39"
-        android:layout_width="50dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/newUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/hg3"
+        app:layout_constraintBottom_toBottomOf="@id/hg4"
+        app:layout_constraintStart_toStartOf="@id/vg3"
+        app:layout_constraintEnd_toStartOf="@+id/vg4"
         app:layout_constraintTop_toBottomOf="@+id/loginPara3"
         app:srcCompat="@drawable/new_patient" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

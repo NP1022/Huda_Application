@@ -16,25 +16,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icons8_back_arrow_100" />
+
     <ImageView
         android:id="@+id/hudaLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/hg1"
+        app:layout_constraintBottom_toBottomOf="@id/hg2"
+        app:layout_constraintEnd_toEndOf="@id/vg2"
+        app:layout_constraintStart_toStartOf="@id/vg1"
         app:srcCompat="@drawable/huda_logo" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/usersView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="250dp"
-
-        />
-
-
+        android:layout_marginTop="250dp" />
 
     <TextView
         android:id="@+id/loginHeader3"
@@ -48,7 +46,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/hg2" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/Tool_bar"
@@ -58,4 +56,33 @@
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         app:layout_constraintTop_toBottomOf="@id/loginHeader3"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.175" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

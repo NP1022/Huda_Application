@@ -21,9 +21,8 @@
             android:id="@+id/imageView17"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="59dp"
             android:layout_marginTop="17dp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/servicesInclude"
             app:srcCompat="@drawable/done" />
 
@@ -31,9 +30,8 @@
             android:id="@+id/imageView18"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="59dp"
             android:layout_marginTop="15dp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/imageView17"
             app:srcCompat="@drawable/done" />
 
@@ -41,9 +39,8 @@
             android:id="@+id/imageView19"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="59dp"
             android:layout_marginTop="5dp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/imageView18"
             app:srcCompat="@drawable/done" />
 
@@ -51,9 +48,8 @@
             android:id="@+id/imageView20"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="59dp"
             android:layout_marginTop="5dp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/imageView19"
             app:srcCompat="@drawable/done" />
 
@@ -75,7 +71,7 @@
 
         <TextView
             android:id="@+id/deepCleanings"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
@@ -91,7 +87,7 @@
 
         <TextView
             android:id="@+id/compositeFillings"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
@@ -107,11 +103,10 @@
 
         <TextView
             android:id="@+id/toothExtractions"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="40dp"
             android:background="@color/white"
             android:fontFamily="sans-serif-light"
             android:text="@string/ToothExtractions"
@@ -119,13 +114,12 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView20"
             app:layout_constraintTop_toBottomOf="@+id/compositeFillings" />
 
         <TextView
             android:id="@+id/servicesInclude"
-            android:layout_width="330dp"
+            android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
             android:background="@color/white"
@@ -134,8 +128,8 @@
             android:textColor="#043670"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/vg5"
+            app:layout_constraintStart_toStartOf="@id/vg4"
             app:layout_constraintTop_toBottomOf="@+id/healthPara" />
 
         <ImageView
@@ -150,7 +144,7 @@
 
         <TextView
             android:id="@+id/healthHeader"
-            android:layout_width="330dp"
+            android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_marginTop="8dp"
             android:background="@color/white"
@@ -159,20 +153,19 @@
             android:textColor="#043670"
             android:textSize="30dp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/vg5"
+            app:layout_constraintStart_toStartOf="@id/vg4"
             app:layout_constraintTop_toBottomOf="@+id/hudaLogo3" />
 
         <ImageView
             android:id="@+id/hudaLogo3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-
-            android:contentDescription="TODO"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/hg1"
+            app:layout_constraintBottom_toBottomOf="@id/hg2"
+            app:layout_constraintEnd_toEndOf="@id/vg2"
+            app:layout_constraintStart_toStartOf="@id/vg1"
             app:srcCompat="@drawable/huda_logo" />
 
         <!--TextView
@@ -191,7 +184,7 @@
 
         <TextView
             android:id="@+id/healthPara"
-            android:layout_width="320dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
@@ -202,21 +195,83 @@
             android:textAlignment="textStart"
             android:textColor="#043670"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.478"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg4"
+            app:layout_constraintEnd_toEndOf="@id/vg5"
             app:layout_constraintTop_toBottomOf="@+id/dentalCareImage" />
 
         <ImageView
             android:id="@+id/dentalCareImage"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
             android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageRight"
+            app:layout_constraintStart_toStartOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/healthHeader"
             app:srcCompat="@drawable/dental_care" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.36" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.64" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.16" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/imageLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/imageRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

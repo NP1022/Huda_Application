@@ -19,60 +19,53 @@
 
     <TextView
         android:id="@+id/loginPara2"
-        android:layout_width="329dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:text="Complete the fields below to change the Available time for a day."
         android:textColor="#5A5959"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vg4"
+        app:layout_constraintStart_toStartOf="@id/vg3"
         app:layout_constraintTop_toBottomOf="@+id/loginHeader2" />
-
-
 
 
     <TextView
         android:id="@+id/loginHeader2"
-        android:layout_width="330dp"
-        android:layout_height="70dp"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
         android:layout_marginTop="7dp"
-        android:text="Hours of Availability"
+        android:text="HOURS OF OPERATION"
         android:textAlignment="center"
         android:textColor="#043670"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hudaLogo" />
+        app:layout_constraintEnd_toEndOf="@id/vg4"
+        app:layout_constraintStart_toStartOf="@id/vg3"
+        app:layout_constraintTop_toBottomOf="@+id/hg2" />
 
     <Button
         android:id="@+id/dateText2"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
-
         android:layout_marginTop="10dp"
         android:background="@drawable/edittextstyle"
-        android:ems="10"
         android:gravity="left|center_vertical"
         android:hint="Select Date"
         android:inputType="text"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="#616161"
-
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vg4"
+        app:layout_constraintStart_toStartOf="@id/vg3"
         app:layout_constraintTop_toBottomOf="@+id/loginPara2" />
-
 
 
     <EditText
 
         android:id="@+id/appointmentTime2"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/edittextstyle"
@@ -81,11 +74,10 @@
         android:inputType="number"
         android:padding="10dp"
         android:textColor="@color/black"
-
         android:textColorHint="#686868"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vg4"
+        app:layout_constraintStart_toStartOf="@id/vg3"
         app:layout_constraintTop_toBottomOf="@+id/dateText2"
 
 
@@ -96,29 +88,69 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/modify"
-        android:layout_width="330dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/buttonstyle"
         android:text="Modify"
         android:textColor="#ffffff"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vg4"
+        app:layout_constraintStart_toStartOf="@id/vg3"
         app:layout_constraintTop_toBottomOf="@+id/appointmentTime2" />
 
     <ImageView
         android:id="@+id/hudaLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/hg1"
+        app:layout_constraintBottom_toBottomOf="@id/hg2"
+        app:layout_constraintEnd_toEndOf="@id/vg2"
+        app:layout_constraintStart_toStartOf="@id/vg1"
         app:srcCompat="@drawable/huda_logo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.175" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

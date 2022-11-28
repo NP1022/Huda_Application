@@ -33,13 +33,13 @@
 
         <ImageView
             android:id="@+id/hudaLogo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-            android:clickable="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/hg1"
+            app:layout_constraintBottom_toBottomOf="@id/hg2"
+            app:layout_constraintEnd_toEndOf="@id/vg2"
+            app:layout_constraintStart_toStartOf="@id/vg1"
             app:srcCompat="@drawable/huda_logo"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -887,6 +887,33 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bccpLogo" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.36" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.64" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.005" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.025" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

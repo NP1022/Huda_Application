@@ -34,13 +34,13 @@
             android:id="@+id/registerPara2"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="@string/headerUpdateEmail"
             android:textColor="#5A5959"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg3"
+            app:layout_constraintEnd_toEndOf="@id/vg4"
             app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/registrationFormHeader" />
 
         <TextView
@@ -51,19 +51,20 @@
             android:text="@string/deleteUserHeader2"
             android:textColor="#5A5959"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg3"
+            app:layout_constraintEnd_toEndOf="@id/vg4"
             app:layout_constraintHorizontal_bias="0.45"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <ImageView
             android:id="@+id/hudaLogo5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/hg1"
+            app:layout_constraintBottom_toBottomOf="@id/hg2"
+            app:layout_constraintEnd_toEndOf="@id/vg2"
+            app:layout_constraintStart_toStartOf="@id/vg1"
             app:srcCompat="@drawable/huda_logo" />
 
         <TextView
@@ -79,7 +80,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hudaLogo5" />
+            app:layout_constraintTop_toBottomOf="@+id/hg2" />
 
         <EditText
             android:id="@+id/email"
@@ -95,9 +96,9 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg3"
+            app:layout_constraintEnd_toEndOf="@id/vg4"
             app:layout_constraintHorizontal_bias="0.533"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/registerPara2" />
 
         <EditText
@@ -114,8 +115,8 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             android:textSize="20sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg3"
+            app:layout_constraintEnd_toEndOf="@id/vg4"
             app:layout_constraintTop_toBottomOf="@+id/email" />
 
         <EditText
@@ -132,8 +133,8 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             android:textSize="20sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg3"
+            app:layout_constraintEnd_toEndOf="@id/vg4"
             app:layout_constraintTop_toBottomOf="@+id/registerPara3" />
 
         <EditText
@@ -149,9 +150,8 @@
             android:textColor="@color/black"
             android:textColorHint="#686868"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vg3"
+            app:layout_constraintEnd_toEndOf="@id/vg4"
             app:layout_constraintTop_toBottomOf="@+id/yesOrNo" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -164,11 +164,52 @@
             android:textColor="#ffffff"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/vg3"
+            app:layout_constraintRight_toRightOf="@id/vg4"
             app:layout_constraintTop_toBottomOf="@+id/confirmYesOrNo"
             app:layout_constraintVertical_bias="0.045" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.36" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.64" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
