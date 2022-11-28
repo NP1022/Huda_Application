@@ -37,6 +37,8 @@ public class LabAccess extends AppCompatActivity
 
         Button buttonSubmit = findViewById(R.id.returnPatientPortal); // set variable for button action
 
+        // if statement to check if the extras are null, if it is null
+        // then set data to the extras.getSerializableExtra();
         if (extras != null)
         {
             data =  (PatientFormData)  extras.getSerializableExtra("patientdata");
@@ -50,9 +52,11 @@ public class LabAccess extends AppCompatActivity
             public void onClick(View view)
             {
 
+                // data access object dad called the .add method which takes everything that is stored in the
+                // data object and pushes it to the database.
                 dao.add(data).addOnSuccessListener(suc->
                 {
-                    Toast.makeText(LabAccess.this,"User in RealTime database inserted",Toast.LENGTH_LONG).show();
+                    Toast.makeText(LabAccess.this,"Patient has been inserted",Toast.LENGTH_LONG).show();
                 }).addOnFailureListener(er->
                 {
                     Toast.makeText(LabAccess.this,""+er.getMessage(),Toast.LENGTH_LONG).show();
@@ -63,17 +67,7 @@ public class LabAccess extends AppCompatActivity
             }
         });
 
-        //Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
 
     }
 
 }
-
-//    @Override
-//    public void onClick(View view) {
-//        if (view.getId() == R.id.returnPatientPortal)
-//        {
-//            Intent patientPortal = new Intent(this, PatientsPage.class);
-//            startActivity(patientPortal);
-//        }
-//    }

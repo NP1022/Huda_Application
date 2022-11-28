@@ -911,8 +911,7 @@ public class PatientForm extends AppCompatActivity
                     formData.setPatientEthnicity(patientEthnicityTxt);
                     formData.setIncomePayTime(patientIncomeTxt);
                     formData.setEmploymentStatus(patientEmpTxt);
-//                    formData.setUID(UserManager.getInstance().getCurrentUser().getUserId());
-                    formData.setUID("Test UID");
+                    formData.setUID(UserManager.getInstance().getCurrentUser().getUserId());
 
                     // If statement to check if the patient does not have insurance,
                     // if they do have insurance then this block of code will be executed where
