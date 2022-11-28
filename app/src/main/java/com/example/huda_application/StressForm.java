@@ -33,11 +33,15 @@ public class StressForm extends AppCompatActivity
         setContentView(R.layout.activity_stress_form);
         Intent extras = getIntent();
 
+        // if statement to check if the extras are null, if it is null
+        // then set data to the extras.getSerializableExtra();
         if (extras != null)
         {
             data =  (PatientFormData)  extras.getSerializableExtra("patientdata");
         }
-        //Log.i("info  ", "The user name in the application is   " + lastNameTxt + firstNameTxt );
+
+        // setting the EditText variable equal to the ID from the XML
+
         // section 1 questions
         final EditText q1s1 = findViewById(R.id.q1section1);
         final EditText q2s1 = findViewById(R.id.q2section1);
@@ -105,12 +109,16 @@ public class StressForm extends AppCompatActivity
                 final String s1TotalsText = s1Totals.getText().toString().trim();
                 final String s2TotalsText = s2Totals.getText().toString().trim();
 
+                // If statement that uses TextUtils.isEmpty() to check if the string is empty,
+                // if it is empty, an error will be displayed.
                 if(TextUtils.isEmpty(q1s1Text))
                 {
                     Toast.makeText(StressForm.this,"Response cannot be empty",Toast.LENGTH_LONG).show();
                     q1s1.setError("Input is required");
                     q1s1.requestFocus();
                 }
+                // Else if statement to check if the string matches the pattern within the else if() and if it does not,
+                // an error will be displayed
                 else if(!RANGE_PATTERN.matcher(q1s1Text).matches())
                 {
                     Toast.makeText(StressForm.this,"Must be 0,1,2 or 3",Toast.LENGTH_LONG).show();
@@ -363,6 +371,8 @@ public class StressForm extends AppCompatActivity
                     q4s3.setError("Input must be Yes or No");
                     q4s3.requestFocus();
                 }
+                // Else block is executed if all the inputs previously are valid. The inputs will be set using a setter to the data object
+                // that will save the information and move it to the next form
                 else
                 {
                     data.setQuestion1Section1Form5(q1s1Text);
