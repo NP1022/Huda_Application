@@ -5,7 +5,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class DAOUser {
+public class DAOUser {                      // Class used to store the child which is the user in the database and it als returns that child
 
     private final DatabaseReference dbRef;
 

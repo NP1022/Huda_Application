@@ -38,9 +38,6 @@
             android:name=".ProfilePage"
             android:exported="false" />
         <activity
-            android:name=".AddEvent"
-            android:exported="false" />
-        <activity
             android:name=".PatientMessages"
             android:exported="false" />
         <activity
@@ -51,9 +48,6 @@
             android:exported="false" />
         <activity
             android:name=".Messagepage"
-            android:exported="false" />
-        <activity
-            android:name=".calendar_item"
             android:exported="false" />
         <activity
             android:name=".UserAppointment"
