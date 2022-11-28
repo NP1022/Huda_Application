@@ -68,10 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         Saved_language();
 
-//        if(mUser != null && mUser.isEmailVerified())
-//        {
-//            startActivity(new Intent(MainActivity.this, MainApplication.class));
-//        }
+
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);

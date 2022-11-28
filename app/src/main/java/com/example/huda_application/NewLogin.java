@@ -109,49 +109,6 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
             }
         });
 
-        // Adding Spinner for Services menu
-//        ServicesSpinner = findViewById(R.id.servicesSpinner);
-//        ArrayList<String> ServicesArray = new ArrayList<>();
-//        ServicesArray.add("Our Services");
-//        ServicesArray.add("Primary");
-//        ServicesArray.add("Dental");
-//        ServicesArray.add("Vision");
-//        ServicesArray.add("Mental");
-//        ServicesArray.add("Specialty");
-//
-//        ArrayAdapter<String> ServicesArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ServicesArray);
-//        ServicesSpinner.setAdapter(ServicesArrayAdapter);
-//
-//        ServicesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-//        {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-//            {
-//               String Service=((TextView)view).getText().toString();
-//
-//                if(Service.equals("Primary") || Service.equals("الأولية") || Service.equals("প্রাথমিক") || Service.equals("Primaria") || Service.equals("Primaire") || Service.equals("پرائمری") )
-//                    startActivity(new Intent(view.getContext(), PrimaryServices.class));
-//
-//                if(Service.equals("Dental") || Service.equals("طب الأسنان") || Service.equals("ডেন্টাল") || Service.equals("Dental") || Service.equals("Dentaire") || Service.equals("دانتوں") )
-//                    startActivity(new Intent(view.getContext(), DentalHealth.class));
-//
-//                if(Service.equals("Vision")  || Service.equals("رؤية") || Service.equals("দৃষ্টি") || Service.equals("Visión") || Service.equals("Vision") || Service.equals("اولین مقصد"))
-//                    startActivity(new Intent(view.getContext(), VisionHealth.class));
-//
-//                if(Service.equals("Mental")  || Service.equals("رعاية نفسية") || Service.equals("মানসিক") || Service.equals("Mental") || Service.equals("Mentale") || Service.equals("ذہنی"))
-//                    startActivity(new Intent(view.getContext(), MentalHealth.class));
-//
-//                if(Service.equals("Specialty") || Service.equals("رعاية خاصة") || Service.equals("বিশেষত্ব") || Service.equals("Especialidad") || Service.equals("Spécialité") || Service.equals("خاصیت"))
-//                    startActivity(new Intent(view.getContext(), SpecialtyHealth.class));
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView <?> parent)
-//            {
-//
-//            }
-//        });
-
     }
 
     private void picklanguage(String l)

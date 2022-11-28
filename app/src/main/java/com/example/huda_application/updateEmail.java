@@ -35,8 +35,8 @@ import java.util.regex.Pattern;
 public class updateEmail extends AppCompatActivity implements View.OnClickListener
 {
 
-    FirebaseAuth firebaseAuth;
-    FirebaseUser user;
+    FirebaseAuth firebaseAuth;                                      // This class is used to updated the current email that is being used in the application
+    FirebaseUser user;                                              // The input will be the previous email and the new email that is gana be used
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     private ImageView backbutton;

@@ -71,8 +71,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         profile.setOnClickListener(this);
         Inbox.setOnClickListener(this);
 
-//        toast = findViewById(R.id.toastButton);
-//        toast.setOnClickListener(this);
+
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser fbUser = mAuth.getCurrentUser();
@@ -101,42 +100,6 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         }
 
 
-
-//        binding = ActivityMainApplicationBinding.inflate(getLayoutInflater());
-//        setContentView(binding.getRoot());
-//
-//        setSupportActionBar(binding.appBarProfileMenu.toolbar);
-//        binding.appBarProfileMenu.fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-//        DrawerLayout drawer = binding.drawerLayout;
-//        NavigationView navigationView = binding.navView;
-//        // Passing each menu ID as a set of Ids because each
-//        // menu should be considered as top level destinations.
-//        mAppBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-//                .setOpenableLayout(drawer)
-//                .build();
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_profile_menu);
-//        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-//        NavigationUI.setupWithNavController(navigationView, navController);
-//
-//        navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
-//        headerView = navigationView.getHeaderView(0);
-
-//        name = findViewById(R.id.profile_user_name);
-//        email = findViewById(R.id.profile_user_email);
-//        DOB = findViewById(R.id.profile_user_dob);
-//
-//        User user = UserManager.getInstance().getCurrentUser();
-//        name.setText(String.format("%s", user.getFirstName() + " " + user.getLastName()));
-//        email.setText(String.format("%s", user.getEmailAddress()));
-//        DOB.setText(String.format("%s", user.getBirthday()));
 
     }
     @Override

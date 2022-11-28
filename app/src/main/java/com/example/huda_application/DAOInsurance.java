@@ -8,8 +8,8 @@ public class DAOInsurance
 {
     private DatabaseReference databaseReference;
 
-    public DAOInsurance()
-    {
+    public DAOInsurance()                                                               //Database reference for the info object in the database
+    {                                                                                   //The object that is pushed is the insurance class
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         databaseReference = db.getReference(patientInsurance.class.getSimpleName());
     }
