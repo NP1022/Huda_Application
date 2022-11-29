@@ -10,17 +10,18 @@ import android.widget.ImageView;
 
 public class Partners extends AppCompatActivity implements View.OnClickListener {
 
+    // Initializing ImageView variables from activity_partners XML
     private ImageView bcbsButton, stJosephButton, MSUCHMButton, MSUComButton, cfscButton, deltaDentalButton, wsuPharmButton, eliteSmileButton;
     private ImageView familyRehabButton, sayButton, circleSocksButton, iagdButton, michiganMuslimButton, tawheedCenterButton, muslimCenterButton, wccdButton, detroitMercyButton;
     private ImageView bccpButton, esaButton, ferndaleButton, premierButton, msuNursingButton, chamberlainButton, authorityButton, matrixButton, accessButton, lasmButton, backButton;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
+    protected void onCreate(Bundle savedInstanceState) // onCreate function to define all variables
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partners);
-        backButton = (ImageView) findViewById(R.id.backButton);
-        backButton.setOnClickListener((View.OnClickListener) this);
+
+        backButton = (ImageView) findViewById(R.id.backButton); // Defining variables to find associated view IDs from XML
         bcbsButton  = (ImageView) findViewById(R.id.bcbsLogo);
         stJosephButton = (ImageView) findViewById(R.id.stJosephLogo);
         MSUCHMButton = (ImageView) findViewById(R.id.MSUCHMLogo);
@@ -50,7 +51,8 @@ public class Partners extends AppCompatActivity implements View.OnClickListener 
         accessButton = (ImageView) findViewById(R.id.accessLogo);
         lasmButton = (ImageView)findViewById(R.id.lasmLogo);
 
-        bcbsButton.setOnClickListener((View.OnClickListener) this);
+        bcbsButton.setOnClickListener((View.OnClickListener) this); // Wiring buttons to onClickListeners when the View is clicked upon
+        backButton.setOnClickListener((View.OnClickListener) this);
         stJosephButton.setOnClickListener((View.OnClickListener) this);
         MSUCHMButton.setOnClickListener((View.OnClickListener) this);
         MSUComButton.setOnClickListener((View.OnClickListener) this);
