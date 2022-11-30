@@ -51,8 +51,8 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 
 
     private EditText reason;
-    private Button checkin, dateButton, phoneButton;
-    private TextView time, char_Count;
+    private Button checkin, phoneButton;
+    private TextView time, char_Count, dateButton;
 
     private ImageView backButton;
     private String selectedTime = "";                                    // Two of the variables are the available time list for the patient and the selected time that is used
@@ -64,7 +64,6 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     private AlertDialog.Builder options;                                // Alert builder that is used to show all the available appointments
     private AlertDialog menu;
     private AppointmentManager appointmentManager;                        // Instance of the appointment manager that will be used to filter the appointments
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,30 +101,34 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
         phoneButton = findViewById(R.id.callClinic);
 
         reason = findViewById(R.id.email_checkin);
-        char_Count = findViewById(R.id.charCount);                                  // Take the ID of the items in the UI of the application
+        time = findViewById(R.id.appointmentTime);
+        checkin = findViewById(R.id.checkin);
+        char_Count = findViewById(R.id.charCount);
+        backButton = (ImageView) findViewById(R.id.backButton);                     //All the Textview items used and button to request an appointment
+        time.setOnClickListener(this);                                              // The time and the checkin button will be set only to the textview
+        backButton.setOnClickListener(this);
         char_Count.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                int length = reason.length();
+                String str = String.valueOf(length);
+                char_Count.setText(str);
             }
 
-            @SuppressLint("SetTextI18n")
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                char_Count.setText(reason.getText().toString());
+                int length = reason.length();
+                String str = String.valueOf(length);
+                char_Count.setText(str);
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                char_Count.setText(reason.getText().toString());
-
+                int length = reason.length();
+                String str = String.valueOf(length);
+                char_Count.setText(str);
             }
         });
-        time = findViewById(R.id.appointmentTime);
-        checkin = findViewById(R.id.checkin);
-        backButton = (ImageView) findViewById(R.id.backButton);                     //All the Textview items used and button to request an appointment
-        time.setOnClickListener(this);                                              // The time and the checkin button will be set only to the textview
-        backButton.setOnClickListener(this);
 
         options = new AlertDialog.Builder(ApptRequest.this);
         options.setTitle("Available Times");
@@ -147,7 +150,6 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     }
 
     public void create_menu(AlertDialog.Builder opts) {
-
         menu = opts.create();                                                           // Create the dialog for the available times in the application
         menu.show();
     }

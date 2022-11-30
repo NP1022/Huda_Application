@@ -34,17 +34,17 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/announcementsPage"
-        android:layout_width="330dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/buttonstyle"
         android:text="@string/Annoucment"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/appTop"
         app:layout_constraintDimensionRatio="6:1"
         app:layout_constraintEnd_toEndOf="@id/buttonRight"
         app:layout_constraintStart_toStartOf="@id/buttonLeft"
-        app:layout_constraintTop_toBottomOf="@+id/announcementTop"
-        app:layout_constraintBottom_toBottomOf="@id/appTop"/>
+        app:layout_constraintTop_toBottomOf="@+id/announcementTop" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Patients"
