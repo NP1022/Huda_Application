@@ -14,7 +14,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 
-public class Announcements extends AppCompatActivity implements View.OnClickListener {
+public class Announcements extends AppCompatActivity implements View.OnClickListener
+{
 
                                                                 // Webview object used to show the calender from the embedded link for the google calendar
     private WebView webView;                                    // The class will show the calendar that is being used for the clinic
