@@ -5,6 +5,8 @@ import java.io.Serializable;
 
 public class PatientFormData implements Serializable
 {
+    // Initializing all parameters of patient information on forms
+    // Form 1
     private String todaysDate;
     private String reasonForVisit;
     private String lastName;
@@ -91,8 +93,7 @@ public class PatientFormData implements Serializable
     private String question3Section3Form5;
     private String question4Section3Form5;
 
-
-
+    // Set and get functions for sections of forms
     public String getQuestion1Section1Form5() {
         return question1Section1Form5;
     }
@@ -761,6 +762,7 @@ public class PatientFormData implements Serializable
 
     }
 
+    // Setting all parameters of information for forms
     public PatientFormData(String todaysDate, String reasonForVisit, String lastName, String firstName, String patientSex, String dateOfBirth,
                            String patientAddress,
                            String patientCity, String patientState, String patientZipCode, String patientSSN, String homePhoneNo, String cellPhoneNo,

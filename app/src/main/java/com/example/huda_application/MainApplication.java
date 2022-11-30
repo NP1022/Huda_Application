@@ -35,7 +35,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainApplication extends AppCompatActivity implements View.OnClickListener {
 
-
+    // defining variables for all variables present on activity_main_application XML
     private TextView Partner_button, Contact_Us, Our_story, Announcements, PatientPortal ,Message_tab;
     private ImageView profile, Inbox;
     private FirebaseAuth mAuth;
@@ -53,6 +53,8 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_application);
+
+        // Defining all variables and their views
         Message_tab = findViewById(R.id.messages_tab);
         PatientPortal = findViewById(R.id.Patients);
         Partner_button = findViewById(R.id.partnersPage);
@@ -62,6 +64,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Announcements = findViewById(R.id.announcementsPage);
         profile = (ImageView) findViewById(R.id.profileIcon);
 
+        // Wiring buttons for clicking
         Partner_button.setOnClickListener(this);
         Contact_Us.setOnClickListener(this);
         Our_story.setOnClickListener(this);
@@ -70,8 +73,6 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
         Message_tab.setOnClickListener(this);
         profile.setOnClickListener(this);
         Inbox.setOnClickListener(this);
-
-
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser fbUser = mAuth.getCurrentUser();
@@ -82,6 +83,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
             startActivity(new Intent(MainApplication.this, MainActivity.class)); // send them to the login activity
         }
 
+        // if user not null and logs in
         if (fbUser != null) {
             FirebaseDatabase.getInstance().getReference(User.class.getSimpleName()).child(fbUser.getUid()).addValueEventListener(new ValueEventListener() {
                 @Override
@@ -99,8 +101,6 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
             });
         }
 
-
-
     }
     @Override
     public void onBackPressed() {
@@ -108,7 +108,8 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
 // Not calling **super**, disables back button in current screen.
     }
     @Override
-    public void onClick(View view) {
+    public void onClick(View view) // onClick function to redirect user upon clicking on view of associated XML pages
+    {
         if (view.getId() == R.id.partnersPage) {
             Intent Partners = new Intent(this, Partners.class);
             startActivity(Partners);
