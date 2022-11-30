@@ -10,18 +10,21 @@ import android.widget.ImageView;
 
 public class Partners extends AppCompatActivity implements View.OnClickListener {
 
-    // Initializing ImageView variables from activity_partners XML
+    // Declaring all image view variables that will be used in this code
     private ImageView bcbsButton, stJosephButton, MSUCHMButton, MSUComButton, cfscButton, deltaDentalButton, wsuPharmButton, eliteSmileButton;
     private ImageView familyRehabButton, sayButton, circleSocksButton, iagdButton, michiganMuslimButton, tawheedCenterButton, muslimCenterButton, wccdButton, detroitMercyButton;
     private ImageView bccpButton, esaButton, ferndaleButton, premierButton, msuNursingButton, chamberlainButton, authorityButton, matrixButton, accessButton, lasmButton, backButton;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) // onCreate function to define all variables
-    {
+    protected void onCreate(Bundle savedInstanceState) {
+
+        // Creating Partners Page
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partners);
 
-        backButton = (ImageView) findViewById(R.id.backButton); // Defining variables to find associated view IDs from XML
+        // Assigning all variables to their respective ImageViews
+        backButton = (ImageView) findViewById(R.id.backButton);
+        backButton.setOnClickListener((View.OnClickListener) this);
         bcbsButton  = (ImageView) findViewById(R.id.bcbsLogo);
         stJosephButton = (ImageView) findViewById(R.id.stJosephLogo);
         MSUCHMButton = (ImageView) findViewById(R.id.MSUCHMLogo);
@@ -51,8 +54,8 @@ public class Partners extends AppCompatActivity implements View.OnClickListener 
         accessButton = (ImageView) findViewById(R.id.accessLogo);
         lasmButton = (ImageView)findViewById(R.id.lasmLogo);
 
-        bcbsButton.setOnClickListener((View.OnClickListener) this); // Wiring buttons to onClickListeners when the View is clicked upon
-        backButton.setOnClickListener((View.OnClickListener) this);
+        // Setting each variables onClick listeners
+        bcbsButton.setOnClickListener((View.OnClickListener) this);
         stJosephButton.setOnClickListener((View.OnClickListener) this);
         MSUCHMButton.setOnClickListener((View.OnClickListener) this);
         MSUComButton.setOnClickListener((View.OnClickListener) this);
@@ -79,149 +82,200 @@ public class Partners extends AppCompatActivity implements View.OnClickListener 
         accessButton.setOnClickListener((View.OnClickListener) this);
         lasmButton.setOnClickListener((View.OnClickListener) this);
 
-
-
-
     }
 
     @Override
     public void onClick(View view)
     {
+        // Setting the intent for the BCBS logo to redirect to the BCBS website
         if (view.getId() == R.id.bcbsLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.bcbsm.com/")));
 
         }
+
+        // Setting the intent for the St. Joseph logo to redirect to the St. Joseph website
         else if (view.getId() == R.id.stJosephLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.stjoesoakland.org/welcome-to-st-joseph-mercy-oakland")));
         }
+
+        // Setting the intent for the MSUCHM logo to redirect to the MSUCHM website
         else if (view.getId() == R.id.MSUCHMLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://humanmedicine.msu.edu/")));
 
         }
+
+        // Setting the intent for the MSUCOM logo to redirect to the MSUCOM website
         else if (view.getId() == R.id.MSUComLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://com.msu.edu/")));
 
         }
+
+        // Setting the intent for the CFCS logo to redirect to the CFCS website
         else if (view.getId() == R.id.cfscLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://cfsem.org/")));
 
         }
+
+        // Setting the intent for the Delta Dental logo to redirect to the Delta Dental website
         else if (view.getId() == R.id.deltaDentalLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.deltadentalmi.com/")));
 
         }
+
+        // Setting the intent for the WSU Pharmacy logo to redirect to the WSU Pharmacy website
         else if (view.getId() == R.id.wsuPharmLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://cphs.wayne.edu/")));
 
         }
+
+        // Setting the intent for the Elite Smile logo to redirect to the Elite Smile website
         else if (view.getId() == R.id.eliteSmileLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.elitesmilecenter.com/")));
 
         }
+
+        // Setting the intent for the Family Rehab logo to redirect to the Family Rehab website
         else if (view.getId() == R.id.familyRehabLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://familyrehabcare.com/")));
 
         }
+
+        // Setting the intent for the Say logo to redirect to the Say website
         else if (view.getId() == R.id.sayLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://saydetroit.org/clinic/")));
 
         }
+
+        // Setting the intent for the Circle Socks logo to redirect to the Circle Socks website
         else if (view.getId() == R.id.circleSocksLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.circlesocks.com/mens/shaggy-blink-huda")));
 
         }
+
+        // Setting the intent for the IAGD logo to redirect to the IAGD website
         else if (view.getId() == R.id.iagdLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.iagdmasjid.net/")));
 
         }
+
+        // Setting the intent for the Michigan Muslim logo to redirect to the Michigan Muslim website
         else if (view.getId() == R.id.michiganMuslimLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.mimuslimcouncil.org/")));
 
         }
+
+        // Setting the intent for the Tawheed Center logo to redirect to the Tawheed Center website
         else if (view.getId() == R.id.tawheedCenterLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.tawheedcenter.org/")));
 
         }
+
+        // Setting the intent for the Muslim Center logo to redirect to the Muslim Center website
         else if (view.getId() == R.id.muslimCenterLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://muslimcenterdetroit.com/")));
 
         }
+
+        // Setting the intent for the WCCD logo to redirect to the WCCD website
         else if (view.getId() == R.id.wccdLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wcccd.edu/")));
 
         }
+
+        // Setting the intent for the UDM logo to redirect to the UDM website
         else if (view.getId() == R.id.detroitMercyLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://dental.udmercy.edu/")));
 
         }
+
+        // Setting the intent for the BCCP logo to redirect to the BCCP website
         else if (view.getId() == R.id.bccpLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://bcccp.org/")));
 
         }
+
+        // Setting the intent for the ESA logo to redirect to the ESA website
         else if (view.getId() == R.id.esaLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.eyesurgeonsassoc.com/")));
 
         }
+
+        // Setting the intent for the Ferndale logo to redirect to the Ferndale website
         else if (view.getId() == R.id.ferndaleLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ferndalefamilypharmacy.com/")));
 
         }
 
+        // Setting the intent for the Premier logo to redirect to the Premier website
         else if (view.getId() == R.id.premierLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/pcs-michigan.com/web/home")));
 
         }
+
+        // Setting the intent for the MSU Nursing logo to redirect to the MSU Nursing website
         else if (view.getId() == R.id.msuNursingLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://nursing.msu.edu/")));
 
         }
+
+        // Setting the intent for the Chamberlain logo to redirect to the Chamberlain website
         else if (view.getId() == R.id.chamberlainLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.chamberlain.edu/academics/nursing-school/master-of-science-in-nursing")));
 
         }
+
+        // Setting the intent for the Authority logo to redirect to the Authority website
         else if (view.getId() == R.id.authorityLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://authorityhealth.org/programs-resources/michigan-medicaid/")));
 
         }
+
+        // Setting the intent for the Matrix logo to redirect to the Matrix website
         else if (view.getId() == R.id.matrixLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.matrixhumanservices.org/")));
 
         }
+
+        // Setting the intent for the LASM logo to redirect to the LASM website
         else if (view.getId() == R.id.lasmLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.thelasmc.com/")));
 
         }
+
+        // Setting the intent for the Access logo to redirect to the Access website
         else if (view.getId() == R.id.accessLogo)
         {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.accesscommunity.org/")));
 
         }
+
+        // Setting the intent for the Back Button logo to redirect to the previous page, Main Application
         else if (view.getId() == R.id.backButton) {
             Intent prev = new Intent(this, MainApplication.class);
             startActivity(prev);

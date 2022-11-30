@@ -58,17 +58,19 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_password);
 
-        Button updatePassBtn = findViewById(R.id.registerButton);
-       updatePassBtn.setOnClickListener(this);
+        Button updatePassBtn = findViewById(R.id.registerButton); // set variable button for ID from the XML
+       updatePassBtn.setOnClickListener(this); // set onClick for the button
 
-        backbutton = findViewById(R.id.backButton_10);
-        backbutton.setOnClickListener(this);
+        backbutton = findViewById(R.id.backButton_10); // set variable button for ID from the XML
+        backbutton.setOnClickListener(this); // set onClick for the button
 
     }
 
+    // public method for the onClick
     @Override
     public void onClick(View view)
     {
+        // if the user clicks the register button
         if (view.getId() == R.id.registerButton)
         {
 
@@ -90,58 +92,69 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                     email.setError("Email is required");
                     email.requestFocus();
                 }
-                else if(!Patterns.EMAIL_ADDRESS.matcher(emailTxt).matches()) // else if statement that checks if the Email input is the correct format
+                // else if statement that checks if the Email input is the correct format
+                else if(!Patterns.EMAIL_ADDRESS.matcher(emailTxt).matches())
                 {
                     Toast.makeText(updatePassword.this, "Must be a valid email", Toast.LENGTH_LONG).show();
                     email.setError("Email is required");
                     email.requestFocus();
                 }
-                else if(TextUtils.isEmpty(currentPassTxt))   // else if statement that checks if the current password text box is empty
+                // else if statement that checks if the current password text box is empty
+                else if(TextUtils.isEmpty(currentPassTxt))
                 {
                     Toast.makeText(updatePassword.this, "Current password cannot be empty", Toast.LENGTH_LONG).show();
                     currentPass.setError("Password is required");
                     currentPass.requestFocus();
                 }
-                else if(TextUtils.isEmpty(newPassTxt))   // else if statement that checks if the new password text box is empty
+                // else if statement that checks if the new password text box is empty
+                else if(TextUtils.isEmpty(newPassTxt))
                 {
                     Toast.makeText(updatePassword.this, "Current password cannot be empty", Toast.LENGTH_LONG).show();
                     newPassword.setError("Password is required");
                     newPassword.requestFocus();
                 }
-                else if(!PASSWORD_PATTERN.matcher(newPassTxt).matches()) // Else if statement that checks if the new Password matches
-                    // the pattern necessary for the password minimum security
+                // Else if statement that checks if the new Password matches
+                // the pattern necessary for the password minimum security
+                else if(!PASSWORD_PATTERN.matcher(newPassTxt).matches())
                 {
                     Toast.makeText(updatePassword.this, "New password must meet security requirement", Toast.LENGTH_LONG).show();
                     newPassword.setError("Password format is required");
                     newPassword.requestFocus();
                 }
-                else if(currentPassTxt.equals(newPassTxt))   // else if statement that checks to see if the current
-                    // and new pass word, and they cannot match
+                // else if statement that checks to see if the current
+                // and new pass word, and they cannot match
+                else if(currentPassTxt.equals(newPassTxt))
                 {
                     Toast.makeText(updatePassword.this, "New password cannot be the same as previous", Toast.LENGTH_LONG).show();
                     newPassword.setError("New password is required");
                     newPassword.requestFocus();
                 }
-                else if(TextUtils.isEmpty(conNewPassTxt)) // else if statement that checks if the confirm new password text
-                    // box is empty or not
+                // else if statement that checks if the confirm new password text
+                // box is empty or not
+                else if(TextUtils.isEmpty(conNewPassTxt))
                 {
                     Toast.makeText(updatePassword.this, "Confirmation password cannot be empty", Toast.LENGTH_LONG).show();
                     conNewPassword.setError("Confirmation Password is required");
                     conNewPassword.requestFocus();
                 }
-                else if(!conNewPassTxt.equals(newPassTxt)) // Else if statement using that equals function to compare
-                    // if new password and new password confirmation are equal or not
+                // Else if statement using that equals function to compare
+                // if new password and new password confirmation are equal or not
+                else if(!conNewPassTxt.equals(newPassTxt))
                 {
                     Toast.makeText(updatePassword.this, "Passwords must match", Toast.LENGTH_LONG).show();
                     conNewPassword.setError("Confirmation match is required");
                     conNewPassword.requestFocus();
                 }
-                else // once every check is successful then the else block shall be executed
+                // once every check is successful then the else block shall be executed
+                else
                 {
                     // Call method to update the password for the user
                    updatePass(emailTxt,currentPassTxt,newPassTxt);
                 }
-        } else if (view.getId() == R.id.backButton_10) {
+        }
+        // if the user clicks the back button, then they will be taken to the profile page
+        else if (view.getId() == R.id.backButton_10)
+        {
             startActivity(new Intent(this, ProfilePage.class));
         }
     }
@@ -164,6 +177,8 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                             @Override
                             public void onSuccess(Void unused)
                             {
+                                // Toast message to let the user know the password changed
+                                // Take me the user back to login page to re-login
                                 Toast.makeText(updatePassword.this,"Password updated successfully  ",Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(updatePassword.this , MainActivity.class));
                             }

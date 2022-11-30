@@ -20,8 +20,8 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
 {
 
     private EditText email;
-    private Button resetBtn;
-    private ImageView backButton;
+    private Button resetBtn;                                    // Class Used to forget the password for the application
+    private ImageView backButton;                               // The rest password will take the email and the current password for the application
 
     FirebaseAuth mAuth;
 
@@ -30,10 +30,10 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
-        backButton = (ImageView) findViewById(R.id.backButton);
+        backButton = (ImageView) findViewById(R.id.backButton);        // Back button to take back to the login page
         backButton.setOnClickListener((View.OnClickListener) this);
 
-         email = findViewById(R.id.enterEmail);
+         email = findViewById(R.id.enterEmail);                        // email and reset button for the application
         resetBtn = findViewById(R.id.sendReset);
 
         mAuth =FirebaseAuth.getInstance();
@@ -44,14 +44,14 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
             public void onClick(View view)
             {
                 String emailStr = email.getText().toString().trim();
-                if(emailStr.isEmpty())
+                if(emailStr.isEmpty())                                    // Email field that is empty or not
                 {
                     email.setError("Email is Required!");
                     email.requestFocus();
                     return;
                 }
                 else if(!Patterns.EMAIL_ADDRESS.matcher(emailStr).matches()) {
-                    email.setError("Please provide valid email!");
+                    email.setError("Please provide valid email!");              // Check if there is a valid email  for the patterns
                     email.requestFocus();
                     return;
                 }
@@ -63,7 +63,7 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
                         @Override
                         public void onComplete(@NonNull Task<Void> task)
                         {
-                            if(task.isSuccessful())
+                            if(task.isSuccessful())                         // Check the account exists in the application.
                             {
                                 Toast.makeText(ForgotPassword.this,"Check your email to reset password",Toast.LENGTH_LONG).show();
                             }

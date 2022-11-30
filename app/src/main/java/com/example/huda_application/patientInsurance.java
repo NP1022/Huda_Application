@@ -2,6 +2,7 @@ package com.example.huda_application;
 
 public class patientInsurance
 {
+    // strings for the patient insurance object
     private String todaysDate;
     private String reasonForVisit;
     private String lastName;
@@ -20,6 +21,7 @@ public class patientInsurance
     private String consentToText;
     private String insuranceProvider;
 
+    // setter and getter methods to set and get values
     public String getTodaysDate() {
         return todaysDate;
     }
@@ -158,6 +160,7 @@ public class patientInsurance
 
 
 
+    // constructor for the patientInsurance object
     public patientInsurance(String todaysDate, String reasonForVisit, String lastName, String firstName, String patientSex, String dateOfBirth, String patientAddress, String patientCity, String patientState, String patientZipCode, String patientSSN, String homePhoneNo, String cellPhoneNo, String prefContactMethod, String consentToCall, String consentToText, String insuranceProvider) {
         this.todaysDate = todaysDate;
         this.reasonForVisit = reasonForVisit;

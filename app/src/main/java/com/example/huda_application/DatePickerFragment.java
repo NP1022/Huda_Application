@@ -14,8 +14,8 @@ public class DatePickerFragment extends DialogFragment {
 
     @NonNull
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        Calendar c = Calendar.getInstance();
+    public Dialog onCreateDialog(Bundle savedInstanceState) {       // Date Picker for the calender once the date is set in the application
+        Calendar c = Calendar.getInstance();                        // the class removes the previous days of the calendar
         int year = c.get(Calendar.YEAR);
         int month = c.get(Calendar.MONTH);
         int day = c.get(Calendar.DAY_OF_MONTH);
