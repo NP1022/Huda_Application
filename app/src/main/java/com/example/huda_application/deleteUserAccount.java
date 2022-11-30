@@ -41,16 +41,18 @@ public class deleteUserAccount extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_user_account);
 
-        Button deleteUserBtn = findViewById(R.id.deleteUserButton);
-        deleteUserBtn.setOnClickListener(this);
+        Button deleteUserBtn = findViewById(R.id.deleteUserButton); // set variable button for ID from the XML
+        deleteUserBtn.setOnClickListener(this); // set onClick for the button
 
-        backbutton = findViewById(R.id.backButton_10);
-        backbutton.setOnClickListener(this);
+        backbutton = findViewById(R.id.backButton_10); // set variable button for ID from the XML
+        backbutton.setOnClickListener(this); // set onClick for the button
     }
 
+    // public method for the onClick
     @Override
     public void onClick(View view)
     {
+        // if the user clicks the delete button
         if (view.getId() == R.id.deleteUserButton)
         {
             EditText email = findViewById(R.id.email); // Setting variable for the EditText views
@@ -63,43 +65,51 @@ public class deleteUserAccount extends AppCompatActivity implements View.OnClick
             String yesOrNoText = yesOrNoDelete.getText().toString().trim();
             String conYesOrNoTxt = conYesOrNoDelete.getText().toString().trim();
 
+            // if statement that uses the TextUtils.isEmpty() to check if a string is empty
             if(TextUtils.isEmpty(emailTxt))
             {
                 Toast.makeText(deleteUserAccount.this, "Email cannot be empty", Toast.LENGTH_LONG).show();
                 email.setError("Email is required");
                 email.requestFocus();
             }
-            else if(!Patterns.EMAIL_ADDRESS.matcher(emailTxt).matches()) // else if statement that checks if the Email input is the correct format
+            // else if statement that checks if the Email input is the correct format
+            else if(!Patterns.EMAIL_ADDRESS.matcher(emailTxt).matches())
             {
                 Toast.makeText(deleteUserAccount.this, "Must be a valid email", Toast.LENGTH_LONG).show();
                 email.setError("Email is required");
                 email.requestFocus();
             }
-            else if(TextUtils.isEmpty(currentPassTxt))   // else if statement that checks if the current password text box is empty
+            // else if statement that checks if the current password text box is empty
+            else if(TextUtils.isEmpty(currentPassTxt))
             {
                 Toast.makeText(deleteUserAccount.this, "Current password cannot be empty", Toast.LENGTH_LONG).show();
                 currentPass.setError("Password is required");
                 currentPass.requestFocus();
             }
-            else if(TextUtils.isEmpty(yesOrNoText))   // else if statement that checks if the Yes or No text box is empty
+            // else if statement that checks if the Yes or No text box is empty
+            else if(TextUtils.isEmpty(yesOrNoText))
             {
                 Toast.makeText(deleteUserAccount.this, "Field cannot be empty", Toast.LENGTH_LONG).show();
                 yesOrNoDelete.setError("Response is required");
                 yesOrNoDelete.requestFocus();
             }
-            else if(!CONSENT_PATTERN.matcher(yesOrNoText).matches()) // Else if statement that checks if the response matches
+            // Else if statement that checks if the response matches
             // the pattern necessary for the function, Yes or NO or no or yes
+            else if(!CONSENT_PATTERN.matcher(yesOrNoText).matches())
             {
                 Toast.makeText(deleteUserAccount.this, "Must be a yes or no", Toast.LENGTH_LONG).show();
                 yesOrNoDelete.setError("Response is required");
                 yesOrNoDelete.requestFocus();
             }
-            else if(TextUtils.isEmpty(conYesOrNoTxt))   // else if statement that checks if the Yes or No text box is empty
+            // else if statement that checks if the Yes or No text box is empty
+            else if(TextUtils.isEmpty(conYesOrNoTxt))
             {
                 Toast.makeText(deleteUserAccount.this, "Field cannot be empty", Toast.LENGTH_LONG).show();
                 conYesOrNoDelete.setError("Response is required");
                 conYesOrNoDelete.requestFocus();
             }
+            // else if statement to check if the response match, if they do not then an error
+            // will be displayed
             else if(!conYesOrNoTxt.equals(yesOrNoText))
             {
                 Toast.makeText(deleteUserAccount.this, "Response must match", Toast.LENGTH_LONG).show();
@@ -116,7 +126,9 @@ public class deleteUserAccount extends AppCompatActivity implements View.OnClick
                 }
             }
 
-        } else if (view.getId() == R.id.backButton_10) {
+        }
+        else if (view.getId() == R.id.backButton_10)
+        {
             startActivity(new Intent(this, ProfilePage.class));
         }
     }
@@ -141,6 +153,8 @@ public class deleteUserAccount extends AppCompatActivity implements View.OnClick
                     @Override
                     public void onSuccess(Void unused)
                     {
+                        // Toast message to let the user know the account was deleted
+                        // Take me the user back to register page to create a new account
                         Toast.makeText(deleteUserAccount.this,"Account deleted successfully",Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(deleteUserAccount.this , RegisterAccount.class));
                     }
@@ -149,7 +163,7 @@ public class deleteUserAccount extends AppCompatActivity implements View.OnClick
                     @Override
                     public void onFailure(@NonNull Exception e)
                     {
-                        // Failed to delete account, display reason
+                        // Failed to delete, display reason
                         Toast.makeText(deleteUserAccount.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -160,7 +174,7 @@ public class deleteUserAccount extends AppCompatActivity implements View.OnClick
             @Override
             public void onFailure(@NonNull Exception e)
             {
-                // failed authentication
+                // failed authentication message will be displayed to the user
                 Toast.makeText(deleteUserAccount.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });

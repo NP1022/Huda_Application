@@ -35,8 +35,8 @@ import java.util.regex.Pattern;
 public class updateEmail extends AppCompatActivity implements View.OnClickListener
 {
 
-    FirebaseAuth firebaseAuth;
-    FirebaseUser user;
+    FirebaseAuth firebaseAuth;                                      // This class is used to updated the current email that is being used in the application
+    FirebaseUser user;                                              // The input will be the previous email and the new email that is gana be used
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     private ImageView backbutton;
@@ -49,17 +49,19 @@ public class updateEmail extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_email);
 
-        Button updatePassBtn = findViewById(R.id.registerButton);
-        updatePassBtn.setOnClickListener(this);
+        Button updatePassBtn = findViewById(R.id.registerButton); // set variable button to the ID from the XML
+        updatePassBtn.setOnClickListener(this); // set onClick for the button
 
-        backbutton = findViewById(R.id.backButton_10);
-        backbutton.setOnClickListener(this);
+        backbutton = findViewById(R.id.backButton_10); // set variable button to the ID from the XML
+        backbutton.setOnClickListener(this);  // set onClick for the button
 
     }
 
+    // onClick method
     @Override
     public void onClick(View view)
     {
+        // if the button is clicked
         if (view.getId() == R.id.registerButton)
         {
 
@@ -81,58 +83,69 @@ public class updateEmail extends AppCompatActivity implements View.OnClickListen
                 email.setError("Email is required");
                 email.requestFocus();
             }
-            else if(!Patterns.EMAIL_ADDRESS.matcher(emailTxt).matches()) // else if statement that checks if the Email input is the correct format
+            // else if statement that checks if the Email input is the correct format
+            else if(!Patterns.EMAIL_ADDRESS.matcher(emailTxt).matches())
             {
                 Toast.makeText(updateEmail.this, "Must be a valid email", Toast.LENGTH_LONG).show();
                 email.setError("Email is required");
                 email.requestFocus();
             }
-            else if(TextUtils.isEmpty(currentPassTxt))   // else if statement that checks if the current password text box is empty
+            // else if statement that checks if the current password text box is empty
+            else if(TextUtils.isEmpty(currentPassTxt))
             {
                 Toast.makeText(updateEmail.this, "Current password cannot be empty", Toast.LENGTH_LONG).show();
                 currentPass.setError("Password is required");
                 currentPass.requestFocus();
             }
-            else if(TextUtils.isEmpty(newEmailTxt))   // else if statement that checks if the new email text box is empty
+            // else if statement that checks if the new email text box is empty
+            else if(TextUtils.isEmpty(newEmailTxt))
             {
                 Toast.makeText(updateEmail.this, "New email cannot be empty", Toast.LENGTH_LONG).show();
                 newEmail.setError("Email is required");
                 newEmail.requestFocus();
             }
-            else if(!Patterns.EMAIL_ADDRESS.matcher(newEmailTxt).matches()) // Else if statement that checks if the new Password matches
+            // Else if statement that checks if the new Password matches
             // the pattern necessary for the password minimum security
+            else if(!Patterns.EMAIL_ADDRESS.matcher(newEmailTxt).matches())
             {
                 Toast.makeText(updateEmail.this, "New email must be example@domain.com", Toast.LENGTH_LONG).show();
                 newEmail.setError("Email format is required");
                 newEmail.requestFocus();
             }
-            else if(emailTxt.equals(newEmailTxt))   // else if statement that checks to see if the current
+            // else if statement that checks to see if the current
             // and new pass word, and they cannot match
+            else if(emailTxt.equals(newEmailTxt))
             {
                 Toast.makeText(updateEmail.this, "New email cannot be the same as previous", Toast.LENGTH_LONG).show();
                 email.setError("New email is required");
                 email.requestFocus();
             }
-            else if(TextUtils.isEmpty(conNewEmailTxt)) // else if statement that checks if the confirm new password text
+            // else if statement that checks if the confirm new password text
             // box is empty or not
+            else if(TextUtils.isEmpty(conNewEmailTxt))
             {
                 Toast.makeText(updateEmail.this, "Confirmation Email cannot be empty", Toast.LENGTH_LONG).show();
                 newEmailConfirm.setError("Confirmation Email is required");
                 newEmailConfirm.requestFocus();
             }
-            else if(!conNewEmailTxt.equals(newEmailTxt)) // Else if statement using that equals function to compare
+            // Else if statement using that equals function to compare
             // if new password and new password confirmation are equal or not
+            else if(!conNewEmailTxt.equals(newEmailTxt))
             {
                 Toast.makeText(updateEmail.this, "Email must match", Toast.LENGTH_LONG).show();
                 newEmailConfirm.setError("Confirmation match is required");
                 newEmailConfirm.requestFocus();
             }
-            else // once every check is successful then the else block shall be executed
+            // once every check is successful then the else block shall be executed
+            else
             {
                 // Call method to update the password for the user
                 updateEmail(emailTxt,currentPassTxt,newEmailTxt);
             }
-        } else if (view.getId() == R.id.backButton_10) {
+        }
+        // back button to the take the user back to the profile page
+        else if (view.getId() == R.id.backButton_10)
+        {
             startActivity(new Intent(this, ProfilePage.class));
         }
     }
@@ -163,6 +176,8 @@ public class updateEmail extends AppCompatActivity implements View.OnClickListen
                             @Override
                             public void onSuccess(Void unused)
                             {
+                                // Display message that the verification email has been sent
+                                // and the user is taken to the login page
                                 Toast.makeText(updateEmail.this,"Email verification sent, please verify",Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(updateEmail.this , MainActivity.class));
                             }
@@ -171,9 +186,11 @@ public class updateEmail extends AppCompatActivity implements View.OnClickListen
                             @Override
                             public void onFailure(@NonNull Exception e)
                             {
+                                // display error
                                 Toast.makeText(updateEmail.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
                             }
                         });
+                        // send the user to the login page
                         startActivity(new Intent(updateEmail.this , MainActivity.class));
                     }
                 }).addOnFailureListener(new OnFailureListener()

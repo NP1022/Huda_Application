@@ -32,7 +32,8 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_login);
-
+                                                                                // Class that will show the Main page of the application with the buttons that
+                                                                                // show the health services for the clinic
         login = (TextView) findViewById(R.id.LoginButton);
         signUp = (TextView) findViewById(R.id.SignUpButton);
 
@@ -43,7 +44,7 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
         MentalHealth_Button = (TextView) findViewById(R.id.MentalHeader);
         VisionCare_Button = (TextView) findViewById(R.id.VisionHeader);
         DentalCare_Button = (TextView) findViewById(R.id.DentalHeader);
-        SpecialtyCare_Button = (TextView) findViewById(R.id.SpecialtyHeader);
+        SpecialtyCare_Button = (TextView) findViewById(R.id.SpecialtyHeader);               //The buttons that are used for the specific health Service for the application
         PrimaryCare_Button.setOnClickListener(this);
         MentalHealth_Button.setOnClickListener(this);
         VisionCare_Button.setOnClickListener(this);
@@ -56,7 +57,7 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
         language_Button = findViewById(R.id.language2);
         language_Button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {                                                    // Used to change the language in the application
 
                 options.setSingleChoiceItems(langs_options, -1, new DialogInterface.OnClickListener() {
                     @Override
@@ -109,56 +110,13 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
             }
         });
 
-        // Adding Spinner for Services menu
-//        ServicesSpinner = findViewById(R.id.servicesSpinner);
-//        ArrayList<String> ServicesArray = new ArrayList<>();
-//        ServicesArray.add("Our Services");
-//        ServicesArray.add("Primary");
-//        ServicesArray.add("Dental");
-//        ServicesArray.add("Vision");
-//        ServicesArray.add("Mental");
-//        ServicesArray.add("Specialty");
-//
-//        ArrayAdapter<String> ServicesArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ServicesArray);
-//        ServicesSpinner.setAdapter(ServicesArrayAdapter);
-//
-//        ServicesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-//        {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-//            {
-//               String Service=((TextView)view).getText().toString();
-//
-//                if(Service.equals("Primary") || Service.equals("الأولية") || Service.equals("প্রাথমিক") || Service.equals("Primaria") || Service.equals("Primaire") || Service.equals("پرائمری") )
-//                    startActivity(new Intent(view.getContext(), PrimaryServices.class));
-//
-//                if(Service.equals("Dental") || Service.equals("طب الأسنان") || Service.equals("ডেন্টাল") || Service.equals("Dental") || Service.equals("Dentaire") || Service.equals("دانتوں") )
-//                    startActivity(new Intent(view.getContext(), DentalHealth.class));
-//
-//                if(Service.equals("Vision")  || Service.equals("رؤية") || Service.equals("দৃষ্টি") || Service.equals("Visión") || Service.equals("Vision") || Service.equals("اولین مقصد"))
-//                    startActivity(new Intent(view.getContext(), VisionHealth.class));
-//
-//                if(Service.equals("Mental")  || Service.equals("رعاية نفسية") || Service.equals("মানসিক") || Service.equals("Mental") || Service.equals("Mentale") || Service.equals("ذہنی"))
-//                    startActivity(new Intent(view.getContext(), MentalHealth.class));
-//
-//                if(Service.equals("Specialty") || Service.equals("رعاية خاصة") || Service.equals("বিশেষত্ব") || Service.equals("Especialidad") || Service.equals("Spécialité") || Service.equals("خاصیت"))
-//                    startActivity(new Intent(view.getContext(), SpecialtyHealth.class));
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView <?> parent)
-//            {
-//
-//            }
-//        });
-
     }
 
     private void picklanguage(String l)
     {
         SharedPreferences.Editor Saver = getSharedPreferences("langauge", MODE_MULTI_PROCESS).edit();
         Locale language_option =  new Locale(l);
-        DisplayMetrics metrics =  getBaseContext().getResources().getDisplayMetrics();
+        DisplayMetrics metrics =  getBaseContext().getResources().getDisplayMetrics();                  // Picks the locale after the language is picked from the dialog
         language_swtich(l, metrics, language_option);
 
         Saver.putString("prev_language" ,l);
@@ -173,7 +131,7 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
 
     public void Saved_language(){
         SharedPreferences saved_language =getSharedPreferences("langauge", MODE_MULTI_PROCESS);
-        picklanguage(saved_language.getString("prev_language" , ""));
+        picklanguage(saved_language.getString("prev_language" , ""));           // choose the saved language from the application
     }
 
 
@@ -182,7 +140,7 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
 
         Locale.setDefault(lang);
 
-        Configuration page = new Configuration();
+        Configuration page = new Configuration();                                                   // Switch the language
         page.locale = lang;
 
         getBaseContext().getResources().updateConfiguration(page, m);
@@ -200,7 +158,7 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
         else if (view.getId() == R.id.PrimaryHeader) {
             Intent Primary = new Intent(this, PrimaryServices.class);
             startActivity(Primary);
-        }
+        }                                                                           // On click for all the buttons that are located on the page of the application
         else if (view.getId() == R.id.MentalHeader) {
             Intent Mental = new Intent(this, MentalHealth.class);
             startActivity(Mental);

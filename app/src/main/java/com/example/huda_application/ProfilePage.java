@@ -21,36 +21,29 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-
-
 public class ProfilePage extends AppCompatActivity implements View.OnClickListener {
-    private TextView header;
+    private TextView header; // Initializing all variables that appear and are referenced in activity_profile_page XML
     private TextView firstName;
     private TextView email;
-    private TextView lastName;
     private TextView DOB;
     private ImageView backbutton;
     private Button updatePass, signOut, deleteAcc;
     private FirebaseAuth mAuth;
     private FloatingActionButton updateEmail;
-    //private CircleImageView profilePicture;
-    private static final int PERMISSION_CODE = 1000;
-    private static final int IMAGE_CAPTURE_CODE = 1001;
-
-    Uri image_uri;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) // Defining all variables to connect to activity_profile_page XML
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
 
-        header = findViewById(R.id.tv_heading);
-        firstName = findViewById(R.id.name);
-        email = findViewById(R.id.et_email);
-        DOB = findViewById(R.id.et_date_of_birth);
-        updateEmail = (FloatingActionButton) findViewById(R.id.floatingEmail);
+        header = findViewById(R.id.tv_heading); // Finding header View ID from associated XML
+        firstName = findViewById(R.id.name); // Finding first name TextView ID from associated XML
+        email = findViewById(R.id.et_email); // Finding email TextView ID from associated XML
+        DOB = findViewById(R.id.et_date_of_birth); // Finding date of birth TextView ID from associated XML
+        updateEmail = (FloatingActionButton) findViewById(R.id.floatingEmail); // Finding update email Button ID from associated XML
 
-        deleteAcc = findViewById(R.id.deleteUserButton);
+        deleteAcc = findViewById(R.id.deleteUserButton); // 
         signOut = findViewById(R.id.logoutButton);
         updatePass = findViewById(R.id.updatePassword);
         backbutton = findViewById(R.id.backButton_10);
@@ -63,114 +56,13 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         User user = UserManager.getInstance().getCurrentUser();
         header.setText(String.format("%s", "Welcome, " + user.getFirstName() + "!"));
         firstName.setText(String.format("%s", user.getFirstName() + " " + user.getLastName()));
-      // lastName.setText(String.format("%s", user.getLastName()));
+        // lastName.setText(String.format("%s", user.getLastName()));
         email.setText(String.format("%s", user.getEmailAddress()));
         DOB.setText(String.format("%s", user.getBirthday()));
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser fbUser = mAuth.getCurrentUser();
-
-//        upload.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//                    if (checkSelfPermission(Manifest.permission.CAMERA) ==
-//                            PackageManager.PERMISSION_DENIED ||
-//                            checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
-//                                    PackageManager.PERMISSION_DENIED) {
-//                        String[] permission = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
-//                        requestPermissions(permission, PERMISSION_CODE);
-//                    } else {
-//                        openCamera();
-//                    }
-//                } else {
-//
-//                }
-//            }
-//        });
     }
-//        upload.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                getImageFromAlbum();
-//            }
-//        });
-//
-//public class GraphicsView extends View {
-//    private static final String QUOTE = "Welcome, Masrur!";
-//    private Path circle;
-//    private Paint cPaint;
-//    private Paint tPaint;
-//
-//    public GraphicsView(Context context) {
-//        super(context);
-//
-//        int color = Color.argb(127, 255, 0, 255);
-//
-//        circle = new Path();
-//        circle.addCircle(230, 350, 150, Path.Direction.CW);
-//
-//        cPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-//        cPaint.setStyle(Paint.Style.STROKE);
-//        cPaint.setColor(Color.LTGRAY);
-//        cPaint.setStrokeWidth(3);
-//
-//        tPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-//        tPaint.setStyle(Paint.Style.FILL_AND_STROKE);
-//        tPaint.setColor(Color.BLACK);
-//        tPaint.setTextSize(50);
-//    }
-//
-//    @Override
-//    protected void onDraw(Canvas canvas) {
-//        canvas.drawTextOnPath(QUOTE, circle, 485, 20, tPaint);
-//    }
-//}
-
-    private void openCamera() {
-        ContentValues values = new ContentValues();
-        values.put(MediaStore.Images.Media.TITLE, "New Picture");
-        values.put(MediaStore.Images.Media.DESCRIPTION, "From Camera");
-        image_uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
-        Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        camera.putExtra(MediaStore.EXTRA_OUTPUT, image_uri);
-        // startActivityForResult(camera, IMAGE_CAPTURE_CODE);
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        switch (requestCode) {
-            case PERMISSION_CODE: {
-                if (grantResults.length > 0 && grantResults[0] ==
-                        PackageManager.PERMISSION_GRANTED) {
-                    openCamera();
-                } else {
-                    Toast.makeText(this, "Permission denied.", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }
-    }
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if (resultCode == RESULT_OK) {
-//            upload.setImageURI(image_uri);
-//        }
-//    }
-//        private void getImageFromAlbum(){
-//        try {
-//            Intent i = new Intent(Intent.ACTION_PICK,
-//                    android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//            startActivity(i, RESULT_LOAD_IMAGE);
-//        } catch(Exception exp){
-//            Log.i("Error",exp.toString());
-//        }
-//    }
 
     @Override
     public void onClick(View v) {
@@ -187,6 +79,5 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         } else if (v.getId() == R.id.deleteUserButton) {
             startActivity(new Intent(this, deleteUserAccount.class));
         }
-}
-
+    }
 }

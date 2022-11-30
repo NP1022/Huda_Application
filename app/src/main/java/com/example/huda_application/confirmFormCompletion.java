@@ -12,7 +12,7 @@ public class confirmFormCompletion extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
-    {
+    {                                                                   // Class used for the confirmation button
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_form_completion);
 
