@@ -138,3 +138,11 @@ dependencies {
 # How to use the Project
   1. Set up an emulator of the device Pixel 4 XL API 30
   2. Click "run" to let the emulator run and display the application 
+  
+# Accounts for testing
+  1. Patient Account:
+    -Email Address: testhudapatient@gmail.com
+    -Password: Password123%
+  2. Admin Account:
+    -Email Address: 
+    -Password:
