@@ -141,8 +141,8 @@ dependencies {
   
 # Accounts for testing
   1. Patient Account:
-    -Email Address: testhudapatient@gmail.com
-    -Password: Password123%
+    - Email Address: testhudapatient@gmail.com
+    - Password: Password123%
   2. Admin Account:
-    -Email Address: 
-    -Password:
+    - Email Address: 
+    - Password:
