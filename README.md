@@ -144,5 +144,5 @@ dependencies {
       1. Email Address: testhudapatient@gmail.com
       2. Password: Password123%
   2. Admin Account:
-    1. Email Address: 
-    2. Password:
+      1. Email Address: test.huda.adm@gmail.com
+      2. Password: Pass123*
