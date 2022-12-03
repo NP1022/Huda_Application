@@ -134,6 +134,7 @@ dependencies {
       4. Click authentication and "Authenticate using a custom authentication system" and follow the steps provided by Firebase
       5. After Authentication is set up, go back to tools and click Firebase
       6. Select Realtime Database and click "Get started with Realtime database" and follow the steps provided by Firebase
+      7. Test if Firebase is connected by registering an account and seeing if the account is in Firebase
 
 # How to use the Project
   1. Set up an emulator of the device Pixel 4 XL API 30
