@@ -141,11 +141,8 @@ dependencies {
   
 # Accounts for testing
   1. Patient Account:
-    1. Email Address: testhudapatient@gmail.com
-    2. Password: Password123%
-  1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
+      1. Email Address: testhudapatient@gmail.com
+      2. Password: Password123%
   2. Admin Account:
     1. Email Address: 
     2. Password:
