@@ -128,12 +128,12 @@ dependencies {
   5. Gradle plugin version: 7.2.2
   6. Gradle version: 7.3.3
   7. Connect Project to Firebase:
-    1. You will need to be given access to use Firebase and makes changes
-    2. Clicks tools on top of the IDE
-    3. Scroll down to Firebase and click
-    4. Click authentication and "Authenticate using a custom authentication system" and follow the steps provided by Firebase
-    5. After Authentication is set up, go back to tools and click Firebase
-    6. Select Realtime Database and click "Get started with Realtime database" and follow the steps provided by Firebase
+      1. You will need to be given access to use Firebase and makes changes
+      2. Clicks tools on top of the IDE
+      3. Scroll down to Firebase and click
+      4. Click authentication and "Authenticate using a custom authentication system" and follow the steps provided by Firebase
+      5. After Authentication is set up, go back to tools and click Firebase
+      6. Select Realtime Database and click "Get started with Realtime database" and follow the steps provided by Firebase
 
 # How to use the Project
   1. Set up an emulator of the device Pixel 4 XL API 30
