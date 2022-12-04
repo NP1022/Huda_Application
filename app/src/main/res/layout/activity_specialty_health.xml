@@ -23,6 +23,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="@id/checkLeft"
+            app:layout_constraintEnd_toEndOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/specialtyServices"
             app:srcCompat="@drawable/done" />
 
@@ -32,7 +33,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/checkLeft"
-            app:layout_constraintEnd_toStartOf="@+id/endocrinology"
+            app:layout_constraintEnd_toEndOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView10"
             app:srcCompat="@drawable/done" />
 
@@ -42,7 +43,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/checkLeft"
-            app:layout_constraintEnd_toStartOf="@+id/podiatry"
+            app:layout_constraintEnd_toEndOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView23"
             app:srcCompat="@drawable/done" />
 
@@ -52,7 +53,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/checkLeft"
-            app:layout_constraintEnd_toStartOf="@+id/cardiology"
+            app:layout_constraintEnd_toEndOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView21"
             app:srcCompat="@drawable/done" />
 
@@ -62,7 +63,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/checkLeft"
-            app:layout_constraintEnd_toStartOf="@+id/nephrology"
+            app:layout_constraintEnd_toEndOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView22"
             app:srcCompat="@drawable/done" />
 
@@ -72,9 +73,9 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/checkLeft"
+            app:layout_constraintEnd_toEndOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView27"
-            app:srcCompat="@drawable/done"
-            tools:layout_editor_absoluteX="81dp" />
+            app:srcCompat="@drawable/done" />
 
         <ImageView
             android:id="@+id/imageView28"
@@ -82,7 +83,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/checkLeft"
-            app:layout_constraintEnd_toStartOf="@+id/pulmonology"
+            app:layout_constraintEnd_toEndOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView29"
             app:srcCompat="@drawable/done" />
 
@@ -92,6 +93,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/checkLeft"
+            app:layout_constraintEnd_toEndOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView25"
             app:srcCompat="@drawable/done" />
 
@@ -101,7 +103,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/checkLeft"
-            app:layout_constraintEnd_toStartOf="@+id/gastroenterology"
+            app:layout_constraintEnd_toEndOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView24"
             app:srcCompat="@drawable/done" />
 
@@ -111,7 +113,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/checkLeft"
-            app:layout_constraintEnd_toStartOf="@+id/ent"
+            app:layout_constraintEnd_toEndOf="@id/imageLeft"
             app:layout_constraintTop_toBottomOf="@+id/imageView26"
             app:srcCompat="@drawable/done" />
 
@@ -123,7 +125,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/white"
             android:fontFamily="sans-serif-light"
-            android:text="Physical Therapy"
+            android:text="@string/PhysTherapy"
             android:textAlignment="textStart"
             android:textColor="#043670"
             android:textSize="20sp"
@@ -321,7 +323,7 @@
 
         <TextView
             android:id="@+id/healthHeader"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="55dp"
             android:background="@color/white"
             android:text="@string/SpecialtyCareHeader"

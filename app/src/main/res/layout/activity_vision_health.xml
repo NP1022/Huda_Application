@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/glaucomaScreenings"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:background="@color/white"
@@ -35,10 +35,10 @@
 
     <TextView
         android:id="@+id/cataractScreenings"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:fontFamily="sans-serif-light"
         android:text="@string/Cataract"
@@ -51,10 +51,11 @@
 
     <TextView
         android:id="@+id/freeEyeWear"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="5dp"
+        android:layout_marginBottom="50dp"
         android:background="@color/white"
         android:fontFamily="sans-serif-light"
         android:text="@string/EyeWear"
@@ -62,15 +63,17 @@
         android:textColor="#043670"
         android:textSize="20sp"
         android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/macDegenScreenings" />
+        app:layout_constraintTop_toBottomOf="@+id/macDegenScreenings"
+        app:layout_constraintVertical_bias="0.02" />
 
     <TextView
         android:id="@+id/macDegenScreenings"
-        android:layout_width="230dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:fontFamily="sans-serif-light"
         android:text="@string/Macular"
@@ -215,7 +218,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/paraLeft"

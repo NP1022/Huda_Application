@@ -15,7 +15,7 @@
     <string name="email">أدخل البريد الإلكتروني</string>
     <string name="Login">الدخول</string>
     <string name="forgotpassword">هل نسيت كلمة السر</string>
-    <string name="dontAccount">ليس لديك حساب؟ اشتراك</string>
+    <string name="dontAccount"><b>اشتراك</b>لا تملك حساب؟ </string>
     <string name="alreadyAccount">هل لديك حساب؟ تسجيل الدخول</string>
     <string name="register">تسجيل</string>
     <string name="language">عربى</string>
@@ -49,14 +49,15 @@
     <string name="VisionNewLogin">رؤية</string>
     <string name="DentalNewLogin">طب الأسنان</string>
     <string name="SpecialityNewLogin">تخصص</string>
-    <string name="HaveAnAccount">لديك حساب؟</string>
-    <string name="DontHaveAnAccount">لا تملك حساب؟</string>
+    <string name="HaveAnAccount">لديك حساب؟ </string>
+    <string name="DontHaveAnAccount"><b>الدخول</b> لديك حساب؟ </string>
     <string name="SignUp">اشتراك</string>
     <string name="PrimaryCare">الرعاية الأولية</string>
      <string name="MentalCare">رعاية نفسية</string>
     <string name="VisionHealth"> العناية بالبصر</string>
     <string name="Dental"> العناية بالأسنان</string>
     <string name="speciality">رعاية خاصة</string>
+
 
 <!--    Patient Portal-->
     <string name="NewPatient">مريض جديد</string>
@@ -69,10 +70,10 @@
 
     <!--    Patient Form Strings -->
     <string name = "Registration">التسجيل</string>
-    <string name="Date">تاريخ (MM/DD/YY)</string>
+    <string name="Date">تاريخ</string>
     <string name="VisitReason">زيارة السبب</string>
     <string name="Sex">جنس</string>
-    <string name="DOB">تاريخ الولادة (MM/DD/YYYY)</string>
+    <string name="DOB">تاريخ الولادة</string>
     <string name="Address">(1234 Street St.) تبوك</string>
     <string name = "City">مدينة</string>
     <string name = "State">حالة</string>

@@ -13,7 +13,7 @@
 
     <string name="password">Enter Password</string>
     <string name="email">Enter Email</string>
-    <string name="Login">Login</string>
+    <string name="Login"><b>Login</b></string>
     <string name="forgotpassword">Forgot Password? <b>Reset</b></string>
     <string name="dontAccount">Don\'t Have an Account? <b>Sign Up</b></string>
     <string name="alreadyAccount">Already Registered? <b>Sign In</b></string>
@@ -49,7 +49,7 @@
     <string name="VisionNewLogin">VISION</string>
     <string name="DentalNewLogin">DENTAL</string>
     <string name="SpecialityNewLogin">SPECIALTY</string>
-    <string name="HaveAnAccount">Have An Account?</string>
+    <string name="HaveAnAccount">Have An Account? <b>Login</b></string>
     <string name="DontHaveAnAccount">Don\'t Have An Account?</string>
     <string name="SignUp">Sign Up</string>
     <string name="PrimaryCare">PRIMARY CARE</string>
