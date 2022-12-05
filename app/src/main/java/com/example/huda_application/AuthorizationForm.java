@@ -109,12 +109,20 @@ public class AuthorizationForm extends AppCompatActivity implements View.OnClick
                 consentDateSign3.setError("Date format is required");
                 consentDateSign3.requestFocus();
             }
-            // Else if statement to check if the string matches the DATE_PATTERN and if it does not,
-            // an error will be displayed
-            else if(TextUtils.isEmpty(patientSignedText3) || patientSignedText3.length() > 30)
+            // If statement that uses TextUtils.isEmpty() to check if the string is empty,
+            // if it is empty, an error will be displayed.
+            else if(TextUtils.isEmpty(patientSignedText3))
             {
                 Toast.makeText(AuthorizationForm.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
                 patientSigned3.setError("Signed name is required");
+                patientSigned3.requestFocus();
+            }
+            // Else if statement to check if the string is less than 30 characters long,
+            // if it greater than an error will be thrown
+            else if(patientSignedText3.length() > 30)
+            {
+                Toast.makeText(AuthorizationForm.this, "Name must be < 30 characters", Toast.LENGTH_LONG).show();
+                patientSigned3.setError("Max character limit reached");
                 patientSigned3.requestFocus();
             }
             // Else if statement to check if the string matches the pattern within the else if() and if it does not,
@@ -127,12 +135,18 @@ public class AuthorizationForm extends AppCompatActivity implements View.OnClick
             }
             // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            // || operator to also check if the string length is less than 30 characters, if > 30 then
-            // another error will be thrown
-            else if(TextUtils.isEmpty(patientSignatureText3) || patientSignatureText3.length() > 30)
+            else if(TextUtils.isEmpty(patientSignatureText3))
             {
                 Toast.makeText(AuthorizationForm.this, "Signature cannot be empty", Toast.LENGTH_LONG).show();
                 patientSig3.setError("Signature is required");
+                patientSig3.requestFocus();
+            }
+            // Else if statement check if the string length is less than 30 characters, if > 30 then
+            // another error will be thrown
+            else if(patientSignatureText3.length() > 30)
+            {
+                Toast.makeText(AuthorizationForm.this, "Signature must be < 30 characters", Toast.LENGTH_LONG).show();
+                patientSig3.setError("Max character limit reached");
                 patientSig3.requestFocus();
             }
             // Else if statement to check if the string matches the pattern within the else if() and if it does not,
