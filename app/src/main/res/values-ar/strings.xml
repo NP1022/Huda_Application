@@ -401,5 +401,12 @@
     <string name="header">سيتعاقد ممثل HUDA معك بمجرد التحقق من النماذج ، يرجى متابعة تسجيل الدخول</string>
     <string name="submit">خذني في تسجيل الدخول</string>
 
+    <!--Appointment Request-->
+    <string name="RequestApptHeader">طلب موعد</string>
+    <string name="ApptDirections">أكمل الحقول أدناه لتقديم طلب للحصول على موعد أو انقر فوق رمز الهاتف أعلاه للاتصال بنا.</string>
+    <string name="SelectDateHint">حدد تاريخ</string>
+    <string name="SelectTimeHint">حدد الوقت</string>
+    <string name="ReasonHint">السبب (بحد أقصى 100 حرف)</string>
+    <string name="RequestButton">طلب</string>
 
 </resources>

@@ -400,5 +400,12 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name="header">Un representante de HUDA lo contratará una vez que se hayan verificado los formularios, continúe iniciando sesión</string>
     <string name="submit">LLEVARME INICIAR SESIÓN</string>
 
+    <!--Appointment Request-->
+    <string name="RequestApptHeader">SOLICITAR CITA</string>
+    <string name="ApptDirections">Complete los campos a continuación para enviar una solicitud de cita o haga clic en el ícono de teléfono de arriba para llamarnos.</string>
+    <string name="SelectDateHint">Seleccione fecha</string>
+    <string name="SelectTimeHint">Seleccionar hora</string>
+    <string name="ReasonHint">Motivo (máx. 100 caracteres)</string>
+    <string name="RequestButton">SOLICITUD</string>
 
 </resources>

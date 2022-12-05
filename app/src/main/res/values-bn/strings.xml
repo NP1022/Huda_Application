@@ -400,5 +400,12 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name="header">একবার ফর্মগুলি যাচাই করা হলে একজন HUDA প্রতিনিধি আপনার সাথে চুক্তি করবে, অনুগ্রহ করে লগইন করা চালিয়ে যান৷</string>
     <string name="submit">আমাকে লগইন করুন</string>
 
+    <!--Appointment Request-->
+    <string name="RequestApptHeader">অ্যাপয়েন্টমেন্টের জন্য অনুরোধ করুন</string>
+    <string name="ApptDirections">একটি অ্যাপয়েন্টমেন্টের জন্য একটি অনুরোধ জমা দিতে নীচের ক্ষেত্রগুলি সম্পূর্ণ করুন বা আমাদের কল করতে উপরের ফোন আইকনে ক্লিক করুন৷</string>
+    <string name="SelectDateHint">তারিখ নির্বাচন করুন</string>
+    <string name="SelectTimeHint">সময় নির্বাচন করুন</string>
+    <string name="ReasonHint">কারণ (সর্বোচ্চ 100 অক্ষর।)</string>
+    <string name="RequestButton">অনুরোধ</string>
 
 </resources>
