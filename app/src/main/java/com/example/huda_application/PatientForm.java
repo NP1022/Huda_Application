@@ -896,12 +896,18 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 30 characters, if > 30 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(patientSignedText) || patientSignedText.length() > 30)
+                else if (TextUtils.isEmpty(patientSignedText))
                 {
                     Toast.makeText(PatientForm.this, "Name must be filled", Toast.LENGTH_LONG).show();
                     patientSigned.setError("Signed name is required");
+                    patientSigned.requestFocus();
+                }
+                // Else if statement to check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
+                else if (patientSignedText.length() > 30)
+                {
+                    Toast.makeText(PatientForm.this, "Name cannot be > 30 characters", Toast.LENGTH_LONG).show();
+                    patientSigned.setError("Character length limit is required");
                     patientSigned.requestFocus();
                 }
                 // else if statement that checks if the patient signed name matches the consent name,
@@ -914,12 +920,18 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 30 characters, if > 30 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(patientSignatureText) || patientSignatureText.length() > 30)
+                else if (TextUtils.isEmpty(patientSignatureText))
                 {
                     Toast.makeText(PatientForm.this, "Signature must be filled", Toast.LENGTH_LONG).show();
                     patientSig.setError("Signature is required");
+                    patientSig.requestFocus();
+                }
+                // Else if statement to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
+                else if (patientSignatureText.length() > 30)
+                {
+                    Toast.makeText(PatientForm.this, "Signature cannot be > 30 characters", Toast.LENGTH_LONG).show();
+                    patientSig.setError("Max character length is required");
                     patientSig.requestFocus();
                 }
                 // else if statement that checks if the patient signature name matches the signed name,
@@ -932,11 +944,17 @@ public class PatientForm extends AppCompatActivity
                 }
                 // if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string matches the DATE_PATTERN and if it does not,
-                // another error will be displayed
-                else if (TextUtils.isEmpty(consentDateTxt) || !DATE_PATTERN.matcher(consentDateTxt).matches())
+                else if (TextUtils.isEmpty(consentDateTxt))
                 {
-                    Toast.makeText(PatientForm.this, "Date must be filled", Toast.LENGTH_LONG).show();
+                    Toast.makeText(PatientForm.this, "Date cannot empty", Toast.LENGTH_LONG).show();
+                    consentDateSign.setError("Date is required");
+                    consentDateSign.requestFocus();
+                }
+                // Else if statement to check if the string matches the DATE_PATTERN and if it does not,
+                // another error will be displayed
+                else if (!DATE_PATTERN.matcher(consentDateTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this, "Date must be MM-DD-YYYY", Toast.LENGTH_LONG).show();
                     consentDateSign.setError("Date format is required");
                     consentDateSign.requestFocus();
                 }
