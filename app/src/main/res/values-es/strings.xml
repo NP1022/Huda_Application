@@ -365,4 +365,24 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <!--profile page-->
     <string name="welcomeUser">¡Bienvenido, </string>
 
+    <!--item headers-->
+    <string name="dateHeader">FECHA: </string>
+    <string name="dateLowercaseHeader">Fecha: </string>
+    <string name="messageHeader">MENSAJE: </string>
+    <string name="messageButtonHeader">MENSAJE</string>
+    <string name="firstNameHeader">Primer Nombre: </string>
+    <string name="lastNameHeader">Apellido: </string>
+    <string name="emailHeader">E-mail: </string>
+    <string name="timeHeader">TIEMPO: </string>
+    <string name="timeLowercaseHeader">Tiempo: </string>
+    <string name="removeHeader">QUITAR</string>
+    <string name="reasonHeader">Razón: </string>
+    <string name="timeCheckedInHeader">Hora De Entrada: </string>
+    <string name="checkedInHeader">Facturado: </string>
+    <string name="approveButton">APROBAR</string>
+    <string name="declineButton">RECHAZAR</string>
+    <string name="approvedHeader">Aprobar: </string>
+    <string name="cancelButton">CANCELAR</string>
+    <string name="appointmentsButton">CITA: </string>
+
 </resources>

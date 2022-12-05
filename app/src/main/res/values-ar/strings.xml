@@ -367,4 +367,24 @@
     <!--profile page-->
     <string name="welcomeUser">أهلا وسهلا، </string>
 
+    <!--item headers-->
+    <string name="dateHeader">تاريخ: </string>
+    <string name="dateLowercaseHeader">تاريخ: </string>
+    <string name="messageHeader">رسالة: </string>
+    <string name="messageButtonHeader">رسالة</string>
+    <string name="firstNameHeader">الاسم الاول: </string>
+    <string name="lastNameHeader">الكنية: </string>
+    <string name="emailHeader">البريد الإلكتروني: </string>
+    <string name="timeHeader">زمن: </string>
+    <string name="timeLowercaseHeader">زمن: </string>
+    <string name="removeHeader">إزالة</string>
+    <string name="reasonHeader">سبب: </string>
+    <string name="timeCheckedInHeader">وقت تسجيل الوصول: </string>
+    <string name="checkedInHeader">تم تسجيل الوصول: </string>
+    <string name="approveButton">يوافق</string>
+    <string name="declineButton">انخفاض</string>
+    <string name="approvedHeader">يوافق: </string>
+    <string name="cancelButton">إلغاء</string>
+    <string name="appointmentsButton">إلغاء: </string>
+
 </resources>

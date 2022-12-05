@@ -373,6 +373,26 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <!--profile page-->
     <string name="welcomeUser">Welcome, </string>
 
+    <!--item headers-->
+    <string name="dateHeader">DATE: </string>
+    <string name="dateLowercaseHeader">Date: </string>
+    <string name="messageHeader">MESSAGE: </string>
+    <string name="messageButtonHeader">MESSAGE</string>
+    <string name="firstNameHeader">First Name: </string>
+    <string name="lastNameHeader">Last Name: </string>
+    <string name="emailHeader">Email: </string>
+    <string name="timeHeader">Time: </string>
+    <string name="timeLowercaseHeader">Time: </string>
+    <string name="removeHeader">REMOVE</string>
+    <string name="reasonHeader">Reason: </string>
+    <string name="timeCheckedInHeader">Check In Time: </string>
+    <string name="checkedInHeader">Checked In: </string>
+    <string name="approveButton">APPROVE</string>
+    <string name="declineButton">DECLINE</string>
+    <string name="approvedHeader">Approved: </string>
+    <string name="cancelButton">CANCEL</string>
+    <string name="appointmentsButton">APPOINTMENTS: </string>
+
     <!--    <string name="menu_update_password">Update Password</string>-->
     <!--    <string name="menu_messages">Messages</string>-->
     <!--    <string name="menu_logout">Logout</string>-->

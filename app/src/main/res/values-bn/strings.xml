@@ -367,4 +367,24 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <!--profile page-->
     <string name="welcomeUser">স্বাগত, </string>
 
+    <!--item headers-->
+    <string name="dateHeader">তারিখ: </string>
+    <string name="dateLowercaseHeader">তারিখ: </string>
+    <string name="messageHeader">বার্তা: </string>
+    <string name="messageButtonHeader">বার্তা</string>
+    <string name="firstNameHeader">নামের প্রথম অংশ: </string>
+    <string name="lastNameHeader">নামের শেষাংশ: </string>
+    <string name="emailHeader">ইমেইল: </string>
+    <string name="timeHeader">সময়: </string>
+    <string name="timeLowercaseHeader">সময়: </string>
+    <string name="removeHeader">অপসারণ</string>
+    <string name="reasonHeader">কারণ: </string>
+    <string name="timeCheckedInHeader">সময় পরীক্ষা: </string>
+    <string name="checkedInHeader">চেক ইন: </string>
+    <string name="approveButton">অনুমোদিত</string>
+    <string name="declineButton">অস্বীকার করুন</string>
+    <string name="approvedHeader">অনুমোদিত: </string>
+    <string name="cancelButton">বাতিল করুন</string>
+    <string name="appointmentsButton">অ্যাপয়েন্টমেন্ট: </string>
+
 </resources>

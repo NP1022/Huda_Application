@@ -368,4 +368,24 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <!--profile page-->
     <string name="welcomeUser">Bienvenue, </string>
 
+    <!--item headers-->
+    <string name="dateHeader">DATE: </string>
+    <string name="dateLowercaseHeader">Date: </string>
+    <string name="messageHeader">MESSAGE: </string>
+    <string name="messageButtonHeader">MESSAGE</string>
+    <string name="firstNameHeader">Prénom: </string>
+    <string name="lastNameHeader">Nom: </string>
+    <string name="emailHeader">E-mail: </string>
+    <string name="timeHeader">TEMPS: </string>
+    <string name="timeLowercaseHeader">Temps: </string>
+    <string name="removeHeader">RETIRER</string>
+    <string name="reasonHeader">Raison: </string>
+    <string name="timeCheckedInHeader">Heure d\'arrivée: </string>
+    <string name="checkedInHeader">Enregistré: </string>
+    <string name="approveButton">APPROUVER</string>
+    <string name="declineButton">DÉCLIN</string>
+    <string name="approvedHeader">Approuver: </string>
+    <string name="cancelButton">ANNULER</string>
+    <string name="appointmentsButton">RENDEZ-VOUS: </string>
+
 </resources>
