@@ -122,28 +122,6 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
         backButton = (ImageView) findViewById(R.id.backButton);                     //All the Textview items used and button to request an appointment
         time.setOnClickListener(this);                                              // The time and the checkin button will be set only to the textview
         backButton.setOnClickListener(this);
-        char_Count.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                int length = reason.length();
-                String str = String.valueOf(length);
-                char_Count.setText(str);
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                int length = reason.length();
-                String str = String.valueOf(length);
-                char_Count.setText(str);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                int length = reason.length();
-                String str = String.valueOf(length);
-                char_Count.setText(str);
-            }
-        });
 
         options = new AlertDialog.Builder(ApptRequest.this);
         options.setTitle("Available Times");
