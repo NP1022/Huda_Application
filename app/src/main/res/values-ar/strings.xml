@@ -369,25 +369,25 @@
 
 
     <!--item headers-->
-    <string name="dateHeader">تاريخ: </string>
-    <string name="dateLowercaseHeader">تاريخ: </string>
-    <string name="messageHeader">رسالة: </string>
+    <string name="dateHeader">تاريخ </string>
+    <string name="dateLowercaseHeader">تاريخ </string>
+    <string name="messageHeader">رسالة </string>
     <string name="messageButtonHeader">رسالة</string>
-    <string name="firstNameHeader">الاسم الاول: </string>
-    <string name="lastNameHeader">الكنية: </string>
-    <string name="emailHeader">البريد الإلكتروني: </string>
-    <string name="timeHeader">زمن: </string>
-    <string name="statusHeader">حالة: </string>
-    <string name="timeLowercaseHeader">زمن: </string>
+    <string name="firstNameHeader">الاسم الاول </string>
+    <string name="lastNameHeader">الكنية </string>
+    <string name="emailHeader">البريد الإلكتروني </string>
+    <string name="timeHeader">زمن </string>
+    <string name="statusHeader">حالة </string>
+    <string name="timeLowercaseHeader">زمن </string>
     <string name="removeHeader">إزالة</string>
-    <string name="reasonHeader">سبب: </string>
-    <string name="timeCheckedInHeader">وقت تسجيل الوصول: </string>
-    <string name="checkedInHeader">تم تسجيل الوصول: </string>
+    <string name="reasonHeader">سبب </string>
+    <string name="timeCheckedInHeader">وقت تسجيل الوصول </string>
+    <string name="checkedInHeader">تم تسجيل الوصو </string>
     <string name="approveButton">يوافق</string>
     <string name="declineButton">انخفاض</string>
-    <string name="approvedHeader">يوافق: </string>
+    <string name="approvedHeader">يوافق </string>
     <string name="cancelButton">إلغاء</string>
-    <string name="appointmentsButton">إلغاء: </string>
+    <string name="appointmentsButton">إلغاء </string>
     <string name="CallClinic">اتصل بالعيادة </string>
 
     <!--New or Returning user-->
@@ -406,7 +406,7 @@
     <string name="ApptDirections">أكمل الحقول أدناه لتقديم طلب للحصول على موعد أو انقر فوق رمز الهاتف أعلاه للاتصال بنا.</string>
     <string name="SelectDateHint">حدد تاريخ</string>
     <string name="SelectTimeHint">حدد الوقت</string>
-    <string name="ReasonHint">السبب (بحد أقصى 100 حرف)</string>
+    <string name="ReasonHint">السبب (بحد أقصى حرف)</string>
     <string name="RequestButton">طلب</string>
 
 </resources>

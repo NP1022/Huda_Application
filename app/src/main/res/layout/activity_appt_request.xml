@@ -100,7 +100,7 @@
             android:padding="10dp"
             android:textColor="@color/black"
             android:textStyle=""
-
+            android:gravity="left"
             android:textColorHint="#686868"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@id/vg4"

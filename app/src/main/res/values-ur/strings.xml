@@ -366,25 +366,25 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
     <string name="welcomeUser">خوش آمدید، </string>
 
     <!--item headers-->
-    <string name="dateHeader">تاریخ: </string>
-    <string name="dateLowercaseHeader">تاریخ: </string>
-    <string name="messageHeader">پیغام: </string>
+    <string name="dateHeader">تاریخ </string>
+    <string name="dateLowercaseHeader">تاریخ </string>
+    <string name="messageHeader">پیغام </string>
     <string name="messageButtonHeader">پیغام</string>
-    <string name="firstNameHeader">پہلا نام: </string>
-    <string name="lastNameHeader">آخری نام: </string>
-    <string name="emailHeader">ای میل: </string>
-    <string name="statusHeader">حالت: </string>
-    <string name="timeHeader">وقت: </string>
-    <string name="timeLowercaseHeader">وقت: </string>
+    <string name="firstNameHeader">پہلا نام </string>
+    <string name="lastNameHeader">آخری نام </string>
+    <string name="emailHeader">ای میل </string>
+    <string name="statusHeader">حالت </string>
+    <string name="timeHeader">وقت </string>
+    <string name="timeLowercaseHeader">وقت </string>
     <string name="removeHeader">دور</string>
-    <string name="reasonHeader">وجہ: </string>
-    <string name="timeCheckedInHeader">چیک ان کا وقت: </string>
-    <string name="checkedInHeader">داخل ہوا: </string>
+    <string name="reasonHeader">وجہ </string>
+    <string name="timeCheckedInHeader">چیک ان کا وقت </string>
+    <string name="checkedInHeader">داخل ہوا </string>
     <string name="approveButton">منظور کرو</string>
     <string name="declineButton">انکار</string>
-    <string name="approvedHeader">منظورشدہ: </string>
+    <string name="approvedHeader">منظورشدہ </string>
     <string name="cancelButton">منسوخ کریں</string>
-    <string name="appointmentsButton">اپوائنٹمنٹس: </string>
+    <string name="appointmentsButton">اپوائنٹمنٹس </string>
     <string name="CallClinic">کلینک کال کریں </string>
 
     <!--New or Returning user-->
