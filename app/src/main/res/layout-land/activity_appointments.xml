@@ -24,7 +24,7 @@
         android:foregroundGravity="left|center_vertical|center_horizontal"
         android:padding="10dp"
         android:paddingRight="20dp"
-        android:text="     Call Clinic"
+        android:text="@string/CallClinic"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="18sp"
