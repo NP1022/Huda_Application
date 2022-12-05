@@ -382,6 +382,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="lastNameHeader">Last Name: </string>
     <string name="emailHeader">Email: </string>
     <string name="timeHeader">Time: </string>
+    <string name="statusHeader">Status: </string>
     <string name="timeLowercaseHeader">Time: </string>
     <string name="removeHeader">REMOVE</string>
     <string name="reasonHeader">Reason: </string>
@@ -392,7 +393,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="approvedHeader">Approved: </string>
     <string name="cancelButton">CANCEL</string>
     <string name="appointmentsButton">APPOINTMENTS: </string>
-
+    <string name="CallClinic">     Call Clinic</string>
     <!--    <string name="menu_update_password">Update Password</string>-->
     <!--    <string name="menu_messages">Messages</string>-->
     <!--    <string name="menu_logout">Logout</string>-->

@@ -376,6 +376,7 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name="lastNameHeader">নামের শেষাংশ: </string>
     <string name="emailHeader">ইমেইল: </string>
     <string name="timeHeader">সময়: </string>
+    <string name="statusHeader">অবস্থা: </string>
     <string name="timeLowercaseHeader">সময়: </string>
     <string name="removeHeader">অপসারণ</string>
     <string name="reasonHeader">কারণ: </string>
@@ -386,5 +387,6 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name="approvedHeader">অনুমোদিত: </string>
     <string name="cancelButton">বাতিল করুন</string>
     <string name="appointmentsButton">অ্যাপয়েন্টমেন্ট: </string>
+    <string name="CallClinic"> ক্লিনিকে কল করুন</string>
 
 </resources>

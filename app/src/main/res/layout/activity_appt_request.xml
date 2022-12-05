@@ -71,7 +71,7 @@
             app:layout_constraintStart_toStartOf="@id/vg3"
             app:layout_constraintTop_toBottomOf="@+id/hg2" />
 
-        <Button
+        <TextView
             android:id="@+id/dateText"
             android:layout_width="0dp"
             android:layout_height="55dp"

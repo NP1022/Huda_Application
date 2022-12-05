@@ -377,6 +377,7 @@
     <string name="lastNameHeader">الكنية: </string>
     <string name="emailHeader">البريد الإلكتروني: </string>
     <string name="timeHeader">زمن: </string>
+    <string name="statusHeader">حالة: </string>
     <string name="timeLowercaseHeader">زمن: </string>
     <string name="removeHeader">إزالة</string>
     <string name="reasonHeader">سبب: </string>
@@ -387,6 +388,7 @@
     <string name="approvedHeader">يوافق: </string>
     <string name="cancelButton">إلغاء</string>
     <string name="appointmentsButton">إلغاء: </string>
+    <string name="CallClinic">اتصل بالعيادة </string>
 
     <!--New or Returning user-->
     <string name="patientStatus">حالة المريض</string>

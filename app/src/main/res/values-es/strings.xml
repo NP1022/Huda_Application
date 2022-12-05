@@ -374,6 +374,7 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name="firstNameHeader">Primer Nombre: </string>
     <string name="lastNameHeader">Apellido: </string>
     <string name="emailHeader">E-mail: </string>
+    <string name="statusHeader">Estado: </string>
     <string name="timeHeader">TIEMPO: </string>
     <string name="timeLowercaseHeader">Tiempo: </string>
     <string name="removeHeader">QUITAR</string>
@@ -385,6 +386,7 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name="approvedHeader">Aprobar: </string>
     <string name="cancelButton">CANCELAR</string>
     <string name="appointmentsButton">CITA: </string>
+    <string name="CallClinic">Llame Clínica</string>
 
     <!--New or Returning user-->
     <string name="patientStatus">ESTADO DEL PACIENTE</string>

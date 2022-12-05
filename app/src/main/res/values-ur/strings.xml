@@ -373,6 +373,7 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
     <string name="firstNameHeader">پہلا نام: </string>
     <string name="lastNameHeader">آخری نام: </string>
     <string name="emailHeader">ای میل: </string>
+    <string name="statusHeader">حالت: </string>
     <string name="timeHeader">وقت: </string>
     <string name="timeLowercaseHeader">وقت: </string>
     <string name="removeHeader">دور</string>
@@ -384,7 +385,7 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
     <string name="approvedHeader">منظورشدہ: </string>
     <string name="cancelButton">منسوخ کریں</string>
     <string name="appointmentsButton">اپوائنٹمنٹس: </string>
-
+    <string name="CallClinic">کلینک کال کریں </string>
 
     <!--New or Returning user-->
     <string name="patientStatus">مریض کی حالت</string>
