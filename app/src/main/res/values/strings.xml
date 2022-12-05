@@ -403,4 +403,11 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="header1">Before proceeding to the application, you must select your appropriate patient status below.</string>
     <string name="newPatient">New Patient?</string>
     <string name="oldPatient">Returning Patient?</string>
+
+    <!-- confirm form completion-->
+    <string name="submission">Submission complete</string>
+    <string name="header">A HUDA representative will contract you once the forms have verified, please continue to login</string>
+    <string name="submit">TAKE ME LOGIN</string>
+
+
 </resources>

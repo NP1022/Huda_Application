@@ -393,4 +393,9 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
     <string name="newPatient">نیا مریض؟</string>
     <string name="oldPatient">واپس آنے والے مریض؟</string>
 
+    <!-- confirm form completion-->
+    <string name="submission">جمع کروانا مکمل</string>
+    <string name="header">فارموں کی تصدیق ہونے کے بعد HUDA کا نمائندہ آپ سے معاہدہ کرے گا، براہ کرم لاگ ان کرنا جاری رکھیں</string>
+    <string name="submit">مجھے لاگ ان کریں۔</string>
+    
 </resources>

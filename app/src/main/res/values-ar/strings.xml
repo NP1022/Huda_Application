@@ -396,5 +396,10 @@
     <string name="newPatient">مريض جديد؟</string>
     <string name="oldPatient">عودة المريض؟</string>
 
+    <!-- confirm form completion-->
+    <string name="submission">اكتمل التقديم</string>
+    <string name="header">سيتعاقد ممثل HUDA معك بمجرد التحقق من النماذج ، يرجى متابعة تسجيل الدخول</string>
+    <string name="submit">خذني في تسجيل الدخول</string>
+
 
 </resources>

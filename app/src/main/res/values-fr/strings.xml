@@ -368,6 +368,7 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <!--profile page-->
     <string name="welcomeUser">Bienvenue, </string>
 
+
     <!--item headers-->
     <string name="dateHeader">DATE: </string>
     <string name="dateLowercaseHeader">Date: </string>
@@ -389,5 +390,17 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name="cancelButton">ANNULER</string>
     <string name="appointmentsButton">RENDEZ-VOUS: </string>
     <string name="CallClinic"> D\'appel</string>
+
+    <!--New or Returning user-->
+    <string name="patientStatus">STATUT DU PATIENT</string>
+    <string name="header1">Avant de procéder à la demande, vous devez sélectionner votre statut de patient approprié ci-dessous.</string>
+    <string name="newPatient">Nouvelle patiente?</string>
+    <string name="oldPatient">Patient de retour?</string>
+
+    <!-- confirm form completion-->
+    <string name="submission">Soumission terminée</string>
+    <string name="header">Un représentant HUDA vous contactera une fois les formulaires vérifiés, veuillez continuer à vous connecter</string>
+    <string name="submit">PRENDRE MOI CONNEXION</string>
+
 
 </resources>

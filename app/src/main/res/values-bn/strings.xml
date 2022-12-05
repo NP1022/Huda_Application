@@ -389,4 +389,16 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name="appointmentsButton">অ্যাপয়েন্টমেন্ট: </string>
     <string name="CallClinic"> ক্লিনিকে কল করুন</string>
 
+    <!--New or Returning user-->
+    <string name="patientStatus">রোগীর অবস্থা</string>
+    <string name="header1">আবেদনে এগিয়ে যাওয়ার আগে, আপনাকে অবশ্যই নীচে আপনার উপযুক্ত রোগীর অবস্থা নির্বাচন করতে হবে।</string>
+    <string name="newPatient">নতুন রোগী?</string>
+    <string name="oldPatient">ফিরছেন রোগী?</string>
+
+    <!-- confirm form completion-->
+    <string name="submission">জমা সম্পূর্ণ</string>
+    <string name="header">একবার ফর্মগুলি যাচাই করা হলে একজন HUDA প্রতিনিধি আপনার সাথে চুক্তি করবে, অনুগ্রহ করে লগইন করা চালিয়ে যান৷</string>
+    <string name="submit">আমাকে লগইন করুন</string>
+
+
 </resources>
