@@ -316,7 +316,7 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
     {
         if (view.getId() == R.id.backButton)
         {
-            Intent prev = new Intent(this, MainActivity.class);
+            Intent prev = new Intent(this, NewLogin.class);
             startActivity(prev);
         }
     }

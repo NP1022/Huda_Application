@@ -45,6 +45,7 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) // Defining all variables to connect to activity_profile_page XML
     {
         super.onCreate(savedInstanceState);
+        Saved_language();
         setContentView(R.layout.activity_profile_page);
 
         String welcome = getString(R.string.welcomeUser);

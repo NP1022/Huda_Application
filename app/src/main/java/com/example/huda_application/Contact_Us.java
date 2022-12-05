@@ -3,14 +3,19 @@ package com.example.huda_application;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.media.FaceDetector;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.rpc.Help;
+
+import java.util.Locale;
 
 public class Contact_Us extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,6 +28,7 @@ public class Contact_Us extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) // onCreate function to set the page with correct parameters
     {
         super.onCreate(savedInstanceState);
+        Saved_language();
         setContentView(R.layout.activity_contact_us); // Set view on patient end to activity_contact_us XML
         HUDAnumber = (TextView) findViewById(R.id.HUDAnumber); // Defining all variables to find associated View IDs from XML page
         HUDAaddresss = (TextView) findViewById(R.id.HUDAaddress);
@@ -78,5 +84,33 @@ public class Contact_Us extends AppCompatActivity implements View.OnClickListene
             Intent prev = new Intent(this, MainApplication.class);
             startActivity(prev); // Patient is redirected to previous page which is the Main Menu page
         }
+    }
+
+    private void picklanguage(String l)
+    {
+        SharedPreferences.Editor Saver = getSharedPreferences("langauge", MODE_MULTI_PROCESS).edit();
+        Locale language_option =  new Locale(l);
+        DisplayMetrics metrics =  getBaseContext().getResources().getDisplayMetrics();                  // Picks the locale after the language is picked from the dialog
+        language_swtich(l, metrics, language_option);
+
+        Saver.putString("prev_language" ,l);
+        Saver.apply();
+    }
+    public void language_swtich(String l , DisplayMetrics m , Locale lang) {
+
+        Locale.setDefault(lang);
+
+        Configuration page = new Configuration();                                                   // Switch the language
+        page.locale = lang;
+
+        getBaseContext().getResources().updateConfiguration(page, m);
+
+    }
+
+
+    public void Saved_language(){
+        SharedPreferences saved_language =getSharedPreferences("langauge", MODE_MULTI_PROCESS);
+        picklanguage(saved_language.getString("prev_language" , ""));
+        // choose the saved language from the application
     }
 }

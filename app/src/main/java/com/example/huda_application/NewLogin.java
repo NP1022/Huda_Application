@@ -31,8 +31,9 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Saved_language();
         setContentView(R.layout.activity_new_login);
-        Saved_language();                                                                  // Class that will show the Main page of the application with the buttons that
+                                                                          // Class that will show the Main page of the application with the buttons that
         // show the health services for the clinic
         login = (TextView) findViewById(R.id.LoginButton);
         signUp = (TextView) findViewById(R.id.SignUpButton);
@@ -123,18 +124,18 @@ public class NewLogin extends AppCompatActivity implements View.OnClickListener 
         Saver.apply();
     }
 
-    public void create_menu(AlertDialog.Builder opts){
 
-        menu = opts.create();
-        menu.show();
-    }
 
     public void Saved_language(){
         SharedPreferences saved_language =getSharedPreferences("langauge", MODE_MULTI_PROCESS);
         picklanguage(saved_language.getString("prev_language" , ""));
         // choose the saved language from the application
     }
+    public void create_menu(AlertDialog.Builder opts){
 
+        menu = opts.create();
+        menu.show();
+    }
 
 
     public void language_swtich(String l , DisplayMetrics m , Locale lang) {

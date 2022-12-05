@@ -6,8 +6,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
@@ -56,6 +59,7 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
     {
 
         super.onCreate(savedInstanceState);
+        Saved_language();
         setContentView(R.layout.activity_update_password);
 
         Button updatePassBtn = findViewById(R.id.registerButton); // set variable button for ID from the XML
@@ -203,4 +207,31 @@ public class updatePassword extends AppCompatActivity implements View.OnClickLis
                     }
                 });
         }
+    private void picklanguage(String l)
+    {
+        SharedPreferences.Editor Saver = getSharedPreferences("langauge", MODE_MULTI_PROCESS).edit();
+        Locale language_option =  new Locale(l);
+        DisplayMetrics metrics =  getBaseContext().getResources().getDisplayMetrics();                  // Picks the locale after the language is picked from the dialog
+        language_swtich(l, metrics, language_option);
+
+        Saver.putString("prev_language" ,l);
+        Saver.apply();
+    }
+    public void language_swtich(String l , DisplayMetrics m , Locale lang) {
+
+        Locale.setDefault(lang);
+
+        Configuration page = new Configuration();                                                   // Switch the language
+        page.locale = lang;
+
+        getBaseContext().getResources().updateConfiguration(page, m);
+
+    }
+
+
+    public void Saved_language(){
+        SharedPreferences saved_language =getSharedPreferences("langauge", MODE_MULTI_PROCESS);
+        picklanguage(saved_language.getString("prev_language" , ""));
+        // choose the saved language from the application
+    }
 }

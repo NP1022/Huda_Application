@@ -9,7 +9,10 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
@@ -32,6 +35,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Locale;
+
 
 public class MainApplication extends AppCompatActivity implements View.OnClickListener {
 
@@ -52,6 +57,7 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Saved_language();
         setContentView(R.layout.activity_main_application);
 
         // Defining all variables and their views
@@ -106,6 +112,33 @@ public class MainApplication extends AppCompatActivity implements View.OnClickLi
     public void onBackPressed() {
 // super.onBackPressed();
 // Not calling **super**, disables back button in current screen.
+    }
+    private void picklanguage(String l)
+    {
+        SharedPreferences.Editor Saver = getSharedPreferences("langauge", MODE_MULTI_PROCESS).edit();
+        Locale language_option =  new Locale(l);
+        DisplayMetrics metrics =  getBaseContext().getResources().getDisplayMetrics();                  // Picks the locale after the language is picked from the dialog
+        language_swtich(l, metrics, language_option);
+
+        Saver.putString("prev_language" ,l);
+        Saver.apply();
+    }
+    public void language_swtich(String l , DisplayMetrics m , Locale lang) {
+
+        Locale.setDefault(lang);
+
+        Configuration page = new Configuration();                                                   // Switch the language
+        page.locale = lang;
+
+        getBaseContext().getResources().updateConfiguration(page, m);
+
+    }
+
+
+    public void Saved_language(){
+        SharedPreferences saved_language =getSharedPreferences("langauge", MODE_MULTI_PROCESS);
+        picklanguage(saved_language.getString("prev_language" , ""));
+        // choose the saved language from the application
     }
     @Override
     public void onClick(View view) // onClick function to redirect user upon clicking on view of associated XML pages

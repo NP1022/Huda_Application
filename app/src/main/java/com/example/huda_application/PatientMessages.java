@@ -7,7 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class PatientMessages extends AppCompatActivity implements View.OnClickListener{
 
@@ -36,6 +40,7 @@ public class PatientMessages extends AppCompatActivity implements View.OnClickLi
     @Override                                                       // the messages are displayed in the recyclerview items
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Saved_language();
         setContentView(R.layout.activity_patient_messages);
         RecyclerView recyclerView = findViewById(R.id.usersView5);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -95,7 +100,33 @@ public class PatientMessages extends AppCompatActivity implements View.OnClickLi
 
         }
     }
+    private void picklanguage(String l)
+    {
+        SharedPreferences.Editor Saver = getSharedPreferences("langauge", MODE_MULTI_PROCESS).edit();
+        Locale language_option =  new Locale(l);
+        DisplayMetrics metrics =  getBaseContext().getResources().getDisplayMetrics();                  // Picks the locale after the language is picked from the dialog
+        language_swtich(l, metrics, language_option);
 
+        Saver.putString("prev_language" ,l);
+        Saver.apply();
+    }
+    public void language_swtich(String l , DisplayMetrics m , Locale lang) {
+
+        Locale.setDefault(lang);
+
+        Configuration page = new Configuration();                                                   // Switch the language
+        page.locale = lang;
+
+        getBaseContext().getResources().updateConfiguration(page, m);
+
+    }
+
+
+    public void Saved_language(){
+        SharedPreferences saved_language =getSharedPreferences("langauge", MODE_MULTI_PROCESS);
+        picklanguage(saved_language.getString("prev_language" , ""));
+        // choose the saved language from the application
+    }
     public static class PatientViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView date;
