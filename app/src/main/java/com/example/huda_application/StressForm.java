@@ -21,7 +21,7 @@ public class StressForm extends AppCompatActivity
 {
     private static Pattern RESPONSE_PATTERN = Pattern.compile("^(?:yes|Yes|No|no)$");
     private static Pattern RANGE_PATTERN = Pattern.compile("^(?:0|1|2|3)$");
-    private static Pattern SUM_PATTERN = Pattern.compile("([1-9]|1[0-9]|2[0-4])$");
+    private static Pattern SUM_PATTERN = Pattern.compile("([0-9]|1[0-9]|2[0-4])$");
 
     private PatientFormData data;
     private TextView PatientInfoForm;
