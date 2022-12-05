@@ -364,4 +364,8 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name="deleteUserHeader2">Confirmer la suppression du compte</string>
     <string name="userDeleteInput">Entrez Oui ou Non</string>
     <string name="userConfirmDelete">Confirmer Oui ou Non</string>
+
+    <!--profile page-->
+    <string name="welcomeUser">Bienvenue, </string>
+
 </resources>

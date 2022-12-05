@@ -47,6 +47,7 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
 
+        String welcome = getString(R.string.welcomeUser);
         header = findViewById(R.id.tv_heading); // Finding header View ID from associated XML
         firstName = findViewById(R.id.name); // Finding first name TextView ID from associated XML
         email = findViewById(R.id.et_email); // Finding email TextView ID from associated XML
@@ -63,10 +64,10 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         updateEmail.setOnClickListener(this);
         updatePass.setOnClickListener(this);
 
-        User user = UserManager.getInstance().getCurrentUser();
-        header.setText(String.format("%s", "Welcome, " + user.getFirstName() + "!"));
-        firstName.setText(String.format("%s", user.getFirstName() + " " + user.getLastName()));
-        // lastName.setText(String.format("%s", user.getLastName()));
+
+        User user = UserManager.getInstance().getCurrentUser(); // Fetch data of current user object
+        header.setText(String.format("%s", welcome + " " + user.getFirstName() + "!")); // Set header text to welcome the user, fetching user's first name from database
+        firstName.setText(String.format("%s", user.getFirstName() + " " + user.getLastName())); // Sets name string to display user's first and last name
         email.setText(String.format("%s", user.getEmailAddress()));
         DOB.setText(String.format("%s", user.getBirthday()));
 

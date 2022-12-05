@@ -363,4 +363,8 @@ HUDA ক্লিনিক দ্বারা প্রদত্ত বিনা
     <string name="deleteUserHeader2">অ্যাকাউন্ট মুছে ফেলা নিশ্চিত করুন</string>
     <string name="userDeleteInput">হ্যাঁ বা না লিখুন</string>
     <string name="userConfirmDelete">হ্যাঁ বা না নিশ্চিত করুন</string>
+
+    <!--profile page-->
+    <string name="welcomeUser">স্বাগত, </string>
+
 </resources>

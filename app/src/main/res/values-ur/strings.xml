@@ -362,5 +362,7 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
     <string name="userDeleteInput">ہاں یا نہیں درج کریں۔</string>
     <string name="userConfirmDelete">ہاں یا نہیں کی تصدیق کریں۔</string>
 
+    <!--profile page-->
+    <string name="welcomeUser">خوش آمدید، </string>
 
 </resources>
