@@ -402,5 +402,12 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name="header">Un représentant HUDA vous contactera une fois les formulaires vérifiés, veuillez continuer à vous connecter</string>
     <string name="submit">PRENDRE MOI CONNEXION</string>
 
+    <!--Appointment Request-->
+    <string name="RequestApptHeader">DEMANDE DE RENDEZ-VOUS</string>
+    <string name="ApptDirections">Remplissez les champs ci-dessous pour soumettre une demande de rendez-vous ou cliquez sur l\'icône de téléphone ci-dessus pour nous appeler.</string>
+    <string name="SelectDateHint">Sélectionner une date</string>
+    <string name="SelectTimeHint">Sélectionnez l\'heure</string>
+    <string name="ReasonHint">Raison (max 100 car.)</string>
+    <string name="RequestButton">DEMANDE</string>
 
 </resources>

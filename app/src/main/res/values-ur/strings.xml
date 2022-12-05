@@ -397,5 +397,12 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
     <string name="submission">جمع کروانا مکمل</string>
     <string name="header">فارموں کی تصدیق ہونے کے بعد HUDA کا نمائندہ آپ سے معاہدہ کرے گا، براہ کرم لاگ ان کرنا جاری رکھیں</string>
     <string name="submit">مجھے لاگ ان کریں۔</string>
-    
+
+    <!--Appointment Request-->
+    <string name="RequestApptHeader">REQUEST APPOINTMENT</string>
+    <string name="ApptDirections">Complete the fields below to submit a request for an appointment or click the phone icon above to call us.</string>
+    <string name="SelectDateHint">Select Date</string>
+    <string name="SelectTimeHint">Select Time</string>
+    <string name="ReasonHint">Reason (max 100 char.)</string>
+    <string name="RequestButton">REQUEST</string>
 </resources>

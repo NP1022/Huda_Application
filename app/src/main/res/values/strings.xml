@@ -409,5 +409,12 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="header">A HUDA representative will contract you once the forms have verified, please continue to login</string>
     <string name="submit">TAKE ME LOGIN</string>
 
+    <!--Appointment Request-->
+    <string name="RequestApptHeader">REQUEST APPOINTMENT</string>
+    <string name="ApptDirections">Complete the fields below to submit a request for an appointment or click the phone icon above to call us.</string>
+    <string name="SelectDateHint">Select Date</string>
+    <string name="SelectTimeHint">Select Time</string>
+    <string name="ReasonHint">Reason (max 100 char.)</string>
+    <string name="RequestButton">REQUEST</string>
 
 </resources>
