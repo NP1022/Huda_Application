@@ -365,4 +365,10 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <!--profile page-->
     <string name="welcomeUser">¡Bienvenido, </string>
 
+    <!--New or Returning user-->
+    <string name="patientStatus">ESTADO DEL PACIENTE</string>
+    <string name="header1">Antes de continuar con la solicitud, debe seleccionar su estado de paciente apropiado a continuación.</string>
+    <string name="newPatient">¿Nuevo paciente?</string>
+    <string name="oldPatient">¿Paciente que regresa?</string>
+
 </resources>

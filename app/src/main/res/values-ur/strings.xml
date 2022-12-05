@@ -364,5 +364,9 @@ HUDA کلینک کے ذریعہ فراہم کردہ مفت خدمات کے وص�
 
     <!--profile page-->
     <string name="welcomeUser">خوش آمدید، </string>
-
+    <!--New or Returning user-->
+    <string name="patientStatus">مریض کی حالت</string>
+    <string name="header1">درخواست پر آگے بڑھنے سے پہلے، آپ کو ذیل میں مریض کی اپنی مناسب حیثیت کا انتخاب کرنا چاہیے۔</string>
+    <string name="newPatient">نیا مریض؟</string>
+    <string name="oldPatient">واپس آنے والے مریض؟</string>
 </resources>
