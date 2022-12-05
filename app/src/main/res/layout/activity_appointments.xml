@@ -25,7 +25,7 @@
         android:padding="15dp"
         android:paddingRight="20dp"
         android:text="@string/CallClinic"
-        android:gravity="right"
+        android:gravity="center"
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:topLeftRadius="10dp"
