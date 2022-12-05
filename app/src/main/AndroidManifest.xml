@@ -150,6 +150,10 @@
             android:name=".RegisterAccount"
             android:exported="false" />
         <activity
+            android:name=".confirmFormCompletion"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
