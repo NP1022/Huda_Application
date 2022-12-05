@@ -6,7 +6,9 @@
     android:id="@+id/scrollViewPartners"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:layoutDirection="ltr"
+    android:screenOrientation="portrait">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

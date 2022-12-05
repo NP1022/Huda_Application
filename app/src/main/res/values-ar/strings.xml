@@ -367,6 +367,7 @@
     <!--profile page-->
     <string name="welcomeUser">أهلا وسهلا، </string>
 
+
     <!--item headers-->
     <string name="dateHeader">تاريخ: </string>
     <string name="dateLowercaseHeader">تاريخ: </string>
@@ -386,5 +387,12 @@
     <string name="approvedHeader">يوافق: </string>
     <string name="cancelButton">إلغاء</string>
     <string name="appointmentsButton">إلغاء: </string>
+
+    <!--New or Returning user-->
+    <string name="patientStatus">حالة المريض</string>
+    <string name="header1">قبل الشروع في التطبيق ، يجب عليك تحديد حالة المريض المناسبة لك أدناه.</string>
+    <string name="newPatient">مريض جديد؟</string>
+    <string name="oldPatient">عودة المريض؟</string>
+
 
 </resources>

@@ -17,22 +17,29 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
+
             android:name=".CustomizeTime"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
+
             android:name=".updateEmail"
             android:exported="false" />
         <activity
             android:name=".deleteUserAccount"
             android:exported="false" />
         <activity
+
             android:name=".AvailableAppointments"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".updatePassword"
             android:exported="false" />
         <activity
+
             android:name=".message_all_patients"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".ProfilePage"
@@ -42,21 +49,27 @@
             android:exported="false" />
         <activity
             android:name=".MessageSendPage"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Adminpanel"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Messagepage"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".UserAppointment"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".SpecialtyHealth"
             android:exported="false" />
         <activity
+
             android:name=".Appointments"
+
             android:exported="false" />
         <activity
             android:name=".MentalHealth"
@@ -74,7 +87,9 @@
             android:name=".NewOrReturningUser"
             android:exported="false" />
         <activity
+
             android:name=".AdminPage"
+            android:screenOrientation="portrait"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -82,24 +97,31 @@
         </activity>
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".LabAccess"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".PatientInfoForm"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".StressForm"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".AuthorizationForm"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".PatientContract"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".PersonalRepresentative"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".ApptRequest"
@@ -112,6 +134,7 @@
             android:exported="false" />
         <activity
             android:name=".OurStory"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Contact_Us"

@@ -112,12 +112,18 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
             }
             // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            // || operator to also check if the string length is less than 30 characters, if > 30 then
-            // another error will be thrown
-            else if(TextUtils.isEmpty(patientSignedText2) || patientSignedText2.length() > 30)
+            else if(TextUtils.isEmpty(patientSignedText2))
             {
                 Toast.makeText(PatientContract.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
                 patientSigned2.setError("Signed name is required");
+                patientSigned2.requestFocus();
+            }
+            // Else if statement to check if the string length is less than 30 characters, if > 30 then
+            // another error will be thrown
+            else if(patientSignedText2.length() > 30)
+            {
+                Toast.makeText(PatientContract.this, "Name must be < 30 characters", Toast.LENGTH_LONG).show();
+                patientSigned2.setError("max character limit reached");
                 patientSigned2.requestFocus();
             }
             // Else if statement to check if the string matches the pattern within the else if() and if it does not,
@@ -130,12 +136,18 @@ public class PatientContract extends AppCompatActivity implements View.OnClickLi
             }
             // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            // || operator to also check if the string length is less than 30 characters, if > 30 then
-            // another error will be thrown
-            else if(TextUtils.isEmpty(patientSignatureText2) || patientSignatureText2.length() > 30)
+            else if(TextUtils.isEmpty(patientSignatureText2))
             {
                 Toast.makeText(PatientContract.this, "Signature cannot be empty", Toast.LENGTH_LONG).show();
                 patientSig2.setError("Signature is required");
+                patientSig2.requestFocus();
+            }
+            // Else if statement to check if the string length is less than 30 characters, if > 30 then
+            // another error will be thrown
+            else if(patientSignatureText2.length() > 30)
+            {
+                Toast.makeText(PatientContract.this, "Signature must be < 30 characters", Toast.LENGTH_LONG).show();
+                patientSig2.setError("Max character limit reached");
                 patientSig2.requestFocus();
             }
             // Else if statement to check if the string matches the pattern within the else if() and if it does not,

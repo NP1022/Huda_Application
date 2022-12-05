@@ -10,7 +10,8 @@
     android:backgroundTint="#9E9E9E"
     android:fillViewport="true"
     tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp">
+    tools:layout_editor_absoluteY="1dp"
+    android:layoutDirection="ltr">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
