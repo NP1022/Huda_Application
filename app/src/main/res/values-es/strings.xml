@@ -147,7 +147,7 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "Birthday">Cumpleaños</string>
     <string name = "AppointmentTime">Hora de La Cita</string>
     <string name = "EnterCheckinEmail">Ingrese Correo Electrónico</string>
-    <string name = "CheckInButton">Registrarse</string>
+    <string name = "CheckInButton">Registrar</string>
     <string name ="appointmentsHeader">EQUIPO</string>
 
     <!--    Contact Us Page-->
@@ -386,7 +386,7 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name="approvedHeader">Aprobar: </string>
     <string name="cancelButton">CANCELAR</string>
     <string name="appointmentsButton">CITA: </string>
-    <string name="CallClinic">Llame Clínica</string>
+    <string name="CallClinic">   Llame Clínica</string>
 
     <!--New or Returning user-->
     <string name="patientStatus">ESTADO DEL PACIENTE</string>

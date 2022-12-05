@@ -149,7 +149,7 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name = "Birthday">Date d\'Anniversaire</string>
     <string name = "AppointmentTime">Heure de Rendez-Vous</string>
     <string name = "EnterCheckinEmail">Entrez l\'E-mail</string>
-    <string name = "CheckInButton">Enregistrement</string>
+    <string name = "CheckInButton">Enregistrem</string>
 
     <!--    Contact Us Page-->
     <string name = "ContactUsHeader">NOUS CONTACTER</string>
