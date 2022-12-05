@@ -256,32 +256,51 @@ public class PatientForm extends AppCompatActivity
 
                 // if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string matches the DATE_PATTERN and if it does not,
-                // another error will be thrown
-                if (TextUtils.isEmpty(dateTxt) || !DATE_PATTERN.matcher(dateTxt).matches())
+                if (TextUtils.isEmpty(dateTxt))
                 {
                     Toast.makeText(PatientForm.this, "Must be mm-dd-yyyy", Toast.LENGTH_LONG).show();
                     todayDate.setError("Date format is required");
                     todayDate.requestFocus();
                 }
+                // Else if statement to check if the string matches the DATE_PATTERN and if it does not,
+                // another error will be thrown
+                else if(!DATE_PATTERN.matcher(dateTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this, "Date cannot be empty", Toast.LENGTH_LONG).show();
+                    todayDate.setError("Today's date is required");
+                    todayDate.requestFocus();
+                }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 30 characters, if > 30 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(visitReasonTxt) || visitReasonTxt.length() > 30) // check if visit reason is empty and too long
+                else if (TextUtils.isEmpty(visitReasonTxt)) // check if visit reason is empty and too long
                 {
                     Toast.makeText(PatientForm.this, "Please enter a visit reason", Toast.LENGTH_LONG).show();
                     visitReason.setError("Visit reason is required");
                     visitReason.requestFocus();
                 }
+                // Else if statement to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
+                else if (visitReasonTxt.length() > 30) // check if visit reason is empty and too long
+                {
+                    Toast.makeText(PatientForm.this, "Character limit must be < 30", Toast.LENGTH_LONG).show();
+                    visitReason.setError("Max character limit required");
+                    visitReason.requestFocus();
+                }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 20 characters, if > 20 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(firstNameTxt) || firstNameTxt.length() > 20) // check if name is empty
+                else if (TextUtils.isEmpty(firstNameTxt)) // check if name is empty
                 {
                     Toast.makeText(PatientForm.this, "Please enter first name", Toast.LENGTH_LONG).show();
                     firstName.setError("Name is required");
+                    firstName.requestFocus();
+
+                }
+                // Else if statement to also check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
+                else if (firstNameTxt.length() > 20) // check if name is empty
+                {
+                    Toast.makeText(PatientForm.this, "Character limit must be < 20", Toast.LENGTH_LONG).show();
+                    firstName.setError("Max character limit required");
                     firstName.requestFocus();
 
                 }
@@ -295,12 +314,18 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 20 characters, if > 20 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(lastNameTxt) || lastNameTxt.length() > 20)
+                else if (TextUtils.isEmpty(lastNameTxt))
                 {
                     Toast.makeText(PatientForm.this, "Please enter last name", Toast.LENGTH_LONG).show();
                     lastName.setError("Name is required");
+                    lastName.requestFocus();
+                }
+                // Else if statement to check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
+                else if (lastNameTxt.length() > 20)
+                {
+                    Toast.makeText(PatientForm.this, "Character limit must be < 20", Toast.LENGTH_LONG).show();
+                    lastName.setError("Max Character limit required");
                     lastName.requestFocus();
                 }
                 // else if statement that uses LETTERS_PATTERN to check if the string follows the pattern
@@ -345,25 +370,37 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 30 characters, if > 30 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(patientAddTxt) || patientAddTxt.length() > 30)
+                else if (TextUtils.isEmpty(patientAddTxt))
                 {
                     Toast.makeText(PatientForm.this, "Address cannot be empty", Toast.LENGTH_LONG).show();
                     patientAdd.setError("Address is required");
                     patientAdd.requestFocus();
                 }
+                // Else if statement to check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
+                else if (patientAddTxt.length() > 30)
+                {
+                    Toast.makeText(PatientForm.this, "Character limit must be < 30", Toast.LENGTH_LONG).show();
+                    patientAdd.setError("Max Character limit required");
+                    patientAdd.requestFocus();
+                }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 20 characters, if > 20 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(patientCityTxt) || patientCityTxt.length() > 20)
+                else if (TextUtils.isEmpty(patientCityTxt))
                 {
                     Toast.makeText(PatientForm.this, "City cannot be empty", Toast.LENGTH_LONG).show();
                     patientCity.setError("City is required");
                     patientCity.requestFocus();
                 }
-                // else if statement that checks if the string follows the LETTERS_PATTERN,
+                // Else if statement to check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
+                else if (patientCityTxt.length() > 20)
+                {
+                    Toast.makeText(PatientForm.this, "Character limit must be < 20", Toast.LENGTH_LONG).show();
+                    patientCity.setError("Max Character limit required");
+                    patientCity.requestFocus();
+                }
+                    // else if statement that checks if the string follows the LETTERS_PATTERN,
                 // if it does not, then an error will be displayed
                 else if(!LETTERS_PATTERN.matcher(patientCityTxt).matches())
                 {
@@ -372,13 +409,19 @@ public class PatientForm extends AppCompatActivity
                     patientCity.requestFocus();
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
-                // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 20 characters, if > 20 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(patientStateTxt) || patientStateTxt.length() > 20)
+                // if it is empty, an error will be displayed
+                else if (TextUtils.isEmpty(patientStateTxt))
                 {
                     Toast.makeText(PatientForm.this, "State cannot be empty", Toast.LENGTH_LONG).show();
                     patientState.setError("State is required");
+                    patientState.requestFocus();
+                }
+                // Else if statement to check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
+                else if (patientStateTxt.length() > 20)
+                {
+                    Toast.makeText(PatientForm.this, "Character limit must be < 20", Toast.LENGTH_LONG).show();
+                    patientState.setError("Max Character limit required");
                     patientState.requestFocus();
                 }
                 // else if statement that checks if the string follows the LETTERS_PATTERN,
@@ -501,12 +544,18 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 30 characters, if > 30 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(patientInsuranceTxt) || patientInsuranceTxt.length() > 30)
+                else if (TextUtils.isEmpty(patientInsuranceTxt))
                 {
                     Toast.makeText(PatientForm.this, "Insurance must be filled", Toast.LENGTH_LONG).show();
                     patientInsurance.setError("Insurance is required");
+                    patientInsurance.requestFocus();
+                }
+                // Else if statement to check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
+                else if (patientInsuranceTxt.length() > 30)
+                {
+                    Toast.makeText(PatientForm.this, "Character limit must be < 30", Toast.LENGTH_LONG).show();
+                    patientInsurance.setError("Max Character limit required");
                     patientInsurance.requestFocus();
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
@@ -579,12 +628,18 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 20 characters, if > 20 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(prefLangTxt) || prefLangTxt.length() > 20)
+                else if (TextUtils.isEmpty(prefLangTxt))
                 {
                     Toast.makeText(PatientForm.this, "Language cannot be empty", Toast.LENGTH_LONG).show();
                     prefLang.setError("Language is required");
+                    prefLang.requestFocus();
+                }
+                // Else if statement to check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
+                else if (prefLangTxt.length() > 20)
+                {
+                    Toast.makeText(PatientForm.this, "Character limit must be < 20", Toast.LENGTH_LONG).show();
+                    prefLang.setError("Max character limit is required");
                     prefLang.requestFocus();
                 }
                 // else if statement that checks if the string follows the pattern within the block and
@@ -611,11 +666,17 @@ public class PatientForm extends AppCompatActivity
                     neededTranslator.setError("Input format is required");
                     neededTranslator.requestFocus();
                 }
+                // Else if statement to check if the string matches the MARITAL_PATTERN and if it does not,
+                // another error will be displayed
+                else if (!MARITAL_PATTERN.matcher(maritalTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this, "Must fill in marital status", Toast.LENGTH_LONG).show();
+                    maritalStatusPatient.setError("Valid marital status is required");
+                    maritalStatusPatient.requestFocus();
+                }
                 // if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string matches the MARITAL_PATTERN and if it does not,
-                // another error will be displayed
-                else if (!MARITAL_PATTERN.matcher(maritalTxt).matches() || TextUtils.isEmpty(maritalTxt))
+                else if (TextUtils.isEmpty(maritalTxt))
                 {
                     Toast.makeText(PatientForm.this, "Must fill in marital status", Toast.LENGTH_LONG).show();
                     maritalStatusPatient.setError("Valid marital status is required");
@@ -719,12 +780,18 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 30 characters, if > 30 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(occupationTxt) || occupationTxt.length() > 30)
+                else if (TextUtils.isEmpty(occupationTxt))
                 {
                     Toast.makeText(PatientForm.this, "Please fill occupation", Toast.LENGTH_LONG).show();
                     occupationPatient.setError("Occupation is required");
+                    occupationPatient.requestFocus();
+                }
+                // Else if statement to check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
+                else if (occupationTxt.length() > 30)
+                {
+                    Toast.makeText(PatientForm.this, "Character limit must be < 20", Toast.LENGTH_LONG).show();
+                    occupationPatient.setError("Max character limit required");
                     occupationPatient.requestFocus();
                 }
                 // else if statement that checks if the string follows the pattern within the block and
@@ -747,12 +814,18 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 30 characters, if > 30 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(emergencyNameTxt) || emergencyNameTxt.length() > 30)
+                else if (TextUtils.isEmpty(emergencyNameTxt))
                 {
                     Toast.makeText(PatientForm.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
                     emergencyContactName.setError("Contact name is required");
+                    emergencyContactName.requestFocus();
+                }
+                // Else if statement to check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
+                else if (emergencyNameTxt.length() > 30)
+                {
+                    Toast.makeText(PatientForm.this, "Name length cannot be > 30", Toast.LENGTH_LONG).show();
+                    emergencyContactName.setError("Max character limit required");
                     emergencyContactName.requestFocus();
                 }
                 // else if statement that checks if the string follows the pattern within the block and
@@ -765,12 +838,18 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 20 characters, if > 20 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(relationshipTxt) || relationshipTxt.length() > 20)
+                else if (TextUtils.isEmpty(relationshipTxt))
                 {
                     Toast.makeText(PatientForm.this, "Relationship cannot be empty", Toast.LENGTH_LONG).show();
                     relationshipToPatient.setError("Contact relationship is required");
+                    relationshipToPatient.requestFocus();
+                }
+                // Else if statement to  check if the string length is less than 20 characters, if > 20 then
+                // another error will be thrown
+                else if (relationshipTxt.length() > 20)
+                {
+                    Toast.makeText(PatientForm.this, "Cannot be longer than > 20 characters", Toast.LENGTH_LONG).show();
+                    relationshipToPatient.setError("Max character limit required");
                     relationshipToPatient.requestFocus();
                 }
                 // else if statement that checks if the string follows the pattern within the block and
@@ -817,12 +896,18 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 30 characters, if > 30 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(patientSignedText) || patientSignedText.length() > 30)
+                else if (TextUtils.isEmpty(patientSignedText))
                 {
                     Toast.makeText(PatientForm.this, "Name must be filled", Toast.LENGTH_LONG).show();
                     patientSigned.setError("Signed name is required");
+                    patientSigned.requestFocus();
+                }
+                // Else if statement to check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
+                else if (patientSignedText.length() > 30)
+                {
+                    Toast.makeText(PatientForm.this, "Name cannot be > 30 characters", Toast.LENGTH_LONG).show();
+                    patientSigned.setError("Character length limit is required");
                     patientSigned.requestFocus();
                 }
                 // else if statement that checks if the patient signed name matches the consent name,
@@ -835,12 +920,18 @@ public class PatientForm extends AppCompatActivity
                 }
                 // else if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string length is less than 30 characters, if > 30 then
-                // another error will be thrown
-                else if (TextUtils.isEmpty(patientSignatureText) || patientSignatureText.length() > 30)
+                else if (TextUtils.isEmpty(patientSignatureText))
                 {
                     Toast.makeText(PatientForm.this, "Signature must be filled", Toast.LENGTH_LONG).show();
                     patientSig.setError("Signature is required");
+                    patientSig.requestFocus();
+                }
+                // Else if statement to also check if the string length is less than 30 characters, if > 30 then
+                // another error will be thrown
+                else if (patientSignatureText.length() > 30)
+                {
+                    Toast.makeText(PatientForm.this, "Signature cannot be > 30 characters", Toast.LENGTH_LONG).show();
+                    patientSig.setError("Max character length is required");
                     patientSig.requestFocus();
                 }
                 // else if statement that checks if the patient signature name matches the signed name,
@@ -853,11 +944,17 @@ public class PatientForm extends AppCompatActivity
                 }
                 // if statement that uses TextUtils.isEmpty() to check if the string is empty,
                 // if it is empty, an error will be displayed.
-                // || operator to also check if the string matches the DATE_PATTERN and if it does not,
-                // another error will be displayed
-                else if (TextUtils.isEmpty(consentDateTxt) || !DATE_PATTERN.matcher(consentDateTxt).matches())
+                else if (TextUtils.isEmpty(consentDateTxt))
                 {
-                    Toast.makeText(PatientForm.this, "Date must be filled", Toast.LENGTH_LONG).show();
+                    Toast.makeText(PatientForm.this, "Date cannot empty", Toast.LENGTH_LONG).show();
+                    consentDateSign.setError("Date is required");
+                    consentDateSign.requestFocus();
+                }
+                // Else if statement to check if the string matches the DATE_PATTERN and if it does not,
+                // another error will be displayed
+                else if (!DATE_PATTERN.matcher(consentDateTxt).matches())
+                {
+                    Toast.makeText(PatientForm.this, "Date must be MM-DD-YYYY", Toast.LENGTH_LONG).show();
                     consentDateSign.setError("Date format is required");
                     consentDateSign.requestFocus();
                 }

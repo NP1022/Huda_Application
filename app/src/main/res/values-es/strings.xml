@@ -15,7 +15,7 @@
     <string name="email">Ingrese el Correo Electrónico</string>
     <string name="Login">Iniciar Sesión</string>
     <string name="forgotpassword">Olvidó Su Contraseña?</string>
-    <string name="dontAccount">¿No tienes una cuenta?</string>
+    <string name="dontAccount">¿No tienes una cuenta? <b>Registro</b></string>
     <string name="alreadyAccount">¿Ya tienes una cuenta?<b>Acceso</b></string>
     <string name="register">Registro</string>
     <string name="language">Español</string>
@@ -49,8 +49,8 @@
     <string name="VisionNewLogin">Visión</string>
     <string name="DentalNewLogin">Dental</string>
     <string name="SpecialityNewLogin">Especialidad</string>
-    <string name="HaveAnAccount">¿Tener una cuenta?</string>
-    <string name="DontHaveAnAccount">¿No tienes una cuenta?</string>
+    <string name="HaveAnAccount">¿Tener una cuenta? <b>Iniciar Sesión</b></string>
+    <string name="DontHaveAnAccount">¿No tienes una cuenta? <b>Registro</b></string>
     <string name="SignUp">Inscribirse</string>
     <string name="PrimaryCare">Atención Primaria</string>
     <string name="MentalCare">Cuidado Mental</string>
@@ -180,11 +180,11 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name = "PrimaryServicesHeader">SERVICIOS PRIMARIOS</string>
     <string name="PrimaryCarePar1">Los proveedores de atención primaria suelen ser la primera línea de contacto para los pacientes; tratar problemas generales de salud, brindar educación, medicamentos y referencias especializadas según sea necesario.</string>
     <string name = "HealthAssessments">Evaluaciones de salud</string>
-    <string name = "IllnessManagement">Manejo de enfermedades agudas y crónicas</string>
+    <string name = "IllnessManagement">Manejo de enfermedades agudas</string>
     <string name = "LabServices">Servicios de laboratorio</string>
     <string name = "NoCostPharm">Farmacia Sin Costo</string>
-    <string name = "DiabetesScreening">Detección y tratamiento de la diabetes</string>
-    <string name = "CholBP">Exámenes de colesterol y presión arterial</string>
+    <string name = "DiabetesScreening">Tratamiento de la diabetes</string>
+    <string name = "CholBP">Exámenes de colesterol</string>
     <string name = "HealthEd">Recursos y educación para la salud</string>
     <string name ="servicesInclude">LOS SERVICIOS INCLUYEN</string>
 
@@ -200,9 +200,9 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <!--    Vision Care Page-->
     <string name = "VisionCareHeader">CUIDADO DE LA VISTA</string>
     <string name = "VisionCarePar1">Los exámenes de la vista son un método eficaz para identificar a las personas con discapacidad visual o afecciones oculares que probablemente provoquen la pérdida de la visión.  Realizamos exámenes internos y proporcionamos anteojos sin costo y remisiones a oftalmólogos locales de bajo costo según sea necesario.</string>
-    <string name ="Glaucoma">Exámenes de detección de glaucoma</string>
+    <string name ="Glaucoma">Exámenes de glaucoma</string>
     <string name ="Cataract">Exámenes de cataratas</string>
-    <string name ="Macular">Exámenes de detección de degeneración macular</string>
+    <string name ="Macular">Exámenes de degeneración macular</string>
     <string name ="EyeWear">Gafas GRATIS</string>
 
     <!--    Mental Health Page-->

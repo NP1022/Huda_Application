@@ -15,7 +15,7 @@
     <string name="email">Entrez le-mail</string>
     <string name="Login">Connexion</string>
     <string name="forgotpassword">Mot de passe oublié?</string>
-    <string name="dontAccount">Vous n\'avez pas de compte ? S\'inscrire</string>
+    <string name="dontAccount">Vous n\'avez pas de compte ? <b>S\'inscrire</b></string>
     <string name="alreadyAccount">Vous avez déjà un compte? Connexion</string>
     <string name="register">Sinscrire</string>
     <string name="language">Français</string>
@@ -50,7 +50,7 @@
     <string name="VisionNewLogin">Vision</string>
     <string name="DentalNewLogin">Dentaire</string>
     <string name="SpecialityNewLogin">Spécialité</string>
-    <string name="HaveAnAccount">Avoir un compte?</string>
+    <string name="HaveAnAccount">Avoir un compte? <b>Connexion</b></string>
     <string name="DontHaveAnAccount">Vous n\'avez pas de compte?</string>
     <string name="SignUp">S\'inscrire?</string>
     <string name="PrimaryCare">Premiers Soins</string>
@@ -183,11 +183,11 @@ Règlement sur la confidentialité et reçu une copie de l\'avis de confidential
     <string name = "PrimaryServicesHeader">SERVICES PRIMAIRES</string>
     <string name="PrimaryCarePar1">Les prestataires de soins primaires sont généralement la première ligne de contact pour les patients ; traiter les problèmes de santé généraux, fournir une éducation, des médicaments et des références spécialisées au besoin.</string>
     <string name = "HealthAssessments">Bilans de Santé</string>
-    <string name = "IllnessManagement">Gestion des maladies Aiguës et Chroniques</string>
+    <string name = "IllnessManagement">Gestion des maladies</string>
     <string name = "LabServices">Services de laboratoire</string>
     <string name = "NoCostPharm">Pharmacie Sans Frais</string>
-    <string name = "DiabetesScreening">Dépistage et Traitements du Diabète</string>
-    <string name = "CholBP">Dépistage du Cholestérol et de la Tension Artérielle</string>
+    <string name = "DiabetesScreening">Traitements du Diabète</string>
+    <string name = "CholBP">Dépistage du Cholestérol</string>
     <string name = "HealthEd">Éducation Nutritionnelle</string>
     <string name ="servicesInclude">LES SERVICES COMPRENNENT</string>
 

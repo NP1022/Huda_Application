@@ -996,12 +996,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:gravity="center"
-            android:text="voluntarily accept treatment/counseling as recommended and
-explained by the HUDA staff. I understand that I am free to withdraw my consent and discontinue treatment at any time.
-In addition, I have been informed of my rights to refuse to participate in research activities. I understand that I have rights
-as a recipient of free services provided by the HUDA Clinic. I have been advised on the HUDA Clinic’s NO CALL NO SHOW
-Policy regarding primary care and specialty services and agree to follow it. Further, I have been advised of the Federal
-Confidentiality Regulation and been given a copy of the Confidentiality Notice to review."
+            android:text="@string/PatientConsent"
 
             android:textColor="#5A5959"
             android:textSize="20dp"

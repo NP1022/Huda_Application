@@ -43,8 +43,18 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Properties;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 public class ApptRequest extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
 
@@ -58,6 +68,11 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
     private String selectedTime = "";                                    // Two of the variables are the available time list for the patient and the selected time that is used
     private List<Time> availableTimes;                                  // Appointment request variables that will store the date and the required information
                                                                         // for the appointment that is being requested
+
+
+    private String smtp = "mail.smtp.";
+    private String sender_email = "appclinichuda@gmail.com";
+    private String sender_password = "ldjtuhzvtetjofld";
 
     private TextView date;
     private TextView textView;
@@ -179,7 +194,14 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             UserManager.getInstance().getCurrentUser().addAppointment(appointment);
             AppointmentManager.createAppointment(date, selectedTime, UserManager.getInstance().getCurrentUser().getUserId());       // added the appointment to the current user and pushed the object to the database
             FirebaseClient.updateUser(UserManager.getInstance().getCurrentUser());
-            Intent appointmentsIntent = new Intent(getApplicationContext(), Appointments.class);
+
+                try {
+                    sendemail(date,selectedTime);
+                } catch (MessagingException e) {
+                    e.printStackTrace();
+                }
+
+                Intent appointmentsIntent = new Intent(getApplicationContext(), Appointments.class);
             startActivity(appointmentsIntent);}
             else
                 Toast.makeText(ApptRequest.this,"Appointments can't be made for previous days",Toast.LENGTH_LONG).show();
@@ -257,5 +279,85 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 
             }
         });
+    }
+
+    private  void sendemail(String Date, String Time ) throws MessagingException {
+        // Sending an email function for the applciation which uses the set email that the clinic
+        // uses also it takes the message of the email with the reciever email which is taken from the user
+        final String sender_username = "appclinichuda@gmail.com";                       // Send email function which will email the clinic that the patient is checking into an appointment
+
+
+        String Fullname_text = UserManager.getInstance().getCurrentUser().getFirstName() + " " + UserManager.getInstance().getCurrentUser().getLastName();
+        String birthday_text = UserManager.getInstance().getCurrentUser().getBirthday();                    // Used variables to get the current user information
+        String email_text = UserManager.getInstance().getCurrentUser().getEmailAddress();
+
+
+        InternetAddress s_sender = new InternetAddress(sender_email);
+        InternetAddress reciever = new InternetAddress("ali.bilal.said@gmail.com");                 // Message that is being sent to the clinic
+        final String message_text = "Dear Admin, " + ",\n\n"+ "Patient: " + Fullname_text + " Birthday: " + birthday_text + " is Requesting an Appointment"+".\n\n" + "Appointment Date: " + Date+ "\nAppointment Time: " + Time+"\n\nThank You" ;
+        Properties settings = Settings(smtp);
+
+        // Used properties to send the email to the clinic
+
+
+        Session pass_auth = Session.getInstance(settings, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+
+
+
+
+                return new PasswordAuthentication(sender_email, sender_password);
+
+
+
+            }
+        });
+
+        Message f_email = sendmimmessage(pass_auth, s_sender , reciever, "order", message_text);
+
+        Transport.send(f_email);
+
+
+
+    }
+
+    private Properties Settings(String smtp) {
+        String smtp_gmail ="smtp.gmail.com";
+
+        Properties settings = new Properties();
+
+        // settings for email sending with the port being used
+        settings.put(smtp+"auth", "true");
+
+        settings.put(smtp+"starttls.enable", "true");
+
+        settings.put(smtp+"host", smtp_gmail);
+        settings.put(smtp+"port", "587");
+        return settings;
+
+    }
+
+    private static Message sendmimmessage(Session f_email, InternetAddress s_sender, InternetAddress reciever, String order, String message_text) throws MessagingException {
+        Message mimmessage = new MimeMessage(f_email);
+
+
+
+
+        mimmessage.setFrom(s_sender);
+
+        // mim message function to send the function used gmail to send the emails the function will take the text of the
+        // message and also the sender email with the session that the authentication happens with
+        mimmessage.setSentDate(new Date());
+
+        mimmessage.setRecipient(Message.RecipientType.TO,  reciever);
+
+        mimmessage.setText(message_text);
+
+        mimmessage.setSubject("Patient Appointment Request");
+
+
+        return mimmessage;
+
     }
 }

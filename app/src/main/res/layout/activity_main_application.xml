@@ -20,7 +20,6 @@
         app:layout_constraintStart_toStartOf="@id/buttonLeft"
         app:layout_constraintTop_toBottomOf="@+id/partnersTop"
         app:layout_constraintBottom_toTopOf="@id/contactUsTop"/>
-
     <ImageView
         android:id="@+id/hudaLogo3"
         android:layout_width="0dp"

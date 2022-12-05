@@ -117,14 +117,15 @@
         app:layout_constraintTop_toBottomOf="@+id/DentalHeader" />
 
     <TextView
-        android:id="@+id/DoNotHaveAnAccount"
+        android:id="@+id/SignUpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/DontHaveAnAccount"
+        android:text="@string/dontAccount"
         android:textAlignment="center"
         android:textColor="@color/hudaBlue"
         android:textSize="16sp"
         android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@id/vg6"
         app:layout_constraintStart_toStartOf="@id/vg5"
         app:layout_constraintTop_toTopOf="@id/guideline3" />
 
@@ -132,42 +133,14 @@
         android:id="@+id/LoginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="@string/Login"
-        android:textAlignment="center"
-        android:textColor="@color/hudaBlue"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/HaveAnAccount"
-        app:layout_constraintTop_toTopOf="@id/guideline4"
-        app:layout_constraintEnd_toEndOf="@id/vg4"
-        tools:visibility="visible" />
-
-    <TextView
-        android:id="@+id/HaveAnAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/HaveAnAccount"
         android:textAlignment="center"
         android:textColor="@color/hudaBlue"
         android:textSize="16sp"
         android:textStyle="normal"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@id/vg3" />
-
-    <TextView
-        android:id="@+id/SignUpButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="@string/SignUp"
-        android:textAlignment="center"
-        android:textColor="@color/hudaBlue"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/DoNotHaveAnAccount"
-        app:layout_constraintTop_toTopOf="@id/guideline3"
-        app:layout_constraintEnd_toEndOf="@id/vg6"
+        app:layout_constraintEnd_toEndOf="@id/vg4"
+        app:layout_constraintStart_toStartOf="@id/vg3"
+        app:layout_constraintTop_toTopOf="@id/guideline4"
         tools:visibility="visible" />
 
     <ImageView

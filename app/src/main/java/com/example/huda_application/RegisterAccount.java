@@ -276,7 +276,7 @@ public class RegisterAccount extends AppCompatActivity implements View.OnClickLi
                                             Toast.makeText(RegisterAccount.this,"Please verify your email",Toast.LENGTH_LONG).show(); // toast meessage to user
 
                                             // Sends user to the Login page after the verification email is successfully sent
-                                            startActivity(new Intent(RegisterAccount.this,MainActivity.class));
+                                          startActivity(new Intent(RegisterAccount.this,NewOrReturningUser.class));
 
 
                                         }).addOnFailureListener(er->  // onFailure

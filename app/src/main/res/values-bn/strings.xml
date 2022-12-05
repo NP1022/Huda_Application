@@ -15,7 +15,7 @@
     <string name="email">ইমেইল প্রদান করুন</string>
     <string name="Login">প্রবেশ করুন</string>
     <string name="forgotpassword">পাসওয়ার্ড ভুলে গেছেন</string>
-    <string name="dontAccount">একটি অ্যাকাউন্ট নেই? নিবন্ধন করুন</string>
+    <string name="dontAccount">একটি অ্যাকাউন্ট নেই? <b>নিবন্ধন করুন</b></string>
     <string name="alreadyAccount">ইতিমধ্যে একটি সদস্যপদ আছে? প্রবেশ করুন</string>
     <string name="register">নিবন্ধন</string>
     <string name="language">Bangla</string>
@@ -49,7 +49,7 @@
     <string name="VisionNewLogin">দৃষ্টি</string>
     <string name="DentalNewLogin">ডেন্টাল</string>
     <string name="SpecialityNewLogin">বিশেষত্ব</string>
-    <string name="HaveAnAccount">একাউন্ট আছে?</string>
+    <string name="HaveAnAccount">একাউন্ট আছে? <b>প্রবেশ করুন</b></string>
     <string name="DontHaveAnAccount">আছে কি না?</string>
     <string name="SignUp">আছে কি না?</string>
     <string name="PrimaryCare">প্রাথমিক যত্ন</string>
