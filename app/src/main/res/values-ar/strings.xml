@@ -364,4 +364,7 @@
     <string name="userDeleteInput">أدخل نعم أو لا</string>
     <string name="userConfirmDelete">أكد نعم أو لا</string>
 
+    <!--profile page-->
+    <string name="welcomeUser">أهلا وسهلا، </string>
+
 </resources>

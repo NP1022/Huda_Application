@@ -361,7 +361,7 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="update">Update</string>
 
     <!-- update Password-->
-    <string name="updatePass">UPDATE PASSWORD</string>
+    <string name="updatePass">CHANGE PASSWORD</string>
     <string name="enterNewPassTitle">Enter New Password</string>
 
     <!--delete user account-->
@@ -369,6 +369,9 @@ Confidentiality Regulation and been given a copy of the Confidentiality Notice t
     <string name="deleteUserHeader2">Confirm Account Deletion</string>
     <string name="userDeleteInput">Enter Yes or No</string>
     <string name="userConfirmDelete">Confirm Yes or No</string>
+
+    <!--profile page-->
+    <string name="welcomeUser">Welcome, </string>
 
     <!--    <string name="menu_update_password">Update Password</string>-->
     <!--    <string name="menu_messages">Messages</string>-->

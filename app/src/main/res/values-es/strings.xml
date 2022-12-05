@@ -362,4 +362,7 @@ Reglamento de Confidencialidad y se le ha entregado una copia del Aviso de Confi
     <string name="userDeleteInput">Ingrese Sí o No</string>
     <string name="userConfirmDelete">Confirmar Sí o No</string>
 
+    <!--profile page-->
+    <string name="welcomeUser">¡Bienvenido, </string>
+
 </resources>

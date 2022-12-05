@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="@id/vg3"
         app:layout_constraintTop_toBottomOf="@+id/hg2" />
 
-    <Button
+    <TextView
         android:id="@+id/dateText"
         android:layout_width="0dp"
         android:layout_height="55dp"
@@ -107,20 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dateText"
         />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/checkin"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/buttonstyle"
-        android:text="request "
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/vg4"
-        app:layout_constraintTop_toBottomOf="@id/email_checkin"
-        app:layout_constraintStart_toStartOf="@id/vg3" />
-
-    <ImageView
+        <ImageView
         android:id="@+id/hudaLogo"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -132,55 +119,6 @@
         app:srcCompat="@drawable/huda_logo" />
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <TextView
-            android:id="@+id/charCount"
-            android:layout_width="23dp"
-            android:layout_height="19dp"
-            android:layout_marginStart="310dp"
-            android:layout_marginTop="490dp"
-            android:text=""
-            android:textAlignment="textEnd"
-            android:textColor="#686868"
-            app:layout_constraintEnd_toStartOf="@+id/totalCharCount"
-            app:layout_constraintTop_toBottomOf="@+id/email_checkin" />
-
-        <TextView
-            android:id="@+id/totalCharCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="490dp"
-            android:text=""
-            android:textColor="#686868"
-            app:layout_constraintEnd_toEndOf="@+id/email_checkin"
-            app:layout_constraintTop_toBottomOf="@+id/email_checkin" />
-
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/email_checkin"
-        android:layout_width="0dp"
-        android:layout_height="130dp"
-        android:gravity="left"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/edittextstyle"
-        android:ems="10"
-        android:hint="Reason (max 100 char.)"
-        android:maxLength="100"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="#686868"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/vg4"
-        app:layout_constraintStart_toStartOf="@id/vg3"
-        app:layout_constraintTop_toBottomOf="@+id/appointmentTime" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -224,6 +162,61 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.175" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="413dp"
+            android:layout_height="163dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appointmentTime">
+
+            <EditText
+                android:id="@+id/email_checkin"
+                android:layout_width="364dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/edittextstyle"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Reason (max 100 char.)"
+                android:maxLength="100"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="#686868"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/vg4"
+                app:layout_constraintStart_toStartOf="@id/vg3"
+                app:layout_constraintTop_toBottomOf="@+id/appointmentTime" />
+
+            <TextView
+                android:id="@+id/charCount"
+                android:layout_width="21dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="350dp"
+                android:layout_marginTop="-50dp"
+                android:text="0"
+                android:textColor="#686868"
+                app:layout_constraintEnd_toEndOf="@+id/email_checkin"
+                app:layout_constraintTop_toTopOf="@+id/email_checkin" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checkin"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="41dp"
+            android:background="@drawable/buttonstyle"
+            android:text="request "
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
