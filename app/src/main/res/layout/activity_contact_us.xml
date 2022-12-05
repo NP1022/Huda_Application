@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:fillViewport="true"
-    tools:context=".Contact_Us">
+    tools:context=".Contact_Us"
+    android:layoutDirection="ltr">
 
     <TextView
         android:id="@+id/ContactUsHeader"
