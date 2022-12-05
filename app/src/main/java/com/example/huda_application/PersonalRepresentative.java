@@ -134,12 +134,18 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
 
             // If statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            // || operator to also check if the string length is less than 30 characters, if > 30 then
-            // another error will be thrown
-            if(TextUtils.isEmpty(patientSignedTxt4) || patientSignedTxt4.length() > 30)
+            if(TextUtils.isEmpty(patientSignedTxt4))
             {
                 Toast.makeText(PersonalRepresentative.this, "Signed name cannot be empty", Toast.LENGTH_LONG).show();
                 patientSigned4.setError("Signed name is required");
+                patientSigned4.requestFocus();
+            }
+            // Else if statement check if the string length is less than 30 characters, if > 30 then
+            // another error will be thrown
+            else if(patientSignedTxt4.length() > 30)
+            {
+                Toast.makeText(PersonalRepresentative.this, "Name cannot be > 30 characters", Toast.LENGTH_LONG).show();
+                patientSigned4.setError("Character limit reached");
                 patientSigned4.requestFocus();
             }
             // Else if statement to check if the string matches the pattern within the else if() and if it does not,
@@ -168,22 +174,34 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             }
             // If statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            // || operator to also check if the string length is less than 50 characters, if > 50 then
-            // another error will be thrown
-            else if(TextUtils.isEmpty(patientHomeAddTxt4) || patientHomeAddTxt4.length() > 50)
+            else if(TextUtils.isEmpty(patientHomeAddTxt4))
             {
                 Toast.makeText(PersonalRepresentative.this, "Home address cannot be empty", Toast.LENGTH_LONG).show();
                 patientHomeAdd.setError("Address is required");
                 patientHomeAdd.requestFocus();
             }
+            // Else if statement check if the string length is less than 40 characters, if > 40 then
+            // another error will be thrown
+            else if(patientHomeAddTxt4.length() > 40)
+            {
+                Toast.makeText(PersonalRepresentative.this, "Text cannot be > 40 characters", Toast.LENGTH_LONG).show();
+                patientHomeAdd.setError("Max character limit reached");
+                patientHomeAdd.requestFocus();
+            }
             // If statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            // || operator to also check if the string length is less than 20 characters, if > 20 then
-            // another error will be thrown
-            else if(TextUtils.isEmpty(patientCityTxt4) || patientCityTxt4.length() > 20)
+            else if(TextUtils.isEmpty(patientCityTxt4))
             {
                 Toast.makeText(PersonalRepresentative.this, "City cannot be empty", Toast.LENGTH_LONG).show();
                 patientCity.setError("City is required");
+                patientCity.requestFocus();
+            }
+            // Else if statement to check if the string length is less than 20 characters, if > 20 then
+            // another error will be thrown
+            else if(patientCityTxt4.length() > 20)
+            {
+                Toast.makeText(PersonalRepresentative.this, "Text cannot be > 20 characters", Toast.LENGTH_LONG).show();
+                patientCity.setError("Max character limit reached");
                 patientCity.requestFocus();
             }
             // Else if statement to check if the string matches the pattern within the else if() and if it does not,
@@ -196,12 +214,18 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             }
             // If statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            // || operator to also check if the string length is less than 20 characters, if > 20 then
-            // another error will be thrown
-            else if(TextUtils.isEmpty(PatientStateTxt4) || PatientStateTxt4.length() > 20)
+            else if(TextUtils.isEmpty(PatientStateTxt4))
             {
                 Toast.makeText(PersonalRepresentative.this, "State cannot be empty", Toast.LENGTH_LONG).show();
                 patientState.setError("State is required");
+                patientState.requestFocus();
+            }
+            // Else if statement check if the string length is less than 20 characters, if > 20 then
+            // another error will be thrown
+            else if(PatientStateTxt4.length() > 20)
+            {
+                Toast.makeText(PersonalRepresentative.this, "Text cannot be > 20 characters", Toast.LENGTH_LONG).show();
+                patientState.setError("Max character limit reached");
                 patientState.requestFocus();
             }
             // Else if statement to check if the string matches the pattern within the else if() and if it does not,
@@ -246,12 +270,18 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             }
             // If statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            // || operator to also check if the string length is less than 20 characters, if > 20 then
-            // another error will be thrown
-            else if(TextUtils.isEmpty(personRep1Txt) || personRep1Txt.length() > 20) // First Representative
+            else if(TextUtils.isEmpty(personRep1Txt)) // First Representative
             {
                 Toast.makeText(PersonalRepresentative.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
                 personalRep1.setError("Name is required");
+                personalRep1.requestFocus();
+            }
+            // ELse if statement to check if the string length is less than 20 characters, if > 20 then
+            // another error will be thrown
+            else if(personRep1Txt.length() > 20) // First Representative
+            {
+                Toast.makeText(PersonalRepresentative.this, "Name cannot be > 20 characters", Toast.LENGTH_LONG).show();
+                personalRep1.setError("Max character limit reached");
                 personalRep1.requestFocus();
             }
             // Else if statement to check if the string matches the pattern within the else if() and if it does not,
@@ -298,12 +328,18 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             }
             // If statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            // || operator to also check if the string length is less than 20 characters, if > 20 then
-            // another error will be thrown
-            else if(TextUtils.isEmpty(personRep2Txt) || personRep2Txt.length() > 20) // 2nd Representative
+            else if(TextUtils.isEmpty(personRep2Txt)) // 2nd Representative
             {
                 Toast.makeText(PersonalRepresentative.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
                 personalRep2.setError("Name is required");
+                personalRep2.requestFocus();
+            }
+            // Else if statement to check if the string length is less than 20 characters, if > 20 then
+            // another error will be thrown
+            else if(personRep2Txt.length() > 20) // 2nd Representative
+            {
+                Toast.makeText(PersonalRepresentative.this, "Name cannot be > 20 characters", Toast.LENGTH_LONG).show();
+                personalRep2.setError("Max character limit reached");
                 personalRep2.requestFocus();
             }
             // Else if statement to check if the string matches the pattern within the else if() and if it does not,
@@ -350,12 +386,18 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             }
             // If statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            // || operator to also check if the string length is less than 20 characters, if > 20 then
-            // another error will be thrown
-            else if(TextUtils.isEmpty(personRep3Txt) || personRep3Txt.length() > 20) // 3rd Representative
+            else if(TextUtils.isEmpty(personRep3Txt)) // 3rd Representative
             {
                 Toast.makeText(PersonalRepresentative.this, "Name cannot be empty", Toast.LENGTH_LONG).show();
                 personalRep3.setError("Name is required");
+                personalRep3.requestFocus();
+            }
+            // Else if statement to check if the string length is less than 20 characters, if > 20 then
+            // another error will be thrown
+            else if(personRep3Txt.length() > 20) // 3rd Representative
+            {
+                Toast.makeText(PersonalRepresentative.this, "Name cannot be > 20 characters", Toast.LENGTH_LONG).show();
+                personalRep3.setError("Max character limit reached");
                 personalRep3.requestFocus();
             }
             // Else if statement to check if the string matches the pattern within the else if() and if it does not,
@@ -402,7 +444,15 @@ public class PersonalRepresentative extends AppCompatActivity implements View.On
             }
             // If statement that uses TextUtils.isEmpty() to check if the string is empty,
             // if it is empty, an error will be displayed.
-            else if(TextUtils.isEmpty(patientSig4Txt) || patientSig4Txt.length() > 30)
+            else if(TextUtils.isEmpty(patientSig4Txt))
+            {
+                Toast.makeText(PersonalRepresentative.this, "Signature name cannot be empty", Toast.LENGTH_LONG).show();
+                patientSigned4.setError("Signature is required");
+                patientSigned4.requestFocus();
+            }
+            // Else if statement to check if the string length is less than 20 characters, if > 20 then
+            // another error will be thrown.
+            else if(patientSig4Txt.length() > 30)
             {
                 Toast.makeText(PersonalRepresentative.this, "Signature name cannot be empty", Toast.LENGTH_LONG).show();
                 patientSigned4.setError("Signature is required");
