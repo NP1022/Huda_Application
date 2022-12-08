@@ -17,6 +17,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.huda_application.appointment.AppointmentManager;
 import com.example.huda_application.firebase.FirebaseClient;
 import com.example.huda_application.user.Appointment;
 import com.example.huda_application.user.AppointmentStatus;
@@ -209,7 +210,7 @@ public class UserAppointment extends AppCompatActivity implements View.OnClickLi
             {
                 user.getAppointments().get(position).setStatus(AppointmentStatus.DENIED);
                 SimpleDateFormat date2 = new SimpleDateFormat("MM-d-yyyy HH:mm z");
-
+                AppointmentManager.deleteAppointment(appointment.getDate(),appointment.getTime());
                 String currentDateAndTime2 = date2.format(new Date());                                  // If the Admin declines the appointment the current time
                                                                                                         // for the appointment will be stored to show the patient that it was denied
                 user.getAppointments().get(position).setAdminActionTime(currentDateAndTime2);

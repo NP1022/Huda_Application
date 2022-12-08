@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.List;
 
 public class CustomizeTime extends AppCompatActivity implements DatePickerDialog.OnDateSetListener , View.OnClickListener{
-    private Button dateButton;
+    private TextView dateButton;
     private TextView textView;                                      // Class Used to customize the operation times for the clinic which is shown for the patients
     private TextView  submit;                                       // The first input will be the the date that that operation time will change
     private EditText amount;                                        // The operation time will be pushed to the database
@@ -100,10 +100,19 @@ public class CustomizeTime extends AppCompatActivity implements DatePickerDialog
         if(v.getId() == R.id.modify){
             try {
                 float hours = Float.parseFloat(amount.getText().toString());
-                FirebaseDatabase.getInstance().getReference("ClinicHours").child(textView.getText().toString()).setValue(hours); // Pushes the clinic hour for that specific hour of the day
-                Toast.makeText(CustomizeTime.this,"Hours Of Operation have been changed. ",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this , Adminpanel.class));
 
+                if (hours < 0  || hours > 14){
+
+                    Toast.makeText(CustomizeTime.this, "Hours Of Operation have to be between 1 and 14. ", Toast.LENGTH_SHORT).show();
+
+
+                }
+
+               else {
+                    FirebaseDatabase.getInstance().getReference("ClinicHours").child(textView.getText().toString()).setValue(hours); // Pushes the clinic hour for that specific hour of the day
+                    Toast.makeText(CustomizeTime.this, "Hours Of Operation have been changed. ", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(this, Adminpanel.class));
+                }
             }catch (NumberFormatException e) {
                 //TODO Show dialog telling admins that the entered hours is invalid
             }

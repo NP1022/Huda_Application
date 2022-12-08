@@ -29,11 +29,11 @@ public class AppointmentManager {
 
     public void createTimesOpen(Float hours) {
         if (hours == null) {
-            hours = 5f;
+            hours = 5.5f;
         }                                                                          // Function takes in the operation our as the input and output all the available appointment times for that day
 
 
-        for (float i = 0.5f; i < hours + 1f; i += 0.5f) {
+        for (float i = 0.5f; i < hours + 0.5f; i += 0.5f) {
             int hour = 8 + (int) i;                                                // For loop will take the hours of operation and created the availabletimes list
             String minute = i != (int) i ? "30" : "00";
             String timeStr = String.format(TIME_PATTERN, hour < 10 ? "0" + hour : hour, minute);

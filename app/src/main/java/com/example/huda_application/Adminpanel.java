@@ -11,8 +11,8 @@ import com.example.huda_application.user.UserManager;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Adminpanel extends AppCompatActivity implements View.OnClickListener {
-    private TextView Appointments, Messagepage, signout, AppointmentManager , AppointmentManager2;  // Variables definition for the textviews on the admin panel page
-    private FirebaseAuth mAuth;
+    private TextView Appointments, Messagepage, signout, AppointmentManager , AppointmentManager2;
+    private FirebaseAuth mAuth;// Variables definition for the textviews on the admin panel page
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

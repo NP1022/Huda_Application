@@ -40,7 +40,7 @@ import java.util.stream.Collectors;
 
 public class AvailableAppointments extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, View.OnClickListener {
 
-    private Button dateButton;                                          // Available appointment class used to show the available appointment times for the Admin to allow them
+    private TextView dateButton, noitem;                                          // Available appointment class used to show the available appointment times for the Admin to allow them
     private AppointmentManager appointmentManager;                      // to remove specific appointment times for the patients of the application
     private List<Time> availableTimes = new ArrayList<>();              // The removed times will be stored in the database and filtered when displayed for the patient
     private PatientViewAdapter viewAdapter;
@@ -54,6 +54,8 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_appointments);
 
+
+        noitem = findViewById(R.id.loginPara9);
         recyclerView = findViewById(R.id.usersView6);                                               // Setting the recycler view to show all the appointment times for the admin to remove from
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         backbutton = findViewById(R.id.backButton_7);                                               //back button and the date button
@@ -202,9 +204,18 @@ public class AvailableAppointments extends AppCompatActivity implements DatePick
                         }
 
                         availableTimes = appointmentManager.getAvailableTimes();
+                        if (availableTimes.size() == 0) {
+                            noitem.setVisibility(View.VISIBLE);
 
-                        viewAdapter = new PatientViewAdapter(AvailableAppointments.this, availableTimes);
-                        recyclerView.setAdapter(viewAdapter);
+                        }
+                        else noitem.setVisibility(View.GONE);
+
+                            viewAdapter = new PatientViewAdapter(AvailableAppointments.this, availableTimes);
+                            recyclerView.setAdapter(viewAdapter);
+
+
+
+
                     }
 
                     @Override

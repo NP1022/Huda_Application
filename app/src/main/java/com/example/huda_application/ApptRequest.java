@@ -184,6 +184,13 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             boolean temp = true;
             String date = dateButton.getText().toString().replace("Date: ", "");
             String currentDate = new SimpleDateFormat("MM-d-yyyy", Locale.getDefault()).format(new Date());
+            String Reason = reason.getText().toString();
+            if (Reason.length() < 15){
+
+                Toast.makeText(ApptRequest.this,"Reason has to be 15 characters",Toast.LENGTH_LONG).show();
+
+            }else{
+
             SimpleDateFormat sdf = new SimpleDateFormat("MM-d-yyyy");
             try {                                                                   // parse the current date that picked from the date button
                 temp = sdf.parse(currentDate).before(sdf.parse(date));
@@ -213,7 +220,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
             startActivity(appointmentsIntent);}
             else
                 Toast.makeText(ApptRequest.this,"Appointments can't be made for previous days",Toast.LENGTH_LONG).show();
-        }
+        }}
 
         else if (view.getId() == R.id.backButton)
         {
@@ -302,7 +309,7 @@ public class ApptRequest extends AppCompatActivity implements View.OnClickListen
 
         InternetAddress s_sender = new InternetAddress(sender_email);
         InternetAddress reciever = new InternetAddress("ali.bilal.said@gmail.com");                 // Message that is being sent to the clinic
-        final String message_text = "Dear Admin, " + ",\n\n"+ "Patient: " + Fullname_text + " Birthday: " + birthday_text + " is Requesting an Appointment"+".\n\n" + "Appointment Date: " + Date+ "\nAppointment Time: " + Time+"\n\nThank You" ;
+        final String message_text = "Dear Admin, " + "\n\n"+ "Patient: " + Fullname_text + " Birthday: " + birthday_text + " is Requesting an Appointment"+".\n\n" + "Appointment Date: " + Date+ "\nAppointment Time: " + Time+"\n\nThank You" ;
         Properties settings = Settings(smtp);
 
         // Used properties to send the email to the clinic

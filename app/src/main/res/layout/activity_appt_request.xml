@@ -83,7 +83,7 @@
             android:inputType="text"
             android:padding="10dp"
             android:textColor="@color/black"
-            android:textColorHint="#707070"
+            android:textColorHint="#686868"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@id/vg4"
             app:layout_constraintStart_toStartOf="@id/vg3"

@@ -38,7 +38,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icons8_back_arrow_100" />
 
-    <Button
+    <TextView
+        android:id="@+id/loginPara9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="               No Appointment Times"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/dateText2"
+        tools:ignore="MissingConstraints"
+         />
+
+    <TextView
         android:id="@+id/dateText2"
         android:layout_width="320dp"
         android:layout_height="55dp"
@@ -50,7 +63,7 @@
         android:inputType="text"
         android:padding="10dp"
         android:textColor="#000000"
-        android:textColorHint="#707070"
+        android:textColorHint="#686868"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
