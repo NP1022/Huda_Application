@@ -20,7 +20,7 @@
 
         <EditText
             android:id="@+id/personalRepPatientName"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:background="@drawable/edittextstyle"
@@ -40,7 +40,7 @@
 
         <EditText
             android:id="@+id/personalRepDOB"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -61,7 +61,7 @@
 
         <EditText
             android:id="@+id/personalRepPatientAddress"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -82,7 +82,7 @@
 
         <EditText
             android:id="@+id/personalRepPatientCity"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -102,7 +102,7 @@
 
         <EditText
             android:id="@+id/personalRepPatientState"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -122,7 +122,7 @@
 
         <EditText
             android:id="@+id/personalRepPatientZip"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -141,7 +141,7 @@
 
         <EditText
             android:id="@+id/personalRepPatientHome"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -160,7 +160,7 @@
 
         <EditText
             android:id="@+id/personalRep1"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="88dp"
             android:background="@drawable/edittextstyle"
@@ -178,7 +178,7 @@
 
         <EditText
             android:id="@+id/personalRep2"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="@drawable/edittextstyle"
@@ -197,7 +197,7 @@
 
         <EditText
             android:id="@+id/personalRep3"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:background="@drawable/edittextstyle"
@@ -216,7 +216,7 @@
 
         <EditText
             android:id="@+id/personalRepNumber"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="35dp"
@@ -237,7 +237,7 @@
 
         <EditText
             android:id="@+id/personalRepNumber2"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -256,7 +256,7 @@
 
         <EditText
             android:id="@+id/personalRepNumber3"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="50dp"
@@ -277,7 +277,7 @@
 
         <EditText
             android:id="@+id/patientSignaturePersonalRep"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/edittextstyle"
@@ -297,7 +297,7 @@
 
         <EditText
             android:id="@+id/personalRepDate"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -319,8 +319,8 @@
             android:id="@+id/nextForm4"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="50dp"
             android:background="@drawable/buttonstyle"
             android:text="@string/NextForm"
             android:textSize="20sp"
@@ -334,7 +334,7 @@
 
         <EditText
             android:id="@+id/personalRepRelation1"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -353,7 +353,7 @@
 
         <EditText
             android:id="@+id/personalRepRelation2"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -371,7 +371,7 @@
 
         <EditText
             android:id="@+id/personalRepRelation3"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittextstyle"
@@ -391,7 +391,7 @@
 
         <TextView
             android:id="@+id/personalRepresentativeHeader"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:background="@color/white"
@@ -418,7 +418,7 @@
 
         <TextView
             android:id="@+id/formText1"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="26dp"
             android:ems="10"
@@ -434,7 +434,7 @@
 
         <TextView
             android:id="@+id/formText"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:ems="10"
@@ -450,11 +450,11 @@
 
         <TextView
             android:id="@+id/formText2"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:ems="10"
-            android:gravity="center"
+            android:gravity="left"
             android:text="@string/PersonRepBody3"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -466,7 +466,7 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="320dp"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
             android:gravity="center"
@@ -481,7 +481,7 @@
 
         <View
             android:id="@+id/divider19"
-            android:layout_width="350dp"
+            android:layout_width="370dp"
             android:layout_height="1dp"
             android:layout_marginStart="28dp"
             android:layout_marginTop="50dp"

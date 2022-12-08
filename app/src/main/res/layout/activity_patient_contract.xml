@@ -51,7 +51,7 @@
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/PatientContractHeader2"
@@ -67,11 +67,11 @@
 
         <TextView
             android:id="@+id/editTextTextMultiLine3"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
-            android:gravity="center"
+            android:gravity="left"
             android:text="@string/PatientContractBody"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -82,7 +82,7 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:gravity="center"
@@ -96,10 +96,10 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:gravity="center"
+            android:gravity="left"
             android:text="@string/PatientContractBody3"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -111,10 +111,10 @@
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:gravity="center"
+            android:gravity="left"
             android:text="@string/PatientContractBody4"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -126,10 +126,10 @@
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:gravity="center"
+            android:gravity="left"
             android:text="@string/PatientContractBody5"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -141,10 +141,10 @@
 
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:gravity="center"
+            android:gravity="left"
             android:text="@string/PatientContractBody6"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -156,7 +156,7 @@
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:gravity="center"
@@ -170,7 +170,7 @@
 
         <EditText
             android:id="@+id/consentFormDate2"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/edittextstyle"
@@ -188,7 +188,7 @@
 
         <EditText
             android:id="@+id/patientNamePrinted2"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/edittextstyle"
@@ -206,7 +206,7 @@
 
         <EditText
             android:id="@+id/patientNameSignature2"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/edittextstyle"
@@ -226,8 +226,8 @@
             android:id="@+id/nextForm2"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="50dp"
             android:background="@drawable/buttonstyle"
             android:text="@string/NextForm"
             android:textSize="20sp"

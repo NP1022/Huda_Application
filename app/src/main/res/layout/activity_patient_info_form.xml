@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/textView55"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/org2"
@@ -32,7 +32,7 @@
 
     <TextView
         android:id="@+id/textView59"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/payServices2"
@@ -45,7 +45,7 @@
 
     <TextView
         android:id="@+id/textView62"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/adminPlan2"
@@ -58,7 +58,7 @@
 
     <TextView
         android:id="@+id/textView57"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
@@ -73,7 +73,7 @@
 
     <TextView
         android:id="@+id/textView56"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:gravity="center"
@@ -88,7 +88,7 @@
 
     <TextView
         android:id="@+id/textView60"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/payServicesEx"
@@ -102,7 +102,7 @@
 
     <TextView
         android:id="@+id/textView63"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
@@ -117,7 +117,7 @@
 
     <TextView
         android:id="@+id/textView54"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -132,7 +132,7 @@
 
     <TextView
         android:id="@+id/textView58"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -148,7 +148,7 @@
 
     <TextView
         android:id="@+id/textView61"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -163,7 +163,7 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -178,7 +178,7 @@
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/infoFormBody4"
@@ -191,7 +191,7 @@
 
     <TextView
         android:id="@+id/textView26"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="@string/yourRights"
@@ -207,7 +207,7 @@
 
     <TextView
         android:id="@+id/textView33"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/infoFormBody3"
@@ -220,7 +220,7 @@
 
     <TextView
         android:id="@+id/textView38"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -236,7 +236,7 @@
 
     <TextView
         android:id="@+id/textView35"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/infoFormBody9"
@@ -249,7 +249,7 @@
 
     <TextView
         android:id="@+id/textView31"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/infoFormBody8"
@@ -262,7 +262,7 @@
 
     <TextView
         android:id="@+id/textView28"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -277,7 +277,7 @@
 
     <TextView
         android:id="@+id/textView29"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -292,7 +292,7 @@
 
     <TextView
         android:id="@+id/textView36"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -307,7 +307,7 @@
 
     <TextView
         android:id="@+id/textView34"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -322,7 +322,7 @@
 
     <TextView
         android:id="@+id/textView30"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/infoFormBody6"
@@ -335,7 +335,7 @@
 
     <TextView
         android:id="@+id/textView32"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/infoFormBody7"
@@ -348,7 +348,7 @@
 
     <TextView
         android:id="@+id/textView37"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/infoFormBody10"
@@ -361,7 +361,7 @@
 
     <TextView
         android:id="@+id/textView27"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -378,11 +378,12 @@
         android:id="@+id/nextForm6"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/buttonstyle"
         android:text="@string/NextForm"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -402,7 +403,7 @@
 
     <TextView
         android:id="@+id/patientInfoHeader"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:background="@color/white"
@@ -418,7 +419,7 @@
 
     <TextView
         android:id="@+id/textView40"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -433,7 +434,7 @@
 
     <TextView
         android:id="@+id/textView44"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/manageHealth2"
@@ -446,7 +447,7 @@
 
     <TextView
         android:id="@+id/textView43"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -461,7 +462,7 @@
 
     <TextView
         android:id="@+id/textView42"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/useAndDisclosure2"
@@ -475,7 +476,7 @@
 
     <TextView
         android:id="@+id/textView64"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:gravity="center"
@@ -490,7 +491,7 @@
 
     <TextView
         android:id="@+id/textView48"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/shareInfo"
@@ -504,7 +505,7 @@
 
     <TextView
         android:id="@+id/textView52"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/marketingInfo"
@@ -517,7 +518,7 @@
 
     <TextView
         android:id="@+id/textView49"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:gravity="center"
@@ -532,7 +533,7 @@
 
     <TextView
         android:id="@+id/textView50"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -547,7 +548,7 @@
 
     <TextView
         android:id="@+id/textView51"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -562,7 +563,7 @@
 
     <TextView
         android:id="@+id/textView46"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/infoFormBody11"
@@ -576,7 +577,7 @@
 
     <TextView
         android:id="@+id/textView45"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -591,7 +592,7 @@
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/infoFormBody2"
@@ -604,7 +605,7 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -619,7 +620,7 @@
 
     <TextView
         android:id="@+id/textView22"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/infoFormBody5"
@@ -632,7 +633,7 @@
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"

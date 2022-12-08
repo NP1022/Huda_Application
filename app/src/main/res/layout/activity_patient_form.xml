@@ -50,7 +50,7 @@
 
         <EditText
             android:id="@+id/todaysDate"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="55dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/edittextstyle"
@@ -69,7 +69,7 @@
 
         <EditText
             android:id="@+id/visitReason"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="100dp"
             android:layout_below="@+id/todaysDate"
             android:layout_marginTop="10dp"
@@ -88,7 +88,7 @@
 
         <EditText
             android:id="@+id/firstName"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -106,7 +106,7 @@
 
         <EditText
             android:id="@+id/lastName"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -124,7 +124,7 @@
 
         <EditText
             android:id="@+id/patientSex"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -142,7 +142,7 @@
 
         <EditText
             android:id="@+id/patientDob"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -161,7 +161,7 @@
 
         <EditText
             android:id="@+id/patientAddress"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -178,7 +178,7 @@
 
         <EditText
             android:id="@+id/patientCity"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -195,7 +195,7 @@
 
         <EditText
             android:id="@+id/patientState"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -212,7 +212,7 @@
 
         <EditText
             android:id="@+id/patientZipCode"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="47dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -229,7 +229,7 @@
 
         <EditText
             android:id="@+id/patientSSN"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -247,7 +247,7 @@
 
         <EditText
             android:id="@+id/patientCellNum"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -265,7 +265,7 @@
 
         <EditText
             android:id="@+id/patientHomeNum"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -283,7 +283,7 @@
 
         <EditText
             android:id="@+id/patientPreferredNumber"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -301,7 +301,7 @@
 
         <EditText
             android:id="@+id/consentToCall"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -320,7 +320,7 @@
 
         <EditText
             android:id="@+id/consentToText"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -338,7 +338,7 @@
 
         <EditText
             android:id="@+id/insuranceProvider"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
@@ -356,7 +356,7 @@
 
         <EditText
             android:id="@+id/emailAddress"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -554,7 +554,7 @@
 
         <EditText
             android:id="@+id/langPref"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:background="@drawable/edittextstyle"
@@ -573,7 +573,7 @@
 
         <EditText
             android:id="@+id/translatorNeeded"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -591,7 +591,7 @@
 
         <TextView
             android:id="@+id/socialInfo"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="@string/SocialInfo"
@@ -604,7 +604,7 @@
 
         <EditText
             android:id="@+id/maritalStatus"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/edittextstyle"
@@ -622,7 +622,7 @@
 
         <EditText
             android:id="@+id/income"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -715,7 +715,7 @@
 
         <EditText
             android:id="@+id/houseHold"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
@@ -853,7 +853,7 @@
 
         <EditText
             android:id="@+id/occupation"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/edittextstyle"
@@ -871,7 +871,7 @@
 
         <EditText
             android:id="@+id/veteran"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -905,7 +905,7 @@
 
         <EditText
             android:id="@+id/emergencyName"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -923,7 +923,7 @@
 
         <EditText
             android:id="@+id/relationship"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -941,7 +941,7 @@
 
         <EditText
             android:id="@+id/emergencyNumber"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/edittextstyle"
@@ -992,12 +992,11 @@
 
         <TextView
             android:id="@+id/volunteerConsent"
-            android:layout_width="330dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:gravity="center"
+            android:gravity="left"
             android:text="@string/PatientConsent"
-
             android:textColor="#5A5959"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1007,7 +1006,7 @@
 
         <EditText
             android:id="@+id/patientNamePrinted"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/edittextstyle"
@@ -1025,7 +1024,7 @@
 
         <EditText
             android:id="@+id/patientNameSignature"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/edittextstyle"
@@ -1043,7 +1042,7 @@
 
         <EditText
             android:id="@+id/consentDate"
-            android:layout_width="320dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/edittextstyle"
@@ -1064,8 +1063,8 @@
             android:id="@+id/nextForm"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="50dp"
             android:background="@drawable/buttonstyle"
             android:text="@string/NextForm"
             android:textSize="20sp"
